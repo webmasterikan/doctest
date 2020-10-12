@@ -1,3 +1,4 @@
 name: alm-reports-linux
 title: ALM Reports (Linux)
 version: '1.4'
+start_page: ROOT:ALMreports.adoc
