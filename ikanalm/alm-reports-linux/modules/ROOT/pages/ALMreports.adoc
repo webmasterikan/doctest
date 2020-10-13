@@ -1,3 +1,4 @@
+:imagesdir: ../images
 
 == Purpose (new version for branch test)
 
