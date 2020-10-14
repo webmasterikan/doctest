@@ -6,6 +6,7 @@
 
 = IKAN ALM Reports Linux Installation Guide
 
+[[_purpose]]
 == Purpose
 
 IKAN ALM Reports has been created as a complement to __IKAN
@@ -19,6 +20,7 @@ The ALM Reports installation procedure includes the installation of a bundled Ja
 
 Since ALM Reports runs reports from an IKAN ALM database, an IKAN ALM instance must first have been installed, or access to an IKAN ALM database must be available.
 
+[[_prerequisites]]
 == Prerequisites
 
 === Java
