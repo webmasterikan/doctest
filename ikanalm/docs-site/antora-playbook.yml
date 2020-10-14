@@ -6,7 +6,7 @@ content:
   sources:
   - url: .
     branches: HEAD
-    start_path: home  
+    start_path: /ikanalm/docs-site/home  
   - url: https://github.com/webmasterikan/doctest
     # branches: [main, testbranch]
     branches: main
