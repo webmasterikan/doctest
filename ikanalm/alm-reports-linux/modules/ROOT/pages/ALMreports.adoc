@@ -45,6 +45,7 @@ ALM Reports supports MySQL, Microsoft SQL Server and Oracle as the database serv
 Future versions will support all database servers that IKAN ALM supports.
 
 The installation procedure of ALM Reports only supports MySQL and Microsoft SQL Server as the JasperReports Server database.
+
 [[_installingkanalmreports]]
 == Installing IKAN ALM Reports
 
