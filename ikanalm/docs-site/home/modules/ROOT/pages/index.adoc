@@ -1,8 +1,0 @@
-
-
-= TEST homepage
-
-
-xref:alm-reports-linux:ALMreports.adoc[]
-
-xref:alm-reports-windows:ALMreports.adoc[]
