@@ -275,19 +275,19 @@ During the install, you may be asked to grant administrative privileges (Windows
 ** Stop your Application Server
 . When the installation is successful, the following message is displayed: 
 +
-image::images/fig4-1.png[,665,559] 
+image::fig4-1.png[,665,559] 
 . Verify whether ALM Reports has been successfully installed.
 +
 Start the Application server, and browse to the Jasper Server web-application.
 +
 If you used the default settings, this means opening the URL "http://localhost:8080/jasperserver".
 +
-image::images/fig4-2.png[,593,845] 
+image::fig4-2.png[,593,845] 
 +
 . Log in with the user/password combination of a valid IKAN ALM user (the authentication of IKAN ALM and ALM Reports are linked, they use the same jaas.config file).
 . Verify that a resource folder named "`IKANALM`" exists and has the following structure:
 +
-image::images/almrep_fig2.png[,224,241] 
+image::almrep_fig2.png[,224,241] 
 . IKAN ALM Reports is now installed and ready to be used!
 
 
@@ -409,7 +409,7 @@ If it doesn't, you need to edit the "`setenv.bat`" file and manually set the JAV
 If the uninstall process is successful, the following message is displayed:
 
 
-image::images/fig6-1.png[,661,535] 
+image::fig6-1.png[,661,535] 
 
 
 == Troubleshooting
@@ -419,7 +419,7 @@ image::images/fig6-1.png[,661,535]
 Opening a report fails and an error similar to the one below is displayed:
 
 
-image::images/almrep_fig3.png[,590,383] 
+image::almrep_fig3.png[,590,383] 
 
 
 ==== Solution
@@ -429,7 +429,7 @@ Check whether the IKANALM Data Source is configured correctly.
 .. Browse to __root > IKANALM > Data Sources__.
 .. Click on the __IKANALM MYSQL Data Source__, and click __Edit__.
 +
-image::images/almrep_fig4.png[,904,795] 
+image::almrep_fig4.png[,904,795] 
 +
 .. Verify the connection parameters.
 .. Test the connection by clicking the _Test Connection_ button at the bottom of the page.
