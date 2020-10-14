@@ -1,3 +1,4 @@
+.testnav
 * xref:ALMreports.adoc#_purpose[Purpose]
 * xref:ALMreports.adoc#_prerequisites[Prerequisites] 
 * xref:ALMreports.adoc#_installingkanalmreports[Installing IKAN ALM Reports]
