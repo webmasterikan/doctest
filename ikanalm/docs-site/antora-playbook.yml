@@ -1,0 +1,24 @@
+site:
+  title: IKAN ALM Antora Demo Site
+  url: https://www.ikanalm.com
+content:
+  sources:
+  - url: https://github.com/webmasterikan/doctest
+    # branches: [main, testbranch]
+    branches: main
+    start_path: /ikanalm/alm-reports-linux
+  - url: https://github.com/webmasterikan/doctest
+    branches: main
+    start_path: /ikanalm/alm-reports-windows    
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    # snapshot should be set in order to fetch the UI bundle on each website generation (with --fetch option), otherwise it will use the cached version
+    snapshot: true
+output:
+  destinations:
+  - provider: fs
+    path: ./sites
+runtime:
+  # cache_dir: ./cache/antora
+  fetch: true
