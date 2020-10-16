@@ -5,7 +5,6 @@
 :revdate: 01.10.2016
 
 = IKAN ALM Reports Linux Installation Guide
-xref:ALMreports.adoc[Overview]
 [[_purpose]]
 == Purpose
 
