@@ -1,1 +1,1 @@
-* Contents
+* xref:ALMreports.adoc[Contents]
