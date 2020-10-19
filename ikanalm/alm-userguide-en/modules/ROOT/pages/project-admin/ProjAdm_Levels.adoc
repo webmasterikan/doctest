@@ -1,0 +1,882 @@
+
+== Levels 
+(((Project Administration ,Levels)))  (((Project Management Options ,Levels)))  (((Levels))) 
+
+This option allows defining Levels and their Environments, which can be assigned to a IKAN ALM Project Lifecycle.
+
+A Level is a logical environment, a step in the Lifecycle.
+It consists of one (or more) Build and/or Deploy Environment(s) which are physical environments.
+
+There are three Level Types:
+
+* Build Level: must have at least one Build Environment.
+* Test Level: must have at least one Build or Deploy Environment. A typical Test Level may have one or more Build Environments for Rebuilds and one or more Deploy Environments for Deployment and Testing.
+* Production Level: must have at least one Build or Deploy Environment. A typical Production Level has one or more Deploy Environments.
+
+
+[NOTE]
+====
+
+Before you can define Build or Deploy Environments, the required <<_globadm_machines>> and <<_globadm_scriptingtools>> must have been defined.
+This is the task of the IKAN ALM Global Administrator.
+Once you have created the Levels, you need to assign them to a Lifecycle in order to use them.
+====
+
+The Levels submenu option lets you start the following procedures:
+
+* Creating Levels
+** <<_plevelenvmgt_createbuildlevel>>
+** <<_plevelenvmgt_createtestorproductionlevel>>
+* <<_plevelenvmgt_accessing>>
+
+
+The _Levels Overview_ screen lets you verify and change the information concerning Levels.
+The following actions are possible:
+
+* Modifying Level definitions
+** <<_plevelenvmgt_editlevel>>
+** <<_plevelenvmgt_deletelevel>>
+** <<_plevelenvmgt_clonelevel>>
+* Modifying the Level Phases
+** <<_plevelenvmgt_levelphasesoverview>>
+** <<_plevelenvmgt_editlevelphases>>
+** <<_plevelenvmgt_insertphase>>
+* Modifying the Level Approvals
+** <<_levelenvmgt_approvalsequence>>
+* Displaying the Level History View
+** <<_levelenvmgt_historyview>>
+
+
+=== Creating a Build Level
+(((Levels ,Creating a Level))) 
+ 
+. In the __Project Administration context__, select __Levels > Create Build Level__.
++
+The _Create BUILD Level_ screen is displayed:
++
+image::images/ProjAdmin-Levels-BuildLevel-Create.png[,461,415] 
++
+
+[NOTE]
+====
+You can also switch to this screen via the _Edit Lifecycle_ screen.
+Select__ Lifecycles
+> Overview__, select the required Lifecycle and click the _Create Build Level_ link.
+====
+. Fill out the fields for the new Build Level.
++
+The following fields are available.
+Fields marked with a red asterisk are mandatory:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Name
+|In this field, enter the name of the new Build Level.
+
+|Description
+|In this field, you may enter a description for the new Build Level.
+
+|Type
+|This read-only field indicates the Level Type, in this case __Build__.
+
+|Locked
+|This read-only field indicates that the new Level is currently still Locked.
+
+You need to audit the Project to unlock the Build Level. <<_projadm_auditingprojects>>
+
+|Debug
+|Indicate whether or not the _Debug_ option must be activated for this Level.
+
+If _Debug_ is activated for a Level, the _Clean-up Work Copy_ Phase will not be performed, so that the contents of this directory may be verified by an Administrative User and he can run a Custom Phase manually for testing purposes.
+
+|Notification Type
+a|From the drop-down list, select the required Notification Type for this Build Level.
+
+The following options are available:
+
+** Mail
+** Netsend
+** No Notification
+
+If _Mail_ or _Netsend_ is chosen, notifications will be created at the end of a Level Request on the Level, depending on the Notification Criteria.
+The notification is sent to the members of the Project User, Project Admin and Level Requester User Groups.
+
+|Notification Criteria
+a|From the drop-down list, select the required Notification Criteria for this Build Level.
+
+The following options are available:
+
+* _Always_
++
+A Notification will be sent when a Level Request for this Level has ended with status __Fail__, _Warning_ or __Success__.
+* _Fail_
++
+A notification will be sent when a Level Request for this Level has ended with status __Fail__.
+* _Successful_
++
+A notification will be sent when a Level Request for this Level has ended with status _Warning_ or __Success__.
+* _Never_
++
+No notification will be sent when a Level Request for this Level has ended.
+
+
+|Schedule
+a|From the drop-down list, you may select a Schedule for this Build Level.
+The purpose of this Schedule is to determine the interval for generating automatic Builds.
+
+Schedules are defined by the Global Administrator.
+They verify at the requested time or interval whether the code in the VCR was changed.
+If this is the case, a Level Request is created automatically.
+
+Examples:
+
+At global administration level, define:
+
+* _Nightly Build:_ define a schedule that will verify the code each night and generate a Level Request, if the code was changed.
+* __Continuous Build: __define a schedule that will verify the code every 10 or 20 minutes and generate a Level Request, if the code was changed.
+
+_Note:_ This option is not available for Package-based projects.
+
+|Requester User Group
+|From the drop-down list, you may select the required Requester User Group.
+Members of this User Group have the right to create Level Requests for this Build Level.
+If a Project User Group has been defined, this User Group will be selected as the default Requester User Group.
+
+|Lifecycle
+|From the drop-down list, select the Lifecycle to which the Level must be assigned.
+
+_Note:_ If you create a Build Level using the _Create Build Level_ link on the _Edit Lifecycle_ screen, the name of the Lifecycle will already be filled in.
+|===
+. Additional Information
++
+The__ Build Levels Defined in Project__ panel displays the different Build Levels defined for the Project.
++
+For more information on this panel, refer to <<_levelenvmgt_overview>>.
+. Click__ Create__ to confirm the creation of the new Build Level.
++
+You can also click _Reset_ to clear the fields and restore the initial values.
+
+* _Back_ to return to the previous screen without saving the changes.
+
+
+=== Creating a Test or Production Level 
+(((Levels ,Creating a Test Level)))  (((Levels ,Creating a Production Level))) 
+
+[NOTE]
+====
+The procedure for creating Test and Production Levels is identical.
+====
+
+. In the __Project Administration context__, select _Levels > Create Test Level_ or __Create Production Level__.
++
+The _Create TEST Level_ or _Create
+PRODUCTION Level_ screen is displayed:
++
+image::images/ProjAdmin-Levels-ProductionLevel-Create.png[,511,482] 
++
+
+[NOTE]
+====
+You can also switch to this screen via the _Edit Lifecycle_ screen.
+Select__ Lifecycles
+> Overview__, select the required Lifecycle and click the _Create Test Level_ or _Create
+Production Level_ link.
+====
+
+. Fill out the fields for the new Test or Production Level.
++
+The following fields are available.
+Fields marked with a red asterisk are mandatory:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Name
+|
+In this field, enter the name of the new Test or Production Level.
+
+|Description
+|In this field, you may enter a description for the new Test or Production Level.
+
+|Type
+|This read-only field indicates the Level Type, in this case _Test_ or __Production__.
+
+|Locked
+|This read-only field indicates that the new Level is currently still __Locked__.
+
+You need to audit the Project to unlock the Test or Production Level. <<_projadm_auditingprojects>>
+
+|Debug
+|Indicate whether or not the _Debug_ option must be activated for this Level.
+
+If _Debug_ is activated for a Level, the _Clean-up Work Copy_ Phase will not be performed, so that the contents of this directory may be verified by an Administrative User and he can run a Custom Phase manually for testing purposes.
+
+|Notification Type
+a|From the drop-down list, select the required Notification Type for this Test or Production Level.
+
+The following options are available:
+
+* netsend
+* mail
+* No notification
+
+If _Mail_ or _Netsend_ is chosen, notifications will be created at the end of a Level Request on the Level, depending on the Notification Criteria.
+The notification is sent to the members of the Project User, Project Admin and Level Requester User Groups.
+
+|Notification Criteria
+a|From the drop-down list, select the required Notification Criteria for this Test or Production Level.
+
+The following options are available:
+
+* _Always_
+A Notification will be sent when a Level Request for this Level has ended with status __Fail__, _Warning_ or __Success__.
+* _Fail_
++
+A notification will be sent when a Level Request for this Level has ended with status __Fail__.
+* _Successful_
++
+A notification will be sent when a Level Request for this Level has ended with status _Warning_ or __Success__.
+* _Never_
++
+No notification will be sent when a Level Request for this Level has ended.
+
+
+|Requester User Group
+|From the drop-down menu, you may select the required Requester User Group.
+Members of this User Group have the right to create Level Requests for this Test or Production Level.
+If a Project User Group has been defined, this User Group will be selected as the default Requester User Group.
+
+|Pre-Notification User Group
+|From the drop-down menu, you may select the required Pre-Notification User Group.
+Members of this group will be notified when a Level Request is created for this Level.
+
+|Post-Notification User Group
+|From the drop-down menu, you may select the required Post-Notification User Group.
+Members of this group will be notified when a Level Request for this Level has ended, depending on the Post-Notification Criteria.
+
+|Post-Notification Criteria
+a|From the drop-down list, select the required Post-Notification Criteria for this Test or Production Level.
+
+The following options are available:
+
+* Always
++
+A Post-notification will be sent if the Level Request ends with status __Success__, __Warning__, _Fail_ or in case of a rejected __Post-__Approval.
+* Fail/Reject
++
+A Post-notification will be sent if the Level Request fails or in case of a rejected __Post-__Approval.
+* Success
++
+A Post-notification will be sent if the Level Request ends with status _Success_ or __Warning__.
+
+
+|Sequence Level After
+|This field is only available if you create a Test or Production Level using the _Create Test Level_ or _Create
+Production Level_ link on the _Edit Lifecycle_ screen.
+
+From the drop-down menu, select the level that must precede the Test or Production Level you are defining.
+
+If you used the Levels > Create Test (or Production) Level option on the Project Administration submenu, the new Test or Production Level will be created after the existing Test or Production Level, if any.
+
+You can always modify the Level Sequence using the image:images/icons/up.gif[,15,15] _Up_ or image:images/icons/down.gif[,15,15] _Down_ options on the _Defined Levels_ panel on the _Edit
+Lifecycle_ screen. <<_lifecycles_changingorderlevels>>
+
+|Lifecycle
+|From the drop-down list, select the Lifecycle to which the Level must be assigned.
+
+_Note:_ If you create a Test or Production Level using the _Create
+Test Level_ or _Create Production Level_ link on the _Edit Lifecycle_ screen, the name of the Lifecycle will already be filled in.
+|===
+
+. Verify the settings of the other Test or Production Levels defined in the Project.
++
+The__ Test Levels Defined in Project__ or _Production
+Levels Defined in Project_ panel displays the different Test or Production Levels defined for the Project.
++
+For more information on this panel, refer to <<_levelenvmgt_overview>>.
+. Click__ Create__ to confirm the creation of the new Test or Production Level.
++
+You can also click
+
+* _Reset_ to clear the fields and restore the initial values,
+* _Back_ to return to the previous screen without saving the changes.
+
+
+[[_levelenvmgt_overview]]
+=== Levels Overview
+
+The _Levels Overview_ screen displays the information concerning the Build, Test and Production Levels defined for a Project.
+
+The following actions are possible:
+
+* Modifying Level definitions
+** <<_plevelenvmgt_editlevel>>
+** <<_plevelenvmgt_deletelevel>>
+** <<_plevelenvmgt_clonelevel>>
+* Modifying the Level Phases
+** <<_plevelenvmgt_levelphasesoverview>>
+** <<_plevelenvmgt_editlevelphases>>
+** <<_plevelenvmgt_insertphase>>
+* Displaying the Level History View
+** <<_levelenvmgt_historyview>>
+
+
+==== The Levels Overview Screen 
+(((Levels ,Overview Screen))) 
+
+. In the __Project Administration context__, select __Levels > Overview__.
++
+The _Levels Overview_ screen is displayed:
++
+image::images/ProjAdmin-Levels-Overview.png[,975,387] 
++
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields,
+
+. On the Levels Overview, verify the Level information fields.
++
+For a description of the fields, refer to the sections <<_plevelenvmgt_createbuildlevel>> and <<_plevelenvmgt_createtestorproductionlevel>>.
+. The following links are available:
+* image:images/icons/edit.gif[,15,15] <<_plevelenvmgt_editlevel>>
+* image:images/icons/delete.gif[,15,15] <<_plevelenvmgt_deletelevel>>
+* image:images/icons/clone.gif[,15,15] <<_plevelenvmgt_clonelevel>>
+* image:images/icons/edit_phases.gif[,15,15] <<_levelenvmgt_levelphases>>
+* image:images/icons/history.gif[,15,15] <<_levelenvmgt_historyview>>
+
+
+[[_plevelenvmgt_editlevel]]
+==== Editing a Level (((Levels ,Editing))) 
+
+. Switch to the _Levels Overview_ screen.
++
+<<_plevelenvmgt_accessing>>
+. On the _Levels Overview_ panel, click the image:images/icons/edit.gif[,15,15] _Edit_ link for the required Level.
++
+The _Edit Level_ screen is displayed.
++
+image::images/ProjAdmin-Levels-TestLevel-Edit.png[,439,224] 
++
+. Click the _Edit_ button on the _Level Info_ panel.
++
+The following pop-up window will be displayed:
++
+image::images/ProjAdmin-Levels-TestLevel-Edit_Popup.png[,445,396] 
++
+.. Edit the fields on the _Edit Level_ pop-up window.
++
+For a description of the fields, refer to the sections <<_plevelenvmgt_createbuildlevel>> and <<_plevelenvmgt_createtestorproductionlevel>>.
+.. Click __Save __to save your changes.
++
+You can also click__ Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
+. Underneath the _Level Info_ panel, an overview of the defined Phases, Environments and, optionally, Pre- and Post-Approvals is displayed, as well as the necessary links to edit Phases, to create Build and Deploy Environments and, optionally, to edit the Deploy Sequence and the Approvals. 
++
+For more information, refer to the sections: 
+
+* <<_levelenvmgt_levelphases>>
+* <<_plevelenvmgt_createbuildenvironment>>
+* <<_plevelenvmgt_createdeployenvironment>>
+* <<_plevelenvmgt_changedeploysequence>>
+* <<_levelenvmgt_approvalsequence>>
+
+
+[[_levelenvmgt_levelphases]]
+===== Level Phases 
+(((Levels ,Phases)))  (((Level Phases))) 
+
+When creating a Level (Build, Test or Production), IKAN ALM will automatically link the default flow of core Level Phases to it. 
+
+The core Phases are:
+
+* Retrieve Code
+* Build
+* Tag Code
+* Deploy
+* Cleanup Work Copy
+
+
+Levels for Projects that are linked to an Issue Tracking System will have an extra Issue Tracking Phase.
+On a Build Level, the search for handled Issue Numbers in the VCR commit comments will happen during this Phase.
+
+The Build and Deploy Phases will communicate with the Agent running the Build(s) or Deploy(s) in order to start, follow up and set the end status of Build and Deploy actions. 
+
+[NOTE]
+====
+The behavior of the Phase is dependent of the Level Type to which it is connected.
+For example; both Test and Production Levels will have a _Tag Code_ Phase connected by default, but nothing will happen during this Phase as tagging will only be done on a Build Level type.
+This behavior may change in future releases.
+At present you can manually remove the _Tag
+Code_ Phase from Test and Production Levels.
+====
+
+When executing a Level Request for this Level, a log will be created for each of the Phases. <<_dekstop_lr_detailedoverview>>
+
+Refer to the following procedures for more information:
+
+* <<_plevelenvmgt_levelphasesoverview>>
+* <<_plevelenvmgt_modifyorderphases>>
+* <<_plevelenvmgt_editlevelphases>>
+* <<_plevelenvmgt_viewlevelphaseparams>>
+* <<_plevelenvmgt_deletephase>>
+* <<_plevelenvmgt_insertphase>>
+
+
+====== The Level Phases Overview Screen
+
+. In the __Project Administration context__, select __Levels > Overview__.
+. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
++
+The _Level Phases Overview_ screen is displayed:
++
+image::images/ProjAdmin-Levels-TestLevel-EditPhases.png[,768,477] 
++
+. Use the links on the _Phases Overview_ panel to edit a Phase.
++
+The following links are available:
+
+* The image:images/icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to change the order of the Phases. <<_plevelenvmgt_modifyorderphases>>
+* The image:images/icons/edit.gif[,15,15] _Edit_ link to edit the Phase`'s settings. <<_plevelenvmgt_editlevelphases>>
+* The image:images/icons/icon_viewparameters.png[,15,15] _View Parameters_ link to manage the mandatory and optional Phase Parameters. <<_plevelenvmgt_viewlevelphaseparams>>
+* The image:images/icons/delete.gif[,15,15] _Delete_ link to delete a Phase. <<_plevelenvmgt_deletephase>>
++
+
+[NOTE]
+====
+
+Changing the Phases can have undesirable consequences on the Lifecycle.
+For more information, refer to the document __HOW
+TO Using and Developing a Phase in IKAN ALM__.
+====
+. Insert a Phase, if required.
++
+Select the _Insert Phase_ link underneath the _Phases Overview_ panel. <<_plevelenvmgt_insertphase>>
+. When done, click _Back_ to return to the _Levels Overview_ screen.
+
+
+====== Changing the Order of the Level Phases
+
+. Switch to the _Levels Overview_ screen.
++
+<<_plevelenvmgt_accessing>>
+. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
+. Use the image:images/icons/up.gif[,15,15] __Up__ and image:images/icons/down.gif[,15,15] _Down_ links in front of a Level Phase to change its position in the sequence.
+. Click _Back_ to return to the _Levels Overview_ screen.
++
+
+[WARNING]
+--
+Avoid changing a Phase`'s position in such a way that its _Next Phase on Error_ is in an earlier position in the workflow: this could result in an infinite loop.
+--
+
+====== Editing a Level Phase
+
+. Switch to the _Levels Overview_ screen.
++
+<<_plevelenvmgt_accessing>>
+. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
+. Click the image:images/icons/edit.gif[,15,15] _Edit_ link in front of the Phase you want to edit.
++
+The _Edit Level Phase_ screen is displayed.
++
+image::images/ProjAdmin-Levels-TestLevel-LevelPhase-Edit.png[,556,244] 
++
+. Edit the fields on the _Edit Level Phase_ window.
++
+For a description of the fields, refer to the section <<_plevelenvmgt_insertphase>>.
+. Click __Save __to save your changes.
++
+You can also click__ Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
+
+
+====== Viewing the Level Phase Parameters 
+(((Levels ,Phases ,Viewing the Level Phase Parameters)))  (((Parameters ,Level Phases))) 
+
+. Switch to the _Levels Overview_ screen.
++
+<<_plevelenvmgt_accessing>>
+. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
+. Click the image:images/icons/icon_viewparameters.png[,15,15] _View Parameters_ links in front of a Level Phase you want to manage the Phase Parameters for.
++
+The _Phase Parameter Overview_ screen is displayed.
++
+image::images/ProjAdmin-Levels-TestLevel-EditPhases_ViewParams.png[,773,642] 
++
+. Verify the Level Phase Parameters.
++
+The _Phase Parameters_ panel displays all the defined Parameters of the Level Phase and allows you to create non-mandatory Phase Parameters.
++
+The following fields are available:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Name
+|The name of the Parameter.
+
+This field may not be changed since it is defined in Global Administration.
+
+|Value
+|The Value of the Parameter. 
+
+Initially, when the Phase is inserted, the value will be copied from the Default Value in Global Administration (if provided).
+
+This field may be changed by Editing the Phase Parameter.
+
+|Integration Type
+a|This field indicates whether the value of the Parameter is a simple text value, or whether it represents a link (an integration) to an IKAN ALM Global Administration object type.
+
+The possible values are:
+
+* None: the value is simple text
+* Transporter: link to a Transporter
+* VCR: link to a Version Control Repository
+* ITS: link to an Issue Tracking System
+* Scripting Tool: link to a Scripting Tool
+* ANT: link to an Ant Scripting Tool
+* GRADLE: link to a Gradle Scripting Tool
+* NANT: link to a NAnt Scripting Tool
+* MAVEN2: link to a Maven2 Scripting Tool
+
+This field may not be changed since it is defined in Global Administration.
+
+|Mandatory
+|This field indicates whether the Parameter has been created automatically when the Phase is inserted in the Level.
+This is the case for Mandatory Parameters.
+
+Non-mandatory Parameters must be created after the Phase has been inserted in the Level, using the _Create Parameter_ link.
+
+This field may not be changed since it is defined in Global Administration.
+
+|Secure
+|This field indicates whether the Parameter is secured or not.
+
+This field may not be changed since it is defined in Global Administration.
+|===
+
+. Click the image:images/icons/edit.gif[,15,15] _Edit Parameter_ link next to a Phase Parameter.
++
+The following pop-up window will be displayed.
++
+image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditValue.png[,295,143] 
++
+Set the value of the Level Phase Parameter and click _Save_ to save the value.
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Cancel_ to return to the _Phase Parameter Overview_ screen without saving a value.
+. If you want to create a non-mandatory Phase Parameter, click the image:images/icons/icon_createparameter.png[,15,15] _Create Parameter_ link next to a Phase Parameter.
++
+The following pop-up window will be displayed.
++
+image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-CreateParam.png[,383,121] 
++
+If a default Parameter value has been set in Global Administration, that value will be suggested.
++
+Set the value of the Level Phase Parameter and click __Create__.
+
+* _Reset_ to retrieve the settings from the database.
+* _Cancel_ to return to the _Phase Parameter Overview_ screen without saving a value.
++
+. If you want to delete a non-mandatory Phase Parameter, click the image:images/icons/delete.gif[,15,15] _Delete Parameter_ link next to a Phase Parameter.
++
+The following pop-up window will be displayed.
++
+image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-DeleteParamValue.png[,383,121] 
++
+Click _Delete_ to confirm the deletion of the mandatory Level Phase Parameter.
++
+You can also click _Cancel_ to close the pop-up window without deleting the Parameter.
+. Click the image:images/icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Global Phase Parameter_ link next to a Phase Parameter.
++
+The User will be redirected to the _Edit
+Phase_ screen (in the Global Administration context) and the _Edit Phase Parameter_ pop-up window is opened.
++
+image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditGlobalPhaseParam.png[,891,841] 
++
+You can edit the Global Phase Parameter as described in the section <<_globadm_phaseparameters_editing>>.
++
+To go back to the Phase Parameter in the Project Administration context, click the appropriate image:images/icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Environment Phase Parameter_ link in the _Connected Environment
+Parameters_ panel.
+
+
+====== Deleting a Level Phase
+
+. Switch to the _Levels Overview_ screen.
++
+<<_plevelenvmgt_accessing>>
+. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
+
+. Click the image:images/icons/delete.gif[,15,15] _Delete_ link in front of the Level Phase you want to delete.
++
+The _Delete Level Phase_ screen is displayed.
++
+image::images/ProjAdmin-Levels-TestLevel-LevelPhase-Delete.png[,375,107] 
+
+. Confirm the deletion by clicking the _Yes_ button.
++
+You can also click__ No__ to return to the previous screen without deleting the Level Phase.
+
+
+====== Inserting a Level Phase
+
+. Switch to the _Levels Overview_ screen.
++
+<<_plevelenvmgt_accessing>>
+. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
+. On the __Phases Overview__, click the _Insert Phase_ link.
++
+The _Insert Phase_ screen is displayed.
++
+image::images/ProjAdmin-Levels-TestLevel-InsertLevelPhase.png[,1048,713] 
+
+. Select a Phase to insert from the _Available Phases_ panel.
+. Fill out the fields for the new Phase.
++
+The following fields are available:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Phase
+|From the _Available
+Phases_ panel, select the Level Phase to add.
+
+|Fail on Error
+|In this field, indicate whether the Level Request is considered failed when this Phase goes in Error.
+
+|Insert at Position 
+|This field indicates at which position the Phase will be inserted into the Level workflow.
+The Phase Position is also indicated on the _Phases Overview_ panel.
+
+|Next Phase On Error
+|This field indicates the next Phase to execute in case this Phase goes in Error.
+
+|Label
+|In this optional field you can add a Label for the Phase to be inserted.
+
+In case you use the same Phase several times, adding a label is useful to provide additional information concerning the usage of the Phase.
+|===
++
+. Click__ Insert__ to confirm the creation of the new Phase.
++
+You can also click _Cancel_ to return to the previous screen without saving the changes.
+
+
+[[_levelenvmgt_builddeployenv]]
+===== Build and Deploy Environment Settings
+
+On the _Edit Level_ screen, you will also find the information concerning the Build and Deploy Environments defined for the different Levels.
+
+Links for creating Build and Deploy Environments as well as for Changing the Deploy Sequence are available on the Environments Panel.
+
+[NOTE]
+====
+You can also use the Build Environments and Deploy Environments submenu options for creating Environments.
+The Deploy sequence, however, can only be modified on the _Levels
+Overview_ screen. 
+====
+
+Refer to the following procedures for more information:
+
+* <<_plevelenvmgt_createbuildenvironment>>
+* <<_plevelenvmgt_createdeployenvironment>>
+* <<_plevelenvmgt_changedeploysequence>>
+
+
+====== Creating a Build Environment 
+(((Build Environments ,Creating))) 
+
+. Switch to the _Edit Level_ screen.
++
+<<_plevelenvmgt_editlevel>>
+. Underneath the__ Environments__ panel, click__ Create Build Environment__.
++
+The following screen is displayed:
++
+image::images/ProjAdmin-Levels-BuildEnv-Create.png[,1019,444] 
++
+For a complete description of the _Create Build
+Environment_ procedure, refer to <<_pcreatebuildenvironment>>.
+
+
+====== Creating a Deploy Environment 
+(((Deploy Environments ,Creating))) 
+
+. Switch to the _Edit Level_ screen.
++
+<<_plevelenvmgt_editlevel>>
+. On the__ Environments__ panel, click__ Create Deploy Environment__.
++
+The following screen is displayed:
++
+image::images/ProjAdmin-Levels-DeployEnv-Create.png[,1035,490] 
++
+For a complete description of the _Create Deploy
+Environment_ procedure, refer to <<_pcreatedeployenvironment>>.
+
+
+====== Editing the Deploy Sequence
+
+When a Deploy Environment is created, it will automatically get Sequence Number 0.
+When there are multiple Deploy Environments linked to a Level, they will be treated in parallel, since they all have 0 as Sequence Number.
+In order to handle them sequentially, you must change the Sequence Number.
+When executing a Level Request with multiple Deploys, first the Deploys with sequence number 0 will be executed in parallel.
+When all of them have executed successfully, the Deploys with sequence number 1 will be executed in parallel, and so on.
+
+When creating a Level Request, this Sequence Number will also be displayed in front of the Deploy Environment name.
+
+This functionality is useful in case a Deploy Environment depends on another and you do not want to create multiple Levels.
+For example, one Deploy Environment first updates an application database, and a second Environment will deploy the application code (if the database deploy is successful).
+
+. Underneath the Environments panel on the _Edit Level_ screen, click__ Edit Deploy Environment Sequence__. 
++
+<<_plevelenvmgt_editlevel>>
++
+
+[NOTE]
+====
+This link is only available if there is more than one Deploy Environment linked to the Level.
+====
++
+The following screen is displayed:
++
+image::images/ProjAdmin-Levels-EditDeploySequence.png[,298,203] 
++
+. Change the __Sequence Number__.
++
+Use the drop-down menu at the left of the Deploy Environment to change the Sequence Number.
+. Click Save to save the new sequence order.
++
+You can also click__ Refresh __to retrieve the settings from the database or__ Cancel __to return to the previous screen without saving your changes.
+
+
+===== Level Approvals 
+(((Approvals ,Level Approval Sequence)))  (((Approvals ,Level Approvals))) 
+
+For Test and Production Levels, you can specify the sequence of Pre- and Post-Approvals.
+For more information on Approvals, refer to <<_desktop_outstandingapprovals>>
+
+. Switch to the _Levels Overview_ screen.
++
+<<_plevelenvmgt_accessing>>
+
+. On the _Levels Overview_ panel, click the image:images/icons/edit.gif[,15,15] _Edit_ link for the required Level.
++
+The _Edit Level_ screen is displayed.
++
+image::images/ProjAdmin-Levels-Level-Edit.png[,986,483] 
++
+
+[NOTE]
+====
+Approvals can only be defined for Test and Production Levels.
+====
++
+. Click the image:images/icons/icon_editApprovals.png[,15,15] __Add Pre-Approval __or image:images/icons/icon_editApprovals.png[,15,15] __Add Post-Approval __link at the bottom of the __Edit Level __screen.
++
+The _Add Approval_ window is displayed:
++
+image::images/ProjAdmin-Levels-ProductionLevel-LevelApprovalSequence.png[,339,171] 
+
+. Select the required _User Group_ from the drop-down list. 
++
+Pre-Approvals need to be given before the Level Request is started, as they allow to avoid the execution of a Level Request.
+Post-Approvals need to be given after the Level Request is executed, as they allow to avoid the delivering of a Build to the next Level in the Lifecycle.
+. Define where the new approving User Group should be inserted. 
++
+Select the User Group after which the new User Group should be inserted from the _Insert After_ drop-down list.
++
+
+[NOTE]
+====
+If you do not select an existing Approval User Group from the __Insert after __drop-down list, the new Approval User Group will be inserted at the top of the sequence.
+====
+. Click the__ Insert __button, to confirm your changes.
++
+The Approval is added to the Sequence on the _Edit Level_ screen.
+. If necessary, you can use the image:images/icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ buttons to modify the order of the different User Groups, or use the image:images/icons/delete.gif[,15,15] _Remove_ button to remove a User Group from the Sequence list.
+. Repeat this procedure to define all required Pre- and Post-Approvals.
+
+
+==== Deleting a Level 
+(((Levels ,Deleting))) 
+
+Deleting a Level will also delete the connected Build and Deploy Environments, as well as the historical information concerning Level Requests, Builds and Deploys.
+
+[NOTE]
+====
+If the Level is still linked to a Lifecycle you cannot delete the Level.
+====
+
+. Switch to the _Levels Overview_ screen.
++
+<<_plevelenvmgt_accessing>>
+. Click the _Delete_ link on the _Levels Overview_ panel.
++
+The following screen is displayed:
++
+image::images/ProjAdmin-Levels-Delete.png[,644,599] 
++
+. Click__ Delete__ to confirm the deletion or _Back_ to return to the previous screen without deleting the Level.
+. If you try deleting a Level that is assigned to a Lifecycle, the following screen is displayed:
++
+image::images/ProjAdmin-Levels-TestLevel-Delete.png[,547,520] 
++
+Remove the Level from the Lifecycle before deleting it. <<_plifecyclemgt_removelevel>>
+
+
+==== Cloning a Level
+
+. Switch to the _Levels Overview_ screen.
++
+<<_plevelenvmgt_accessing>>
+. Click the _Clone_ image:images/icons/clone.gif[,15,15]  link in front of the Level you want to clone.
++
+The _Clone Level_ screen is displayed.
++
+image::images/ProjAdmin-Levels-CloneLevel.png[,905,484] 
++
+. Edit the fields on the _Level Info_ panel.
++
+For a description of the fields, refer to the sections <<_plevelenvmgt_createbuildlevel>> or <<_plevelenvmgt_createtestorproductionlevel>>.
+. Click__ Clone Level__ to confirm the action.
++
+You can also click _Back_ to return to the _Levels Overview_ screen.
++
+The Environments linked to the Level will be automatically cloned together with the Level.
+The environment names will be set automatically by adding a "`CLONE`" suffix.
+You might want to change this after the Level has been cloned.
+You also might want to change the Source and/or Target Locations, especially the Target Locations of cloned Deploy Environments.
+
+
+==== Viewing the Level History 
+(((Levels ,History))) 
+
+. Switch to the _Levels Overview_ screen.
++
+<<_plevelenvmgt_accessing>>
+. Click the _History_ image:images/icons/history.gif[,15,15]  link on the _Levels Overview_ panel.
++
+For more detailed information concerning this __History View__, refer to the section <<_historyeventlogging>>.
++
+Click __Back __to return to the previous screen.

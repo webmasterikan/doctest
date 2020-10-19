@@ -1,0 +1,547 @@
+
+== Packages 
+(((Desktop ,Packages)))  (((Packages))) 
+
+A Package allows moving one or more individual files selected manually from a VCR Stream (Head or Branch) through the IKAN ALM Lifecycle.
+One or multiple Packages may be created in each Project Stream of a Package-based Project.
+This is different from the original way of working in the Project Streams of Release-based projects, where a configurable automated process defines which file revisions are retrieved from the head (trunk) or branch of the versioning system and moved in the Lifecycle.
+
+From a __logical point of view__, Packages are partial views or views at a certain point in time on a Project Stream.
+The (logical) content of a Package may evolve in between two Builds and may be reused several times, over a period of time, throughout the Lifecycle of the Project Stream it belongs to.
+
+Packages are attached to one single Project Stream and can contain one up to all files of the Project Stream from the moment a revision is available in the VCR.
+On top of that, several Packages of a Project Stream can contain the same file, preferably with a different revision.
+However, there is no automated control on concurrent development on a file used by Packages belonging to the same Project Stream. 
+
+During the whole Lifecycle, each Package has its own Build number and evolves independently of the other Packages
+
+From a __physical point of view__, it comes down to putting together a set of files to be extracted from the VCR during the execution of the Build Level Request as to present them to the Build and Tag Phases, and to finally execute the Deploy of this set of files.
+For Release-based Projects, the rules for extracting files from the VCR are specified in the Project Stream definition by selecting the type of Build, and IKAN ALM will automatically take care of the selection of the objects.
+For Package-based Projects on the other hand, the selection of files to be extracted from the VCR is done manually by the Users of the Project in the form of a Package.
+Refer to the section <<_desktop_createpackage>>for more in information.
+
+From a __technical point of view__, Projects are defined and separated to use either Packages or Releases, and can never be mixed.
+
+Refer to the following procedures for more information:
+
+* <<_desktop_createpackage>>
+* <<_desktop_packageoverview>>
+* <<_desktop_viewpackage>>
+* <<_desktop_editpackage>>
+* <<_desktop_hideshowpackage>>
+* <<_desktop_viewpackagehistory>>
+
+
+[[_desktop_createpackage]]
+=== Creating a Package 
+(((Packages ,Creating))) 
+
+
+. Select _Packages > Create Package_ on the Main Menu.
++
+The _Select Project Stream_ window is displayed.
++
+image::images/Desktop-Packages-SelectProjectStream.png[,1038,636] 
++
+. Define search criteria on the _Search Project Stream_ panel.
++
+If you do not immediately find the Project Stream in which you want to create the Package, you can use the search panel on the left.
++
+The following search criteria are available:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Search Criteria
+| Meaning
+
+|Project Name
+|From the drop-down list, select the name of the Project for which you want to display the Project Streams.
+
+|VCR
+|Select the VCR name.
+
+|Project Type
+|This field is set to __Package-based__.
+
+|Project Stream Type
+|Select the type of Project Stream: Head or Branch.
+
+|Status
+a|Specify the status of the Project Stream:
+
+* Under construction
+* Planning
+* Development
+* Testing
+* Stable
+* General available
+* Frozen
+* Closed
+
+|Locked
+|Indicate whether or not you want to display locked Project Streams.
+
+By default, both locked and unlocked Project Streams are displayed.
+
+|Show Hidden Project Streams
+|Indicate whether or not you want to display hidden Project Streams.
+
+By default, hidden Project Streams are not shown.
+|===
++
+The list of elements displayed in the tree at the right, will be limited to the Project Streams matching these search criteria.
++
+Click the _Reset_ button to clear the Search fields.
+. Select the required Project Stream
++
+Expand the tree for the corresponding Project using the image:images/icons/ExpandProjectStream.gif[,10,10]  icon to display its Project Streams.
++
+Select the required Project Stream and click __Select
+Project Stream__.
++
+The _Create Package_ screen is displayed.
+The selected Project Stream name is automatically filled in.
+In case you want to select a different Project Stream, select the image:images/icons/icon_SelectProjectStream.png[,25,15]  at the right to return to the _Select Project Stream_ window.
+. Enter the name and, optionally, a description for the new Package, and click _Create_ to confirm the creation of the Package.
++
+The _Create Package_ window is displayed.
++
+image::images/Desktop-Packages-CreatePackage-Create.png[,494,300] 
++
+The __Edit Contents __tab page of the _Package Details_ screen will be displayed.
++
+A newly created package is empty.
+For more information on adding File Revisions to the newly created Package, refer to the section <<_desktop_packagedetails>>. 
+
+
+[[_desktop_packageoverview]]
+=== The Package Overview Screen 
+(((Packages ,Overview Screen))) 
+
+. Select _Packages > Overview Packages_ on the Main Menu.
++
+The _Packages Overview_ window is displayed.
++
+image::images/Desktop-Packages-PackagesOverview.png[,1015,497] 
++
+. Use the search criteria on the _Search_ panel to only display the Packages you are looking for.
++
+image::images/Desktop-Packages-PackagesOverview-SearchPanel.png[,996,98] 
++
+The following options are available:
+
+* Show advanced options: to display all available search criteria.
+* Search: in principle it is not necessary to click the _Search_ option. The results on the overview will be automatically synchronized in function of the selected criteria.
+* Reset search: to clear all search criteria and display the full list of items.
+* Select an existing filter from the drop-down list.
+* Save filter: to save the current search criteria for future use.
+
++
+For more information on the usage of search panels and filters, refer to the sections <<_babcjedaj8>> and <<_desktop_searchfilters>>.
+
+. Depending on your access rights, the following links may be available on the _Packages Overview_ panel:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:images/icons/view.gif[,15,15] 
+|View
+
+This option is available to all IKAN ALM Users.
+It allows viewing the selected Package definition and its connected file revisions.
+
+<<_desktop_viewpackage>>
+
+|image:images/icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Project Administrator Access Rights.
+It allows editing the Package definition and/or its connected file revisions. <<_desktop_editpackage>>
+
+|image:images/icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
+|Hide / Show
+
+This option is available to IKAN ALM Users with Project Administrator Access Rights.
+It allows hiding the selected Package.
+
+<<_desktop_hideshowpackage>>
+
+|image:images/icons/history.gif[,15,15] 
+|History
+
+This option is available to all IKAN ALM Users.
+It allows to display the History of all create, update and delete operations performed on a Package.
+
+<<_desktop_viewpackagehistory>>
+|===
++
+
+[NOTE]
+====
+Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+====
+
+
+=== Viewing Package Settings 
+(((Packages ,View Settings))) 
+
+. Select _Packages > Overview Packages_ on the Main Menu.
+. Click the image:images/icons/view.gif[,15,15] _View_ link on the__ Packages Overview__ panel.
++
+The __Summary __tab page of the _Package Details_ screen is displayed.
++
+image::images/Desktop-Packages-ViewPackage.png[,946,657] 
++
+. Verify the settings.
++
+The _Package Details_ screen contains 4 tab pages:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|Summary
+|Displays the basic information concerning the Package
+
+|View Contents
+|Displays the contents of the Package
+
+|Edit Contents
+|Allows modifying the Package`'s contents
+
+|Lifecycle Actions
+|Displays the actions executed on the Lifecycle.
+
+Allows to launch Level Requests for the selected Package.
+|===
++
+For more detailed information on the different tab pages, refer to the section <<_desktop_packagedetails>>.
+
+
+=== Editing a Package 
+(((Packages ,Editing))) 
+
+. Select _Packages > Overview Packages_ on the Main Menu.
+. Click the image:images/icons/edit.gif[,15,15] _Edit_ link on the__ Packages Overview__ panel.
++
+The __Edit Contents __tab page of the _Package Details_ screen is displayed.
++
+image::images/Desktop-Packages-EditPackage.png[,956,504] 
++
+On this tab page, you can modify the File Revisions contained in the Package. 
++
+For a more detailed explanation on how to do that, refer to the section <<_desktop_packagedetails_editcontents>>
++
+Other available buttons:
+
+* __Refresh__: to refresh the information on the information panels
+* __Back__: to return to the _Package Overview_ screen
++
+[NOTE]
+====
+If the__ Auto Refresh __option is activated, the screen will be refreshed each time the defined rate is expired. <<_desktop_autorefresh>>
+====
+
+. Click _Save_ to confirm your changes.
++
+Other available buttons:
+
+* __Clear__: to deselect all File Revisions. If in search mode, all matched files (and directories) will be unchecked.
++
+Note that when clicking the Clear button while holding down the CTRL key, will select all files in the current tree.
+* __Refresh__: to refresh the information on the information panels
+
+
+[[_desktop_hideshowpackage]]
+=== Hiding/Showing a Package 
+(((Packages ,Hiding)))  (((Packages ,Showing))) 
+
+Specifying that a Package is "`hidden`", causes it not to be displayed by default on Overview panels.
+For example, its Level Requests will be filtered out by default on the __Level
+Requests Overview__.
+
+This can be very useful to hide older Packages on the overviews, without losing the historical information associated with those Packages.
+
+. Select _Packages > Overview Packages_ on the Main Menu.
+. Click the image:images/icons/hide.gif[,15,15] _Hide_ link in front of the Package you want to hide.
++
+The icon in front of the Package changes to image:images/icons/show.gif[,15,15] .
++
+
+[NOTE]
+====
+Hidden Packages will not appear on the Overview screens for Level Requests, Approvals, Build and Deploys, nor on the _Create
+Level Request: Select Package_ screen when creating a Level Request for Package-based Projects.
+====
+..... To "`unhide`" a hidden Package, click the image:images/icons/show.gif[,15,15] _ Show_ link.
++
+The icon will be changed appropriately.
++
+
+[NOTE]
+====
+A search criterion is available on the _Search
+Package_ panel to specify whether or not you want to display hidden Packages. 
+====
+
+
+=== Viewing the Package History 
+(((Packages ,History))) 
+
+. Select _Packages > Overview Packages_ on the Main Menu.
+. Click the image:images/icons/history.gif[,15,15] _History_ link on the _Package Overview_ panel to display the __Package History View__.
++
+For more detailed information concerning this __History
+View__, refer to the section <<_historyeventlogging>>.
++
+Click __Overview __to return to the _Packages
+Overview_ screen.
+
+
+[[_desktop_packagedetails]]
+=== Package Details
+
+The _Package Details_ screen contains the detailed information concerning the selected Package. 
+
+The screen is structured as follows:
+
+. Status Header
++
+The header displays the name, OID and description of the selected Package, and whether it is a hidden package or not, as well as links to the Project and Project Stream it is used on.
+. Tab Pages with detailed information
++
+Underneath the status indication, several tabs are available, each of them displaying additional information concerning the Level Request.
+By default the _Summary_ tab page is displayed.
++
+Refer to one of the following sections for more information.
+
+* <<_desktop_packagedetails_summary>>
+* <<_desktop_packagedetails_viewcontents>>
+* <<_desktop_packagedetails_editcontents>>
+* <<_desktop_packagedetails_lifecycleactions>>
+
+. Back and Refresh links
+* Use the _Back_ link to return to the previous screen.
+* Use the _Refresh_ link to update the displayed information. This link reloads the currently selected tab page, as well as the header information. 
+. Auto Refresh option
++
+The _Auto Refresh_ option is only of use on the _Summary_ and _Lifecycle
+Actions_ tab pages.
++
+For more information on the _Auto Refresh_ settings, refer to the section <<_desktop_autorefresh>>.
+
+
+[[_desktop_packagedetails_summary]]
+==== Summary
+
+The information concerning the Package and the possible actions are spread over different panels.
+
+
+image::images/Desktop-PackageDetails-Tab-Summary.png[,892,483] 
+
+
+[[_desktop_packagedetails_actions]]
+===== Actions Panel
+
+
+image::images/Desktop-PackageDetails-Panel-Acttions.png[,330,254] 
+
+The _Actions_ panel contains the _Edit
+Package_ link.
+This link will open a pop-up window allowing you to modify the Name and the Description of the Package.
+
+
+image::images/Desktop-PackageDetails-Panel-Acttions_EditPackage.png[,478,236] 
+
+
+[[_desktop_packagedetails_info]]
+===== Info Panel
+
+
+image::images/Desktop-PackageDetails-Panel-Info.png[,826,239] 
+
+This panel displays the information found in the Header as well as some additional information.
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Project Stream
+a|This field contains the identification of the Project Stream.
+
+This name is composed of:
+
+* Project Name
+* Project Stream Type: H (Head) or B (Branch)
+* Project Stream Prefix, optionally followed by the Suffix in case of a Branch Project Stream
+
+Example: `Webpad H_1-0`
+
+|Package OID
+|This field contains the internal OID of the Package.
+
+|Name
+|This field contains the name of the Package.
+
+|Description
+|This field contains the description of the Package.
+
+|Hidden
+|This field indicates whether or not the Package is hidden. 
+
+By default newly created Packages are not hidden.
+For more information on hiding Packages, refer to <<_desktop_hideshowpackage>>.
+
+|Package Build Group
+|If applicable, this field contains the Package Build Group the Package is linked to.
+For more information, refer to the section <<_desktop_packagegroups>>.
+|===
+
+[[_desktop_packagedetails_latestlevelrequests]]
+===== Latest Level Requests Panel
+
+
+image::images/Desktop-PackageDetails-Panel-LatestLR.png[,933,193] 
+
+This panel displays the ten latest Level Requests executed for the selected Package.
+On this list, you can click the _OID_ link of one of the Level Requests to display its details.
+Clicking the Build Number will show the Build History of that Level Request.
+
+[[_desktop_packagedetails_viewcontents]]
+==== View Contents
+
+image::images/Desktop-PackageDetails-Tab-ViewContents.png[,710,336] 
+
+The _View Contents_ panel lists all File Revisions currently connected to the Package.
+
+The following fields are available:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Path
+|The path to the directory containing the file.
+
+|Name
+|The name of the Revision File contained in the Package.
+
+|Revision
+|The revision number in the VCR of the selected file.
+This field may be empty, indicating that the latest File Revision is retrieved at the moment the Package is built.
+|===
+
+[[_desktop_packagedetails_editcontents]]
+==== Edit Contents
+
+
+image::images/Desktop-PackageDetails-Tab-EditContents.png[,476,428] 
+
+On this panel, you can modify the contents of the selected Package.
+
+[NOTE]
+====
+The information on the _File
+Revisions Info_ panel is directly retrieved from the VCR.
+Use the _Refresh_ button to display the latest state.
+
+Using the _Clear_ button will deselect all items in the Package.
+Clicking the _Clear_ button while pressing the _CTRL_ key will select all items in the Package.
+====
+
+. Use the _Search_ field for selecting specific File Revisions.
++
+You can use the Search field for selecting specific File Revisions.
+Wildcards like '\*' and '?' may be used in any position.
+Sample search values: `foo.*`, or `?oo.txt` or combined `f??.*`
++
+image::images/Desktop-Packages-EditPackage_Search.png[,575,722] 
++
+To exit the search mode and redisplay all files and folders in the tree, click the image:images/icons/delete.gif[,15,15] _Exit
+Search_ icon. 
+. Select the File Revisions you want to add to the Package and click __Save__.
++
+The information on the _File
+Revisions Info_ panel is directly retrieved from the VCR.
+Use the _Refresh_ button to display the latest state. 
++
+Using the _Clear_ button will deselect all items in the Package.
+Clicking the _Clear_ button while pressing the _CTRL_ key will select all items in the Package.
++
+
+[NOTE]
+====
+Files which have been deleted from the VCR are shown struck through on the tree.
+
+At folder level, a red exclamation mark is displayed after the folder name.
+====
++
+The following actions are possible:
+
+********* Adding a File or Folder to the Package
++
+To select a File or Folder, expand the tree by clicking the image:images/icons/ExpandProjectStream.gif[,10,10]  icon to display all contained folders and files.
+Select the folder(s) or file(s) you want to add to the Package.
++
+image::images/Desktop-Packages-SelectProjectStream-AddFile.png[,467,141] 
++
+********* Adding a specific Revision of a selected File to the Package
++
+To select a specific Revision for a File, click the image:images/icons/icon_SelectRevision.png[,13,12]  at the right of a selected File name.
+The _Select Revision_ pop-up window is displayed.
+Select the required revision from the drop-down list and click __Select__.
+The revision number will be displayed next to the selected File.
++
+image::images/Desktop-Packages-SelectProjectStream-AddRevision.png[,469,201] 
++
+__Note: __If you do not select a specific revision of a file, the latest revision will be used at the moment the Package is built.
+********* Deleting a File of Folder from the Package
++
+To delete a File or Folder from the Package, deselect it in the tree.
+The name will be displayed in red.
++
+To deselect all Files in the Package, you can use the _Clear_ button.
++
+image::images/Desktop-Packages-SelectProjectStream-DeleteFile.png[,467,138] 
++
+__Note: __If a File or Folder has been removed from the VCR, this is indicated by an exclamation mark after the File or Folder name.
+The removed file is shown by strike-through.
+It is advised to delete the file or folder from the package as to synchronize it with the VCR.
++
+image::images/Desktop-Packages-SelectProjectStream-DeletedVCRFile.png[,469,108] 
++
+********* Changing from a specific Revision to the latest Revision of a File in the Package
++
+To change from a specific Revision to the latest Revision of a File, click the image:images/icons/icon_SelectRevision.png[,13,12]  at the right revision number.
+The _Select Revision_ pop-up window is displayed.
+Deselect the revision by selecting the empty value on top of the drop-down list and click __Select__.
+The revision number will disappear and the file will be marked with a red image:images/icons/icon_deselectRevision.png[,13,12] .
++
+image::images/Desktop-Packages-SelectProjectStream-DeleteRevision.png[,467,110] 
++
+********* Modifying a Revision of a File from the Package
++
+To modify to another specific Revision of a File, click the image:images/icons/icon_SelectRevision.png[,13,12]  at the right revision number.
+The _Select Revision_ pop-up window is displayed.
+Select the required revision from the drop-down list and click __Select__.
+The new revision number will be displayed next to the selected File.
++
+image::images/Desktop-Packages-SelectProjectStream-ModifyRevision.png[,471,108] 
+
+
+[[_desktop_packagedetails_lifecycleactions]]
+==== Lifecycle Actions
+
+
+image::images/Desktop-PackageDetails-Tab-LifecycleActions.png[,731,372] 
+
+This panel displays the latest Level Request for each of the Levels defined in the Lifecycle.
+
+Using the action icons, you can also start a Level Request for one of the Levels.
+Clicking such an action icon, will take you to the Create Level Request screen. 
+
+For more information on creating Level Requests, refer to the section <<_desktop_lr_creatinglevelrequest>>.

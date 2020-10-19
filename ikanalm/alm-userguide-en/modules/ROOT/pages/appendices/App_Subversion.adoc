@@ -1,0 +1,463 @@
+
+:sectnums!:
+
+[appendix]
+== Subversion - General Information 
+(((Subversion)))  (((Subversion ,General Information))) 
+
+This appendix provides general information on the connection and definition of the Subversion Repository, including some concrete examples and a section on Meta Properties.
+
+* <<_sappc_repositoryconnection>>
+* <<_sappc_repositorydefinition>>
+* <<_sappc_fetchmetaproperties>>
+
+
+[[_sappc_repositoryconnection]]
+=== Repository Connection 
+(((Subversion ,Repository Connection))) 
+
+IKAN ALM connects with the repository using the SVN client which must be installed on the IKAN ALM Server machine.
+The Command Path refers to the path where this SVN client is located.
+
+A Subversion Repository is identified via its Repository URL, e.g., _\file:///path/to/repos_ or _svn://servername_ or __\http://my.domain/repos__.
+For more information, see the on-line book about Subversion "Version Control with Subversion, Chapter 2 - Basic Concepts" at http://svnbook.red-bean.com/en/1.7/svn.basic.version-control-basics.html[http://svnbook.red-bean.com/en/1.7/svn.basic.version-control-basics.html].
+In chapter 7 of this book you will find a table about repository URLs and a topic about the Subversion Repository. 
+
+In most cases a User ID and Password must be provided, unless the repository is not protected (e.g., for the _svn_ protocol, _anon-access = write_ in the ``svnserver.con file``) or unless the credentials of the user running the IKAN ALM web server or application server process are stored in this user's private runtime config area (__~/.subversion/auth/ _or __%APPDATA%/Subversion/Auth/_). See also http://svnbook.red-bean.com/en/1.7/svn.serverconfig.netmodel.html#svn.serverconfig.netmodel.credcache[http://svnbook.red-bean.com/en/1.7/svn.serverconfig.netmodel.html#svn.serverconfig.netmodel.credcache].
+
+[[_sappc_repositorydefinition]]
+=== Repository Definition 
+(((Subversion ,Repository Definition))) 
+
+Specific fields in the Subversion definition are necessary to support the flexible setup of a Subversion Repository Layout (see http://svnbook.red-bean.com/en/1.2/svn.reposadmin.projects.html#svn.reposadmin.projects.chooselayout[http://svnbook.red-bean.com/en/1.2/svn.reposadmin.projects.html#svn.reposadmin.projects.chooselayout]).
+
+This sections provides the following information:
+
+* <<_sappc_specificfields>>
+* <<_sappc_layoutexamples>>
+
+
+[[_sappc_specificfields]]
+==== Specific Fields
+
+The following specific fields have been added to the Subversion definition:
+
+* Trunk Directory
+* Tags Directory
+* Repository Layout
+
+
+===== Trunk Directory
+
+The Trunk Directory is the directory of the "`head`" or "`main`" development stream.
+Its default name is __trunk__, but other names are allowed, e.g., __main__, __head__.
+
+This directory may reside directly under the repository path, or be defined per project, depending on the settings of the Repository Layout field described here below.
+
+[NOTE]
+====
+The Trunk field may have an empty value only if the Repository Layout field has the "Repository-oriented" value.
+In the case of a Project-oriented or Single Project-oriented Repository Layout, the Trunk directory must be specified to avoid infinite continuous builds if a schedule is set on such a repository definition (because the Tags directory would be part of the trunk, tagging would mean changing the trunk, and you would get an infinite loop).
+====
+
+===== Tags Directory
+
+The Tags Directory is the directory where IKAN ALM creates the tags (also called labels) after a successful build.
+Its default name is __tags__, but other names are allowed, e.g., __tag__.
+
+This directory may reside directly under the repository path, or be defined per project, depending on the settings of the Repository Layout field.
+
+===== Repository Layout
+
+The default Repository Layout is "Project-oriented". Other possible values are: "Repository-oriented" and "Single Project-oriented". 
+
+See the <<_sappc_layoutexamples>> for the configuration of the 4 possible Layouts.
+
+[[_sappc_layoutexamples]]
+==== Layout Examples
+
+This section provides some possible repository project layouts followed by the possible solution in IKAN ALM for a Subversion Repository.
+
+[NOTE]
+====
+The directory names used (trunk, tags, branches) are fully arbitrary.
+If you decided to call the trunk "main" or "head", or the branches "stream" or 
+ ., you are free to do so.
+====
+
+===== Layout 1 (Project-oriented)
+
+Structure in the Subversion Repository:
+
+[cols="1", frame="topbot"]
+|===
+
+|/
+
+/calc
+
+/calc/trunk
+
+/calc/branches
+
+/calc/tags
+
+/paint
+
+/paint/trunk
+
+/paint/branches
+
+/paint/tags
+|===
+
+
+Definition in IKAN ALM:
+
+[NOTE]
+====
+URL = Repository URL defined in the Subversion definition.
+====
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| 
+| Description
+| Value
+
+|Trunk Directory (Subversion Repository)
+|The Trunk Directory for the Subversion Repository.
+|trunk
+
+|Tags Directory (Subversion Repository)
+|The Tag Directory for the Subversion Repository.
+|tags
+
+|Repository Layout (Subversion Repository)
+|One of the 3 possible Repository Layouts.
+|Project-oriented
+
+|VCR Project Name (Project Definition)
+|The name of the Project as known within the VCR.
+|calc
+
+|Validate Project (Project Definition)
+|When clicking "`Check Project Name in the VCR`" the existence of these directories is checked.
+|URL/calc/trunk
+
+URL/calc/tags
+
+|Check-out Main (Level Request Handling)
+|Directory checked out from the head stream of the project in the "`Retrieve Code`" Phase.
+|URL/calc/trunk
+
+|Tag Sample Main (Level Request Detail)
+|Sample of a tag after a successful build in the head stream.
+|URL/calc/tags/H_1-0_b1
+
+|VCR Branch ID (Branch Project Stream Definition)
+|The Branch ID defined within the VCR.
+|/calc/branches/B_1-2
+
+|Validate Branch (Branch Project Stream Definition)
+|When clicking "`Check Branch ID in the VCR`" the existence of these directories is checked.
+|URL/calc/branches/B_1-2
+
+|Check-out Branch (Level Request Handling)
+|Directory checked out from the Branch of the project in the "`Retrieve Code`" Phase.
+|URL/calc/branches/B_1-2
+
+|Tag Sample Branch (Level Request Detail)
+|Sample of a tag after a successful build in a branch stream.
+|URL/calc/tags/B_1-2_b5
+|===
+
+===== Layout 2 (Repository-oriented)
+
+Structure in the Subversion Repository:
+
+[cols="1", frame="topbot"]
+|===
+
+|/
+
+/trunk
+
+/trunk/calc
+
+/trunk/paint
+
+/tags/paint
+
+/tags/calc
+
+/branches
+|===
+
+
+Definition in IKAN ALM:
+
+[NOTE]
+====
+URL = Repository URL defined in the Subversion definition.
+====
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| 
+| Description
+| Value
+
+|Trunk Directory (Subversion Repository)
+|The Trunk Directory for the Subversion Repository.
+|trunk
+
+|Tags Directory (Subversion Repository)
+|The Tag Directory for the Subversion Repository.
+|tags
+
+|Repository Layout (Subversion Repository)
+|One of the 3 possible Repository Layouts.
+|Repository-oriented
+
+|VCR Project Name (Project Definition)
+|The name of the Project as known within the VCR.
+|calc
+
+|Validate Project (Project Definition)
+|When clicking "`Check Project Name in the VCR`" the existence of these directories is checked.
+|URL/trunk/calc
+
+URL/tags/calc
+
+|Check-out Main (Level Request Handling)
+|Directory checked out from the head stream of the project in the "`Retrieve Code`" Phase.
+|URL/trunk/calc
+
+|Tag Sample Main (Level Request Detail)
+|Sample of a tag after a successful build in the head stream.
+|URL /tags/calc/H_1-0_b1
+
+|VCR Branch ID (Branch Project Stream Definition)
+|The Branch ID defined within the VCR.
+|/branches/calc/B_1-2
+
+|Validate Branch (Branch Project Stream Definition)
+|When clicking "`Check Branch ID in the VCR`" the existence of these directories is checked.
+|URL/branches/calc/B_1-2
+
+|Check-out Branch (Level Request Handling)
+|Directory checked out from the Branch of the project in the "`Retrieve Code`" Phase.
+|URL/branches/calc/B_1-2
+
+|Tag Sample Branch (Level Request Detail)
+|Sample of a tag after a successful build in a branch stream.
+|URL /tags/calc/B_1-2_b5
+|===
+
+===== Layout 3 (One Repository = One Project)
+
+Structure in the Subversion Repository:
+
+[cols="1", frame="topbot"]
+|===
+
+|/
+
+/trunk
+
+/tags
+
+/branches
+|===
+
+
+Definition in IKAN ALM:
+
+[NOTE]
+====
+URL = Repository URL defined in the Subversion definition.
+====
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| 
+| Description
+| Value
+
+|Trunk Directory (Subversion Repository)
+|The Trunk Directory for the Subversion Repository.
+|trunk
+
+|Tags Directory (Subversion Repository)
+|The Tag Directory for the Subversion Repository.
+|tags
+
+|Repository Layout (Subversion Repository)
+|One of the 3 possible Repository Layouts.
+|Single Project-oriented
+
+|VCR Project Name (Project Definition)
+|The name of the Project as known within the VCR.
+|Empty
+
+|Validate Project (Project Definition)
+|When clicking "`Check Project Name in the VCR`" the existence of these directories is checked.
+|URL/trunk
+
+URL/tags
+
+|Check-out Main (Level Request Handling)
+|Directory checked out from the head stream of the project in the "`Retrieve Code`" Phase.
+|URL/trunk
+
+|Tag Sample Main (Level Request Detail)
+|Sample of a tag after a successful build in the head stream.
+|URL /tags/H_1-0_b1
+
+|VCR Branch ID (Branch Project Stream Definition)
+|The Branch ID defined within the VCR.
+|/branches/B1-2
+
+|Validate Branch (Branch Project Stream Definition)
+|When clicking "`Check Branch ID in the VCR`" the existence of these directories is checked.
+|URL/branches/B1-2
+
+|Check-out Branch (Level Request Handling)
+|Directory checked out from the Branch of the project in the "`Retrieve Code`" Phase.
+|URL/branches/B1-2
+
+|Tag Sample Branch (Level Request Detail)
+|Sample of a tag after a successful build in a branch stream.
+|URL /tags/B_1-2_b5
+|===
+
+===== Layout 4 (Repository-oriented, no trunk)
+
+Structure in the Subversion Repository:
+
+[cols="1", frame="topbot"]
+|===
+
+|/
+
+/calc (= trunk directory)
+
+/paint (= trunk directory)
+
+/tags/paint
+
+/tags/calc
+
+/branches
+|===
+
+
+Definition in IKAN ALM:
+
+[NOTE]
+====
+URL = Repository URL defined in the Subversion definition.
+====
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| 
+| Description
+| Value
+
+|Trunk Directory (Subversion Repository)
+|The Trunk Directory for the Subversion Repository.
+|Empty
+
+|Tags Directory (Subversion Repository)
+|The Tag Directory for the Subversion Repository.
+|tags
+
+|Repository Layout (Subversion Repository)
+|One of the 3 possible Repository Layouts.
+|Repository-oriented
+
+|VCR Project Name (Project Definition)
+|The name of the Project as known within the VCR.
+|calc
+
+|Validate Project (Project Definition)
+|When clicking "`Check Project Name in the VCR`" the existence of these directories is checked.
+|URL/calc
+
+URL/tags/calc
+
+|Check-out Main (Level Request Handling)
+|Directory checked out from the head stream of the project in the "`Retrieve Code`" Phase.
+|URL/calc
+
+|Tag Sample Main (Level Request Detail)
+|Sample of a tag after a successful build in the head stream.
+|URL /tags/calc/H_1-0_b1
+
+|VCR Branch ID (Branch Project Stream Definition)
+|The Branch ID defined within the VCR.
+|/branches/calc/B_1-2
+
+|Validate Branch (Branch Project Stream Definition)
+|When clicking "`Check Branch ID in the VCR`" the existence of these directories is checked.
+|URL/branches/calc/B_1-2
+
+|Check-out Branch (Level Request Handling)
+|Directory checked out from the Branch of the project in the "`Retrieve Code`" Phase.
+|URL/branches/B1-2
+
+|Tag Sample Branch (Level Request Detail)
+|Sample of a tag after a successful build in a branch stream.
+|URL /tags/calc/B_1-2_b5
+|===
+
+[[_sappc_fetchmetaproperties]]
+=== Fetching Meta Properties 
+ (((Subversion ,Fetching Meta Properties))) 
+
+Subversion provides interfaces for adding, modifying, and removing versioned metadata on versioned directories and files.
+Those metadata are referred to as __properties__, see the "Version Control with Subversion, Chapter 7 - Advanced Properties" book at http://svnbook.red-bean.com/en/1.2/svn.advanced.props.html[http://svnbook.red-bean.com/en/1.2/svn.advanced.props.html], which explains how to use and set these properties on files and directories. 
+
+IKAN ALM makes it possible to use those properties during the build and deploy processes.
+If the "Fetch Meta Properties" value is set to __yes__, the following will happen during the build process:
+
+
+. Creation of a properties file (vcr.properties)
++
+At the end of the "Retrieve Code" Phase during the handling of a Level Request a properties file `vcr.properties` will be created in the root directory of the checked out code.
+This file will contain all meta properties of the files in the checked out URL (trunk or branch) in the following form:
++
+``path.to.file.filename.propertyname=propertyvalue``
++
+If a file has multiple properties linked to it, this will of course result in multiple entries in the `vcr.properties` file.
++
+Some samples
++
+Sample 1: A property with property name _register_ and property value _true_ on the file _/bin/Musicbiz.dll_ will result in the following propertyline: `bin.Musicbiz.dll.register=
+true`
++
+Sample 2: The file _/MusicLib/WEB-INF/web.xml_ has two properties linked to it: _servletspecs=2.5_ and __unchangeable=true__.
+This will result in following property lines in the `vcr.properties` file:
++
+``MusicLib.WEB-INF.web.xml.servletspecs=
+2.5``
++
+``MusicLib.WEB-INF.web.xml.unchangeable=
+true``
+. Transportation of the vcr.properties file to the Source Directory of the Build Environment
++
+During the "Transport Source" Phase of a Build process the `vcr.properties` file will be transported to the source directory of the Build Environment together with the sources checked out from your Subversion trunk or branch directory. 
++
+In order to use the properties, the build script should be adapted, e.g., when using an ANT scripting tool, the properties may be imported in the script via a _<property file="vcr.properties"/>_ task.
+. Inclusion of the vcr.properties file in the Build result
++
+When these properties should also be available during a following deploy process(es), i.e., on a deploy environment that is linked to this build environment, the `vcr.properties` file should be included in the Build result. 
++
+This can be achieved by including a copy instruction in the build script which copies the `vcr.properties` file from the source (predefined build parameter __source__) to the target (predefined build parameter __target__) directory of the Build Environment. 
++
+In that way the `vcr.properties` file will be included in the build result, and as a consequence it will be available to be used in the deploy script during a deploy action of this build result.
+
+
+:sectnums:

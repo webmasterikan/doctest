@@ -1,0 +1,39 @@
+
+== Global Administration (((Global Administration))) 
+
+On the Global Administration landing page, you will find an overview of all tasks which can also be called via the Global Administration menu.
+
+
+. On the Main Menu, click the _Global Administration_ image:images/icons/icon_GlobalAdmin_13x13.png[,13,13]  icon.
++
+In the remainder of this document, we will refer to this section of the interface as the "`Global Administration context`". 
+. Users with Global Admin Access Rights can perform the following tasks:
++
+image::images/GlobAdmin-LandingPage.png[,941,424] 
++
+. For Users without Global Admin Access Rights, the number of available tasks on the landing pages will be limited.
++
+image::images/GlobAdmin-LandingPage-User.png[,943,416] 
++
+
+[NOTE]
+====
+Each of the sections on the landing page corresponds with a Submenu item under Global Administration, except for the _History
+Log_ which has been added to the _Miscellaneous_ section on the landing page.
+====
++
+Refer to the following sections for detailed information:
+
+* <<_globadm_system>>
+* <<_globadm_historylog>>
+* <<_globadm_usersgroups_users>>
+* <<_globadm_usersgroups_groups>>
+* <<_globadm_machines>>
+* <<_globadm_transporters>>
+* <<_globadm_vcr>>
+* <<_globadm_scriptingtools>>
+* <<_globadm_issuetracking>>
+* <<_globadm_schedules>>
+* <<_globadm_miscellaneous>>
+* <<_globadm_phases>>
+* <<_globadm_project>>

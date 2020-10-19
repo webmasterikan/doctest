@@ -1,0 +1,296 @@
+
+== Environment Parameters 
+(((Project Administration ,Environment Parameters)))  (((Environment Parameters)))  (((Parameters ,Environment))) 
+
+Environment Parameters are parameters that can be used during the _Execute Script_ Phase which runs a Build/Deploy Script.
+They may also be used during the execution of a Custom Phase.
+
+Depending on the Build/Deploy Tool (Execute Script Phase) or the Execution Type (Custom Phase), the defined parameters will be:
+
+* added to the command which executes the Script (in the case of NAnt and Maven2)
+* written to a file named _alm_ant.properties_ (in the case of Ant) which is automatically loaded with the option ``-propertyfile``. This property file is created on the fly in the source location of the Environment in the directory containing the Script (this may be a subdirectory of the source location of the Environment in case the location of the Script was defined using a relative path). 
++
+In case of a Custom Phase, this file is located in a subdirectory of the source location, together with the extracted script and other resources of the Custom Phase. 
++
+Once the Build/Deploy process has terminated, this file is automatically deleted, unless the _Debug_ option for the Environment linked to the Level has been activated.
+
+
+Environment Parameters can be divided into two categories:
+
+* __Predefined Parameters__: these are Environment Parameters that are always available. A list of these predefined parameters can be found in:
+
+** <<_cpredefinedbuildparameters>>
+** <<_cpredefineddeployparameters>>
+
++
+To override the predefined parameter value for a specific Environment, define a Parameter with the same name on that Environment.
+* __User-defined Parameters__: The option _Build Environments > Build Parameters_ or _Deploy Environments > Deploy Parameters_ allows you to define your own Environment Parameters. 
+
+
+[NOTE]
+====
+
+On the _Miscellaneous_ tab of the _System Settings_ screen, you can specify the prefix for the predefined Parameters and properties file. <<_globadm_systemsettings_miscellaneous>>
+
+There also exist Predefined Level Parameters.
+They are available during the execution of a Custom Phase on a Level, They may not be overridden, since it is not (yet) possible to define Level Parameters.
+For more information, refer to the appendix <<_cpredefinedbuildparameters>>.
+====
+
+The _Parameters Overview_ screen lets you create, edit, delete and copy Environment Parameters and allows checking their history.
+The following actions are possible:
+
+* <<_environmentparams_create>>
+* <<_environmentparams_history>>
+* <<_environmentparams_edit>>
+* <<_environmentparams_delete>>
+* <<_environmentparams_copy>>
+
+
+=== The Parameters Overview Screen
+(((Environment Parameters ,Overview Screen))) 
+
+[NOTE]
+====
+This option is only available if you have Project Administrator Access Rights.
+====
+
+. In the __Project Administration context__, select _Build Environments > Build Parameters_ or __Deploy Environments > Deploy Parameters__.
++
+The following screen is displayed:
++
+image::images/ProjAdmin-EnvParams-Overview.png[,979,553] 
++
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields,
+. Verify the information on the _Parameters Overview_ panel.
++
+The _Parameters Overview_ panel displays the defined Environment Parameters for each of the Environments.
++
+For a description of the fields, see <<_environmentparams_create>>.
++
+
+[NOTE]
+====
+The icon image:images/icons/icon_MachineParameter.png[,15,15]  indicates that the parameter is a Machine Parameter. <<_globadm_machineparameters>> In order to show these Parameters, you should set the _Show
+Machine Parameters_ criterion to __Yes__.
+
+Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+====
+. Depending on your access rights, the following links may be available on the _Parameters Overview_ panel:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Link
+| Description
+
+|image:images/icons/icon_createparameter.png[,15,15] 
+|Create
+
+This option is available to all Users with Project Administrator Access Rights.
+It allows creating an Environment Parameter.
+
+<<_environmentparams_create>>
+
+|image:images/icons/history.gif[,15,15] 
+|History
+
+This option is available to all Users with Project Administrator Access Rights.
+It allows viewing the Parameter history of the selected Environment.
+
+<<_environmentparams_history>>
+
+|image:images/icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to all Users with Project Administrator Access Rights.
+It allows editing the selected Environment Parameter definition.
+
+<<_environmentparams_edit>>
+
+|image:images/icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to all Users with Project Administrator Access Rights.
+It allows deleting the selected Environment Parameter definition and (optionally) deleting Environment Parameters with the same key linked to other Build or Deploy Environments.
+
+<<_environmentparams_delete>>
+
+|image:images/icons/copy_parameter.gif[,15,15] 
+|Copy Parameter
+
+This option is available to all Users with Project Administrator Access Rights.
+It allows copying the selected Environment Parameter definition to one or more Environments.
+
+<<_environmentparams_copy>>
+|===
+
+
+=== Creating Environment Parameters 
+(((Environment Parameters ,Creating))) 
+
+. Switch to the _Parameters Overview_ screen for the required Project.
++
+<<_environmentparams_overview>>
+. Click the image:images/icons/icon_createparameter.png[,15,15] _Create Parameter_ link to display the Parameter Action window.
++
+image::images/ProjAdmin-EnvParams-Create.png[,382,404] 
++
+. Fill out the fields for the new Environment Parameter.
++
+The following fields are available.
+The _Key_ field is mandatory:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Environment
+|This field displays the name of the current Environment.
+
+|Type
+|This field displays the type of Parameter being created: _Build_ or __Deploy__.
+
+|Secure
+|This field indicates whether the Parameter is secured or not.
+
+|Key
+|In this field, enter the Key (Name) for the Environment Parameter.
+
+_Note:_ If an Environment Parameter and a Machine Parameter have the same Key, the Environment Parameter takes precedence.
+
+|Value
+a|In this field, enter the value(s) for the new Environment Parameter.
+
+The following possibilities apply:
+
+* Enter the fixed value, if you are creating a non-editable Environment Parameter.
+* Enter the default value, if you are creating an editable Environment Parameter.
+* Enter the list of possible preset values, separated by a semicolon (;), if you are creating a dynamic Environment Parameter.
+
+|Repeat Value
+|Required field for secured Environment Parameters: repeat the secured value.
+
+|Description
+|In this field, enter a description for the Parameter.
+
+|Mandatory
+|Select the__ Yes__ option button, if the new Environment Parameter must be defined as mandatory.
+When you create a Level Request for this Environment, the mandatory Environment Parameters will always be provided to the Script.
+
+Select the _No_ option button, if the new Environment Parameter should not be defined as mandatory.
+When you create a Level Request for this Environment, you can decide whether you want to provide the non-mandatory Environment Parameter to the Script.
+
+|Editable
+|Select the__ Yes__ option button, if the new Environment Parameter must be defined as editable.
+When you create a Level Request for this Environment, you can accept the default value (the one you enter in the Value field during creation) or define a value yourself for this Environment Parameter.
+
+Select the _No_ option button, if the new Environment Parameter should not be defined as editable.
+When you create a Level Request for this Environment, only the preset value (the one you enter in the Value field during creation) for this Environment Parameter can be offered to the Script.
+
+This field is not provided for secured Environment Parameters.
+
+|Dynamic
+|Select the _Yes_ option button, if the new Environment Parameter must be defined as dynamic.
+When you create a Level Request for this Environment, you can select one of the predefined values from the drop-down list.
+These are the values you enter in the Value field during creation and which you separate by a semicolon (;). The selected value will be offered to the Script.
+
+Select the _No_ option button, if the new Environment Parameter should not be defined as dynamic.
+
+This field is not provided for secured Environment Parameters.
+|===
+
+. Click __Create __to confirm the creation of the Environment Parameter.
++
+You can also click:
+
+* _Reset_ to clear the fields and restore the initial values.
+* _Cancel_ to return to the previous screen without saving the changes.
+
+
+=== Viewing the Environment Parameters History 
+(((Environment Parameters ,History))) 
+
+Switch to the _Parameters Overview_ screen for the required Project.
+
+<<_environmentparams_overview>>
+. Click the image:images/icons/history.gif[,15,15] _History_ link on the _Parameters Overview_ panel to display the__ Environment History View__.
+
+For more detailed information concerning this __History
+View__, refer to the section <<_historyeventlogging>>.
+
+Click __Back __to return to the previous screen.
+
+
+=== Editing Environment Parameters 
+(((Environment Parameters ,Editing))) 
+
+. Switch to the _Parameters Overview_ screen for the required Project.
++
+<<_environmentparams_overview>>
+. In the _Actions_ column, click the image:images/icons/edit.gif[,15,15] __ Edit __link in front of the Environment Parameter to be edited.
++
+The following window is displayed:
++
+image::images/ProjAdmin-EnvParams-Edit.png[,399,376] 
++
+For a description of the fields, refer to <<_environmentparams_create>>.
+
+. Edit the fields as required, and click _Save_ to save your changes.
++
+You can also click:
+
+* _Refresh_ to clear the fields and restore the initial values.
+* _Cancel_ to return to the previous screen without saving your changes.
+
+
+=== Deleting Environment Parameters 
+(((Environment Parameters ,Deleting))) 
+
+. Switch to the _Parameters Overview_ screen for the required Project.
++
+<<_environmentparams_overview>>
+. In the _Actions_ column, click the image:images/icons/delete.gif[,15,15] __ Delete __link in front of the Environment Parameter to be deleted.
++
+The following confirmation window is displayed:
++
+image::images/ProjAdmin-EnvParams-Delete.png[,383,388] 
++
+. Optionally, select additional Environments. This allows for deleting parameters with the same key name on the selected Build and Deploy Environments.
+. Click _Delete_ to confirm the deletion of the Environment Parameter.
++
+You can also click _Cancel_ to return to the previous screen without saving your changes.
+
+
+=== Copying Environment Parameters 
+(((Environment Parameters ,Copying))) 
+
+To avoid having to redefine Environment Parameters which are identical for multiple Environments, you can copy the required Environment Parameter to other Build and/or Deploy Environments.
+
+. Switch to the _Parameters Overview_ screen for the required Project.
++
+<<_environmentparams_overview>>
+. In the _Actions_ column, click the image:images/icons/copy_parameter.gif[,15,15] __ Copy __link in front of the Environment Parameter to be copied.
++
+The following window displays the values of the parameter you are about to copy.
++
+image::images/ProjAdmin-EnvParams-Copy.png[,462,529] 
++
+. Indicate whether you want to replace the parameter in case it already exists in the target Build or Deploy Environment(s).
+. Select the Target Environment(s)
+. Click _Copy_ to confirm copying the Environment Parameter.
++
+You can also click:
+
+* _Reset_ to clear the fields and restore the initial values.
+* _Cancel_ to return to the previous screen without saving the changes.

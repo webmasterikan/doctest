@@ -1,0 +1,526 @@
+[[_globadm_issuetrackingcreate]]
+== Issue Tracking 
+(((Global Administration ,Issue Tracking)))  (((Issue Tracking))) 
+
+The IKAN ALM Issue Tracking functionality provides the possibility to link issues from an external issue tracking system to an IKAN ALM Level Request.
+
+Issues can get linked to a Level Request in the following ways:
+
+* via an automatic search for handled issues in the comments provided by the developers when committing or checking in sources into the VCR. This automatic search is done in a separate Phase during the handling of a Build Level Request, and is based on a regular expression describing the issue tracking number format. Currently this is only supported for a Subversion, CVS or Microsoft Team Foundation Version Control Repository. 
+* via the enumeration of solved issues when delivering to Test/Production levels enabling easy generation of Release Notes
+* via a manual addition of an issue to a successful Level Request, using the GUI widgets on the _Level Request Detail_ screen.
+
+
+[NOTE]
+====
+
+You can only click through from a linked issue in IKAN ALM to the issue in the third-party Issue Tracking tool if the tool offers a web interface.
+====
+
+On top of this basic Issue Tracking functionality, IKAN ALM offers an extra tight integration for Atlassian JIRA, HP Quality Center, Microsoft Team Foundation and CollabNet TeamForge with following additional functionality: 
+
+* possibility to test the connection with the Issue Tracking system at the moment you create or edit an Issue Tracking System definition
+* automatic synchronization of handled issues with the Issue Tracking system: IKAN ALM retrieves additional information, such as a short description, the owner, the priority, ...from the corresponding JIRA Issue, HP Quality Center Defect, Team Foundation Work Item or TeamForge Artifact. This information is synchronized each time the build result evolves in the IKAN ALM Lifecycle.
+* manual synchronization of issues linked to a Level Request on the _Level Request Detail_ screen
+* option to automatically add a comment to the issue/defect/artifact in JIRA/HP Quality Center/TeamForge/Team Foundation after a successful Level Request. This comment will contain a link to the IKAN ALM Level Request.
+
+
+Refer to the following sections for detailed information.
+
+*Issue Tracking System*
+
+* <<_globadm_issuetrackingcreate>>
+* <<_globadm_issuetrackingoverview>>
+** <<_globadm_issuetracking_edit>>
+** <<_globadm_issuetracking_delete>>
+** <<_globadm_issuetracking_history>>
+
+*Issue Tracking System Properties*
+
+* <<_globadm_issuetrackingproperties_create>>
+* <<_globadm_issuetrackingproperties_overview>>
+** <<_globadm_issuetrackingproperties_edit>>
+** <<_globadm_issuetrackingproperties_delete>>
+
+
+Once the Issue Tracking System has been defined in the _Global
+Administration_ section, you must activate it on the Project. <<_projadmin_projectsoverview_editing>>
+
+If you want Issues to be automatically linked to Level Requests for certain Levels, the Issue Tracking Phase must be linked to those Levels.
+This will be done automatically when creating Levels for Projects which have an Issue Tracking System activated.
+If you activate the Issue Tracking System for a Project with existing Levels, you have to link the Issue Tracking Phase manually to each of those Levels.
+For more information, refer to the sections <<_phases_levelphases_issuetracking>>and <<_levelenvmgt_levelphases>>.
+
+[[_globadm_issuetrackingcreate]]
+=== Creating an Issue Tracking System 
+(((Issue Tracking Systems ,Creating))) 
+
+
+
+
+[NOTE]
+====
+This option is only available if you have Global Administrator Access Rights in IKAN ALM.
+====
+. In the Global Administration context, select _Issue Tracking > Create_.
++
+The following screen is displayed:
++
+image::images/GlobAdmin-IssueTracking-Create.png[,589,473] 
++
+. Fill out the fields in the _Create Issue Tracking System_ panel at the top of the screen. Fields marked with a red asterisk are mandatory:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Name
+|Enter the Name of the external Issue Tracking System.
+
+This field is the only mandatory field.
+However, if only the Name is provided, the integration capability is confined to being very basic, meaning that issues will have to be created and linked manually to the IKAN ALM Level Requests.
+
+|Description
+|Enter a description for the Issue Tracking System.
+
+|Plugin Factory Class
+a|Select the name of the class to be used for the Issue Tracking System.
+The classes are available in IKAN ALM as system functions: 
+
+** "generic" system (Bugzilla, Track, Mantis, ...):
++
+be.ikan.scm4all.plugin.issuetracking.generic.GenericITSPluginFactory
++
+IKAN ALM has a basic integration with these Issue Tracking System.
+** JIRA:be.ikan.scm4all.plugin.issuetracking.jira.JiraITSPluginFactory
+** HP Quality Center: be.ikan.scm4all.plugin.issuetracking.hpqc.HPQcITSPluginFactory
+** CollabNet TeamForge: be.ikan.scm4all.plugin.issuetracking.teamforge.TeamForgeITSPluginFactory
+** Microsoft Team Foundation: be.ikan.scm4all.plugin.issuetracking.tfs.TFSITSPluginFactory 
+
+_Note:_ The integration with JIRA, HP ALM, Team Foundation and TeamForge also retrieves information about individual issues, such as status, description and owner.
+Issues are synchronized with the external Issue Tracking System at each Level Request deliver in the Lifecycle.
+
+|URL
+|Enter the template URL used to click through from an issue in IKAN ALM to the issue in the external Issue Tracking System.
+
+Obviously, the Issue Tracking System must have a web interface that will guide you (perhaps after having provided the necessary login parameters) to the detailed description of an Issue.
+In the URL, the issue number variable must be provided as "${issueId}". 
+
+Some examples:
+
+For JIRA: `http(s)://host:port/browse/PROJECTKEY-${issueId}`
+
+For HP Quality Center: `testdirector:host:port/qcbin,domainname,projectname,[AnyUser];2:${issueId}`
+
+For TeamForge: `http(s)://host:port/sf/go/${issueId}`
+
+For Trac: `http(s)://host/ticket/${issueId}`
+
+For Bugzilla: `http(s)/host/bugs/show_bug.cgi?id=${issueId}`
+
+For Team Foundation: `http(s)://host[:port/tfs]/DefaultCollection/PROJECT_NAME/_workitems#_a=edit&id=${issueId}`
+
+_Note:_ IKAN ALM Users who will use the "`testdirector`" command to establish the link with HP Quality Center must install the necessary HP "`Add-ins`". Refer to the HP documentation for more detailed information.
+
+|User
+|Enter the User ID having the necessary rights to connect to the system.
+
+|Password
+|Enter the Password for the User ID.
+
+The characters you enter are displayed as asterisks.
+
+|Repeat Password
+|Re-enter the Password for the User ID.
+
+|Issue Pattern
+|Enter the Issue Pattern.
+
+This Issue Pattern must be a valid regular expression.
+For more information on how to provide valid regular expressions that may be interpreted by IKAN ALM, refer to http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html[http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html].
+
+If provided, this pattern will be used to detect issue numbers in the commit comments in the VCR (currently supported for Subversion, Git, Team Foundation and CVS). This pattern matching is done in a separate Phase at the end of a successful Build Level Request.
+
+The pattern matching is case insensitive, this is reflected in the examples below.
+
+Note that the field may be neglected (together with the Issue ID Pattern) for a Team Foundation ITS when it is connected to a Project with a Team Foundation versioning system: in that case the Work Items are directly connected to a Commit, so it`'s not necessary that IKAN ALM parses the issue comments to detect the connected Work Items
+
+*Examples* (the bold text is the text that will be matched):
+
+Example 1: webpad(\s)*[0-9]+((\s)*,(\s)*[0-9]+)*
+
+- Solving issue *webpad 333* by adapting.
+
+- Added file x, and changed file y in order to solve *Webpad 45, 46*.
+
+Example 2: \[#([A-Z0-9]+)-([0-9]+)\]
+
+- Small fix in the about menu *[#WEBPAD-7]*. - Also fixed a general IKAN ALM problem *[#ALM-3788]*. - Finally also tackled issue *[#gen-344]*.
+
+|Issue ID Pattern
+|Enter the Issue ID Pattern.
+
+This pattern is needed to retrieve the exact Issue Number out of a matched Issue in the commit comment.
+It is part of the Issue Pattern and must also be a valid regular expression.
+
+This will allow to select the numbers in bold in the comments of the VCR.
+
+The field may be neglected (together with the Issue Pattern) for a Team Foundation ITS when it is connected to a Project with a Team Foundation versioning system.
+
+Example 1: `[0-9]+`
+
+- Webpad *45* , *46*
+
+- [#gen-344]
+
+Example 2: ``[A-Z0-9]+``-[0-9]+
+
+- *WEBPAD-7*
+
+- *ALM-3788*
+
+|Add Comments
+|This option has no effect if you use the GenericITSPlugin.
+
+Select the _Yes_ option to automatically add a comment to the Issue in the Issue Tracking System.
+This comment will contain a link to the IKAN ALM Level Request.
+
+The addition of this comment will also be listed in the Level Request Issue Tracking Phase Log.
+|===
++
+
+[NOTE]
+====
+
+For more detailed information on the specific Issue Tracking system settings, refer to the appropriate Integration Guide (HowToALM_Integrating HPALM TestRunner, HowToALM_Integrating HPALM QualityCenter, HowToALM_Integrating JIRA, HowToALM_Integrating TeamForge or HowToALM_Integrating Team Foundation).
+====
+. Once you have filled out the fields, click __Create__.
++
+A warning may appear indicating that some required properties must be set.
+Refer to the section <<_globadm_issuetrackingproperties_overview>> for editing the Issue Tracking System properties.
++
+image::images/GlobAdmin-IssueTracking-Create-Warning.png[,449,41] 
++
+Once the Issue Tracking System has been defined, you must activate it on the Project. <<_projadmin_projectsoverview_editing>>
+. In case you defined a JIRA, HP ALM, TeamForge or Team Foundation Issue Tracking System, you can test if IKAN ALM can establish the connection.
++
+<<_globadm_issuetracking_edit>>
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<_projadmin_projectsoverview_editing>>
+* <<_desktop_lr_issues>>
+* <<_globadm_issuetracking>>
+* <<_phases_levelphases_issuetracking>>
+
+|===
+
+[[_globadm_issuetrackingoverview]]
+=== The Issue Tracking Systems Overview Screen 
+(((Issue Tracking Systems ,Overview Screen))) 
+
+. In the Global Administration context, select _Issue Tracking > Overview_.
++
+The following screen is displayed:
++
+image::images/GlobAdmin-IssueTracking-Overview.png[,1035,516] 
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields,
+. Verify the information on the _Issue Tracking Systems Overview_ panel.
++
+For a detailed description of the fields, refer to <<_globadm_issuetrackingcreate>>.
+. Depending on your access rights, the following links may be available on the _Issue Tracking Systems Overview_ panel: 
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:images/icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows editing an Issue Tracking System definition.
+
+<<_globadm_issuetracking_edit>>
+
+|image:images/icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows deleting an Issue Tracking System definition.
+
+<<_globadm_issuetracking_delete>>
+
+|image:images/icons/history.gif[,15,15] 
+|History
+
+This option is available to all IKAN ALM Users.
+It allows displaying the History of all create, update and delete operations performed on an Issue Tracking System and its properties.
+
+<<_globadm_issuetracking_history>>
+|===
+
+
+==== Editing an Issue Tracking System Definition 
+(((Issue Tracking Systems ,Editing))) 
+
+. In the Global Administration context, select _Issue Tracking > Overview_.
+
+. Click the image:images/icons/edit.gif[,15,15]  _Edit_ link in front of the Issue Tracking System you want to modify.
++
+The following screen is displayed:
++
+image::images/GlobAdmin-IssueTracking-Info.png[,725,673] 
++
+. Click the _Edit_ button on the _Issue Tracking System Info_ panel.
++
+The following screen is displayed:
++
+image::images/GlobAdmin-IssueTracking-Edit.png[,595,440] 
++
+. Edit the fields as required.
++
+For a description of the fields, refer to <<_globadm_issuetrackingcreate>>.
++
+
+[NOTE]
+====
+The _Connected Projects_ panel displays the Projects the Issue Tracking System is linked to. 
+====
+
+. Click _Save_ to save your changes.
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Cancel_ to return to the previous screen without saving the changes
+
+. In case you defined a JIRA, HP ALM, TeamForge or Team Foundation Issue Tracking System with its required properties, you can test if IKAN ALM can establish the connection.
++
+Click the _Test Connection_ button.
++
+__Info: Could successfully establish a connection
+with the Issue Tracking System.__
++
+If the test is not successful, the following screen is displayed:
++
+image::images/GlobAdmin-IssueTracking-TestConnection-Fail.png[,743,516] 
++
+Correct the errors reported in the Stack Trace field and perform the test again.
+
+. On the __Issue Tracking System Properties Overview __panel, you can create and edit the Isue Tracking System Properties.
++
+For more information, refer to the section <<_globadm_issuetrackingproperties_overview>>
+
+
+==== Deleting an Issue Tracking System Definition 
+(((Issue Tracking Systems ,Deleting))) 
+. In the Global Administration context, select _Issue Tracking > Overview_.
+
+. Click the image:images/icons/delete.gif[,15,15]  _Delete_ link to delete the selected Issue Tracking System definition.
++
+The following screen is displayed:
++
+image::images/GlobAdmin-IssueTracking-Delete.png[,630,328] 
++
+. Click _Delete_ to confirm the deletion.
++
+You can also click __Back __to return to the previous screen without deleting the entry.
++
+__Note:__ If the Issue Tracking System is still linked to one (or more) Project(s), the following screen is displayed:
++
+image::images/GlobAdmin-IssueTracking-Delete-Error.png[,614,346] 
++
+You must change the definition of the listed Projects, before you can delete the Issue Tracking System.
+
+
+==== Viewing the Issue Tracking System History 
+(((Issue Tracking Systems ,History))) 
+
+. In the Global Administration context, select _Issue Tracking > Overview_.
+
+. Click the image:images/icons/history.gif[,15,15] _History_ link to display the _Issue Tracking System History View_.
++
+For more detailed information concerning this __History
+View__, refer to the section <<_historyeventlogging>>.
+
+. Click __Back __to return to the _Issue Tracking Systems Overview_ screen.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<_projadmin_projectsoverview_editing>>
+* <<_desktop_lr_issues>>
+* <<_globadm_issuetracking>>
+* <<_phases_levelphases_issuetracking>>
+
+|===
+
+[[_globadm_issuetrackingproperties_overview]]
+=== The Issue Tracking System Properties Overview Panel 
+(((Issue Tracking System Properties)))  (((Issue Tracking Systems ,Properties ,Overview Screen)))  (((Issue Tracking Systems ,Properties ,Creating)))  (((Issue Tracking Systems ,Properties ,Editing)))  (((Issue Tracking Systems ,Properties ,Deleting))) 
+
+The Issue Tracking System Properties Overview panel is available on the _Edit Issue Tracking
+System_ screen.
+
+
+. Access the _Edit Issue Tracking System_ screen.
++
+In the Global Administration context, select__ Issue
+Tracking > Overview _and click the image:images/icons/edit.gif[,15,15] __Edit_ link in front of the Issue Tracking System for which you want to display the Properties. 
+
+. This screen contains the _Issue Tracking System Properties Overview_ panel.
++
+image::images/GlobAdmin-IssueTracking-Info-ITSPropertiesPanel.png[,725,673] 
++
+This screen lets you create, edit or delete ITS Properties.
++
+Depending on the Properties available in the Issue Tracking System and on your access rights, the following links may be available on the _Issue Tracking Systems Properties Overview_ panel:
++
+
+[NOTE]
+====
+You can only define Properties which have been implemented by the __Plugin Factory Class__.
+====
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:images/icons/icon_createparameter.png[,15,15] 
+|Create
+
+This link is only available if a Property has been defined by the Plugin Factory Class, but its value has not been specified yet.
+Otherwise, only the links __Edit__, _Delete_ and _History_ are available.
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows creating an Issue Tracking System Property definition.
+
+<<_globadm_issuetrackingproperties_create>>
+
+|image:images/icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows editing an Issue Tracking System Property definition.
+
+<<_globadm_issuetrackingproperties_edit>>
+
+|image:images/icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows deleting an Issue Tracking System Property definition.
+
+<<_globadm_issuetrackingproperties_delete>>
+|===
+
+
+==== Creating an Issue Tracking System Property
+[[_globadm_issuetrackingproperties_create]]
+
+. On the _Issue Tracking System Properties Overview_ panel, click the image:images/icons/icon_createparameter.png[,15,15]  _Create_ link for the required Property.
++
+The following screen is displayed:
++
+image::images/GlobAdmin-IssueTracking-EditProperties-Create.png[,502,238] 
++
+The following fields are displayed:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Name
+|The name is predefined by IKAN ALM in function of the type of Issue Tracking System.
+
+|Value
+|Depending on the Issue Tracking system and the property, this field is mandatory or optional.
+
+Enter the value needed for correct usage of the Issue Tracking System.
+
+Example for the JIRA jiraRESTUrl property: `http(s)://machine:8090/rest`
+
+Example for the TeamForge teamForgeWSUrl property: `http(s)://teamforge1.my.domain`
+
+Example for the Team Foundation collectionURL property: `http(s)://ServerName[:8080/tfs]/DefaultCollection`
+
+|Default Value
+|This field contains the default value.
+
+|Required
+|Option managed by IKAN ALM.
+
+Required properties must be provided in order to have a full functional Issue Tracking integration.
+
+Possible values: _Yes_ or __No__.
+
+|Secure
+|Option managed by IKAN ALM.
+
+The value of secured properties will be hidden (replaced by *) from the user.
+
+Possible values: _Yes_ or __No__.
+
+|Description
+|Option managed by IKAN ALM.
+
+The description for the Issue tracking System Property.
+|===
+
+. Fill out the value in the _Value_ field and click _Create_ to confirm the creation of the new Property.
++
+You can also click:
+
+* _Reset_ to clear the fields and restore the initial values.
+* __Cancel __to return to the previous screen without saving your changes.
+
+
+==== Editing an Issue Tracking System Property
+[[_globadm_issuetrackingproperties_edit]]
+
+. On the _Issue Tracking System Properties Overview_ panel, click the image:images/icons/edit.gif[,15,15]  _Edit _link for the required Property.
++
+The following screen is displayed:
++
+image::images/GlobAdmin-IssueTracking-EditProperties-Edit.png[,502,238] 
++
+For a description of the fields, refer to the section <<_globadm_issuetrackingproperties_create>>.
+
+. If required, modify the value in the _Value_ field and click __Save__.
++
+You can also click:
+
+* __Refresh__: to retrieve the settings from the database.
+* __Cancel__: to return to the previous screen without saving the changes to the fields.[[_globadm_issuetrackingproperties_delete]]
+
+
+==== Deleting an Issue Tracking System Property
+
+. On the _Issue Tracking System Properties Overview_ panel, click the image:images/icons/delete.gif[,15,15] _Delete link_ for the required Property.
++
+The following screen is displayed:
++
+image::images/GlobAdmin-IssueTracking-EditProperties-Delete.png[,519,227] 
++
+. Click _Delete_ to confirm the Deletion of the Property.
++
+You can also click _Cancel_ to return to the _Issue Tracking Systems Overview_ without deleting the Property.

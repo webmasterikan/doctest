@@ -1,0 +1,354 @@
+[[_projadm_projectsoverview_hidingshowing]]
+== Projects  
+(((Project Administration ,Projects)))  (((Projects))) 
+
+The _Projects Overview_ screen provides information about the IKAN ALM Projects.
+All IKAN ALM Users can display the Projects Overview page.
+However, only users with view rights (belonging to the Project`'s Users group) can view the Projects`' settings, and only users with Project Administration rights (belonging to the Project`'s Administrators group) can edit the projects.
+
+Refer to the following procedures for more information:
+
+* <<_projadmin_projectsoverview_accessing>>
+* <<_projadmin_projectsoverview_viewing>>
+* <<_projadmin_projectsoverview_editing>>
+* <<_projadmin_projectsoverview_deleting>>
+* <<_porjadm_projectsoverview_locking>>
+* <<_projadm_projectsoverview_hidingshowing>>
+* <<_projadm_projectsoverview_historyview>>
+
+
+=== The Projects Overview Screen
+(((Projects ,Overview Screen))) 
+
+. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
++
+The __Projects Overview __screen is displayed.
++
+image::images/ProjAdmin-Projects-Overview.png[,970,410] 
++
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields,
+* select a filter from the drop-down menu (if filters have been defined) or use the __Save filter __link to save the current search criteria as a filter for future use.
++
+For more information on the usage of filters, refer to the section <<_desktop_searchfilters>>
+. Verify the available information on the _Projects Overview_ panel.
++
+For a description of the fields, refer to <<_globadm_projectcreate>>.
+. Depending on your access rights, the following links may be available on the _Projects Overview_ panel:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:images/icons/view.gif[,15,15] 
+|View
+
+This option is available to IKAN ALM Users with Project User Access Rights.
+It allows viewing the selected Project definition.
+
+<<_projadmin_projectsoverview_viewing>>
+
+|image:images/icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to all IKAN ALM Users with Project Admin Access Rights.
+It allows editing the selected Project definition and switching to the other Project Administration options.
+
+<<_projadmin_projectsoverview_editing>>
+
+|image:images/icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to IKAN ALM Users with Project Admin Access Rights.
+It allows deleting a Project.
+
+<<_projadmin_projectsoverview_deleting>>
+
+|image:images/icons/lock.gif[,15,15] / image:images/icons/unlock.gif[,15,15] 
+|Lock / Unlock
+
+This option is available to IKAN ALM Users with Project Admin Access Rights.
+It allows locking or unlocking the selected Project.
+
+<<_porjadm_projectsoverview_locking>>
+
+|image:images/icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
+|Hide / Show
+
+This option is available to IKAN ALM Users with Project Admin Access Rights.
+It allows hiding the selected Project.
+
+<<_projadm_projectsoverview_hidingshowing>>
+
+|image:images/icons/history.gif[,15,15] 
+|History
+
+This option is available to all IKAN ALM Users with Project User Access Rights.
+It allows to display the History of all create, update and delete operations performed on a Project.
+
+<<_projadm_projectsoverview_historyview>>
+|===
+
+
+=== Viewing Project Settings 
+(((Projects ,Viewing))) 
+
+[NOTE]
+====
+This option is only available to IKAN ALM Users with User Access Rights.
+====
+
+. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
+
+. Click the image:images/icons/view.gif[,15,15] _View_ link on the __Projects Overview__ panel.
++
+This link is available if you have User Access Rights to the Project.
++
+The _Project Info_ screen is displayed:
++
+image::images/ProjAdmin-Projects-View.png[,1044,641] 
++
+. Verify the settings.
++
+For a description of the fields, refer to <<_globadm_projectcreate>>.
++
+Underneath the _Project Info_ panel, the following links and buttons are available:
+
+* __History__. This link will display the __Project History View __screen.
+* __Refresh __to retrieve the settings from the database.
+* _Back_ to return to the __Projects Overview __screen.
+
++
+
+[NOTE]
+====
+
+To make it easier to view all project`'s settings, the most important Project User actions have been grouped in subpanels aside the _Project Info_ panel. 
+====
+
+
+.Procedure: Editing Project Settings (((Projects ,Editing))) 
+
+. Click the _Project Administration _image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
+. Click the image:images/icons/edit.gif[,15,15] _Edit_ link on the Projects Overview panel.
++
+
+[NOTE]
+====
+This link is only available if you have Project Admin Access Rights to the Project.
+====
++
+The _Project Info_ screen is displayed.
++
+image::images/ProjAdmin-Projects-AdminRights-Edit.png[,555,779] 
++
+. Click the _Edit_ button.
++
+The __Edit Project__ window pops up.
++
+image::images/ProjAdmin-Projects-Edit_Edit.png[,458,534] 
++
+. Edit the fields as required and click __Save__.
++
+
+[WARNING]
+--
+Once Builds have been created for a Project, changing the Project name has a big impact as all Builds already saved in the Build archive will become inaccessible.
+
+You can always move the old builds to the new Build Archive location for the different Streams of the project.
+This will be indicated when you audit the project.
+-- 
++
+The following fields are available for each Project:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Name
+|This field contains the Project Name.
+
+|Description
+|This field contains the Project Description.
+
+|Project Type
+a|This read-only field contains the Project Type:
+
+* Release-based
+* Package-based
+
+The type of the Project is defined at the moment the Project is created (or cloned) by the Global Administrator. <<_globadm_projectcreate>>
+
+|Locked
+|This read-only field indicates whether or not the Project is locked:
+
+Level Requests cannot be created for a locked Project.
+
+|Hidden
+|This read-only field indicates whether or not the Project is hidden.
+
+By default newly created Projects are not hidden.
+For more information on hiding Projects, refer to <<_projadm_projectsoverview_hidingshowing>>.
+
+|VCR
+|This field contains the VCR used for the Project.
+
+|VCR Project Name
+|This field contains the VCR Project Name.
+
+|Issue Tracking System
+|This field contains the name of the external Issue Tracking System.
+
+If an Issue Tracking System is selected, IKAN ALM will from then on automatically create an Issue Tracking Level Phase when a new Level is created for the Project. <<_phases_levelphases_issuetracking>>
+
+This field is only visible when there are external Issue Tracking Systems defined in IKAN ALM.
+See also <<_globadm_issuetracking>>.
+
+|Build Tool Type
+|This field contains the Build Tool Type used for the Project.
+
+|Deploy Tool Type
+|This field contains the Deploy Tool Type used for the Project.
+
+|Build Script
+|This field _may_ contain the Build Script used for the Project.
+
+If the Build Script file is located in the root folder of the Project, it refers to a file name directly, e.g., _build.xml_
+
+If the Build Script file is located in another folder belonging to the Project, it refers to the relative path to that folder, e.g., __/dir1/build/build.xml__.
+
+If this field is left blank, the Build Script may be specified on the Build Environment, or as a Phase Parameter of the Execute Script Phase.
+
+|Deploy Script
+|This field__ may__ contain the Deploy Script used for the Project.
+
+If the Deploy Script file is located in the root folder of the Project, it refers to a filename directly, e.g.__,
+deploy.xml__
+
+If the Deploy Script file is located in another folder belonging to the Project, it refers to the relative path to that folder, e.g., __/dir1/deploy/deploy.xml__.
+
+If this field is left blank, the Deploy Script may be specified on the Deploy Environment, or as a Phase Parameter of the Execute Script Phase.
+
+|User Access
+|This field contains the name of the User Group whose members have regular access rights to this Project and are notified when Level Requests are created.
+
+|Admin Access
+|This field contains the name of the User Group whose members have administrative access rights to this Project.
+|===
+
+. You can also click:
+
+**** __Save __to save your changes.
+**** __Refresh __to retrieve the settings from the database.
+**** _Cancel_ to close the pop-up window.
+
+. When clicking the _Save_ or _Cancel_ buttons, the _Project Info_ page will be displayed.
++
+On this page the following buttons are available:
++
+* _Check Project Name in the VCR_ to check if the VCR Project name is available. This function will use the settings in the Global Administration connect to the VCR linked to the Project, in order to check if the VCR Project Name exists in the VCR.
+* __History __to display the _Project History View_ screen.
+* __Clone Project __to display the __Clone Project __screen. For more information, refer to the section <<_globadm_projectclone>>.
+* _Lock_ to lock the Project. This means blocking all activity on that Project, such as manual or scheduled Level Requests. You may want to lock a Project, if configuration parameters are changed, or if administrative actions are required on the VCR.
+* __Unlock __to lift the blocking of all activity on this Project, like manual or scheduled Level Request. You must unlock a Project after having completed the maintenance.
+* __Refresh __to retrieve the settings from the database.
+* _Back_ to return to the __Projects Overview __screen.
+
+. Notice the submenus at the right containing the _Project Administration_ options. 
++
+To make setting up a project easier, the most important project administration actions have also been grouped in subpanels aside the _Project Info_ panel.
++
+image::images/ProjAdmin-Projects-EasyAccessPanels.png[,488,453] 
++
+For an overview of the submenu options, refer to section <<_projadm_projmgtoptions>>.
+
+
+=== Deleting a Project 
+(((Projects ,Deleting))) 
+
+. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
+. Click the image:images/icons/delete.gif[,15,15] _Delete_ link on the _Projects Overview_ panel.
++
+The _Delete Project_ screen is displayed:
++
+image::images/ProjAdmin-Projects-Delete.png[,673,553] 
++
+. Verify if you really want to irrevocably delete the Project.
++
+Deleting a Project will also delete all Project Streams, Lifecycles, Levels, Environments and all historical information (Level Requests, Builds, Deploys, etc.) of that Project.
+. Click __Delete__ to confirm the deletion. 
++
+You can also click _Back_ to return to the _Projects_ screen without deleting the Project.
+
+
+=== Locking/Unlocking a Project 
+(((Locking ,Projects)))  (((Unlocking ,Projects)))  (((Projects ,Locking)))  (((Projects ,Unlocking))) 
+
+Locking a Project means blocking all activity on that Project, such as manual or scheduled Level Requests.
+
+You may want to lock a Project, if configuration parameters are changed, or if administrative actions are required on the VCR.
+
+Unlocking a Project means reallowing these actions on a Project.
+
+. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
+
+. Click the image:images/icons/lock.gif[,15,15] _Lock_ or image:images/icons/unlock.gif[,15,15] _Unlock_ link on the _Projects Overview_ panel.
++
+
+[NOTE]
+====
+This functionality is also available via the _Lock/Unlock_ button on the _Project Info_ panel. <<_projadmin_projectsoverview_editing>>
+====
+
+
+=== Hiding/Showing a Project 
+(((Projects ,Hiding)))  (((Projects ,Showing))) 
+
+Specifying that a Project is "`hidden`", causes it not to be displayed by default on Overview panels.
+This can be very useful to hide older Projects on the overviews, without losing the historical information (Level Requests, ...) associated with those Projects.
+
+. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu. 
+. Click the image:images/icons/hide.gif[,15,15] _Hide_ link in front of the Project you want to hide.
++
+The Project will disappear from the overview since Hidden Projects will not be shown by default.
+In order to show it again, you have to set the _Show Hidden
+Projects_ search criterion to _Yes_ or _All_ in the Search panel.
+. To "`unhide`" a hidden Project, click the image:images/icons/show.gif[,15,15] _show_ link.
++
+The icon will be changed appropriately.
++
+
+[NOTE]
+====
+The criterion _Show
+Hidden Projects_ has been added to the Search panels to specify whether or not you want to display hidden Projects.
+Click the _Show advanced options_ link to display this criterion.
+====
+
+
+=== Viewing the Project History 
+(((Projects ,History))) 
+
+. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
+. Click the image:images/icons/history.gif[,15,15] _History_ link on the _Projects Overview_ panel to display the __Project History View__.
++
+For more detailed information concerning this __History
+View__, refer to the section <<_historyeventlogging>>.
++
+Click __Back __to return to the previous screen.
++
+
+[NOTE]
+====
+This link is also available on the _Project
+Info_ panel. <<_projadmin_projectsoverview_viewing>>
+====

@@ -1,0 +1,22 @@
+
+== Desktop (((Desktop)))  (((Desktop ,Introduction))) 
+
+The Desktop makes up the work environment for the regular IKAN ALM end user.
+
+It gives access to common actions as:
+
+* creating or verifying a build (by a developer)
+* verifying the project status (by a project leader)
+* delivering a build to the QA environment (by a software tester)
+* approving a deploy to the production environment (by a release manager)
+* $$...$$
+
+
+This section describes the following Desktop Administration tasks: 
+
+* <<_desktop_levelrequests>>
+* <<_desktop_packages>> and <<_desktop_packagegroups>>
+* <<_desktop_outstandingapprovals>>
+* <<_desktop_managedesktop>>
+* <<_desktop_autorefresh>>
+* <<_desktop_personalsettings>>
