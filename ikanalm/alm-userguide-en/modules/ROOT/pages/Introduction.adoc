@@ -39,7 +39,7 @@ Click a link to switch to the detailed description.
 |Regular User
 a|A Regular User can perform the following tasks (depending on his or her ID`'s security settings):
 
-* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
+* <<_desktop_managedesktop>>
 * Checking the <<_desktop_lr_buildhistory>>
 * Approving or rejecting <<_desktop_outstandingapprovals>>
 * Creating or updating <<_desktop_levelrequests>>
