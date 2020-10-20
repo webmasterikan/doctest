@@ -1,4 +1,4 @@
-[[_desktop_managedesktop,Managing the Desktop]]
+[[_desktop_managedesktop]]
 == Managing the Desktop 
 (((Desktop ,Managing Your Desktop)))  (((Managing Your Desktop))) 
 
