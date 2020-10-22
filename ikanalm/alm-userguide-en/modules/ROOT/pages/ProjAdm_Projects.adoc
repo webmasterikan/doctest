@@ -8,13 +8,13 @@ However, only users with view rights (belonging to the Project`'s Users group) c
 
 Refer to the following procedures for more information:
 
-* <<_projadmin_projectsoverview_accessing>>
-* <<_projadmin_projectsoverview_viewing>>
-* <<_projadmin_projectsoverview_editing>>
-* <<_projadmin_projectsoverview_deleting>>
-* <<_porjadm_projectsoverview_locking>>
-* <<_projadm_projectsoverview_hidingshowing>>
-* <<_projadm_projectsoverview_historyview>>
+* <<#_projadmin_projectsoverview_accessing,>>
+* <<#_projadmin_projectsoverview_viewing,>>
+* <<#_projadmin_projectsoverview_editing,>>
+* <<#_projadmin_projectsoverview_deleting,>>
+* <<#_porjadm_projectsoverview_locking,>>
+* <<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Projects>>
+* <<#_projadm_projectsoverview_historyview,>>
 
 
 === The Projects Overview Screen
@@ -37,10 +37,10 @@ You can also:
 * click the _Reset search_ link to clear the search fields,
 * select a filter from the drop-down menu (if filters have been defined) or use the __Save filter __link to save the current search criteria as a filter for future use.
 +
-For more information on the usage of filters, refer to the section <<_desktop_searchfilters>>
+For more information on the usage of filters, refer to the section <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining>>
 . Verify the available information on the _Projects Overview_ panel.
 +
-For a description of the fields, refer to <<_globadm_projectcreate>>.
+For a description of the fields, refer to <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects>>.
 . Depending on your access rights, the following links may be available on the _Projects Overview_ panel:
 +
 
@@ -53,7 +53,7 @@ For a description of the fields, refer to <<_globadm_projectcreate>>.
 This option is available to IKAN ALM Users with Project User Access Rights.
 It allows viewing the selected Project definition.
 
-<<_projadmin_projectsoverview_viewing>>
+<<#_projadmin_projectsoverview_viewing,>>
 
 |image:images/icons/edit.gif[,15,15] 
 |Edit
@@ -61,7 +61,7 @@ It allows viewing the selected Project definition.
 This option is available to all IKAN ALM Users with Project Admin Access Rights.
 It allows editing the selected Project definition and switching to the other Project Administration options.
 
-<<_projadmin_projectsoverview_editing>>
+<<#_projadmin_projectsoverview_editing,>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -69,7 +69,7 @@ It allows editing the selected Project definition and switching to the other Pro
 This option is available to IKAN ALM Users with Project Admin Access Rights.
 It allows deleting a Project.
 
-<<_projadmin_projectsoverview_deleting>>
+<<#_projadmin_projectsoverview_deleting,>>
 
 |image:images/icons/lock.gif[,15,15] / image:images/icons/unlock.gif[,15,15] 
 |Lock / Unlock
@@ -77,7 +77,7 @@ It allows deleting a Project.
 This option is available to IKAN ALM Users with Project Admin Access Rights.
 It allows locking or unlocking the selected Project.
 
-<<_porjadm_projectsoverview_locking>>
+<<#_porjadm_projectsoverview_locking,>>
 
 |image:images/icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
 |Hide / Show
@@ -85,7 +85,7 @@ It allows locking or unlocking the selected Project.
 This option is available to IKAN ALM Users with Project Admin Access Rights.
 It allows hiding the selected Project.
 
-<<_projadm_projectsoverview_hidingshowing>>
+<<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Projects>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -93,7 +93,7 @@ It allows hiding the selected Project.
 This option is available to all IKAN ALM Users with Project User Access Rights.
 It allows to display the History of all create, update and delete operations performed on a Project.
 
-<<_projadm_projectsoverview_historyview>>
+<<#_projadm_projectsoverview_historyview,>>
 |===
 
 
@@ -117,7 +117,7 @@ image::images/ProjAdmin-Projects-View.png[,1044,641]
 +
 . Verify the settings.
 +
-For a description of the fields, refer to <<_globadm_projectcreate>>.
+For a description of the fields, refer to <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects>>.
 +
 Underneath the _Project Info_ panel, the following links and buttons are available:
 
@@ -186,7 +186,7 @@ a|This read-only field contains the Project Type:
 * Release-based
 * Package-based
 
-The type of the Project is defined at the moment the Project is created (or cloned) by the Global Administrator. <<_globadm_projectcreate>>
+The type of the Project is defined at the moment the Project is created (or cloned) by the Global Administrator. <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects>>
 
 |Locked
 |This read-only field indicates whether or not the Project is locked:
@@ -197,7 +197,7 @@ Level Requests cannot be created for a locked Project.
 |This read-only field indicates whether or not the Project is hidden.
 
 By default newly created Projects are not hidden.
-For more information on hiding Projects, refer to <<_projadm_projectsoverview_hidingshowing>>.
+For more information on hiding Projects, refer to <<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Projects>>.
 
 |VCR
 |This field contains the VCR used for the Project.
@@ -208,10 +208,10 @@ For more information on hiding Projects, refer to <<_projadm_projectsoverview_hi
 |Issue Tracking System
 |This field contains the name of the external Issue Tracking System.
 
-If an Issue Tracking System is selected, IKAN ALM will from then on automatically create an Issue Tracking Level Phase when a new Level is created for the Project. <<_phases_levelphases_issuetracking>>
+If an Issue Tracking System is selected, IKAN ALM will from then on automatically create an Issue Tracking Level Phase when a new Level is created for the Project. <<App_Phases.adoc#_phases_levelphases_issuetracking,Issue>>
 
 This field is only visible when there are external Issue Tracking Systems defined in IKAN ALM.
-See also <<_globadm_issuetracking>>.
+See also <<#_globadm_issuetracking,>>.
 
 |Build Tool Type
 |This field contains the Build Tool Type used for the Project.
@@ -257,7 +257,7 @@ On this page the following buttons are available:
 +
 * _Check Project Name in the VCR_ to check if the VCR Project name is available. This function will use the settings in the Global Administration connect to the VCR linked to the Project, in order to check if the VCR Project Name exists in the VCR.
 * __History __to display the _Project History View_ screen.
-* __Clone Project __to display the __Clone Project __screen. For more information, refer to the section <<_globadm_projectclone>>.
+* __Clone Project __to display the __Clone Project __screen. For more information, refer to the section <<GlobAdm_Project.adoc#_globadm_projectclone,Cloning>>.
 * _Lock_ to lock the Project. This means blocking all activity on that Project, such as manual or scheduled Level Requests. You may want to lock a Project, if configuration parameters are changed, or if administrative actions are required on the VCR.
 * __Unlock __to lift the blocking of all activity on this Project, like manual or scheduled Level Request. You must unlock a Project after having completed the maintenance.
 * __Refresh __to retrieve the settings from the database.
@@ -269,7 +269,7 @@ To make setting up a project easier, the most important project administration a
 +
 image::images/ProjAdmin-Projects-EasyAccessPanels.png[,488,453] 
 +
-For an overview of the submenu options, refer to section <<_projadm_projmgtoptions>>.
+For an overview of the submenu options, refer to section <<#_projadm_projmgtoptions,>>.
 
 
 === Deleting a Project 
@@ -306,7 +306,7 @@ Unlocking a Project means reallowing these actions on a Project.
 
 [NOTE]
 ====
-This functionality is also available via the _Lock/Unlock_ button on the _Project Info_ panel. <<_projadmin_projectsoverview_editing>>
+This functionality is also available via the _Lock/Unlock_ button on the _Project Info_ panel. <<#_projadmin_projectsoverview_editing,>>
 ====
 
 
@@ -342,7 +342,7 @@ Click the _Show advanced options_ link to display this criterion.
 . Click the image:images/icons/history.gif[,15,15] _History_ link on the _Projects Overview_ panel to display the __Project History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<#_historyeventlogging,>>.
 +
 Click __Back __to return to the previous screen.
 +
@@ -350,5 +350,5 @@ Click __Back __to return to the previous screen.
 [NOTE]
 ====
 This link is also available on the _Project
-Info_ panel. <<_projadmin_projectsoverview_viewing>>
+Info_ panel. <<#_projadmin_projectsoverview_viewing,>>
 ====

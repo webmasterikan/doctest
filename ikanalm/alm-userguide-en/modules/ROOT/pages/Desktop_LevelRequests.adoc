@@ -11,29 +11,29 @@ From a physical point of view, Level Requests can match a Build with or without 
 
 The following sections describe these Level Request types in detail:
 
-* <<_srebuildlr>>
-* <<_srebuildanddeploylr>>
-* <<_sdeploylr>>
+* <<Desktop_LevelRequests.adoc#_srebuildlr,(Re)Build>>
+* <<Desktop_LevelRequests.adoc#_srebuildanddeploylr,(Re)Build>>
+* <<Desktop_LevelRequests.adoc#_sdeploylr,Deploy>>
 
 
 The following sections deal with the procedures involved when creating new Level Requests:
 
-* <<_desktop_lr_createlevelrequest_selectlevel>>
-* <<_desktop_lr_createlevelrequest_build>>
-* <<_desktop_lr_createlevelrequest_deliver>>
-* <<_desktop_lr_createlevelrequest_rollback>>
+* <<#_desktop_lr_createlevelrequest_selectlevel,>>
+* <<#_desktop_lr_createlevelrequest_build,>>
+* <<#_desktop_lr_createlevelrequest_deliver,>>
+* <<#_desktop_lr_createlevelrequest_rollback,>>
 
 
 The following sections deal with the procedures involved when using the __Level Requests Overview__:
 
-* <<_desktop_lr_overview>>
-* <<_dekstop_lr_detailedoverview>>
-* <<_desktop_lr_buildsdeploysoverview>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_buildsdeploysoverview,Builds>>
 
 
 The following section deals with the Build History:
 
-* <<_desktop_lr_buildhistory>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build>>
 
 
 [[_desktop_lr_actionflows]]
@@ -44,9 +44,9 @@ When adapting the <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases>>, the <<P
 
 The following different action flows are possible, depending on the composition of the Level (the Level Type and the related Build and/or Deploy Environment(s)):
 
-* <<_srebuildlr>>
-* <<_srebuildanddeploylr>>
-* <<_sdeploylr>>
+* <<Desktop_LevelRequests.adoc#_srebuildlr,(Re)Build>>
+* <<Desktop_LevelRequests.adoc#_srebuildanddeploylr,(Re)Build>>
+* <<Desktop_LevelRequests.adoc#_sdeploylr,Deploy>>
 
 
 [[_srebuildlr]]
@@ -82,7 +82,7 @@ image::images/Desktop-LevelRequests-Flow-Build.png[,872,1262]
 
 
 |1.
-|A Level Request is created manually by the User (via the <<_desktop_lr_createlevelrequest_selectlevel>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
+|A Level Request is created manually by the User (via the <<#_desktop_lr_createlevelrequest_selectlevel,>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
 
 A Build Level Request directly goes on to step 5; a Rebuild Level Request may pass steps 2, 3 and/or 4.
 
@@ -122,7 +122,7 @@ Since a (Re)Build Level Request may have more than one Build, steps 8 till 18 wi
 |As the Build Status is set to __Ready__, the Builder Agent on the Machine(s) where a Build must be executed, picks up this _Ready_ status and transports the Source Code from the Work Copy Location on the IKAN ALM Server to the Build Environment Source Location, defined on this Machine and for this Build Level. 
 
 Which transport action (local FileCopy, remote FileCopy, SecureCopy or FTP) will be used depends on the type of Transporter that is linked to the Machine containing the Build Environment.
-Refer to the section <<_projadm_buildenvironments>>.
+Refer to the section <<#_projadm_buildenvironments,>>.
 
 If this process fails, steps 9 and 10 are performed.
 
@@ -253,7 +253,7 @@ The final Level Request Status is set to __Warning__, if at least one non-blocki
 
 All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate>> screen) receive the required notifications, as well as the Users having Request Rights on the Level.
 
-The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<_plevelenvmgt_createbuildlevel>>, <<_plevelenvmgt_createtestorproductionlevel>> or <<_plevelenvmgt_editlevel>>.
+The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<#_plevelenvmgt_createbuildlevel,>>, <<#_plevelenvmgt_createtestorproductionlevel,>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing>>.
 |===
 
 [[_srebuildanddeploylr]]
@@ -288,7 +288,7 @@ image::images/Desktop-LevelRequests-Flow-BuildAndDeploy.png[,891,1238]
 
 
 |1.
-|A Level Request is created manually by the User (via the <<_desktop_lr_createlevelrequest_selectlevel>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
+|A Level Request is created manually by the User (via the <<#_desktop_lr_createlevelrequest_selectlevel,>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
 
 A Build Level Request directly goes on to step 5, a Rebuild Level Request may pass steps 2,3 and/or 4.
 
@@ -328,7 +328,7 @@ Since a (Re)Build and Deploy Level Request may have more than one Build, steps 8
 |As the Build Status is set to __Ready__, the Builder Agent on the Machine(s) where a Build must be executed, picks up this _Ready_ status and transports the Source code from the Work Copy Location on the IKAN ALM Server to the Build Environment Source Location, defined on this Machine and for this Build Level. 
 
 Which transport action (local FileCopy, remote FileCopy, SecureCopy or FTP) will be used depends on the type of Transporter that is linked to the Machine containing the Build Environment.
-Refer to the section <<_projadm_buildenvironments>>.
+Refer to the section <<#_projadm_buildenvironments,>>.
 
 If this process fails, steps 9 and 10 are performed.
 
@@ -456,7 +456,7 @@ As failure of this step is not blocking, step 23 is performed next, whether the 
 It then transports the compressed Build Result from the Build Archive to the Deploy Environment Source Location for this Level.
 
 Which transport action (local FileCopy, remote FileCopy, SecureCopy or FTP) will be used depends on the type of Transporter that is linked to the Machine containing the Deploy Environment.
-Refer to the section <<_projadm_deployenvironments>>.
+Refer to the section <<#_projadm_deployenvironments,>>.
 
 If this process fails, steps 25 and 26 are performed.
 
@@ -481,14 +481,14 @@ If this process succeeds, step 28 is performed.
 This process comprises two phases.
 
 __In the first phase__, the Deployer Agent determines which Deploy Script it must use.
-First, it verifies if a specific Deploy Script was defined for the Deploy Environment (<<_projadm_deployenvironments>>). If this is the case, the Deployer assumes it must locate and use this Deploy Script.
+First, it verifies if a specific Deploy Script was defined for the Deploy Environment (<<#_projadm_deployenvironments,>>). If this is the case, the Deployer assumes it must locate and use this Deploy Script.
 
 If no specific Deploy Script was defined for the Deploy Environment, the Deployer assumes it must locate and use the Deploy Script defined on the <<ProjAdm_Projects.adoc#_projadm_projects>> screen.
 
 If no Deploy Script was defined there either, the Verify Deploy Script process fails and steps 25 and 26 are performed.
 
 __In the second phase__, the Deployer tries to locate the Deploy Script it has determined it must use in the first step.
-First it searches the decompressed Build Result in the Source location of the Deploy Environment (<<_projadm_deployenvironments>>). If the Deploy Script is found, the Verify Deploy Script process succeeds and step 29 will be performed.
+First it searches the decompressed Build Result in the Source location of the Deploy Environment (<<#_projadm_deployenvironments,>>). If the Deploy Script is found, the Verify Deploy Script process succeeds and step 29 will be performed.
 
 If the Deploy Script is not found in the decompressed Build result, the Deployer searches the default IKAN ALM Script Location as defined in the <<GlobAdm_System.adoc#_globadm_system_settings>>.
 
@@ -537,7 +537,7 @@ The final Level Request Status is set to __Warning__, if at least one non-blocki
 
 All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate>> screen) receive the required notifications, together with the users that have Request Rights on the Level.
 
-The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<_plevelenvmgt_createbuildlevel>>, <<_plevelenvmgt_createtestorproductionlevel>> or <<_plevelenvmgt_editlevel>>.
+The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<#_plevelenvmgt_createbuildlevel,>>, <<#_plevelenvmgt_createtestorproductionlevel,>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing>>.
 |===
 
 [[_sdeploylr]]
@@ -567,7 +567,7 @@ image::images/Desktop-LevelRequests-Flow-Deploy.png[,759,1067]
 
 
 |1.
-|A Level Request is created manually by the User (via the <<_desktop_lr_createlevelrequest_selectlevel>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
+|A Level Request is created manually by the User (via the <<#_desktop_lr_createlevelrequest_selectlevel,>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
 
 |2.
 |The Monitor Process on the IKAN ALM Server picks up the Level Request and optionally sends the required Pre- and Post-Notifications.
@@ -592,7 +592,7 @@ Since a Deploy Level Request may have more than one Deploy, steps 6 till 10 will
 It then transports the compressed Build Result from the Work Copy Location to the Deploy Environment Source Location defined on this Machine and for this Level. 
 
 Which transport action (local FileCopy, remote FileCopy, SecureCopy or FTP) will be used depends on the type of Transporter that is linked to the Machine containing the Deploy Environment.
-Refer to the section <<_projadm_deployenvironments>>.
+Refer to the section <<#_projadm_deployenvironments,>>.
 
 If this process fails, steps 7 and 8 are performed.
 
@@ -672,7 +672,7 @@ The final Level Request Status is set to __Warning__, if the Deploy Status has b
 
 All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate>> screen) receive the required notifications, together with the users that have Request Rights on the Level.
 
-The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<_plevelenvmgt_createbuildlevel>>, <<_plevelenvmgt_createtestorproductionlevel>> or <<_plevelenvmgt_editlevel>>.
+The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<#_plevelenvmgt_createbuildlevel,>>, <<#_plevelenvmgt_createtestorproductionlevel,>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing>>.
 |===
 
 [[_desktop_lr_creatinglevelrequest]]
@@ -681,16 +681,16 @@ The Notification type (mail, netsend) and the Notification criteria (if Level Re
 
 The following sections deal with the procedures involved when creating new Level Requests:
 
-* <<_desktop_lr_createlevelrequest_selectlevel>>
-* <<_desktop_lr_createlevelrequest_build>>
-* <<_desktop_lr_createlevelrequest_deliver>>
-* <<_desktop_lr_createlevelrequest_rollback>>
+* <<#_desktop_lr_createlevelrequest_selectlevel,>>
+* <<#_desktop_lr_createlevelrequest_build,>>
+* <<#_desktop_lr_createlevelrequest_deliver,>>
+* <<#_desktop_lr_createlevelrequest_rollback,>>
 
 
 [NOTE]
 ====
 
-If you often need to create Level Requests for specific Levels, you can assign them to one of your Desktop Tab Pages. <<_managedesktop_addingelements>>
+If you often need to create Level Requests for specific Levels, you can assign them to one of your Desktop Tab Pages. <<#_managedesktop_addingelements,>>
 
 This way, you will be able to easily create Level Requests by simply clicking an icon.
 ====
@@ -743,7 +743,7 @@ There are three Level Types:
 * Test
 * Production
 
-See the sections <<_plevelenvmgt_createbuildlevel>> and <<_plevelenvmgt_createtestorproductionlevel>>.
+See the sections <<#_plevelenvmgt_createbuildlevel,>> and <<#_plevelenvmgt_createtestorproductionlevel,>>.
 
 |Optional
 a|This field indicates whether or not the Level is optional in the Lifecycle attached to the Project Stream.
@@ -751,7 +751,7 @@ a|This field indicates whether or not the Level is optional in the Lifecycle att
 * If the Level is optional, the field is marked by a red cross.
 * If the Level is not optional, this field is empty.
 
-<<_lifecyclemgt_screen>>
+<<ProjAdm_LifeCycles.adoc#_lifecyclemgt_screen,Lifecycles>>
 
 |Locked
 a|This field indicates whether or not the Level is locked:
@@ -762,7 +762,7 @@ a|This field indicates whether or not the Level is locked:
 It is not possible to execute Level Requests on locked Levels.
 Levels can be unlocked by auditing the Project.
 
-<<_projadm_auditingprojects>>
+<<#_projadm_auditingprojects,>>
 
 |Active Build Number
 |This field contains the number of the Active Build on this Level.
@@ -774,7 +774,7 @@ Levels can be unlocked by auditing the Project.
 |This field is only applicable on a Build Level.
 
 It contains the name of the Schedule associated with this Level.
-The Schedule defines the frequency of the Continuous Build process as a number of seconds, minutes or days. <<_globadm_schedules>>
+The Schedule defines the frequency of the Continuous Build process as a number of seconds, minutes or days. <<#_globadm_schedules,>>
 
 If no Schedule was assigned to a particular Level, the field remains empty.
 
@@ -802,19 +802,19 @@ If no schedule is attached to the Build Level, a build will be __requested__.
 
 If a schedule is attached to it, and if the Force Build Option is activated for the Project Stream, a build can be __forced__.
 
-<<_desktop_lr_createlevelrequest_build>>
+<<#_desktop_lr_createlevelrequest_build,>>
 
 |image:images/icons/icon_deliverBuild.png[,15,15] 
 |Deliver
 |Click this icon to create a Level Request that will deliver a Build to the selected Test or Production Level.
 
-<<_desktop_lr_createlevelrequest_deliver>>
+<<#_desktop_lr_createlevelrequest_deliver,>>
 
 |image:images/icons/rollback.gif[,15,15] 
 |Rollback
 |Click this icon to create a Level Request that will restore a previous version of the application on the selected Test or Production Level.
 
-<<_desktop_lr_createlevelrequest_rollback>>
+<<#_desktop_lr_createlevelrequest_rollback,>>
 |===
 +
 The following messages can replace or complete the Level Request Creation Links.
@@ -845,18 +845,18 @@ You must connect with a User ID having the right to run Requests or ask the Glob
 |_The Project is locked_
 |It is not possible to define Level Requests for locked Projects.
 
-A User with Project Admin Access Rights can unlock the Project first by clicking the _Unlock_ button on the __Projects Overview__. <<_projadmin_projectsoverview_editing>>
+A User with Project Admin Access Rights can unlock the Project first by clicking the _Unlock_ button on the __Projects Overview__. <<#_projadmin_projectsoverview_editing,>>
 
 |_The Project Stream is locked_
 |It is not possible to define Level Requests for locked Project Streams.
 
-A User with Project Admin Access Rights can unlock the Project Stream first by clicking the _Unlock_ button on the__ Edit Project Stream screen__. <<_projadmin_projectstream_editing>>
+A User with Project Admin Access Rights can unlock the Project Stream first by clicking the _Unlock_ button on the__ Edit Project Stream screen__. <<#_projadmin_projectstream_editing,>>
 
 |_The Project Stream is frozen_
 |It is not possible to define Build Level Requests for frozen Project Streams.
 However, it is still possible to deliver Level Requests to Test and Production Levels.
 
-A User with Project Admin Access Rights can unfreeze the Project Stream first by selecting another status from the _Status_ drop-down menu on the __Edit Project Stream screen__. <<_projadmin_projectstream_editing>>
+A User with Project Admin Access Rights can unfreeze the Project Stream first by selecting another status from the _Status_ drop-down menu on the __Edit Project Stream screen__. <<#_projadmin_projectstream_editing,>>
 
 |_No Build Environments defined_
 |It is not possible to define a Build Level Request for a Build Level without a Build Environment.
@@ -876,7 +876,7 @@ This is a warning message, indicating that there will be no deploy Action when c
 However, such Levels have the same Approval and Notification management options as Levels that are linked to Environments.
 
 |_Forced Builds are not allowed_
-|It is not possible to define manual Build Level Request on Project Streams in case the __Accept Forced Build __attribute is set to "`No`". <<_desktop_lr_createlevelrequest_build>>
+|It is not possible to define manual Build Level Request on Project Streams in case the __Accept Forced Build __attribute is set to "`No`". <<#_desktop_lr_createlevelrequest_build,>>
 
 |_No Levels defined in the Lifecycle of the Project Stream._
 |It is not possible to create a Level Request, since there is no Level linked to the Lifecycle of the Project Stream.
@@ -888,10 +888,10 @@ However, such Levels have the same Approval and Notification management options 
 
 a|_RELATED TOPICS_
 
-* <<_globadm_usersgroups>>
-* <<_desktop_personalsettings>>
-* <<_desktop_managedesktop>>
-* <<_desktop_outstandingapprovals>>
+* <<#_globadm_usersgroups,>>
+* <<#_desktop_personalsettings,>>
+* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing>>
+* <<#_desktop_outstandingapprovals,>>
 
 |===
 
@@ -926,7 +926,7 @@ image::images/Desktop-LevelRequests-SelectPackage.png[,845,212]
 
 [NOTE]
 ====
-If you add the selected package to a Desktop Tab Page, this step is avoided when creating a Level Request. <<_managedesktop_addingelements>>
+If you add the selected package to a Desktop Tab Page, this step is avoided when creating a Level Request. <<#_managedesktop_addingelements,>>
 ====
 . The _Create Level Request_ screen is displayed. 
 +
@@ -937,7 +937,7 @@ On this screen you will find the following sections:
 * The Status Header
 * Links for navigation and for showing/hiding panels with extra information 
 * The _Create Level Request_ panel
-* The optional _Select Deploys to Execute_ panel becomes available in case several Deploy Environment have been defined for the Level and if the option _Make Level Optional_ is activated for the Level. See also <<_lifecyclemgt_enableoptionaldeploys>>.
+* The optional _Select Deploys to Execute_ panel becomes available in case several Deploy Environment have been defined for the Level and if the option _Make Level Optional_ is activated for the Level. See also <<#_lifecyclemgt_enableoptionaldeploys,>>.
 * The Parameters panel (only available if Parameters are linked to the involved Environments or Machines)
 
 . Verify the information provided in the Status Header and via the additional links in the upper part of the screen.
@@ -997,7 +997,7 @@ Keep in mind that the VCR Tag must be unique in the Project Stream and that it m
 _Note:_ In the case of Tag-based Builds, this field is left empty.
 The Tag must be provided by the User.
 The tag has to match the user-defined tag in the head or branch of the VCR.
-For more information, refer to the section <<_projadmin_projectstream_createbranch>>.
+For more information, refer to the section <<#_projadmin_projectstream_createbranch,>>.
 |===
 
 . If available, verify and/or edit the settings for the available Build or Deploy Parameters in the _Parameters_ panel.
@@ -1026,7 +1026,7 @@ A Machine Parameter can have all the same characteristics and applies for all th
 The _Level Requests Overview_ screen is displayed.
 It contains the information about the new Level Request (as well as about the older Level Requests).
 +
-For a detailed description of this screen refer to <<_desktop_lr_overview>>.
+For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>.
 
 
 ==== Creating a Deliver Build Level Request 
@@ -1040,7 +1040,7 @@ image::images/Desktop-LevelRequests-SelectPackage.png[,787,227]
 +
 [NOTE]
 ====
-If you add the selected package to a Desktop Tab Page, this step is avoided when creating a Level Request. <<_managedesktop_addingelements>>
+If you add the selected package to a Desktop Tab Page, this step is avoided when creating a Level Request. <<#_managedesktop_addingelements,>>
 ====
 
 . The _Create Level Request_ screen is displayed. 
@@ -1052,7 +1052,7 @@ On this screen you will find the following sections:
 * The Status Header
 * Links for navigation and for showing/hiding panels with extra information 
 * The _Create Level Request_ panel
-* The optional _Select Deploys to Execute_ panel becomes available in case several Deploy Environment have been defined for the Level and if the option _Make Level Optional_ is activated for the Level. See also <<_lifecyclemgt_enableoptionaldeploys>>.
+* The optional _Select Deploys to Execute_ panel becomes available in case several Deploy Environment have been defined for the Level and if the option _Make Level Optional_ is activated for the Level. See also <<#_lifecyclemgt_enableoptionaldeploys,>>.
 * The Parameters panel (only available if Parameters are linked to the involved Environments or Machines)
 
 . Verify the information provided in the Status Header and via the additional links in the upper part of the screen.
@@ -1109,7 +1109,7 @@ However you can still change the execution time manually.
 |Select the Build to be delivered to the Test or Production Level.
 The list contains all Builds available on the previous Level that have not yet been delivered to this Level and that have the same (Redeliver) or a higher Build Number than the current active Build.
 
-If the previous Level in the Lifecycle is marked as _Optional_ (<<_lifecycles_makingoptional>>) the list contains the available Builds from the previous Level AND from the Level before that one.
+If the previous Level in the Lifecycle is marked as _Optional_ (<<ProjAdm_LifeCycles.adoc#_lifecycles_makingoptional,Making>>) the list contains the available Builds from the previous Level AND from the Level before that one.
 The column _Available on_ indicates on which Level the available Build resides.
 
 The current active build on a Level can be redelivered.
@@ -1120,13 +1120,13 @@ In that case, the _Level Request Action Type_ will be "`Redeliver Build`".
 . If available, select the deploys to be executed in the S__elect Deploys to Execute__ panel.
 . If available, verify and/or edit the settings for the available Build and Deploy Parameters in the Parameters panel.
 +
-See <<_desktop_lr_createlevelrequest_build>> for more information on the available parameters.
+See <<#_desktop_lr_createlevelrequest_build,>> for more information on the available parameters.
 . Once you have defined the required settings, click__ Create__.
 +
 The _Level Requests Overview_ screen is displayed.
 It contains the information about the new Level Request (as well as about the older Level Requests). 
 +
-For a detailed description of this screen refer to <<_desktop_lr_overview>>.
+For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>.
 
 
 ==== Creating a Rollback Build Level Request 
@@ -1141,7 +1141,7 @@ image::images/Desktop-LevelRequests-SelectPackage.png[,844,214]
 
 [NOTE]
 ====
-If you add the selected package to a Desktop Tab Page, this step is avoided when creating a Level Request. <<_managedesktop_addingelements>>
+If you add the selected package to a Desktop Tab Page, this step is avoided when creating a Level Request. <<#_managedesktop_addingelements,>>
 ====
 . The _Create Level Request_ screen is displayed. 
 +
@@ -1152,7 +1152,7 @@ On this screen you will find the following sections:
 * The Status Header
 * Links for navigation and for showing/hiding panels with extra information 
 * The _Create Level Request_ panel
-* The optional _Select Deploys to Execute_ panel becomes available in case several Deploy Environment have been defined for the Level and if the option _Make Level Optional_ is activated for the Level. See also <<_lifecyclemgt_enableoptionaldeploys>>.
+* The optional _Select Deploys to Execute_ panel becomes available in case several Deploy Environment have been defined for the Level and if the option _Make Level Optional_ is activated for the Level. See also <<#_lifecyclemgt_enableoptionaldeploys,>>.
 * The Parameters panel (only available if Parameters are linked to the involved Environments or Machines)
 
 . Verify the information provided in the Status Header and via the additional links in the upper part of the screen.
@@ -1212,13 +1212,13 @@ The list contains all Builds that have been delivered to this Level (except the 
 . If available, select the deploys to be executed in the S__elect Deploys to Execute__ panel.
 . If available, verify and/or edit the settings for the available Build and Deploy parameters in the _Parameters_ panel.
 +
-Refer to the section <<_desktop_lr_createlevelrequest_build>> for more information on the available parameters.
+Refer to the section <<#_desktop_lr_createlevelrequest_build,>> for more information on the available parameters.
 . Once you have defined the required settings, click __Create__.
 +
 The _Level Requests Overview_ screen is displayed.
 It contains the information about the new Level Request (as well as about the older Level Requests). 
 +
-For a detailed description of this screen refer to <<_desktop_lr_overview>>.
+For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>.
 
 
 [[_desktop_lr_overview]]
@@ -1226,10 +1226,10 @@ For a detailed description of this screen refer to <<_desktop_lr_overview>>.
 
 The following sections deal with the procedures involved when using the __Level Requests Overview__:
 
-* <<_desktop_lr_overviewscreen>>
-* <<_desktop_lr_rssfeeds>>
-* <<_desktop_lr_generatereport>>
-* <<_dekstop_lr_detailedoverview>>
+* <<#_desktop_lr_overviewscreen,>>
+* <<#_desktop_lr_rssfeeds,>>
+* <<#_desktop_lr_generatereport,>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
 
 
 ==== The Level Requests Overview Screen 
@@ -1244,7 +1244,7 @@ image::images/Desktop-LevelRequests-Overview.png[,1023,668]
 
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the __Level Requests Overview __screen will be refreshed each time the defined rate is expired. <<_desktop_autorefresh>>
+If the__ Auto Refresh __option is activated, the __Level Requests Overview __screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto>>
 ====
 
 . Use the search criteria on the _Search_ panel to only display the Level Requests you are looking for.
@@ -1259,19 +1259,19 @@ The following options are available:
 * Save filter: to save the current search criteria for future use.
 
 +
-For more information on the usage of search panels and filters, refer to the sections <<_babcjedaj8>> and <<_desktop_searchfilters>>.
+For more information on the usage of search panels and filters, refer to the sections <<#_babcjedaj8,>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining>>.
 
 . Click the _Search_ button once again if you want to verify the changing status of existing and new Level Requests.
 +
 
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the _Level Requests Overview_ will be refreshed following the interval specified by the Auto Refresh Rate specified in the System Settings. <<_desktop_autorefresh>>
+If the__ Auto Refresh __option is activated, the _Level Requests Overview_ will be refreshed following the interval specified by the Auto Refresh Rate specified in the System Settings. <<UserInterface.adoc#_desktop_autorefresh,Auto>>
 ====
 
 . Use the _Generate Report_ button to run the _Level Requests Overview_ Report.
 +
-See <<_desktop_lr_generatereport>> for more information on __Generating a Level Requests Overview
+See <<#_desktop_lr_generatereport,>> for more information on __Generating a Level Requests Overview
 Report__.
 
 . On the __Level Requests Overview__, verify the Level Request Information fields for the required Level Request.
@@ -1297,7 +1297,7 @@ This is a unique sequential number assigned to each Level Request when it is cre
 The Level Request OIDs are displayed as a link.
 Click this link to display the details for this Level Request.
 
-For more information, refer to the section explaining the <<_desktop_lr_summary>> tab page of the _Level Request Detail_ screen. 
+For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the _Level Request Detail_ screen. 
 
 |Project Stream
 a|This field contains the identification of the Project Stream.
@@ -1327,7 +1327,7 @@ The following types are available:
 * image:images/icons/icon_redeliverBuild.png[,15,15]  Redeliver Build
 * image:images/icons/rollback.gif[,15,15]  Rollback Build
 
-For a description of the latter four Level Request Action Types, refer to <<_desktop_lr_creatinglevelrequest>>.
+For a description of the latter four Level Request Action Types, refer to <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating>>.
 The Build initiated by the Scheduler is similar to the Request Build Level Request Action Type, but it is triggered automatically.
 
 |User ID
@@ -1353,19 +1353,19 @@ The following status indication icons are possible:
 |Build Number
 |This field contains the Build Number of the Level Request.
 Use this link to access the _Build
-History Detail_ screen. <<_desktop_lr_buildhistory>>
+History Detail_ screen. <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build>>
 
 |VCR Tag
 |This field contains the VCR Tag of the Level Request.
 This Tag matches a Build with its source code in the VCR.
 
-The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<_projadmin_projectstreamsoverview_accessing>>
+The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<#_projadmin_projectstreamsoverview_accessing,>>
 
 However, the user can override the default VCR Tag while creating a Level Request (and is obliged to do so for a Build Level Request in a Tag Based Project Stream), so that the Tag Format can be completely different.
 
 The Level Request VCR Tag is displayed as a link leading to the _Sources_ tab page on the _Level
 Request Detail_ screen.
-For more information, refer to the section <<_desktop_lr_sources>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>.
 
 |Start
 |This field indicates the date and time when the Level Request execution started.
@@ -1378,7 +1378,7 @@ For more information, refer to the section <<_desktop_lr_sources>>.
 +
 Click the Level Request`'s _OID_ link in front of the required Level Request.
 +
-For more information, refer to the section <<_dekstop_lr_detailedoverview>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>.
 
 
 ==== The IKAN ALM RSS Functionality 
@@ -1417,7 +1417,7 @@ To do so, select and copy the URL from the Location Bar of your browser window, 
 The RSSOwl plug-in can be found on the Eclipse update site: http://www.rssowl.org/[
 http://www.rssowl.org/].
 +
-You find a detailed explanation of the structure of the IKAN ALM URL in the section <<_drssfeedurldetails>>.
+You find a detailed explanation of the structure of the IKAN ALM URL in the section <<#_drssfeedurldetails,>>.
 
 
 ==== Generating a Report 
@@ -1429,7 +1429,7 @@ This report can be exported to PDF, CSV, RTF or XLS format.
 
 . Switch to the _Level Requests Overview_ screen and specify for which Level Requests you want to generate a report.
 +
-<<_desktop_lr_overview>>
+<<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>
 +
 To specify which Level Requests you want to appear in the Report, define the search criteria and click the _Search_ button.
 +
@@ -1499,7 +1499,7 @@ image::images/Desktop-LevelRequests-PDFReport1.png[,1006,714]
 image::images/Desktop-LevelRequests-PDFReport2.png[,1003,233] 
 +
 More options are available when Generating a Report with the IKAN ALM Command Line.
-For more information, refer to the section <<_ccommandlineinterface>>.
+For more information, refer to the section <<#_ccommandlineinterface,>>.
 
 . Use the _Close_ button to return to the _Level Requests Overview_ screen.
 
@@ -1524,14 +1524,14 @@ By default the _Summary_ tab page is displayed.
 +
 Refer to one of the following sections for more information.
 
-* <<_desktop_lr_summary>>
-* <<_desktop_lr_phaselogs>>
-* <<_desktop_lr_results>>
-* <<_desktop_lr_approvals>>
-* <<_desktop_lr_issues>>
-* <<_desktop_lr_sources>>
-* <<_desktop_lr_modifications>>
-* <<_desktop_lr_dependencies>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
 
 . Back, Refresh and Build History links
 
@@ -1539,7 +1539,7 @@ Refer to one of the following sections for more information.
 * Use the _Refresh_ link to update the displayed information. This link reloads the currently selected tab page, as well as the header information. 
 * Use the _Build History_ link to get information about the Build`'s Lifecycle.
 +
-For more detailed information, refer to the section <<_desktop_lr_buildhistory>>.
+For more detailed information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build>>.
 
 . Auto Refresh option
 +
@@ -1552,7 +1552,7 @@ Auto Refresh is also available on the __Summary__, __Approvals__, _Issues_ and _
 Once the Level Request has reached a final status (__Success__, __Rejected__, __Canceled__, __Aborted__, _Fail_ or __Warning__), the _Auto
 Refresh_ function will be stopped automatically.
 +
-For more information on the _Auto Refresh_ settings, refer to the section <<_desktop_autorefresh>>.
+For more information on the _Auto Refresh_ settings, refer to the section <<UserInterface.adoc#_desktop_autorefresh,Auto>>.
 
 
 [[_desktop_lr_summary]]
@@ -1615,12 +1615,12 @@ When selecting another Tab Page, this header is not being refreshed.
 
 Depending on the status of the Level Request, the _Summary_ page may contain the following panels:
 
-* <<_desktop_lr_summary_actions>>
-* <<_desktop_lr_summary_info>>
-* <<_desktop_lr_summary_buildsdeploys>>
-* <<_desktop_lr_summary_approvals>>
-* <<_desktop_lr_summary_issues>>
-* <<_desktop_lr_summary_errorwarning>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_actions,Actions>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_info,Info>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_buildsdeploys,Builds>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_approvals,Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_issues,Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_errorwarning,Issues>>
 
 ===== Actions Panel
 [[_desktop_lr_summary_actions]]
@@ -1731,7 +1731,7 @@ The following information is available.
 |This field contains the VCR Tag of the Level Request.
 This Tag matches a Build with its source code in the VCR.
 
-The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<_projadm_projectstreams>>
+The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<#_projadm_projectstreams,>>
 
 However, the user can override the default VCR Tag while creating a Level Request, so that the Tag Format can be completely different.
 
@@ -1782,7 +1782,7 @@ The following types exist:
 |This field contains the date and time when the Level Request execution ended.
 
 |Partial Build Tag
-|In case of a Partial Build type Project Stream (see <<_projadmin_projectstream_createbranch>>), this field contains the Partial Build Tag.
+|In case of a Partial Build type Project Stream (see <<#_projadmin_projectstream_createbranch,>>), this field contains the Partial Build Tag.
 
 Only the sources that differ from this Tag have been retrieved and made available for the Build during the _Retrieve
 Code_ Phase.[[_desktop_lr_summary_buildsdeploys]]
@@ -1878,7 +1878,7 @@ image::images/Desktop-LevelRequests-Detailed-Summary-Approvals-Approved.png[,632
 
 [NOTE]
 ====
-For a complete list of all Approvals defined for the Level Request, select the _Approvals_ tab underneath the Status header. <<_desktop_lr_approvals>>[[_desktop_lr_summary_issues]]
+For a complete list of all Approvals defined for the Level Request, select the _Approvals_ tab underneath the Status header. <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>[[_desktop_lr_summary_issues]]
 ====
 
 ===== Issues Panel
@@ -1888,7 +1888,7 @@ This panel is only shown if there are Issues related to the Level Request.
 image::images/Desktop-LevelRequests-Detailed-Summary-Issues.png[,619,265] 
 
 Issues can get linked to a Level Request in two ways: automatically by IKAN ALM during the execution of the Level Request or manually by a User after the Level Request has ended.
-Refer to the section <<_globadm_issuetracking>> for more information on defining an external Issue Tracking System, and to the section <<_phases_generalinformation>> for more information on the Issue Tracking Phase.
+Refer to the section <<#_globadm_issuetracking,>> for more information on defining an external Issue Tracking System, and to the section <<#_phases_generalinformation,>> for more information on the Issue Tracking Phase.
 
 For each issue the following information is displayed:
 
@@ -1903,7 +1903,7 @@ For each issue the following information is displayed:
 If the _URL_ field in the definition of the Issue Tracking System is not empty, this field will be displayed as a link.
 Click the link to view the Issue in the external Issue Tracking System's Web interface.
 
-For more information on the _URL_ field, refer to the section <<_globadm_issuetrackingcreate>>.
+For more information on the _URL_ field, refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue>>.
 
 |Description
 |This field contains the description of the Issue.
@@ -1921,7 +1921,7 @@ For more information on the _URL_ field, refer to the section <<_globadm_issuetr
 [NOTE]
 ====
 On this panel you cannot modify any of the Issues.
-If you want to edit, delete or synchronize them, select the _Issues_ tab underneath the Status header. <<_desktop_lr_issues>>[[_desktop_lr_summary_errorwarning]]
+If you want to edit, delete or synchronize them, select the _Issues_ tab underneath the Status header. <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>[[_desktop_lr_summary_errorwarning]]
 ====
 
 ===== Error/Warning Log Panel
@@ -1930,7 +1930,7 @@ This panel is only shown if the Level Request status is set to _Fail_ or __Warni
 It only shows the log of the _first_ Phase with status _Fail_ or __Warning__.
 This is not necessarily the cause of the error status of the Level Request.
 For a complete overview of the status of _all_ the Phases, refer to the _Phase
-Logs_ tab page (<<_desktop_lr_phaselogs>>).
+Logs_ tab page (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>).
 
 image::images/Desktop-LevelRequests-Detailed-Summary-ErrorWarning1.png[,958,526] 
 
@@ -1981,7 +1981,7 @@ _Note:_ if you hover over the word __Stack Trace__, the first 256 characters of 
 The log is only available for Phases executed by a Scripting Tool (Ant, NAnt or Maven2).
 
 If the Log Format is set to __TXT__, you can download the error/warning log on the _Phase Logs_ tab page.
-For more information on specifying the format of the log, refer to the section <<_globadm_scriptingtools>>.
+For more information on specifying the format of the log, refer to the section <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting>>.
 |===
 
 
@@ -1992,14 +1992,14 @@ Use the _Top_ link to quickly return to the top of the page.
 
 a|_RELATED TOPICS_
 
-* <<_dekstop_lr_detailedoverview>>
-* <<_desktop_lr_phaselogs>>
-* <<_desktop_lr_results>>
-* <<_desktop_lr_approvals>>
-* <<_desktop_lr_issues>>
-* <<_desktop_lr_sources>>
-* <<_desktop_lr_modifications>>
-* <<_desktop_lr_dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
 
 |===
 
@@ -2014,8 +2014,8 @@ image::images/Desktop-LevelRequests-Detailed-PhaseLogs_v2.png[,1022,663]
 
 The following panels can be available:
 
-* <<_desktop_lr_phaselogs_levelparameters>>
-* <<_desktop_lr_phaselogs_levelphases>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelparameters,Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,Level>>
 +
 Possible subpanels:
 
@@ -2024,7 +2024,7 @@ Possible subpanels:
 ** Stack Trace
 ** Logs
 
-* <<_desktop_lr_phaselogs_buildactions>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,Build>>
 +
 Possible subpanels:
 
@@ -2038,7 +2038,7 @@ Just as the Level Phases panel, the Build Phases panel may contain the following
 *** Stack Trace
 *** Logs
 
-* <<_desktop_lr_phaselogs_deployactions>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,Deploy>>
 +
 Possible subpanels: 
 
@@ -2103,7 +2103,7 @@ image::images/Desktop-LevelRequests-Detailed-PhaseLogs-LevelParameters.png[,959,
 
 For each of the parameters, the table displays its key and value.
 
-For more information on Level Parameters, refer to the section <<_cpredefinedbuildparameters>>.
+For more information on Level Parameters, refer to the section <<#_cpredefinedbuildparameters,>>.
 
 [[_desktop_lr_phaselogs_levelphases]]
 ===== Level Phases
@@ -2121,13 +2121,13 @@ image::images/Desktop-LevelRequests-Detailed-PhaseLogs-Phases2.png[,927,481]
 Underneath the Level Parameters, the list of all different Level Phases and their status (__Success__, __Warning__, __Fail__, __Running__, _Not
 executed_ or __Aborted__), Start Date/Time and Duration is displayed.
 
-For more information, refer to <<_phases_generalinformation>>.
+For more information, refer to <<#_phases_generalinformation,>>.
 
 [NOTE]
 ====
 An error status does not always mean that the Level Request has failed.
 That depends on the _Fail on Error_ setting of the Level Phase which is defined on the _Edit Level
-Phase_ screen. <<_plevelenvmgt_insertphase>>
+Phase_ screen. <<#_plevelenvmgt_insertphase,>>
 ====
 
 Click the name of a Phase to expand its information panel.
@@ -2169,12 +2169,12 @@ The Log can be downloaded if the Log Format type of the Scripting Tool is set to
 
 Level Phases are handled by the IKAN ALM Server.
 By default, the Level Phases listed in the following table may be available.
-However, since the defined Level workflow can be altered (<<_plevelenvmgt_levelphasesoverview>>), not all Phases may be present in the Phases Log.
+However, since the defined Level workflow can be altered (<<#_plevelenvmgt_levelphasesoverview,>>), not all Phases may be present in the Phases Log.
 
 [NOTE]
 ====
 The description in this table is very concise.
-For a more detailed description, refer to the section <<_phases_levelphases>>.
+For a more detailed description, refer to the section <<App_Phases.adoc#_phases_levelphases,Level>>.
 ====
 
 [cols="1,1", frame="topbot", options="header"]
@@ -2207,7 +2207,7 @@ This information allows verifying the contents (i.e., the linked File Revisions)
 |Issue Tracking
 |This is a specific Phase for Projects linked with an Issue Tracking System.
 
-Depending on the settings in the Issue Tracking system (<<_globadm_issuetracking>>), on the VCR type and on the level type, different actions may be logged.
+Depending on the settings in the Issue Tracking system (<<#_globadm_issuetracking,>>), on the VCR type and on the level type, different actions may be logged.
 
 For Build Level Requests, the log will contain Issue matching information from commit comments in the VCR.
 
@@ -2296,7 +2296,7 @@ The Build was rejected.
 
 For each of the parameters, the table displays its key and value.
 
-For more information, refer to the section <<_cpredefinedbuildparameters>>.
+For more information, refer to the section <<#_cpredefinedbuildparameters,>>.
 
 image:images/Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedBuildParameters.png[,651,120] 
 |===
@@ -2309,13 +2309,13 @@ Build Phases are executed by the IKAN ALM Agent while handling a Build.
 Each of these Phases have a status indication.
 An _Error_ status does not always mean that the Build as a whole has failed.
 That depends on the _Fail on Error_ setting of the Build Environment Phase, defined on the _Edit Build Environment
-Phase_ screen. <<_projadm_buildenv_editphase>>
+Phase_ screen. <<#_projadm_buildenv_editphase,>>
 
 The Phases listed in the following table may be available.
-However, since the defined Build Environment workflow can be altered (<<_projadm_buildenv_buildenvphasesoverview>>), not all Phases may be present in the Phase Log. 
+However, since the defined Build Environment workflow can be altered (<<#_projadm_buildenv_buildenvphasesoverview,>>), not all Phases may be present in the Phase Log. 
 
 The description in this table is very concise.
-For a complete description of the Build Phases, refer to <<_phases_generalinformation>>.
+For a complete description of the Build Phases, refer to <<#_phases_generalinformation,>>.
 
 [cols="1,1", frame="topbot", options="header"]
 |===
@@ -2452,7 +2452,7 @@ The Deploy was rejected.
 
 For each of the parameters, the table displays its key and value.
 
-For more information, refer to the section <<_cpredefineddeployparameters>>.
+For more information, refer to the section <<#_cpredefineddeployparameters,>>.
 
 image:images/Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedDeployParameters.png[,664,152] 
 |===
@@ -2462,13 +2462,13 @@ image:images/Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedDeployParamete
 
 Each of these Phases have a status indication.
 An Error status does not always mean that the Deploy as a whole has failed, this depends on the _Fail on Error_ setting of the Deploy Environment Phase, defined on the _Edit
-Deploy Environment Phase_ screen. <<_projadm_deployenv_phaseedit>>
+Deploy Environment Phase_ screen. <<#_projadm_deployenv_phaseedit,>>
 
 The Phases listed in the following table may be available.
-However, since the defined Deploy Environment workflow can be altered (<<_projadm_deplenv_phaseoverviewscreen>>), not all Phases may be present in the Phase Log. 
+However, since the defined Deploy Environment workflow can be altered (<<#_projadm_deplenv_phaseoverviewscreen,>>), not all Phases may be present in the Phase Log. 
 
 The description in this table is very concise.
-For a complete description of the Deploy Phases, refer to <<_phases_generalinformation>>.
+For a complete description of the Deploy Phases, refer to <<#_phases_generalinformation,>>.
 
 [cols="1,1", frame="topbot", options="header"]
 |===
@@ -2515,14 +2515,14 @@ It logs the result of the cleanup in the _Message_ field.
 
 |_RELATED TOPICS_
 
-* <<_dekstop_lr_detailedoverview>>
-* <<_desktop_lr_summary>>
-* <<_desktop_lr_results>>
-* <<_desktop_lr_approvals>>
-* <<_desktop_lr_issues>>
-* <<_desktop_lr_sources>>
-* <<_desktop_lr_modifications>>
-* <<_desktop_lr_dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
 
 |===
 
@@ -2606,7 +2606,7 @@ Possible values are:
 
 Note that this is only possible if the option _Downloadable
 Build_ has been activated on the Build Environment.
-For more information, refer to the section <<_projadm_buildenv_edit>>.
+For more information, refer to the section <<#_projadm_buildenv_edit,>>.
 
 If not, you can always visualize the tree by clicking the plus sign in front of the zip file.
 
@@ -2618,14 +2618,14 @@ image:images/Desktop-LevelRequests-Detailed-Results-expanded.png[,367,280]
 
 a|_RELATED TOPICS_
 
-* <<_dekstop_lr_detailedoverview>>
-* <<_desktop_lr_summary>>
-* <<_desktop_lr_phaselogs>>
-* <<_desktop_lr_approvals>>
-* <<_desktop_lr_issues>>
-* <<_desktop_lr_sources>>
-* <<_desktop_lr_modifications>>
-* <<_desktop_lr_dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
 
 |===
 
@@ -2643,11 +2643,11 @@ Before the Level Request can start, all Pre-Approvals need to be approved.
 Post-approvals need to be given at the end of the Level Request and enable to approve or reject the results or actions of the Level Request.
 Approvals can be approved or rejected by the Users belonging to the User Group of the Approval.
 
-For more information on defining Approvals on Levels, refer to <<_levelenvmgt_approvalsequence>>.
+For more information on defining Approvals on Levels, refer to <<#_levelenvmgt_approvalsequence,>>.
 
 [NOTE]
 ====
-A user can check whether he/she still has to approve/reject an Approval by using the Outstanding Approvals menu option. <<_desktop_outstandingapprovals>>
+A user can check whether he/she still has to approve/reject an Approval by using the Outstanding Approvals menu option. <<#_desktop_outstandingapprovals,>>
 ====
 
 The following information is displayed:
@@ -2695,7 +2695,7 @@ Possible Approval Types are:
 |This field contains the name of the User Group whose members can grant or reject the Approval.
 
 This matches the settings on the _Level Approvals
-Overview_ screen (<<_levelenvmgt_approvalsequence>>).
+Overview_ screen (<<#_levelenvmgt_approvalsequence,>>).
 
 |User
 |This field contains the User ID of the User who granted or rejected the Approval.
@@ -2717,14 +2717,14 @@ For some special events, like Level Request cancellations, abortions or failures
 
 a|_RELATED TOPICS_
 
-* <<_dekstop_lr_detailedoverview>>
-* <<_desktop_lr_summary>>
-* <<_desktop_lr_phaselogs>>
-* <<_desktop_lr_results>>
-* <<_desktop_lr_issues>>
-* <<_desktop_lr_sources>>
-* <<_desktop_lr_modifications>>
-* <<_desktop_lr_dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
 
 |===
 
@@ -2738,11 +2738,11 @@ Issues can get linked to a Level Request automatically by IKAN ALM during the ex
 
 image::images/Desktop-LevelRequests-Detailed-Issues.png[,701,275] 
 
-Refer to the section <<_globadm_issuetracking>>for more information on defining on external Issue Tracking System, and to <<_phases_generalinformation>>for more information on the Issue Tracking Phase.
+Refer to the section <<#_globadm_issuetracking,>>for more information on defining on external Issue Tracking System, and to <<#_phases_generalinformation,>>for more information on the Issue Tracking Phase.
 
 [NOTE]
 ====
-Issue information is only visible when the Project of the Level Request is linked to an Issue Tracking System. <<_projadmin_projectsoverview_editing>>
+Issue information is only visible when the Project of the Level Request is linked to an Issue Tracking System. <<#_projadmin_projectsoverview_editing,>>
 
 If the project is connected to an HP Quality Center, Atlassian JIRA, Collabnet TeamForge or Microsoft Team Foundation Issue Tracking System, the description, status, owner and priority information will automatically be filled in based on the Issue information in the Issue Tracking System concerned.
 For other Issue Tracking Systems, you can add the information manually.
@@ -2761,7 +2761,7 @@ The following information is available:
 If the URL field of the Issue Tracking System definition is not empty, this field will be displayed as a link.
 Click the link to directly view the Issue in the external Issue Tracking System's Web interface.
 
-Refer to <<_globadm_issuetrackingcreate>>for more information on the URL field.
+Refer to <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue>>for more information on the URL field.
 
 |Description
 |This field displays the Description of the Issue.
@@ -2797,10 +2797,10 @@ Use the appropriate link for editing, deleting or adding an Issue.
 ====
 These links are only available for Build Levels.
 
-* image:images/icons/edit.gif[,15,15] __ Edit__. <<_desktop_lr_issueedit>>
-* image:images/icons/delete.gif[,15,15] __ Delete__. <<_desktop_lr_issuedelete>>
-* image:images/icons/icon_synchronize.png[,15,15] __ Synchronize__. <<_desktop_lr_issuesynchronize>>
-* __Add Issue__. <<_desktop_lr_issueadd>>
+* image:images/icons/edit.gif[,15,15] __ Edit__. <<Desktop_LevelRequests.adoc#_desktop_lr_issueedit,Editing>>
+* image:images/icons/delete.gif[,15,15] __ Delete__. <<Desktop_LevelRequests.adoc#_desktop_lr_issuedelete,Deleting>>
+* image:images/icons/icon_synchronize.png[,15,15] __ Synchronize__. <<Desktop_LevelRequests.adoc#_desktop_lr_issuesynchronize,Synchronizing>>
+* __Add Issue__. <<Desktop_LevelRequests.adoc#_desktop_lr_issueadd,Adding>>
 ====
 
 [[_desktop_lr_issueedit]]
@@ -2817,7 +2817,7 @@ image::images/Desktop-LevelRequests-Detailed-EditIssue.png[,431,321]
 +
 . Change the fields as required.
 +
-For a detailed description of the fields, refer to <<_desktop_lr_issueadd>>.
+For a detailed description of the fields, refer to <<Desktop_LevelRequests.adoc#_desktop_lr_issueadd,Adding>>.
 . Click _Save_ to save your changes.
 +
 You can also click:
@@ -2922,7 +2922,7 @@ This field is optional.
 ====
 
 For JIRA Issues, HP Quality Center Defects, TeamForge and Team Foundation Artifacts, it`'s sufficient to enter the Issue ID.
-After having created the Issue, synchronize the issue (<<_desktop_lr_issuesynchronize>>) to automatically retrieve the additional fields from the Issue Tracking System.
+After having created the Issue, synchronize the issue (<<Desktop_LevelRequests.adoc#_desktop_lr_issuesynchronize,Synchronizing>>) to automatically retrieve the additional fields from the Issue Tracking System.
 ====
 
 . Fill out the fields as required and click __Create__.
@@ -2938,14 +2938,14 @@ You can also click:
 
 a|_RELATED TOPICS_
 
-* <<_dekstop_lr_detailedoverview>>
-* <<_desktop_lr_summary>>
-* <<_desktop_lr_phaselogs>>
-* <<_desktop_lr_results>>
-* <<_desktop_lr_approvals>>
-* <<_desktop_lr_sources>>
-* <<_desktop_lr_modifications>>
-* <<_desktop_lr_dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
 
 |===
 
@@ -2972,14 +2972,14 @@ This information is only visible if the Level Request has ended with status _Suc
 
 a|_RELATED TOPICS_
 
-* <<_dekstop_lr_detailedoverview>>
-* <<_desktop_lr_summary>>
-* <<_desktop_lr_phaselogs>>
-* <<_desktop_lr_results>>
-* <<_desktop_lr_approvals>>
-* <<_desktop_lr_issues>>
-* <<_desktop_lr_modifications>>
-* <<_desktop_lr_dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
 
 |===
 
@@ -3018,7 +3018,7 @@ When clicking this OID link, the detail of the previous successful build will be
 |This field contains the VCR Tag of the previous Level Request.
 This Tag matches a Build with its source code in the VCR.
 
-The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<_projadm_projectstreams>>
+The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<#_projadm_projectstreams,>>
 
 However, the user can override the default VCR Tag while creating a Level Request, so that the Tag Format can be completely different.
 
@@ -3042,14 +3042,14 @@ On the Build Level, modifications are only shown for the statuses _Warning_ or _
 
 a|_RELATED TOPICS_
 
-* <<_dekstop_lr_detailedoverview>>
-* <<_desktop_lr_summary>>
-* <<_desktop_lr_phaselogs>>
-* <<_desktop_lr_results>>
-* <<_desktop_lr_approvals>>
-* <<_desktop_lr_issues>>
-* <<_desktop_lr_sources>>
-* <<_desktop_lr_dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
 
 |===
 
@@ -3073,13 +3073,13 @@ Build_ object and the _child Level Request_ object.
 
 [NOTE]
 ====
-Project Stream dependencies are defined on the Edit Project Stream Dependency Detail screen using the Code Retrieval field. <<_projadmin_projectstream_editdependency>>
+Project Stream dependencies are defined on the Edit Project Stream Dependency Detail screen using the Code Retrieval field. <<#_projadmin_projectstream_editdependency,>>
 ====
 
 The _Dependencies_ page is the starting point to find all the information concerning:
-. <<_desktop_lr_viewdependency>>
-. <<_deskopt_lr_viewbuildusage>>
-. <<_desktop_lr_viewusage>>
+. <<Desktop_LevelRequests.adoc#_desktop_lr_viewdependency,Build>>
+. <<#_deskopt_lr_viewbuildusage,>>
+. <<#_desktop_lr_viewusage,>>
 
 
 [[_desktop_lr_viewdependency]]
@@ -3131,7 +3131,7 @@ Possible types are:
 * __Source Code__: the sources of the Child Build are used
 * __Build Result__: the Build result of the Child Build is used
 
-See the description of the _Code Retrieval_ field in the section <<_projadmin_projectstream_editdependency>>.
+See the description of the _Code Retrieval_ field in the section <<#_projadmin_projectstream_editdependency,>>.
 
 |Level Name
 |This field displays the name of the Level.
@@ -3278,14 +3278,14 @@ Click the link to display the details for this Level Request.
 
 a|_RELATED TOPICS_
 
-* <<_dekstop_lr_detailedoverview>>
-* <<_desktop_lr_summary>>
-* <<_desktop_lr_phaselogs>>
-* <<_desktop_lr_results>>
-* <<_desktop_lr_approvals>>
-* <<_desktop_lr_issues>>
-* <<_desktop_lr_sources>>
-* <<_desktop_lr_modifications>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
 
 |===
 
@@ -3304,7 +3304,7 @@ The _Build History_ screen is displayed:
 +
 image::images/Desktop-BuildHistory-Detail.png[,943,500] 
 +
-If the__ Auto Refresh __option is activated, the _Build History_ screen will be refreshed each time the defined rate is expired. <<_desktop_autorefresh>>
+If the__ Auto Refresh __option is activated, the _Build History_ screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto>>
 +
 
 [NOTE]
@@ -3388,7 +3388,7 @@ image::images/Desktop-BuildsDeploys-Overview.png[,994,412]
 
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the _Build and Deploys Overview_ screen will be refreshed each time the defined rate is expired. <<_desktop_autorefresh>>
+If the__ Auto Refresh __option is activated, the _Build and Deploys Overview_ screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto>>
 ====
 
 . Use the search criteria on the _Search Builds and Deploys_ panel to only display the Builds and/or Deploys you are looking for.
@@ -3410,7 +3410,7 @@ The following options are available:
 * Save filter: to save the current search criteria for future use.
 
 +
-For more information on the usage of search panels and filters, refer to the sections <<_babcjedaj8>> and <<_desktop_searchfilters>>.
+For more information on the usage of search panels and filters, refer to the sections <<#_babcjedaj8,>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining>>.
 
 . Verify the information on the _Builds and Deploys Overview_ panel.
 +
@@ -3433,7 +3433,7 @@ The following information fields are available:
 
 Click this link to display the details for this Level Request which created the Build or Deploy.
 
-For more information, refer to the section explaining the <<_desktop_lr_summary>> tab page of the _Level Request Detail_ screen. 
+For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the _Level Request Detail_ screen. 
 
 |Type
 |This field contains the object type: Build or Deploy.
@@ -3479,7 +3479,7 @@ The following status indications are possible:
 * image:images/icons/cancelled.gif[,15,15] _Canceled_
 * image:images/icons/aborted.gif[,15,15] _Aborted_
 
-For more information, refer to the section <<_desktop_lr_summary>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>.
 
 |Level Request Status
 a|This field contains the Level Request status.
@@ -3497,7 +3497,7 @@ The following status indications are possible:
 * image:images/icons/cancelled.gif[,15,15] _Canceled_
 * image:images/icons/aborted.gif[,15,15] _Aborted_
 
-For more information, refer to the section <<_desktop_lr_overviewscreen>>.
+For more information, refer to the section <<#_desktop_lr_overviewscreen,>>.
 
 |Build Number
 |This field contains the Build Number of the Level Request.
@@ -3510,7 +3510,7 @@ This Tag matches a Build with its source code in the VCR.
 
 The Level Request VCR Tag is displayed as a link leading to the _Sources_ tab page on the _Level
 Request Detail_ screen.
-For more information, refer to the section <<_desktop_lr_sources>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>.
 
 |Start
 |This field indicates the date and time when the Build or Deploy execution started.
@@ -3523,4 +3523,4 @@ For more information, refer to the section <<_desktop_lr_sources>>.
 +
 Click the Level Request`'s _OID_ link which created the Build or Deploy.
 +
-For more information, refer to the section explaining the <<_desktop_lr_summary>> tab page of the _Level Request Detail_ screen. 
+For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the _Level Request Detail_ screen. 

@@ -7,9 +7,9 @@
 
 This appendix provides general information on the connection and definition of the Subversion Repository, including some concrete examples and a section on Meta Properties.
 
-* <<_sappc_repositoryconnection>>
-* <<_sappc_repositorydefinition>>
-* <<_sappc_fetchmetaproperties>>
+* <<App_Subversion.adoc#_sappc_repositoryconnection,Repository>>
+* <<App_Subversion.adoc#_sappc_repositorydefinition,Repository>>
+* <<App_Subversion.adoc#_sappc_fetchmetaproperties,Fetching>>
 
 
 [[_sappc_repositoryconnection]]
@@ -33,8 +33,8 @@ Specific fields in the Subversion definition are necessary to support the flexib
 
 This sections provides the following information:
 
-* <<_sappc_specificfields>>
-* <<_sappc_layoutexamples>>
+* <<App_Subversion.adoc#_sappc_specificfields,Specific>>
+* <<App_Subversion.adoc#_sappc_layoutexamples,Layout>>
 
 
 [[_sappc_specificfields]]
@@ -71,7 +71,7 @@ This directory may reside directly under the repository path, or be defined per 
 
 The default Repository Layout is "Project-oriented". Other possible values are: "Repository-oriented" and "Single Project-oriented". 
 
-See the <<_sappc_layoutexamples>> for the configuration of the 4 possible Layouts.
+See the <<App_Subversion.adoc#_sappc_layoutexamples,Layout>> for the configuration of the 4 possible Layouts.
 
 [[_sappc_layoutexamples]]
 ==== Layout Examples

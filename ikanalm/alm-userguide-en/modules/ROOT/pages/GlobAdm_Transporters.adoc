@@ -36,7 +36,7 @@ The Transporter is also involved in the distribution process of Custom Phases fr
 Before the execution of the Level Phases for a Level Request, all non-released Custom Phases will be transported from the Phase Catalog to the execution environment on the IKAN ALM Server.
 This will be done using the Transporter that is linked to the IKAN ALM Server.
 Released Level Phases will only be transported if they are not yet installed on the IKAN ALM Server.
-You can check the installed Phases using the _Installed Phases_ link next to the IKAN ALM Server Machine on the __Machines Overview__. <<_globadm_machinesoverview>>
+You can check the installed Phases using the _Installed Phases_ link next to the IKAN ALM Server Machine on the __Machines Overview__. <<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines>>
 * Build and Deploy Phases:
 +
 Before the execution of the Build/Deploy Phases for Build/Deploy, all non-released Custom Phases will be transported from the Phase Catalog on the IKAN ALM Server to the execution environment on the IKAN ALM Agent.
@@ -44,23 +44,23 @@ This will be done using the Transporter that is linked to the IKAN ALM Agent.
 Released Build/Deploy Phases will only be transported if they are not yet installed on the IKAN ALM Agent.
 You can check the installed Phases using the _Installed
 Phases_ link next to the IKAN ALM Agent Machine on the __Machines
-Overview__. <<_globadm_machinesoverview>>
+Overview__. <<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines>>
 
 
-The relative locations for all remote transporters must be defined in the _System Settings_ section. <<_globadm_system_settings>>
+The relative locations for all remote transporters must be defined in the _System Settings_ section. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 [NOTE]
 ====
-A Transporter will be activated by linking the Transporter to a Machine representing the IKAN ALM Agent (<<_globadm_machinesoverview>>), and by linking that Machine to a Build or Deploy environment (<<_pcreatebuildenvironment>> or <<_pcreatedeployenvironment>>).
+A Transporter will be activated by linking the Transporter to a Machine representing the IKAN ALM Agent (<<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines>>), and by linking that Machine to a Build or Deploy environment (<<#_pcreatebuildenvironment,>> or <<#_pcreatedeployenvironment,>>).
 ====
 
 This chapter describes three different Transporters, each of them enabling different protocols for transferring sources, scripts or build results.
 
 Refer to the following sections for detailed information:
 
-* <<_globadm_transporter_filecopy>>
-* <<_globadm_transporter_ftp>>
-* <<_globadm_transporter_secureshell>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,FileCopy>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp,FTP>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell,Secure>>
 
 
 [[_sglobadm_transporter_create]]
@@ -86,9 +86,9 @@ The _Details_ panel for the type of Transporter Protocol you selected is display
 +
 For more information on those details, refer to the appropriate sections: 
 
-* <<_globadm_filecopycreate>>
-* <<_globadm_ftpcreate>>
-* <<_globadm_secureshellcreate>>
+* <<#_globadm_filecopycreate,>>
+* <<#_globadm_ftpcreate,>>
+* <<#_globadm_secureshellcreate,>>
 
 
 === The Transporter Protocols Overview Screen 
@@ -137,23 +137,23 @@ It allows displaying the History of all create, update and delete operations per
 +
 Refer to the following sections for detailed information:
 
-* <<_globadm_transporter_filecopy>>
-* <<_globadm_transporter_ftp>>
-* <<_globadm_transporter_secureshell>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,FileCopy>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp,FTP>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell,Secure>>
 
 
 [[_globadm_transporter_filecopy]]
 === FileCopy Transporters 
 (((Transporters ,FileCopy)))  (((FileCopy Transporters))) 
 
-A FileCopy Transporter makes it possible to use "`file copy`" for transporting Custom Phases, files and directories between the IKAN ALM server and a local or remote Agent handling the Build or Deploy processes (see the introduction on <<_globadm_transporters>>).
+A FileCopy Transporter makes it possible to use "`file copy`" for transporting Custom Phases, files and directories between the IKAN ALM server and a local or remote Agent handling the Build or Deploy processes (see the introduction on <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>).
 
 Since most transport actions are handled by the Agent (transport of Custom Level Phases is handled by the IKAN ALM Server), and the FileCopy Transporter enables the copying of resources between the Agent and the IKAN ALM server, different FileCopy Transporters must be defined for a local Agent (Machine) running on the IKAN ALM Server (Machine) and for a remote Agent (Machine) running on a server other than the IKAN ALM Server.
 
 The "Local FileCopy" Transporter is created automatically during the IKAN ALM installation and will be automatically connected to the IKAN ALM Server Machine.
 This "Local FileCopy" Transporter is different in this aspect that it cannot be edited, updated nor deleted on the __FileCopy Transporters Overview__.
 Its definition is retrieved from the System Settings`' _Local
-FileCopy Locations_ and can only be updated in the System Settings section. <<_globadm_system_settings>>
+FileCopy Locations_ and can only be updated in the System Settings section. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 If you want to use FileCopy for transferring resources to a Machine (Agent) other than the IKAN ALM server, a (Remote) FileCopy Transporter must be created.
 Keep in mind that the specified prefix locations are a view of the IKAN ALM Agent Machine on the IKAN ALM Server Machine.
@@ -169,11 +169,11 @@ These may be tackled by running the service/daemon as a User having access right
 
 Refer to the following sections for detailed information:
 
-* <<_globadm_filecopycreate>>
-* <<_globadm_filecopyoverview>>
-* <<_globadm_transporter_filecopy_edit>>
-* <<_globadm_transporter_filecopy_delete>>
-* <<_globadm_transporter_filecopy_history>>
+* <<#_globadm_filecopycreate,>>
+* <<#_globadm_filecopyoverview,>>
+* <<#_globadm_transporter_filecopy_edit,>>
+* <<#_globadm_transporter_filecopy_delete,>>
+* <<#_globadm_transporter_filecopy_history,>>
 
 
 ==== Creating a FileCopy Transporter 
@@ -219,7 +219,7 @@ Fields marked with a red asterisk are mandatory.
 | Meaning
 
 |Work Copy Path Prefix
-a|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<_globadm_system_settings>>
+a|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 _Example:_
 
@@ -236,14 +236,14 @@ If in the System Settings the Relative Work Copy location is defined as "workCop
 
 
 |Build Archive Path Prefix
-|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from by an IKAN ALM Agent handling a Build or Deploy process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<_globadm_system_settings>>
+|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from by an IKAN ALM Agent handling a Build or Deploy process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 For an example, refer to __Work Copy Path Prefix__.
 
 |Script Path Prefix
 |Enter the prefix for the Script Location (the location where the IKAN ALM Agent will retrieve the build or deploy script from, if it cannot be found in the sources).
 
-The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<_globadm_system_settings>>
+The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 For an example, refer to __Work Copy Path Prefix__.
 
@@ -263,11 +263,11 @@ The newly created FileCopy Transporter Definition is added to the _FileCopy Tran
 
 a|_RELATED TOPICS_
 
-* <<_globadm_transporters>>
-* <<_globadm_system_settings>>
-* <<_globadm_machines>>
-* <<_projadm_buildenvironments>>
-* <<_projadm_deployenvironments>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System>>
+* <<#_globadm_machines,>>
+* <<#_projadm_buildenvironments,>>
+* <<#_projadm_deployenvironments,>>
 
 |===
 
@@ -292,7 +292,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ FileCopy Transporters Overview__ panel.
 +
-For a detailed description of the fields, refer to <<_globadm_filecopycreate>>.
+For a detailed description of the fields, refer to <<#_globadm_filecopycreate,>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
 +
 
@@ -305,7 +305,7 @@ For a detailed description of the fields, refer to <<_globadm_filecopycreate>>.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a FileCopy Transporter definition.
 
-<<_globadm_transporter_filecopy_edit>>
+<<#_globadm_transporter_filecopy_edit,>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -313,7 +313,7 @@ It allows editing a FileCopy Transporter definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a FileCopy Transporter definition.
 
-<<_globadm_transporter_filecopy_delete>>
+<<#_globadm_transporter_filecopy_delete,>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -321,7 +321,7 @@ It allows deleting a FileCopy Transporter definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a FileCopy Transporter.
 
-<<_globadm_transporter_filecopy_history>>
+<<#_globadm_transporter_filecopy_history,>>
 |===
 
 
@@ -341,7 +341,7 @@ image::images/GlobAdm-Transporters-FileCopy-Edit.png[,602,487]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_globadm_filecopycreate>>.
+For a description of the fields, refer to <<#_globadm_filecopycreate,>>.
 +
 
 [NOTE]
@@ -393,7 +393,7 @@ Use the search criteria on the search panel to display the FileCopy Transporter 
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ FileCopy Transporter History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<#_historyeventlogging,>>.
 . Click __Back __to return to the _FileCopy Transporters Overview_ screen.
 
 
@@ -402,11 +402,11 @@ View__, refer to the section <<_historyeventlogging>>.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_transporters>>
-* <<_globadm_system_settings>>
-* <<_globadm_machines>>
-* <<_projadm_buildenvironments>>
-* <<_projadm_deployenvironments>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System>>
+* <<#_globadm_machines,>>
+* <<#_projadm_buildenvironments,>>
+* <<#_projadm_deployenvironments,>>
 
 |===
 
@@ -425,11 +425,11 @@ In order to use the FTP Client for build and deploy actions, you must link the T
 
 Refer to the following sections for detailed information:
 
-* <<_globadm_ftpcreate>>
-* <<_globadm_ftpoverview>>
-* <<_globadm_transporter_ftp_edit>>
-* <<_globadm_transporter_ftp_delete>>
-* <<_globadm_transporter_ftp_history>>
+* <<#_globadm_ftpcreate,>>
+* <<#_globadm_ftpoverview,>>
+* <<#_globadm_transporter_ftp_edit,>>
+* <<#_globadm_transporter_ftp_delete,>>
+* <<#_globadm_transporter_ftp_history,>>
 
 
 ==== Creating an FTP Transporter 
@@ -496,7 +496,7 @@ FTP Server mapped to a hostname: ``ftp.ikan.be``.
 |Server FTP Port
 |Enter the Port Number of the FTP Server running on the IKAN ALM Server.
 
-_Note:_ The value entered in this field will override the value specified in the System Settings. <<_globadm_system_settings>>If not specified in the System Settings nor on this screen, the default FTP Port Number `21` will be used.
+_Note:_ The value entered in this field will override the value specified in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>If not specified in the System Settings nor on this screen, the default FTP Port Number `21` will be used.
 
 |Connection Mode
 |Select the connection mode: _Passive_ or __Active__.
@@ -505,7 +505,7 @@ _Note:_ The value entered in this field will override the value specified in the
 |Choose the Directory Listing Style: _Unix_ or __Windows__.
 
 |Work Copy Path Prefix
-|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<_globadm_system_settings>>
+|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 _Example:_
 
@@ -514,7 +514,7 @@ If the FTP Server is configured to control the `E:/Ikan/alm/system` (Windows) or
 In that case, the sources will be copied to the Agent by a GET command from a subdirectory under `/workCopy` from the FTP Server.
 
 |Build Archive Path Prefix
-|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<_globadm_system_settings>>
+|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 _Example:_
 
@@ -523,7 +523,7 @@ If the FTP Server is configured to control the `E:/Ikan/alm/system` (Windows) or
 In that case, the build result will be copied from the Agent to the Build Archive by a PUT command into the subdirectory `/buildArchive` on the FTP Server.
 
 |Script Path Prefix
-|Enter the prefix for the Script Location (the location where the IKAN ALM Agent will retrieve the build or deploy script from if it cannot be found in the sources). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<_globadm_system_settings>>
+|Enter the prefix for the Script Location (the location where the IKAN ALM Agent will retrieve the build or deploy script from if it cannot be found in the sources). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 _Example:_
 
@@ -545,11 +545,11 @@ The newly created FTP Transporter Definition is added to the _FTP Transporters O
 
 a|_RELATED TOPICS_
 
-* <<_globadm_transporters>>
-* <<_globadm_system_settings>>
-* <<_globadm_machines>>
-* <<_projadm_buildenvironments>>
-* <<_projadm_deployenvironments>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System>>
+* <<#_globadm_machines,>>
+* <<#_projadm_buildenvironments,>>
+* <<#_projadm_deployenvironments,>>
 
 |===
 
@@ -574,7 +574,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ FTP Transporters Overview__ panel.
 +
-For a detailed description of the fields, refer to <<_globadm_ftpcreate>>.
+For a detailed description of the fields, refer to <<#_globadm_ftpcreate,>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
 +
 
@@ -587,7 +587,7 @@ For a detailed description of the fields, refer to <<_globadm_ftpcreate>>.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a FTP Transporter definition.
 
-<<_globadm_transporter_ftp_edit>>
+<<#_globadm_transporter_ftp_edit,>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -595,7 +595,7 @@ It allows editing a FTP Transporter definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a FTP Transporter definition.
 
-<<_globadm_transporter_ftp_delete>>
+<<#_globadm_transporter_ftp_delete,>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -603,7 +603,7 @@ It allows deleting a FTP Transporter definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a FTP Transporter.
 
-<<_globadm_transporter_ftp_history>>
+<<#_globadm_transporter_ftp_history,>>
 |===
 
 
@@ -623,7 +623,7 @@ image::images/GlobAdm-Transporters-FTP-Edit.png[,607,630]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_globadm_ftpcreate>>.
+For a description of the fields, refer to <<#_globadm_ftpcreate,>>.
 +
 
 [NOTE]
@@ -674,7 +674,7 @@ Use the search criteria on the search panel to display the FTP Transporter Proto
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ FTP Transporter History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<#_historyeventlogging,>>.
 . Click __Back __to return to the _FTP Transporters Overview_ screen.
 
 
@@ -683,11 +683,11 @@ View__, refer to the section <<_historyeventlogging>>.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_transporters>>
-* <<_globadm_system_settings>>
-* <<_globadm_machines>>
-* <<_projadm_buildenvironments>>
-* <<_projadm_deployenvironments>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System>>
+* <<#_globadm_machines,>>
+* <<#_projadm_buildenvironments,>>
+* <<#_projadm_deployenvironments,>>
 
 |===
 
@@ -708,11 +708,11 @@ In order to ensure a secure transport for build and deploy actions, you must lin
 
 Refer to the following sections for detailed information:
 
-* <<_globadm_secureshellcreate>>
-* <<_globadm_secureshelloverview>>
-* <<_globadm_transporter_secureshell_edit>>
-* <<_globadm_transporter_secureshell_delete>>
-* <<_globadm_transporter_secureshell_history>>
+* <<#_globadm_secureshellcreate,>>
+* <<#_globadm_secureshelloverview,>>
+* <<#_globadm_transporter_secureshell_edit,>>
+* <<#_globadm_transporter_secureshell_delete,>>
+* <<#_globadm_transporter_secureshell_history,>>
 
 
 ==== Creating a Secure Shell Transporter 
@@ -793,10 +793,10 @@ It allows you to define the hostname of the IKAN ALM Server Machine in case it i
 |Server SSH Port
 |Enter the Port Number of the SSH Server running on the IKAN ALM Server.
 
-_Note:_ The value entered in this field will overrule the value specified in the System Settings. <<_globadm_system_settings>>If not specified in the System Settings nor on this screen, the default SSH Port Number `22` will be used.
+_Note:_ The value entered in this field will overrule the value specified in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>If not specified in the System Settings nor on this screen, the default SSH Port Number `22` will be used.
 
 |Work Copy Path Prefix
-|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<_globadm_system_settings>>
+|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 _Example 1:_
 
@@ -815,13 +815,13 @@ System Settings: the Local FileCopy Work Copy location being defined as `/opt/ik
 The IKAN ALM Agent will try to Secure Copy the sources from a location under ``/opt/ikan/alm/workCopy``.
 
 |Build Archive Path Prefix
-|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<_globadm_system_settings>>
+|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 For an example, refer to __Work Copy Path Prefix__.
 
 |Script Path Prefix
 |Enter the prefix for the Script Location.
-The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<_globadm_system_settings>>
+The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 For an example, refer to __Work Copy Path Prefix__.
 
@@ -840,11 +840,11 @@ The newly created Secure Shell Transporter is added to the _Secure Shell Transpo
 
 a|_RELATED TOPICS_
 
-* <<_globadm_transporters>>
-* <<_globadm_system_settings>>
-* <<_globadm_machines>>
-* <<_projadm_buildenvironments>>
-* <<_projadm_deployenvironments>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System>>
+* <<#_globadm_machines,>>
+* <<#_projadm_buildenvironments,>>
+* <<#_projadm_deployenvironments,>>
 
 |===
 
@@ -869,7 +869,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ Secure Shell Transporters Overview__ panel
 +
-For a detailed description of the fields, refer to <<_globadm_secureshellcreate>>.
+For a detailed description of the fields, refer to <<#_globadm_secureshellcreate,>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
 +
 
@@ -882,7 +882,7 @@ For a detailed description of the fields, refer to <<_globadm_secureshellcreate>
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a Secure Shell Transporter definition.
 
-<<_globadm_transporter_secureshell_edit>>
+<<#_globadm_transporter_secureshell_edit,>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -890,7 +890,7 @@ It allows editing a Secure Shell Transporter definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a Secure Shell Transporter definition.
 
-<<_globadm_transporter_secureshell_delete>>
+<<#_globadm_transporter_secureshell_delete,>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -898,7 +898,7 @@ It allows deleting a Secure Shell Transporter definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Secure Shell Transporter.
 
-<<_globadm_transporter_secureshell_history>>
+<<#_globadm_transporter_secureshell_history,>>
 |===
 
 
@@ -918,7 +918,7 @@ image::images/GlobAdm-Transporters-SecureShell-Edit.png[,632,685]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_globadm_secureshellcreate>>.
+For a description of the fields, refer to <<#_globadm_secureshellcreate,>>.
 +
 
 [NOTE]
@@ -969,7 +969,7 @@ Use the search criteria on the search panel to display the Secure Shell Transpor
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the __Secure Shell Transporter History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<#_historyeventlogging,>>.
 . Click __Back __to return to the _Secure Shell Transporters Overview_ screen.
 
 
@@ -978,10 +978,10 @@ View__, refer to the section <<_historyeventlogging>>.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_transporters>>
-* <<_globadm_system_settings>>
-* <<_globadm_machines>>
-* <<_projadm_buildenvironments>>
-* <<_projadm_deployenvironments>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System>>
+* <<#_globadm_machines,>>
+* <<#_projadm_buildenvironments,>>
+* <<#_projadm_deployenvironments,>>
 
 |===

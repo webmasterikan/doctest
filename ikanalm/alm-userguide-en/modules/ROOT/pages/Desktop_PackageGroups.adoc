@@ -14,18 +14,18 @@ This chapter only describes how to create and manage a Package Build Group.
 To transfer Packages belonging to a Package Build Group when building a Package, a new core Phase has been added, namely the _Transport Package Results_ Phase.
 This Phase must be inserted in the workflow of the Build Environment.
 
-For more details, refer to the description of this Phase in the appendix <<_phases_generalinformation>>.
+For more details, refer to the description of this Phase in the appendix <<#_phases_generalinformation,>>.
 ====
 
 Refer to the following procedures for more information:
 
-* <<_desktop_createpackagegroup>>
-* <<_desktop_packagegroupsoverview>>
-* <<_desktop_editpackagegroup>>
-** <<_desktop_packagegroups_addpackage>>
-** <<_bacdbadi>>
-* <<_desktop_hideshowpackagegroup>>
-* <<_desktop_viewpackagegrouphistory>>
+* <<Desktop_PackageGroups.adoc#_desktop_createpackagegroup,Creating>>
+* <<Desktop_PackageGroups.adoc#_desktop_packagegroupsoverview,Package>>
+* <<Desktop_PackageGroups.adoc#_desktop_editpackagegroup,Editing>>
+** <<Desktop_PackageGroups.adoc#_desktop_packagegroups_addpackage,Adding>>
+** <<Desktop_PackageGroups.adoc#_bacdbadi,Removing>>
+* <<Desktop_PackageGroups.adoc#_desktop_hideshowpackagegroup,Hiding/Showing>>
+* <<#_desktop_viewpackagegrouphistory,>>
 
 
 [[_desktop_createpackagegroup]]
@@ -67,7 +67,7 @@ Default value.
 If you set this option to __No__, only the build results of the connected Packages with a lower Dependency Level will be retrieved when a Package of the Package Build Group is built.
 +
 The Dependency Level is specified when adding a package to the group.
-For more information on adding Packages and rearranging the order of Packages, refer to the section <<_desktop_packagegroups_addpackage>>.
+For more information on adding Packages and rearranging the order of Packages, refer to the section <<Desktop_PackageGroups.adoc#_desktop_packagegroups_addpackage,Adding>>.
 
 |===
 . Once you have filled out the fields, click __Create__.
@@ -78,7 +78,7 @@ image::images/Desktop-PackageGoups-Create2.png[,763,370]
 +
 . Next, you can add Packages using the _Add Package_ link.
 +
-For more information, refer to the section <<_desktop_packagegroups_addpackage>>.
+For more information, refer to the section <<Desktop_PackageGroups.adoc#_desktop_packagegroups_addpackage,Adding>>.
 
 
 [[_desktop_packagegroupsoverview]]
@@ -104,7 +104,7 @@ The following options are available:
 * Save filter: to save the current search criteria for future use.
 
 +
-For more information on the usage of search panels and filters, refer to the sections  and <<_desktop_searchfilters>>.
+For more information on the usage of search panels and filters, refer to the sections  and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining>>.
 . Depending on your access rights, the following links may be available on the _Package Build Groups Overview_ panel:
 +
 
@@ -114,21 +114,21 @@ For more information on the usage of search panels and filters, refer to the sec
 |image:images/icons/edit.gif[,15,15] __
 |Edit
 
-This option allows editing the Package Build Group and/or its connected Packages. <<_desktop_editpackagegroup>>
+This option allows editing the Package Build Group and/or its connected Packages. <<Desktop_PackageGroups.adoc#_desktop_editpackagegroup,Editing>>
 
 |image:images/icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
 |Hide / Show
 
 This option allows hiding the selected Package Build Group.
 
-<<_desktop_hideshowpackagegroup>>
+<<Desktop_PackageGroups.adoc#_desktop_hideshowpackagegroup,Hiding/Showing>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
 
 This option allows to display the History of all create, update and delete operations performed on a Package Build Group.
 
-<<_desktop_viewpackagegrouphistory>>
+<<#_desktop_viewpackagegrouphistory,>>
 |===
 +
 
@@ -158,10 +158,10 @@ image::images/Desktop-PackageGoups-Edit_Popup.png[,558,270]
 +
 Edit the Package Build Group Information as required and click the _Save_ button.
 +
-For more information on the different fields, refer to the section <<_desktop_createpackagegroup>>.
+For more information on the different fields, refer to the section <<Desktop_PackageGroups.adoc#_desktop_createpackagegroup,Creating>>.
 . You can also add or remove packages and modify their order and Dependency Level.
 +
-For more information, refer to the section <<_desktop_packagegroups_addpackage>>.
+For more information, refer to the section <<Desktop_PackageGroups.adoc#_desktop_packagegroups_addpackage,Adding>>.
 
 
 [[_desktop_packagegroups_addpackage]]
@@ -253,7 +253,7 @@ Results_ Phase will only retrieve the latest Build Results of the Packages with 
 [NOTE]
 ====
 Exception: if the option _Retrieve all
-Build Results_ is set to __Yes__, all Build Results will be retrieved regardless of their Dependency Level. <<_desktop_createpackagegroup>>
+Build Results_ is set to __Yes__, all Build Results will be retrieved regardless of their Dependency Level. <<Desktop_PackageGroups.adoc#_desktop_createpackagegroup,Creating>>
 ====
 +
 Modify the Dependency Level by selecting the appropriate level from the drop-down list.
@@ -287,14 +287,14 @@ If you change the order of the Packages, the Dependency Level may change as well
 +
 .. To display a connected Package`'s Settings, click the image:images/icons/view.gif[,15,15] _ View_ link in the _Actions_ column after the required Package.
 +
-The _View Package_ screen is displayed. <<_desktop_viewpackage>>
+The _View Package_ screen is displayed. <<#_desktop_viewpackage,>>
 .. Click _Back_ to return to the _Edit Package Build Group_ screen.
 . Editing a Package`'s settings
 +
 .. To modify a connected Package Settings, click the image:images/icons/edit.gif[,15,15] _ Edit_ link in the Actions column after the required Package.
 +
 The _Edit Package_ screen is displayed.
-For more information on how to edit the Package, refer to <<_desktop_editpackage>>.
+For more information on how to edit the Package, refer to <<#_desktop_editpackage,>>.
 .. Click _Back_ to return to the _Edit Package Build Group_ screen.
 
 
@@ -347,7 +347,7 @@ Package Build Group_ panel to specify whether or not you want to display hidden 
 . Click the image:images/icons/history.gif[,15,15] _History_ link on the _Package Build Groups Overview_ panel to display the __Package Build Group History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<#_historyeventlogging,>>.
 +
 Click __Back __to return to the _Package
 Build Groups Overview_ screen.

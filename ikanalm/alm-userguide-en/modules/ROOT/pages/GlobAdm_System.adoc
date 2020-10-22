@@ -5,16 +5,16 @@ The _System_ menu provides an entry to view or edit the IKAN ALM Server configur
 
 Users which have Global Admin Access rights will have access to the following Submenus:
 
-* <<_globadm_system_settings>>
-* <<_globadm_system_housekeeping>>
-* <<_globadm_system_housekeepinghistory>>
-* <<_globadm_system_synchronizebuildarchive>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System>>
+* <<GlobAdm_System.adoc#_globadm_system_housekeeping,Housekeeping>>
+* <<GlobAdm_System.adoc#_globadm_system_housekeepinghistory,Housekeeping>>
+* <<GlobAdm_System.adoc#_globadm_system_synchronizebuildarchive,Synchronize>>
 
 
 Users who do not have Global Admin Access rights will only have access to the following Submenus:
 
-* <<_globadm_system_settings>>
-* <<_globadm_system_housekeepinghistory>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System>>
+* <<GlobAdm_System.adoc#_globadm_system_housekeepinghistory,Housekeeping>>
 
 
 [[_globadm_system_settings]]
@@ -44,16 +44,16 @@ If you do not have Global Administrator access rights in IKAN ALM, you will not 
 +
 The following subpanels are available:
 
-* <<_globadm_systemsettings_localenvironment>>
-* <<_globadm_systemsettings_security>>
-* <<_globadm_systemsettings_mail>>
-* <<_globadm_systemsettings_miscellaneous>>
+* <<GlobAdm_System.adoc#_globadm_systemsettings_localenvironment,Local>>
+* <<GlobAdm_System.adoc#_globadm_systemsettings_security,Security>>
+* <<GlobAdm_System.adoc#_globadm_systemsettings_mail,Mail>>
+* <<GlobAdm_System.adoc#_globadm_systemsettings_miscellaneous,Miscellaneous>>
 
 +
 Underneath the _Edit System Settings_ panel, you will find the image:images/icons/history.gif[,15,15] _ History_ link.
 Click this link to display the _System Settings History
 View_ screen.
-For more detailed information concerning this __History View__, refer to the section <<_historyeventlogging>>.
+For more detailed information concerning this __History View__, refer to the section <<#_historyeventlogging,>>.
 
 
 [[_globadm_systemsettings_localenvironment]]
@@ -80,7 +80,7 @@ Changing this field requires preliminary actions, like installing the IKAN ALM S
 File Copy Locations_
 |These fields are used for Build and Deploy actions.
 
-These locations are automatically synchronized with the built-in Local FileCopy transporter. <<_globadm_transporter_filecopy>>
+These locations are automatically synchronized with the built-in Local FileCopy transporter. <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,FileCopy>>
 
 |Work Copy Location
 |This field contains the path to the Work Copy Location.
@@ -122,7 +122,7 @@ The complete path will be assembled as follows: the prefix path (as specified in
 
 Remote Transporters are activated by defining them as the Transporter Protocol when specifying the settings for a Machine. 
 
-For more information, refer to the sections <<_globadm_transporters>>and <<_globadm_machines>>.
+For more information, refer to the sections <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>and <<#_globadm_machines,>>.
 
 |Work Copy Location
 |This field contains the location of the Work Copy displayed as a remote location.
@@ -163,14 +163,14 @@ The Transporter Protocol defines how Sources and Build Results will be transport
 This is only necessary if the SSH Server on the IKAN ALM Server uses an SSH Port other than the default port number __22__.
 An SSH Server daemon must be installed on the IKAN ALM server in order to use SSH as a Transporter Protocol.
 
-__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<_globadm_secureshellcreate>>
+__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<#_globadm_secureshellcreate,>>
 
 |FTP Port
 |Specify the FTP Port Number.
 This is only necessary if the FTP Server on the IKAN ALM Server uses a TCP Port other than the default port number __21__.
 An FTP server must be installed on the IKAN ALM Server in order to use FTP as a Transporter protocol.
 
-__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<_globadm_ftpcreate>>
+__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<#_globadm_ftpcreate,>>
 |===
 
 [[_globadm_systemsettings_security]]
@@ -216,7 +216,7 @@ Settings for connecting to an external mail system can also be defined on the Ma
 [NOTE]
 ====
 Theses Mail settings can be tested via the _Notify
-IKAN ALM Users_ submenu option. <<_globadm_notifyusers>>
+IKAN ALM Users_ submenu option. <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notifying>>
 ====
 
 
@@ -308,7 +308,7 @@ The following fields are available on the _Miscellanous_ subpanel:
 | Meaning
 
 |Auto Refresh Rate
-|In this field, you can enter the number of seconds for the automatic refresh function on the <<Desktop_ManageDesktop.adoc#_managedesktop_desktopoverview>>, <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen>> and <<_desktop_lr_buildhistory>>.
+|In this field, you can enter the number of seconds for the automatic refresh function on the <<Desktop_ManageDesktop.adoc#_managedesktop_desktopoverview>>, <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen>> and <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build>>.
 
 As a result, these overview screens will be refreshed each time the interval expires (if the user has activated the <<Desktop_AutoRefresh.adoc#_desktop_autorefresh>>).
 
@@ -321,7 +321,7 @@ As a result an RSS button will become available on the user`'s _Level Requests O
 
 By default the RSS Feeds are enabled.
 
-For more information, refer to the section <<_desktop_lr_rssfeeds>>.
+For more information, refer to the section <<#_desktop_lr_rssfeeds,>>.
 
 |RESTful Web Services Enabled
 |This feature is currently only functional for the integration with the SAP lifecycle. 
@@ -368,7 +368,7 @@ On top of the screen, the _Build Archive Info_ panel displays the following info
 [NOTE]
 ====
 The _Build Archive Info_ is based on hardware data obtained from the Build Archive location on the IKAN ALM Server.
-This Build Archive location is defined in the _Local Environment_ tab of the System Settings. <<_globadm_systemsettings_localenvironment>>
+This Build Archive location is defined in the _Local Environment_ tab of the System Settings. <<GlobAdm_System.adoc#_globadm_systemsettings_localenvironment,Local>>
 ====
 +
 
@@ -526,7 +526,7 @@ The _Build Files Overview_ panel lists the following information for each displa
 | Description
 
 |View Content
-|Click the image:images/icons/view.gif[,15,15] _View_ link to view the content of the Build File. <<_desktop_lr_results>>
+|Click the image:images/icons/view.gif[,15,15] _View_ link to view the content of the Build File. <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
 
 |File Name
 |The name of the Build File.
@@ -553,10 +553,10 @@ The _Build Files Overview_ panel lists the following information for each displa
 |This field displays the Level Request OID of the Build.
 Click the link to display the details for this Level Request.
 
-<<_dekstop_lr_detailedoverview>>
+<<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
 
 |Level Request Status
-|This field contains the Level Request Status. <<_desktop_lr_overviewscreen>>
+|This field contains the Level Request Status. <<#_desktop_lr_overviewscreen,>>
 
 |Deployed
 |This field indicates whether or not the Build has been used by a Deploy.

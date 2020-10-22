@@ -7,20 +7,20 @@ As a result, these User IDs and User Groups will most likely be maintained in su
 Each time a User attempts a login, synchronization of the User Groups for this User takes place.
 There are two types of User Groups: external and internal.
 During login, the external User Groups are automatically synchronized with an external security system, whereas the internal User Groups are kept intact.
-For more information on this issue, refer to the section <<_globadm_usersgroups_groups>>.
+For more information on this issue, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User>>.
 
 A user can only successfully log in if doing so does not violate the restrictions imposed by the IKAN ALM License.
 
-* If a User is defined as a __Reserved User__, he/she can always log in. For more information on defining a User as Reserved, refer to the section <<_globadm_usersgroups_users>>.
+* If a User is defined as a __Reserved User__, he/she can always log in. For more information on defining a User as Reserved, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users>>.
 * If a User is not defined as a __Reserved User__, the User is considered being a __Floating User__, and he/she can only log in if the current number of connected Floating Users is less than the number of Floating Users defined by the IKAN ALM License.
 
 
 This chapter provides more information on: 
 
-* <<_desktop_loggingon>>
-* <<_desktop_loogingoff>>
-* <<_desktop_errormessages>>
-* <<_desktop_warningmessages>>
+* <<Logon.adoc#_desktop_loggingon,Logging>>
+* <<Logon.adoc#_desktop_loogingoff,Logging>>
+* <<Logon.adoc#_desktop_errormessages,Error>>
+* <<Logon.adoc#_desktop_warningmessages,Warning>>
 
 
 [[_desktop_loggingon]]
@@ -33,7 +33,7 @@ This chapter provides more information on:
 +
 Your IKAN ALM Administrator will provide the exact URL.
 +
-This URL is specified on the _Mail_ subpanel on the _System Settings_ screen. <<_globadm_system>>
+This URL is specified on the _Mail_ subpanel on the _System Settings_ screen. <<#_globadm_system,>>
 +
 The _IKAN ALM Log in_ screen is displayed:
 +
@@ -49,7 +49,7 @@ Your personal Desktop will be displayed:
 +
 image::images/Desktop-DesktopOverview.png[,1014,517] 
 +
-For more information on managing the items displayed on the Desktop, refer to the section <<_desktop_managedesktop>>.
+For more information on managing the items displayed on the Desktop, refer to the section <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing>>.
 +
 
 [NOTE]
@@ -57,7 +57,7 @@ For more information on managing the items displayed on the Desktop, refer to th
 If you log in to IKAN ALM for the first time, you will be asked to complete your Personal Settings.
 The _Name_ and _E-mail
 Address_ fields are mandatory.
-For more information, refer to the section <<_desktop_personalsettings>>.
+For more information, refer to the section <<#_desktop_personalsettings,>>.
 ====
 
 
@@ -119,7 +119,7 @@ Most likely the problem is either a corrupted License file (or a file that doesn
 Contact your IKAN ALM Administrator or your IKAN ALM vendor to obtain a new License file.
 . You can now log in to IKAN ALM.
 +
-<<_desktop_loggingon>>
+<<Logon.adoc#_desktop_loggingon,Logging>>
 
 
 [[_desktop_errormessages]]
@@ -136,7 +136,7 @@ Please refer to the table underneath for the corresponding solution.
 
 |`No valid License found`
 |No IKAN ALM License was installed.
-Install a License as explained in the section <<_desktop_installinglicense>>.
+Install a License as explained in the section <<Logon.adoc#_desktop_installinglicense,Installing>>.
 
 |`License has expired`.
 |The IKAN ALM License has expired.

@@ -9,8 +9,8 @@ The __Project __menu is only available to users with Global Administrator Access
 
 The Project menu options are explained in the following procedures:
 
-* <<_globadm_projectcreate>>
-* <<_globadm_projectclone>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects>>
+* <<GlobAdm_Project.adoc#_globadm_projectclone,Cloning>>
 
 
 [[_globadm_projectcreate]]
@@ -81,7 +81,7 @@ If an Issue Tracking System is specified in this field, IKAN ALM will always aut
 
 This field is only visible if external Issue Tracking Systems have been defined in IKAN ALM.
 
-For more information on Issue Tracking systems, refer to the chapter <<_globadm_issuetracking>>
+For more information on Issue Tracking systems, refer to the chapter <<#_globadm_issuetracking,>>
 
 |Build Tool Type
 |From the drop-down list, select the Build Tool Type (Ant, Gradle, Nant or Maven2) to be used for this IKAN ALM Project.
@@ -122,7 +122,7 @@ This script will be used by default when executing Deploys in the Project, but m
 
 If defined, this setting overrides the__ User
 Group with User Access Rights__ defined in the _System
-Settings_ dialog. <<_globadm_system_settings>>
+Settings_ dialog. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 This group is the default group that is set as Requester when creating a Level Request.
 
@@ -131,7 +131,7 @@ This group is the default group that is set as Requester when creating a Level R
 
 If defined, this setting overrides the__ User
 Group with Admin Access Rights __defined in the__ System
-Settings__ dialog. <<_globadm_system_settings>>
+Settings__ dialog. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 |===
 
 * Head Project Stream Settings
@@ -274,7 +274,7 @@ Correct the errors reported in the Stack Trace field and perform the test again.
 The Project will be created and you are forwarded to the _Project
 Info_ screen in the Project Administration context.
 You can now administer the newly created Project by creating Levels etc.
-For more information, refer to the section <<_projadmin_projectsoverview_editing>>.
+For more information, refer to the section <<#_projadmin_projectsoverview_editing,>>.
 +
 image::images/GlobAdmin-Project-Create-EditProject.png[,602,850] 
 +
@@ -292,12 +292,12 @@ Underneath the _Project Info_ panel, the following links and buttons are availab
 
 a|_RELATED TOPICS_
 
-* <<_projadmin_projectsoverview_editing>>
-* <<_projadm_projectstreams>>
-* <<_projadm_lifecycles>>
-* <<_projadm_levels>>
-* <<_projadm_buildenvironments>>
-* <<_projadm_deployenvironments>>
+* <<#_projadmin_projectsoverview_editing,>>
+* <<#_projadm_projectstreams,>>
+* <<#_projadm_lifecycles,>>
+* <<#_projadm_levels,>>
+* <<#_projadm_buildenvironments,>>
+* <<#_projadm_deployenvironments,>>
 
 |===
 
@@ -385,7 +385,7 @@ You may select another User Group from the drop-down list, if required.
 
 If defined, this setting overrides the _User
 Group with User Access Rights_ defined in the _System
-Settings_ dialog. <<_globadm_system_settings>>
+Settings_ dialog. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 
 This group is the default group that is seen as Requester when creating a Level Request.
 
@@ -395,7 +395,7 @@ You may select another User Group from the drop-down list, if required.
 
 If defined, this setting overrides the__ User
 Group with Admin Access Rights _defined in the_ System
-Settings__ dialog. <<_globadm_system_settings>>
+Settings__ dialog. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 |===
 . Expand the tree structure of the _Project Elements to be cloned_ and check the validity of the Elements.
 +
@@ -428,4 +428,4 @@ For instance, the Target Location of Deploy Environments in the new Project most
 
 . Audit the Project to unlock it.
 +
-<<_projadm_auditingprojects>>
+<<#_projadm_auditingprojects,>>

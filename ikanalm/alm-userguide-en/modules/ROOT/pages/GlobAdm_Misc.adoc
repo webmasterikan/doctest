@@ -9,7 +9,7 @@ The __Miscellaneous __menu is only available to users with Global Administrator 
 
 The Miscellaneous menu options are explained in the following procedures:
 
-* <<_globadm_notifyusers>>
+* <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notifying>>
 
 
 [[_globadm_notifyusers]]
@@ -64,6 +64,6 @@ You can also click the _Reset_ button to clear the fields.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_system>>
+* <<#_globadm_system,>>
 
 |===

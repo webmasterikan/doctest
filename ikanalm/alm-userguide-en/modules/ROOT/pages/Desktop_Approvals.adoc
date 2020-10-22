@@ -3,7 +3,7 @@
 (((Approvals)))  
 (((Desktop ,Approvals))) 
 
-There are 2 types of Approvals which may be set on Test or Production Levels (<<_levelenvmgt_approvalsequence>>). 
+There are 2 types of Approvals which may be set on Test or Production Levels (<<#_levelenvmgt_approvalsequence,>>). 
 
 * A _Pre-Approval_ is created when delivering a Level Request to the Level, i.e., before the Level Request is executed.
 * A _Post-Approval_ is created after the Level Request has been executed, enabling to verify if the actions on the Level and/or the Environments were successful.
@@ -31,9 +31,9 @@ Every Approval will result in a notification (mail or net send) to the Users bel
 
 Refer to the following sections for more information about:
 
-* <<_desktop_outstandingapprovalsscreen>>
-* <<_desktop_outstandingapprovalsapprove>>
-* <<_desktop_outstandingapprovalsreject>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsscreen,Approvals>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting>>
 
 
 [[_desktop_outstandingapprovalsscreen]]
@@ -99,7 +99,7 @@ There are two possible types:
 * __Test__: The Approval is associated with a TEST Level.
 * __Production__: The Approval is associated with a PRODUCTION Level.
 
-<<_projadm_levels>>
+<<#_projadm_levels,>>
 
 |Level Request OID
 |This field contains the sequential number of the Level Request.
@@ -118,7 +118,7 @@ There are 2 possibilities:
 |This field contains the VCR Tag of the Level Request.
 This Tag matches a Build with its source code in the VCR.
 
-The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<_projadm_projectstreams>>
+The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<#_projadm_projectstreams,>>
 
 However, the user can override the default VCR Tag while creating a Level Request, so that the Tag Format can be completely different.
 
@@ -133,8 +133,8 @@ The Level Request will not be handled before this point in time is reached.
 +
 The following links are available in front of each Outstanding Approval:
 
-* image:images/icons/approve.gif[,15,15] __ Approve__. <<_desktop_outstandingapprovalsapprove>>
-* image:images/icons/reject.gif[,15,15] __ Reject__. <<_desktop_outstandingapprovalsreject>>
+* image:images/icons/approve.gif[,15,15] __ Approve__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving>>
+* image:images/icons/reject.gif[,15,15] __ Reject__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting>>
 
 
 [[_desktop_outstandingapprovalsapprove]]
@@ -224,7 +224,7 @@ image::images/Desktop-OutstandingApprovals-Reject.png[,600,457]
 +
 . Verify the information on the _Level Approval List_ panel.
 +
-The _Level Approval List_ displays additional information concerning the Approvals. <<_desktop_outstandingapprovalsapprove>>
+The _Level Approval List_ displays additional information concerning the Approvals. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving>>
 . Enter the reason for rejecting the Level Request on the _Approve Level Request_ panel.
 . Click _Reject_ to confirm the action.
 +
@@ -256,7 +256,7 @@ The following options are available:
 ====
 Outstanding Approvals for you (or other members of your User Group) are preceded by the _Approve_ and _Reject_ icons.
 
-For more information, refer to <<_desktop_outstandingapprovalsapprove>>and <<_desktop_outstandingapprovalsreject>>.
+For more information, refer to <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving>>and <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting>>.
 ====
 +
 
@@ -303,14 +303,14 @@ With: H = Head and 1-0 = Prefix
 |Level Name
 a|This field contains the name and type of the Level, to which a Build will be delivered as a result of this Level Request.
 
-<<_projadm_levels>>
+<<#_projadm_levels,>>
 
 There are two possible types:
 
 * __Test__: The Approval is associated with a TEST Level.
 * __Production__: The Approval is associated with a PRODUCTION Level.
 
-<<_projadm_levels>>
+<<#_projadm_levels,>>
 
 |Level Request OID
 |This field contains the sequential number of the Level Request.
@@ -339,7 +339,7 @@ The following status indication icons are possible:
 |This field contains the VCR Tag of the Level Request.
 This Tag matches a Build with its source code in the VCR.
 
-The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<_projectstreams_overviewscreen>>
+The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projectstreams_overviewscreen,Project>>
 
 However, the user can override the default VCR Tag while creating a Level Request (and is obliged to do so for a Build Level Request in a Tag Based Project Stream), so that the Tag Format can be completely different.
 
@@ -355,10 +355,10 @@ The Level Request will not be handled before this point in time is reached.
 +
 Click the Level Request`'s _OID_ link in front of the required Level Request.
 +
-For more information, refer to the section <<_dekstop_lr_detailedoverview>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>.
 . Use the appropriate link for approving or rejecting an Approval.
 +
 The following links are available in front of each Outstanding Approval:
 
-* image:images/icons/approve.gif[,15,15] __ Approve__. <<_desktop_outstandingapprovalsapprove>>
-* image:images/icons/reject.gif[,15,15] __ Reject__. <<_desktop_outstandingapprovalsreject>>
+* image:images/icons/approve.gif[,15,15] __ Approve__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving>>
+* image:images/icons/reject.gif[,15,15] __ Reject__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting>>

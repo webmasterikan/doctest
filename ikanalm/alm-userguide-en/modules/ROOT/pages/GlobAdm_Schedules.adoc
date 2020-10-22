@@ -12,11 +12,11 @@ In other words, Schedules enable features like Build Automation or Continuous In
 
 Refer to the following sections for detailed information:
 
-* <<_globadm_schedulecreate>>
-* <<_globadm_schedulesoverview>>
-* <<_globadm_schedules_edit>>
-* <<_globadm_schedules_delete>>
-* <<_globadm_schedules_history>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,Creating>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedulesoverview,Schedules>>
+* <<#_globadm_schedules_edit,>>
+* <<#_globadm_schedules_delete,>>
+* <<#_globadm_schedules_history,>>
 
 
 [[_globadm_schedulecreate]]
@@ -127,9 +127,9 @@ image::images/GlobAdm-Schedules-Sample5.png[,972,493]
 
 a|_RELATED TOPICS_
 
-* <<_globadm_schedules>>
-* <<_plevelenvmgt_createbuildlevel>>
-* <<_desktop_lr_creatinglevelrequest>>
+* <<#_globadm_schedules,>>
+* <<#_plevelenvmgt_createbuildlevel,>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating>>
 
 |===
 
@@ -153,7 +153,7 @@ You can also:
 * click the _Reset search_ link to clear the search fields.
 . Verify the information on the _Schedules Overview_ panel.
 +
-For a detailed description of the fields, refer to <<_globadm_schedulecreate>>.
+For a detailed description of the fields, refer to <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,Creating>>.
 . Depending on your access rights, the following links may be available on the _Schedules Overview_ panel:
 +
 
@@ -166,7 +166,7 @@ For a detailed description of the fields, refer to <<_globadm_schedulecreate>>.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a Schedule definition.
 
-<<_globadm_schedules_edit>>
+<<#_globadm_schedules_edit,>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -174,7 +174,7 @@ It allows editing a Schedule definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a Schedule definition.
 
-<<_globadm_schedules_delete>>
+<<#_globadm_schedules_delete,>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -182,7 +182,7 @@ It allows deleting a Schedule definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Schedule
 
-<<_globadm_schedules_history>>
+<<#_globadm_schedules_history,>>
 |===
 
 
@@ -199,7 +199,7 @@ image::images/GlobAdm-Schedules-Edit.png[,569,537]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_globadm_schedulecreate>>.
+For a description of the fields, refer to <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,Creating>>.
 +
 
 [NOTE]
@@ -245,7 +245,7 @@ You must remove the Schedule from the listed Levels before you can delete it.
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the _Schedule History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<#_historyeventlogging,>>.
 
 . Click __Back __to return to the _Schedules Overview_ screen.
 
@@ -255,8 +255,8 @@ View__, refer to the section <<_historyeventlogging>>.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_schedules>>
-* <<_plevelenvmgt_createbuildlevel>>
-* <<_desktop_lr_creatinglevelrequest>>
+* <<#_globadm_schedules,>>
+* <<#_plevelenvmgt_createbuildlevel,>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating>>
 
 |===

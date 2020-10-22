@@ -40,7 +40,7 @@ Locked Project Streams and Levels have a image:images/icons/locked.gif[,15,15] _
 In the sample screen above, this is the case for the _TestPartialBuild_ Level.
 Error or warning messages are displayed in red in the _Message_ field.
 +
-For the list of possible error and warning messages, refer to the section <<_projadm_auditingprojects_errorswarnings>>.
+For the list of possible error and warning messages, refer to the section <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects_errorswarnings,Auditing>>.
 . Verify if all Project Streams and Levels are properly defined and accessible for IKAN ALM, and correct the errors if required.
 . If the Project Configuration is consistent, click the _Unlock_ button in the _Actions_ panel to unlock all locked Project Streams and Levels of the Project.
 
@@ -50,8 +50,8 @@ For the list of possible error and warning messages, refer to the section <<_pro
 
 The following sections list the possible error and warning messages when auditing a Project.
 
-** <<_babgjghf>>
-** <<_babcfbhf>>
+** <<ProjAdm_AuditProjects.adoc#_babgjghf,Error>>
+** <<ProjAdm_AuditProjects.adoc#_babcfbhf,Warning>>
 
 
 [[_babgjghf]]
@@ -127,7 +127,7 @@ A Custom Phase with the given Display Name is inserted in the Level, but the val
 Navigate to the _Level
 Phases Overview_ of the Level, and click the __View
 Parameters __link next to the indicated Phase.
-Here you may set a value for the alm.phase.builder parameter by clicking the _Edit_ link (<<_globadm_phaseparameters_overview>>).
+Here you may set a value for the alm.phase.builder parameter by clicking the _Edit_ link (<<#_globadm_phaseparameters_overview,>>).
 |===
 
 [[_babcfbhf]]

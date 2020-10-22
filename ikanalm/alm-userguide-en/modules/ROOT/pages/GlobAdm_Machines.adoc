@@ -9,14 +9,14 @@ Build and Deploy Actions can only be handled on a Machine on which an IKAN ALM A
 
 Refer to the following sections for detailed information:
 
-* <<_globadm_machinecreate>>. This menu option is only visible for Users with Global Admin Access rights.
-* <<_globadm_machinesoverview>>
-* <<_globadm_machinesoverview_edit>>
-* <<_globadm_machinesoverview_delete>>
-* <<_globadm_machinesoverview_status>>
-* <<_globadm_machines_installedphases>>
-* <<_globadm_machinesoverview_history>>
-* <<_globadm_machineparameters>>
+* <<#_globadm_machinecreate,>>. This menu option is only visible for Users with Global Admin Access rights.
+* <<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines>>
+* <<#_globadm_machinesoverview_edit,>>
+* <<#_globadm_machinesoverview_delete,>>
+* <<#_globadm_machinesoverview_status,>>
+* <<#_globadm_machines_installedphases,>>
+* <<#_globadm_machinesoverview_history,>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters,Machine>>
 
 
 === Creating a Machine Definition 
@@ -86,7 +86,7 @@ This Protocol defines how sources and build results will be transported between 
 
 The Select ion of a Transporter Protocol is mandatory.
 
-For more information on configuring Transporters, refer to the section <<_globadm_transporters>>.
+For more information on configuring Transporters, refer to the section <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>.
 
 |Locked
 |Select whether or not the Machine must be locked for future use.
@@ -118,10 +118,10 @@ Contact your IKAN ALM Vendor if you need to purchase a license that allows for m
 
 a|_RELATED TOPICS_
 
-* <<_globadm_machines>>
-* <<_globadm_transporters>>
-* <<_projadm_buildenvironments>>
-* <<_projadm_deployenvironments>>
+* <<#_globadm_machines,>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<#_projadm_buildenvironments,>>
+* <<#_projadm_deployenvironments,>>
 
 |===
 
@@ -146,7 +146,7 @@ You can also:
 
 . Verify the information on the__ Machines Overview__ panel.
 +
-For a detailed description of the fields, refer to <<_globadm_machinecreate>>.
+For a detailed description of the fields, refer to <<#_globadm_machinecreate,>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
 +
 
@@ -159,7 +159,7 @@ For a detailed description of the fields, refer to <<_globadm_machinecreate>>.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a Machine definition.
 
-<<_globadm_machinesoverview_edit>>
+<<#_globadm_machinesoverview_edit,>>
 
 |image:images/icons/icon_viewparameters.png[,15,15] 
 |View Parameters
@@ -167,7 +167,7 @@ It allows editing a Machine definition.
 This option is available to all IKAN ALM Users.
 It allows viewing and editing the Parameters of a Machine.
 
-<<_globadm_machineparameters_overview>>
+<<#_globadm_machineparameters_overview,>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -175,7 +175,7 @@ It allows viewing and editing the Parameters of a Machine.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a Machine definition.
 
-<<_globadm_machinesoverview_delete>>
+<<#_globadm_machinesoverview_delete,>>
 
 |image:images/icons/status.gif[,15,15] 
 |Status
@@ -183,7 +183,7 @@ It allows deleting a Machine definition.
 This option is available to all IKAN ALM Users.
 It allows checking the status of a Machine.
 
-<<_globadm_machinesoverview_status>>
+<<#_globadm_machinesoverview_status,>>
 
 |image:images/icons/installed_phases.gif[,15,15] 
 |Installed Phases
@@ -191,7 +191,7 @@ It allows checking the status of a Machine.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows viewing and uninstalling the phases that are currently installed on the Machine.
 
-<<_globadm_machines_installedphases>>
+<<#_globadm_machines_installedphases,>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -199,7 +199,7 @@ It allows viewing and uninstalling the phases that are currently installed on th
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Machine.
 
-<<_globadm_machinesoverview_history>>
+<<#_globadm_machinesoverview_history,>>
 |===
 +
 
@@ -222,7 +222,7 @@ image::images/GlobAdmin-Machines-Edit.png[,790,522]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_globadm_machinecreate>>.
+For a description of the fields, refer to <<#_globadm_machinecreate,>>.
 +
 
 [NOTE]
@@ -256,11 +256,11 @@ Administration) > Machines > Machine Parameters._
 +
 For detailed information, refer to the following sections:
 
-* <<_globadm_machineparameters_create>>
-* <<_globadm_machineparameters__edit>>
-* <<_globadm_machineparameters_delete>>
-* <<_globadm_machineparameters_copy>>
-* <<_globadm_machineparameters_history>>
+* <<#_globadm_machineparameters_create,>>
+* <<#_globadm_machineparameters__edit,>>
+* <<#_globadm_machineparameters_delete,>>
+* <<#_globadm_machineparameters_copy,>>
+* <<#_globadm_machineparameters_history,>>
 
 
 === Deleting a Machine Definition 
@@ -297,7 +297,7 @@ image::images/GlobAdmin-Machines-Status.png[,869,457]
 The _Machine Detailed Status_ screen displays the status of the Agent Daemon running on the Machine.
 +
 At the top of the screen, the _Machine Info_ panel is displayed.
-For a detailed description of the fields, refer to <<_globadm_machinecreate>>.
+For a detailed description of the fields, refer to <<#_globadm_machinecreate,>>.
 . Verify the Status of the Machine.
 +
 The possible statuses are:
@@ -368,16 +368,16 @@ The _Installed Phases Overview_ screen displays the status of the Server and/or 
 It also shows the phases that are installed on the Server and Agent, and provides controls to search, sort and uninstall those phases.
 +
 At the top of the screen, the _Machine Info_ panel is displayed.
-For a detailed description of the fields, refer to <<_globadm_machinecreate>>.
+For a detailed description of the fields, refer to <<#_globadm_machinecreate,>>.
 +
 
 [NOTE]
 ====
-The Activity and the installed phases on the Server daemon are only displayed if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. <<_globadm_system_settings>>
+The Activity and the installed phases on the Server daemon are only displayed if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 ====
 . Verify the _Current Server and/or Agent Activity_ on the Machine.
 +
-For more information on the possible statuses, refer to <<_globadm_machinesoverview_status>>.
+For more information on the possible statuses, refer to <<#_globadm_machinesoverview_status,>>.
 . Select whether to show the Core Phases or not.
 +
 The possible options are:
@@ -386,7 +386,7 @@ The possible options are:
 * __No__: show only non-Core Phases
 * __All__: show Core and non-Core Phases
 . Verify the information on the _Installed Server Phases_ and _Install Agent Phases_ panels.
-* The _Installed Server Phases_ panel shows all phases that are installed on the Server daemon of the Machine. This panel is only shown if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. <<_globadm_system_settings>>
+* The _Installed Server Phases_ panel shows all phases that are installed on the Server daemon of the Machine. This panel is only shown if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
 * The _Installed Agent Phases_ panel shows all phases that are installed on the Agent daemon of the Machine.
 
 +
@@ -427,7 +427,7 @@ When a Phase of a Level Request is executed on a certain Agent or Server and tha
 The _Machine History View_ is displayed.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<#_historyeventlogging,>>.
 . Click__ Back__ to return to the __Machines Overview __screen.
 
 
@@ -453,11 +453,11 @@ Depending on the Scripting Tool linked to the environment, the defined parameter
 The _Machine Parameters Overview_ screen lets you create, edit, delete and copy Machine Parameters and allows checking their history.
 The following actions are possible:
 
-* <<_globadm_machineparameters_create>>
-* <<_globadm_machineparameters__edit>>
-* <<_globadm_machineparameters_delete>>
-* <<_globadm_machineparameters_copy>>
-* <<_globadm_machineparameters_history>>
+* <<#_globadm_machineparameters_create,>>
+* <<#_globadm_machineparameters__edit,>>
+* <<#_globadm_machineparameters_delete,>>
+* <<#_globadm_machineparameters_copy,>>
+* <<#_globadm_machineparameters_history,>>
 
 
 ==== The Machine Parameters Overview Screen 
@@ -489,7 +489,7 @@ You can also:
 +
 The _Machine Parameters Overview_ panel displays the defined Machine Parameters for each Machine.
 +
-For a description of the fields, see <<_globadm_machineparameters_create>>.
+For a description of the fields, see <<#_globadm_machineparameters_create,>>.
 +
 
 [NOTE]
@@ -510,7 +510,7 @@ Columns marked with the image:images/icons/icon_sort.png[,15,15] icon can be sor
 This option is available to all Users with Global Administrator Access Rights.
 It allows creating a Machine Parameter.
 
-<<_globadm_machineparameters_create>>
+<<#_globadm_machineparameters_create,>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -518,7 +518,7 @@ It allows creating a Machine Parameter.
 This option is available to all Users with Global Administrator Access Rights.
 It allows displaying the History of the selected Machine Parameter definition.
 
-<<_globadm_machineparameters_history>>
+<<#_globadm_machineparameters_history,>>
 
 |image:images/icons/edit.gif[,15,15] 
 |Edit
@@ -526,7 +526,7 @@ It allows displaying the History of the selected Machine Parameter definition.
 This option is available to all Users with Global Administrator Access Rights.
 It allows editing the selected Machine Parameter definition.
 
-<<_globadm_machineparameters__edit>>
+<<#_globadm_machineparameters__edit,>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -534,7 +534,7 @@ It allows editing the selected Machine Parameter definition.
 This option is available to all Users with Global Administrator Access Rights.
 It allows deleting the selected Machine Parameter definition and (optionally) deleting Machine Parameters with the same key linked to other Machines.
 
-<<_globadm_machineparameters_delete>>
+<<#_globadm_machineparameters_delete,>>
 
 |image:images/icons/copy_parameter.gif[,15,15] 
 |Copy Parameter
@@ -542,7 +542,7 @@ It allows deleting the selected Machine Parameter definition and (optionally) de
 This option is available to all Users with Global Administrator Access Rights.
 It allows copying the selected Machine Parameter definition.
 
-<<_globadm_machineparameters_copy>>
+<<#_globadm_machineparameters_copy,>>
 |===
 
 
@@ -636,7 +636,7 @@ image::images/GlobAdmin-Machines-MachineParameters-Edit.png[,391,385]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_globadm_machineparameters_create>>.
+For a description of the fields, refer to <<#_globadm_machineparameters_create,>>.
 . Click__ Save__ to save your changes.
 +
 You can also click:
@@ -690,6 +690,6 @@ You can also click:
 . Click the image:images/icons/history.gif[,15,15] _History_ link on the _Parameters Overview_ panel to display the __Machine History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<#_historyeventlogging,>>.
 +
 Click __Back __to return to the previous screen.

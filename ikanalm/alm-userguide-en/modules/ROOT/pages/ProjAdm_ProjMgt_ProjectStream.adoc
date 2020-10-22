@@ -11,27 +11,27 @@ When the Global Administrator creates a Project, he or she will also have to def
 
 The _Project Stream_ submenu option lets you start the following procedures:
 
-* <<_projadmin_projectstream_createbranch>>
-* Modifying the Project Stream definition via the <<_projectstreams_overviewscreen>>
+* <<#_projadmin_projectstream_createbranch,>>
+* Modifying the Project Stream definition via the <<ProjAdm_ProjMgt_ProjectStream.adoc#_projectstreams_overviewscreen,Project>>
 
 
 The _Project Streams Overview_ screen lets you verify and change the information concerning Project Streams.
 The following actions are possible:
 
 * Modifying Project Stream definitions
-** <<_projadmin_projectstream_viewing>>
-** <<_projadmin_projectstream_editing>>
-** <<_projadm_projectstream_deleting>>
-** <<_projadm_projectstream_locking>>
-** <<_hideshowprojectstream>>
-** <<_projadm_projectstream_historyview>>
+** <<#_projadmin_projectstream_viewing,>>
+** <<#_projadmin_projectstream_editing,>>
+** <<#_projadm_projectstream_deleting,>>
+** <<#_projadm_projectstream_locking,>>
+** <<#_hideshowprojectstream,>>
+** <<#_projadm_projectstream_historyview,>>
 
 
 * Modifying the Project Stream Dependencies
-** <<_projadmin_projectstream_dependencies>>
-** <<_projadmin_projectstream_editdependency>>
-** <<_projadmin_projectstream_adddependency>>
-** <<_projadm_projectstream_deletedependency>>
+** <<#_projadmin_projectstream_dependencies,>>
+** <<#_projadmin_projectstream_editdependency,>>
+** <<#_projadmin_projectstream_adddependency,>>
+** <<#_projadm_projectstream_deletedependency,>>
 
 
 === Creating a Branch Project Stream
@@ -45,7 +45,7 @@ You can create a new Branch if you want to
 
 [WARNING]
 --
-Create an additional Lifecycle before creating a Branch. <<_plifecyclemgt_createlifecycle>>
+Create an additional Lifecycle before creating a Branch. <<#_plifecyclemgt_createlifecycle,>>
 --
 
 . In the __Project Administration context__, select__ Project Stream > Create Branch__.
@@ -102,7 +102,7 @@ Locking a Project Stream means blocking all activity on that Project Stream.
 |This field indicates whether or not the Project Stream is hidden.
 
 By default newly created Project Streams are not hidden.
-For more information on hiding Project Streams, refer to <<_hideshowprojectstream>>.
+For more information on hiding Project Streams, refer to <<#_hideshowprojectstream,>>.
 
 |Tag-Based
 |Indicate whether or not the Project Stream is tag-based. 
@@ -227,7 +227,7 @@ You can also click:
 +
 Underneath the _Create Branch Project Stream_ panel, you will find an overview of the existing Project Streams in the Project.
 +
-For more information, refer to <<_projadmin_projectstreamsoverview_accessing>>.
+For more information, refer to <<#_projadmin_projectstreamsoverview_accessing,>>.
 
 
 [[_projectstreams_overviewscreen]]
@@ -237,18 +237,18 @@ The _Project Streams Overview_ screen lets you verify and change the information
 The following actions are possible:
 
 * Modifying Project Stream definitions
-** <<_projadmin_projectstream_viewing>>
-** <<_projadmin_projectstream_editing>>
-** <<_projadm_projectstream_deleting>>
-** <<_projadm_projectstream_locking>>
-** <<_hideshowprojectstream>>
-** <<_projadm_projectstream_historyview>>
+** <<#_projadmin_projectstream_viewing,>>
+** <<#_projadmin_projectstream_editing,>>
+** <<#_projadm_projectstream_deleting,>>
+** <<#_projadm_projectstream_locking,>>
+** <<#_hideshowprojectstream,>>
+** <<#_projadm_projectstream_historyview,>>
 
 * Modifying the Project Stream Dependencies
-** <<_projadmin_projectstream_dependencies>>
-** <<_projadmin_projectstream_editdependency>>
-** <<_projadmin_projectstream_adddependency>>
-** <<_projadm_projectstream_deletedependency>>
+** <<#_projadmin_projectstream_dependencies,>>
+** <<#_projadmin_projectstream_editdependency,>>
+** <<#_projadmin_projectstream_adddependency,>>
+** <<#_projadm_projectstream_deletedependency,>>
 
 
 ==== The Project Streams Overview Screen 
@@ -263,7 +263,7 @@ image::images/ProjAdmin-ProjMgt-ProjectStream-Overview.png[,962,366]
 At the bottom of the screen, the _Project Streams
 Overview_ panel displays the currently defined Project Streams for the selected Project.
 +
-For a detailed description of the fields and the links, refer to <<_projadmin_projectstream_createbranch>>.
+For a detailed description of the fields and the links, refer to <<#_projadmin_projectstream_createbranch,>>.
 . Depending on your access rights, the following links may be available:
 +
 
@@ -274,19 +274,19 @@ For a detailed description of the fields and the links, refer to <<_projadmin_pr
 |Edit
 
 This option is available to IKAN ALM Users with User or Project Administrator Access Rights.
-It allows <<_projadmin_projectstream_editing>> or<<_projadmin_projectstream_editing>>.
+It allows <<#_projadmin_projectstream_editing,>> or<<#_projadmin_projectstream_editing,>>.
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
-It allows deleting the selected Project Stream. <<_projadm_projectstream_deleting>>
+It allows deleting the selected Project Stream. <<#_projadm_projectstream_deleting,>>
 
 |image:images/icons/lock.gif[,15,15] / image:images/icons/unlock.gif[,15,15] 
 |Lock / Unlock
 
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
-It allows locking or unlocking the selected Project Stream. <<_projadm_projectstream_locking>>
+It allows locking or unlocking the selected Project Stream. <<#_projadm_projectstream_locking,>>
 
 |image:images/icons/hide.gif[,15,15] / image:images/icons/show.gif[,15,15] 
 |Hide / Show
@@ -294,7 +294,7 @@ It allows locking or unlocking the selected Project Stream. <<_projadm_projectst
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
 It allows hiding or showing the selected Project Stream.
 
-<<_hideshowprojectstream>>
+<<#_hideshowprojectstream,>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -302,7 +302,7 @@ It allows hiding or showing the selected Project Stream.
 This option is available to all IKAN ALM Users with Project User Access Rights.
 It allows to display the History of all create, update and delete operations performed on a Project Stream.
 
-<<_projadm_projectstream_historyview>>
+<<#_projadm_projectstream_historyview,>>
 |===
 
 
@@ -318,7 +318,7 @@ image::images/ProjAdmin-ProjectStreams-View.png[,918,269]
 +
 . Verify the settings.
 +
-For a description of the fields, refer to <<_projadmin_projectstream_createbranch>>.
+For a description of the fields, refer to <<#_projadmin_projectstream_createbranch,>>.
 . Click _Back_ to return to the _Project Streams Overview_ screen.
 
 
@@ -336,7 +336,7 @@ image::images/ProjAdmin-ProjectStreams-View.png[,918,269]
 +
 image::images/ProjAdmin-ProjMgt-ProjectStream-Edit-EditProjectStream.png[,559,442] 
 +
-For a description of the fields, refer to <<_projadmin_projectstream_createbranch>>.
+For a description of the fields, refer to <<#_projadmin_projectstream_createbranch,>>.
 . Click__ Save__ to save your changes.
 +
 You can also click:
@@ -350,10 +350,10 @@ You can also click:
 
 a|_RELATED TOPICS_
 
-* <<_projadmin_projectstream_dependencies>>
-* <<_projadmin_projectstream_adddependency>>
-* <<_projadmin_projectstream_editdependency>>
-* <<_projadm_projectstream_deletedependency>>
+* <<#_projadmin_projectstream_dependencies,>>
+* <<#_projadmin_projectstream_adddependency,>>
+* <<#_projadmin_projectstream_editdependency,>>
+* <<#_projadm_projectstream_deletedependency,>>
 
 |===
 
@@ -414,7 +414,7 @@ options_ link to display this criterion.
 . Click the image:images/icons/history.gif[,15,15] _History_ link on the _Project Streams Overview_ panel to display the__ Project Stream History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<#_historyeventlogging,>>.
 +
 Click __Back __to return to the previous screen.
 
@@ -436,7 +436,7 @@ The Dependencies panel contains:
 
 * the overview of the Project Streams whose results or sources the current Project Stream depends on,
 * the overview of the Project Streams using the results or sources of the current Project Stream, and
-* the__ Add Dependency__ link. <<_projadmin_projectstream_adddependency>>
+* the__ Add Dependency__ link. <<#_projadmin_projectstream_adddependency,>>
 
 +
 For each of the Project Streams on the Overviews, the following information is available:
@@ -496,8 +496,8 @@ Retrieval_ field explanation above.
 The following links may be available:
 
 * The image:images/icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to modify the order of the Project Streams.
-* image:images/icons/edit.gif[,15,15] __ Edit__: This option allows editing the selected dependency. <<_projadmin_projectstream_editdependency>>
-* image:images/icons/remove.gif[,15,15] __ Remove__: This option allows removing the selected dependency. <<_projadm_projectstream_deletedependency>>
+* image:images/icons/edit.gif[,15,15] __ Edit__: This option allows editing the selected dependency. <<#_projadmin_projectstream_editdependency,>>
+* image:images/icons/remove.gif[,15,15] __ Remove__: This option allows removing the selected dependency. <<#_projadm_projectstream_deletedependency,>>
 
 +
 
@@ -597,7 +597,7 @@ image::images/ProjAdmin-ProjectStream-UpdateDependency.png[,504,174]
 +
 . Edit the _Code Retrieval_ mode and __VCR Tag__, if required. 
 +
-For a description of these fields, refer to the section <<_projadmin_projectstream_adddependency>>.
+For a description of these fields, refer to the section <<#_projadmin_projectstream_adddependency,>>.
 . Click__ Save__ to save your modifications.
 +
 You can also click:

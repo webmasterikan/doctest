@@ -6,10 +6,10 @@ IKAN ALM can be extended with an optional Command Line interface, allowing the c
 
 Possible uses:
 
-* Manual creation of Level Requests (CLR Command): <<_pcommandline_clr_optionsparameters>>
-* Manual generation of Reports (Report Command): <<_pcommandline_report_optionsparameters>>
-* Creation of Level Requests in an external IDE. This guide describes the integration procedure for <<_pintegrateikanalminjdeveloper>> and <<_pintegrateikanalmineclipse>>. Refer to the indicated sections.
-* Automated creation of Level Requests using a Scripting Tool. A scripting tool is used to define the triggers (e.g., server backup) for Level Request creation. This guide describes the use of an <<_sautomatecreatinglevelrequestswithant>>. Refer to the indicated section.
+* Manual creation of Level Requests (CLR Command): <<#_pcommandline_clr_optionsparameters,>>
+* Manual generation of Reports (Report Command): <<#_pcommandline_report_optionsparameters,>>
+* Creation of Level Requests in an external IDE. This guide describes the integration procedure for <<#_pintegrateikanalminjdeveloper,>> and <<#_pintegrateikanalmineclipse,>>. Refer to the indicated sections.
+* Automated creation of Level Requests using a Scripting Tool. A scripting tool is used to define the triggers (e.g., server backup) for Level Request creation. This guide describes the use of an <<CommandLine.adoc#_sautomatecreatinglevelrequestswithant,Automating>>. Refer to the indicated section.
 
 
 The IKAN ALM Command Line interface can be installed on each client machine requiring its functionality.
@@ -21,10 +21,10 @@ The connection with the IKAN ALM server is established using XML-RPC.
 
 Refer to the following procedures for detailed information:
 
-* <<_pcommandline_clr_optionsparameters>>
-* <<_pcommandline_clr_propertiesfiles>>
-* <<_pcommandline_report_optionsparameters>>
-* <<_pcommandline_reports_propertiesfile>>
+* <<#_pcommandline_clr_optionsparameters,>>
+* <<#_pcommandline_clr_propertiesfiles,>>
+* <<#_pcommandline_report_optionsparameters,>>
+* <<#_pcommandline_reports_propertiesfile,>>
 
 
 ==== Creating Level Requests by Specifying Options and Parameters
@@ -192,7 +192,7 @@ image::images/CommandLine-LRCreatedSuccessfully.jpg[,539,274]
 [WARNING]
 --
 These messages only indicate that the Level Request was _created_ successfully.
-Refer to the <<_desktop_lr_overview>>in the web application to verify if the Level Request was _executed_ successfully as well.
+Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>in the web application to verify if the Level Request was _executed_ successfully as well.
 --
 
 * If the Level Request cannot be created, because there is no connection with the IKAN ALM Server, the following screen is displayed:
@@ -226,7 +226,7 @@ Open the file in a text editor to display its content:
 image::images/CommandLine-CLRPropertiesfile.jpg[,578,606] 
 
 You can edit this standard file so that the settings match your requirements.
-Refer to the <<_pcommandline_clr_optionsparameters>>for a description of the options and parameters.
+Refer to the <<#_pcommandline_clr_optionsparameters,>>for a description of the options and parameters.
 You can also create any number of specific properties files by copying the standard file, editing the copies and saving them under logical names for later usage
 
 . Prepare the Level Request creation.
@@ -291,7 +291,7 @@ image::images/CommandLine-LRCreatedSuccessfully.jpg[,541,274]
 [WARNING]
 --
 These messages only indicate that the Level Request was _created_ successfully.
-Refer to the <<_desktop_lr_overview>>in the web application to verify if the Level Request was _executed_ successfully as well.
+Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>in the web application to verify if the Level Request was _executed_ successfully as well.
 --
 
 
@@ -675,7 +675,7 @@ Open the file in a text editor to display its content:
 image::images/CommandLine-ReportPropertiesfile.jpg[,597,470] 
 
 You can edit this standard file so that the settings match your requirements.
-Refer to the section <<_pcommandline_clr_optionsparameters>>for a description of the options and parameters.
+Refer to the section <<#_pcommandline_clr_optionsparameters,>>for a description of the options and parameters.
 You can also create any number of specific properties files by copying the standard file, editing the copies and saving them under logical names for later usage
 
 . Prepare the Report generation.
@@ -740,8 +740,8 @@ The Report will be generated.
 
 Refer to the following procedures for detailed information:
 
-* <<_pintegrateikanalminjdeveloper>>
-* <<_pintegrateikanalmineclipse>>
+* <<#_pintegrateikanalminjdeveloper,>>
+* <<#_pintegrateikanalmineclipse,>>
 
 
 ==== Integrating IKAN ALM in JDeveloper

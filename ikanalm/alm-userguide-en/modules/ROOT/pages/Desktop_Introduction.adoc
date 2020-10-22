@@ -14,9 +14,9 @@ It gives access to common actions as:
 
 This section describes the following Desktop Administration tasks: 
 
-* <<_desktop_levelrequests>>
-* <<_desktop_packages>> and <<_desktop_packagegroups>>
-* <<_desktop_outstandingapprovals>>
-* <<_desktop_managedesktop>>
-* <<_desktop_autorefresh>>
-* <<_desktop_personalsettings>>
+* <<#_desktop_levelrequests,>>
+* <<#_desktop_packages,>> and <<#_desktop_packagegroups,>>
+* <<#_desktop_outstandingapprovals,>>
+* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing>>
+* <<UserInterface.adoc#_desktop_autorefresh,Auto>>
+* <<#_desktop_personalsettings,>>

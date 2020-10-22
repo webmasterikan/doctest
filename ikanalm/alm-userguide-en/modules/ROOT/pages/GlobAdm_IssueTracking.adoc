@@ -29,27 +29,27 @@ Refer to the following sections for detailed information.
 
 *Issue Tracking System*
 
-* <<_globadm_issuetrackingcreate>>
-* <<_globadm_issuetrackingoverview>>
-** <<_globadm_issuetracking_edit>>
-** <<_globadm_issuetracking_delete>>
-** <<_globadm_issuetracking_history>>
+* <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue>>
+* <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingoverview,The>>
+** <<#_globadm_issuetracking_edit,>>
+** <<#_globadm_issuetracking_delete,>>
+** <<#_globadm_issuetracking_history,>>
 
 *Issue Tracking System Properties*
 
-* <<_globadm_issuetrackingproperties_create>>
-* <<_globadm_issuetrackingproperties_overview>>
-** <<_globadm_issuetrackingproperties_edit>>
-** <<_globadm_issuetrackingproperties_delete>>
+* <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_create,Creating>>
+* <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_overview,The>>
+** <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_edit,Editing>>
+** <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_delete,Deleting>>
 
 
 Once the Issue Tracking System has been defined in the _Global
-Administration_ section, you must activate it on the Project. <<_projadmin_projectsoverview_editing>>
+Administration_ section, you must activate it on the Project. <<#_projadmin_projectsoverview_editing,>>
 
 If you want Issues to be automatically linked to Level Requests for certain Levels, the Issue Tracking Phase must be linked to those Levels.
 This will be done automatically when creating Levels for Projects which have an Issue Tracking System activated.
 If you activate the Issue Tracking System for a Project with existing Levels, you have to link the Issue Tracking Phase manually to each of those Levels.
-For more information, refer to the sections <<_phases_levelphases_issuetracking>>and <<_levelenvmgt_levelphases>>.
+For more information, refer to the sections <<App_Phases.adoc#_phases_levelphases_issuetracking,Issue>>and <<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Level>>.
 
 [[_globadm_issuetrackingcreate]]
 === Creating an Issue Tracking System 
@@ -199,14 +199,14 @@ For more detailed information on the specific Issue Tracking system settings, re
 . Once you have filled out the fields, click __Create__.
 +
 A warning may appear indicating that some required properties must be set.
-Refer to the section <<_globadm_issuetrackingproperties_overview>> for editing the Issue Tracking System properties.
+Refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_overview,The>> for editing the Issue Tracking System properties.
 +
 image::images/GlobAdmin-IssueTracking-Create-Warning.png[,449,41] 
 +
-Once the Issue Tracking System has been defined, you must activate it on the Project. <<_projadmin_projectsoverview_editing>>
+Once the Issue Tracking System has been defined, you must activate it on the Project. <<#_projadmin_projectsoverview_editing,>>
 . In case you defined a JIRA, HP ALM, TeamForge or Team Foundation Issue Tracking System, you can test if IKAN ALM can establish the connection.
 +
-<<_globadm_issuetracking_edit>>
+<<#_globadm_issuetracking_edit,>>
 
 
 [cols="1", frame="topbot"]
@@ -214,10 +214,10 @@ Once the Issue Tracking System has been defined, you must activate it on the Pro
 
 a|_RELATED TOPICS_
 
-* <<_projadmin_projectsoverview_editing>>
-* <<_desktop_lr_issues>>
-* <<_globadm_issuetracking>>
-* <<_phases_levelphases_issuetracking>>
+* <<#_projadmin_projectsoverview_editing,>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
+* <<#_globadm_issuetracking,>>
+* <<App_Phases.adoc#_phases_levelphases_issuetracking,Issue>>
 
 |===
 
@@ -241,7 +241,7 @@ You can also:
 * click the _Reset search_ link to clear the search fields,
 . Verify the information on the _Issue Tracking Systems Overview_ panel.
 +
-For a detailed description of the fields, refer to <<_globadm_issuetrackingcreate>>.
+For a detailed description of the fields, refer to <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue>>.
 . Depending on your access rights, the following links may be available on the _Issue Tracking Systems Overview_ panel: 
 +
 
@@ -254,7 +254,7 @@ For a detailed description of the fields, refer to <<_globadm_issuetrackingcreat
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing an Issue Tracking System definition.
 
-<<_globadm_issuetracking_edit>>
+<<#_globadm_issuetracking_edit,>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -262,7 +262,7 @@ It allows editing an Issue Tracking System definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting an Issue Tracking System definition.
 
-<<_globadm_issuetracking_delete>>
+<<#_globadm_issuetracking_delete,>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -270,7 +270,7 @@ It allows deleting an Issue Tracking System definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on an Issue Tracking System and its properties.
 
-<<_globadm_issuetracking_history>>
+<<#_globadm_issuetracking_history,>>
 |===
 
 
@@ -293,7 +293,7 @@ image::images/GlobAdmin-IssueTracking-Edit.png[,595,440]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_globadm_issuetrackingcreate>>.
+For a description of the fields, refer to <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue>>.
 +
 
 [NOTE]
@@ -323,7 +323,7 @@ Correct the errors reported in the Stack Trace field and perform the test again.
 
 . On the __Issue Tracking System Properties Overview __panel, you can create and edit the Isue Tracking System Properties.
 +
-For more information, refer to the section <<_globadm_issuetrackingproperties_overview>>
+For more information, refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_overview,The>>
 
 
 ==== Deleting an Issue Tracking System Definition 
@@ -355,7 +355,7 @@ You must change the definition of the listed Projects, before you can delete the
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the _Issue Tracking System History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<#_historyeventlogging,>>.
 
 . Click __Back __to return to the _Issue Tracking Systems Overview_ screen.
 
@@ -365,10 +365,10 @@ View__, refer to the section <<_historyeventlogging>>.
 
 a|_RELATED TOPICS_
 
-* <<_projadmin_projectsoverview_editing>>
-* <<_desktop_lr_issues>>
-* <<_globadm_issuetracking>>
-* <<_phases_levelphases_issuetracking>>
+* <<#_projadmin_projectsoverview_editing,>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
+* <<#_globadm_issuetracking,>>
+* <<App_Phases.adoc#_phases_levelphases_issuetracking,Issue>>
 
 |===
 
@@ -412,7 +412,7 @@ Otherwise, only the links __Edit__, _Delete_ and _History_ are available.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows creating an Issue Tracking System Property definition.
 
-<<_globadm_issuetrackingproperties_create>>
+<<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_create,Creating>>
 
 |image:images/icons/edit.gif[,15,15] 
 |Edit
@@ -420,7 +420,7 @@ It allows creating an Issue Tracking System Property definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing an Issue Tracking System Property definition.
 
-<<_globadm_issuetrackingproperties_edit>>
+<<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_edit,Editing>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -428,7 +428,7 @@ It allows editing an Issue Tracking System Property definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting an Issue Tracking System Property definition.
 
-<<_globadm_issuetrackingproperties_delete>>
+<<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_delete,Deleting>>
 |===
 
 
@@ -503,7 +503,7 @@ The following screen is displayed:
 +
 image::images/GlobAdmin-IssueTracking-EditProperties-Edit.png[,502,238] 
 +
-For a description of the fields, refer to the section <<_globadm_issuetrackingproperties_create>>.
+For a description of the fields, refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_create,Creating>>.
 
 . If required, modify the value in the _Value_ field and click __Save__.
 +

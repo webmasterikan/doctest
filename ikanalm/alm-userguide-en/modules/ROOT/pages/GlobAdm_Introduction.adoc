@@ -24,16 +24,16 @@ Log_ which has been added to the _Miscellaneous_ section on the landing page.
 +
 Refer to the following sections for detailed information:
 
-* <<_globadm_system>>
-* <<_globadm_historylog>>
-* <<_globadm_usersgroups_users>>
-* <<_globadm_usersgroups_groups>>
-* <<_globadm_machines>>
-* <<_globadm_transporters>>
-* <<_globadm_vcr>>
-* <<_globadm_scriptingtools>>
-* <<_globadm_issuetracking>>
-* <<_globadm_schedules>>
-* <<_globadm_miscellaneous>>
-* <<_globadm_phases>>
-* <<_globadm_project>>
+* <<#_globadm_system,>>
+* <<#_globadm_historylog,>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User>>
+* <<#_globadm_machines,>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<#_globadm_vcr,>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting>>
+* <<#_globadm_issuetracking,>>
+* <<#_globadm_schedules,>>
+* <<#_globadm_miscellaneous,>>
+* <<#_globadm_phases,>>
+* <<#_globadm_project,>>
