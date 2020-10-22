@@ -170,19 +170,19 @@ It is typically assigned to IKAN ALM Users with Global Admin Access Rights.
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
-It allows editing a User definition. <<#_globadm_usersgroups_edituser,>>
+It allows editing a User definition. <<_globadm_usersgroups_edituser>>
 
 |image:images/icons/icon_disconnectUser.png[,15,15] 
 |Disconnect
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
-It allows disconnecting Users before their session has timed out. <<#_globadm_usersgroups_disconnectingusers,>>
+It allows disconnecting Users before their session has timed out. <<_globadm_usersgroups_disconnectingusers>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users.
-It allows viewing the User History. <<#_globadm_usersgroups_userhistory,>>
+It allows viewing the User History. <<_globadm_usersgroups_userhistory>>
 |===
 
 
@@ -215,12 +215,12 @@ You will have to expand your IKAN ALM license or archive other (obsolete) reserv
 +
 [NOTE]
 ====
-Users can edit their personal settings. <<#_desktop_personalsettings,>>
+Users can edit their personal settings. <<_desktop_personalsettings>>
 ====
 
 . Edit the fields as required.
 +
-For a description of the fields, refer to the section <<#_globadm_usersgroups_usersoverview,>>.
+For a description of the fields, refer to the section <<_globadm_usersgroups_usersoverview>>.
 . Click__ Save__ to save your changes.
 +
 You can also click:
@@ -256,7 +256,7 @@ Groups Overview_ panel.
 ====
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 +
 Click __Back __to return to the _Users
 Overview_ screen.
@@ -268,9 +268,9 @@ Overview_ screen.
 a|_RELATED TOPICS_
 
 * <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
-* <<#_desktop_personalsettings,>>
+* <<_desktop_personalsettings>>
 * <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
-* <<#_desktop_outstandingapprovals,>>
+* <<_desktop_outstandingapprovals>>
 
 |===
 
@@ -302,8 +302,8 @@ To avoid situations where no User with System Admin rights may login anymore, IK
 
 Refer to the following sections for detailed information:
 
-* <<#_globadm_usergroupcreate,>>
-* <<#_globadm_usergroupsoverview,>>
+* <<_globadm_usergroupcreate>>
+* <<_globadm_usergroupsoverview>>
 
 
 ==== Creating a User Group (((User Groups ,Creating))) 
@@ -341,7 +341,7 @@ The possible values are:
 * External: the User Group membership is synchronized with the external security system. This is done for each User individually at login.
 * Internal: the User Group membership is managed in IKAN ALM 
 
-For more information, refer to the section <<#_globadm_usersgroups_editusergroup,>>.
+For more information, refer to the section <<_globadm_usersgroups_editusergroup>>.
 |===
 
 . Once you have filled out the fields, click__ Create__.
@@ -397,19 +397,19 @@ The following information is available for each displayed User Group:
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
-It allows editing a User Group definition. <<#_globadm_usersgroups_editusergroup,>>
+It allows editing a User Group definition. <<_globadm_usersgroups_editusergroup>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
-It allows deleting a User Group definition. <<#_globadm_usersgroups_deleteusergroup,>>
+It allows deleting a User Group definition. <<_globadm_usersgroups_deleteusergroup>>
 
 |image:images/icons/history.gif[,15,15] ______
 |History
 
 This option is available to all IKAN ALM Users.
-It allows viewing the User Group History. <<#_globadm_usersgroups_usergrouphistory,>>
+It allows viewing the User Group History. <<_globadm_usersgroups_usergrouphistory>>
 |===
 +
 
@@ -484,7 +484,7 @@ You can also click:
 
 ==== Editing the User Group Members
 
-. On the __User Group Members __panel underneath the _Edit User Group_ panel (See <<#_globadm_usersgroups_editusergroup,>>), click the image:images/icons/edit.gif[,15,15] _Edit User Group Members_ link to change the selected User Group definition. 
+. On the __User Group Members __panel underneath the _Edit User Group_ panel (See <<_globadm_usersgroups_editusergroup>>), click the image:images/icons/edit.gif[,15,15] _Edit User Group Members_ link to change the selected User Group definition. 
 +
 The following screen is displayed:
 +
@@ -548,7 +548,7 @@ You will need to cancel the displayed connections, before you can delete the Use
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ User Group History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 +
 Click __Back __to return to the _User
 Groups Overview_ screen.
@@ -562,10 +562,10 @@ a|_RELATED TOPICS_
 * <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users and Groups Users>>
 * <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 * <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notifying IKAN ALM Users>>
-* <<#_globadm_project,>>
-* <<#_projadmin_projectsoverview_editing,>>
-* <<#_plevelenvmgt_createbuildlevel,>>
-* <<#_plevelenvmgt_createtestorproductionlevel,>>
-* <<#_plifecyclemgt_editlevelsettings,>>
+* <<_globadm_project>>
+* <<_projadmin_projectsoverview_editing>>
+* <<_plevelenvmgt_createbuildlevel>>
+* <<_plevelenvmgt_createtestorproductionlevel>>
+* <<_plifecyclemgt_editlevelsettings>>
 
 |===

@@ -26,10 +26,10 @@ Refer to the following procedures for more information:
 
 * <<Desktop_Packages.adoc#_desktop_createpackage,Creating a Package>>
 * <<Desktop_Packages.adoc#_desktop_packageoverview,The Package Overview Screen>>
-* <<#_desktop_viewpackage,>>
-* <<#_desktop_editpackage,>>
+* <<_desktop_viewpackage>>
+* <<_desktop_editpackage>>
 * <<Desktop_Packages.adoc#_desktop_hideshowpackage,Hiding/Showing a Package>>
-* <<#_desktop_viewpackagehistory,>>
+* <<_desktop_viewpackagehistory>>
 
 
 [[_desktop_createpackage]]
@@ -138,7 +138,7 @@ The following options are available:
 * Save filter: to save the current search criteria for future use.
 
 +
-For more information on the usage of search panels and filters, refer to the sections <<#_babcjedaj8,>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
+For more information on the usage of search panels and filters, refer to the sections <<_babcjedaj8>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
 
 . Depending on your access rights, the following links may be available on the _Packages Overview_ panel:
 +
@@ -152,13 +152,13 @@ For more information on the usage of search panels and filters, refer to the sec
 This option is available to all IKAN ALM Users.
 It allows viewing the selected Package definition and its connected file revisions.
 
-<<#_desktop_viewpackage,>>
+<<_desktop_viewpackage>>
 
 |image:images/icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
-It allows editing the Package definition and/or its connected file revisions. <<#_desktop_editpackage,>>
+It allows editing the Package definition and/or its connected file revisions. <<_desktop_editpackage>>
 
 |image:images/icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
 |Hide / Show
@@ -174,7 +174,7 @@ It allows hiding the selected Package.
 This option is available to all IKAN ALM Users.
 It allows to display the History of all create, update and delete operations performed on a Package.
 
-<<#_desktop_viewpackagehistory,>>
+<<_desktop_viewpackagehistory>>
 |===
 +
 
@@ -294,7 +294,7 @@ Package_ panel to specify whether or not you want to display hidden Packages.
 . Click the image:images/icons/history.gif[,15,15] _History_ link on the _Package Overview_ panel to display the __Package History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 +
 Click __Overview __to return to the _Packages
 Overview_ screen.
@@ -397,7 +397,7 @@ For more information on hiding Packages, refer to <<Desktop_Packages.adoc#_deskt
 
 |Package Build Group
 |If applicable, this field contains the Package Build Group the Package is linked to.
-For more information, refer to the section <<#_desktop_packagegroups,>>.
+For more information, refer to the section <<_desktop_packagegroups>>.
 |===
 
 [[_desktop_packagedetails_latestlevelrequests]]

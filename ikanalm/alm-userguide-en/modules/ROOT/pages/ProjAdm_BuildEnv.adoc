@@ -15,22 +15,22 @@ Typical uses of Build Environments:
 
 The Build Environments submenu option lets you start the following procedures:
 
-* <<#_pcreatebuildenvironment,>>
+* <<_pcreatebuildenvironment>>
 * <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
 +
 The _Build Environments Overview_ screen lets you verify and change the information concerning Build Environments and related Phases.
 The following actions are possible:
 
-** <<#_projadm_buildenv_edit,>>
-** <<#_projadm_buildenv_delete,>>
-** <<#_projadm_buildenv_clone,>>
-** <<#_projadm_buildenv_editphase,>>
-** <<#_projadm_buildenv_viewparameters,>>
+** <<_projadm_buildenv_edit>>
+** <<_projadm_buildenv_delete>>
+** <<_projadm_buildenv_clone>>
+** <<_projadm_buildenv_editphase>>
+** <<_projadm_buildenv_viewparameters>>
 ** <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_historyview,Viewing the Build Environment History>>
 * Build Parameters
 +
 The _Parameters Overview_ screen lets you create, edit, delete and copy Build Parameters and allows to check their history.
-For more information, refer to the chapter <<#_projadm_environmentparameters,>>.
+For more information, refer to the chapter <<_projadm_environmentparameters>>.
 
 
 === Creating a Build Environment
@@ -160,7 +160,7 @@ You can also:
 * click the _Reset search_ link to clear the search fields,
 . Verify the Information available on the __Build Environments Overview__.
 +
-For a detailed description of the fields, see <<#_pcreatebuildenvironment,>>.
+For a detailed description of the fields, see <<_pcreatebuildenvironment>>.
 +
 
 [NOTE]
@@ -178,35 +178,35 @@ Columns marked with the image:images/icons/icon_sort.png[,15,15] icon can be sor
 
 This option allows editing a the Build Environment settings.
 
-<<#_projadm_buildenv_edit,>>
+<<_projadm_buildenv_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
 
 This option allows deleting a Build Environment.
 
-<<#_projadm_buildenv_delete,>>
+<<_projadm_buildenv_delete>>
 
 |image:images/icons/clone.gif[,15,15]
 |Clone
 
 This option allows cloning a Build Environment.
 
-<<#_projadm_buildenv_clone,>>
+<<_projadm_buildenv_clone>>
 
 |image:images/icons/edit_phases.gif[,15,15] 
 |Edit Phases
 
 This option allows editing the Build Environment Phases.
 
-<<#_projadm_buildenv_editphase,>>
+<<_projadm_buildenv_editphase>>
 
 |image:images/icons/icon_viewparameters.png[,15,15] 
 |View Parameters
 
 This option allows viewing the Build Environment Parameters.
 
-<<#_projadm_buildenv_viewparameters,>>
+<<_projadm_buildenv_viewparameters>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -237,7 +237,7 @@ image::images/ProjAdmin-BuildEnv-Edit_popup.png[,540,337]
 +
 . Edit the fields as required.
 +
-For a detailed description of the fields, refer to <<#_pcreatebuildenvironment,>>.
+For a detailed description of the fields, refer to <<_pcreatebuildenvironment>>.
 . Click Save, once you have finished your changes.
 +
 You can also click__ Refresh __to retrieve the settings from the database or__ Cancel __to return to the __Edit Build Environment __screen without saving your changes.
@@ -283,7 +283,7 @@ image::images/ProjAdmin-BuildEnv-Clone.png[,1014,438]
 . On the _Clone Build Environment_ panel, specify the _Name_ and __Target Location__, and specify a Level for the new Environment.
 +
 If required, you can also edit the other fields.
-For a detailed description of the fields, refer to <<#_pcreatebuildenvironment,>>.
+For a detailed description of the fields, refer to <<_pcreatebuildenvironment>>.
 . Click _Clone_ to confirm the action.
 +
 You can also click__ Back __to return to the previous screen without cloning the Environment.
@@ -311,11 +311,11 @@ When executing a Build for this Environment, a log will be created for each of t
 
 Refer to the following procedures for more information:
 
-* <<#_projadm_buildenv_buildenvphasesoverview,>>
-* <<#_projadm_buildenv_insertphase,>>
-* <<#_projadm_buildenv_editphase,>>
-* <<#_projadm_buildenv_modifyorderphases,>>
-* <<#_projadm_buildenv_viewbuildenvphaseparams,>>
+* <<_projadm_buildenv_buildenvphasesoverview>>
+* <<_projadm_buildenv_insertphase>>
+* <<_projadm_buildenv_editphase>>
+* <<_projadm_buildenv_modifyorderphases>>
+* <<_projadm_buildenv_viewbuildenvphaseparams>>
 * <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phasedelete,Deleting a Build Environment Phase>>
 
 
@@ -341,8 +341,8 @@ A link to this screen is also available on the __Edit Build Environment __screen
 The following links are available:
 
 * The image:images/icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to change the order of the Phases.
-* The image:images/icons/edit.gif[,15,15] _Edit_ link to edit the Phase`'s settings. <<#_projadm_buildenv_editphase,>>
-* The image:images/icons/icon_viewparameters.png[,15,15] _View Parameters_ link to manage the mandatory and optional Phase Parameters. <<#_projadm_buildenv_viewbuildenvphaseparams,>>
+* The image:images/icons/edit.gif[,15,15] _Edit_ link to edit the Phase`'s settings. <<_projadm_buildenv_editphase>>
+* The image:images/icons/icon_viewparameters.png[,15,15] _View Parameters_ link to manage the mandatory and optional Phase Parameters. <<_projadm_buildenv_viewbuildenvphaseparams>>
 * The image:images/icons/delete.gif[,15,15] _Delete_ link to delete a Phase. <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phasedelete,Deleting a Build Environment Phase>>
 
 +
@@ -359,7 +359,7 @@ TO Using and Developing a Phase in IKAN ALM__.
 +
 Select the _Insert Phase_ link underneath the _Phases Overview_ panel.
 +
-<<#_projadm_buildenv_insertphase,>>
+<<_projadm_buildenv_insertphase>>
 . When done, click _Back_ to return to the _Build Environments Overview_ screen.
 
 
@@ -428,7 +428,7 @@ image::images/ProjAdmin-BuildEnv-EditBuildEnvPhase.png[,578,247]
 +
 . Edit the fields on the _Edit Build Environment Phase_ panel.
 +
-For a description of the fields, refer to the section <<#_projadm_buildenv_insertphase,>>.
+For a description of the fields, refer to the section <<_projadm_buildenv_insertphase>>.
 . Click __Save __to save your changes.
 +
 You can also click__ Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
@@ -562,7 +562,7 @@ Parameter Value_ pop-up window is opened.
 +
 image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditGlobalPhaseParam.png[,853,696] 
 +
-You can Edit the Global Phase Parameter as described in the section <<#_globadm_phaseparameters_editing,>>.
+You can Edit the Global Phase Parameter as described in the section <<_globadm_phaseparameters_editing>>.
 +
 To go back to the Phase Parameter in the _Project
 Administration_ context, click the appropriate image:images/icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Environment
@@ -600,7 +600,7 @@ The following screen is displayed:
 +
 image::images/ProjAdmin-BuildEnv-ViewParameters.png[,1031,637] 
 +
-For a more detailed description of this screen, refer to the section <<#_environmentparams_create,>>.
+For a more detailed description of this screen, refer to the section <<_environmentparams_create>>.
 
 
 [[_projadm_buildenv_historyview]]
@@ -612,6 +612,6 @@ For a more detailed description of this screen, refer to the section <<#_environ
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the __Build Environment History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 +
 Click __Back __to return to the previous screen.

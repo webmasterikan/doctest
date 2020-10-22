@@ -64,6 +64,6 @@ You can also click the _Reset_ button to clear the fields.
 
 a|_RELATED TOPICS_
 
-* <<#_globadm_system,>>
+* <<_globadm_system>>
 
 |===

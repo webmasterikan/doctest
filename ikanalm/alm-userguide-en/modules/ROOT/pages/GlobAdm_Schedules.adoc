@@ -14,9 +14,9 @@ Refer to the following sections for detailed information:
 
 * <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,Creating a Schedule>>
 * <<GlobAdm_Schedules.adoc#_globadm_schedulesoverview,Schedules The Schedules Overview Screen>>
-* <<#_globadm_schedules_edit,>>
-* <<#_globadm_schedules_delete,>>
-* <<#_globadm_schedules_history,>>
+* <<_globadm_schedules_edit>>
+* <<_globadm_schedules_delete>>
+* <<_globadm_schedules_history>>
 
 
 [[_globadm_schedulecreate]]
@@ -127,8 +127,8 @@ image::images/GlobAdm-Schedules-Sample5.png[,972,493]
 
 a|_RELATED TOPICS_
 
-* <<#_globadm_schedules,>>
-* <<#_plevelenvmgt_createbuildlevel,>>
+* <<_globadm_schedules>>
+* <<_plevelenvmgt_createbuildlevel>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating Level Requests>>
 
 |===
@@ -166,7 +166,7 @@ For a detailed description of the fields, refer to <<GlobAdm_Schedules.adoc#_glo
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a Schedule definition.
 
-<<#_globadm_schedules_edit,>>
+<<_globadm_schedules_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -174,7 +174,7 @@ It allows editing a Schedule definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a Schedule definition.
 
-<<#_globadm_schedules_delete,>>
+<<_globadm_schedules_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -182,7 +182,7 @@ It allows deleting a Schedule definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Schedule
 
-<<#_globadm_schedules_history,>>
+<<_globadm_schedules_history>>
 |===
 
 
@@ -245,7 +245,7 @@ You must remove the Schedule from the listed Levels before you can delete it.
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the _Schedule History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 
 . Click __Back __to return to the _Schedules Overview_ screen.
 
@@ -255,8 +255,8 @@ View__, refer to the section <<#_historyeventlogging,>>.
 
 a|_RELATED TOPICS_
 
-* <<#_globadm_schedules,>>
-* <<#_plevelenvmgt_createbuildlevel,>>
+* <<_globadm_schedules>>
+* <<_plevelenvmgt_createbuildlevel>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating Level Requests>>
 
 |===

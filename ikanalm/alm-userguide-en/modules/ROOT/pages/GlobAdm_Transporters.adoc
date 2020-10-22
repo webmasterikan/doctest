@@ -51,7 +51,7 @@ The relative locations for all remote transporters must be defined in the _Syste
 
 [NOTE]
 ====
-A Transporter will be activated by linking the Transporter to a Machine representing the IKAN ALM Agent (<<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines>>), and by linking that Machine to a Build or Deploy environment (<<#_pcreatebuildenvironment,>> or <<#_pcreatedeployenvironment,>>).
+A Transporter will be activated by linking the Transporter to a Machine representing the IKAN ALM Agent (<<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines>>), and by linking that Machine to a Build or Deploy environment (<<_pcreatebuildenvironment>> or <<_pcreatedeployenvironment>>).
 ====
 
 This chapter describes three different Transporters, each of them enabling different protocols for transferring sources, scripts or build results.
@@ -86,9 +86,9 @@ The _Details_ panel for the type of Transporter Protocol you selected is display
 +
 For more information on those details, refer to the appropriate sections: 
 
-* <<#_globadm_filecopycreate,>>
-* <<#_globadm_ftpcreate,>>
-* <<#_globadm_secureshellcreate,>>
+* <<_globadm_filecopycreate>>
+* <<_globadm_ftpcreate>>
+* <<_globadm_secureshellcreate>>
 
 
 === The Transporter Protocols Overview Screen 
@@ -169,11 +169,11 @@ These may be tackled by running the service/daemon as a User having access right
 
 Refer to the following sections for detailed information:
 
-* <<#_globadm_filecopycreate,>>
-* <<#_globadm_filecopyoverview,>>
-* <<#_globadm_transporter_filecopy_edit,>>
-* <<#_globadm_transporter_filecopy_delete,>>
-* <<#_globadm_transporter_filecopy_history,>>
+* <<_globadm_filecopycreate>>
+* <<_globadm_filecopyoverview>>
+* <<_globadm_transporter_filecopy_edit>>
+* <<_globadm_transporter_filecopy_delete>>
+* <<_globadm_transporter_filecopy_history>>
 
 
 ==== Creating a FileCopy Transporter 
@@ -265,9 +265,9 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
 * <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
-* <<#_globadm_machines,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_globadm_machines>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -292,7 +292,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ FileCopy Transporters Overview__ panel.
 +
-For a detailed description of the fields, refer to <<#_globadm_filecopycreate,>>.
+For a detailed description of the fields, refer to <<_globadm_filecopycreate>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
 +
 
@@ -305,7 +305,7 @@ For a detailed description of the fields, refer to <<#_globadm_filecopycreate,>>
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a FileCopy Transporter definition.
 
-<<#_globadm_transporter_filecopy_edit,>>
+<<_globadm_transporter_filecopy_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -313,7 +313,7 @@ It allows editing a FileCopy Transporter definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a FileCopy Transporter definition.
 
-<<#_globadm_transporter_filecopy_delete,>>
+<<_globadm_transporter_filecopy_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -321,7 +321,7 @@ It allows deleting a FileCopy Transporter definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a FileCopy Transporter.
 
-<<#_globadm_transporter_filecopy_history,>>
+<<_globadm_transporter_filecopy_history>>
 |===
 
 
@@ -341,7 +341,7 @@ image::images/GlobAdm-Transporters-FileCopy-Edit.png[,602,487]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_globadm_filecopycreate,>>.
+For a description of the fields, refer to <<_globadm_filecopycreate>>.
 +
 
 [NOTE]
@@ -393,7 +393,7 @@ Use the search criteria on the search panel to display the FileCopy Transporter 
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ FileCopy Transporter History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 . Click __Back __to return to the _FileCopy Transporters Overview_ screen.
 
 
@@ -404,9 +404,9 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
 * <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
-* <<#_globadm_machines,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_globadm_machines>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -425,11 +425,11 @@ In order to use the FTP Client for build and deploy actions, you must link the T
 
 Refer to the following sections for detailed information:
 
-* <<#_globadm_ftpcreate,>>
-* <<#_globadm_ftpoverview,>>
-* <<#_globadm_transporter_ftp_edit,>>
-* <<#_globadm_transporter_ftp_delete,>>
-* <<#_globadm_transporter_ftp_history,>>
+* <<_globadm_ftpcreate>>
+* <<_globadm_ftpoverview>>
+* <<_globadm_transporter_ftp_edit>>
+* <<_globadm_transporter_ftp_delete>>
+* <<_globadm_transporter_ftp_history>>
 
 
 ==== Creating an FTP Transporter 
@@ -547,9 +547,9 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
 * <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
-* <<#_globadm_machines,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_globadm_machines>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -574,7 +574,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ FTP Transporters Overview__ panel.
 +
-For a detailed description of the fields, refer to <<#_globadm_ftpcreate,>>.
+For a detailed description of the fields, refer to <<_globadm_ftpcreate>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
 +
 
@@ -587,7 +587,7 @@ For a detailed description of the fields, refer to <<#_globadm_ftpcreate,>>.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a FTP Transporter definition.
 
-<<#_globadm_transporter_ftp_edit,>>
+<<_globadm_transporter_ftp_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -595,7 +595,7 @@ It allows editing a FTP Transporter definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a FTP Transporter definition.
 
-<<#_globadm_transporter_ftp_delete,>>
+<<_globadm_transporter_ftp_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -603,7 +603,7 @@ It allows deleting a FTP Transporter definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a FTP Transporter.
 
-<<#_globadm_transporter_ftp_history,>>
+<<_globadm_transporter_ftp_history>>
 |===
 
 
@@ -623,7 +623,7 @@ image::images/GlobAdm-Transporters-FTP-Edit.png[,607,630]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_globadm_ftpcreate,>>.
+For a description of the fields, refer to <<_globadm_ftpcreate>>.
 +
 
 [NOTE]
@@ -674,7 +674,7 @@ Use the search criteria on the search panel to display the FTP Transporter Proto
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ FTP Transporter History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 . Click __Back __to return to the _FTP Transporters Overview_ screen.
 
 
@@ -685,9 +685,9 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
 * <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
-* <<#_globadm_machines,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_globadm_machines>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -708,11 +708,11 @@ In order to ensure a secure transport for build and deploy actions, you must lin
 
 Refer to the following sections for detailed information:
 
-* <<#_globadm_secureshellcreate,>>
-* <<#_globadm_secureshelloverview,>>
-* <<#_globadm_transporter_secureshell_edit,>>
-* <<#_globadm_transporter_secureshell_delete,>>
-* <<#_globadm_transporter_secureshell_history,>>
+* <<_globadm_secureshellcreate>>
+* <<_globadm_secureshelloverview>>
+* <<_globadm_transporter_secureshell_edit>>
+* <<_globadm_transporter_secureshell_delete>>
+* <<_globadm_transporter_secureshell_history>>
 
 
 ==== Creating a Secure Shell Transporter 
@@ -842,9 +842,9 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
 * <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
-* <<#_globadm_machines,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_globadm_machines>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -869,7 +869,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ Secure Shell Transporters Overview__ panel
 +
-For a detailed description of the fields, refer to <<#_globadm_secureshellcreate,>>.
+For a detailed description of the fields, refer to <<_globadm_secureshellcreate>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
 +
 
@@ -882,7 +882,7 @@ For a detailed description of the fields, refer to <<#_globadm_secureshellcreate
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a Secure Shell Transporter definition.
 
-<<#_globadm_transporter_secureshell_edit,>>
+<<_globadm_transporter_secureshell_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -890,7 +890,7 @@ It allows editing a Secure Shell Transporter definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a Secure Shell Transporter definition.
 
-<<#_globadm_transporter_secureshell_delete,>>
+<<_globadm_transporter_secureshell_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -898,7 +898,7 @@ It allows deleting a Secure Shell Transporter definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Secure Shell Transporter.
 
-<<#_globadm_transporter_secureshell_history,>>
+<<_globadm_transporter_secureshell_history>>
 |===
 
 
@@ -918,7 +918,7 @@ image::images/GlobAdm-Transporters-SecureShell-Edit.png[,632,685]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_globadm_secureshellcreate,>>.
+For a description of the fields, refer to <<_globadm_secureshellcreate>>.
 +
 
 [NOTE]
@@ -969,7 +969,7 @@ Use the search criteria on the search panel to display the Secure Shell Transpor
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the __Secure Shell Transporter History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 . Click __Back __to return to the _Secure Shell Transporters Overview_ screen.
 
 
@@ -980,8 +980,8 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
 * <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
-* <<#_globadm_machines,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_globadm_machines>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===

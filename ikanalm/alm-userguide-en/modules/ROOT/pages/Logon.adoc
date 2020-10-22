@@ -33,7 +33,7 @@ This chapter provides more information on:
 +
 Your IKAN ALM Administrator will provide the exact URL.
 +
-This URL is specified on the _Mail_ subpanel on the _System Settings_ screen. <<#_globadm_system,>>
+This URL is specified on the _Mail_ subpanel on the _System Settings_ screen. <<_globadm_system>>
 +
 The _IKAN ALM Log in_ screen is displayed:
 +
@@ -57,7 +57,7 @@ For more information on managing the items displayed on the Desktop, refer to th
 If you log in to IKAN ALM for the first time, you will be asked to complete your Personal Settings.
 The _Name_ and _E-mail
 Address_ fields are mandatory.
-For more information, refer to the section <<#_desktop_personalsettings,>>.
+For more information, refer to the section <<_desktop_personalsettings>>.
 ====
 
 

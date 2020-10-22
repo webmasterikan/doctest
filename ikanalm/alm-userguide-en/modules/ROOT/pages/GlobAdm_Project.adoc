@@ -81,7 +81,7 @@ If an Issue Tracking System is specified in this field, IKAN ALM will always aut
 
 This field is only visible if external Issue Tracking Systems have been defined in IKAN ALM.
 
-For more information on Issue Tracking systems, refer to the chapter <<#_globadm_issuetracking,>>
+For more information on Issue Tracking systems, refer to the chapter <<_globadm_issuetracking>>
 
 |Build Tool Type
 |From the drop-down list, select the Build Tool Type (Ant, Gradle, Nant or Maven2) to be used for this IKAN ALM Project.
@@ -274,7 +274,7 @@ Correct the errors reported in the Stack Trace field and perform the test again.
 The Project will be created and you are forwarded to the _Project
 Info_ screen in the Project Administration context.
 You can now administer the newly created Project by creating Levels etc.
-For more information, refer to the section <<#_projadmin_projectsoverview_editing,>>.
+For more information, refer to the section <<_projadmin_projectsoverview_editing>>.
 +
 image::images/GlobAdmin-Project-Create-EditProject.png[,602,850] 
 +
@@ -292,12 +292,12 @@ Underneath the _Project Info_ panel, the following links and buttons are availab
 
 a|_RELATED TOPICS_
 
-* <<#_projadmin_projectsoverview_editing,>>
-* <<#_projadm_projectstreams,>>
-* <<#_projadm_lifecycles,>>
-* <<#_projadm_levels,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_projadmin_projectsoverview_editing>>
+* <<_projadm_projectstreams>>
+* <<_projadm_lifecycles>>
+* <<_projadm_levels>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -428,4 +428,4 @@ For instance, the Target Location of Deploy Environments in the new Project most
 
 . Audit the Project to unlock it.
 +
-<<#_projadm_auditingprojects,>>
+<<_projadm_auditingprojects>>

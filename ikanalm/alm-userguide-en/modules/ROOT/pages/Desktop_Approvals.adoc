@@ -3,7 +3,7 @@
 (((Approvals)))  
 (((Desktop ,Approvals))) 
 
-There are 2 types of Approvals which may be set on Test or Production Levels (<<#_levelenvmgt_approvalsequence,>>). 
+There are 2 types of Approvals which may be set on Test or Production Levels (<<_levelenvmgt_approvalsequence>>). 
 
 * A _Pre-Approval_ is created when delivering a Level Request to the Level, i.e., before the Level Request is executed.
 * A _Post-Approval_ is created after the Level Request has been executed, enabling to verify if the actions on the Level and/or the Environments were successful.
@@ -99,7 +99,7 @@ There are two possible types:
 * __Test__: The Approval is associated with a TEST Level.
 * __Production__: The Approval is associated with a PRODUCTION Level.
 
-<<#_projadm_levels,>>
+<<_projadm_levels>>
 
 |Level Request OID
 |This field contains the sequential number of the Level Request.
@@ -118,7 +118,7 @@ There are 2 possibilities:
 |This field contains the VCR Tag of the Level Request.
 This Tag matches a Build with its source code in the VCR.
 
-The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<#_projadm_projectstreams,>>
+The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<_projadm_projectstreams>>
 
 However, the user can override the default VCR Tag while creating a Level Request, so that the Tag Format can be completely different.
 
@@ -303,14 +303,14 @@ With: H = Head and 1-0 = Prefix
 |Level Name
 a|This field contains the name and type of the Level, to which a Build will be delivered as a result of this Level Request.
 
-<<#_projadm_levels,>>
+<<_projadm_levels>>
 
 There are two possible types:
 
 * __Test__: The Approval is associated with a TEST Level.
 * __Production__: The Approval is associated with a PRODUCTION Level.
 
-<<#_projadm_levels,>>
+<<_projadm_levels>>
 
 |Level Request OID
 |This field contains the sequential number of the Level Request.

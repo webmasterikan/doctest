@@ -44,13 +44,13 @@ The _Connection Details_ panel for the type of Repository you selected is displa
 +
 For more information on those details, refer to the appropriate sections:
 
-* <<#_pcreatesvnrepository,>>
-* <<#_globadm_vcr_git_create,>>
-* <<#_pcreatecvsrepository,>>
-* <<#_pcreatevssrepository,>>
-* <<#_pcreateclearcasebaserepository,>>
-* <<#_pcreatepvcsrepository,>>
-* <<#_pcreatepvcsrepository,>>
+* <<_pcreatesvnrepository>>
+* <<_globadm_vcr_git_create>>
+* <<_pcreatecvsrepository>>
+* <<_pcreatevssrepository>>
+* <<_pcreateclearcasebaserepository>>
+* <<_pcreatepvcsrepository>>
+* <<_pcreatepvcsrepository>>
 
 
 [[_globadm_vcr_overview]]
@@ -114,11 +114,11 @@ For more information, refer to the appropriate sections:
 
 Refer to the following sections for detailed information:
 
-* <<#_pcreatesvnrepository,>>
-* <<#_pworkwithsvnoverview,>>
-* <<#_globadm_vcr_svn_edit,>>
-* <<#_globadm_vcr_svn_delete,>>
-* <<#_globadm_vcr_svn_history,>>
+* <<_pcreatesvnrepository>>
+* <<_pworkwithsvnoverview>>
+* <<_globadm_vcr_svn_edit>>
+* <<_globadm_vcr_svn_delete>>
+* <<_globadm_vcr_svn_history>>
 
 
 ==== Creating a Subversion Repository (((Subversion ,Creating))) 
@@ -190,7 +190,7 @@ The characters you enter are displayed as asterisks.
 |Enter the URL of the machine hosting the Subversion Repository.
 This field is mandatory.
 
-For more information regarding a correct Subversion Repository URL, refer to the section <<#_csubversiongeneralinformation,>>.
+For more information regarding a correct Subversion Repository URL, refer to the section <<_csubversiongeneralinformation>>.
 
 |Tags Directory
 |Enter the Tags Directory for the Subversion Repository or accept the default setting.
@@ -209,7 +209,7 @@ The following options are available:
 
 The selection of a Repository Layout is mandatory.
 
-For more information regarding the different Repository Layouts, refer to the section <<#_csubversiongeneralinformation,>>.
+For more information regarding the different Repository Layouts, refer to the section <<_csubversiongeneralinformation>>.
 
 |Time-Out (Sec.)
 |Enter the Time-Out value in seconds.
@@ -221,7 +221,7 @@ The definition of a Time-Out value is mandatory.
 |Select the _Yes_ option button to automatically retrieve the Meta Properties set on source files in the Subversion VCR during the__ Retrieve code __Phase.
 These Meta Properties can be used by the Build and Deploy Scripting Tool. 
 
-For more information regarding fetching Meta Properties, refer to the section <<#_csubversiongeneralinformation,>>.
+For more information regarding fetching Meta Properties, refer to the section <<_csubversiongeneralinformation>>.
 |===
 . Click__ Test Connection__ to verify if IKAN ALM can establish a connection to the Subversion Repository. If the test is successful, the following message is displayed:
 +
@@ -244,8 +244,8 @@ Repositories Overview__ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<#_globadm_vcr,>>
-* <<#_projadmin_projectsoverview_editing,>>
+* <<_globadm_vcr>>
+* <<_projadmin_projectsoverview_editing>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
@@ -271,7 +271,7 @@ The following options are available:
 ***** the _Reset search_ link to clear the search fields.
 . Verify the information on the _Subversion Repositories Overview_ panel. 
 +
-For a detailed description of the fields, refer to <<#_pcreatesvnrepository,>>.
+For a detailed description of the fields, refer to <<_pcreatesvnrepository>>.
 . Depending on your access rights, the following links may be available on the _Subversion Repositories Overview_ panel:
 +
 
@@ -284,7 +284,7 @@ For a detailed description of the fields, refer to <<#_pcreatesvnrepository,>>.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a Subversion Repository definition.
 
-<<#_globadm_vcr_svn_edit,>>
+<<_globadm_vcr_svn_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -292,7 +292,7 @@ It allows editing a Subversion Repository definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a Subversion Repository definition.
 
-<<#_globadm_vcr_svn_delete,>>
+<<_globadm_vcr_svn_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -300,7 +300,7 @@ It allows deleting a Subversion Repository definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Subversion Repository.
 
-<<#_globadm_vcr_svn_history,>>
+<<_globadm_vcr_svn_history>>
 |===
 
 
@@ -321,7 +321,7 @@ image::images/GlobAdm-VCR-Subversion-Edit.png[,560,547]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_pcreatesvnrepository,>>.
+For a description of the fields, refer to <<_pcreatesvnrepository>>.
 +
 
 [NOTE]
@@ -376,7 +376,7 @@ Control Repository_ panel to only display the Subversion Repositories you are lo
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ Subversion Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 . Click__ Back__ to return to the __Subversion Repositories Overview __screen.
 
 
@@ -386,11 +386,11 @@ View__, refer to the section <<#_historyeventlogging,>>.
 
 Refer to the following sections for detailed information:
 
-* <<#_globadm_vcr_git_create,>>
-* <<#_globadm_vcr_git_overview,>>
-* <<#_globadm_vcr_git_edit,>>
-* <<#_globadm_vcr_git_delete,>>
-* <<#_globadm_vcr_git_history,>>
+* <<_globadm_vcr_git_create>>
+* <<_globadm_vcr_git_overview>>
+* <<_globadm_vcr_git_edit>>
+* <<_globadm_vcr_git_delete>>
+* <<_globadm_vcr_git_history>>
 
 
 ==== Creating a Git Repository (((Git ,Creating))) 
@@ -520,8 +520,8 @@ Repositories Overview__ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<#_globadm_vcr,>>
-* <<#_projadmin_projectsoverview_editing,>>
+* <<_globadm_vcr>>
+* <<_projadmin_projectsoverview_editing>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
@@ -547,7 +547,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the _Git Repositories Overview_ panel.
 +
-For a detailed description of the fields, refer to <<#_pcreatesvnrepository,>>.
+For a detailed description of the fields, refer to <<_pcreatesvnrepository>>.
 . Depending on your access rights, the following links may be available on the _Git Repositories Overview_ panel:
 +
 
@@ -560,7 +560,7 @@ For a detailed description of the fields, refer to <<#_pcreatesvnrepository,>>.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a Git Repository definition.
 
-<<#_globadm_vcr_git_edit,>>
+<<_globadm_vcr_git_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -568,7 +568,7 @@ It allows editing a Git Repository definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a Git Repository definition.
 
-<<#_globadm_vcr_git_delete,>>
+<<_globadm_vcr_git_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -576,7 +576,7 @@ It allows deleting a Git Repository definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Git Repository.
 
-<<#_globadm_vcr_git_history,>>
+<<_globadm_vcr_git_history>>
 |===
 
 
@@ -597,7 +597,7 @@ image::images/GlobAdm-VCR-Git-Edit.png[,624,635]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_globadm_vcr_git_create,>>.
+For a description of the fields, refer to <<_globadm_vcr_git_create>>.
 +
 
 [NOTE]
@@ -652,7 +652,7 @@ Control Repository_ panel to only display the Git Repositories you are looking f
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ Git Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 . Click__ Back__ to return to the __Git Repositories Overview __screen.
 
 
@@ -662,11 +662,11 @@ View__, refer to the section <<#_historyeventlogging,>>.
 
 Refer to the following sections for detailed information:
 
-* <<#_pcreatecvsrepository,>>
-* <<#_pworkwithcvsoverview,>>
-* <<#_globadm_vcr_cvs_edit,>>
-* <<#_globadm_vcr_cvs_delete,>>
-* <<#_globadm_vcr_cvs_history,>>
+* <<_pcreatecvsrepository>>
+* <<_pworkwithcvsoverview>>
+* <<_globadm_vcr_cvs_edit>>
+* <<_globadm_vcr_cvs_delete>>
+* <<_globadm_vcr_cvs_history>>
 
 
 ==== Creating a CVS Repository 
@@ -796,8 +796,8 @@ Repositories Overview_ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<#_globadm_vcr,>>
-* <<#_projadmin_projectsoverview_editing,>>
+* <<_globadm_vcr>>
+* <<_projadmin_projectsoverview_editing>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
@@ -823,7 +823,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ CVS Repositories Overview__ panel.
 +
-For a detailed description of the fields, refer to <<#_pcreatecvsrepository,>>.
+For a detailed description of the fields, refer to <<_pcreatecvsrepository>>.
 . Depending on your access rights, the following links may be available on the _CVS Repositories Overview_ panel:
 +
 
@@ -836,7 +836,7 @@ For a detailed description of the fields, refer to <<#_pcreatecvsrepository,>>.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a CVS Repository definition.
 
-<<#_globadm_vcr_cvs_edit,>>
+<<_globadm_vcr_cvs_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -844,7 +844,7 @@ It allows editing a CVS Repository definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a CVS Repository definition.
 
-<<#_globadm_vcr_cvs_delete,>>
+<<_globadm_vcr_cvs_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -852,7 +852,7 @@ It allows deleting a CVS Repository definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a CVS Repository.
 
-<<#_globadm_vcr_cvs_history,>>
+<<_globadm_vcr_cvs_history>>
 |===
 
 
@@ -873,7 +873,7 @@ image::images/GlobAdm-VCR-CVS-Edit.png[,536,659]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_pcreatecvsrepository,>>.
+For a description of the fields, refer to <<_pcreatecvsrepository>>.
 +
 
 [NOTE]
@@ -929,7 +929,7 @@ Control Repository_ panel to only display the CVS Repositories you are looking f
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ CVS Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 . Click__ Back__ to return to the __CVS Repositories Overview __screen.
 
 
@@ -939,11 +939,11 @@ View__, refer to the section <<#_historyeventlogging,>>.
 
 Refer to the following sections for detailed information:
 
-* <<#_pcreatevssrepository,>>
-* <<#_pworkwithvssoverview,>>
-* <<#_globadm_vcr_vss_edit,>>
-* <<#_globadm_vcr_vss_delete,>>
-* <<#_globadm_vcr_vss_history,>>
+* <<_pcreatevssrepository>>
+* <<_pworkwithvssoverview>>
+* <<_globadm_vcr_vss_edit>>
+* <<_globadm_vcr_vss_delete>>
+* <<_globadm_vcr_vss_history>>
 
 
 ==== Creating a VSS Version Control Repository 
@@ -1060,8 +1060,8 @@ Repositories Overview_ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<#_globadm_vcr,>>
-* <<#_projadmin_projectsoverview_editing,>>
+* <<_globadm_vcr>>
+* <<_projadmin_projectsoverview_editing>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
@@ -1087,7 +1087,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ VSS Repositories Overview__ panel.
 +
-For a detailed description of the fields, refer to <<#_pcreatevssrepository,>>.
+For a detailed description of the fields, refer to <<_pcreatevssrepository>>.
 . Depending on your access rights, the following links may be available on the _VSS Repositories Overview_ panel:
 +
 
@@ -1100,7 +1100,7 @@ For a detailed description of the fields, refer to <<#_pcreatevssrepository,>>.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a VSS Repository definition.
 
-<<#_globadm_vcr_vss_edit,>>
+<<_globadm_vcr_vss_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -1108,7 +1108,7 @@ It allows editing a VSS Repository definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a VSS Repository definition.
 
-<<#_globadm_vcr_vss_delete,>>
+<<_globadm_vcr_vss_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -1116,7 +1116,7 @@ It allows deleting a VSS Repository definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a VSS Repository.
 
-<<#_globadm_vcr_vss_history,>>
+<<_globadm_vcr_vss_history>>
 |===
 
 
@@ -1137,7 +1137,7 @@ image::images/GlobAdm-VCR-VSS-Edit.png[,548,637]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_pcreatevssrepository,>>.
+For a description of the fields, refer to <<_pcreatevssrepository>>.
 +
 
 [NOTE]
@@ -1192,7 +1192,7 @@ Control Repository_ panel to only display the VSS Repositories you are looking f
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ VSS Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 . Click__ Back__ to return to the __VSS Repositories Overview __screen.
 
 
@@ -1202,11 +1202,11 @@ View__, refer to the section <<#_historyeventlogging,>>.
 
 Refer to the following sections for detailed information:
 
-* <<#_pcreateclearcasebaserepository,>>
-* <<#_pworkwithclearcasebaseoverview,>>
-* <<#_globadm_vcr_clearcase_edit,>>
-* <<#_globadm_vcr_clearcase_delete,>>
-* <<#_globadm_vcr_clearcase_history,>>
+* <<_pcreateclearcasebaserepository>>
+* <<_pworkwithclearcasebaseoverview>>
+* <<_globadm_vcr_clearcase_edit>>
+* <<_globadm_vcr_clearcase_delete>>
+* <<_globadm_vcr_clearcase_history>>
 
 
 ==== Creating a ClearCase Repository 
@@ -1337,8 +1337,8 @@ Repositories Overview__ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<#_globadm_vcr,>>
-* <<#_projadmin_projectsoverview_editing,>>
+* <<_globadm_vcr>>
+* <<_projadmin_projectsoverview_editing>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
@@ -1364,7 +1364,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the _ClearCase Repositories Overview_ panel.
 +
-For a detailed description of the fields, refer to <<#_pcreateclearcasebaserepository,>>.
+For a detailed description of the fields, refer to <<_pcreateclearcasebaserepository>>.
 . Depending on your access rights, the following links may be available on the _ClearCase Repositories Overview_ panel:
 +
 
@@ -1377,7 +1377,7 @@ For a detailed description of the fields, refer to <<#_pcreateclearcasebaserepos
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a ClearCase Repository definition.
 
-<<#_globadm_vcr_clearcase_edit,>>
+<<_globadm_vcr_clearcase_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -1385,7 +1385,7 @@ It allows editing a ClearCase Repository definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a ClearCase Repository definition.
 
-<<#_globadm_vcr_clearcase_delete,>>
+<<_globadm_vcr_clearcase_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -1393,7 +1393,7 @@ It allows deleting a ClearCase Repository definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a ClearCase Repository.
 
-<<#_globadm_vcr_clearcase_history,>>
+<<_globadm_vcr_clearcase_history>>
 |===
 
 
@@ -1414,7 +1414,7 @@ image::images/GlobAdm-VCR-ClearCase-Edit.png[,744,618]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_pcreateclearcasebaserepository,>>.
+For a description of the fields, refer to <<_pcreateclearcasebaserepository>>.
 +
 
 [NOTE]
@@ -1469,7 +1469,7 @@ Control Repository_ panel to only display the ClearCase Repositories you are loo
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ ClearCase Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 . Click__ Back__ to return to the __ClearCase Repositories Overview __screen.
 
 
@@ -1479,11 +1479,11 @@ View__, refer to the section <<#_historyeventlogging,>>.
 
 Refer to the following sections for detailed information:
 
-* <<#_pcreatepvcsrepository,>>
-* <<#_pworkwithpvcsoverview,>>
-* <<#_globadm_vcr_pvcs_edit,>>
-* <<#_globadm_vcr_pvcs_delete,>>
-* <<#_globadm_vcr_pvcs_history,>>
+* <<_pcreatepvcsrepository>>
+* <<_pworkwithpvcsoverview>>
+* <<_globadm_vcr_pvcs_edit>>
+* <<_globadm_vcr_pvcs_delete>>
+* <<_globadm_vcr_pvcs_history>>
 
 
 ==== Creating a PVCS Repository (((PVCS ,Creating))) 
@@ -1613,8 +1613,8 @@ Repositories Overview_ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<#_globadm_vcr,>>
-* <<#_projadmin_projectsoverview_editing,>>
+* <<_globadm_vcr>>
+* <<_projadmin_projectsoverview_editing>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
@@ -1640,7 +1640,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ PVCS Repositories Overview__ panel.
 +
-For a detailed description of the fields, refer to <<#_pcreatepvcsrepository,>>.
+For a detailed description of the fields, refer to <<_pcreatepvcsrepository>>.
 . Depending on your access rights, the following links may be available on the _PVCS Repositories Overview_ panel:
 +
 
@@ -1653,7 +1653,7 @@ For a detailed description of the fields, refer to <<#_pcreatepvcsrepository,>>.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a PVCS Repository definition.
 
-<<#_globadm_vcr_pvcs_edit,>>
+<<_globadm_vcr_pvcs_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -1661,7 +1661,7 @@ It allows editing a PVCS Repository definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a PVCS Repository definition.
 
-<<#_globadm_vcr_pvcs_delete,>>
+<<_globadm_vcr_pvcs_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -1669,7 +1669,7 @@ It allows deleting a PVCS Repository definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a PVCS Repository.
 
-<<#_globadm_vcr_pvcs_history,>>
+<<_globadm_vcr_pvcs_history>>
 |===
 
 
@@ -1690,7 +1690,7 @@ image::images/GlobAdm-VCR-PVCS-Edit.png[,571,688]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_pcreatepvcsrepository,>>.
+For a description of the fields, refer to <<_pcreatepvcsrepository>>.
 +
 
 [NOTE]
@@ -1745,7 +1745,7 @@ Control Repository_ panel to only display the PVCS Repositories you are looking 
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ PVCS Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 . Click__ Back__ to return to the __PVCS Repositories Overview __screen.
 
 
@@ -1755,11 +1755,11 @@ View__, refer to the section <<#_historyeventlogging,>>.
 
 Refer to the following sections for detailed information:
 
-* <<#_globadm_vcr_tfvc_create,>>
-* <<#_globadm_vcr_tfvc_overview,>>
-* <<#_globadm_vcr_tfvc_edit,>>
-* <<#_globadm_vcr_tfvc_delete,>>
-* <<#_globadm_vcr_tfvc_history,>>
+* <<_globadm_vcr_tfvc_create>>
+* <<_globadm_vcr_tfvc_overview>>
+* <<_globadm_vcr_tfvc_edit>>
+* <<_globadm_vcr_tfvc_delete>>
+* <<_globadm_vcr_tfvc_history>>
 
 
 ==== Creating a TFVC Repository 
@@ -1868,8 +1868,8 @@ Repositories Overview__ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<#_globadm_vcr,>>
-* <<#_projadmin_projectsoverview_editing,>>
+* <<_globadm_vcr>>
+* <<_projadmin_projectsoverview_editing>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
@@ -1895,7 +1895,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the _TFVC Repositories Overview_ panel.
 +
-For a detailed description of the fields, refer to <<#_globadm_vcr_tfvc_create,>>.
+For a detailed description of the fields, refer to <<_globadm_vcr_tfvc_create>>.
 . Depending on your access rights, the following links may be available on the _TFVC Repositories Overview_ panel:
 +
 
@@ -1908,7 +1908,7 @@ For a detailed description of the fields, refer to <<#_globadm_vcr_tfvc_create,>
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a TFVC Repository definition.
 
-<<#_globadm_vcr_tfvc_edit,>>
+<<_globadm_vcr_tfvc_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -1916,7 +1916,7 @@ It allows editing a TFVC Repository definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a TFVC Repository definition.
 
-<<#_globadm_vcr_tfvc_delete,>>
+<<_globadm_vcr_tfvc_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -1924,7 +1924,7 @@ It allows deleting a TFVC Repository definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a TFVC Repository.
 
-<<#_globadm_vcr_tfvc_history,>>
+<<_globadm_vcr_tfvc_history>>
 |===
 
 
@@ -1945,7 +1945,7 @@ image::images/GlobAdm-VCR-TFVC-Edit.png[,648,585]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_globadm_vcr_tfvc_create,>>.
+For a description of the fields, refer to <<_globadm_vcr_tfvc_create>>.
 +
 
 [NOTE]
@@ -2000,5 +2000,5 @@ Control Repository_ panel to only display the TFVC Repositories you are looking 
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ TFVC Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 . Click__ Back__ to return to the __TFVC Repositories Overview __screen.

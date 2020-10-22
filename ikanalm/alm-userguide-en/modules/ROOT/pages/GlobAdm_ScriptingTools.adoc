@@ -41,10 +41,10 @@ The _Details_ panel for the type of Scripting Tool you selected is displayed und
 +
 For more information on those details, refer to the appropriate sections:
 
-* <<#_pcreateantscriptingtool,>>
-* <<#_pcreategradlescriptingtool,>>
-* <<#_pcreatenantscriptingtool,>>
-* <<#_pcreatemaven2scriptingtool,>>
+* <<_pcreateantscriptingtool>>
+* <<_pcreategradlescriptingtool>>
+* <<_pcreatenantscriptingtool>>
+* <<_pcreatemaven2scriptingtool>>
 
 
 === The Scripting Tools Overview Screen 
@@ -109,11 +109,11 @@ If ANT is installed on a machine connected to your Build/Deploy Environments, IK
 Therefore, you must define the ANT Scripting Tool in the IKAN ALM application and, when creating the Build or Deploy Environment, specify it as being the Build or Deploy Tool to be used.
 
 Refer to the following sections for detailed information:
-* <<#_pcreateantscriptingtool,>>
-* <<#_globadm_scriptingtool_ant_overview,>>
-* <<#_globadm_scriptingtool_ant_edit,>>
-* <<#_globadm_scriptingtool_ant_delete,>>
-* <<#_globadm_scriptingtool_ant_history,>>
+* <<_pcreateantscriptingtool>>
+* <<_globadm_scriptingtool_ant_overview>>
+* <<_globadm_scriptingtool_ant_edit>>
+* <<_globadm_scriptingtool_ant_delete>>
+* <<_globadm_scriptingtool_ant_history>>
 
 
 ==== Creating an ANT Scripting Tool 
@@ -285,9 +285,9 @@ Scripting Tools Overview__ at the bottom of the screen.
 a|_RELATED TOPICS_
 
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
-* <<#_projadmin_projectsoverview_editing,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_projadmin_projectsoverview_editing>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -312,7 +312,7 @@ The following options are available:
 
 . Verify the information on the _Scripting Tools Overview_ panel.
 +
-For a detailed description of the fields, refer to <<#_pcreateantscriptingtool,>>.
+For a detailed description of the fields, refer to <<_pcreateantscriptingtool>>.
 
 . Depending on your access rights, the following links may be available on the _ANT Scripting Tools Overview_ panel:
 +
@@ -357,7 +357,7 @@ image::images/GlobAdm-ScriptingTools-ANT-Edit.png[,1061,722]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_pcreateantscriptingtool,>>.
+For a description of the fields, refer to <<_pcreateantscriptingtool>>.
 +
 
 [NOTE]
@@ -411,7 +411,7 @@ Use the search criteria on the search panel to display the ANT Scripting Tools y
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the _ANT Scripting Tool History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 
 . Click __Back __to return to the _Scripting Tools Overview_ screen.
 
@@ -422,9 +422,9 @@ View__, refer to the section <<#_historyeventlogging,>>.
 a|_RELATED TOPICS_
 
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
-* <<#_projadmin_projectsoverview_editing,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_projadmin_projectsoverview_editing>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -438,11 +438,11 @@ Therefore, you must define the Gradle Scripting Tool in the IKAN ALM application
 
 Refer to the following sections for detailed information:
 
-* <<#_pcreategradlescriptingtool,>>
-* <<#_poverviewgradlescriptingtool,>>
-* <<#_peditgradlescriptingtool,>>
-* <<#_pdeletegradlescriptingtool,>>
-* <<#_phistorygradlescriptingtool,>>
+* <<_pcreategradlescriptingtool>>
+* <<_poverviewgradlescriptingtool>>
+* <<_peditgradlescriptingtool>>
+* <<_pdeletegradlescriptingtool>>
+* <<_phistorygradlescriptingtool>>
 
 
 ==== Creating a Gradle Scripting Tool 
@@ -636,7 +636,7 @@ The following options are available:
 
 . Verify the information on the _Scripting Tools Overview_ panel.
 +
-For a detailed description of the fields, refer to <<#_poverviewgradlescriptingtool,>>.
+For a detailed description of the fields, refer to <<_poverviewgradlescriptingtool>>.
 
 . Depending on your access rights, the following links may be available on the _Gradle Scripting Tools Overview_ panel:
 +
@@ -670,9 +670,9 @@ It allows displaying the History of all create, update and delete operations per
 a|_RELATED TOPICS_
 
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
-* <<#_projadmin_projectsoverview_editing,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_projadmin_projectsoverview_editing>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -693,7 +693,7 @@ image::images/GlobAdm-ScriptingTools-Gradle-Edit.png[,1061,625]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_pcreategradlescriptingtool,>>.
+For a description of the fields, refer to <<_pcreategradlescriptingtool>>.
 +
 
 [NOTE]
@@ -747,7 +747,7 @@ Use the search criteria on the search panel to display the Gradle Scripting Tool
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the _Gradle Scripting Tool History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 
 . Click __Back __to return to the _Scripting Tools Overview_ screen.
 
@@ -758,9 +758,9 @@ View__, refer to the section <<#_historyeventlogging,>>.
 a|_RELATED TOPICS_
 
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
-* <<#_projadmin_projectsoverview_editing,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_projadmin_projectsoverview_editing>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -778,11 +778,11 @@ Therefore, you must define the NANT Scripting Tool in the IKAN ALM application a
 
 Refer to the following sections for detailed information:
 
-* <<#_pcreatenantscriptingtool,>>
-* <<#_globadm_scriptingtool_nant_overview,>>
-* <<#_globadm_scriptingtool_nant_edit,>>
-* <<#_globadm_scriptingtool_nant_delete,>>
-* <<#_globadm_scriptingtool_nant_history,>>
+* <<_pcreatenantscriptingtool>>
+* <<_globadm_scriptingtool_nant_overview>>
+* <<_globadm_scriptingtool_nant_edit>>
+* <<_globadm_scriptingtool_nant_delete>>
+* <<_globadm_scriptingtool_nant_history>>
 
 
 ==== Creating a NANT Scripting Tool 
@@ -902,9 +902,9 @@ Scripting Tools Overview__ at the bottom of the screen.
 a|_RELATED TOPICS_
 
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
-* <<#_projadmin_projectsoverview_editing,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_projadmin_projectsoverview_editing>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -929,7 +929,7 @@ The following options are available:
 
 . Verify the information on the _Scripting Tools Overview_ panel.
 +
-For a detailed description of the fields, refer to <<#_globadm_scriptingtool_nant_overview,>>.
+For a detailed description of the fields, refer to <<_globadm_scriptingtool_nant_overview>>.
 
 . Depending on your access rights, the following links may be available on the _NANT Scripting Tools Overview_ panel:
 +
@@ -974,7 +974,7 @@ image::images/GlobAdm-ScriptingTools-NANT-Edit.png[,1026,537]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_pcreatenantscriptingtool,>>.
+For a description of the fields, refer to <<_pcreatenantscriptingtool>>.
 +
 
 [NOTE]
@@ -1029,7 +1029,7 @@ Use the search criteria on the search panel to display the NANT Scripting Tools 
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the _NANT Scripting Tool History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 
 . Click __Back __to return to the _Scripting Tools Overview_ screen.
 
@@ -1040,9 +1040,9 @@ View__, refer to the section <<#_historyeventlogging,>>.
 a|_RELATED TOPICS_
 
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
-* <<#_projadmin_projectsoverview_editing,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_projadmin_projectsoverview_editing>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -1058,11 +1058,11 @@ Therefore, you must define the Maven2 Scripting Tool in the IKAN ALM application
 
 Refer to the following sections for detailed information:
 
-* <<#_pcreatemaven2scriptingtool,>>
-* <<#_globadm_scriptingtool_maven2_overview,>>
-* <<#_globadm_scriptingtool_maven2_edit,>>
-* <<#_globadm_scriptingtool_maven2_delete,>>
-* <<#_globadm_scriptingtool_maven2_history,>>
+* <<_pcreatemaven2scriptingtool>>
+* <<_globadm_scriptingtool_maven2_overview>>
+* <<_globadm_scriptingtool_maven2_edit>>
+* <<_globadm_scriptingtool_maven2_delete>>
+* <<_globadm_scriptingtool_maven2_history>>
 
 
 ==== Creating a Maven2 Scripting Tool 
@@ -1134,7 +1134,7 @@ The goals and/or phases defined here will be used by default.
 If necessary, they can be overridden for the different build or deploy environments.
 In order to do so, add a build or deploy parameter "`alm.mvn2.goals`" with the desired value. 
 
-Please refer to <<#_environmentparams_create,>>.
+Please refer to <<_environmentparams_create>>.
 
 |Alternative Settings File
 |Enter the alternate path for the Maven2 User Settings File.
@@ -1146,7 +1146,7 @@ If not provided, the default Settings File under home-directory/.m2/settings.xml
 If necessary, this file can be overridden for the different build or deploy environments.
 In order to do so, add a build or deploy parameter "`alm.mvn2.setting`" with the desired value. 
 
-Please refer to <<#_environmentparams_create,>>.
+Please refer to <<_environmentparams_create>>.
 
 |Active Profiles
 |Enter the Activate Profiles.
@@ -1158,7 +1158,7 @@ The Activate Profiles defined here will be used by default.
 If necessary, they can be overridden for the different build or deploy environments.
 In order to do so, add a build or deploy parameter "`alm.mvn2.activate-profiles`" with the desired value. 
 
-Please refer to <<#_environmentparams_create,>>.
+Please refer to <<_environmentparams_create>>.
 
 |Commandline Options
 |Enter the Commandline Options, separated by a space.
@@ -1171,7 +1171,7 @@ The Commandline Options defined here will be used by default.
 If necessary, they can be overridden for the different build or deploy environments.
 In order to do so, add a build or deploy parameter "`alm.mvn2.options`" with the desired value.
 
-Please refer to <<#_environmentparams_create,>>.
+Please refer to <<_environmentparams_create>>.
 
 |Build
 |Indicate whether or not this Scripting Tool can be linked to a Build Environment and thus be used to build code.
@@ -1222,7 +1222,7 @@ If an "`alm.mvn2.goals`" parameter for a chosen environment (either build or dep
 The same mechanism applies to the following parameters: Settings File (alm.mvn2.setting), Activate Profiles (alm.mvn2.activate-profiles) and Commandline Options (alm.mvn2.options).
 +
 When creating a build or deploy parameter, you can also set the option "`__Editable__`" to __Yes__.
-In that case you will be able to modify the value of the parameters at the moment of creating the level request. <<#_environmentparams_edit,>>
+In that case you will be able to modify the value of the parameters at the moment of creating the level request. <<_environmentparams_edit>>
 
 
 [cols="1", frame="topbot"]
@@ -1231,9 +1231,9 @@ In that case you will be able to modify the value of the parameters at the momen
 a|_RELATED TOPICS_
 
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
-* <<#_projadmin_projectsoverview_editing,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_projadmin_projectsoverview_editing>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===
 
@@ -1257,7 +1257,7 @@ The following options are available:
 
  . Verify the information on the _Scripting Tools Overview_ panel.
 +
-For a detailed description of the fields, refer to <<#_globadm_scriptingtool_maven2_overview,>>.
+For a detailed description of the fields, refer to <<_globadm_scriptingtool_maven2_overview>>.
 
  . Depending on your access rights, the following links may be available on the _Maven2 Scripting Tools Overview_ panel:
 +
@@ -1303,7 +1303,7 @@ image::images/GlobAdm-ScriptingTools-Maven2-Edit.png[,1029,649]
 
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<#_pcreatemaven2scriptingtool,>>.
+For a description of the fields, refer to <<_pcreatemaven2scriptingtool>>.
 +
 
 [NOTE]
@@ -1357,7 +1357,7 @@ Use the search criteria on the search panel to display the Maven2 Scripting Tool
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the _Maven2 Scripting Tool History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 
 . Click __Back __to return to the _Scripting Tools Overview_ screen.
 
@@ -1368,8 +1368,8 @@ View__, refer to the section <<#_historyeventlogging,>>.
 a|_RELATED TOPICS_
 
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
-* <<#_projadmin_projectsoverview_editing,>>
-* <<#_projadm_buildenvironments,>>
-* <<#_projadm_deployenvironments,>>
+* <<_projadmin_projectsoverview_editing>>
+* <<_projadm_buildenvironments>>
+* <<_projadm_deployenvironments>>
 
 |===

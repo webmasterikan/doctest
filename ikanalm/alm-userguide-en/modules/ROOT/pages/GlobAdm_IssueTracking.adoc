@@ -31,9 +31,9 @@ Refer to the following sections for detailed information.
 
 * <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue Tracking Creating an Issue Tracking System>>
 * <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingoverview,The Issue Tracking Systems Overview Screen>>
-** <<#_globadm_issuetracking_edit,>>
-** <<#_globadm_issuetracking_delete,>>
-** <<#_globadm_issuetracking_history,>>
+** <<_globadm_issuetracking_edit>>
+** <<_globadm_issuetracking_delete>>
+** <<_globadm_issuetracking_history>>
 
 *Issue Tracking System Properties*
 
@@ -44,7 +44,7 @@ Refer to the following sections for detailed information.
 
 
 Once the Issue Tracking System has been defined in the _Global
-Administration_ section, you must activate it on the Project. <<#_projadmin_projectsoverview_editing,>>
+Administration_ section, you must activate it on the Project. <<_projadmin_projectsoverview_editing>>
 
 If you want Issues to be automatically linked to Level Requests for certain Levels, the Issue Tracking Phase must be linked to those Levels.
 This will be done automatically when creating Levels for Projects which have an Issue Tracking System activated.
@@ -203,10 +203,10 @@ Refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperti
 +
 image::images/GlobAdmin-IssueTracking-Create-Warning.png[,449,41] 
 +
-Once the Issue Tracking System has been defined, you must activate it on the Project. <<#_projadmin_projectsoverview_editing,>>
+Once the Issue Tracking System has been defined, you must activate it on the Project. <<_projadmin_projectsoverview_editing>>
 . In case you defined a JIRA, HP ALM, TeamForge or Team Foundation Issue Tracking System, you can test if IKAN ALM can establish the connection.
 +
-<<#_globadm_issuetracking_edit,>>
+<<_globadm_issuetracking_edit>>
 
 
 [cols="1", frame="topbot"]
@@ -214,9 +214,9 @@ Once the Issue Tracking System has been defined, you must activate it on the Pro
 
 a|_RELATED TOPICS_
 
-* <<#_projadmin_projectsoverview_editing,>>
+* <<_projadmin_projectsoverview_editing>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
-* <<#_globadm_issuetracking,>>
+* <<_globadm_issuetracking>>
 * <<App_Phases.adoc#_phases_levelphases_issuetracking,Issue Tracking Phase>>
 
 |===
@@ -254,7 +254,7 @@ For a detailed description of the fields, refer to <<GlobAdm_IssueTracking.adoc#
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing an Issue Tracking System definition.
 
-<<#_globadm_issuetracking_edit,>>
+<<_globadm_issuetracking_edit>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -262,7 +262,7 @@ It allows editing an Issue Tracking System definition.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting an Issue Tracking System definition.
 
-<<#_globadm_issuetracking_delete,>>
+<<_globadm_issuetracking_delete>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -270,7 +270,7 @@ It allows deleting an Issue Tracking System definition.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on an Issue Tracking System and its properties.
 
-<<#_globadm_issuetracking_history,>>
+<<_globadm_issuetracking_history>>
 |===
 
 
@@ -355,7 +355,7 @@ You must change the definition of the listed Projects, before you can delete the
 . Click the image:images/icons/history.gif[,15,15] _History_ link to display the _Issue Tracking System History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 
 . Click __Back __to return to the _Issue Tracking Systems Overview_ screen.
 
@@ -365,9 +365,9 @@ View__, refer to the section <<#_historyeventlogging,>>.
 
 a|_RELATED TOPICS_
 
-* <<#_projadmin_projectsoverview_editing,>>
+* <<_projadmin_projectsoverview_editing>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
-* <<#_globadm_issuetracking,>>
+* <<_globadm_issuetracking>>
 * <<App_Phases.adoc#_phases_levelphases_issuetracking,Issue Tracking Phase>>
 
 |===

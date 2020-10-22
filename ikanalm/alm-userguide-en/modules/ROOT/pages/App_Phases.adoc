@@ -84,7 +84,7 @@ Possible values:
 |===
 
 
-For more information on defining and configuring Phases, refer to the following sections: <<#_plevelenvmgt_editlevelphases,>>, <<#_projadm_buildenv_editphase,>>, <<#_projadm_deployenv_phaseedit,>>, <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>and <<#_globadm_phases_editing,>>.
+For more information on defining and configuring Phases, refer to the following sections: <<_plevelenvmgt_editlevelphases>>, <<_projadm_buildenv_editphase>>, <<_projadm_deployenv_phaseedit>>, <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>and <<_globadm_phases_editing>>.
 
 When executing a Phase, it can have the following status:
 
@@ -161,12 +161,12 @@ When the Level Request is for a Build Level, the latest source code is checked o
 
 When the Level Request is for a Build Level attached to a Tag-based Project Stream, the source code is retrieved that was tagged with the tag specified in the _VCR Tag_ field when the Level Request was created.
 See the description of the _VCR
-Tag_ field in the section <<#_desktop_lr_createlevelrequest_build,>>.
+Tag_ field in the section <<_desktop_lr_createlevelrequest_build>>.
 
 The _Retrieve Code_ Phase also retrieves the source code and/or the build results of all Child Builds this Level Request is depending on.
 See <<Desktop_LevelRequests.adoc#_desktop_lr_viewdependency,Build Dependencies>>.
 
-In the case of a Partial Build, (<<#_projadmin_projectstream_createbranch,>>), only the modified source code will be retrieved and made available to the Agents running the Builds of the Level Request.
+In the case of a Partial Build, (<<_projadmin_projectstream_createbranch>>), only the modified source code will be retrieved and made available to the Agents running the Builds of the Level Request.
 
 The _alm.phase.retrieve.source.partialBuild.partialCheckout_ (Environment) Phase Parameter defines how this is done: if it is set to _true_ (default value) and if the VCR supports it (currently only Subversion), this is done by a partial checkout of the modified sources.
 Otherwise, all sources will be checked out, but only the modified sources will be transported to the source location of the Build Environment.
@@ -382,8 +382,8 @@ See also <<App_Phases.adoc#_phases_levelphases_retrievecode,Retrieve Code Phase>
 The _Verify Build Script_ Phase tries to locate the defined Build Script, and fails if it cannot.
 
 First, it determines what Build Script to look for.
-If there`'s a Build Script defined on the Build Environment (<<#_pcreatebuildenvironment,>>), it will try to find that.
-If not, it will look for the Build Script defined on the Project (<<#_projadmin_projectsoverview_editing,>>).
+If there`'s a Build Script defined on the Build Environment (<<_pcreatebuildenvironment>>), it will try to find that.
+If not, it will look for the Build Script defined on the Project (<<_projadmin_projectsoverview_editing>>).
 
 Then, it tries to find the Build Script in the Build Environment`'s Source Location.
 
@@ -536,7 +536,7 @@ Next to the Core Deploy Phases, you can create your own Custom Deploy Phases:
 The _Transport Build Result_ Phase transports the Build result from the Build Archive Location on the IKAN ALM Server Machine to the Deploy Environment Source Location on the IKAN ALM Agent Machine, using the Transporter associated with the IKAN ALM Agent Machine.
 
 When doing a Partial Deploy, only the modified and added files in the Build result are transferred.
-See the description of the _Partial Deploy_ field in the section <<#_pcreatedeployenvironment,>>.
+See the description of the _Partial Deploy_ field in the section <<_pcreatedeployenvironment>>.
 
 [[_phases_deployphases_decompressbuildresult]]
 ==== Decompress Build Result Phase 
@@ -551,8 +551,8 @@ The _Decompress Build Result_ Phase decompresses the Build result file that was 
 The _Verify Deploy Script_ Phase tries to locate the defined Deploy Script, and fails if it cannot.
 
 First, it determines what Deploy Script to look for.
-If there`'s a Deploy Script defined on the Deploy Environment (<<#_pcreatedeployenvironment,>>), it will try to find that.
-If not, it will look for the Deploy Script defined on the Project (<<#_projadmin_projectsoverview_editing,>>).
+If there`'s a Deploy Script defined on the Deploy Environment (<<_pcreatedeployenvironment>>), it will try to find that.
+If not, it will look for the Deploy Script defined on the Project (<<_projadmin_projectsoverview_editing>>).
 
 Then, it tries to find the Deploy Script in the decompressed Build result available in the Deploy Environment`'s Source Location.
 

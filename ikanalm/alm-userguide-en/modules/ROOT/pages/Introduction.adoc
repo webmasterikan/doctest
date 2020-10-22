@@ -41,20 +41,20 @@ a|A Regular User can perform the following tasks (depending on his or her ID`'s 
 
 * <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
 * Checking the <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build History Screen>>
-* Approving or rejecting <<#_desktop_outstandingapprovals,>>
-* Creating or updating <<#_desktop_levelrequests,>>
-* Creating or updating <<#_desktop_packages,>> and <<#_desktop_packagegroups,>>
+* Approving or rejecting <<_desktop_outstandingapprovals>>
+* Creating or updating <<_desktop_levelrequests>>
+* Creating or updating <<_desktop_packages>> and <<_desktop_packagegroups>>
 
 |Project Administrator
 a|A User with Project Administrator access rights will typically perform the following tasks:
 
-* Updating <<#_projadm_projects,>>
-* Creating or updating <<#_projadm_projectstreams,>>
-* Creating or updating <<#_projadm_lifecycles,>>
-* Creating or updating <<#_projadm_levels,>>
-* Creating or updating <<#_projadm_buildenvironments,>>or <<#_projadm_deployenvironments,>>
+* Updating <<_projadm_projects>>
+* Creating or updating <<_projadm_projectstreams>>
+* Creating or updating <<_projadm_lifecycles>>
+* Creating or updating <<_projadm_levels>>
+* Creating or updating <<_projadm_buildenvironments>>or <<_projadm_deployenvironments>>
 
-For a complete overview of the Project Administration activities, refer to the section <<#_projadm_introduction,>>.
+For a complete overview of the Project Administration activities, refer to the section <<_projadm_introduction>>.
 
 |Global Administrator
 a|A User with Global Administrator access rights will typically perform the following tasks:
@@ -62,12 +62,12 @@ a|A User with Global Administrator access rights will typically perform the foll
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 * <<GlobAdm_Project.adoc#_globadm_projectclone,Cloning an Existing Project>>
 * Edit <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
-* Creating or updating <<#_globadm_machines,>>
-* Creating or updating <<#_globadm_vcr,>>
+* Creating or updating <<_globadm_machines>>
+* Creating or updating <<_globadm_vcr>>
 * Creating or updating <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
 * Creating or updating <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
-* Creating or importing <<#_globadm_phases,>>
-* Creating or updating <<#_globadm_schedules,>>
+* Creating or importing <<_globadm_phases>>
+* Creating or updating <<_globadm_schedules>>
 
-For a complete overview of the Global Administration activities, refer to the section <<#_globadm_introduction,>>.
+For a complete overview of the Global Administration activities, refer to the section <<_globadm_introduction>>.
 |===

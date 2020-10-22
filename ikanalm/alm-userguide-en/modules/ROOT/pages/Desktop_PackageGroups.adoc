@@ -14,7 +14,7 @@ This chapter only describes how to create and manage a Package Build Group.
 To transfer Packages belonging to a Package Build Group when building a Package, a new core Phase has been added, namely the _Transport Package Results_ Phase.
 This Phase must be inserted in the workflow of the Build Environment.
 
-For more details, refer to the description of this Phase in the appendix <<#_phases_generalinformation,>>.
+For more details, refer to the description of this Phase in the appendix <<_phases_generalinformation>>.
 ====
 
 Refer to the following procedures for more information:
@@ -25,7 +25,7 @@ Refer to the following procedures for more information:
 ** <<Desktop_PackageGroups.adoc#_desktop_packagegroups_addpackage,Adding a Package to a Package Build Group>>
 ** <<Desktop_PackageGroups.adoc#_bacdbadi,Removing a Package from a Package Build Group>>
 * <<Desktop_PackageGroups.adoc#_desktop_hideshowpackagegroup,Hiding/Showing a Package Build Group>>
-* <<#_desktop_viewpackagegrouphistory,>>
+* <<_desktop_viewpackagegrouphistory>>
 
 
 [[_desktop_createpackagegroup]]
@@ -128,7 +128,7 @@ This option allows hiding the selected Package Build Group.
 
 This option allows to display the History of all create, update and delete operations performed on a Package Build Group.
 
-<<#_desktop_viewpackagegrouphistory,>>
+<<_desktop_viewpackagegrouphistory>>
 |===
 +
 
@@ -287,14 +287,14 @@ If you change the order of the Packages, the Dependency Level may change as well
 +
 .. To display a connected Package`'s Settings, click the image:images/icons/view.gif[,15,15] _ View_ link in the _Actions_ column after the required Package.
 +
-The _View Package_ screen is displayed. <<#_desktop_viewpackage,>>
+The _View Package_ screen is displayed. <<_desktop_viewpackage>>
 .. Click _Back_ to return to the _Edit Package Build Group_ screen.
 . Editing a Package`'s settings
 +
 .. To modify a connected Package Settings, click the image:images/icons/edit.gif[,15,15] _ Edit_ link in the Actions column after the required Package.
 +
 The _Edit Package_ screen is displayed.
-For more information on how to edit the Package, refer to <<#_desktop_editpackage,>>.
+For more information on how to edit the Package, refer to <<_desktop_editpackage>>.
 .. Click _Back_ to return to the _Edit Package Build Group_ screen.
 
 
@@ -347,7 +347,7 @@ Package Build Group_ panel to specify whether or not you want to display hidden 
 . Click the image:images/icons/history.gif[,15,15] _History_ link on the _Package Build Groups Overview_ panel to display the __Package Build Group History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 +
 Click __Back __to return to the _Package
 Build Groups Overview_ screen.

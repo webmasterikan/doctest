@@ -23,7 +23,7 @@ The BASE Lifecycle cannot be reused in other (Branch) Project Streams, so a new 
 
 The _Lifecycles_ submenu option lets you start the following procedures:
 
-* <<#_plifecyclemgt_createlifecycle,>>
+* <<_plifecyclemgt_createlifecycle>>
 * <<ProjAdm_LifeCycles.adoc#_lifecyclemgt_screen,Lifecycles Overview Screen>>
 
 
@@ -32,16 +32,16 @@ The following actions are possible:
 
 * Modifying Lifecycle definitions
 ** <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,Editing a Lifecycle>>
-** <<#_plifecyclemgt_deletelifecycle,>>
+** <<_plifecyclemgt_deletelifecycle>>
 * Modifying the contents of a Lifecycle
 ** <<ProjAdm_LifeCycles.adoc#_lifecycles_creatingadditionallevels,Creating Additional Levels>>
 ** <<ProjAdm_LifeCycles.adoc#_lifecycles_insertingexistinglevel,Inserting an Existing Level>>
 ** <<ProjAdm_LifeCycles.adoc#_lifecycles_changingorderlevels,Changing the order of the Levels>>
 ** <<ProjAdm_LifeCycles.adoc#_lifecycles_makingoptional,Making a Level optional or required>>
-** <<#_lifecyclemgt_enableoptionaldeploys,>>
+** <<_lifecyclemgt_enableoptionaldeploys>>
 * Modifying Levels connected to the Lifecycle
-** <<#_plifecyclemgt_editlevelsettings,>>
-** <<#_plifecyclemgt_removelevel,>>
+** <<_plifecyclemgt_editlevelsettings>>
+** <<_plifecyclemgt_removelevel>>
 
 
 [NOTE]
@@ -111,8 +111,8 @@ The following actions are possible:
 
 * Modifying Lifecycle definitions
 ** <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,Editing a Lifecycle>>
-** <<#_plifecyclemgt_deletelifecycle,>>
-** <<#_lifecyclemgt_historyview,>>
+** <<_plifecyclemgt_deletelifecycle>>
+** <<_lifecyclemgt_historyview>>
 
 
 ==== The Lifecycles Overview Screen 
@@ -134,7 +134,7 @@ You can also:
 * click the _Reset search_ link to clear the search fields.
 . On the Lifecycles Overview panel, verify the Lifecycle Information fields.
 +
-For a description of the fields, refer to the section <<#_plifecyclemgt_createlifecycle,>>.
+For a description of the fields, refer to the section <<_plifecyclemgt_createlifecycle>>.
 . Depending on your access rights, the following links may be available on the _Lifecycles Overview_ panel:
 +
 
@@ -155,7 +155,7 @@ It allows editing the Lifecycle definition.
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
 It allows deleting a Lifecycle definition, except for the BASE Lifecycle that is connected to the Head Project Stream. 
 
-<<#_plifecyclemgt_deletelifecycle,>>
+<<_plifecyclemgt_deletelifecycle>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -163,7 +163,7 @@ It allows deleting a Lifecycle definition, except for the BASE Lifecycle that is
 This option is available to all IKAN ALM Users.
 It allows to display the History of all create, update and delete operations performed on a Lifecycle.
 
-<<#_projadm_projectsoverview_historyview,>>
+<<_projadm_projectsoverview_historyview>>
 |===
 +
 . Verify the information on the _Defined Levels_ panel. 
@@ -177,7 +177,7 @@ For more information, refer to the section <<ProjAdm_LifeCycles.adoc#_plifecycle
 
 . Switch to the _Lifecycles Overview_ screen.
 +
-<<#_plifecyclemgt_screen,>>
+<<_plifecyclemgt_screen>>
 . Click the image:images/icons/edit.gif[,15,15] __ Edit __link in front of the Lifecycle you want to edit.
 +
 The __Edit Lifecycle __screen is displayed:
@@ -189,7 +189,7 @@ image::images/ProjAdmin-LifeCycles-EditLifecycle-Popup.png[,481,266]
 +
 .. Change the fields as required.
 +
-For a detailed description of the fields, refer to <<#_plifecyclemgt_createlifecycle,>>.
+For a detailed description of the fields, refer to <<_plifecyclemgt_createlifecycle>>.
 .. Click__ Save__ to save your changes.
 +
 You can also click:
@@ -202,7 +202,7 @@ You can also click:
 [NOTE]
 ====
 On the _Edit Lifecycle_ screen you can also edit the Levels, make them optional, activate the Optional Deploys option and add additional Levels using the Create Level links, and modify their order.
-For more information, refer to the section <<#_projadm_levels,>>.
+For more information, refer to the section <<_projadm_levels>>.
 ====
 
 . Underneath the _Lifecycle Info_ panel, an overview of the defined Levels, as well as the necessary links to create Test and Production Levels are available.
@@ -214,7 +214,7 @@ For more information, refer to the sections:
 * <<ProjAdm_LifeCycles.adoc#_lifecycles_insertingexistinglevel,Inserting an Existing Level>>
 * <<ProjAdm_LifeCycles.adoc#_lifecycles_changingorderlevels,Changing the order of the Levels>>
 * <<ProjAdm_LifeCycles.adoc#_lifecycles_makingoptional,Making a Level optional or required>>
-* <<#_lifecyclemgt_enableoptionaldeploys,>>
+* <<_lifecyclemgt_enableoptionaldeploys>>
 
 
 [[_lifecycles_definedlevels]]
@@ -302,12 +302,12 @@ This option is only available if no Build Level has been defined yet.
 The first Level defined for a Lifecycle must be a Build Level.
 Once the Build Level has been created, this option is no longer available, because a Lifecycle must contain exactly one Build Level.
 +
-For a description of the fields, refer to the section <<#_plevelenvmgt_createbuildlevel,>>.
+For a description of the fields, refer to the section <<_plevelenvmgt_createbuildlevel>>.
 * _Create Test Level_ and _Create Production Level_
 +
 These options become available, once the mandatory Build Level for the Lifecycle has been defined. 
 +
-For a description of the fields, refer to the section <<#_plevelenvmgt_createtestorproductionlevel,>>.
+For a description of the fields, refer to the section <<_plevelenvmgt_createtestorproductionlevel>>.
 
 
 [[_lifecycles_insertingexistinglevel]]
@@ -356,7 +356,7 @@ You can also click:
 . The Level will be inserted and displayed on the __Defined Levels __panel.
 . Unlock the Level using the __Audit Project __function.
 +
-For more information on auditing a Project, refer to <<#_projadm_auditingprojects,>>.
+For more information on auditing a Project, refer to <<_projadm_auditingprojects>>.
 
 
 [[_lifecycles_changingorderlevels]]
@@ -387,7 +387,7 @@ image::images/ProjAdmin-LifeCycles-Optional-Message.png[,356,71]
 __Note: __The Level that was made __Optional__, and all following Levels in the Lifecycle will be locked.
 . Unlock the Level using the __Audit Project __function.
 +
-For more information on auditing a Project, refer to <<#_projadm_auditingprojects,>>.
+For more information on auditing a Project, refer to <<_projadm_auditingprojects>>.
 +
 __Note: __The icon in front of the Level has changed to image:images/icons/required.gif[,15,15] .
 You can use this _Set Required_ link to make the Level required again.
@@ -406,12 +406,12 @@ In case Deploys are skipped, the status of the Level Request will be set to warn
 ====
 . Switch to the _Lifecycles Overview_ screen.
 +
-<<#_plifecyclemgt_screen,>>
+<<_plifecyclemgt_screen>>
 . Click the image:images/icons/edit.gif[,15,15] __ Edit __link in front of the required Lifecycle.
 . On the _Defined Levels_ panel, click the image:images/icons/icon_EnableOptionalDeploy.png[,16,16] _Enable Optional Deploys_ link in front of the Level.
 . Unlock the Level using the __Audit Project__ function.
 +
-For more information on auditing a Project, refer to <<#_projadm_auditingprojects,>>.
+For more information on auditing a Project, refer to <<_projadm_auditingprojects>>.
 +
 
 [NOTE]
@@ -426,7 +426,7 @@ You can use this _Disable Optional Deploys_ link to make all Deploys of the Leve
 
 . Switch to the _Lifecycles Overview_ screen.
 +
-<<#_plifecyclemgt_screen,>>
+<<_plifecyclemgt_screen>>
 . Click the image:images/icons/delete.gif[,15,15] __ Delete __link in front of the Lifecycle you want to delete.
 +
 
@@ -446,7 +446,7 @@ You can also click__ Back__, if you want to return to the previous screen withou
 +
 image::images/ProjAdmin-LifeCycles-Delete-Error.png[,467,355] 
 +
-Remove the Lifecycle from the Project Stream before deleting it. <<#_projadmin_projectstream_editing,>>
+Remove the Lifecycle from the Project Stream before deleting it. <<_projadmin_projectstream_editing>>
 
 
 ==== Viewing the Lifecycle History 
@@ -454,14 +454,14 @@ Remove the Lifecycle from the Project Stream before deleting it. <<#_projadmin_p
 
 . Switch to the _Lifecycles Overview_ screen.
 +
-<<#_plifecyclemgt_screen,>>
+<<_plifecyclemgt_screen>>
 +
 . Click the image:images/icons/history.gif[,15,15] _History_ link in front of the Lifecycle to display its__ History View__.
 +
 image::images/ProjAdmin-LifeCycles-HistoryView.png[,709,431] 
 +
 For more detailed information concerning this __History
-View__, refer to the section <<#_historyeventlogging,>>.
+View__, refer to the section <<_historyeventlogging>>.
 +
 Click __Back __to return to the previous screen.
 
@@ -471,7 +471,7 @@ Click __Back __to return to the previous screen.
 
 . Switch to the _Lifecycles Overview_ screen.
 +
-<<#_plifecyclemgt_screen,>>
+<<_plifecyclemgt_screen>>
 . Click the image:images/icons/edit.gif[,15,15] __Edit __link in front of the required Lifecycle.
 . On the _Defined Levels_ panel, click the image:images/icons/edit.gif[,15,15] _Edit_ link for the required Level.
 +
@@ -487,7 +487,7 @@ image::images/ProjAdmin-Levels-TestLevel-Edit_Popup.png[,445,396]
 +
 . Edit the fields on the _Edit Level_ panel.
 +
-For a description of the fields, refer to the sections <<#_plevelenvmgt_createbuildlevel,>> and <<#_plevelenvmgt_createtestorproductionlevel,>>.
+For a description of the fields, refer to the sections <<_plevelenvmgt_createbuildlevel>> and <<_plevelenvmgt_createtestorproductionlevel>>.
 . Click __Save __to save your changes.
 +
 You can also click__ Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
@@ -495,11 +495,11 @@ You can also click__ Refresh __to retrieve the settings from the database or__ C
 +
 For more information, refer to the sections:
 
-* <<#_plevelenvmgt_editlevelphases,>>
-* <<#_pcreatebuildenvironment,>>
-* <<#_pcreatedeployenvironment,>>
-* <<#_levelenvmgt_approvalsequence,>>
-* <<#_plevelenvmgt_changedeploysequence,>>
+* <<_plevelenvmgt_editlevelphases>>
+* <<_pcreatebuildenvironment>>
+* <<_pcreatedeployenvironment>>
+* <<_levelenvmgt_approvalsequence>>
+* <<_plevelenvmgt_changedeploysequence>>
 
 
 ==== Removing a Level 
@@ -509,12 +509,12 @@ For more information, refer to the sections:
 ====
 Removing a Level from the Lifecycle does not remove them from the Project.
 The Level remains available for insertion in any Lifecycle.
-To delete a Level, refer to <<#_plevelenvmgt_deletelevel,>>.
+To delete a Level, refer to <<_plevelenvmgt_deletelevel>>.
 ====
 
 . Switch to the _Lifecycles Overview_ screen.
 +
-<<#_plifecyclemgt_screen,>>
+<<_plifecyclemgt_screen>>
 . Click the image:images/icons/edit.gif[,15,15] __Edit __link in front of the required Lifecycle.
 . Click the image:images/icons/delete.gif[,15,15] _Remove_ link in front of the Level you want to remove.
 . Click _Yes_ to confirm the removal.
@@ -522,4 +522,4 @@ To delete a Level, refer to <<#_plevelenvmgt_deletelevel,>>.
 The Level is removed from the Lifecycle, but is not deleted.
 You can re-insert the Level at any time.
 +
-To permanently delete a Level, refer to the section <<#_plevelenvmgt_deletelevel,>>.
+To permanently delete a Level, refer to the section <<_plevelenvmgt_deletelevel>>.

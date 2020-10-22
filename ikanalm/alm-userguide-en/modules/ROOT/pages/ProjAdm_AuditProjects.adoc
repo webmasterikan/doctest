@@ -127,7 +127,7 @@ A Custom Phase with the given Display Name is inserted in the Level, but the val
 Navigate to the _Level
 Phases Overview_ of the Level, and click the __View
 Parameters __link next to the indicated Phase.
-Here you may set a value for the alm.phase.builder parameter by clicking the _Edit_ link (<<#_globadm_phaseparameters_overview,>>).
+Here you may set a value for the alm.phase.builder parameter by clicking the _Edit_ link (<<_globadm_phaseparameters_overview>>).
 |===
 
 [[_babcfbhf]]

@@ -53,7 +53,7 @@ The following subpanels are available:
 Underneath the _Edit System Settings_ panel, you will find the image:images/icons/history.gif[,15,15] _ History_ link.
 Click this link to display the _System Settings History
 View_ screen.
-For more detailed information concerning this __History View__, refer to the section <<#_historyeventlogging,>>.
+For more detailed information concerning this __History View__, refer to the section <<_historyeventlogging>>.
 
 
 [[_globadm_systemsettings_localenvironment]]
@@ -122,7 +122,7 @@ The complete path will be assembled as follows: the prefix path (as specified in
 
 Remote Transporters are activated by defining them as the Transporter Protocol when specifying the settings for a Machine. 
 
-For more information, refer to the sections <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>and <<#_globadm_machines,>>.
+For more information, refer to the sections <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>and <<_globadm_machines>>.
 
 |Work Copy Location
 |This field contains the location of the Work Copy displayed as a remote location.
@@ -163,14 +163,14 @@ The Transporter Protocol defines how Sources and Build Results will be transport
 This is only necessary if the SSH Server on the IKAN ALM Server uses an SSH Port other than the default port number __22__.
 An SSH Server daemon must be installed on the IKAN ALM server in order to use SSH as a Transporter Protocol.
 
-__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<#_globadm_secureshellcreate,>>
+__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<_globadm_secureshellcreate>>
 
 |FTP Port
 |Specify the FTP Port Number.
 This is only necessary if the FTP Server on the IKAN ALM Server uses a TCP Port other than the default port number __21__.
 An FTP server must be installed on the IKAN ALM Server in order to use FTP as a Transporter protocol.
 
-__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<#_globadm_ftpcreate,>>
+__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<_globadm_ftpcreate>>
 |===
 
 [[_globadm_systemsettings_security]]
@@ -321,7 +321,7 @@ As a result an RSS button will become available on the user`'s _Level Requests O
 
 By default the RSS Feeds are enabled.
 
-For more information, refer to the section <<#_desktop_lr_rssfeeds,>>.
+For more information, refer to the section <<_desktop_lr_rssfeeds>>.
 
 |RESTful Web Services Enabled
 |This feature is currently only functional for the integration with the SAP lifecycle. 
@@ -556,7 +556,7 @@ Click the link to display the details for this Level Request.
 <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>
 
 |Level Request Status
-|This field contains the Level Request Status. <<#_desktop_lr_overviewscreen,>>
+|This field contains the Level Request Status. <<_desktop_lr_overviewscreen>>
 
 |Deployed
 |This field indicates whether or not the Build has been used by a Deploy.

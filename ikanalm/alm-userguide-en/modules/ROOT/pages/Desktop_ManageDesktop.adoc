@@ -10,12 +10,12 @@ Furthermore the personal Desktop provides a shortcut to the Level Request creati
 The following actions are possible:
 
 * Managing the Desktop Tab Pages
-** <<#_managedesktop_desktopoverview,>>
-** <<#_managedesktop_addingtabs,>>
-** <<#_managedesktop_modifyingtabinformation,>>
+** <<_managedesktop_desktopoverview>>
+** <<_managedesktop_addingtabs>>
+** <<_managedesktop_modifyingtabinformation>>
 ** <<Desktop_ManageDesktop.adoc#_managedesktop_removingtabpage,Removing a Desktop Tab Page>>
 * Managing the Desktop content
-** <<#_managedesktop_addingelements,>>
+** <<_managedesktop_addingelements>>
 ** <<Desktop_ManageDesktop.adoc#_managedesktop_arrangingelements,Rearranging Desktop Elements>>
 ** <<Desktop_ManageDesktop.adoc#_managedesktop_removingelements,Removing Desktop Elements>>
 
@@ -32,7 +32,7 @@ image::images/Desktop-DesktopOverview.png[,1010,498]
 
 [NOTE]
 ====
-If your Desktop Overview is empty, you can add content to it using the _Add to Desktop_ button. <<#_managedesktop_addingelements,>>
+If your Desktop Overview is empty, you can add content to it using the _Add to Desktop_ button. <<_managedesktop_addingelements>>
 ====
 . Verify the elements on your Desktop.
 +
@@ -116,11 +116,11 @@ Click the link to access the <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedov
 |Action
 a|This field contains the action icons which are available for the Level:
 
-* image:images/icons/request.gif[,15,15] : For a Build Level, this icon allows creating a Level Request that will generate a new Build. For Build Levels with an active Scheduler, this matches a Forced Build. For Build Levels without active Scheduler, this matches a Requested Build. <<#_desktop_lr_createlevelrequest_build,>>
+* image:images/icons/request.gif[,15,15] : For a Build Level, this icon allows creating a Level Request that will generate a new Build. For Build Levels with an active Scheduler, this matches a Forced Build. For Build Levels without active Scheduler, this matches a Requested Build. <<_desktop_lr_createlevelrequest_build>>
 +
 For Test and Production Levels, this icon allows creating a Level Request for <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_deliver>>.
-* image:images/icons/requestPlus.gif[,15,15] : This icon (only available for Build Levels) allows creating a Level Request that will generate a new Build. The Create Level Request dialog will contain additional information about the modifications since the last Level Request. For Levels with an active Scheduler, this matches a Force+ Build. For Build Levels without active Scheduler, this matches a Request+ Build. <<#_desktop_lr_createlevelrequest_build,>>
-* image:images/icons/rollback.gif[,15,15] : This icon (only available for Production Levels) allows creating a Level Request that will restore a previous Build on that Level. Refer to <<#_desktop_lr_createlevelrequest_rollback,>>.
+* image:images/icons/requestPlus.gif[,15,15] : This icon (only available for Build Levels) allows creating a Level Request that will generate a new Build. The Create Level Request dialog will contain additional information about the modifications since the last Level Request. For Levels with an active Scheduler, this matches a Force+ Build. For Build Levels without active Scheduler, this matches a Request+ Build. <<_desktop_lr_createlevelrequest_build>>
+* image:images/icons/rollback.gif[,15,15] : This icon (only available for Production Levels) allows creating a Level Request that will restore a previous Build on that Level. Refer to <<_desktop_lr_createlevelrequest_rollback>>.
 
 
 |Message
@@ -142,15 +142,15 @@ You must connect with a User ID having the right to run Requests or ask the Glob
 +
 It is not possible to define Level Requests for locked Projects.
 +
-Unlock the Project first by clicking the _Unlock_ button on the __Projects Overview__. <<#_projadmin_projectsoverview_editing,>>
+Unlock the Project first by clicking the _Unlock_ button on the __Projects Overview__. <<_projadmin_projectsoverview_editing>>
 * _The Project Stream is locked_
 +
 It is not possible to define Level Requests for locked Project Streams.
-You (or the Project Manager) can unlock the Project Stream first by clicking the _Unlock_ button on the __Edit Project Stream screen__. <<#_projadmin_projectstream_editing,>>
+You (or the Project Manager) can unlock the Project Stream first by clicking the _Unlock_ button on the __Edit Project Stream screen__. <<_projadmin_projectstream_editing>>
 * _The Project Stream is frozen_
 +
 It is not possible to define Build Level Requests for frozen Project Streams.
-You (or the Project Manager) can unfreeze the Project Stream first by selecting another status from the _Status_ drop-down menu on the __Edit Project Stream screen__. <<#_projadmin_projectstream_editing,>>
+You (or the Project Manager) can unfreeze the Project Stream first by selecting another status from the _Status_ drop-down menu on the __Edit Project Stream screen__. <<_projadmin_projectstream_editing>>
 
 
 |image:images/icons/remove.gif[,15,15] 
@@ -238,7 +238,7 @@ image::images/Desktop-ManageDesktop-EditTabPageLabel.png[,447,155]
 +
 . Edit the fields for the Tab Page. 
 +
-For a detailed description of the fields, refer to <<#_managedesktop_addingtabs,>>.
+For a detailed description of the fields, refer to <<_managedesktop_addingtabs>>.
 . Click __Save__, once you have finished your changes.
 +
 You can also click _Cancel_ to return to _Desktop Overview_ screen without making any changes.
@@ -273,7 +273,7 @@ The _Desktop Overview_ screen for the selected Tab Page is displayed.
 
 [NOTE]
 ====
-If you want to add elements to a new Tab Page, you should create the Tab Page first. <<#_managedesktop_addingtabs,>>
+If you want to add elements to a new Tab Page, you should create the Tab Page first. <<_managedesktop_addingtabs>>
 ====
 
 . Switch to the _Add to Desktop_ screen.

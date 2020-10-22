@@ -3,8 +3,8 @@
 
 The following IKAN ALM elements are typically used by a Project Administrator:
 
-* <<#_projadm_projects,>>
-* <<#_projadm_projmgtoptions,>>
+* <<_projadm_projects>>
+* <<_projadm_projmgtoptions>>
 
 
 === Accessing the Projects Overview
