@@ -11,9 +11,9 @@ From a physical point of view, Level Requests can match a Build with or without 
 
 The following sections describe these Level Request types in detail:
 
-* <<Desktop_LevelRequests.adoc#_srebuildlr,(Re)Build>>
-* <<Desktop_LevelRequests.adoc#_srebuildanddeploylr,(Re)Build>>
-* <<Desktop_LevelRequests.adoc#_sdeploylr,Deploy>>
+* <<Desktop_LevelRequests.adoc#_srebuildlr,id==_srebuildlr--title==(Re)Build Level Requests>>
+* <<Desktop_LevelRequests.adoc#_srebuildanddeploylr,id==_srebuildanddeploylr--title==(Re)Build and Deploy Level Requests>>
+* <<Desktop_LevelRequests.adoc#_sdeploylr,id==_sdeploylr--title==Deploy Level Requests>>
 
 
 The following sections deal with the procedures involved when creating new Level Requests:
@@ -26,14 +26,14 @@ The following sections deal with the procedures involved when creating new Level
 
 The following sections deal with the procedures involved when using the __Level Requests Overview__:
 
-* <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>
-* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_buildsdeploysoverview,Builds>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_overview,id==_desktop_lr_overview--title==Level Requests Overview>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_buildsdeploysoverview,id==_desktop_lr_buildsdeploysoverview--title==Builds and Deploys Overview>>
 
 
 The following section deals with the Build History:
 
-* <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,id==_desktop_lr_buildhistory--title==Build History Screen>>
 
 
 [[_desktop_lr_actionflows]]
@@ -44,9 +44,9 @@ When adapting the <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases>>, the <<P
 
 The following different action flows are possible, depending on the composition of the Level (the Level Type and the related Build and/or Deploy Environment(s)):
 
-* <<Desktop_LevelRequests.adoc#_srebuildlr,(Re)Build>>
-* <<Desktop_LevelRequests.adoc#_srebuildanddeploylr,(Re)Build>>
-* <<Desktop_LevelRequests.adoc#_sdeploylr,Deploy>>
+* <<Desktop_LevelRequests.adoc#_srebuildlr,id==_srebuildlr--title==(Re)Build Level Requests>>
+* <<Desktop_LevelRequests.adoc#_srebuildanddeploylr,id==_srebuildanddeploylr--title==(Re)Build and Deploy Level Requests>>
+* <<Desktop_LevelRequests.adoc#_sdeploylr,id==_sdeploylr--title==Deploy Level Requests>>
 
 
 [[_srebuildlr]]
@@ -253,7 +253,7 @@ The final Level Request Status is set to __Warning__, if at least one non-blocki
 
 All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate>> screen) receive the required notifications, as well as the Users having Request Rights on the Level.
 
-The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<#_plevelenvmgt_createbuildlevel,>>, <<#_plevelenvmgt_createtestorproductionlevel,>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing>>.
+The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<#_plevelenvmgt_createbuildlevel,>>, <<#_plevelenvmgt_createtestorproductionlevel,>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,id==_plevelenvmgt_editlevel--title==Editing a Level>>.
 |===
 
 [[_srebuildanddeploylr]]
@@ -537,7 +537,7 @@ The final Level Request Status is set to __Warning__, if at least one non-blocki
 
 All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate>> screen) receive the required notifications, together with the users that have Request Rights on the Level.
 
-The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<#_plevelenvmgt_createbuildlevel,>>, <<#_plevelenvmgt_createtestorproductionlevel,>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing>>.
+The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<#_plevelenvmgt_createbuildlevel,>>, <<#_plevelenvmgt_createtestorproductionlevel,>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,id==_plevelenvmgt_editlevel--title==Editing a Level>>.
 |===
 
 [[_sdeploylr]]
@@ -672,7 +672,7 @@ The final Level Request Status is set to __Warning__, if the Deploy Status has b
 
 All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate>> screen) receive the required notifications, together with the users that have Request Rights on the Level.
 
-The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<#_plevelenvmgt_createbuildlevel,>>, <<#_plevelenvmgt_createtestorproductionlevel,>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing>>.
+The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<#_plevelenvmgt_createbuildlevel,>>, <<#_plevelenvmgt_createtestorproductionlevel,>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,id==_plevelenvmgt_editlevel--title==Editing a Level>>.
 |===
 
 [[_desktop_lr_creatinglevelrequest]]
@@ -751,7 +751,7 @@ a|This field indicates whether or not the Level is optional in the Lifecycle att
 * If the Level is optional, the field is marked by a red cross.
 * If the Level is not optional, this field is empty.
 
-<<ProjAdm_LifeCycles.adoc#_lifecyclemgt_screen,Lifecycles>>
+<<ProjAdm_LifeCycles.adoc#_lifecyclemgt_screen,id==_lifecyclemgt_screen--title==Lifecycles Overview Screen>>
 
 |Locked
 a|This field indicates whether or not the Level is locked:
@@ -890,7 +890,7 @@ a|_RELATED TOPICS_
 
 * <<#_globadm_usersgroups,>>
 * <<#_desktop_personalsettings,>>
-* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing>>
+* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,id==_desktop_managedesktop--title==Managing the Desktop>>
 * <<#_desktop_outstandingapprovals,>>
 
 |===
@@ -1026,7 +1026,7 @@ A Machine Parameter can have all the same characteristics and applies for all th
 The _Level Requests Overview_ screen is displayed.
 It contains the information about the new Level Request (as well as about the older Level Requests).
 +
-For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>.
+For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,id==_desktop_lr_overview--title==Level Requests Overview>>.
 
 
 ==== Creating a Deliver Build Level Request 
@@ -1109,7 +1109,7 @@ However you can still change the execution time manually.
 |Select the Build to be delivered to the Test or Production Level.
 The list contains all Builds available on the previous Level that have not yet been delivered to this Level and that have the same (Redeliver) or a higher Build Number than the current active Build.
 
-If the previous Level in the Lifecycle is marked as _Optional_ (<<ProjAdm_LifeCycles.adoc#_lifecycles_makingoptional,Making>>) the list contains the available Builds from the previous Level AND from the Level before that one.
+If the previous Level in the Lifecycle is marked as _Optional_ (<<ProjAdm_LifeCycles.adoc#_lifecycles_makingoptional,id==_lifecycles_makingoptional--title==Making a Level optional or required>>) the list contains the available Builds from the previous Level AND from the Level before that one.
 The column _Available on_ indicates on which Level the available Build resides.
 
 The current active build on a Level can be redelivered.
@@ -1126,7 +1126,7 @@ See <<#_desktop_lr_createlevelrequest_build,>> for more information on the avail
 The _Level Requests Overview_ screen is displayed.
 It contains the information about the new Level Request (as well as about the older Level Requests). 
 +
-For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>.
+For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,id==_desktop_lr_overview--title==Level Requests Overview>>.
 
 
 ==== Creating a Rollback Build Level Request 
@@ -1218,7 +1218,7 @@ Refer to the section <<#_desktop_lr_createlevelrequest_build,>> for more informa
 The _Level Requests Overview_ screen is displayed.
 It contains the information about the new Level Request (as well as about the older Level Requests). 
 +
-For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>.
+For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,id==_desktop_lr_overview--title==Level Requests Overview>>.
 
 
 [[_desktop_lr_overview]]
@@ -1229,7 +1229,7 @@ The following sections deal with the procedures involved when using the __Level 
 * <<#_desktop_lr_overviewscreen,>>
 * <<#_desktop_lr_rssfeeds,>>
 * <<#_desktop_lr_generatereport,>>
-* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>
 
 
 ==== The Level Requests Overview Screen 
@@ -1244,7 +1244,7 @@ image::images/Desktop-LevelRequests-Overview.png[,1023,668]
 
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the __Level Requests Overview __screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto>>
+If the__ Auto Refresh __option is activated, the __Level Requests Overview __screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,id==_desktop_autorefresh--title==Auto Refresh>>
 ====
 
 . Use the search criteria on the _Search_ panel to only display the Level Requests you are looking for.
@@ -1259,14 +1259,14 @@ The following options are available:
 * Save filter: to save the current search criteria for future use.
 
 +
-For more information on the usage of search panels and filters, refer to the sections <<#_babcjedaj8,>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining>>.
+For more information on the usage of search panels and filters, refer to the sections <<#_babcjedaj8,>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,id==_desktop_searchfilters--title==Defining Search Filters>>.
 
 . Click the _Search_ button once again if you want to verify the changing status of existing and new Level Requests.
 +
 
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the _Level Requests Overview_ will be refreshed following the interval specified by the Auto Refresh Rate specified in the System Settings. <<UserInterface.adoc#_desktop_autorefresh,Auto>>
+If the__ Auto Refresh __option is activated, the _Level Requests Overview_ will be refreshed following the interval specified by the Auto Refresh Rate specified in the System Settings. <<UserInterface.adoc#_desktop_autorefresh,id==_desktop_autorefresh--title==Auto Refresh>>
 ====
 
 . Use the _Generate Report_ button to run the _Level Requests Overview_ Report.
@@ -1297,7 +1297,7 @@ This is a unique sequential number assigned to each Level Request when it is cre
 The Level Request OIDs are displayed as a link.
 Click this link to display the details for this Level Request.
 
-For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the _Level Request Detail_ screen. 
+For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>> tab page of the _Level Request Detail_ screen. 
 
 |Project Stream
 a|This field contains the identification of the Project Stream.
@@ -1327,7 +1327,7 @@ The following types are available:
 * image:images/icons/icon_redeliverBuild.png[,15,15]  Redeliver Build
 * image:images/icons/rollback.gif[,15,15]  Rollback Build
 
-For a description of the latter four Level Request Action Types, refer to <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating>>.
+For a description of the latter four Level Request Action Types, refer to <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,id==_desktop_lr_creatinglevelrequest--title==Creating Level Requests>>.
 The Build initiated by the Scheduler is similar to the Request Build Level Request Action Type, but it is triggered automatically.
 
 |User ID
@@ -1353,7 +1353,7 @@ The following status indication icons are possible:
 |Build Number
 |This field contains the Build Number of the Level Request.
 Use this link to access the _Build
-History Detail_ screen. <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build>>
+History Detail_ screen. <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,id==_desktop_lr_buildhistory--title==Build History Screen>>
 
 |VCR Tag
 |This field contains the VCR Tag of the Level Request.
@@ -1365,7 +1365,7 @@ However, the user can override the default VCR Tag while creating a Level Reques
 
 The Level Request VCR Tag is displayed as a link leading to the _Sources_ tab page on the _Level
 Request Detail_ screen.
-For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_sources,id==_desktop_lr_sources--title==Sources>>.
 
 |Start
 |This field indicates the date and time when the Level Request execution started.
@@ -1378,7 +1378,7 @@ For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop
 +
 Click the Level Request`'s _OID_ link in front of the required Level Request.
 +
-For more information, refer to the section <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>.
 
 
 ==== The IKAN ALM RSS Functionality 
@@ -1429,7 +1429,7 @@ This report can be exported to PDF, CSV, RTF or XLS format.
 
 . Switch to the _Level Requests Overview_ screen and specify for which Level Requests you want to generate a report.
 +
-<<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>
+<<Desktop_LevelRequests.adoc#_desktop_lr_overview,id==_desktop_lr_overview--title==Level Requests Overview>>
 +
 To specify which Level Requests you want to appear in the Report, define the search criteria and click the _Search_ button.
 +
@@ -1524,14 +1524,14 @@ By default the _Summary_ tab page is displayed.
 +
 Refer to one of the following sections for more information.
 
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,id==_desktop_lr_phaselogs--title==Phase Logs>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,id==_desktop_lr_results--title==Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,id==_desktop_lr_approvals--title==Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,id==_desktop_lr_issues--title==Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,id==_desktop_lr_sources--title==Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,id==_desktop_lr_modifications--title==Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,id==_desktop_lr_dependencies--title==Dependencies>>
 
 . Back, Refresh and Build History links
 
@@ -1539,7 +1539,7 @@ Refer to one of the following sections for more information.
 * Use the _Refresh_ link to update the displayed information. This link reloads the currently selected tab page, as well as the header information. 
 * Use the _Build History_ link to get information about the Build`'s Lifecycle.
 +
-For more detailed information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build>>.
+For more detailed information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,id==_desktop_lr_buildhistory--title==Build History Screen>>.
 
 . Auto Refresh option
 +
@@ -1552,7 +1552,7 @@ Auto Refresh is also available on the __Summary__, __Approvals__, _Issues_ and _
 Once the Level Request has reached a final status (__Success__, __Rejected__, __Canceled__, __Aborted__, _Fail_ or __Warning__), the _Auto
 Refresh_ function will be stopped automatically.
 +
-For more information on the _Auto Refresh_ settings, refer to the section <<UserInterface.adoc#_desktop_autorefresh,Auto>>.
+For more information on the _Auto Refresh_ settings, refer to the section <<UserInterface.adoc#_desktop_autorefresh,id==_desktop_autorefresh--title==Auto Refresh>>.
 
 
 [[_desktop_lr_summary]]
@@ -1615,12 +1615,12 @@ When selecting another Tab Page, this header is not being refreshed.
 
 Depending on the status of the Level Request, the _Summary_ page may contain the following panels:
 
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_actions,Actions>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_info,Info>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_buildsdeploys,Builds>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_approvals,Approvals>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_issues,Issues>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_errorwarning,Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_actions,id==_desktop_lr_summary_actions--title==Actions Panel>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_info,id==_desktop_lr_summary_info--title==Info Panel>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_buildsdeploys,id==_desktop_lr_summary_buildsdeploys--title==Builds and Deploys>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_approvals,id==_desktop_lr_summary_approvals--title==Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_issues,id==_desktop_lr_summary_issues--title==Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary_errorwarning,id==_desktop_lr_summary_errorwarning--title==Issues>>
 
 ===== Actions Panel
 [[_desktop_lr_summary_actions]]
@@ -1878,7 +1878,7 @@ image::images/Desktop-LevelRequests-Detailed-Summary-Approvals-Approved.png[,632
 
 [NOTE]
 ====
-For a complete list of all Approvals defined for the Level Request, select the _Approvals_ tab underneath the Status header. <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>[[_desktop_lr_summary_issues]]
+For a complete list of all Approvals defined for the Level Request, select the _Approvals_ tab underneath the Status header. <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,id==_desktop_lr_approvals--title==Approvals>>[[_desktop_lr_summary_issues]]
 ====
 
 ===== Issues Panel
@@ -1903,7 +1903,7 @@ For each issue the following information is displayed:
 If the _URL_ field in the definition of the Issue Tracking System is not empty, this field will be displayed as a link.
 Click the link to view the Issue in the external Issue Tracking System's Web interface.
 
-For more information on the _URL_ field, refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue>>.
+For more information on the _URL_ field, refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,id==_globadm_issuetrackingcreate--title==Issue Tracking id==_globadm_issuetrackingcreate--title==Creating an Issue Tracking System>>.
 
 |Description
 |This field contains the description of the Issue.
@@ -1921,7 +1921,7 @@ For more information on the _URL_ field, refer to the section <<GlobAdm_IssueTra
 [NOTE]
 ====
 On this panel you cannot modify any of the Issues.
-If you want to edit, delete or synchronize them, select the _Issues_ tab underneath the Status header. <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>[[_desktop_lr_summary_errorwarning]]
+If you want to edit, delete or synchronize them, select the _Issues_ tab underneath the Status header. <<Desktop_LevelRequests.adoc#_desktop_lr_issues,id==_desktop_lr_issues--title==Issues>>[[_desktop_lr_summary_errorwarning]]
 ====
 
 ===== Error/Warning Log Panel
@@ -1930,7 +1930,7 @@ This panel is only shown if the Level Request status is set to _Fail_ or __Warni
 It only shows the log of the _first_ Phase with status _Fail_ or __Warning__.
 This is not necessarily the cause of the error status of the Level Request.
 For a complete overview of the status of _all_ the Phases, refer to the _Phase
-Logs_ tab page (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>).
+Logs_ tab page (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,id==_desktop_lr_phaselogs--title==Phase Logs>>).
 
 image::images/Desktop-LevelRequests-Detailed-Summary-ErrorWarning1.png[,958,526] 
 
@@ -1981,7 +1981,7 @@ _Note:_ if you hover over the word __Stack Trace__, the first 256 characters of 
 The log is only available for Phases executed by a Scripting Tool (Ant, NAnt or Maven2).
 
 If the Log Format is set to __TXT__, you can download the error/warning log on the _Phase Logs_ tab page.
-For more information on specifying the format of the log, refer to the section <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting>>.
+For more information on specifying the format of the log, refer to the section <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,id==_globadm_scriptingtools--title==Scripting Tools>>.
 |===
 
 
@@ -1992,14 +1992,14 @@ Use the _Top_ link to quickly return to the top of the page.
 
 a|_RELATED TOPICS_
 
-* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,id==_desktop_lr_phaselogs--title==Phase Logs>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,id==_desktop_lr_results--title==Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,id==_desktop_lr_approvals--title==Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,id==_desktop_lr_issues--title==Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,id==_desktop_lr_sources--title==Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,id==_desktop_lr_modifications--title==Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,id==_desktop_lr_dependencies--title==Dependencies>>
 
 |===
 
@@ -2014,8 +2014,8 @@ image::images/Desktop-LevelRequests-Detailed-PhaseLogs_v2.png[,1022,663]
 
 The following panels can be available:
 
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelparameters,Level>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelparameters,id==_desktop_lr_phaselogs_levelparameters--title==Level Parameters>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,id==_desktop_lr_phaselogs_levelphases--title==Level Phases>>
 +
 Possible subpanels:
 
@@ -2024,7 +2024,7 @@ Possible subpanels:
 ** Stack Trace
 ** Logs
 
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,Build>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,id==_desktop_lr_phaselogs_buildactions--title==Build Actions>>
 +
 Possible subpanels:
 
@@ -2038,7 +2038,7 @@ Just as the Level Phases panel, the Build Phases panel may contain the following
 *** Stack Trace
 *** Logs
 
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,Deploy>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,id==_desktop_lr_phaselogs_deployactions--title==Deploy Actions>>
 +
 Possible subpanels: 
 
@@ -2174,7 +2174,7 @@ However, since the defined Level workflow can be altered (<<#_plevelenvmgt_level
 [NOTE]
 ====
 The description in this table is very concise.
-For a more detailed description, refer to the section <<App_Phases.adoc#_phases_levelphases,Level>>.
+For a more detailed description, refer to the section <<App_Phases.adoc#_phases_levelphases,id==_phases_levelphases--title==Level Phases>>.
 ====
 
 [cols="1,1", frame="topbot", options="header"]
@@ -2515,14 +2515,14 @@ It logs the result of the cleanup in the _Message_ field.
 
 |_RELATED TOPICS_
 
-* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,id==_desktop_lr_results--title==Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,id==_desktop_lr_approvals--title==Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,id==_desktop_lr_issues--title==Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,id==_desktop_lr_sources--title==Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,id==_desktop_lr_modifications--title==Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,id==_desktop_lr_dependencies--title==Dependencies>>
 
 |===
 
@@ -2618,14 +2618,14 @@ image:images/Desktop-LevelRequests-Detailed-Results-expanded.png[,367,280]
 
 a|_RELATED TOPICS_
 
-* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,id==_desktop_lr_phaselogs--title==Phase Logs>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,id==_desktop_lr_approvals--title==Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,id==_desktop_lr_issues--title==Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,id==_desktop_lr_sources--title==Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,id==_desktop_lr_modifications--title==Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,id==_desktop_lr_dependencies--title==Dependencies>>
 
 |===
 
@@ -2717,14 +2717,14 @@ For some special events, like Level Request cancellations, abortions or failures
 
 a|_RELATED TOPICS_
 
-* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,id==_desktop_lr_phaselogs--title==Phase Logs>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,id==_desktop_lr_results--title==Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,id==_desktop_lr_issues--title==Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,id==_desktop_lr_sources--title==Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,id==_desktop_lr_modifications--title==Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,id==_desktop_lr_dependencies--title==Dependencies>>
 
 |===
 
@@ -2761,7 +2761,7 @@ The following information is available:
 If the URL field of the Issue Tracking System definition is not empty, this field will be displayed as a link.
 Click the link to directly view the Issue in the external Issue Tracking System's Web interface.
 
-Refer to <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue>>for more information on the URL field.
+Refer to <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,id==_globadm_issuetrackingcreate--title==Issue Tracking id==_globadm_issuetrackingcreate--title==Creating an Issue Tracking System>>for more information on the URL field.
 
 |Description
 |This field displays the Description of the Issue.
@@ -2797,10 +2797,10 @@ Use the appropriate link for editing, deleting or adding an Issue.
 ====
 These links are only available for Build Levels.
 
-* image:images/icons/edit.gif[,15,15] __ Edit__. <<Desktop_LevelRequests.adoc#_desktop_lr_issueedit,Editing>>
-* image:images/icons/delete.gif[,15,15] __ Delete__. <<Desktop_LevelRequests.adoc#_desktop_lr_issuedelete,Deleting>>
-* image:images/icons/icon_synchronize.png[,15,15] __ Synchronize__. <<Desktop_LevelRequests.adoc#_desktop_lr_issuesynchronize,Synchronizing>>
-* __Add Issue__. <<Desktop_LevelRequests.adoc#_desktop_lr_issueadd,Adding>>
+* image:images/icons/edit.gif[,15,15] __ Edit__. <<Desktop_LevelRequests.adoc#_desktop_lr_issueedit,id==_desktop_lr_issueedit--title==Editing an Issue>>
+* image:images/icons/delete.gif[,15,15] __ Delete__. <<Desktop_LevelRequests.adoc#_desktop_lr_issuedelete,id==_desktop_lr_issuedelete--title==Deleting an Issue>>
+* image:images/icons/icon_synchronize.png[,15,15] __ Synchronize__. <<Desktop_LevelRequests.adoc#_desktop_lr_issuesynchronize,id==_desktop_lr_issuesynchronize--title==Synchronizing an Issue>>
+* __Add Issue__. <<Desktop_LevelRequests.adoc#_desktop_lr_issueadd,id==_desktop_lr_issueadd--title==Adding an Issue>>
 ====
 
 [[_desktop_lr_issueedit]]
@@ -2817,7 +2817,7 @@ image::images/Desktop-LevelRequests-Detailed-EditIssue.png[,431,321]
 +
 . Change the fields as required.
 +
-For a detailed description of the fields, refer to <<Desktop_LevelRequests.adoc#_desktop_lr_issueadd,Adding>>.
+For a detailed description of the fields, refer to <<Desktop_LevelRequests.adoc#_desktop_lr_issueadd,id==_desktop_lr_issueadd--title==Adding an Issue>>.
 . Click _Save_ to save your changes.
 +
 You can also click:
@@ -2922,7 +2922,7 @@ This field is optional.
 ====
 
 For JIRA Issues, HP Quality Center Defects, TeamForge and Team Foundation Artifacts, it`'s sufficient to enter the Issue ID.
-After having created the Issue, synchronize the issue (<<Desktop_LevelRequests.adoc#_desktop_lr_issuesynchronize,Synchronizing>>) to automatically retrieve the additional fields from the Issue Tracking System.
+After having created the Issue, synchronize the issue (<<Desktop_LevelRequests.adoc#_desktop_lr_issuesynchronize,id==_desktop_lr_issuesynchronize--title==Synchronizing an Issue>>) to automatically retrieve the additional fields from the Issue Tracking System.
 ====
 
 . Fill out the fields as required and click __Create__.
@@ -2938,14 +2938,14 @@ You can also click:
 
 a|_RELATED TOPICS_
 
-* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,id==_desktop_lr_phaselogs--title==Phase Logs>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,id==_desktop_lr_results--title==Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,id==_desktop_lr_approvals--title==Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,id==_desktop_lr_sources--title==Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,id==_desktop_lr_modifications--title==Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,id==_desktop_lr_dependencies--title==Dependencies>>
 
 |===
 
@@ -2972,14 +2972,14 @@ This information is only visible if the Level Request has ended with status _Suc
 
 a|_RELATED TOPICS_
 
-* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,id==_desktop_lr_phaselogs--title==Phase Logs>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,id==_desktop_lr_results--title==Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,id==_desktop_lr_approvals--title==Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,id==_desktop_lr_issues--title==Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,id==_desktop_lr_modifications--title==Modifications>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,id==_desktop_lr_dependencies--title==Dependencies>>
 
 |===
 
@@ -3042,14 +3042,14 @@ On the Build Level, modifications are only shown for the statuses _Warning_ or _
 
 a|_RELATED TOPICS_
 
-* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,Dependencies>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,id==_desktop_lr_phaselogs--title==Phase Logs>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,id==_desktop_lr_results--title==Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,id==_desktop_lr_approvals--title==Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,id==_desktop_lr_issues--title==Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,id==_desktop_lr_sources--title==Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_dependencies,id==_desktop_lr_dependencies--title==Dependencies>>
 
 |===
 
@@ -3077,7 +3077,7 @@ Project Stream dependencies are defined on the Edit Project Stream Dependency De
 ====
 
 The _Dependencies_ page is the starting point to find all the information concerning:
-. <<Desktop_LevelRequests.adoc#_desktop_lr_viewdependency,Build>>
+. <<Desktop_LevelRequests.adoc#_desktop_lr_viewdependency,id==_desktop_lr_viewdependency--title==Build Dependencies>>
 . <<#_deskopt_lr_viewbuildusage,>>
 . <<#_desktop_lr_viewusage,>>
 
@@ -3278,14 +3278,14 @@ Click the link to display the details for this Level Request.
 
 a|_RELATED TOPICS_
 
-* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,Modifications>>
+* <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,id==_desktop_lr_phaselogs--title==Phase Logs>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_results,id==_desktop_lr_results--title==Results>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,id==_desktop_lr_approvals--title==Approvals>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_issues,id==_desktop_lr_issues--title==Issues>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_sources,id==_desktop_lr_sources--title==Sources>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_modifications,id==_desktop_lr_modifications--title==Modifications>>
 
 |===
 
@@ -3304,7 +3304,7 @@ The _Build History_ screen is displayed:
 +
 image::images/Desktop-BuildHistory-Detail.png[,943,500] 
 +
-If the__ Auto Refresh __option is activated, the _Build History_ screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto>>
+If the__ Auto Refresh __option is activated, the _Build History_ screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,id==_desktop_autorefresh--title==Auto Refresh>>
 +
 
 [NOTE]
@@ -3388,7 +3388,7 @@ image::images/Desktop-BuildsDeploys-Overview.png[,994,412]
 
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the _Build and Deploys Overview_ screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto>>
+If the__ Auto Refresh __option is activated, the _Build and Deploys Overview_ screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,id==_desktop_autorefresh--title==Auto Refresh>>
 ====
 
 . Use the search criteria on the _Search Builds and Deploys_ panel to only display the Builds and/or Deploys you are looking for.
@@ -3410,7 +3410,7 @@ The following options are available:
 * Save filter: to save the current search criteria for future use.
 
 +
-For more information on the usage of search panels and filters, refer to the sections <<#_babcjedaj8,>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining>>.
+For more information on the usage of search panels and filters, refer to the sections <<#_babcjedaj8,>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,id==_desktop_searchfilters--title==Defining Search Filters>>.
 
 . Verify the information on the _Builds and Deploys Overview_ panel.
 +
@@ -3433,7 +3433,7 @@ The following information fields are available:
 
 Click this link to display the details for this Level Request which created the Build or Deploy.
 
-For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the _Level Request Detail_ screen. 
+For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>> tab page of the _Level Request Detail_ screen. 
 
 |Type
 |This field contains the object type: Build or Deploy.
@@ -3479,7 +3479,7 @@ The following status indications are possible:
 * image:images/icons/cancelled.gif[,15,15] _Canceled_
 * image:images/icons/aborted.gif[,15,15] _Aborted_
 
-For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>>.
 
 |Level Request Status
 a|This field contains the Level Request status.
@@ -3510,7 +3510,7 @@ This Tag matches a Build with its source code in the VCR.
 
 The Level Request VCR Tag is displayed as a link leading to the _Sources_ tab page on the _Level
 Request Detail_ screen.
-For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_sources,id==_desktop_lr_sources--title==Sources>>.
 
 |Start
 |This field indicates the date and time when the Build or Deploy execution started.
@@ -3523,4 +3523,4 @@ For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop
 +
 Click the Level Request`'s _OID_ link which created the Build or Deploy.
 +
-For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the _Level Request Detail_ screen. 
+For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,id==_desktop_lr_summary--title==Summary>> tab page of the _Level Request Detail_ screen. 

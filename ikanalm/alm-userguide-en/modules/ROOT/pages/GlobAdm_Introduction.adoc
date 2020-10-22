@@ -26,12 +26,12 @@ Refer to the following sections for detailed information:
 
 * <<#_globadm_system,>>
 * <<#_globadm_historylog,>>
-* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users>>
-* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,id==_globadm_usersgroups_users--title==Users and Groups id==_globadm_usersgroups_users--title==Users>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,id==_globadm_usersgroups_groups--title==User Groups>>
 * <<#_globadm_machines,>>
-* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>
 * <<#_globadm_vcr,>>
-* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,id==_globadm_scriptingtools--title==Scripting Tools>>
 * <<#_globadm_issuetracking,>>
 * <<#_globadm_schedules,>>
 * <<#_globadm_miscellaneous,>>

@@ -7,20 +7,20 @@ As a result, these User IDs and User Groups will most likely be maintained in su
 Each time a User attempts a login, synchronization of the User Groups for this User takes place.
 There are two types of User Groups: external and internal.
 During login, the external User Groups are automatically synchronized with an external security system, whereas the internal User Groups are kept intact.
-For more information on this issue, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User>>.
+For more information on this issue, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,id==_globadm_usersgroups_groups--title==User Groups>>.
 
 A user can only successfully log in if doing so does not violate the restrictions imposed by the IKAN ALM License.
 
-* If a User is defined as a __Reserved User__, he/she can always log in. For more information on defining a User as Reserved, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users>>.
+* If a User is defined as a __Reserved User__, he/she can always log in. For more information on defining a User as Reserved, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,id==_globadm_usersgroups_users--title==Users and Groups id==_globadm_usersgroups_users--title==Users>>.
 * If a User is not defined as a __Reserved User__, the User is considered being a __Floating User__, and he/she can only log in if the current number of connected Floating Users is less than the number of Floating Users defined by the IKAN ALM License.
 
 
 This chapter provides more information on: 
 
-* <<Logon.adoc#_desktop_loggingon,Logging>>
-* <<Logon.adoc#_desktop_loogingoff,Logging>>
-* <<Logon.adoc#_desktop_errormessages,Error>>
-* <<Logon.adoc#_desktop_warningmessages,Warning>>
+* <<Logon.adoc#_desktop_loggingon,id==_desktop_loggingon--title==Logging in>>
+* <<Logon.adoc#_desktop_loogingoff,id==_desktop_loogingoff--title==Logging out>>
+* <<Logon.adoc#_desktop_errormessages,id==_desktop_errormessages--title==Error Messages>>
+* <<Logon.adoc#_desktop_warningmessages,id==_desktop_warningmessages--title==Warning Messages>>
 
 
 [[_desktop_loggingon]]
@@ -49,7 +49,7 @@ Your personal Desktop will be displayed:
 +
 image::images/Desktop-DesktopOverview.png[,1014,517] 
 +
-For more information on managing the items displayed on the Desktop, refer to the section <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing>>.
+For more information on managing the items displayed on the Desktop, refer to the section <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,id==_desktop_managedesktop--title==Managing the Desktop>>.
 +
 
 [NOTE]
@@ -119,7 +119,7 @@ Most likely the problem is either a corrupted License file (or a file that doesn
 Contact your IKAN ALM Administrator or your IKAN ALM vendor to obtain a new License file.
 . You can now log in to IKAN ALM.
 +
-<<Logon.adoc#_desktop_loggingon,Logging>>
+<<Logon.adoc#_desktop_loggingon,id==_desktop_loggingon--title==Logging in>>
 
 
 [[_desktop_errormessages]]
@@ -136,7 +136,7 @@ Please refer to the table underneath for the corresponding solution.
 
 |`No valid License found`
 |No IKAN ALM License was installed.
-Install a License as explained in the section <<Logon.adoc#_desktop_installinglicense,Installing>>.
+Install a License as explained in the section <<Logon.adoc#_desktop_installinglicense,id==_desktop_installinglicense--title==Installing a New License>>.
 
 |`License has expired`.
 |The IKAN ALM License has expired.

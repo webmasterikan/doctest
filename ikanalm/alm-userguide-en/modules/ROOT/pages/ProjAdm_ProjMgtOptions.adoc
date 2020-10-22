@@ -71,7 +71,7 @@ a|This drop-down menu contains the following options:
 Select this option to create a new Build Environment for the selected Project. <<#_pcreatebuildenvironment,>>
 * _Overview_
 +
-Select this option to switch to the Build Environment Overview for the selected Project. <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The>>
+Select this option to switch to the Build Environment Overview for the selected Project. <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,id==_buildenvironmentsoverview--title==The Build Environments Overview Screen>>
 * _Build Parameters_
 +
 Select this option to manage Build parameters for the selected Project. <<#_projadm_environmentparameters,>>
@@ -84,7 +84,7 @@ a|This drop-down menu contains the following options:
 Select this option to create a new Deploy Environment for the selected Project. <<#_pcreatedeployenvironment,>>
 * _Overview_
 +
-Select this option to switch to the Deploy Environment Overview for the selected Project. <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy>>
+Select this option to switch to the Deploy Environment Overview for the selected Project. <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,id==_projadm_deployenvironmentsoverview--title==Deploy Environments id==_projadm_deployenvironmentsoverview--title==The Deploy Environments Overview Screen>>
 * _Deploy Parameters_
 +
 Select this option to manage Deploy parameters for the selected Project. <<#_projadm_environmentparameters,>>

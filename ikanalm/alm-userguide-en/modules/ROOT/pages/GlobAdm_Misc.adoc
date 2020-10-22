@@ -9,7 +9,7 @@ The __Miscellaneous __menu is only available to users with Global Administrator 
 
 The Miscellaneous menu options are explained in the following procedures:
 
-* <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notifying>>
+* <<GlobAdm_Misc.adoc#_globadm_notifyusers,id==_globadm_notifyusers--title==Notifying IKAN ALM Users>>
 
 
 [[_globadm_notifyusers]]

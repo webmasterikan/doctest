@@ -9,7 +9,7 @@ Possible uses:
 * Manual creation of Level Requests (CLR Command): <<#_pcommandline_clr_optionsparameters,>>
 * Manual generation of Reports (Report Command): <<#_pcommandline_report_optionsparameters,>>
 * Creation of Level Requests in an external IDE. This guide describes the integration procedure for <<#_pintegrateikanalminjdeveloper,>> and <<#_pintegrateikanalmineclipse,>>. Refer to the indicated sections.
-* Automated creation of Level Requests using a Scripting Tool. A scripting tool is used to define the triggers (e.g., server backup) for Level Request creation. This guide describes the use of an <<CommandLine.adoc#_sautomatecreatinglevelrequestswithant,Automating>>. Refer to the indicated section.
+* Automated creation of Level Requests using a Scripting Tool. A scripting tool is used to define the triggers (e.g., server backup) for Level Request creation. This guide describes the use of an <<CommandLine.adoc#_sautomatecreatinglevelrequestswithant,id==_sautomatecreatinglevelrequestswithant--title==Automating the Creation of Level Requests Using an ANT script>>. Refer to the indicated section.
 
 
 The IKAN ALM Command Line interface can be installed on each client machine requiring its functionality.
@@ -192,7 +192,7 @@ image::images/CommandLine-LRCreatedSuccessfully.jpg[,539,274]
 [WARNING]
 --
 These messages only indicate that the Level Request was _created_ successfully.
-Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>in the web application to verify if the Level Request was _executed_ successfully as well.
+Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,id==_desktop_lr_overview--title==Level Requests Overview>>in the web application to verify if the Level Request was _executed_ successfully as well.
 --
 
 * If the Level Request cannot be created, because there is no connection with the IKAN ALM Server, the following screen is displayed:
@@ -291,7 +291,7 @@ image::images/CommandLine-LRCreatedSuccessfully.jpg[,541,274]
 [WARNING]
 --
 These messages only indicate that the Level Request was _created_ successfully.
-Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level>>in the web application to verify if the Level Request was _executed_ successfully as well.
+Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,id==_desktop_lr_overview--title==Level Requests Overview>>in the web application to verify if the Level Request was _executed_ successfully as well.
 --
 
 

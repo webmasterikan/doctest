@@ -30,7 +30,7 @@ To override the predefined parameter value for a specific Environment, define a 
 [NOTE]
 ====
 
-On the _Miscellaneous_ tab of the _System Settings_ screen, you can specify the prefix for the predefined Parameters and properties file. <<GlobAdm_System.adoc#_globadm_systemsettings_miscellaneous,Miscellaneous>>
+On the _Miscellaneous_ tab of the _System Settings_ screen, you can specify the prefix for the predefined Parameters and properties file. <<GlobAdm_System.adoc#_globadm_systemsettings_miscellaneous,id==_globadm_systemsettings_miscellaneous--title==Miscellaneous>>
 
 There also exist Predefined Level Parameters.
 They are available during the execution of a Custom Phase on a Level, They may not be overridden, since it is not (yet) possible to define Level Parameters.
@@ -79,7 +79,7 @@ For a description of the fields, see <<#_environmentparams_create,>>.
 
 [NOTE]
 ====
-The icon image:images/icons/icon_MachineParameter.png[,15,15]  indicates that the parameter is a Machine Parameter. <<GlobAdm_Machines.adoc#_globadm_machineparameters,Machine>> In order to show these Parameters, you should set the _Show
+The icon image:images/icons/icon_MachineParameter.png[,15,15]  indicates that the parameter is a Machine Parameter. <<GlobAdm_Machines.adoc#_globadm_machineparameters,id==_globadm_machineparameters--title==Machine Parameters>> In order to show these Parameters, you should set the _Show
 Machine Parameters_ criterion to __Yes__.
 
 Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).

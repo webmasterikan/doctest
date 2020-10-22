@@ -10,13 +10,13 @@ Build and Deploy Actions can only be handled on a Machine on which an IKAN ALM A
 Refer to the following sections for detailed information:
 
 * <<#_globadm_machinecreate,>>. This menu option is only visible for Users with Global Admin Access rights.
-* <<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines>>
+* <<GlobAdm_Machines.adoc#_globadm_machinesoverview,id==_globadm_machinesoverview--title==Machines>>
 * <<#_globadm_machinesoverview_edit,>>
 * <<#_globadm_machinesoverview_delete,>>
 * <<#_globadm_machinesoverview_status,>>
 * <<#_globadm_machines_installedphases,>>
 * <<#_globadm_machinesoverview_history,>>
-* <<GlobAdm_Machines.adoc#_globadm_machineparameters,Machine>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters,id==_globadm_machineparameters--title==Machine Parameters>>
 
 
 === Creating a Machine Definition 
@@ -86,7 +86,7 @@ This Protocol defines how sources and build results will be transported between 
 
 The Select ion of a Transporter Protocol is mandatory.
 
-For more information on configuring Transporters, refer to the section <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>.
+For more information on configuring Transporters, refer to the section <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>.
 
 |Locked
 |Select whether or not the Machine must be locked for future use.
@@ -119,7 +119,7 @@ Contact your IKAN ALM Vendor if you need to purchase a license that allows for m
 a|_RELATED TOPICS_
 
 * <<#_globadm_machines,>>
-* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>
 * <<#_projadm_buildenvironments,>>
 * <<#_projadm_deployenvironments,>>
 
@@ -373,7 +373,7 @@ For a detailed description of the fields, refer to <<#_globadm_machinecreate,>>.
 
 [NOTE]
 ====
-The Activity and the installed phases on the Server daemon are only displayed if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
+The Activity and the installed phases on the Server daemon are only displayed if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
 ====
 . Verify the _Current Server and/or Agent Activity_ on the Machine.
 +
@@ -386,7 +386,7 @@ The possible options are:
 * __No__: show only non-Core Phases
 * __All__: show Core and non-Core Phases
 . Verify the information on the _Installed Server Phases_ and _Install Agent Phases_ panels.
-* The _Installed Server Phases_ panel shows all phases that are installed on the Server daemon of the Machine. This panel is only shown if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System>>
+* The _Installed Server Phases_ panel shows all phases that are installed on the Server daemon of the Machine. This panel is only shown if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
 * The _Installed Agent Phases_ panel shows all phases that are installed on the Agent daemon of the Machine.
 
 +

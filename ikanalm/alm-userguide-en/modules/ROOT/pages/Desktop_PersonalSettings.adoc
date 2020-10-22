@@ -7,8 +7,8 @@ It is also the place where you store your personal search filters which you can 
 
 Refer to the following procedures for more information:
 
-* <<Desktop_PersonalSettings.adoc#_desktop_personalsettings_edit,Personal>>
-* <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining>>
+* <<Desktop_PersonalSettings.adoc#_desktop_personalsettings_edit,id==_desktop_personalsettings_edit--title==Personal Settings id==_desktop_personalsettings_edit--title==Editing Your Personal Settings>>
+* <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,id==_desktop_searchfilters--title==Defining Search Filters>>
 
 
 [[_desktop_personalsettings_edit]]
