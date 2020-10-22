@@ -4,13 +4,13 @@
 
 IKAN ALM currently supports different types of Version Control Repositories (VCR):
 
-* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,id==_globadm_vcr_svn--title==Version Control Repositories id==_globadm_vcr_svn--title==Subversion Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_git,id==_globadm_vcr_git--title==Git Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_cvs,id==_globadm_vcr_cvs--title==CVS Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_vss,id==_globadm_vcr_vss--title==Visual SourceSafe (VSS) Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase,id==_globadm_vcr_clearcase--title==ClearCase Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_,id==_globadm_vcr_pvcs_--title==PVCS Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc,id==_globadm_vcr_tfvc--title==TFVC Version Control Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,Version Control Repositories Subversion Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git,Git Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_cvs,CVS Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_vss,Visual SourceSafe (VSS) Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase,ClearCase Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_,PVCS Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc,TFVC Version Control Repositories>>
 
 
 The following sections explain how to define a VCR Repository so that the IKAN ALM Server can connect to it.
@@ -100,13 +100,13 @@ It allows displaying the History of all create, update and delete operations per
 +
 For more information, refer to the appropriate sections:
 
-* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,id==_globadm_vcr_svn--title==Version Control Repositories id==_globadm_vcr_svn--title==Subversion Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_git,id==_globadm_vcr_git--title==Git Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_cvs,id==_globadm_vcr_cvs--title==CVS Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_vss,id==_globadm_vcr_vss--title==Visual SourceSafe (VSS) Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase,id==_globadm_vcr_clearcase--title==ClearCase Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_,id==_globadm_vcr_pvcs_--title==PVCS Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc,id==_globadm_vcr_tfvc--title==TFVC Version Control Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,Version Control Repositories Subversion Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git,Git Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_cvs,CVS Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_vss,Visual SourceSafe (VSS) Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase,ClearCase Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_,PVCS Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc,TFVC Version Control Repositories>>
 
 
 [[_globadm_vcr_svn]]
@@ -246,7 +246,7 @@ a|_RELATED TOPICS_
 
 * <<#_globadm_vcr,>>
 * <<#_projadmin_projectsoverview_editing,>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,id==_globadm_projectcreate--title==Projects id==_globadm_projectcreate--title==Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
@@ -522,7 +522,7 @@ a|_RELATED TOPICS_
 
 * <<#_globadm_vcr,>>
 * <<#_projadmin_projectsoverview_editing,>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,id==_globadm_projectcreate--title==Projects id==_globadm_projectcreate--title==Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
@@ -798,7 +798,7 @@ a|_RELATED TOPICS_
 
 * <<#_globadm_vcr,>>
 * <<#_projadmin_projectsoverview_editing,>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,id==_globadm_projectcreate--title==Projects id==_globadm_projectcreate--title==Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
@@ -1062,7 +1062,7 @@ a|_RELATED TOPICS_
 
 * <<#_globadm_vcr,>>
 * <<#_projadmin_projectsoverview_editing,>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,id==_globadm_projectcreate--title==Projects id==_globadm_projectcreate--title==Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
@@ -1339,7 +1339,7 @@ a|_RELATED TOPICS_
 
 * <<#_globadm_vcr,>>
 * <<#_projadmin_projectsoverview_editing,>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,id==_globadm_projectcreate--title==Projects id==_globadm_projectcreate--title==Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
@@ -1615,7 +1615,7 @@ a|_RELATED TOPICS_
 
 * <<#_globadm_vcr,>>
 * <<#_projadmin_projectsoverview_editing,>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,id==_globadm_projectcreate--title==Projects id==_globadm_projectcreate--title==Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
@@ -1870,7 +1870,7 @@ a|_RELATED TOPICS_
 
 * <<#_globadm_vcr,>>
 * <<#_projadmin_projectsoverview_editing,>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,id==_globadm_projectcreate--title==Projects id==_globadm_projectcreate--title==Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 

@@ -36,7 +36,7 @@ The Transporter is also involved in the distribution process of Custom Phases fr
 Before the execution of the Level Phases for a Level Request, all non-released Custom Phases will be transported from the Phase Catalog to the execution environment on the IKAN ALM Server.
 This will be done using the Transporter that is linked to the IKAN ALM Server.
 Released Level Phases will only be transported if they are not yet installed on the IKAN ALM Server.
-You can check the installed Phases using the _Installed Phases_ link next to the IKAN ALM Server Machine on the __Machines Overview__. <<GlobAdm_Machines.adoc#_globadm_machinesoverview,id==_globadm_machinesoverview--title==Machines>>
+You can check the installed Phases using the _Installed Phases_ link next to the IKAN ALM Server Machine on the __Machines Overview__. <<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines>>
 * Build and Deploy Phases:
 +
 Before the execution of the Build/Deploy Phases for Build/Deploy, all non-released Custom Phases will be transported from the Phase Catalog on the IKAN ALM Server to the execution environment on the IKAN ALM Agent.
@@ -44,23 +44,23 @@ This will be done using the Transporter that is linked to the IKAN ALM Agent.
 Released Build/Deploy Phases will only be transported if they are not yet installed on the IKAN ALM Agent.
 You can check the installed Phases using the _Installed
 Phases_ link next to the IKAN ALM Agent Machine on the __Machines
-Overview__. <<GlobAdm_Machines.adoc#_globadm_machinesoverview,id==_globadm_machinesoverview--title==Machines>>
+Overview__. <<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines>>
 
 
-The relative locations for all remote transporters must be defined in the _System Settings_ section. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+The relative locations for all remote transporters must be defined in the _System Settings_ section. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 [NOTE]
 ====
-A Transporter will be activated by linking the Transporter to a Machine representing the IKAN ALM Agent (<<GlobAdm_Machines.adoc#_globadm_machinesoverview,id==_globadm_machinesoverview--title==Machines>>), and by linking that Machine to a Build or Deploy environment (<<#_pcreatebuildenvironment,>> or <<#_pcreatedeployenvironment,>>).
+A Transporter will be activated by linking the Transporter to a Machine representing the IKAN ALM Agent (<<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines>>), and by linking that Machine to a Build or Deploy environment (<<#_pcreatebuildenvironment,>> or <<#_pcreatedeployenvironment,>>).
 ====
 
 This chapter describes three different Transporters, each of them enabling different protocols for transferring sources, scripts or build results.
 
 Refer to the following sections for detailed information:
 
-* <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,id==_globadm_transporter_filecopy--title==FileCopy Transporters>>
-* <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp,id==_globadm_transporter_ftp--title==FTP Transporters>>
-* <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell,id==_globadm_transporter_secureshell--title==Secure Shell Transporters>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,FileCopy Transporters>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp,FTP Transporters>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell,Secure Shell Transporters>>
 
 
 [[_sglobadm_transporter_create]]
@@ -137,23 +137,23 @@ It allows displaying the History of all create, update and delete operations per
 +
 Refer to the following sections for detailed information:
 
-* <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,id==_globadm_transporter_filecopy--title==FileCopy Transporters>>
-* <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp,id==_globadm_transporter_ftp--title==FTP Transporters>>
-* <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell,id==_globadm_transporter_secureshell--title==Secure Shell Transporters>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,FileCopy Transporters>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp,FTP Transporters>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell,Secure Shell Transporters>>
 
 
 [[_globadm_transporter_filecopy]]
 === FileCopy Transporters 
 (((Transporters ,FileCopy)))  (((FileCopy Transporters))) 
 
-A FileCopy Transporter makes it possible to use "`file copy`" for transporting Custom Phases, files and directories between the IKAN ALM server and a local or remote Agent handling the Build or Deploy processes (see the introduction on <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>).
+A FileCopy Transporter makes it possible to use "`file copy`" for transporting Custom Phases, files and directories between the IKAN ALM server and a local or remote Agent handling the Build or Deploy processes (see the introduction on <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>).
 
 Since most transport actions are handled by the Agent (transport of Custom Level Phases is handled by the IKAN ALM Server), and the FileCopy Transporter enables the copying of resources between the Agent and the IKAN ALM server, different FileCopy Transporters must be defined for a local Agent (Machine) running on the IKAN ALM Server (Machine) and for a remote Agent (Machine) running on a server other than the IKAN ALM Server.
 
 The "Local FileCopy" Transporter is created automatically during the IKAN ALM installation and will be automatically connected to the IKAN ALM Server Machine.
 This "Local FileCopy" Transporter is different in this aspect that it cannot be edited, updated nor deleted on the __FileCopy Transporters Overview__.
 Its definition is retrieved from the System Settings`' _Local
-FileCopy Locations_ and can only be updated in the System Settings section. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+FileCopy Locations_ and can only be updated in the System Settings section. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 If you want to use FileCopy for transferring resources to a Machine (Agent) other than the IKAN ALM server, a (Remote) FileCopy Transporter must be created.
 Keep in mind that the specified prefix locations are a view of the IKAN ALM Agent Machine on the IKAN ALM Server Machine.
@@ -219,7 +219,7 @@ Fields marked with a red asterisk are mandatory.
 | Meaning
 
 |Work Copy Path Prefix
-a|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+a|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 _Example:_
 
@@ -236,14 +236,14 @@ If in the System Settings the Relative Work Copy location is defined as "workCop
 
 
 |Build Archive Path Prefix
-|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from by an IKAN ALM Agent handling a Build or Deploy process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from by an IKAN ALM Agent handling a Build or Deploy process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 For an example, refer to __Work Copy Path Prefix__.
 
 |Script Path Prefix
 |Enter the prefix for the Script Location (the location where the IKAN ALM Agent will retrieve the build or deploy script from, if it cannot be found in the sources).
 
-The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 For an example, refer to __Work Copy Path Prefix__.
 
@@ -263,8 +263,8 @@ The newly created FileCopy Transporter Definition is added to the _FileCopy Tran
 
 a|_RELATED TOPICS_
 
-* <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>
-* <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 * <<#_globadm_machines,>>
 * <<#_projadm_buildenvironments,>>
 * <<#_projadm_deployenvironments,>>
@@ -402,8 +402,8 @@ View__, refer to the section <<#_historyeventlogging,>>.
 
 a|_RELATED TOPICS_
 
-* <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>
-* <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 * <<#_globadm_machines,>>
 * <<#_projadm_buildenvironments,>>
 * <<#_projadm_deployenvironments,>>
@@ -496,7 +496,7 @@ FTP Server mapped to a hostname: ``ftp.ikan.be``.
 |Server FTP Port
 |Enter the Port Number of the FTP Server running on the IKAN ALM Server.
 
-_Note:_ The value entered in this field will override the value specified in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>If not specified in the System Settings nor on this screen, the default FTP Port Number `21` will be used.
+_Note:_ The value entered in this field will override the value specified in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>If not specified in the System Settings nor on this screen, the default FTP Port Number `21` will be used.
 
 |Connection Mode
 |Select the connection mode: _Passive_ or __Active__.
@@ -505,7 +505,7 @@ _Note:_ The value entered in this field will override the value specified in the
 |Choose the Directory Listing Style: _Unix_ or __Windows__.
 
 |Work Copy Path Prefix
-|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 _Example:_
 
@@ -514,7 +514,7 @@ If the FTP Server is configured to control the `E:/Ikan/alm/system` (Windows) or
 In that case, the sources will be copied to the Agent by a GET command from a subdirectory under `/workCopy` from the FTP Server.
 
 |Build Archive Path Prefix
-|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 _Example:_
 
@@ -523,7 +523,7 @@ If the FTP Server is configured to control the `E:/Ikan/alm/system` (Windows) or
 In that case, the build result will be copied from the Agent to the Build Archive by a PUT command into the subdirectory `/buildArchive` on the FTP Server.
 
 |Script Path Prefix
-|Enter the prefix for the Script Location (the location where the IKAN ALM Agent will retrieve the build or deploy script from if it cannot be found in the sources). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+|Enter the prefix for the Script Location (the location where the IKAN ALM Agent will retrieve the build or deploy script from if it cannot be found in the sources). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 _Example:_
 
@@ -545,8 +545,8 @@ The newly created FTP Transporter Definition is added to the _FTP Transporters O
 
 a|_RELATED TOPICS_
 
-* <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>
-* <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 * <<#_globadm_machines,>>
 * <<#_projadm_buildenvironments,>>
 * <<#_projadm_deployenvironments,>>
@@ -683,8 +683,8 @@ View__, refer to the section <<#_historyeventlogging,>>.
 
 a|_RELATED TOPICS_
 
-* <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>
-* <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 * <<#_globadm_machines,>>
 * <<#_projadm_buildenvironments,>>
 * <<#_projadm_deployenvironments,>>
@@ -793,10 +793,10 @@ It allows you to define the hostname of the IKAN ALM Server Machine in case it i
 |Server SSH Port
 |Enter the Port Number of the SSH Server running on the IKAN ALM Server.
 
-_Note:_ The value entered in this field will overrule the value specified in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>If not specified in the System Settings nor on this screen, the default SSH Port Number `22` will be used.
+_Note:_ The value entered in this field will overrule the value specified in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>If not specified in the System Settings nor on this screen, the default SSH Port Number `22` will be used.
 
 |Work Copy Path Prefix
-|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 _Example 1:_
 
@@ -815,13 +815,13 @@ System Settings: the Local FileCopy Work Copy location being defined as `/opt/ik
 The IKAN ALM Agent will try to Secure Copy the sources from a location under ``/opt/ikan/alm/workCopy``.
 
 |Build Archive Path Prefix
-|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 For an example, refer to __Work Copy Path Prefix__.
 
 |Script Path Prefix
 |Enter the prefix for the Script Location.
-The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 For an example, refer to __Work Copy Path Prefix__.
 
@@ -840,8 +840,8 @@ The newly created Secure Shell Transporter is added to the _Secure Shell Transpo
 
 a|_RELATED TOPICS_
 
-* <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>
-* <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 * <<#_globadm_machines,>>
 * <<#_projadm_buildenvironments,>>
 * <<#_projadm_deployenvironments,>>
@@ -978,8 +978,8 @@ View__, refer to the section <<#_historyeventlogging,>>.
 
 a|_RELATED TOPICS_
 
-* <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>
-* <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 * <<#_globadm_machines,>>
 * <<#_projadm_buildenvironments,>>
 * <<#_projadm_deployenvironments,>>

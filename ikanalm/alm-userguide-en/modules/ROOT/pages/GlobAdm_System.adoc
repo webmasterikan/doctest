@@ -5,16 +5,16 @@ The _System_ menu provides an entry to view or edit the IKAN ALM Server configur
 
 Users which have Global Admin Access rights will have access to the following Submenus:
 
-* <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
-* <<GlobAdm_System.adoc#_globadm_system_housekeeping,id==_globadm_system_housekeeping--title==Housekeeping>>
-* <<GlobAdm_System.adoc#_globadm_system_housekeepinghistory,id==_globadm_system_housekeepinghistory--title==Housekeeping History>>
-* <<GlobAdm_System.adoc#_globadm_system_synchronizebuildarchive,id==_globadm_system_synchronizebuildarchive--title==Synchronize Build Archive>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+* <<GlobAdm_System.adoc#_globadm_system_housekeeping,Housekeeping>>
+* <<GlobAdm_System.adoc#_globadm_system_housekeepinghistory,Housekeeping History>>
+* <<GlobAdm_System.adoc#_globadm_system_synchronizebuildarchive,Synchronize Build Archive>>
 
 
 Users who do not have Global Admin Access rights will only have access to the following Submenus:
 
-* <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
-* <<GlobAdm_System.adoc#_globadm_system_housekeepinghistory,id==_globadm_system_housekeepinghistory--title==Housekeeping History>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+* <<GlobAdm_System.adoc#_globadm_system_housekeepinghistory,Housekeeping History>>
 
 
 [[_globadm_system_settings]]
@@ -44,10 +44,10 @@ If you do not have Global Administrator access rights in IKAN ALM, you will not 
 +
 The following subpanels are available:
 
-* <<GlobAdm_System.adoc#_globadm_systemsettings_localenvironment,id==_globadm_systemsettings_localenvironment--title==Local Environment>>
-* <<GlobAdm_System.adoc#_globadm_systemsettings_security,id==_globadm_systemsettings_security--title==Security>>
-* <<GlobAdm_System.adoc#_globadm_systemsettings_mail,id==_globadm_systemsettings_mail--title==Mail>>
-* <<GlobAdm_System.adoc#_globadm_systemsettings_miscellaneous,id==_globadm_systemsettings_miscellaneous--title==Miscellaneous>>
+* <<GlobAdm_System.adoc#_globadm_systemsettings_localenvironment,Local Environment>>
+* <<GlobAdm_System.adoc#_globadm_systemsettings_security,Security>>
+* <<GlobAdm_System.adoc#_globadm_systemsettings_mail,Mail>>
+* <<GlobAdm_System.adoc#_globadm_systemsettings_miscellaneous,Miscellaneous>>
 
 +
 Underneath the _Edit System Settings_ panel, you will find the image:images/icons/history.gif[,15,15] _ History_ link.
@@ -80,7 +80,7 @@ Changing this field requires preliminary actions, like installing the IKAN ALM S
 File Copy Locations_
 |These fields are used for Build and Deploy actions.
 
-These locations are automatically synchronized with the built-in Local FileCopy transporter. <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,id==_globadm_transporter_filecopy--title==FileCopy Transporters>>
+These locations are automatically synchronized with the built-in Local FileCopy transporter. <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,FileCopy Transporters>>
 
 |Work Copy Location
 |This field contains the path to the Work Copy Location.
@@ -122,7 +122,7 @@ The complete path will be assembled as follows: the prefix path (as specified in
 
 Remote Transporters are activated by defining them as the Transporter Protocol when specifying the settings for a Machine. 
 
-For more information, refer to the sections <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>and <<#_globadm_machines,>>.
+For more information, refer to the sections <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>and <<#_globadm_machines,>>.
 
 |Work Copy Location
 |This field contains the location of the Work Copy displayed as a remote location.
@@ -216,7 +216,7 @@ Settings for connecting to an external mail system can also be defined on the Ma
 [NOTE]
 ====
 Theses Mail settings can be tested via the _Notify
-IKAN ALM Users_ submenu option. <<GlobAdm_Misc.adoc#_globadm_notifyusers,id==_globadm_notifyusers--title==Notifying IKAN ALM Users>>
+IKAN ALM Users_ submenu option. <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notifying IKAN ALM Users>>
 ====
 
 
@@ -308,7 +308,7 @@ The following fields are available on the _Miscellanous_ subpanel:
 | Meaning
 
 |Auto Refresh Rate
-|In this field, you can enter the number of seconds for the automatic refresh function on the <<Desktop_ManageDesktop.adoc#_managedesktop_desktopoverview>>, <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen>> and <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,id==_desktop_lr_buildhistory--title==Build History Screen>>.
+|In this field, you can enter the number of seconds for the automatic refresh function on the <<Desktop_ManageDesktop.adoc#_managedesktop_desktopoverview>>, <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen>> and <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build History Screen>>.
 
 As a result, these overview screens will be refreshed each time the interval expires (if the user has activated the <<Desktop_AutoRefresh.adoc#_desktop_autorefresh>>).
 
@@ -368,7 +368,7 @@ On top of the screen, the _Build Archive Info_ panel displays the following info
 [NOTE]
 ====
 The _Build Archive Info_ is based on hardware data obtained from the Build Archive location on the IKAN ALM Server.
-This Build Archive location is defined in the _Local Environment_ tab of the System Settings. <<GlobAdm_System.adoc#_globadm_systemsettings_localenvironment,id==_globadm_systemsettings_localenvironment--title==Local Environment>>
+This Build Archive location is defined in the _Local Environment_ tab of the System Settings. <<GlobAdm_System.adoc#_globadm_systemsettings_localenvironment,Local Environment>>
 ====
 +
 
@@ -526,7 +526,7 @@ The _Build Files Overview_ panel lists the following information for each displa
 | Description
 
 |View Content
-|Click the image:images/icons/view.gif[,15,15] _View_ link to view the content of the Build File. <<Desktop_LevelRequests.adoc#_desktop_lr_results,id==_desktop_lr_results--title==Results>>
+|Click the image:images/icons/view.gif[,15,15] _View_ link to view the content of the Build File. <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
 
 |File Name
 |The name of the Build File.
@@ -553,7 +553,7 @@ The _Build Files Overview_ panel lists the following information for each displa
 |This field displays the Level Request OID of the Build.
 Click the link to display the details for this Level Request.
 
-<<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>
+<<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>
 
 |Level Request Status
 |This field contains the Level Request Status. <<#_desktop_lr_overviewscreen,>>

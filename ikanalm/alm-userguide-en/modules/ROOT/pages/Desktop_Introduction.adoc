@@ -17,6 +17,6 @@ This section describes the following Desktop Administration tasks:
 * <<#_desktop_levelrequests,>>
 * <<#_desktop_packages,>> and <<#_desktop_packagegroups,>>
 * <<#_desktop_outstandingapprovals,>>
-* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,id==_desktop_managedesktop--title==Managing the Desktop>>
-* <<UserInterface.adoc#_desktop_autorefresh,id==_desktop_autorefresh--title==Auto Refresh>>
+* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
+* <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
 * <<#_desktop_personalsettings,>>

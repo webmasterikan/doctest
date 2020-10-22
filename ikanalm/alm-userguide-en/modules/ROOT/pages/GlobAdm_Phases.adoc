@@ -19,7 +19,7 @@ There are two options:
 
 Refer to the following sections for detailed information:
 
-* <<GlobAdm_Phases.adoc#_globadm_phases_creating,id==_globadm_phases_creating--title==Phases>>
+* <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>
 * <<#_globadm_phases_overview,>>
 * <<#_globadm_phases_editing,>>
 * <<#_globadm_phaseparameters_overview,>>
@@ -182,7 +182,7 @@ When clicking the _Create_ button, the Phase is created in the Phase Catalog and
 
 [NOTE]
 ====
-The location of the Phase Catalog is specified in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+The location of the Phase Catalog is specified in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 ====
 +
 You can also click _Reset_ to clear the fields and restore its initial values.
@@ -193,11 +193,11 @@ You can also click _Reset_ to clear the fields and restore its initial values.
 
 a|_RELATED TOPICS_
 
-* <<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,id==_levelenvmgt_levelphases--title==Level Phases>>
+* <<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Level Phases>>
 * <<#_plevelenvmgt_insertphase,>>
-* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phases,id==_projadm_buildenv_phases--title==Build Environment Phases>>
-* <<ProjAdm_DeployEnv.adoc#_projadm_deplanv_phases,id==_projadm_deplanv_phases--title==Deploy Environment Phases>>
-* Phase Catalog settings. <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phases,Build Environment Phases>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deplanv_phases,Deploy Environment Phases>>
+* Phase Catalog settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 
 |===
 
@@ -221,7 +221,7 @@ You can also:
 * click the _Reset search_ link to clear the search fields.
 . Verify the information on the _Phases Overview_ panel.
 +
-For a detailed description of the fields, refer to <<GlobAdm_Phases.adoc#_globadm_phases_creating,id==_globadm_phases_creating--title==Phases>>and <<#_globadm_phases_editing,>>.
+For a detailed description of the fields, refer to <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>and <<#_globadm_phases_editing,>>.
 . Depending on your access rights, the following links may be available on the _Phases Overview_ panel:
 +
 
@@ -304,7 +304,7 @@ The _Edit Phase_ pop-up window is displayed.
 +
 image::images/GlobAdm-Phases-Edit-popup.png[,573,626] 
 +
-For a description of the fields, refer to <<GlobAdm_Phases.adoc#_globadm_phases_creating,id==_globadm_phases_creating--title==Phases>>.
+For a description of the fields, refer to <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>.
 +
 The following additional fields are displayed on this screen:
 +
@@ -369,7 +369,7 @@ The new uploaded files will only be persisted when you click the _Save_ button.
 To redisplay the originally uploaded files, click the _Refresh_ button.
 ====
 +
-For more information on uploading files, refer to the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,id==_globadm_phases_creating--title==Phases>>.
+For more information on uploading files, refer to the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>.
 
 . Verify the Phase parameters.
 +
@@ -430,7 +430,7 @@ For more information on mass replacing and mass deleting Phases, refer also to t
 +
 When clicking the _Save_ button, the Phase`'s data are persisted and you will be redirected to the _Phases Overview_ screen.
 +
-Meanwhile, IKAN ALM re-packages the uploaded files in a .jar file and replaces the existing .jar file in the Phase Catalog location (as defined in the System Settings (<<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>) with the new .jar file.
+Meanwhile, IKAN ALM re-packages the uploaded files in a .jar file and replaces the existing .jar file in the Phase Catalog location (as defined in the System Settings (<<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>) with the new .jar file.
 There, it is ready to be picked up by an IKAN ALM Server or Agent Daemon process when the Phase needs to be (re-)installed on an IKAN ALM Server or Agent.
 +
 You can also click:
@@ -996,7 +996,7 @@ image::images/GlobAdm-Phases-Copy.png[,1005,886]
 +
 . Modify the fields as required.
 +
-For a description of the fields, refer to the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,id==_globadm_phases_creating--title==Phases>>.
+For a description of the fields, refer to the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>.
 +
 
 [NOTE]
@@ -1057,7 +1057,7 @@ image::images/GlobAdm-Phases-Import-Success.png[,1011,785]
 . Verify the properties of the Phase to be imported.
 +
 All the properties of the Phase will be shown in the fields.
-For a description of the fields, refer to the sections <<GlobAdm_Phases.adoc#_globadm_phases_creating,id==_globadm_phases_creating--title==Phases>>and <<#_globadm_phases_editing,>>.
+For a description of the fields, refer to the sections <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>and <<#_globadm_phases_editing,>>.
 +
 The scripts and other files contained within the Phase are shown in the _Uploaded Files_ field.
 +
@@ -1066,6 +1066,6 @@ The _Import Phase Parameters_ panel shows the defined Parameters of the Phase th
 . Click _Import_ to import the Phase.
 +
 When clicking __Import__, the Phase and its Parameters are created in the IKAN ALM database.
-The scripts and other files contained within the Phase are packaged into a .jar file and copied to the Phase Catalog location (as defined in the <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>).
+The scripts and other files contained within the Phase are packaged into a .jar file and copied to the Phase Catalog location (as defined in the <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>).
 +
 You can also click _Overview_ to return to the _Phases Overview_ screen without importing the Phase.

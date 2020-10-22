@@ -12,7 +12,7 @@ When the Global Administrator creates a Project, he or she will also have to def
 The _Project Stream_ submenu option lets you start the following procedures:
 
 * <<#_projadmin_projectstream_createbranch,>>
-* Modifying the Project Stream definition via the <<ProjAdm_ProjMgt_ProjectStream.adoc#_projectstreams_overviewscreen,id==_projectstreams_overviewscreen--title==Project Streams Overview>>
+* Modifying the Project Stream definition via the <<ProjAdm_ProjMgt_ProjectStream.adoc#_projectstreams_overviewscreen,Project Streams Overview>>
 
 
 The _Project Streams Overview_ screen lets you verify and change the information concerning Project Streams.

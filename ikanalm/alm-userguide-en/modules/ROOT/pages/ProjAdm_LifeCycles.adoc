@@ -24,20 +24,20 @@ The BASE Lifecycle cannot be reused in other (Branch) Project Streams, so a new 
 The _Lifecycles_ submenu option lets you start the following procedures:
 
 * <<#_plifecyclemgt_createlifecycle,>>
-* <<ProjAdm_LifeCycles.adoc#_lifecyclemgt_screen,id==_lifecyclemgt_screen--title==Lifecycles Overview Screen>>
+* <<ProjAdm_LifeCycles.adoc#_lifecyclemgt_screen,Lifecycles Overview Screen>>
 
 
 The _Lifecycles Overview_ screen lets you verify and change the information concerning Lifecycles and their related Levels.
 The following actions are possible:
 
 * Modifying Lifecycle definitions
-** <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,id==_plifecyclemgt_editlifecycle--title==Editing a Lifecycle>>
+** <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,Editing a Lifecycle>>
 ** <<#_plifecyclemgt_deletelifecycle,>>
 * Modifying the contents of a Lifecycle
-** <<ProjAdm_LifeCycles.adoc#_lifecycles_creatingadditionallevels,id==_lifecycles_creatingadditionallevels--title==Creating Additional Levels>>
-** <<ProjAdm_LifeCycles.adoc#_lifecycles_insertingexistinglevel,id==_lifecycles_insertingexistinglevel--title==Inserting an Existing Level>>
-** <<ProjAdm_LifeCycles.adoc#_lifecycles_changingorderlevels,id==_lifecycles_changingorderlevels--title==Changing the order of the Levels>>
-** <<ProjAdm_LifeCycles.adoc#_lifecycles_makingoptional,id==_lifecycles_makingoptional--title==Making a Level optional or required>>
+** <<ProjAdm_LifeCycles.adoc#_lifecycles_creatingadditionallevels,Creating Additional Levels>>
+** <<ProjAdm_LifeCycles.adoc#_lifecycles_insertingexistinglevel,Inserting an Existing Level>>
+** <<ProjAdm_LifeCycles.adoc#_lifecycles_changingorderlevels,Changing the order of the Levels>>
+** <<ProjAdm_LifeCycles.adoc#_lifecycles_makingoptional,Making a Level optional or required>>
 ** <<#_lifecyclemgt_enableoptionaldeploys,>>
 * Modifying Levels connected to the Lifecycle
 ** <<#_plifecyclemgt_editlevelsettings,>>
@@ -93,14 +93,14 @@ The new Lifecycle is added to the list of Lifecycles for the selected Project.
 +
 Underneath the _Create Lifecycle_ panel, you will find an overview of the existing Lifecycles.
 +
-For more information on this panel, refer to <<ProjAdm_LifeCycles.adoc#_lifecyclemgt_screen,id==_lifecyclemgt_screen--title==Lifecycles Overview Screen>>.
+For more information on this panel, refer to <<ProjAdm_LifeCycles.adoc#_lifecyclemgt_screen,Lifecycles Overview Screen>>.
 . Click the Create button to create the Lifecycle.
 +
 The _Edit Lifecyle_ screen is displayed.
 +
 image::images/ProjAdmin-LifeCycles-EditLifecycle-Popup.png[,481,266] 
 +
-For more information, refer to the section <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,id==_plifecyclemgt_editlifecycle--title==Editing a Lifecycle>>.
+For more information, refer to the section <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,Editing a Lifecycle>>.
 
 
 [[_lifecyclemgt_screen]]
@@ -110,7 +110,7 @@ The _Lifecycles Overview_ screen lets you verify and change the information conc
 The following actions are possible:
 
 * Modifying Lifecycle definitions
-** <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,id==_plifecyclemgt_editlifecycle--title==Editing a Lifecycle>>
+** <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,Editing a Lifecycle>>
 ** <<#_plifecyclemgt_deletelifecycle,>>
 ** <<#_lifecyclemgt_historyview,>>
 
@@ -147,7 +147,7 @@ For a description of the fields, refer to the section <<#_plifecyclemgt_createli
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
 It allows editing the Lifecycle definition.
 
-<<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,id==_plifecyclemgt_editlifecycle--title==Editing a Lifecycle>>
+<<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,Editing a Lifecycle>>
 
 |image:images/icons/delete.gif[,15,15] 
 |Delete
@@ -168,7 +168,7 @@ It allows to display the History of all create, update and delete operations per
 +
 . Verify the information on the _Defined Levels_ panel. 
 +
-For more information, refer to the section <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,id==_plifecyclemgt_editlifecycle--title==Editing a Lifecycle>>.
+For more information, refer to the section <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,Editing a Lifecycle>>.
 
 
 [[_plifecyclemgt_editlifecycle]]
@@ -209,11 +209,11 @@ For more information, refer to the section <<#_projadm_levels,>>.
 +
 For more information, refer to the sections: 
 
-* <<ProjAdm_LifeCycles.adoc#_lifecycles_definedlevels,id==_lifecycles_definedlevels--title==Defined Levels Panel>>
-* <<ProjAdm_LifeCycles.adoc#_lifecycles_creatingadditionallevels,id==_lifecycles_creatingadditionallevels--title==Creating Additional Levels>>
-* <<ProjAdm_LifeCycles.adoc#_lifecycles_insertingexistinglevel,id==_lifecycles_insertingexistinglevel--title==Inserting an Existing Level>>
-* <<ProjAdm_LifeCycles.adoc#_lifecycles_changingorderlevels,id==_lifecycles_changingorderlevels--title==Changing the order of the Levels>>
-* <<ProjAdm_LifeCycles.adoc#_lifecycles_makingoptional,id==_lifecycles_makingoptional--title==Making a Level optional or required>>
+* <<ProjAdm_LifeCycles.adoc#_lifecycles_definedlevels,Defined Levels Panel>>
+* <<ProjAdm_LifeCycles.adoc#_lifecycles_creatingadditionallevels,Creating Additional Levels>>
+* <<ProjAdm_LifeCycles.adoc#_lifecycles_insertingexistinglevel,Inserting an Existing Level>>
+* <<ProjAdm_LifeCycles.adoc#_lifecycles_changingorderlevels,Changing the order of the Levels>>
+* <<ProjAdm_LifeCycles.adoc#_lifecycles_makingoptional,Making a Level optional or required>>
 * <<#_lifecyclemgt_enableoptionaldeploys,>>
 
 
@@ -395,14 +395,14 @@ You can use this _Set Required_ link to make the Level required again.
 
 ===== Enabling or Disabling Optional Deploys
 
-If you enable the __Optional Deploys __functionality on a Level, you will be able to skip Deploys to specific Deploy Environments at the moment you create a Level Request (The Action Type may be (Re)Deliver Build or Rollback Build). See also <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,id==_desktop_lr_creatinglevelrequest--title==Creating Level Requests>>.
+If you enable the __Optional Deploys __functionality on a Level, you will be able to skip Deploys to specific Deploy Environments at the moment you create a Level Request (The Action Type may be (Re)Deliver Build or Rollback Build). See also <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating Level Requests>>.
 
 This can be useful, for example, if you execute a Level Request with multiple Deploys and one of the (non-blocking) Deploys fails.
 With this option, it will be possible to execute the Level Request while skipping the failing Deploy and still continue to the next step in the Lifecycle. 
 
 [NOTE]
 ====
-In case Deploys are skipped, the status of the Level Request will be set to warning (even if it executed successfully). See also <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,id==_desktop_lr_phaselogs--title==Phase Logs>>.
+In case Deploys are skipped, the status of the Level Request will be set to warning (even if it executed successfully). See also <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase Logs>>.
 ====
 . Switch to the _Lifecycles Overview_ screen.
 +

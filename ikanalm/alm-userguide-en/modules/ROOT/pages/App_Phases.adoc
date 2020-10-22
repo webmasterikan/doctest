@@ -27,9 +27,9 @@ You may create them from scratch in Global Administration, based on one or more 
 
 We also distinguish 3 types of Phases in IKAN ALM, depending on where they are being used:
 
-* <<App_Phases.adoc#_phases_levelphases,id==_phases_levelphases--title==Level Phases>>: phases inserted into the Level workflow. They will be executed on the IKAN ALM Server.
-* <<App_Phases.adoc#_phases_buildphases,id==_phases_buildphases--title==Build Phases>>: phases inserted into the Build Environment workflow. They will be executed on an IKAN ALM Agent.
-* <<App_Phases.adoc#_phases_deployphases,id==_phases_deployphases--title==Deploy Phases>>: phases inserted into the Deploy Environment workflow. They will be executed on an IKAN ALM Agent.
+* <<App_Phases.adoc#_phases_levelphases,Level Phases>>: phases inserted into the Level workflow. They will be executed on the IKAN ALM Server.
+* <<App_Phases.adoc#_phases_buildphases,Build Phases>>: phases inserted into the Build Environment workflow. They will be executed on an IKAN ALM Agent.
+* <<App_Phases.adoc#_phases_deployphases,Deploy Phases>>: phases inserted into the Deploy Environment workflow. They will be executed on an IKAN ALM Agent.
 
 
 A Level Request represents the execution of a Level.
@@ -62,7 +62,7 @@ All types of Phases inserted into the workflow of a Level/Build/Deploy Environme
 |This field, together with the Phase name, forms the unique identifier of the Phase.
 The version of the Core Phases matches the IKAN ALM version (e.g., 5.5.0).
 
-The version of Custom Phases conforms to the format as explained in the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,id==_globadm_phases_creating--title==Phases>>.
+The version of Custom Phases conforms to the format as explained in the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>.
 
 |Next Phase On Success (Phase Position)
 |This field defines which Phase should be executed next if the current Phase completes successfully.
@@ -84,7 +84,7 @@ Possible values:
 |===
 
 
-For more information on defining and configuring Phases, refer to the following sections: <<#_plevelenvmgt_editlevelphases,>>, <<#_projadm_buildenv_editphase,>>, <<#_projadm_deployenv_phaseedit,>>, <<GlobAdm_Phases.adoc#_globadm_phases_creating,id==_globadm_phases_creating--title==Phases>>and <<#_globadm_phases_editing,>>.
+For more information on defining and configuring Phases, refer to the following sections: <<#_plevelenvmgt_editlevelphases,>>, <<#_projadm_buildenv_editphase,>>, <<#_projadm_deployenv_phaseedit,>>, <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>and <<#_globadm_phases_editing,>>.
 
 When executing a Phase, it can have the following status:
 
@@ -113,7 +113,7 @@ When executing a Phase, it can have the following status:
 |===
 
 
-The execution of a Phase can be viewed on the <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,id==_desktop_lr_phaselogs--title==Phase Logs>> tab page on the _Level Request Detail_ screen.
+The execution of a Phase can be viewed on the <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase Logs>> tab page on the _Level Request Detail_ screen.
 
 [[_phases_levelphases]]
 === Level Phases 
@@ -126,8 +126,8 @@ You can search for them in the _Phases
 Overview_ by restricting the search to Core Phases that can be used on a Level.
 Next to those Core Phases, you may enrich the functionality of IKAN ALM by creating your own Custom Phases which can be used on a Level.
 
-Level Phases may be inserted into the workflow of a Level (<<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,id==_levelenvmgt_levelphases--title==Level Phases>>) and are logged on the _Phase Logs_ panel of the _Level
-Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,id==_desktop_lr_phaselogs_levelphases--title==Level Phases>>).
+Level Phases may be inserted into the workflow of a Level (<<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Level Phases>>) and are logged on the _Phase Logs_ panel of the _Level
+Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,Level Phases>>).
 
 They are executed by the Monitor Thread of the IKAN ALM Server, so they run on the IKAN ALM Server Machine!
 
@@ -135,19 +135,19 @@ Their exact behavior may depend on the Level Type, and on the status of previous
 
 The following section describes each of the Core Level Phases in detail:
 
-* <<App_Phases.adoc#_phases_levelphases_retrievecode,id==_phases_levelphases_retrievecode--title==Retrieve Code Phase>>
-* <<App_Phases.adoc#_phases_levelphases_build,id==_phases_levelphases_build--title==Build Phase>>
-* <<App_Phases.adoc#_phases_levelphases_tagcode,id==_phases_levelphases_tagcode--title==Tag Code Phase>>
-* <<App_Phases.adoc#_phases_levelphases_deploy,id==_phases_levelphases_deploy--title==Deploy Phase>>
-* <<App_Phases.adoc#_phases_levelphases_issuetracking,id==_phases_levelphases_issuetracking--title==Issue Tracking Phase>>
-* <<App_Phases.adoc#_phases_levelphases_linkfilerevisions,id==_phases_levelphases_linkfilerevisions--title==Link File Revisions>>
-* <<App_Phases.adoc#_phases_levelphases_cleanupworkcopy,id==_phases_levelphases_cleanupworkcopy--title==Cleanup Work Copy Phase>>
-* <<App_Phases.adoc#_phases_levelphases_executescriptphase,id==_phases_levelphases_executescriptphase--title==Execute Script Phase>>
+* <<App_Phases.adoc#_phases_levelphases_retrievecode,Retrieve Code Phase>>
+* <<App_Phases.adoc#_phases_levelphases_build,Build Phase>>
+* <<App_Phases.adoc#_phases_levelphases_tagcode,Tag Code Phase>>
+* <<App_Phases.adoc#_phases_levelphases_deploy,Deploy Phase>>
+* <<App_Phases.adoc#_phases_levelphases_issuetracking,Issue Tracking Phase>>
+* <<App_Phases.adoc#_phases_levelphases_linkfilerevisions,Link File Revisions>>
+* <<App_Phases.adoc#_phases_levelphases_cleanupworkcopy,Cleanup Work Copy Phase>>
+* <<App_Phases.adoc#_phases_levelphases_executescriptphase,Execute Script Phase>>
 
 
 Next to the Core Level Phases, you can create your own Custom Level Phases:
 
-* <<App_Phases.adoc#_phases_levelphases_customlevelphase,id==_phases_levelphases_customlevelphase--title==Custom Level Phase>>
+* <<App_Phases.adoc#_phases_levelphases_customlevelphase,Custom Level Phase>>
 
 
 [[_phases_levelphases_retrievecode]]
@@ -164,7 +164,7 @@ See the description of the _VCR
 Tag_ field in the section <<#_desktop_lr_createlevelrequest_build,>>.
 
 The _Retrieve Code_ Phase also retrieves the source code and/or the build results of all Child Builds this Level Request is depending on.
-See <<Desktop_LevelRequests.adoc#_desktop_lr_viewdependency,id==_desktop_lr_viewdependency--title==Build Dependencies>>.
+See <<Desktop_LevelRequests.adoc#_desktop_lr_viewdependency,Build Dependencies>>.
 
 In the case of a Partial Build, (<<#_projadmin_projectstream_createbranch,>>), only the modified source code will be retrieved and made available to the Agents running the Builds of the Level Request.
 
@@ -234,7 +234,7 @@ In that case, you could remove the _Deploy_ Phase from the Level`'s workflow.
 
 The _Issue Tracking_ Phase links Issues, managed in an external Issue Tracking System, with a Level Request, by searching for references to the Issues in the commit comments of the VCR.
 
-In the case of a Build Level Request, the Issue Tracking Phase parses the commit comments that have been entered since the last successful Level Request for that Level and tries to match the Issue Pattern of the attached Issue Tracking System (<<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,id==_globadm_issuetrackingcreate--title==Issue Tracking id==_globadm_issuetrackingcreate--title==Creating an Issue Tracking System>>). All found Issues will be attached to the Level Request.
+In the case of a Build Level Request, the Issue Tracking Phase parses the commit comments that have been entered since the last successful Level Request for that Level and tries to match the Issue Pattern of the attached Issue Tracking System (<<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue Tracking Creating an Issue Tracking System>>). All found Issues will be attached to the Level Request.
 
 For an Atlassian JIRA, HP Quality Center or CollabNet TeamForge Issue Tracking System, the Issue Tracking Phase will also connect to and try to identify the issues in JIRA, HP ALM or TeamForge.
 For each identified Issue, it will try to get additional information from JIRA, HP ALM or TeamForge (like description, status, owner and priority) and store it in IKAN ALM.
@@ -297,9 +297,9 @@ Note that this Phase is never inserted into the default workflow of a Level (i.e
 When the script is executed successfully, the _Execute
 Script_ Phase exits with status __Success__.
 If not, it exits with status _Error_ and logs the errors on the _Phase Logs_ panel of the _Level
-Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,id==_desktop_lr_phaselogs_levelphases--title==Level Phases>>).
+Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,Level Phases>>).
 
-Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,id==_globadm_phases_creating--title==Phases>>) and specify that they may be used on a Level.
+Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>) and specify that they may be used on a Level.
 Once inserted into the workflow of a Level, we call them Custom Level Phases.
 
 [[_phases_levelphases_customlevelphase]]
@@ -323,7 +323,7 @@ Note that this Phase is never inserted into the default workflow of a Level (i.e
 When the script is executed successfully, the _Custom
 Level_ Phase exits with status __Success__.
 If not, it exits with status _Error_ and logs the errors on the _Phase Logs_ panel of the _Level
-Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,id==_desktop_lr_phaselogs_levelphases--title==Level Phases>>).
+Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,Level Phases>>).
 
 [NOTE]
 ====
@@ -340,27 +340,27 @@ You can search for them in the __Phases
 Overview__, by restricting the search to Core Phases that can be used on a Build Environment.
 Next to those Core Phases, you may enrich the functionality of IKAN ALM by creating your own Custom Phases that can be used on a Build Environment.
 
-Build Phases may be inserted into a Build Environment (<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phases,id==_projadm_buildenv_phases--title==Build Environment Phases>>). Their actions during the handling of a Build are logged on the _Phase
-Logs_ tab page of the _Level Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,id==_desktop_lr_phaselogs_buildactions--title==Build Actions>>). 
+Build Phases may be inserted into a Build Environment (<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phases,Build Environment Phases>>). Their actions during the handling of a Build are logged on the _Phase
+Logs_ tab page of the _Level Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,Build Actions>>). 
 
 They are executed by the Builder Thread of the IKAN ALM Agent, so they run on an IKAN ALM Agent Machine!
 
 The following section describes each of the Core Build Phases in detail:
 
-* <<App_Phases.adoc#_babfgbhf,id==_babfgbhf--title==Transport Source Phase>>
-* <<App_Phases.adoc#_babcijhh,id==_babcijhh--title==Verify Build Script Phase>>
-* <<App_Phases.adoc#_phases_buildphases_executebuildscript,id==_phases_buildphases_executebuildscript--title==Execute Script Phase>>
-* <<App_Phases.adoc#_phases_buildphases_transportdesployscript,id==_phases_buildphases_transportdesployscript--title==Transport Deploy Script Phase>>
-* <<App_Phases.adoc#_phases_buildphases_transportpackagerersults,id==_phases_buildphases_transportpackagerersults--title==Transport Package Results Phase>>
-* <<App_Phases.adoc#_phases_buildphases_compressbuild,id==_phases_buildphases_compressbuild--title==Compress Build Phase>>
-* <<App_Phases.adoc#_phases_buildphases_archiveresult,id==_phases_buildphases_archiveresult--title==Archive Result Phase>>
-* <<App_Phases.adoc#_phases_buildphases_cleanupsource,id==_phases_buildphases_cleanupsource--title==Cleanup Source Phase>>
-* <<App_Phases.adoc#_phases_buildphases_cleanupresult,id==_phases_buildphases_cleanupresult--title==Cleanup Result Phase>>
+* <<App_Phases.adoc#_babfgbhf,Transport Source Phase>>
+* <<App_Phases.adoc#_babcijhh,Verify Build Script Phase>>
+* <<App_Phases.adoc#_phases_buildphases_executebuildscript,Execute Script Phase>>
+* <<App_Phases.adoc#_phases_buildphases_transportdesployscript,Transport Deploy Script Phase>>
+* <<App_Phases.adoc#_phases_buildphases_transportpackagerersults,Transport Package Results Phase>>
+* <<App_Phases.adoc#_phases_buildphases_compressbuild,Compress Build Phase>>
+* <<App_Phases.adoc#_phases_buildphases_archiveresult,Archive Result Phase>>
+* <<App_Phases.adoc#_phases_buildphases_cleanupsource,Cleanup Source Phase>>
+* <<App_Phases.adoc#_phases_buildphases_cleanupresult,Cleanup Result Phase>>
 
 
 Next to the Core Build Phases, you can create your own Custom Build Phases:
 
-* <<App_Phases.adoc#_phases_buildphases_custombuildphase,id==_phases_buildphases_custombuildphase--title==Custom Build Phase>>
+* <<App_Phases.adoc#_phases_buildphases_custombuildphase,Custom Build Phase>>
 
 
 [[_babfgbhf]]
@@ -373,7 +373,7 @@ When doing a Partial Build, the Transport Source Phase may also transport the bu
 Set the __alm.phase.transport.source.partialBuild.copyPreviousBuildResult __(Environment) Phase Parameter to _true_ to obtain this behavior.
 Note that the default value of this Parameter is __false__.
 
-See also <<App_Phases.adoc#_phases_levelphases_retrievecode,id==_phases_levelphases_retrievecode--title==Retrieve Code Phase>>.
+See also <<App_Phases.adoc#_phases_levelphases_retrievecode,Retrieve Code Phase>>.
 
 [[_babcijhh]]
 ==== Verify Build Script Phase 
@@ -387,7 +387,7 @@ If not, it will look for the Build Script defined on the Project (<<#_projadmin_
 
 Then, it tries to find the Build Script in the Build Environment`'s Source Location.
 
-If not found, it tries to copy the Build Script from the IKAN ALM Script Location as defined in the System Settings (<<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>).
+If not found, it tries to copy the Build Script from the IKAN ALM Script Location as defined in the System Settings (<<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>).
 
 If not found there either, the Verify Build Script Phase exits with status __Error__.
 
@@ -404,7 +404,7 @@ It saves the Build log generated by the Build Script in the IKAN ALM database.
 When the Build Script is executed successfully, the _Execute
 Script_ Phase exits with status __Success__.
 If not, it exits with status _Error_ and logs the errors on the _Phase Logs_ panel of the _Level
-Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,id==_desktop_lr_phaselogs_buildactions--title==Build Actions>>).
+Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,Build Actions>>).
 
 [[_phases_buildphases_transportdesployscript]]
 ==== Transport Deploy Script Phase 
@@ -457,7 +457,7 @@ The _Cleanup Result_ Phase deletes all files in the Build Environment`'s Target 
 
 If the Build Environment has its Debug flag set to '`Yes`', the Cleanup Result Phase does nothing, and exits with status __Error__, reporting that the Debug flag was set in the Build Environment.
 
-Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,id==_globadm_phases_creating--title==Phases>>) and specify that they may be used on a Build Environment.
+Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>) and specify that they may be used on a Build Environment.
 Once inserted into the workflow of a Build Environment, we call them Custom Build Phases.
 
 [[_phases_buildphases_custombuildphase]]
@@ -482,7 +482,7 @@ Note that this Phase is never inserted into the default workflow of a Build Envi
 When the script is executed successfully, the _Custom
 Build_ Phase exits with status __Success__.
 If not, it exits with status _Error_ and logs the errors on the _Phase Logs_ panel of the _Level
-Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,id==_desktop_lr_phaselogs_buildactions--title==Build Actions>>).
+Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,Build Actions>>).
 
 [NOTE]
 ====
@@ -499,8 +499,8 @@ You can search for them in the __Phases
 Overview__, by restricting the search to Core Phases that can be used on a Deploy Environment.
 Next to those Core Phases, you may enrich the functionality of IKAN ALM by creating your own Custom Phases that can be used on a Deploy Environment.
 
-Deploy Phases may be inserted into a Deploy Environment (<<ProjAdm_DeployEnv.adoc#_projadm_deplanv_phases,id==_projadm_deplanv_phases--title==Deploy Environment Phases>>) and their actions during the handling or a Deploy are logged on the _Phase
-Logs_ tab page of the _Level Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,id==_desktop_lr_phaselogs_deployactions--title==Deploy Actions>>). 
+Deploy Phases may be inserted into a Deploy Environment (<<ProjAdm_DeployEnv.adoc#_projadm_deplanv_phases,Deploy Environment Phases>>) and their actions during the handling or a Deploy are logged on the _Phase
+Logs_ tab page of the _Level Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,Deploy Actions>>). 
 
 They are executed by the Deployer Thread of the IKAN ALM Agent, so they run on an IKAN ALM Agent Machine!
 
@@ -517,16 +517,16 @@ If the number is set to 2, only 2 deploys can run concurrently, meaning that if 
 
 The following section describes each of the Core Deploy Phase in detail:
 
-* <<App_Phases.adoc#_phases_deployphases_transportbuildresult,id==_phases_deployphases_transportbuildresult--title==Transport Build Result Phase>>
-* <<App_Phases.adoc#_phases_deployphases_decompressbuildresult,id==_phases_deployphases_decompressbuildresult--title==Decompress Build Result Phase>>
-* <<App_Phases.adoc#_phases_deployphases_verifydeployscript,id==_phases_deployphases_verifydeployscript--title==Verify Deploy Script Phase>>
-* <<App_Phases.adoc#_phases_deployphases_executedeployscript,id==_phases_deployphases_executedeployscript--title==Execute Script Phase>>
-* <<App_Phases.adoc#_phases_deployphases_cleanupbuidlresult,id==_phases_deployphases_cleanupbuidlresult--title==Cleanup Build Result Phase>>
+* <<App_Phases.adoc#_phases_deployphases_transportbuildresult,Transport Build Result Phase>>
+* <<App_Phases.adoc#_phases_deployphases_decompressbuildresult,Decompress Build Result Phase>>
+* <<App_Phases.adoc#_phases_deployphases_verifydeployscript,Verify Deploy Script Phase>>
+* <<App_Phases.adoc#_phases_deployphases_executedeployscript,Execute Script Phase>>
+* <<App_Phases.adoc#_phases_deployphases_cleanupbuidlresult,Cleanup Build Result Phase>>
 
 
 Next to the Core Deploy Phases, you can create your own Custom Deploy Phases:
 
-* <<App_Phases.adoc#_phases_deployphases_customdeployphase,id==_phases_deployphases_customdeployphase--title==Custom Deploy Phase>>
+* <<App_Phases.adoc#_phases_deployphases_customdeployphase,Custom Deploy Phase>>
 
 
 [[_phases_deployphases_transportbuildresult]]
@@ -556,7 +556,7 @@ If not, it will look for the Deploy Script defined on the Project (<<#_projadmin
 
 Then, it tries to find the Deploy Script in the decompressed Build result available in the Deploy Environment`'s Source Location.
 
-If not found, it tries to copy the Deploy Script from the IKAN ALM Script Location as defined in the System Settings (<<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>).
+If not found, it tries to copy the Deploy Script from the IKAN ALM Script Location as defined in the System Settings (<<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>).
 
 If not found there either, the Verify Deploy Script Phase exits with status __Error__.
 
@@ -573,7 +573,7 @@ It saves the Deploy log generated by the Deploy Script in the IKAN ALM database.
 When the Deploy Script is executed successfully, the _Execute
 Script_ Phase exits with status __Success__.
 If not, it exits with status _Error_ and logs the errors on the _Phase Logs_ panel of the _Level
-Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,id==_desktop_lr_phaselogs_deployactions--title==Deploy Actions>>).
+Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,Deploy Actions>>).
 
 [[_phases_deployphases_cleanupbuidlresult]]
 ==== Cleanup Build Result Phase 
@@ -583,7 +583,7 @@ The _Cleanup Build Result_ Phase deletes all files in the Deploy Environment`'s 
 
 If the Deploy Environment has its Debug flag set to '`Yes`', the Cleanup Build Result Phase does nothing, and exits with status __Error__, reporting that the Debug flag was set in the Deploy Environment.
 
-Next to Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,id==_globadm_phases_creating--title==Phases>>) and specify that they may be used on a Deploy Environment.
+Next to Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>) and specify that they may be used on a Deploy Environment.
 Once inserted into the workflow of a Deploy Environment, we call them _Custom Deploy_ Phases.
 
 [[_phases_deployphases_customdeployphase]]
@@ -608,7 +608,7 @@ Note that this Phase is never inserted into the default workflow of a Deploy Env
 When the script is executed successfully, the _Custom
 Deploy_ Phase exits with status __Success__.
 If not, it exits with status _Error_ and logs the errors on the _Phase Logs_ panel of the _Level
-Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,id==_desktop_lr_phaselogs_deployactions--title==Deploy Actions>>).
+Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,Deploy Actions>>).
 
 [NOTE]
 ====

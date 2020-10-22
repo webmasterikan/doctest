@@ -31,9 +31,9 @@ Every Approval will result in a notification (mail or net send) to the Users bel
 
 Refer to the following sections for more information about:
 
-* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsscreen,id==_desktop_outstandingapprovalsscreen--title==Approvals id==_desktop_outstandingapprovalsscreen--title==The Outstanding Approvals>>
-* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,id==_desktop_outstandingapprovalsapprove--title==Approving Outstanding Approvals>>
-* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,id==_desktop_outstandingapprovalsreject--title==Rejecting Outstanding Approvals>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsscreen,Approvals The Outstanding Approvals>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting Outstanding Approvals>>
 
 
 [[_desktop_outstandingapprovalsscreen]]
@@ -133,8 +133,8 @@ The Level Request will not be handled before this point in time is reached.
 +
 The following links are available in front of each Outstanding Approval:
 
-* image:images/icons/approve.gif[,15,15] __ Approve__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,id==_desktop_outstandingapprovalsapprove--title==Approving Outstanding Approvals>>
-* image:images/icons/reject.gif[,15,15] __ Reject__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,id==_desktop_outstandingapprovalsreject--title==Rejecting Outstanding Approvals>>
+* image:images/icons/approve.gif[,15,15] __ Approve__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>
+* image:images/icons/reject.gif[,15,15] __ Reject__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting Outstanding Approvals>>
 
 
 [[_desktop_outstandingapprovalsapprove]]
@@ -224,7 +224,7 @@ image::images/Desktop-OutstandingApprovals-Reject.png[,600,457]
 +
 . Verify the information on the _Level Approval List_ panel.
 +
-The _Level Approval List_ displays additional information concerning the Approvals. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,id==_desktop_outstandingapprovalsapprove--title==Approving Outstanding Approvals>>
+The _Level Approval List_ displays additional information concerning the Approvals. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>
 . Enter the reason for rejecting the Level Request on the _Approve Level Request_ panel.
 . Click _Reject_ to confirm the action.
 +
@@ -256,7 +256,7 @@ The following options are available:
 ====
 Outstanding Approvals for you (or other members of your User Group) are preceded by the _Approve_ and _Reject_ icons.
 
-For more information, refer to <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,id==_desktop_outstandingapprovalsapprove--title==Approving Outstanding Approvals>>and <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,id==_desktop_outstandingapprovalsreject--title==Rejecting Outstanding Approvals>>.
+For more information, refer to <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>and <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting Outstanding Approvals>>.
 ====
 +
 
@@ -339,7 +339,7 @@ The following status indication icons are possible:
 |This field contains the VCR Tag of the Level Request.
 This Tag matches a Build with its source code in the VCR.
 
-The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projectstreams_overviewscreen,id==_projectstreams_overviewscreen--title==Project Streams Overview>>
+The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projectstreams_overviewscreen,Project Streams Overview>>
 
 However, the user can override the default VCR Tag while creating a Level Request (and is obliged to do so for a Build Level Request in a Tag Based Project Stream), so that the Tag Format can be completely different.
 
@@ -355,10 +355,10 @@ The Level Request will not be handled before this point in time is reached.
 +
 Click the Level Request`'s _OID_ link in front of the required Level Request.
 +
-For more information, refer to the section <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,id==_dekstop_lr_detailedoverview--title==Level Request Detail>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>.
 . Use the appropriate link for approving or rejecting an Approval.
 +
 The following links are available in front of each Outstanding Approval:
 
-* image:images/icons/approve.gif[,15,15] __ Approve__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,id==_desktop_outstandingapprovalsapprove--title==Approving Outstanding Approvals>>
-* image:images/icons/reject.gif[,15,15] __ Reject__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,id==_desktop_outstandingapprovalsreject--title==Rejecting Outstanding Approvals>>
+* image:images/icons/approve.gif[,15,15] __ Approve__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>
+* image:images/icons/reject.gif[,15,15] __ Reject__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting Outstanding Approvals>>

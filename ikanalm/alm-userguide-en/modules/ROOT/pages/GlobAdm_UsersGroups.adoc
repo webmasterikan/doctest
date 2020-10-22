@@ -3,8 +3,8 @@
 
 Refer to the following sections for more information on:
 
-* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,id==_globadm_usersgroups_users--title==Users and Groups id==_globadm_usersgroups_users--title==Users>>
-* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,id==_globadm_usersgroups_groups--title==User Groups>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users and Groups Users>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
 
 
 [[_globadm_usersgroups_users]]
@@ -210,7 +210,7 @@ __Error: Maximum number of reserved active Users
 (X) reached__, where X is the maximum allowed number of reserved active users.
 You will have to expand your IKAN ALM license or archive other (obsolete) reserved User IDs, or mark other active reserved User IDs as non reserved, before you can reactive this User ID.
 
-* At the bottom of the screen, the__ Related User Groups Overview__ panel is displayed. The overview contains the definitions of the User Groups to which the selected User ID belongs. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,id==_globadm_usersgroups_groups--title==User Groups>>
+* At the bottom of the screen, the__ Related User Groups Overview__ panel is displayed. The overview contains the definitions of the User Groups to which the selected User ID belongs. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
 
 +
 [NOTE]
@@ -267,9 +267,9 @@ Overview_ screen.
 
 a|_RELATED TOPICS_
 
-* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,id==_globadm_usersgroups_groups--title==User Groups>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
 * <<#_desktop_personalsettings,>>
-* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,id==_desktop_managedesktop--title==Managing the Desktop>>
+* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
 * <<#_desktop_outstandingapprovals,>>
 
 |===
@@ -559,9 +559,9 @@ Groups Overview_ screen.
 
 a|_RELATED TOPICS_
 
-* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,id==_globadm_usersgroups_users--title==Users and Groups id==_globadm_usersgroups_users--title==Users>>
-* <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
-* <<GlobAdm_Misc.adoc#_globadm_notifyusers,id==_globadm_notifyusers--title==Notifying IKAN ALM Users>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users and Groups Users>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+* <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notifying IKAN ALM Users>>
 * <<#_globadm_project,>>
 * <<#_projadmin_projectsoverview_editing,>>
 * <<#_plevelenvmgt_createbuildlevel,>>

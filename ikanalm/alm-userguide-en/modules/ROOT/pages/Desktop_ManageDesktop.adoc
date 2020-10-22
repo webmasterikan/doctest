@@ -13,11 +13,11 @@ The following actions are possible:
 ** <<#_managedesktop_desktopoverview,>>
 ** <<#_managedesktop_addingtabs,>>
 ** <<#_managedesktop_modifyingtabinformation,>>
-** <<Desktop_ManageDesktop.adoc#_managedesktop_removingtabpage,id==_managedesktop_removingtabpage--title==Removing a Desktop Tab Page>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_removingtabpage,Removing a Desktop Tab Page>>
 * Managing the Desktop content
 ** <<#_managedesktop_addingelements,>>
-** <<Desktop_ManageDesktop.adoc#_managedesktop_arrangingelements,id==_managedesktop_arrangingelements--title==Rearranging Desktop Elements>>
-** <<Desktop_ManageDesktop.adoc#_managedesktop_removingelements,id==_managedesktop_removingelements--title==Removing Desktop Elements>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_arrangingelements,Rearranging Desktop Elements>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_removingelements,Removing Desktop Elements>>
 
 
 === The Desktop Overview Screen
@@ -164,11 +164,11 @@ The screen will be refreshed each time you click the__ Refresh__ button.
 
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the Desktop will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,id==_desktop_autorefresh--title==Auto Refresh>>
+If the__ Auto Refresh __option is activated, the Desktop will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
 ====
 . Click the _Add to Desktop_ button to open the _Add to Desktop_ pop-up window allowing you to add other elements to your desktop.
 +
-<<Desktop_ManageDesktop.adoc#_desktop_managedesktop,id==_desktop_managedesktop--title==Managing the Desktop>>
+<<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
 
 
 === Adding a Desktop Tab Page 

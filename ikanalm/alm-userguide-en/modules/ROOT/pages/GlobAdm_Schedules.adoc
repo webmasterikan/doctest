@@ -12,8 +12,8 @@ In other words, Schedules enable features like Build Automation or Continuous In
 
 Refer to the following sections for detailed information:
 
-* <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,id==_globadm_schedulecreate--title==Creating a Schedule>>
-* <<GlobAdm_Schedules.adoc#_globadm_schedulesoverview,id==_globadm_schedulesoverview--title==Schedules id==_globadm_schedulesoverview--title==The Schedules Overview Screen>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,Creating a Schedule>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedulesoverview,Schedules The Schedules Overview Screen>>
 * <<#_globadm_schedules_edit,>>
 * <<#_globadm_schedules_delete,>>
 * <<#_globadm_schedules_history,>>
@@ -129,7 +129,7 @@ a|_RELATED TOPICS_
 
 * <<#_globadm_schedules,>>
 * <<#_plevelenvmgt_createbuildlevel,>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,id==_desktop_lr_creatinglevelrequest--title==Creating Level Requests>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating Level Requests>>
 
 |===
 
@@ -153,7 +153,7 @@ You can also:
 * click the _Reset search_ link to clear the search fields.
 . Verify the information on the _Schedules Overview_ panel.
 +
-For a detailed description of the fields, refer to <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,id==_globadm_schedulecreate--title==Creating a Schedule>>.
+For a detailed description of the fields, refer to <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,Creating a Schedule>>.
 . Depending on your access rights, the following links may be available on the _Schedules Overview_ panel:
 +
 
@@ -199,7 +199,7 @@ image::images/GlobAdm-Schedules-Edit.png[,569,537]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,id==_globadm_schedulecreate--title==Creating a Schedule>>.
+For a description of the fields, refer to <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,Creating a Schedule>>.
 +
 
 [NOTE]
@@ -257,6 +257,6 @@ a|_RELATED TOPICS_
 
 * <<#_globadm_schedules,>>
 * <<#_plevelenvmgt_createbuildlevel,>>
-* <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,id==_desktop_lr_creatinglevelrequest--title==Creating Level Requests>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating Level Requests>>
 
 |===

@@ -18,17 +18,17 @@ During the whole Lifecycle, each Package has its own Build number and evolves in
 From a __physical point of view__, it comes down to putting together a set of files to be extracted from the VCR during the execution of the Build Level Request as to present them to the Build and Tag Phases, and to finally execute the Deploy of this set of files.
 For Release-based Projects, the rules for extracting files from the VCR are specified in the Project Stream definition by selecting the type of Build, and IKAN ALM will automatically take care of the selection of the objects.
 For Package-based Projects on the other hand, the selection of files to be extracted from the VCR is done manually by the Users of the Project in the form of a Package.
-Refer to the section <<Desktop_Packages.adoc#_desktop_createpackage,id==_desktop_createpackage--title==Creating a Package>>for more in information.
+Refer to the section <<Desktop_Packages.adoc#_desktop_createpackage,Creating a Package>>for more in information.
 
 From a __technical point of view__, Projects are defined and separated to use either Packages or Releases, and can never be mixed.
 
 Refer to the following procedures for more information:
 
-* <<Desktop_Packages.adoc#_desktop_createpackage,id==_desktop_createpackage--title==Creating a Package>>
-* <<Desktop_Packages.adoc#_desktop_packageoverview,id==_desktop_packageoverview--title==The Package Overview Screen>>
+* <<Desktop_Packages.adoc#_desktop_createpackage,Creating a Package>>
+* <<Desktop_Packages.adoc#_desktop_packageoverview,The Package Overview Screen>>
 * <<#_desktop_viewpackage,>>
 * <<#_desktop_editpackage,>>
-* <<Desktop_Packages.adoc#_desktop_hideshowpackage,id==_desktop_hideshowpackage--title==Hiding/Showing a Package>>
+* <<Desktop_Packages.adoc#_desktop_hideshowpackage,Hiding/Showing a Package>>
 * <<#_desktop_viewpackagehistory,>>
 
 
@@ -112,7 +112,7 @@ image::images/Desktop-Packages-CreatePackage-Create.png[,494,300]
 The __Edit Contents __tab page of the _Package Details_ screen will be displayed.
 +
 A newly created package is empty.
-For more information on adding File Revisions to the newly created Package, refer to the section <<Desktop_Packages.adoc#_desktop_packagedetails,id==_desktop_packagedetails--title==Package Details>>. 
+For more information on adding File Revisions to the newly created Package, refer to the section <<Desktop_Packages.adoc#_desktop_packagedetails,Package Details>>. 
 
 
 [[_desktop_packageoverview]]
@@ -138,7 +138,7 @@ The following options are available:
 * Save filter: to save the current search criteria for future use.
 
 +
-For more information on the usage of search panels and filters, refer to the sections <<#_babcjedaj8,>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,id==_desktop_searchfilters--title==Defining Search Filters>>.
+For more information on the usage of search panels and filters, refer to the sections <<#_babcjedaj8,>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
 
 . Depending on your access rights, the following links may be available on the _Packages Overview_ panel:
 +
@@ -166,7 +166,7 @@ It allows editing the Package definition and/or its connected file revisions. <<
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
 It allows hiding the selected Package.
 
-<<Desktop_Packages.adoc#_desktop_hideshowpackage,id==_desktop_hideshowpackage--title==Hiding/Showing a Package>>
+<<Desktop_Packages.adoc#_desktop_hideshowpackage,Hiding/Showing a Package>>
 
 |image:images/icons/history.gif[,15,15] 
 |History
@@ -217,7 +217,7 @@ The _Package Details_ screen contains 4 tab pages:
 Allows to launch Level Requests for the selected Package.
 |===
 +
-For more detailed information on the different tab pages, refer to the section <<Desktop_Packages.adoc#_desktop_packagedetails,id==_desktop_packagedetails--title==Package Details>>.
+For more detailed information on the different tab pages, refer to the section <<Desktop_Packages.adoc#_desktop_packagedetails,Package Details>>.
 
 
 === Editing a Package 
@@ -232,7 +232,7 @@ image::images/Desktop-Packages-EditPackage.png[,956,504]
 +
 On this tab page, you can modify the File Revisions contained in the Package. 
 +
-For a more detailed explanation on how to do that, refer to the section <<Desktop_Packages.adoc#_desktop_packagedetails_editcontents,id==_desktop_packagedetails_editcontents--title==Edit Contents>>
+For a more detailed explanation on how to do that, refer to the section <<Desktop_Packages.adoc#_desktop_packagedetails_editcontents,Edit Contents>>
 +
 Other available buttons:
 
@@ -241,7 +241,7 @@ Other available buttons:
 +
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,id==_desktop_autorefresh--title==Auto Refresh>>
+If the__ Auto Refresh __option is activated, the screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
 ====
 
 . Click _Save_ to confirm your changes.
@@ -317,10 +317,10 @@ By default the _Summary_ tab page is displayed.
 +
 Refer to one of the following sections for more information.
 
-* <<Desktop_Packages.adoc#_desktop_packagedetails_summary,id==_desktop_packagedetails_summary--title==Summary>>
-* <<Desktop_Packages.adoc#_desktop_packagedetails_viewcontents,id==_desktop_packagedetails_viewcontents--title==View Contents>>
-* <<Desktop_Packages.adoc#_desktop_packagedetails_editcontents,id==_desktop_packagedetails_editcontents--title==Edit Contents>>
-* <<Desktop_Packages.adoc#_desktop_packagedetails_lifecycleactions,id==_desktop_packagedetails_lifecycleactions--title==Lifecycle Actions>>
+* <<Desktop_Packages.adoc#_desktop_packagedetails_summary,Summary>>
+* <<Desktop_Packages.adoc#_desktop_packagedetails_viewcontents,View Contents>>
+* <<Desktop_Packages.adoc#_desktop_packagedetails_editcontents,Edit Contents>>
+* <<Desktop_Packages.adoc#_desktop_packagedetails_lifecycleactions,Lifecycle Actions>>
 
 . Back and Refresh links
 * Use the _Back_ link to return to the previous screen.
@@ -330,7 +330,7 @@ Refer to one of the following sections for more information.
 The _Auto Refresh_ option is only of use on the _Summary_ and _Lifecycle
 Actions_ tab pages.
 +
-For more information on the _Auto Refresh_ settings, refer to the section <<UserInterface.adoc#_desktop_autorefresh,id==_desktop_autorefresh--title==Auto Refresh>>.
+For more information on the _Auto Refresh_ settings, refer to the section <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>.
 
 
 [[_desktop_packagedetails_summary]]
@@ -393,7 +393,7 @@ Example: `Webpad H_1-0`
 |This field indicates whether or not the Package is hidden. 
 
 By default newly created Packages are not hidden.
-For more information on hiding Packages, refer to <<Desktop_Packages.adoc#_desktop_hideshowpackage,id==_desktop_hideshowpackage--title==Hiding/Showing a Package>>.
+For more information on hiding Packages, refer to <<Desktop_Packages.adoc#_desktop_hideshowpackage,Hiding/Showing a Package>>.
 
 |Package Build Group
 |If applicable, this field contains the Package Build Group the Package is linked to.
@@ -544,4 +544,4 @@ This panel displays the latest Level Request for each of the Levels defined in t
 Using the action icons, you can also start a Level Request for one of the Levels.
 Clicking such an action icon, will take you to the Create Level Request screen. 
 
-For more information on creating Level Requests, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,id==_desktop_lr_creatinglevelrequest--title==Creating Level Requests>>.
+For more information on creating Level Requests, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating Level Requests>>.

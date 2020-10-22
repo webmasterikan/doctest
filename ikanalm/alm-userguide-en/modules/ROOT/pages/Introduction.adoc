@@ -39,8 +39,8 @@ Click a link to switch to the detailed description.
 |Regular User
 a|A Regular User can perform the following tasks (depending on his or her ID`'s security settings):
 
-* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,id==_desktop_managedesktop--title==Managing the Desktop>>
-* Checking the <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,id==_desktop_lr_buildhistory--title==Build History Screen>>
+* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
+* Checking the <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build History Screen>>
 * Approving or rejecting <<#_desktop_outstandingapprovals,>>
 * Creating or updating <<#_desktop_levelrequests,>>
 * Creating or updating <<#_desktop_packages,>> and <<#_desktop_packagegroups,>>
@@ -59,13 +59,13 @@ For a complete overview of the Project Administration activities, refer to the s
 |Global Administrator
 a|A User with Global Administrator access rights will typically perform the following tasks:
 
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,id==_globadm_projectcreate--title==Projects id==_globadm_projectcreate--title==Creating a Project>>
-* <<GlobAdm_Project.adoc#_globadm_projectclone,id==_globadm_projectclone--title==Cloning an Existing Project>>
-* Edit <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectclone,Cloning an Existing Project>>
+* Edit <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 * Creating or updating <<#_globadm_machines,>>
 * Creating or updating <<#_globadm_vcr,>>
-* Creating or updating <<GlobAdm_Transporters.adoc#_globadm_transporters,id==_globadm_transporters--title==Transporters>>
-* Creating or updating <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,id==_globadm_scriptingtools--title==Scripting Tools>>
+* Creating or updating <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* Creating or updating <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
 * Creating or importing <<#_globadm_phases,>>
 * Creating or updating <<#_globadm_schedules,>>
 

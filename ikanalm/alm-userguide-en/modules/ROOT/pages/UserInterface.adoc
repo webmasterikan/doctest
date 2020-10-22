@@ -4,9 +4,9 @@
 
 Refer to the following sections for detailed information about:
 
-* <<UserInterface.adoc#_navigationikanalm,id==_navigationikanalm--title==Navigating Through IKAN ALM>>
-* <<UserInterface.adoc#_regularikanalmscreens,id==_regularikanalmscreens--title==The IKAN ALM Screen>>
-* <<UserInterface.adoc#_desktop_autorefresh,id==_desktop_autorefresh--title==Auto Refresh>>
+* <<UserInterface.adoc#_navigationikanalm,Navigating Through IKAN ALM>>
+* <<UserInterface.adoc#_regularikanalmscreens,The IKAN ALM Screen>>
+* <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
 
 
 [[_navigationikanalm]]
@@ -63,7 +63,7 @@ Using the _Reset search_ link you can clear all search criteria and display the 
 
 On some of the more complex search panels, you can save the search criteria as a filter, to be able to reuse them afterwards.
 If a filter already exists, you can select it from the drop-down menu.
-For more info on using filters, refer to the section <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,id==_desktop_searchfilters--title==Defining Search Filters>>.
+For more info on using filters, refer to the section <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
 
 
 ==== Create Panels
@@ -173,7 +173,7 @@ Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be so
 [[_desktop_autorefresh]]
 === Auto Refresh
 
-If your IKAN ALM Global Manager has defined an _Automatic Refresh Rate_ on the _Miscellaneous_ panel in the <<GlobAdm_System.adoc#_globadm_system_settings,id==_globadm_system_settings--title==System id==_globadm_system_settings--title==System Settings>>, the _Auto Refresh_ option will be available on the Desktop, and on the Level Requests and Builds and Deploys overviews.
+If your IKAN ALM Global Manager has defined an _Automatic Refresh Rate_ on the _Miscellaneous_ panel in the <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>, the _Auto Refresh_ option will be available on the Desktop, and on the Level Requests and Builds and Deploys overviews.
 
 If the__ Auto Refresh __option is activated, the screen will be refreshed following the interval specified by the Auto Refresh Rate specified in the System Settings.
 
