@@ -1,4 +1,4 @@
-[[_globadm_projectcreate]]
+[[_globadm_projectcreate]] [[_globadm_project]]
 == Projects 
 (((Global Administration ,Projects)))  (((Projects))) 
 
@@ -30,12 +30,12 @@ Package-based Projects must connect to a VCR of type Subversion, TFVC or ClearCa
 Other VCR types do not support working with isolated files and thus not with Packages in IKAN ALM.
 ====
 
-
+[[_pcreateproject]]
 . In the Global Administration context, select _Project > Create Project_.
 +
 The following screen is displayed:
 +
-image::images/GlobAdmin-Project-Create.png[,1027,707] 
+image::GlobAdmin-Project-Create.png[,1027,707] 
 +
 . Fill out the fields in the different sections.
 +
@@ -81,7 +81,7 @@ If an Issue Tracking System is specified in this field, IKAN ALM will always aut
 
 This field is only visible if external Issue Tracking Systems have been defined in IKAN ALM.
 
-For more information on Issue Tracking systems, refer to the chapter <<_globadm_issuetracking>>
+For more information on Issue Tracking systems, refer to the chapter <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking,Issue Tracking>>
 
 |Build Tool Type
 |From the drop-down list, select the Build Tool Type (Ant, Gradle, Nant or Maven2) to be used for this IKAN ALM Project.
@@ -266,7 +266,7 @@ __Info: The Project Name exists in the VCR.__
 +
 If the test is not successful, the following pop-up window is displayed:
 +
-image::images/GlobAdmin-Project-Create-ErrorProjName.png[,736,520] 
+image::GlobAdmin-Project-Create-ErrorProjName.png[,736,520] 
 +
 Correct the errors reported in the Stack Trace field and perform the test again.
 . Once the test is successful, click __Create__.
@@ -274,9 +274,9 @@ Correct the errors reported in the Stack Trace field and perform the test again.
 The Project will be created and you are forwarded to the _Project
 Info_ screen in the Project Administration context.
 You can now administer the newly created Project by creating Levels etc.
-For more information, refer to the section <<_projadmin_projectsoverview_editing>>.
+For more information, refer to the section <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>.
 +
-image::images/GlobAdmin-Project-Create-EditProject.png[,602,850] 
+image::GlobAdmin-Project-Create-EditProject.png[,602,850] 
 +
 Underneath the _Project Info_ panel, the following links and buttons are available:
 
@@ -292,12 +292,12 @@ Underneath the _Project Info_ panel, the following links and buttons are availab
 
 a|_RELATED TOPICS_
 
-* <<_projadmin_projectsoverview_editing>>
-* <<_projadm_projectstreams>>
-* <<_projadm_lifecycles>>
-* <<_projadm_levels>>
-* <<_projadm_buildenvironments>>
-* <<_projadm_deployenvironments>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstreams,Project Streams>>
+* <<ProjAdm_LifeCycles.adoc#_projadm_lifecycles,Lifecycles>>
+* <<ProjAdm_Levels.adoc#_projadm_levels,Levels>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>
 
 |===
 
@@ -306,11 +306,12 @@ a|_RELATED TOPICS_
 === Cloning an Existing Project 
 (((Projects ,Cloning an Existing Project)))  (((Cloning an Existing Project))) 
 
+[[_pcloneproject]]
 . In the Global Administration context, select _Project > Clone Project_.
 +
 The following screen is displayed:
 +
-image::images/GlobAdmin-Project-Clone.png[,888,428] 
+image::GlobAdmin-Project-Clone.png[,888,428] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -321,11 +322,11 @@ You can also:
 * click the _Show/hide advanced options_ link to display or hide all available search criteria,
 * click the _Search_ link to refresh the list based on the current search criteria,
 * click the _Reset search_ link to clear the search fields.
-. Next, click the image:images/icons/clone.gif[,15,15] _clone_ link in front of the required Project.
+. Next, click the image:icons/clone.gif[,15,15] _clone_ link in front of the required Project.
 +
 The following screen is displayed:
 +
-image::images/GlobAdmin-Project-Clone-Clone.png[,812,538] 
+image::GlobAdmin-Project-Clone-Clone.png[,812,538] 
 +
 . Fill out or edit the available fields.
 +
@@ -428,4 +429,4 @@ For instance, the Target Location of Deploy Environments in the new Project most
 
 . Audit the Project to unlock it.
 +
-<<_projadm_auditingprojects>>
+<<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,Auditing Projects>>

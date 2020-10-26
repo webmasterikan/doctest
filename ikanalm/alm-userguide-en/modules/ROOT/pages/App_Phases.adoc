@@ -62,7 +62,7 @@ All types of Phases inserted into the workflow of a Level/Build/Deploy Environme
 |This field, together with the Phase name, forms the unique identifier of the Phase.
 The version of the Core Phases matches the IKAN ALM version (e.g., 5.5.0).
 
-The version of Custom Phases conforms to the format as explained in the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>.
+The version of Custom Phases conforms to the format as explained in the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>.
 
 |Next Phase On Success (Phase Position)
 |This field defines which Phase should be executed next if the current Phase completes successfully.
@@ -84,7 +84,7 @@ Possible values:
 |===
 
 
-For more information on defining and configuring Phases, refer to the following sections: <<_plevelenvmgt_editlevelphases>>, <<_projadm_buildenv_editphase>>, <<_projadm_deployenv_phaseedit>>, <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>and <<_globadm_phases_editing>>.
+For more information on defining and configuring Phases, refer to the following sections: <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>>, <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Editing a Build Environment Phase>>, <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phaseedit,Editing a Deploy Environment Phase>>, <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>and <<GlobAdm_Phases.adoc#_globadm_phases_editing,Editing a Phase Definition>>.
 
 When executing a Phase, it can have the following status:
 
@@ -161,12 +161,12 @@ When the Level Request is for a Build Level, the latest source code is checked o
 
 When the Level Request is for a Build Level attached to a Tag-based Project Stream, the source code is retrieved that was tagged with the tag specified in the _VCR Tag_ field when the Level Request was created.
 See the description of the _VCR
-Tag_ field in the section <<_desktop_lr_createlevelrequest_build>>.
+Tag_ field in the section <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_build,Creating a Build Level Request>>.
 
 The _Retrieve Code_ Phase also retrieves the source code and/or the build results of all Child Builds this Level Request is depending on.
 See <<Desktop_LevelRequests.adoc#_desktop_lr_viewdependency,Build Dependencies>>.
 
-In the case of a Partial Build, (<<_projadmin_projectstream_createbranch>>), only the modified source code will be retrieved and made available to the Agents running the Builds of the Level Request.
+In the case of a Partial Build, (<<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Creating a Branch Project Stream>>), only the modified source code will be retrieved and made available to the Agents running the Builds of the Level Request.
 
 The _alm.phase.retrieve.source.partialBuild.partialCheckout_ (Environment) Phase Parameter defines how this is done: if it is set to _true_ (default value) and if the VCR supports it (currently only Subversion), this is done by a partial checkout of the modified sources.
 Otherwise, all sources will be checked out, but only the modified sources will be transported to the source location of the Build Environment.
@@ -299,7 +299,7 @@ Script_ Phase exits with status __Success__.
 If not, it exits with status _Error_ and logs the errors on the _Phase Logs_ panel of the _Level
 Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,Level Phases>>).
 
-Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>) and specify that they may be used on a Level.
+Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>) and specify that they may be used on a Level.
 Once inserted into the workflow of a Level, we call them Custom Level Phases.
 
 [[_phases_levelphases_customlevelphase]]
@@ -383,7 +383,7 @@ The _Verify Build Script_ Phase tries to locate the defined Build Script, and fa
 
 First, it determines what Build Script to look for.
 If there`'s a Build Script defined on the Build Environment (<<_pcreatebuildenvironment>>), it will try to find that.
-If not, it will look for the Build Script defined on the Project (<<_projadmin_projectsoverview_editing>>).
+If not, it will look for the Build Script defined on the Project (<<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>).
 
 Then, it tries to find the Build Script in the Build Environment`'s Source Location.
 
@@ -457,7 +457,7 @@ The _Cleanup Result_ Phase deletes all files in the Build Environment`'s Target 
 
 If the Build Environment has its Debug flag set to '`Yes`', the Cleanup Result Phase does nothing, and exits with status __Error__, reporting that the Debug flag was set in the Build Environment.
 
-Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>) and specify that they may be used on a Build Environment.
+Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>) and specify that they may be used on a Build Environment.
 Once inserted into the workflow of a Build Environment, we call them Custom Build Phases.
 
 [[_phases_buildphases_custombuildphase]]
@@ -536,7 +536,7 @@ Next to the Core Deploy Phases, you can create your own Custom Deploy Phases:
 The _Transport Build Result_ Phase transports the Build result from the Build Archive Location on the IKAN ALM Server Machine to the Deploy Environment Source Location on the IKAN ALM Agent Machine, using the Transporter associated with the IKAN ALM Agent Machine.
 
 When doing a Partial Deploy, only the modified and added files in the Build result are transferred.
-See the description of the _Partial Deploy_ field in the section <<_pcreatedeployenvironment>>.
+See the description of the _Partial Deploy_ field in the section <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Creating a Deploy Environment>>.
 
 [[_phases_deployphases_decompressbuildresult]]
 ==== Decompress Build Result Phase 
@@ -551,8 +551,8 @@ The _Decompress Build Result_ Phase decompresses the Build result file that was 
 The _Verify Deploy Script_ Phase tries to locate the defined Deploy Script, and fails if it cannot.
 
 First, it determines what Deploy Script to look for.
-If there`'s a Deploy Script defined on the Deploy Environment (<<_pcreatedeployenvironment>>), it will try to find that.
-If not, it will look for the Deploy Script defined on the Project (<<_projadmin_projectsoverview_editing>>).
+If there`'s a Deploy Script defined on the Deploy Environment (<<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Creating a Deploy Environment>>), it will try to find that.
+If not, it will look for the Deploy Script defined on the Project (<<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>).
 
 Then, it tries to find the Deploy Script in the decompressed Build result available in the Deploy Environment`'s Source Location.
 
@@ -583,7 +583,7 @@ The _Cleanup Build Result_ Phase deletes all files in the Deploy Environment`'s 
 
 If the Deploy Environment has its Debug flag set to '`Yes`', the Cleanup Build Result Phase does nothing, and exits with status __Error__, reporting that the Debug flag was set in the Deploy Environment.
 
-Next to Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>) and specify that they may be used on a Deploy Environment.
+Next to Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>) and specify that they may be used on a Deploy Environment.
 Once inserted into the workflow of a Deploy Environment, we call them _Custom Deploy_ Phases.
 
 [[_phases_deployphases_customdeployphase]]

@@ -1,4 +1,4 @@
-[[_globadm_schedulesoverview]]
+[[_globadm_schedulesoverview]] [[_globadm_schedules]]
 == Schedules 
 (((Global Administration ,Schedules)))  (((Schedules))) 
 
@@ -14,9 +14,9 @@ Refer to the following sections for detailed information:
 
 * <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,Creating a Schedule>>
 * <<GlobAdm_Schedules.adoc#_globadm_schedulesoverview,Schedules The Schedules Overview Screen>>
-* <<_globadm_schedules_edit>>
-* <<_globadm_schedules_delete>>
-* <<_globadm_schedules_history>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedules_edit,Editing a Schedule Definition>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedules_delete,Deleting a Schedule Definition>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedules_history,Viewing the Schedule History>>
 
 
 [[_globadm_schedulecreate]]
@@ -32,7 +32,7 @@ This option is only available if you have Global Administrator Access Rights in 
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-Schedules-Create.png[,595,395] 
+image::GlobAdm-Schedules-Create.png[,595,395] 
 +
 . Fill out the fields in the _Create Schedule_ panel at the top of the screen. Fields marked with a red asterisk are mandatory: 
 +
@@ -111,15 +111,15 @@ The question _"`Code changed since last build?`"__ means:_ "`Have
 the resources in the VCR been changed since the last Build Level
 Request for the Level linked to the Schedule?__
 +
-image::images/GlobAdm-Schedules-Sample1.png[,977,484] 
+image::GlobAdm-Schedules-Sample1.png[,977,484] 
 +
-image::images/GlobAdm-Schedules-Sample2.png[,974,577] 
+image::GlobAdm-Schedules-Sample2.png[,974,577] 
 +
-image::images/GlobAdm-Schedules-Sample3.png[,972,472] 
+image::GlobAdm-Schedules-Sample3.png[,972,472] 
 +
-image::images/GlobAdm-Schedules-Sample4.png[,972,492] 
+image::GlobAdm-Schedules-Sample4.png[,972,492] 
 +
-image::images/GlobAdm-Schedules-Sample5.png[,972,493] 
+image::GlobAdm-Schedules-Sample5.png[,972,493] 
 
 
 [cols="1", frame="topbot"]
@@ -127,8 +127,8 @@ image::images/GlobAdm-Schedules-Sample5.png[,972,493]
 
 a|_RELATED TOPICS_
 
-* <<_globadm_schedules>>
-* <<_plevelenvmgt_createbuildlevel>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedules,Schedules>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating Level Requests>>
 
 |===
@@ -137,11 +137,12 @@ a|_RELATED TOPICS_
 === The Schedules Overview Screen 
 (((Schedules ,Overview Screen))) 
 
+[[_pschedulesoverview]]
 . In the Global Administration context, select _Schedules > Overview_.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-Schedules-Overview.png[,974,372] 
+image::GlobAdm-Schedules-Overview.png[,974,372] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -160,42 +161,42 @@ For a detailed description of the fields, refer to <<GlobAdm_Schedules.adoc#_glo
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a Schedule definition.
 
-<<_globadm_schedules_edit>>
+<<GlobAdm_Schedules.adoc#_globadm_schedules_edit,Editing a Schedule Definition>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a Schedule definition.
 
-<<_globadm_schedules_delete>>
+<<GlobAdm_Schedules.adoc#_globadm_schedules_delete,Deleting a Schedule Definition>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Schedule
 
-<<_globadm_schedules_history>>
+<<GlobAdm_Schedules.adoc#_globadm_schedules_history,Viewing the Schedule History>>
 |===
 
-
+[[_globadm_schedules_edit]]
 ==== Editing a Schedule Definition 
 (((Schedules ,Editing))) 
 
 . In the Global Administration context, select _Schedules > Overview_.
 
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link to change the selected Schedule.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected Schedule.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-Schedules-Edit.png[,569,537] 
+image::GlobAdm-Schedules-Edit.png[,569,537] 
 +
 . Edit the fields as required.
 +
@@ -214,17 +215,17 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_schedules_delete]]
 ==== Deleting a Schedule Definition 
 (((Schedules ,Deleting))) 
 
 . In the Global Administration context, select _Schedules > Overview_.
 
-. Click the image:images/icons/delete.gif[,15,15]  _Delete_ link to delete the selected Schedule.
+. Click the image:icons/delete.gif[,15,15]  _Delete_ link to delete the selected Schedule.
 +
 If the Schedule is not linked to any Level, the following screen is displayed:
 +
-image::images/GlobAdm-Schedules-Delete.png[,455,305] 
+image::GlobAdm-Schedules-Delete.png[,455,305] 
 +
 . Click _Delete_ to confirm the deletion.
 +
@@ -232,17 +233,17 @@ You can also click _Back_ to return to the previous screen without deleting the 
 +
 __Note:__ If the Schedule is linked to one or more Levels, the following screen is displayed:
 +
-image::images/GlobAdm-Schedules-Delete-Error.png[,800,498] 
+image::GlobAdm-Schedules-Delete-Error.png[,800,498] 
 +
 You must remove the Schedule from the listed Levels before you can delete it.
 
-
+[[_globadm_schedules_history]]
 ==== Viewing the Schedule History 
 (((Schedules ,History))) 
 
 . In the Global Administration context, select _Schedules > Overview_.
 
-. Click the image:images/icons/history.gif[,15,15] _History_ link to display the _Schedule History View_.
+. Click the image:icons/history.gif[,15,15] _History_ link to display the _Schedule History View_.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.
@@ -255,8 +256,8 @@ View__, refer to the section <<_historyeventlogging>>.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_schedules>>
-* <<_plevelenvmgt_createbuildlevel>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedules,Schedules>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating Level Requests>>
 
 |===

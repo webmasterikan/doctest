@@ -1,4 +1,4 @@
-[[_projadm_auditingprojects_errorswarnings]]
+[[_projadm_auditingprojects_errorswarnings]] [[_projadm_auditingprojects]]
 == Auditing Projects 
 (((Project Administration ,Auditing Projects)))  (((Project Management Options ,Auditing Projects))) 
 
@@ -22,7 +22,7 @@ The following tests will return a warning:
 * There is at least one Build or Deploy Environment defined for each Test Level. Since version 5.0, IKAN ALM allows Test levels without Build or Deploy Environment, which can be seen as a sort of "`Milestone`" Test Levels.
 * There is at least one Deploy Environment defined for each Production Level. Since version 5.0, IKAN ALM allows Production levels without Build or Deploy Environment, which can be seen as a sort of "`Milestone`" Production Levels.
 
-
+[[_projadm_auditingprojects_auditproject]]
 === Auditing a Project
 (((Auditing)))  (((Auditing ,Projects))) 
 
@@ -30,13 +30,13 @@ The following tests will return a warning:
 +
 If the Project configuration is consistent, the following screen is displayed:
 +
-image::images/ProjAdmin-Audit-Success.png[,964,610] 
+image::ProjAdmin-Audit-Success.png[,964,610] 
 +
 If there are errors in the Project configuration, the following screen is displayed:
 +
-image::images/ProjAdmin-Audit-Error.png[,1037,573] 
+image::ProjAdmin-Audit-Error.png[,1037,573] 
 +
-Locked Project Streams and Levels have a image:images/icons/locked.gif[,15,15] _ Locked_ icon in the _Locked_ field.
+Locked Project Streams and Levels have a image:icons/locked.gif[,15,15] _ Locked_ icon in the _Locked_ field.
 In the sample screen above, this is the case for the _TestPartialBuild_ Level.
 Error or warning messages are displayed in red in the _Message_ field.
 +
@@ -127,7 +127,7 @@ A Custom Phase with the given Display Name is inserted in the Level, but the val
 Navigate to the _Level
 Phases Overview_ of the Level, and click the __View
 Parameters __link next to the indicated Phase.
-Here you may set a value for the alm.phase.builder parameter by clicking the _Edit_ link (<<_globadm_phaseparameters_overview>>).
+Here you may set a value for the alm.phase.builder parameter by clicking the _Edit_ link (<<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,The Phase Parameters Overview Screen>>).
 |===
 
 [[_babcfbhf]]

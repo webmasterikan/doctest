@@ -1,4 +1,5 @@
 
+[[_projadm_levels]]
 == Levels 
 (((Project Administration ,Levels)))  (((Project Management Options ,Levels)))  (((Levels))) 
 
@@ -17,7 +18,7 @@ There are three Level Types:
 [NOTE]
 ====
 
-Before you can define Build or Deploy Environments, the required <<_globadm_machines>> and <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>> must have been defined.
+Before you can define Build or Deploy Environments, the required <<GlobAdm_Machines.adoc#_globadm_machines,Machines>> and <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>> must have been defined.
 This is the task of the IKAN ALM Global Administrator.
 Once you have created the Levels, you need to assign them to a Lifecycle in order to use them.
 ====
@@ -25,9 +26,9 @@ Once you have created the Levels, you need to assign them to a Lifecycle in orde
 The Levels submenu option lets you start the following procedures:
 
 * Creating Levels
-** <<_plevelenvmgt_createbuildlevel>>
-** <<_plevelenvmgt_createtestorproductionlevel>>
-* <<_plevelenvmgt_accessing>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
 
 
 The _Levels Overview_ screen lets you verify and change the information concerning Levels.
@@ -35,18 +36,18 @@ The following actions are possible:
 
 * Modifying Level definitions
 ** <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing a Level>>
-** <<_plevelenvmgt_deletelevel>>
-** <<_plevelenvmgt_clonelevel>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_deletelevel,Deleting a Level>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_clonelevel,Cloning a Level>>
 * Modifying the Level Phases
-** <<_plevelenvmgt_levelphasesoverview>>
-** <<_plevelenvmgt_editlevelphases>>
-** <<_plevelenvmgt_insertphase>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_levelphasesoverview,The Level Phases Overview Screen>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Inserting a Level Phase>>
 * Modifying the Level Approvals
-** <<_levelenvmgt_approvalsequence>>
+** <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Approvals>>
 * Displaying the Level History View
-** <<_levelenvmgt_historyview>>
+** <<ProjAdm_Levels.adoc#_levelenvmgt_historyview,Viewing the Level History>>
 
-
+[[_plevelenvmgt_createbuildlevel]]
 === Creating a Build Level
 (((Levels ,Creating a Level))) 
  
@@ -54,7 +55,7 @@ The following actions are possible:
 +
 The _Create BUILD Level_ screen is displayed:
 +
-image::images/ProjAdmin-Levels-BuildLevel-Create.png[,461,415] 
+image::ProjAdmin-Levels-BuildLevel-Create.png[,461,415] 
 +
 
 [NOTE]
@@ -86,7 +87,7 @@ Fields marked with a red asterisk are mandatory:
 |Locked
 |This read-only field indicates that the new Level is currently still Locked.
 
-You need to audit the Project to unlock the Build Level. <<_projadm_auditingprojects>>
+You need to audit the Project to unlock the Build Level. <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,Auditing Projects>>
 
 |Debug
 |Indicate whether or not the _Debug_ option must be activated for this Level.
@@ -162,7 +163,7 @@ You can also click _Reset_ to clear the fields and restore the initial values.
 
 * _Back_ to return to the previous screen without saving the changes.
 
-
+[[_plevelenvmgt_createtestorproductionlevel]]
 === Creating a Test or Production Level 
 (((Levels ,Creating a Test Level)))  (((Levels ,Creating a Production Level))) 
 
@@ -176,7 +177,7 @@ The procedure for creating Test and Production Levels is identical.
 The _Create TEST Level_ or _Create
 PRODUCTION Level_ screen is displayed:
 +
-image::images/ProjAdmin-Levels-ProductionLevel-Create.png[,511,482] 
+image::ProjAdmin-Levels-ProductionLevel-Create.png[,511,482] 
 +
 
 [NOTE]
@@ -211,7 +212,7 @@ In this field, enter the name of the new Test or Production Level.
 |Locked
 |This read-only field indicates that the new Level is currently still __Locked__.
 
-You need to audit the Project to unlock the Test or Production Level. <<_projadm_auditingprojects>>
+You need to audit the Project to unlock the Test or Production Level. <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,Auditing Projects>>
 
 |Debug
 |Indicate whether or not the _Debug_ option must be activated for this Level.
@@ -285,7 +286,7 @@ From the drop-down menu, select the level that must precede the Test or Producti
 
 If you used the Levels > Create Test (or Production) Level option on the Project Administration submenu, the new Test or Production Level will be created after the existing Test or Production Level, if any.
 
-You can always modify the Level Sequence using the image:images/icons/up.gif[,15,15] _Up_ or image:images/icons/down.gif[,15,15] _Down_ options on the _Defined Levels_ panel on the _Edit
+You can always modify the Level Sequence using the image:icons/up.gif[,15,15] _Up_ or image:images/icons/down.gif[,15,15] _Down_ options on the _Defined Levels_ panel on the _Edit
 Lifecycle_ screen. <<ProjAdm_LifeCycles.adoc#_lifecycles_changingorderlevels,Changing the order of the Levels>>
 
 |Lifecycle
@@ -318,16 +319,16 @@ The following actions are possible:
 
 * Modifying Level definitions
 ** <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing a Level>>
-** <<_plevelenvmgt_deletelevel>>
-** <<_plevelenvmgt_clonelevel>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_deletelevel,Deleting a Level>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_clonelevel,Cloning a Level>>
 * Modifying the Level Phases
-** <<_plevelenvmgt_levelphasesoverview>>
-** <<_plevelenvmgt_editlevelphases>>
-** <<_plevelenvmgt_insertphase>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_levelphasesoverview,The Level Phases Overview Screen>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Inserting a Level Phase>>
 * Displaying the Level History View
-** <<_levelenvmgt_historyview>>
+** <<ProjAdm_Levels.adoc#_levelenvmgt_historyview,Viewing the Level History>>
 
-
+[[_plevelenvmgt_accessing]]
 ==== The Levels Overview Screen 
 (((Levels ,Overview Screen))) 
 
@@ -335,7 +336,7 @@ The following actions are possible:
 +
 The _Levels Overview_ screen is displayed:
 +
-image::images/ProjAdmin-Levels-Overview.png[,975,387] 
+image::ProjAdmin-Levels-Overview.png[,975,387] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -349,36 +350,37 @@ You can also:
 
 . On the Levels Overview, verify the Level information fields.
 +
-For a description of the fields, refer to the sections <<_plevelenvmgt_createbuildlevel>> and <<_plevelenvmgt_createtestorproductionlevel>>.
+For a description of the fields, refer to the sections <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>> and <<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>>.
 . The following links are available:
-* image:images/icons/edit.gif[,15,15] <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing a Level>>
-* image:images/icons/delete.gif[,15,15] <<_plevelenvmgt_deletelevel>>
-* image:images/icons/clone.gif[,15,15] <<_plevelenvmgt_clonelevel>>
-* image:images/icons/edit_phases.gif[,15,15] <<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Level Phases>>
-* image:images/icons/history.gif[,15,15] <<_levelenvmgt_historyview>>
+* image:icons/edit.gif[,15,15] <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing a Level>>
+* image:icons/delete.gif[,15,15] <<ProjAdm_Levels.adoc#_plevelenvmgt_deletelevel,Deleting a Level>>
+* image:icons/clone.gif[,15,15] <<ProjAdm_Levels.adoc#_plevelenvmgt_clonelevel,Cloning a Level>>
+* image:icons/edit_phases.gif[,15,15] <<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Level Phases>>
+* image:icons/history.gif[,15,15] <<ProjAdm_Levels.adoc#_levelenvmgt_historyview,Viewing the Level History>>
 
 
 [[_plevelenvmgt_editlevel]]
 ==== Editing a Level (((Levels ,Editing))) 
 
+[[_editlevel]]
 . Switch to the _Levels Overview_ screen.
 +
-<<_plevelenvmgt_accessing>>
-. On the _Levels Overview_ panel, click the image:images/icons/edit.gif[,15,15] _Edit_ link for the required Level.
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
+. On the _Levels Overview_ panel, click the image:icons/edit.gif[,15,15] _Edit_ link for the required Level.
 +
 The _Edit Level_ screen is displayed.
 +
-image::images/ProjAdmin-Levels-TestLevel-Edit.png[,439,224] 
+image::ProjAdmin-Levels-TestLevel-Edit.png[,439,224] 
 +
 . Click the _Edit_ button on the _Level Info_ panel.
 +
 The following pop-up window will be displayed:
 +
-image::images/ProjAdmin-Levels-TestLevel-Edit_Popup.png[,445,396] 
+image::ProjAdmin-Levels-TestLevel-Edit_Popup.png[,445,396] 
 +
 .. Edit the fields on the _Edit Level_ pop-up window.
 +
-For a description of the fields, refer to the sections <<_plevelenvmgt_createbuildlevel>> and <<_plevelenvmgt_createtestorproductionlevel>>.
+For a description of the fields, refer to the sections <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>> and <<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>>.
 .. Click __Save __to save your changes.
 +
 You can also click__ Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
@@ -387,10 +389,10 @@ You can also click__ Refresh __to retrieve the settings from the database or__ C
 For more information, refer to the sections: 
 
 * <<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Level Phases>>
-* <<_plevelenvmgt_createbuildenvironment>>
-* <<_plevelenvmgt_createdeployenvironment>>
-* <<_plevelenvmgt_changedeploysequence>>
-* <<_levelenvmgt_approvalsequence>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildenvironment,Creating a Build Environment>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createdeployenvironment,Creating a Deploy Environment>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_changedeploysequence,Editing the Deploy Sequence>>
+* <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Approvals>>
 
 
 [[_levelenvmgt_levelphases]]
@@ -426,31 +428,31 @@ When executing a Level Request for this Level, a log will be created for each of
 
 Refer to the following procedures for more information:
 
-* <<_plevelenvmgt_levelphasesoverview>>
-* <<_plevelenvmgt_modifyorderphases>>
-* <<_plevelenvmgt_editlevelphases>>
-* <<_plevelenvmgt_viewlevelphaseparams>>
-* <<_plevelenvmgt_deletephase>>
-* <<_plevelenvmgt_insertphase>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_levelphasesoverview,The Level Phases Overview Screen>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_modifyorderphases,Changing the Order of the Level Phases>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Viewing the Level Phase Parameters>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_deletephase,Deleting a Level Phase>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Inserting a Level Phase>>
 
-
+[[_plevelenvmgt_levelphasesoverview]]
 ====== The Level Phases Overview Screen
 
 . In the __Project Administration context__, select __Levels > Overview__.
-. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
+. Click the _Edit Phases_ image:icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
 +
 The _Level Phases Overview_ screen is displayed:
 +
-image::images/ProjAdmin-Levels-TestLevel-EditPhases.png[,768,477] 
+image::ProjAdmin-Levels-TestLevel-EditPhases.png[,768,477] 
 +
 . Use the links on the _Phases Overview_ panel to edit a Phase.
 +
 The following links are available:
 
-* The image:images/icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to change the order of the Phases. <<_plevelenvmgt_modifyorderphases>>
-* The image:images/icons/edit.gif[,15,15] _Edit_ link to edit the Phase`'s settings. <<_plevelenvmgt_editlevelphases>>
-* The image:images/icons/icon_viewparameters.png[,15,15] _View Parameters_ link to manage the mandatory and optional Phase Parameters. <<_plevelenvmgt_viewlevelphaseparams>>
-* The image:images/icons/delete.gif[,15,15] _Delete_ link to delete a Phase. <<_plevelenvmgt_deletephase>>
+* The image:icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to change the order of the Phases. <<ProjAdm_Levels.adoc#_plevelenvmgt_modifyorderphases,Changing the Order of the Level Phases>>
+* The image:icons/edit.gif[,15,15] _Edit_ link to edit the Phase`'s settings. <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>>
+* The image:icons/icon_viewparameters.png[,15,15] _View Parameters_ link to manage the mandatory and optional Phase Parameters. <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Viewing the Level Phase Parameters>>
+* The image:icons/delete.gif[,15,15] _Delete_ link to delete a Phase. <<ProjAdm_Levels.adoc#_plevelenvmgt_deletephase,Deleting a Level Phase>>
 +
 
 [NOTE]
@@ -462,17 +464,17 @@ TO Using and Developing a Phase in IKAN ALM__.
 ====
 . Insert a Phase, if required.
 +
-Select the _Insert Phase_ link underneath the _Phases Overview_ panel. <<_plevelenvmgt_insertphase>>
+Select the _Insert Phase_ link underneath the _Phases Overview_ panel. <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Inserting a Level Phase>>
 . When done, click _Back_ to return to the _Levels Overview_ screen.
 
-
+[[_plevelenvmgt_modifyorderphases]]
 ====== Changing the Order of the Level Phases
 
 . Switch to the _Levels Overview_ screen.
 +
-<<_plevelenvmgt_accessing>>
-. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
-. Use the image:images/icons/up.gif[,15,15] __Up__ and image:images/icons/down.gif[,15,15] _Down_ links in front of a Level Phase to change its position in the sequence.
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
+. Click the _Edit Phases_ image:icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
+. Use the image:icons/up.gif[,15,15] __Up__ and image:images/icons/down.gif[,15,15] _Down_ links in front of a Level Phase to change its position in the sequence.
 . Click _Back_ to return to the _Levels Overview_ screen.
 +
 
@@ -481,38 +483,39 @@ Select the _Insert Phase_ link underneath the _Phases Overview_ panel. <<_plevel
 Avoid changing a Phase`'s position in such a way that its _Next Phase on Error_ is in an earlier position in the workflow: this could result in an infinite loop.
 --
 
+[[_plevelenvmgt_editlevelphases]]
 ====== Editing a Level Phase
 
 . Switch to the _Levels Overview_ screen.
 +
-<<_plevelenvmgt_accessing>>
-. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link in front of the Phase you want to edit.
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
+. Click the _Edit Phases_ image:icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link in front of the Phase you want to edit.
 +
 The _Edit Level Phase_ screen is displayed.
 +
-image::images/ProjAdmin-Levels-TestLevel-LevelPhase-Edit.png[,556,244] 
+image::ProjAdmin-Levels-TestLevel-LevelPhase-Edit.png[,556,244] 
 +
 . Edit the fields on the _Edit Level Phase_ window.
 +
-For a description of the fields, refer to the section <<_plevelenvmgt_insertphase>>.
+For a description of the fields, refer to the section <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Inserting a Level Phase>>.
 . Click __Save __to save your changes.
 +
 You can also click__ Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
 
-
+[[_plevelenvmgt_viewlevelphaseparams]]
 ====== Viewing the Level Phase Parameters 
 (((Levels ,Phases ,Viewing the Level Phase Parameters)))  (((Parameters ,Level Phases))) 
 
 . Switch to the _Levels Overview_ screen.
 +
-<<_plevelenvmgt_accessing>>
-. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
-. Click the image:images/icons/icon_viewparameters.png[,15,15] _View Parameters_ links in front of a Level Phase you want to manage the Phase Parameters for.
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
+. Click the _Edit Phases_ image:icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
+. Click the image:icons/icon_viewparameters.png[,15,15] _View Parameters_ links in front of a Level Phase you want to manage the Phase Parameters for.
 +
 The _Phase Parameter Overview_ screen is displayed.
 +
-image::images/ProjAdmin-Levels-TestLevel-EditPhases_ViewParams.png[,773,642] 
+image::ProjAdmin-Levels-TestLevel-EditPhases_ViewParams.png[,773,642] 
 +
 . Verify the Level Phase Parameters.
 +
@@ -569,11 +572,11 @@ This field may not be changed since it is defined in Global Administration.
 This field may not be changed since it is defined in Global Administration.
 |===
 
-. Click the image:images/icons/edit.gif[,15,15] _Edit Parameter_ link next to a Phase Parameter.
+. Click the image:icons/edit.gif[,15,15] _Edit Parameter_ link next to a Phase Parameter.
 +
 The following pop-up window will be displayed.
 +
-image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditValue.png[,295,143] 
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditValue.png[,295,143] 
 +
 Set the value of the Level Phase Parameter and click _Save_ to save the value.
 +
@@ -581,11 +584,11 @@ You can also click:
 
 * _Refresh_ to retrieve the settings from the database.
 * _Cancel_ to return to the _Phase Parameter Overview_ screen without saving a value.
-. If you want to create a non-mandatory Phase Parameter, click the image:images/icons/icon_createparameter.png[,15,15] _Create Parameter_ link next to a Phase Parameter.
+. If you want to create a non-mandatory Phase Parameter, click the image:icons/icon_createparameter.png[,15,15] _Create Parameter_ link next to a Phase Parameter.
 +
 The following pop-up window will be displayed.
 +
-image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-CreateParam.png[,383,121] 
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-CreateParam.png[,383,121] 
 +
 If a default Parameter value has been set in Global Administration, that value will be suggested.
 +
@@ -594,57 +597,57 @@ Set the value of the Level Phase Parameter and click __Create__.
 * _Reset_ to retrieve the settings from the database.
 * _Cancel_ to return to the _Phase Parameter Overview_ screen without saving a value.
 +
-. If you want to delete a non-mandatory Phase Parameter, click the image:images/icons/delete.gif[,15,15] _Delete Parameter_ link next to a Phase Parameter.
+. If you want to delete a non-mandatory Phase Parameter, click the image:icons/delete.gif[,15,15] _Delete Parameter_ link next to a Phase Parameter.
 +
 The following pop-up window will be displayed.
 +
-image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-DeleteParamValue.png[,383,121] 
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-DeleteParamValue.png[,383,121] 
 +
 Click _Delete_ to confirm the deletion of the mandatory Level Phase Parameter.
 +
 You can also click _Cancel_ to close the pop-up window without deleting the Parameter.
-. Click the image:images/icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Global Phase Parameter_ link next to a Phase Parameter.
+. Click the image:icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Global Phase Parameter_ link next to a Phase Parameter.
 +
 The User will be redirected to the _Edit
 Phase_ screen (in the Global Administration context) and the _Edit Phase Parameter_ pop-up window is opened.
 +
-image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditGlobalPhaseParam.png[,891,841] 
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditGlobalPhaseParam.png[,891,841] 
 +
-You can edit the Global Phase Parameter as described in the section <<_globadm_phaseparameters_editing>>.
+You can edit the Global Phase Parameter as described in the section <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Editing Phase Parameters>>.
 +
-To go back to the Phase Parameter in the Project Administration context, click the appropriate image:images/icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Environment Phase Parameter_ link in the _Connected Environment
+To go back to the Phase Parameter in the Project Administration context, click the appropriate image:icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Environment Phase Parameter_ link in the _Connected Environment
 Parameters_ panel.
 
-
+[[_plevelenvmgt_deletephase]]
 ====== Deleting a Level Phase
 
 . Switch to the _Levels Overview_ screen.
 +
-<<_plevelenvmgt_accessing>>
-. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
+. Click the _Edit Phases_ image:icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
 
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ link in front of the Level Phase you want to delete.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link in front of the Level Phase you want to delete.
 +
 The _Delete Level Phase_ screen is displayed.
 +
-image::images/ProjAdmin-Levels-TestLevel-LevelPhase-Delete.png[,375,107] 
+image::ProjAdmin-Levels-TestLevel-LevelPhase-Delete.png[,375,107] 
 
 . Confirm the deletion by clicking the _Yes_ button.
 +
 You can also click__ No__ to return to the previous screen without deleting the Level Phase.
 
-
+[[_plevelenvmgt_insertphase]]
 ====== Inserting a Level Phase
 
 . Switch to the _Levels Overview_ screen.
 +
-<<_plevelenvmgt_accessing>>
-. Click the _Edit Phases_ image:images/icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
+. Click the _Edit Phases_ image:icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
 . On the __Phases Overview__, click the _Insert Phase_ link.
 +
 The _Insert Phase_ screen is displayed.
 +
-image::images/ProjAdmin-Levels-TestLevel-InsertLevelPhase.png[,1048,713] 
+image::ProjAdmin-Levels-TestLevel-InsertLevelPhase.png[,1048,713] 
 
 . Select a Phase to insert from the _Available Phases_ panel.
 . Fill out the fields for the new Phase.
@@ -698,11 +701,11 @@ Overview_ screen.
 
 Refer to the following procedures for more information:
 
-* <<_plevelenvmgt_createbuildenvironment>>
-* <<_plevelenvmgt_createdeployenvironment>>
-* <<_plevelenvmgt_changedeploysequence>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildenvironment,Creating a Build Environment>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createdeployenvironment,Creating a Deploy Environment>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_changedeploysequence,Editing the Deploy Sequence>>
 
-
+[[_plevelenvmgt_createbuildenvironment]]
 ====== Creating a Build Environment 
 (((Build Environments ,Creating))) 
 
@@ -713,12 +716,12 @@ Refer to the following procedures for more information:
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-Levels-BuildEnv-Create.png[,1019,444] 
+image::ProjAdmin-Levels-BuildEnv-Create.png[,1019,444] 
 +
 For a complete description of the _Create Build
 Environment_ procedure, refer to <<_pcreatebuildenvironment>>.
 
-
+[[_plevelenvmgt_createdeployenvironment]]
 ====== Creating a Deploy Environment 
 (((Deploy Environments ,Creating))) 
 
@@ -729,12 +732,12 @@ Environment_ procedure, refer to <<_pcreatebuildenvironment>>.
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-Levels-DeployEnv-Create.png[,1035,490] 
+image::ProjAdmin-Levels-DeployEnv-Create.png[,1035,490] 
 +
 For a complete description of the _Create Deploy
-Environment_ procedure, refer to <<_pcreatedeployenvironment>>.
+Environment_ procedure, refer to <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Creating a Deploy Environment>>.
 
-
+[[_plevelenvmgt_changedeploysequence]]
 ====== Editing the Deploy Sequence
 
 When a Deploy Environment is created, it will automatically get Sequence Number 0.
@@ -760,7 +763,7 @@ This link is only available if there is more than one Deploy Environment linked 
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-Levels-EditDeploySequence.png[,298,203] 
+image::ProjAdmin-Levels-EditDeploySequence.png[,298,203] 
 +
 . Change the __Sequence Number__.
 +
@@ -769,22 +772,22 @@ Use the drop-down menu at the left of the Deploy Environment to change the Seque
 +
 You can also click__ Refresh __to retrieve the settings from the database or__ Cancel __to return to the previous screen without saving your changes.
 
-
+[[_levelenvmgt_approvalsequence]]
 ===== Level Approvals 
 (((Approvals ,Level Approval Sequence)))  (((Approvals ,Level Approvals))) 
 
 For Test and Production Levels, you can specify the sequence of Pre- and Post-Approvals.
-For more information on Approvals, refer to <<_desktop_outstandingapprovals>>
+For more information on Approvals, refer to <<Desktop_Approvals.adoc#_desktop_outstandingapprovals,Approvals>>
 
 . Switch to the _Levels Overview_ screen.
 +
-<<_plevelenvmgt_accessing>>
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
 
-. On the _Levels Overview_ panel, click the image:images/icons/edit.gif[,15,15] _Edit_ link for the required Level.
+. On the _Levels Overview_ panel, click the image:icons/edit.gif[,15,15] _Edit_ link for the required Level.
 +
 The _Edit Level_ screen is displayed.
 +
-image::images/ProjAdmin-Levels-Level-Edit.png[,986,483] 
+image::ProjAdmin-Levels-Level-Edit.png[,986,483] 
 +
 
 [NOTE]
@@ -792,11 +795,11 @@ image::images/ProjAdmin-Levels-Level-Edit.png[,986,483]
 Approvals can only be defined for Test and Production Levels.
 ====
 +
-. Click the image:images/icons/icon_editApprovals.png[,15,15] __Add Pre-Approval __or image:images/icons/icon_editApprovals.png[,15,15] __Add Post-Approval __link at the bottom of the __Edit Level __screen.
+. Click the image:icons/icon_editApprovals.png[,15,15] __Add Pre-Approval __or image:images/icons/icon_editApprovals.png[,15,15] __Add Post-Approval __link at the bottom of the __Edit Level __screen.
 +
 The _Add Approval_ window is displayed:
 +
-image::images/ProjAdmin-Levels-ProductionLevel-LevelApprovalSequence.png[,339,171] 
+image::ProjAdmin-Levels-ProductionLevel-LevelApprovalSequence.png[,339,171] 
 
 . Select the required _User Group_ from the drop-down list. 
 +
@@ -814,10 +817,10 @@ If you do not select an existing Approval User Group from the __Insert after __d
 . Click the__ Insert __button, to confirm your changes.
 +
 The Approval is added to the Sequence on the _Edit Level_ screen.
-. If necessary, you can use the image:images/icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ buttons to modify the order of the different User Groups, or use the image:images/icons/delete.gif[,15,15] _Remove_ button to remove a User Group from the Sequence list.
+. If necessary, you can use the image:icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ buttons to modify the order of the different User Groups, or use the image:images/icons/delete.gif[,15,15] _Remove_ button to remove a User Group from the Sequence list.
 . Repeat this procedure to define all required Pre- and Post-Approvals.
 
-
+[[_plevelenvmgt_deletelevel]]
 ==== Deleting a Level 
 (((Levels ,Deleting))) 
 
@@ -830,35 +833,35 @@ If the Level is still linked to a Lifecycle you cannot delete the Level.
 
 . Switch to the _Levels Overview_ screen.
 +
-<<_plevelenvmgt_accessing>>
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
 . Click the _Delete_ link on the _Levels Overview_ panel.
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-Levels-Delete.png[,644,599] 
+image::ProjAdmin-Levels-Delete.png[,644,599] 
 +
 . Click__ Delete__ to confirm the deletion or _Back_ to return to the previous screen without deleting the Level.
 . If you try deleting a Level that is assigned to a Lifecycle, the following screen is displayed:
 +
-image::images/ProjAdmin-Levels-TestLevel-Delete.png[,547,520] 
+image::ProjAdmin-Levels-TestLevel-Delete.png[,547,520] 
 +
-Remove the Level from the Lifecycle before deleting it. <<_plifecyclemgt_removelevel>>
+Remove the Level from the Lifecycle before deleting it. <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_removelevel,Removing a Level>>
 
-
+[[_plevelenvmgt_clonelevel]]
 ==== Cloning a Level
 
 . Switch to the _Levels Overview_ screen.
 +
-<<_plevelenvmgt_accessing>>
-. Click the _Clone_ image:images/icons/clone.gif[,15,15]  link in front of the Level you want to clone.
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
+. Click the _Clone_ image:icons/clone.gif[,15,15]  link in front of the Level you want to clone.
 +
 The _Clone Level_ screen is displayed.
 +
-image::images/ProjAdmin-Levels-CloneLevel.png[,905,484] 
+image::ProjAdmin-Levels-CloneLevel.png[,905,484] 
 +
 . Edit the fields on the _Level Info_ panel.
 +
-For a description of the fields, refer to the sections <<_plevelenvmgt_createbuildlevel>> or <<_plevelenvmgt_createtestorproductionlevel>>.
+For a description of the fields, refer to the sections <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>>.
 . Click__ Clone Level__ to confirm the action.
 +
 You can also click _Back_ to return to the _Levels Overview_ screen.
@@ -868,14 +871,14 @@ The environment names will be set automatically by adding a "`CLONE`" suffix.
 You might want to change this after the Level has been cloned.
 You also might want to change the Source and/or Target Locations, especially the Target Locations of cloned Deploy Environments.
 
-
+[[_levelenvmgt_historyview]]
 ==== Viewing the Level History 
 (((Levels ,History))) 
 
 . Switch to the _Levels Overview_ screen.
 +
-<<_plevelenvmgt_accessing>>
-. Click the _History_ image:images/icons/history.gif[,15,15]  link on the _Levels Overview_ panel.
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
+. Click the _History_ image:icons/history.gif[,15,15]  link on the _Levels Overview_ panel.
 +
 For more detailed information concerning this __History View__, refer to the section <<_historyeventlogging>>.
 +

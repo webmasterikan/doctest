@@ -1,4 +1,4 @@
-
+[[_userinterfaceoverview]]
 == User Interface Overview 
 (((User Interface))) 
 
@@ -20,7 +20,7 @@ Menu__, the blue toolbar on top of the screen.
 At the right, it contains the User Settings of the current user as well as the context-sensitive help pages.
 
 
-image::images/UserInterface_MainMenu_Sections.png[,1041,332] 
+image::UserInterface_MainMenu_Sections.png[,1041,332] 
 
 ==== Submenus
 When you select the Global or Project Administration option from the Main Menu, the dependent Submenu is displayed in the gray banner below the Main Menu.
@@ -30,7 +30,7 @@ Submenu options followed by a small triangle contain a drop-down menu with extra
 __Links __appear on or below the Overview panels of the IKAN ALM screens.
 When you select them, another IKAN ALM screen is displayed.
 
-image::images/UserInterface_MainMenu_Navigating.png[,1054,378] 
+image::UserInterface_MainMenu_Navigating.png[,1054,378] 
 
 
 [[_regularikanalmscreens]]
@@ -40,7 +40,7 @@ image::images/UserInterface_MainMenu_Navigating.png[,1054,378]
 An IKAN ALM screen contains the following main items.
 
 
-image::images/UserInterface-Screens.png[,1015,434] 
+image::UserInterface-Screens.png[,1015,434] 
 
 ==== Selected Menu Indication
 The __Selected Menu Indication __below the Submenu shows how the user switched to the displayed IKAN ALM Screen.
@@ -48,7 +48,7 @@ The following format is used: _Main Menu Option > Submenu
 Option_
 
 
-image::images/UserInterface-SearchPanel.png[,965,156] 
+image::UserInterface-SearchPanel.png[,965,156] 
 
 ==== Search Panels
 _Search_ panels allow specifying search criteria, which restrict the list of items displayed in the _Overview_ panel.
@@ -67,7 +67,7 @@ For more info on using filters, refer to the section <<Desktop_PersonalSettings.
 
 
 ==== Create Panels
-image::images/UserInterface-CreatePanel.png[,490,266] 
+image::UserInterface-CreatePanel.png[,490,266] 
 _Create_ panels allow defining new IKAN ALM Objects.
 Mandatory fields are marked with a red asterisk.
 
@@ -94,20 +94,20 @@ If you have User Access Rights, the following links are available:
 | Option
 | Description
 
-|image:images/icons/view.gif[,15,15]  View
+|image:icons/view.gif[,15,15]  View
 |When you select the__ View__ option, a__ View__ panel will be displayed below the __Selected
 Menu Indication__.
 
 You will not be able to edit any values.
 
-|image:images/icons/history.gif[,15,15]  History
+|image:icons/history.gif[,15,15]  History
 |This option is available on the Overview screens in Global Administration and Project Administration.
 It is also available in some detailed Global and Project Administration interfaces, e.g on the System Settings screen, or the Edit Project screen.
 
 All operations on objects and components related to those sections are logged in the IKAN ALM database.
 The _History_ link allows you to display their history of events.
 
-|image:images/icons/status.gif[,15,15]  Status
+|image:icons/status.gif[,15,15]  Status
 |This option is available on the _Machine Overview_ screen.
 
 Use this link to display the activity status of the Machine and the last lines of output of the Agent Daemon process running on this Machine.
@@ -121,44 +121,44 @@ If you have Project Administrator or Global Administrator Access Rights, the fol
 | Option
 | Description
 
-|image:images/icons/edit.gif[,15,15]  Edit
+|image:icons/edit.gif[,15,15]  Edit
 |When you select the __Edit __option, an _Edit_ panel will be displayed below the __Selected
 Menu Indication__.
 
 You will be able to edit the required values and save the changes.
 
-|image:images/icons/delete.gif[,15,15]  Delete
+|image:icons/delete.gif[,15,15]  Delete
 |When you select the _Delete_ option, a _Delete Confirmation_ panel will be displayed below the __Selected Menu Indication__.
 
 You will be able to confirm or cancel the deletion.
 
-|image:images/icons/lock.gif[,15,15]  Lock
+|image:icons/lock.gif[,15,15]  Lock
 
-image:images/icons/unlock.gif[,15,15]  Unlock
+image:icons/unlock.gif[,15,15]  Unlock
 |This option is specific for the _Project_ panel and the _Project
 Streams Overview_ panel.
 
-|image:images/icons/hide.gif[,15,15]  Hide
+|image:icons/hide.gif[,15,15]  Hide
 
-image:images/icons/show.gif[,15,15]  Show
+image:icons/show.gif[,15,15]  Show
 |These options are specific for the _Projects Overview_ and the _Project Streams
 Overview_ panels.
 
 They allow you to hide specific Projects or Project Streams on the search results Overview.
 
-|image:images/icons/optional.gif[,15,15]  Set Optional
+|image:icons/optional.gif[,15,15]  Set Optional
 
-image:images/icons/required.gif[,15,15]  Set Required
+image:icons/required.gif[,15,15]  Set Required
 |These options are specific for the _Lifecycles Overview_ screen.
 
 They allow you to make Levels optional. 
 
-|image:images/icons/icon_editProperties.png[,15,15]  Edit Properties
+|image:icons/icon_editProperties.png[,15,15]  Edit Properties
 |This option is specific for the _Issue Tracking Systems Overview_ screen.
 
 It allows to modify the value of the property to ensure a correct usage of the Issue Tracking System.
 
-|image:images/icons/icon_disconnectUser.png[,15,15]  Disconnect User
+|image:icons/icon_disconnectUser.png[,15,15]  Disconnect User
 |This option is specific for the _Users Overview_ screen.
 
 It allows disconnecting Users before their session has timed out.
@@ -167,7 +167,7 @@ It allows disconnecting Users before their session has timed out.
 [NOTE]
 ====
 
-Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
 ====
 
 [[_desktop_autorefresh]]
@@ -180,4 +180,4 @@ If the__ Auto Refresh __option is activated, the screen will be refreshed follow
 Select the option to toggle its status.
 
 
-image::images/Desktop-AutoRefresh-SubmenuOption.png[,1015,400] 
+image::Desktop-AutoRefresh-SubmenuOption.png[,1015,400] 

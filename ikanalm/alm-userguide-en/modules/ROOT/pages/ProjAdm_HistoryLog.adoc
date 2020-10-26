@@ -1,4 +1,4 @@
-
+[[_projadm_historylog]]
 == History Log 
 (((History Log)))  (((Project Administration ,History Log))) 
 
@@ -6,7 +6,7 @@
 +
 The _Project History View_ screen is displayed:
 +
-image::images/ProjAdm-HistoryLog-Screen.png[,1043,546] 
+image::ProjAdm-HistoryLog-Screen.png[,1043,546] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -21,7 +21,7 @@ You can also:
 
 [NOTE]
 ====
-Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
 ====
 +
 The following information fields are available:
@@ -70,7 +70,7 @@ The object was deleted
 +
 A _Comparison_ panel is added to the right of the _Versions_ panel.
 +
-image::images/ProjAdm-HistoryLog-Comparison.png[,964,637] 
+image::ProjAdm-HistoryLog-Comparison.png[,964,637] 
 +
 The _Version Comparison_ panel displays the differences between the latest version of the object (shown in the "Latest" column) and the selected version of the object (shown in the "Selected" column). If the Object was deleted, the latest version will be equal to the status of the Object before it was deleted.
 

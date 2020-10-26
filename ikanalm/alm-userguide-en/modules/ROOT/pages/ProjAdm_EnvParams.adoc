@@ -1,4 +1,4 @@
-
+[[_projadm_environmentparameters]]
 == Environment Parameters 
 (((Project Administration ,Environment Parameters)))  (((Environment Parameters)))  (((Parameters ,Environment))) 
 
@@ -40,13 +40,13 @@ For more information, refer to the appendix <<_cpredefinedbuildparameters>>.
 The _Parameters Overview_ screen lets you create, edit, delete and copy Environment Parameters and allows checking their history.
 The following actions are possible:
 
-* <<_environmentparams_create>>
-* <<_environmentparams_history>>
-* <<_environmentparams_edit>>
-* <<_environmentparams_delete>>
-* <<_environmentparams_copy>>
+* <<ProjAdm_EnvParams.adoc#_environmentparams_create,Creating Environment Parameters>>
+* <<ProjAdm_EnvParams.adoc#_environmentparams_history,Viewing the Environment Parameters History>>
+* <<ProjAdm_EnvParams.adoc#_environmentparams_edit,Editing Environment Parameters>>
+* <<ProjAdm_EnvParams.adoc#_environmentparams_delete,Deleting Environment Parameters>>
+* <<ProjAdm_EnvParams.adoc#_environmentparams_copy,Copying Environment Parameters>>
 
-
+[[_environmentparams_overview]]
 === The Parameters Overview Screen
 (((Environment Parameters ,Overview Screen))) 
 
@@ -59,7 +59,7 @@ This option is only available if you have Project Administrator Access Rights.
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-EnvParams-Overview.png[,979,553] 
+image::ProjAdmin-EnvParams-Overview.png[,979,553] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -74,15 +74,15 @@ You can also:
 +
 The _Parameters Overview_ panel displays the defined Environment Parameters for each of the Environments.
 +
-For a description of the fields, see <<_environmentparams_create>>.
+For a description of the fields, see <<ProjAdm_EnvParams.adoc#_environmentparams_create,Creating Environment Parameters>>.
 +
 
 [NOTE]
 ====
-The icon image:images/icons/icon_MachineParameter.png[,15,15]  indicates that the parameter is a Machine Parameter. <<GlobAdm_Machines.adoc#_globadm_machineparameters,Machine Parameters>> In order to show these Parameters, you should set the _Show
+The icon image:icons/icon_MachineParameter.png[,15,15]  indicates that the parameter is a Machine Parameter. <<GlobAdm_Machines.adoc#_globadm_machineparameters,Machine Parameters>> In order to show these Parameters, you should set the _Show
 Machine Parameters_ criterion to __Yes__.
 
-Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
 ====
 . Depending on your access rights, the following links may be available on the _Parameters Overview_ panel:
 +
@@ -92,57 +92,57 @@ Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be so
 | Link
 | Description
 
-|image:images/icons/icon_createparameter.png[,15,15] 
+|image:icons/icon_createparameter.png[,15,15] 
 |Create
 
 This option is available to all Users with Project Administrator Access Rights.
 It allows creating an Environment Parameter.
 
-<<_environmentparams_create>>
+<<ProjAdm_EnvParams.adoc#_environmentparams_create,Creating Environment Parameters>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all Users with Project Administrator Access Rights.
 It allows viewing the Parameter history of the selected Environment.
 
-<<_environmentparams_history>>
+<<ProjAdm_EnvParams.adoc#_environmentparams_history,Viewing the Environment Parameters History>>
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to all Users with Project Administrator Access Rights.
 It allows editing the selected Environment Parameter definition.
 
-<<_environmentparams_edit>>
+<<ProjAdm_EnvParams.adoc#_environmentparams_edit,Editing Environment Parameters>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to all Users with Project Administrator Access Rights.
 It allows deleting the selected Environment Parameter definition and (optionally) deleting Environment Parameters with the same key linked to other Build or Deploy Environments.
 
-<<_environmentparams_delete>>
+<<ProjAdm_EnvParams.adoc#_environmentparams_delete,Deleting Environment Parameters>>
 
-|image:images/icons/copy_parameter.gif[,15,15] 
+|image:icons/copy_parameter.gif[,15,15] 
 |Copy Parameter
 
 This option is available to all Users with Project Administrator Access Rights.
 It allows copying the selected Environment Parameter definition to one or more Environments.
 
-<<_environmentparams_copy>>
+<<ProjAdm_EnvParams.adoc#_environmentparams_copy,Copying Environment Parameters>>
 |===
 
-
+[[_environmentparams_create]]
 === Creating Environment Parameters 
 (((Environment Parameters ,Creating))) 
 
 . Switch to the _Parameters Overview_ screen for the required Project.
 +
-<<_environmentparams_overview>>
-. Click the image:images/icons/icon_createparameter.png[,15,15] _Create Parameter_ link to display the Parameter Action window.
+<<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
+. Click the image:icons/icon_createparameter.png[,15,15] _Create Parameter_ link to display the Parameter Action window.
 +
-image::images/ProjAdmin-EnvParams-Create.png[,382,404] 
+image::ProjAdmin-EnvParams-Create.png[,382,404] 
 +
 . Fill out the fields for the new Environment Parameter.
 +
@@ -217,34 +217,34 @@ You can also click:
 * _Reset_ to clear the fields and restore the initial values.
 * _Cancel_ to return to the previous screen without saving the changes.
 
-
+[[_environmentparams_history]]
 === Viewing the Environment Parameters History 
 (((Environment Parameters ,History))) 
 
 Switch to the _Parameters Overview_ screen for the required Project.
 
-<<_environmentparams_overview>>
-. Click the image:images/icons/history.gif[,15,15] _History_ link on the _Parameters Overview_ panel to display the__ Environment History View__.
+<<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
+. Click the image:icons/history.gif[,15,15] _History_ link on the _Parameters Overview_ panel to display the__ Environment History View__.
 
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.
 
 Click __Back __to return to the previous screen.
 
-
+[[_environmentparams_edit]]
 === Editing Environment Parameters 
 (((Environment Parameters ,Editing))) 
 
 . Switch to the _Parameters Overview_ screen for the required Project.
 +
-<<_environmentparams_overview>>
-. In the _Actions_ column, click the image:images/icons/edit.gif[,15,15] __ Edit __link in front of the Environment Parameter to be edited.
+<<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
+. In the _Actions_ column, click the image:icons/edit.gif[,15,15] __ Edit __link in front of the Environment Parameter to be edited.
 +
 The following window is displayed:
 +
-image::images/ProjAdmin-EnvParams-Edit.png[,399,376] 
+image::ProjAdmin-EnvParams-Edit.png[,399,376] 
 +
-For a description of the fields, refer to <<_environmentparams_create>>.
+For a description of the fields, refer to <<ProjAdm_EnvParams.adoc#_environmentparams_create,Creating Environment Parameters>>.
 
 . Edit the fields as required, and click _Save_ to save your changes.
 +
@@ -253,25 +253,25 @@ You can also click:
 * _Refresh_ to clear the fields and restore the initial values.
 * _Cancel_ to return to the previous screen without saving your changes.
 
-
+[[_environmentparams_delete]]
 === Deleting Environment Parameters 
 (((Environment Parameters ,Deleting))) 
 
 . Switch to the _Parameters Overview_ screen for the required Project.
 +
-<<_environmentparams_overview>>
-. In the _Actions_ column, click the image:images/icons/delete.gif[,15,15] __ Delete __link in front of the Environment Parameter to be deleted.
+<<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
+. In the _Actions_ column, click the image:icons/delete.gif[,15,15] __ Delete __link in front of the Environment Parameter to be deleted.
 +
 The following confirmation window is displayed:
 +
-image::images/ProjAdmin-EnvParams-Delete.png[,383,388] 
+image::ProjAdmin-EnvParams-Delete.png[,383,388] 
 +
 . Optionally, select additional Environments. This allows for deleting parameters with the same key name on the selected Build and Deploy Environments.
 . Click _Delete_ to confirm the deletion of the Environment Parameter.
 +
 You can also click _Cancel_ to return to the previous screen without saving your changes.
 
-
+[[_environmentparams_copy]]
 === Copying Environment Parameters 
 (((Environment Parameters ,Copying))) 
 
@@ -279,12 +279,12 @@ To avoid having to redefine Environment Parameters which are identical for multi
 
 . Switch to the _Parameters Overview_ screen for the required Project.
 +
-<<_environmentparams_overview>>
-. In the _Actions_ column, click the image:images/icons/copy_parameter.gif[,15,15] __ Copy __link in front of the Environment Parameter to be copied.
+<<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
+. In the _Actions_ column, click the image:icons/copy_parameter.gif[,15,15] __ Copy __link in front of the Environment Parameter to be copied.
 +
 The following window displays the values of the parameter you are about to copy.
 +
-image::images/ProjAdmin-EnvParams-Copy.png[,462,529] 
+image::ProjAdmin-EnvParams-Copy.png[,462,529] 
 +
 . Indicate whether you want to replace the parameter in case it already exists in the target Build or Deploy Environment(s).
 . Select the Target Environment(s)

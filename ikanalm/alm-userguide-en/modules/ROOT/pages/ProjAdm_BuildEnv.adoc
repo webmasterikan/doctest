@@ -1,4 +1,5 @@
 
+[[_projadm_buildenvironments]]
 == Build Environments 
 (((Project Administration ,Build Environments)))  (((Project Management Options ,Build Environments)))  (((Build Environments))) 
 
@@ -21,16 +22,16 @@ The Build Environments submenu option lets you start the following procedures:
 The _Build Environments Overview_ screen lets you verify and change the information concerning Build Environments and related Phases.
 The following actions are possible:
 
-** <<_projadm_buildenv_edit>>
-** <<_projadm_buildenv_delete>>
-** <<_projadm_buildenv_clone>>
-** <<_projadm_buildenv_editphase>>
-** <<_projadm_buildenv_viewparameters>>
+** <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_edit,Editing a Build Environment>>
+** <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_delete,Deleting a Build Environment>>
+** <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_clone,Cloning a Build Environment>>
+** <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Editing a Build Environment Phase>>
+** <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_viewparameters,Viewing the Build Environment Parameters>>
 ** <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_historyview,Viewing the Build Environment History>>
 * Build Parameters
 +
 The _Parameters Overview_ screen lets you create, edit, delete and copy Build Parameters and allows to check their history.
-For more information, refer to the chapter <<_projadm_environmentparameters>>.
+For more information, refer to the chapter <<ProjAdm_EnvParams.adoc#_projadm_environmentparameters,Environment Parameters>>.
 
 
 === Creating a Build Environment
@@ -40,7 +41,7 @@ For more information, refer to the chapter <<_projadm_environmentparameters>>.
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-BuildEnv-Create.png[,1027,250] 
+image::ProjAdmin-BuildEnv-Create.png[,1027,250] 
 +
 . Fill out the fields for the new Build Environment.
 +
@@ -143,11 +144,12 @@ You can also click the _Reset_ button to clear the fields and restore the initia
 === The Build Environments Overview Screen 
 (((Build Environments ,Overview Screen))) 
 
+[[_pworkwithbuildenvironmentsoverview]]
 . In the __Project Administration context__, select __Build Environments > Overview__.
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-BuildEnv-Overview.png[,1024,377] 
+image::ProjAdmin-BuildEnv-Overview.png[,1024,377] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -165,7 +167,7 @@ For a detailed description of the fields, see <<_pcreatebuildenvironment>>.
 
 [NOTE]
 ====
-Columns marked with the image:images/icons/icon_sort.png[,15,15] icon can be sorted alphabetically (ascending or descending).
+Columns marked with the image:icons/icon_sort.png[,15,15] icon can be sorted alphabetically (ascending or descending).
 ====
 . Depending on your access rights, the following links may be available on the _Build Environments Overview_ panel:
 +
@@ -173,42 +175,42 @@ Columns marked with the image:images/icons/icon_sort.png[,15,15] icon can be sor
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option allows editing a the Build Environment settings.
 
-<<_projadm_buildenv_edit>>
+<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_edit,Editing a Build Environment>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option allows deleting a Build Environment.
 
-<<_projadm_buildenv_delete>>
+<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_delete,Deleting a Build Environment>>
 
-|image:images/icons/clone.gif[,15,15]
+|image:icons/clone.gif[,15,15]
 |Clone
 
 This option allows cloning a Build Environment.
 
-<<_projadm_buildenv_clone>>
+<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_clone,Cloning a Build Environment>>
 
-|image:images/icons/edit_phases.gif[,15,15] 
+|image:icons/edit_phases.gif[,15,15] 
 |Edit Phases
 
 This option allows editing the Build Environment Phases.
 
-<<_projadm_buildenv_editphase>>
+<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Editing a Build Environment Phase>>
 
-|image:images/icons/icon_viewparameters.png[,15,15] 
+|image:icons/icon_viewparameters.png[,15,15] 
 |View Parameters
 
 This option allows viewing the Build Environment Parameters.
 
-<<_projadm_buildenv_viewparameters>>
+<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_viewparameters,Viewing the Build Environment Parameters>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option allows viewing the Build Environment History.
@@ -216,24 +218,24 @@ This option allows viewing the Build Environment History.
 <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_historyview,Viewing the Build Environment History>>
 |===
 
-
+[[_projadm_buildenv_edit]]
 ==== Editing a Build Environment 
 (((Build Environments ,Editing))) 
 
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. Click image:images/icons/edit.gif[,15,15] __ Edit __to change the selected Build Environment definition.
+. Click image:icons/edit.gif[,15,15] __ Edit __to change the selected Build Environment definition.
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-BuildEnv-Edit.png[,614,476] 
+image::ProjAdmin-BuildEnv-Edit.png[,614,476] 
 +
 . Click the _Edit_ button on the _Build Environment Info_ panel.
 +
 The __Edit Build Environment __window is displayed:
 +
-image::images/ProjAdmin-BuildEnv-Edit_popup.png[,540,337] 
+image::ProjAdmin-BuildEnv-Edit_popup.png[,540,337] 
 +
 . Edit the fields as required.
 +
@@ -242,18 +244,18 @@ For a detailed description of the fields, refer to <<_pcreatebuildenvironment>>.
 +
 You can also click__ Refresh __to retrieve the settings from the database or__ Cancel __to return to the __Edit Build Environment __screen without saving your changes.
 
-
+[[_projadm_buildenv_delete]]
 ==== Deleting a Build Environment 
 (((Build Environments ,Deleting))) 
 
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. Click image:images/icons/delete.gif[,15,15] _Delete_ to delete the selected Build Environment definition.
+. Click image:icons/delete.gif[,15,15] _Delete_ to delete the selected Build Environment definition.
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-BuildEnv-Delete.png[,764,463] 
+image::ProjAdmin-BuildEnv-Delete.png[,764,463] 
 +
 . Click__ Delete __to confirm the deletion.
 +
@@ -265,7 +267,7 @@ You can also click__ Back __to return to the previous screen without deleting th
 Deleting a Build Environment may also delete connected Deploy Environments and Historical information linked to the Environment, like Builds, Build Logs, Deploys and Deploy Logs.
 ====
 
-
+[[_projadm_buildenv_clone]]
 ==== Cloning a Build Environment 
 (((Build Environments ,Cloning))) 
 
@@ -274,11 +276,11 @@ When cloning an Environment, all settings, including the Phases and Parameters, 
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. Click image:images/icons/clone.gif[,15,15] _Clone_ to clone the selected Build Environment definition.
+. Click image:icons/clone.gif[,15,15] _Clone_ to clone the selected Build Environment definition.
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-BuildEnv-Clone.png[,1014,438] 
+image::ProjAdmin-BuildEnv-Clone.png[,1014,438] 
 +
 . On the _Clone Build Environment_ panel, specify the _Name_ and __Target Location__, and specify a Level for the new Environment.
 +
@@ -311,25 +313,25 @@ When executing a Build for this Environment, a log will be created for each of t
 
 Refer to the following procedures for more information:
 
-* <<_projadm_buildenv_buildenvphasesoverview>>
-* <<_projadm_buildenv_insertphase>>
-* <<_projadm_buildenv_editphase>>
-* <<_projadm_buildenv_modifyorderphases>>
-* <<_projadm_buildenv_viewbuildenvphaseparams>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_buildenvphasesoverview,The Build Environment Phases Overview Screen>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_insertphase,Inserting a Build Environment Phase>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Editing a Build Environment Phase>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_modifyorderphases,Changing the Order of the Build Environment Phases>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_viewbuildenvphaseparams,Viewing the Build Environment Phase Parameters>>
 * <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phasedelete,Deleting a Build Environment Phase>>
 
-
+[[_projadm_buildenv_buildenvphasesoverview]]
 ===== The Build Environment Phases Overview Screen 
 (((Build Environments ,Phases ,Overview))) 
 
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. On the _Build Environments Overview_ panel, click the image:images/icons/edit_phases.gif[,15,15] _Edit Phases_ link.
+. On the _Build Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
 +
 The _Build Environment Phases Overview_ screen is displayed:
 +
-image::images/ProjAdmin-BuildEnv-EditPhases.png[,724,515] 
+image::ProjAdmin-BuildEnv-EditPhases.png[,724,515] 
 +
 
 [NOTE]
@@ -340,10 +342,10 @@ A link to this screen is also available on the __Edit Build Environment __screen
 +
 The following links are available:
 
-* The image:images/icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to change the order of the Phases.
-* The image:images/icons/edit.gif[,15,15] _Edit_ link to edit the Phase`'s settings. <<_projadm_buildenv_editphase>>
-* The image:images/icons/icon_viewparameters.png[,15,15] _View Parameters_ link to manage the mandatory and optional Phase Parameters. <<_projadm_buildenv_viewbuildenvphaseparams>>
-* The image:images/icons/delete.gif[,15,15] _Delete_ link to delete a Phase. <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phasedelete,Deleting a Build Environment Phase>>
+* The image:icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to change the order of the Phases.
+* The image:icons/edit.gif[,15,15] _Edit_ link to edit the Phase`'s settings. <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Editing a Build Environment Phase>>
+* The image:icons/icon_viewparameters.png[,15,15] _View Parameters_ link to manage the mandatory and optional Phase Parameters. <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_viewbuildenvphaseparams,Viewing the Build Environment Phase Parameters>>
+* The image:icons/delete.gif[,15,15] _Delete_ link to delete a Phase. <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phasedelete,Deleting a Build Environment Phase>>
 
 +
 
@@ -359,22 +361,22 @@ TO Using and Developing a Phase in IKAN ALM__.
 +
 Select the _Insert Phase_ link underneath the _Phases Overview_ panel.
 +
-<<_projadm_buildenv_insertphase>>
+<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_insertphase,Inserting a Build Environment Phase>>
 . When done, click _Back_ to return to the _Build Environments Overview_ screen.
 
-
+[[_projadm_buildenv_insertphase]]
 ===== Inserting a Build Environment Phase 
 (((Build Environments ,Phases ,Inserting))) 
 
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. On the _Build Environments Overview_ panel, click the image:images/icons/edit_phases.gif[,15,15] _Edit Phases_ link.
+. On the _Build Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
 . On the _Phases Overview_ panel, click the _Insert Phase_ link.
 +
 The _Insert Phase_ screen is displayed.
 +
-image::images/ProjAdmin-BuildEnv-InsertPhase.png[,1047,732] 
+image::ProjAdmin-BuildEnv-InsertPhase.png[,1047,732] 
 +
 . Select a Phase to insert from the _Available Phases_ panel.
 . Fill out the fields for the new Phase.
@@ -411,37 +413,37 @@ In case you use the same Phase several times, adding a label is useful to provid
 +
 You can also click _Cancel_ to return to the previous screen without saving the changes.
 
-
+[[_projadm_buildenv_editphase]]
 ===== Editing a Build Environment Phase 
 (((Build Environments ,Phases ,Editing))) 
 
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. On the _Build Environment Overview_ panel, click the image:images/icons/edit_phases.gif[,15,15] _Edit Phases_ link.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link in front of the Phase you want to edit.
+. On the _Build Environment Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link in front of the Phase you want to edit.
 +
 The _Edit Build Environment
 Phase_ window is displayed.
 +
-image::images/ProjAdmin-BuildEnv-EditBuildEnvPhase.png[,578,247] 
+image::ProjAdmin-BuildEnv-EditBuildEnvPhase.png[,578,247] 
 +
 . Edit the fields on the _Edit Build Environment Phase_ panel.
 +
-For a description of the fields, refer to the section <<_projadm_buildenv_insertphase>>.
+For a description of the fields, refer to the section <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_insertphase,Inserting a Build Environment Phase>>.
 . Click __Save __to save your changes.
 +
 You can also click__ Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
 
-
+[[_projadm_buildenv_modifyorderphases]]
 ===== Changing the Order of the Build Environment Phases 
 (((Build Environments ,Phases ,Changing the order))) 
 
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. On the _Build Environments Overview_ panel, click the image:images/icons/edit_phases.gif[,15,15] _Edit Phases_ link.
-. Use the image:images/icons/up.gif[,15,15] __Up __and image:images/icons/down.gif[,15,15] _Down_ links in front of a Build Environment Phase to change its position in the sequence.
+. On the _Build Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
+. Use the image:icons/up.gif[,15,15] __Up __and image:images/icons/down.gif[,15,15] _Down_ links in front of a Build Environment Phase to change its position in the sequence.
 . Click _Back_ to return to the _Build Environments Overview_ screen.
 +
 
@@ -450,19 +452,19 @@ You can also click__ Refresh __to retrieve the settings from the database or__ C
 Avoid changing a Phase`'s position in such a way that its _Next Phase on Error_ is in an earlier position in the workflow: this could result in an infinite loop.
 --
 
-
+[[_projadm_buildenv_viewbuildenvphaseparams]]
 ===== Viewing the Build Environment Phase Parameters 
 (((Build Environments ,Phases ,Viewing the Build Environment Phase Parameters)))  (((Parameters ,Build Environment Phase))) 
 
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. On the _Build Environments Overview_ panel, click the image:images/icons/edit_phases.gif[,15,15] _Edit Phases_ link.
-. Click the image:images/icons/icon_viewparameters.png[,15,15] _View Parameters_ links in front of a Build Environment Phase you want to manage the Phase Parameters for.
+. On the _Build Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
+. Click the image:icons/icon_viewparameters.png[,15,15] _View Parameters_ links in front of a Build Environment Phase you want to manage the Phase Parameters for.
 +
 The _Phase Parameter Overview_ screen is displayed.
 +
-image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParamsOverview.png[,851,623] 
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParamsOverview.png[,851,623] 
 +
 . Verify the Build Environment Phase Parameters.
 +
@@ -519,11 +521,11 @@ This field may not be changed since it is defined in Global Administration.
 This field may not be changed since it is defined in Global Administration.
 |===
 
-. Click the image:images/icons/edit.gif[,15,15] _Edit Parameter_ link next to a Phase Parameter.
+. Click the image:icons/edit.gif[,15,15] _Edit Parameter_ link next to a Phase Parameter.
 +
 The following pop-up window will be displayed.
 +
-image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditValue.png[,297,148] 
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditValue.png[,297,148] 
 +
 Set the value of the Build Environment Phase Parameter and click _Save_ to save the value.
 +
@@ -532,11 +534,11 @@ You can also click:
 *********** _Reset_ to retrieve the settings from the database.
 *********** _Cancel_ to return to the _Phase Parameter Overview_ screen without saving a value.
 
-. If you want to create a non-mandatory Phase Parameter, click the image:images/icons/icon_createparameter.png[,15,15] _Create Parameter_ link next to a Phase Parameter.
+. If you want to create a non-mandatory Phase Parameter, click the image:icons/icon_createparameter.png[,15,15] _Create Parameter_ link next to a Phase Parameter.
 +
 The following pop-up window will be displayed.
 +
-image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-CreateParam.png[,383,121] 
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-CreateParam.png[,383,121] 
 +
 If a default Parameter value has been set in Global Administration, that value will be suggested.
 +
@@ -545,27 +547,27 @@ Set the value of the Build Environment Phase Parameter and click __Create__.
 * _Reset_ to retrieve the settings from the database.
 * _Cancel_ to return to the _Phase Parameter Overview_ screen without saving a value.
 
-. If you want to delete a non-mandatory Phase Parameter, click the image:images/icons/delete.gif[,15,15] _Delete Parameter_ link next to a Phase Parameter.
+. If you want to delete a non-mandatory Phase Parameter, click the image:icons/delete.gif[,15,15] _Delete Parameter_ link next to a Phase Parameter.
 +
 The following pop-up window will be displayed.
 +
-image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-DeleteParamValue.png[,383,121] 
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-DeleteParamValue.png[,383,121] 
 +
 Click _Delete_ to confirm the deletion of the mandatory Build Environment Phase Parameter.
 +
 You can also click _Cancel_ to close the pop-up window without deleting the Parameter.
 +
-. Click the image:images/icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Global Phase Parameter_ link next to a Phase Parameter.
+. Click the image:icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Global Phase Parameter_ link next to a Phase Parameter.
 +
 The User will be redirected to the _Edit Phase_ screen (in the Global Administration context) and the _Edit Phase
 Parameter Value_ pop-up window is opened.
 +
-image::images/ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditGlobalPhaseParam.png[,853,696] 
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditGlobalPhaseParam.png[,853,696] 
 +
-You can Edit the Global Phase Parameter as described in the section <<_globadm_phaseparameters_editing>>.
+You can Edit the Global Phase Parameter as described in the section <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Editing Phase Parameters>>.
 +
 To go back to the Phase Parameter in the _Project
-Administration_ context, click the appropriate image:images/icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Environment
+Administration_ context, click the appropriate image:icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Environment
 Phase Parameter_ link in the _Connected Environment
 Parameters_ panel.
 
@@ -576,31 +578,31 @@ Parameters_ panel.
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. On the _Build Environments Overview_ panel, click the image:images/icons/edit_phases.gif[,15,15] _ Edit Phases_ link.
+. On the _Build Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _ Edit Phases_ link.
 . On the__ Phases Overview__ panel, click the Delete link.
 +
 The _Delete Build Environment Phase_ screen is displayed.
 +
-image::images/ProjAdmin-BuildEnv-DeletePhase.png[,377,128] 
+image::ProjAdmin-BuildEnv-DeletePhase.png[,377,128] 
 +
 . Click _Yes_ to confirm the deletion of the Phase.
 +
 You can also click _No_ to return to the previous screen without deleting the Build Environment Phase.
 
-
+[[_projadm_buildenv_viewparameters]]
 ==== Viewing the Build Environment Parameters 
 (((Build Environments ,View Parameters)))  (((Parameters ,Build Environment))) 
 
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. Click image:images/icons/icon_viewparameters.png[,15,15] _View Parameters_ to view all parameters defined for the selected Build Environment.
+. Click image:icons/icon_viewparameters.png[,15,15] _View Parameters_ to view all parameters defined for the selected Build Environment.
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-BuildEnv-ViewParameters.png[,1031,637] 
+image::ProjAdmin-BuildEnv-ViewParameters.png[,1031,637] 
 +
-For a more detailed description of this screen, refer to the section <<_environmentparams_create>>.
+For a more detailed description of this screen, refer to the section <<ProjAdm_EnvParams.adoc#_environmentparams_create,Creating Environment Parameters>>.
 
 
 [[_projadm_buildenv_historyview]]
@@ -609,7 +611,7 @@ For a more detailed description of this screen, refer to the section <<_environm
 . Switch to the Build Environments Overview.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. Click the image:images/icons/history.gif[,15,15] _History_ link to display the __Build Environment History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link to display the __Build Environment History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.

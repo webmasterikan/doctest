@@ -1,10 +1,10 @@
-[[_globadm_vcr_svn]]
+[[_globadm_vcr_svn]] [[_globadm_vcr]]
 == Version Control Repositories 
 (((Global Administration ,Version Control Repositories)))  (((Version Control Repositories))) 
 
 IKAN ALM currently supports different types of Version Control Repositories (VCR):
 
-* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,Version Control Repositories Subversion Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,Subversion Repositories Subversion Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_git,Git Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_cvs,CVS Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_vss,Visual SourceSafe (VSS) Repositories>>
@@ -34,7 +34,7 @@ This option is only available if you have Global Administrator Access Rights in 
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-Create.png[,590,258] 
+image::GlobAdm-VCR-Create.png[,590,258] 
 +
 . Select the _Type_ of Repository you want to create.
 +
@@ -44,11 +44,11 @@ The _Connection Details_ panel for the type of Repository you selected is displa
 +
 For more information on those details, refer to the appropriate sections:
 
-* <<_pcreatesvnrepository>>
+* <<GlobAdm_VCR.adoc#_pcreatesvnrepository,Creating a Subversion Repository>>
 * <<_globadm_vcr_git_create>>
-* <<_pcreatecvsrepository>>
-* <<_pcreatevssrepository>>
-* <<_pcreateclearcasebaserepository>>
+* <<GlobAdm_VCR.adoc#_pcreatecvsrepository,Creating a CVS Repository>>
+* <<GlobAdm_VCR.adoc#_pcreatevssrepository,Creating a VSS Version Control Repository>>
+* <<GlobAdm_VCR.adoc#_pcreateclearcasebaserepository,Creating a ClearCase Repository>>
 * <<_pcreatepvcsrepository>>
 * <<_pcreatepvcsrepository>>
 
@@ -61,7 +61,7 @@ For more information on those details, refer to the appropriate sections:
 +
 The overview of all defined Version Control Repositories is displayed.
 +
-image::images/GlobAdm-VCR-Overview.png[,981,590] 
+image::GlobAdm-VCR-Overview.png[,981,590] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -79,19 +79,19 @@ You can also:
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a Repository definition.
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a Repository definition.
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users.
@@ -100,7 +100,7 @@ It allows displaying the History of all create, update and delete operations per
 +
 For more information, refer to the appropriate sections:
 
-* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,Version Control Repositories Subversion Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,Subversion Repositories Subversion Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_git,Git Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_cvs,CVS Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_vss,Visual SourceSafe (VSS) Repositories>>
@@ -114,13 +114,13 @@ For more information, refer to the appropriate sections:
 
 Refer to the following sections for detailed information:
 
-* <<_pcreatesvnrepository>>
-* <<_pworkwithsvnoverview>>
-* <<_globadm_vcr_svn_edit>>
-* <<_globadm_vcr_svn_delete>>
-* <<_globadm_vcr_svn_history>>
+* <<GlobAdm_VCR.adoc#_pcreatesvnrepository,Creating a Subversion Repository>>
+* <<GlobAdm_VCR.adoc#_pworkwithsvnoverview,The Subversion Repositories Overview Screen>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn_edit,Editing a Subversion Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn_delete,Deleting a Subversion Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn_history,Viewing the Subversion Repository History>>
 
-
+[[_pcreatesvnrepository]]
 ==== Creating a Subversion Repository (((Subversion ,Creating))) 
 
 [NOTE]
@@ -132,7 +132,7 @@ This option is only available if you have Global Administrator Access Rights in 
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-Create-Subversion.png[,585,633] 
+image::GlobAdm-VCR-Create-Subversion.png[,585,633] 
 +
 . Fill out the fields in the _Create Subversion Repository_ screen. 
 +
@@ -230,7 +230,7 @@ with the Repository.__
 +
 If the test is not successful, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-Subversion-Create-Connection-Error.png[,733,508] 
+image::GlobAdm-VCR-Subversion-Create-Connection-Error.png[,733,508] 
 +
 Correct the errors reported in the Stack Trace field and perform the test again.
 . Once the test is successful, click__ Create__.
@@ -244,12 +244,13 @@ Repositories Overview__ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_vcr>>
-* <<_projadmin_projectsoverview_editing>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
+[[_pworkwithsvnoverview]]
 ==== The Subversion Repositories Overview Screen 
 (((Subversion ,Overview Screen))) 
 
@@ -260,7 +261,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the other search criteria to only display the Subversion Repositories you are looking for.
 +
-image::images/GlobAdm-VCR-Overview-Subversion.png[,1005,356] 
+image::GlobAdm-VCR-Overview-Subversion.png[,1005,356] 
 +
 If required, use the other search criteria to refine the items displayed on the overview.
 +
@@ -271,39 +272,39 @@ The following options are available:
 ***** the _Reset search_ link to clear the search fields.
 . Verify the information on the _Subversion Repositories Overview_ panel. 
 +
-For a detailed description of the fields, refer to <<_pcreatesvnrepository>>.
+For a detailed description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatesvnrepository,Creating a Subversion Repository>>.
 . Depending on your access rights, the following links may be available on the _Subversion Repositories Overview_ panel:
 +
 
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a Subversion Repository definition.
 
-<<_globadm_vcr_svn_edit>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_svn_edit,Editing a Subversion Repository>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a Subversion Repository definition.
 
-<<_globadm_vcr_svn_delete>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_svn_delete,Deleting a Subversion Repository>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Subversion Repository.
 
-<<_globadm_vcr_svn_history>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_svn_history,Viewing the Subversion Repository History>>
 |===
 
-
+[[_globadm_vcr_svn_edit]]
 ==== Editing a Subversion Repository 
 (((Subversion ,Editing))) 
 
@@ -313,15 +314,15 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the Subversion Repositories you are looking for.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link to change the selected Subversion Repository.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected Subversion Repository.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-Subversion-Edit.png[,560,547] 
+image::GlobAdm-VCR-Subversion-Edit.png[,560,547] 
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_pcreatesvnrepository>>.
+For a description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatesvnrepository,Creating a Subversion Repository>>.
 +
 
 [NOTE]
@@ -337,7 +338,7 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_vcr_svn_delete]]
 ==== Deleting a Subversion Repository 
 (((Subversion ,Deleting))) 
 
@@ -347,11 +348,11 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the Subversion Repositories you are looking for.
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ link to delete the selected Subversion Repository.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link to delete the selected Subversion Repository.
 +
 If the Subversion Repository is not connected to any Project, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-Subversion-Delete.png[,460,375] 
+image::GlobAdm-VCR-Subversion-Delete.png[,460,375] 
 +
 . Click _Delete_ to confirm the deletion.
 +
@@ -359,11 +360,11 @@ You can also click __Back __to return to the previous screen without deleting th
 +
 __Note:__ If the Subversion Repository is connected to one or more Projects, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-Subversion-Delete-Error.png[,696,691] 
+image::GlobAdm-VCR-Subversion-Delete-Error.png[,696,691] 
 +
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
-
+[[_globadm_vcr_svn_history]]
 ==== Viewing the Subversion Repository History 
 (((Subversion ,History))) 
 
@@ -373,7 +374,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the Subversion Repositories you are looking for.
-. Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ Subversion Repository History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link to display the__ Subversion Repository History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.
@@ -387,10 +388,10 @@ View__, refer to the section <<_historyeventlogging>>.
 Refer to the following sections for detailed information:
 
 * <<_globadm_vcr_git_create>>
-* <<_globadm_vcr_git_overview>>
-* <<_globadm_vcr_git_edit>>
-* <<_globadm_vcr_git_delete>>
-* <<_globadm_vcr_git_history>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_overview,The Git Repositories Overview Screen>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_edit,Editing a Git Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_delete,Deleting a Git Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_history,Viewing the Git Repository History>>
 
 
 ==== Creating a Git Repository (((Git ,Creating))) 
@@ -406,7 +407,7 @@ Before you can create the Git Version Control Repository in IKAN ALM, you must i
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-Create-Git.png[,585,596] 
+image::GlobAdm-VCR-Create-Git.png[,585,596] 
 +
 . Fill out the fields in the _Create Git Repository_ screen. Fields marked with a red asterisk are mandatory:
 +
@@ -506,7 +507,7 @@ with the Repository.__
 +
 If the test is not successful, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-Git-Create-Connection-Error.png[,737,509] 
+image::GlobAdm-VCR-Git-Create-Connection-Error.png[,737,509] 
 +
 Correct the errors reported in the Stack Trace field and perform the test again.
 . Once the test is successful, click__ Create__.
@@ -520,12 +521,13 @@ Repositories Overview__ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_vcr>>
-* <<_projadmin_projectsoverview_editing>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
+[[_globadm_vcr_git_overview]]
 ==== The Git Repositories Overview Screen 
 (((Git ,Overview Screen))) 
 
@@ -536,7 +538,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the other search criteria to only display the Git Repositories you are looking for.
 +
-image::images/GlobAdm-VCR-Overview-Git.png[,1010,279] 
+image::GlobAdm-VCR-Overview-Git.png[,1010,279] 
 +
 If required, use the other search criteria to refine the items displayed on the overview.
 +
@@ -547,39 +549,39 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the _Git Repositories Overview_ panel.
 +
-For a detailed description of the fields, refer to <<_pcreatesvnrepository>>.
+For a detailed description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatesvnrepository,Creating a Subversion Repository>>.
 . Depending on your access rights, the following links may be available on the _Git Repositories Overview_ panel:
 +
 
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a Git Repository definition.
 
-<<_globadm_vcr_git_edit>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_git_edit,Editing a Git Repository>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a Git Repository definition.
 
-<<_globadm_vcr_git_delete>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_git_delete,Deleting a Git Repository>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Git Repository.
 
-<<_globadm_vcr_git_history>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_git_history,Viewing the Git Repository History>>
 |===
 
-
+[[_globadm_vcr_git_edit]]
 ==== Editing a Git Repository 
 (((Git ,Editing))) 
 
@@ -589,11 +591,11 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search
 Version Control Repository_ panel to only display the Git Repositories you are looking for.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link to change the selected Git Repository.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected Git Repository.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-Git-Edit.png[,624,635] 
+image::GlobAdm-VCR-Git-Edit.png[,624,635] 
 +
 . Edit the fields as required.
 +
@@ -613,7 +615,7 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_vcr_git_delete]]
 ==== Deleting a Git Repository 
 (((Git ,Deleting))) 
 
@@ -623,11 +625,11 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the Git Repositories you are looking for.
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ link to delete the selected Git Repository.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link to delete the selected Git Repository.
 +
 If the Git Repository is not connected to any Project, the following screen is displayed: 
 +
-image::images/GlobAdm-VCR-Git-Delete.png[,501,330] 
+image::GlobAdm-VCR-Git-Delete.png[,501,330] 
 +
 . Click _Delete_ to confirm the deletion.
 +
@@ -635,11 +637,11 @@ You can also click __Back __to return to the previous screen without deleting th
 +
 __Note:__ If the Git Repository is connected to one or more Projects, the following screen is displayed: 
 +
-image::images/GlobAdm-VCR-Git-Delete-Error.png[,624,480] 
+image::GlobAdm-VCR-Git-Delete-Error.png[,624,480] 
 +
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
-
+[[_globadm_vcr_git_history]]
 ==== Viewing the Git Repository History 
 (((Git ,History))) 
 
@@ -649,7 +651,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the Git Repositories you are looking for.
-. Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ Git Repository History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link to display the__ Git Repository History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.
@@ -662,13 +664,13 @@ View__, refer to the section <<_historyeventlogging>>.
 
 Refer to the following sections for detailed information:
 
-* <<_pcreatecvsrepository>>
-* <<_pworkwithcvsoverview>>
-* <<_globadm_vcr_cvs_edit>>
-* <<_globadm_vcr_cvs_delete>>
-* <<_globadm_vcr_cvs_history>>
+* <<GlobAdm_VCR.adoc#_pcreatecvsrepository,Creating a CVS Repository>>
+* <<GlobAdm_VCR.adoc#_pworkwithcvsoverview,The CVS Repositories Overview Screen>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_cvs_edit,Editing a CVS Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_cvs_delete,Deleting a CVS Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_cvs_history,Viewing the CVS Repository History>>
 
-
+[[_pcreatecvsrepository]]
 ==== Creating a CVS Repository 
 (((CVS ,Creating))) 
 
@@ -684,7 +686,7 @@ Before you can create the CVS Version Control Repository in IKAN ALM, you must i
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-Create-CVS.png[,585,614] 
+image::GlobAdm-VCR-Create-CVS.png[,585,614] 
 +
 . Fill out the fields in the _Create CVS Repository_ screen. 
 +
@@ -782,7 +784,7 @@ with the Repository.__
 +
 If the test is not successful, the following screen is displayed: 
 +
-image::images/GlobAdm-VCR-CVS-Create-Connection-Error.png[,734,508] 
+image::GlobAdm-VCR-CVS-Create-Connection-Error.png[,734,508] 
 +
 Correct the errors reported in the Stack Trace field and perform the test again.
 . Once the test is successful, click __Create__.
@@ -796,12 +798,13 @@ Repositories Overview_ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_vcr>>
-* <<_projadmin_projectsoverview_editing>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
+[[_pworkwithcvsoverview]]
 ==== The CVS Repositories Overview Screen 
 (((CVS ,Overview Screen))) 
 
@@ -812,7 +815,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the other search criteria to only display the CVS Repositories you are looking for.
 +
-image::images/GlobAdm-VCR-Overview-CVS.png[,811,252] 
+image::GlobAdm-VCR-Overview-CVS.png[,811,252] 
 +
 If required, use the other search criteria to refine the items displayed on the overview.
 +
@@ -823,39 +826,39 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ CVS Repositories Overview__ panel.
 +
-For a detailed description of the fields, refer to <<_pcreatecvsrepository>>.
+For a detailed description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatecvsrepository,Creating a CVS Repository>>.
 . Depending on your access rights, the following links may be available on the _CVS Repositories Overview_ panel:
 +
 
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a CVS Repository definition.
 
-<<_globadm_vcr_cvs_edit>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_cvs_edit,Editing a CVS Repository>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a CVS Repository definition.
 
-<<_globadm_vcr_cvs_delete>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_cvs_delete,Deleting a CVS Repository>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a CVS Repository.
 
-<<_globadm_vcr_cvs_history>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_cvs_history,Viewing the CVS Repository History>>
 |===
 
-
+[[_globadm_vcr_cvs_edit]]
 ==== Editing a CVS Repository  
 (((CVS ,Editing))) 
 
@@ -865,15 +868,15 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the CVS Repositories you are looking for.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link to change the selected CVS Repository.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected CVS Repository.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-CVS-Edit.png[,536,659] 
+image::GlobAdm-VCR-CVS-Edit.png[,536,659] 
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_pcreatecvsrepository>>.
+For a description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatecvsrepository,Creating a CVS Repository>>.
 +
 
 [NOTE]
@@ -889,7 +892,7 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_vcr_cvs_delete]]
 ==== Deleting a CVS Repository  
 (((CVS ,Deleting))) 
 
@@ -900,11 +903,11 @@ The overview of all defined Version Control Repositories is displayed.
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the CVS Repositories you are looking for.
 +
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ link to delete the selected CVS Repository.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link to delete the selected CVS Repository.
 +
 If the CVS Repository is not connected to any Project, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-CVS-Delete.png[,427,360] 
+image::GlobAdm-VCR-CVS-Delete.png[,427,360] 
 +
 . Click__ Delete__ to confirm the deletion.
 +
@@ -912,11 +915,11 @@ You can also click __Back __to return to the previous screen without deleting th
 +
 __Note: __If the CVS Repository is connected to one or more Projects, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-CVS-Delete-Error.png[,480,499] 
+image::GlobAdm-VCR-CVS-Delete-Error.png[,480,499] 
 +
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
-
+[[_globadm_vcr_cvs_history]]
 ==== Viewing the CVS Repository History 
 (((CVS ,History))) 
 
@@ -926,7 +929,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the CVS Repositories you are looking for.
-. Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ CVS Repository History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link to display the__ CVS Repository History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.
@@ -939,13 +942,13 @@ View__, refer to the section <<_historyeventlogging>>.
 
 Refer to the following sections for detailed information:
 
-* <<_pcreatevssrepository>>
-* <<_pworkwithvssoverview>>
-* <<_globadm_vcr_vss_edit>>
-* <<_globadm_vcr_vss_delete>>
-* <<_globadm_vcr_vss_history>>
+* <<GlobAdm_VCR.adoc#_pcreatevssrepository,Creating a VSS Version Control Repository>>
+* <<GlobAdm_VCR.adoc#_pworkwithvssoverview,The VSS Repositories Overview Screen>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_vss_edit,Editing a VSS Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_vss_delete,Deleting a VSS Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_vss_history,Viewing the VSS Repository History>>
 
-
+[[_pcreatevssrepository]]
 ==== Creating a VSS Version Control Repository 
 (((VSS ,Creating))) 
 
@@ -961,7 +964,7 @@ Before you can create the VSS Version Control Repository in IKAN ALM, you must i
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-Create-VSS.png[,585,591] 
+image::GlobAdm-VCR-Create-VSS.png[,585,591] 
 +
 . Fill out the fields in the _Create Visual SourceSafe Repository_ screen. 
 +
@@ -1046,7 +1049,7 @@ with the Repository.__
 +
 If the test is not successful, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-VSS-Create-Connection-Error.png[,743,512] 
+image::GlobAdm-VCR-VSS-Create-Connection-Error.png[,743,512] 
 +
 Correct the errors reported in the Stack Trace field and perform the test again.
 . Once the test is successful, click__ Create__.
@@ -1060,12 +1063,13 @@ Repositories Overview_ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_vcr>>
-* <<_projadmin_projectsoverview_editing>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
+[[_pworkwithvssoverview]]
 ==== The VSS Repositories Overview Screen 
 (((VSS ,Overview Screen))) 
 
@@ -1076,7 +1080,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the other search criteria to only display the VSS Repositories you are looking for.
 +
-image::images/GlobAdm-VCR-Overview-VSS.png[,737,272] 
+image::GlobAdm-VCR-Overview-VSS.png[,737,272] 
 +
 If required, use the other search criteria to refine the items displayed on the overview.
 +
@@ -1087,39 +1091,39 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ VSS Repositories Overview__ panel.
 +
-For a detailed description of the fields, refer to <<_pcreatevssrepository>>.
+For a detailed description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatevssrepository,Creating a VSS Version Control Repository>>.
 . Depending on your access rights, the following links may be available on the _VSS Repositories Overview_ panel:
 +
 
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a VSS Repository definition.
 
-<<_globadm_vcr_vss_edit>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_vss_edit,Editing a VSS Repository>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a VSS Repository definition.
 
-<<_globadm_vcr_vss_delete>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_vss_delete,Deleting a VSS Repository>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a VSS Repository.
 
-<<_globadm_vcr_vss_history>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_vss_history,Viewing the VSS Repository History>>
 |===
 
-
+[[_globadm_vcr_vss_edit]]
 ==== Editing a VSS Repository 
 (((VSS ,Editing))) 
 
@@ -1129,15 +1133,15 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the VSS Repositories you are looking for.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link to change the selected VSS Repository.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected VSS Repository.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-VSS-Edit.png[,548,637] 
+image::GlobAdm-VCR-VSS-Edit.png[,548,637] 
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_pcreatevssrepository>>.
+For a description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatevssrepository,Creating a VSS Version Control Repository>>.
 +
 
 [NOTE]
@@ -1153,7 +1157,7 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_vcr_vss_delete]]
 ==== Deleting a VSS Repository 
 (((VSS ,Deleting))) 
 
@@ -1163,11 +1167,11 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the VSS Repositories you are looking for.
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ link to delete the selected VSS Repository.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link to delete the selected VSS Repository.
 +
 If the VSS Repository is not connected to any Project, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-VSS-Delete.png[,445,326] 
+image::GlobAdm-VCR-VSS-Delete.png[,445,326] 
 +
 . Click _Delete_ to confirm the deletion.
 +
@@ -1175,11 +1179,11 @@ You can also click _Back_ to return to the previous screen without deleting the 
 +
 __Note:__ If the VSS Repository is connected to one or more Projects, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-VSS-Delete-Error.png[,553,483] 
+image::GlobAdm-VCR-VSS-Delete-Error.png[,553,483] 
 +
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
-
+[[_globadm_vcr_vss_history]]
 ==== Viewing the VSS Repository History 
 (((VSS ,History))) 
 
@@ -1189,7 +1193,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the VSS Repositories you are looking for.
-. Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ VSS Repository History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link to display the__ VSS Repository History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.
@@ -1202,13 +1206,13 @@ View__, refer to the section <<_historyeventlogging>>.
 
 Refer to the following sections for detailed information:
 
-* <<_pcreateclearcasebaserepository>>
-* <<_pworkwithclearcasebaseoverview>>
-* <<_globadm_vcr_clearcase_edit>>
-* <<_globadm_vcr_clearcase_delete>>
-* <<_globadm_vcr_clearcase_history>>
+* <<GlobAdm_VCR.adoc#_pcreateclearcasebaserepository,Creating a ClearCase Repository>>
+* <<GlobAdm_VCR.adoc#_pworkwithclearcasebaseoverview,The ClearCase Repositories Overview Screen>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_edit,Editing a ClearCase Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_delete,Deleting a ClearCase Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_history,Viewing the ClearCase Repository History>>
 
-
+[[_pcreateclearcasebaserepository]]
 ==== Creating a ClearCase Repository 
 (((ClearCase ,Creating))) 
 
@@ -1224,7 +1228,7 @@ Before you can create the ClearCase Version Control Repository in IKAN ALM, you 
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-Create-ClearCase.png[,585,607] 
+image::GlobAdm-VCR-Create-ClearCase.png[,585,607] 
 +
 . Fill out the fields in the _Create ClearCase Repository_ screen. 
 +
@@ -1323,7 +1327,7 @@ with the Repository.__
 +
 If the test is not successful, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-ClearCase-Create-Connection-Error.png[,791,359] 
+image::GlobAdm-VCR-ClearCase-Create-Connection-Error.png[,791,359] 
 +
 Correct the errors reported in the Stack Trace field and perform the test again.
 . Once the test is successful, click __Create__.
@@ -1337,12 +1341,13 @@ Repositories Overview__ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_vcr>>
-* <<_projadmin_projectsoverview_editing>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
+[[_pworkwithclearcasebaseoverview]]
 ==== The ClearCase Repositories Overview Screen 
 (((ClearCase ,Overview Screen))) 
 
@@ -1353,7 +1358,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the other search criteria to only display the ClearCase Repositories you are looking for.
 +
-image::images/GlobAdm-VCR-Overview-ClearCase.png[,912,251] 
+image::GlobAdm-VCR-Overview-ClearCase.png[,912,251] 
 +
 If required, use the other search criteria to refine the items displayed on the overview.
 +
@@ -1364,39 +1369,39 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the _ClearCase Repositories Overview_ panel.
 +
-For a detailed description of the fields, refer to <<_pcreateclearcasebaserepository>>.
+For a detailed description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreateclearcasebaserepository,Creating a ClearCase Repository>>.
 . Depending on your access rights, the following links may be available on the _ClearCase Repositories Overview_ panel:
 +
 
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a ClearCase Repository definition.
 
-<<_globadm_vcr_clearcase_edit>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_edit,Editing a ClearCase Repository>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a ClearCase Repository definition.
 
-<<_globadm_vcr_clearcase_delete>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_delete,Deleting a ClearCase Repository>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a ClearCase Repository.
 
-<<_globadm_vcr_clearcase_history>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_history,Viewing the ClearCase Repository History>>
 |===
 
-
+[[_globadm_vcr_clearcase_edit]]
 ==== Editing a ClearCase Repository 
 (((ClearCase ,Editing))) 
 
@@ -1406,15 +1411,15 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the ClearCase Repositories you are looking for.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link to change the selected ClearCase Repository.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected ClearCase Repository.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-ClearCase-Edit.png[,744,618] 
+image::GlobAdm-VCR-ClearCase-Edit.png[,744,618] 
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_pcreateclearcasebaserepository>>.
+For a description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreateclearcasebaserepository,Creating a ClearCase Repository>>.
 +
 
 [NOTE]
@@ -1430,7 +1435,7 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_vcr_clearcase_delete]]
 ==== Deleting a ClearCase Repository 
 (((ClearCase ,Deleting))) 
 
@@ -1440,11 +1445,11 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the ClearCase Repositories you are looking for.
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ link to delete the selected ClearCase Repository.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link to delete the selected ClearCase Repository.
 +
 If no Projects are connected to the Repository, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-ClearCase-Delete.png[,542,398] 
+image::GlobAdm-VCR-ClearCase-Delete.png[,542,398] 
 +
 . Click _Delete_ to confirm the deletion.
 +
@@ -1452,11 +1457,11 @@ You can also click__ Back __to return to the previous screen without deleting th
 +
 __Note:__ If one or more Projects are connected to the Repository, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-ClearCase-Delete-Error.png[,649,547] 
+image::GlobAdm-VCR-ClearCase-Delete-Error.png[,649,547] 
 +
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
-
+[[_globadm_vcr_clearcase_history]]
 ==== Viewing the ClearCase Repository History 
 (((ClearCase ,History))) 
 
@@ -1466,7 +1471,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the ClearCase Repositories you are looking for.
-. Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ ClearCase Repository History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link to display the__ ClearCase Repository History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.
@@ -1480,10 +1485,10 @@ View__, refer to the section <<_historyeventlogging>>.
 Refer to the following sections for detailed information:
 
 * <<_pcreatepvcsrepository>>
-* <<_pworkwithpvcsoverview>>
-* <<_globadm_vcr_pvcs_edit>>
-* <<_globadm_vcr_pvcs_delete>>
-* <<_globadm_vcr_pvcs_history>>
+* <<GlobAdm_VCR.adoc#_pworkwithpvcsoverview,The PVCS Repositories Overview Screen>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_edit,Editing a PVCS Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_delete,Deleting a PVCS Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_history,Viewing the PVCS Repository History>>
 
 
 ==== Creating a PVCS Repository (((PVCS ,Creating))) 
@@ -1500,7 +1505,7 @@ Before you can create the PVCS Version Control Repository in IKAN ALM, you must 
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-PVCS-Create.png[,585,633] 
+image::GlobAdm-VCR-PVCS-Create.png[,585,633] 
 +
 . Fill out the fields in the _Create PVCS Repository_ screen. 
 +
@@ -1599,7 +1604,7 @@ with the Repository.__
 +
 If the test is not successful, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-PVCS-Create-Connection-Error.png[,740,509] 
+image::GlobAdm-VCR-PVCS-Create-Connection-Error.png[,740,509] 
 +
 Correct the errors reported in the Stack Trace field and perform the test again.
 . Once the test is successful, click __Create__.
@@ -1613,12 +1618,13 @@ Repositories Overview_ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_vcr>>
-* <<_projadmin_projectsoverview_editing>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
+[[_pworkwithpvcsoverview]]
 ==== The PVCS Repositories Overview Screen 
 (((PVCS ,Overview Screen))) 
 
@@ -1629,7 +1635,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the other search criteria to only display the PVCS Repositories you are looking for.
 +
-image::images/GlobAdm-VCR-Overview-PVCS.png[,730,261] 
+image::GlobAdm-VCR-Overview-PVCS.png[,730,261] 
 +
 If required, use the other search criteria to refine the items displayed on the overview.
 +
@@ -1647,32 +1653,32 @@ For a detailed description of the fields, refer to <<_pcreatepvcsrepository>>.
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a PVCS Repository definition.
 
-<<_globadm_vcr_pvcs_edit>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_edit,Editing a PVCS Repository>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a PVCS Repository definition.
 
-<<_globadm_vcr_pvcs_delete>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_delete,Deleting a PVCS Repository>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a PVCS Repository.
 
-<<_globadm_vcr_pvcs_history>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_history,Viewing the PVCS Repository History>>
 |===
 
-
+[[_globadm_vcr_pvcs_edit]]
 ==== Editing a PVCS Repository 
 (((PVCS ,Editing))) 
 
@@ -1682,11 +1688,11 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the PVCS Repositories you are looking for.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link to change the selected PVCS Repository.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected PVCS Repository.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-PVCS-Edit.png[,571,688] 
+image::GlobAdm-VCR-PVCS-Edit.png[,571,688] 
 +
 . Edit the fields as required.
 +
@@ -1706,7 +1712,7 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_vcr_pvcs_delete]]
 ==== Deleting a PVCS Repository  
 (((PVCS ,Deleting))) 
 
@@ -1716,11 +1722,11 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the PVCS Repositories you are looking for.
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ link to delete the selected PVCS Repository.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link to delete the selected PVCS Repository.
 +
 If the PVCS Repository is not connected to any Project, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-PVCS-Delete.png[,431,388] 
+image::GlobAdm-VCR-PVCS-Delete.png[,431,388] 
 +
 . Click _Delete_ to confirm the deletion.
 +
@@ -1728,11 +1734,11 @@ You can also click __Back __to return to the previous screen without deleting th
 +
 __Note:__ If the PVCS Repository is connected to one or more Projects, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-PVCS-Delete-Error.png[,573,525] 
+image::GlobAdm-VCR-PVCS-Delete-Error.png[,573,525] 
 +
 Before deleting the VCR, you must connect the reported Projects to a different VCR.
 
-
+[[_globadm_vcr_pvcs_history]]
 ==== Viewing the PVCS Repository History 
 (((PVCS ,History))) 
 
@@ -1742,7 +1748,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the PVCS Repositories you are looking for.
-. Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ PVCS Repository History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link to display the__ PVCS Repository History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.
@@ -1756,10 +1762,10 @@ View__, refer to the section <<_historyeventlogging>>.
 Refer to the following sections for detailed information:
 
 * <<_globadm_vcr_tfvc_create>>
-* <<_globadm_vcr_tfvc_overview>>
-* <<_globadm_vcr_tfvc_edit>>
-* <<_globadm_vcr_tfvc_delete>>
-* <<_globadm_vcr_tfvc_history>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_overview,The TFVC Repositories Overview Screen>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_edit,Editing a TFVC Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_delete,Deleting a TFVC Repository>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_history,Viewing the TFVC Repository History>>
 
 
 ==== Creating a TFVC Repository 
@@ -1775,7 +1781,7 @@ Before you can create the TFVC Version Control Repository in IKAN ALM, you must 
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-TFVC-Create.png[,585,561] 
+image::GlobAdm-VCR-TFVC-Create.png[,585,561] 
 +
 . Fill out the fields in the _Create TFVC Repository_ screen. Fields marked with a red asterisk are mandatory:
 +
@@ -1854,7 +1860,7 @@ with the Repository.__
 +
 If the test is not successful, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-TFVC-Create-Connection-Error.png[,749,508] 
+image::GlobAdm-VCR-TFVC-Create-Connection-Error.png[,749,508] 
 +
 Correct the errors reported in the Stack Trace field and perform the test again.
 . Once the test is successful, click__ Create__.
@@ -1868,13 +1874,14 @@ Repositories Overview__ at the bottom of the screen.
 
 a|_RELATED TOPICS_
 
-* <<_globadm_vcr>>
-* <<_projadmin_projectsoverview_editing>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
 * <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
 
 |===
 
-.Procedure: The TFVC Repositories Overview Screen 
+[[_globadm_vcr_tfvc_overview]]
+==== The TFVC Repositories Overview Screen 
 (((Git ,Overview Screen))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1884,7 +1891,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the other search criteria to only display the TFVC Repositories you are looking for.
 +
-image::images/GlobAdm-VCR-Overview-TFVC.png[,809,287] 
+image::GlobAdm-VCR-Overview-TFVC.png[,809,287] 
 +
 If required, use the other search criteria to refine the items displayed on the overview.
 +
@@ -1902,32 +1909,32 @@ For a detailed description of the fields, refer to <<_globadm_vcr_tfvc_create>>.
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows editing a TFVC Repository definition.
 
-<<_globadm_vcr_tfvc_edit>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_edit,Editing a TFVC Repository>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows deleting a TFVC Repository definition.
 
-<<_globadm_vcr_tfvc_delete>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_delete,Deleting a TFVC Repository>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a TFVC Repository.
 
-<<_globadm_vcr_tfvc_history>>
+<<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_history,Viewing the TFVC Repository History>>
 |===
 
-
+[[_globadm_vcr_tfvc_edit]]
 ==== Editing a TFVC Repository 
 (((Git ,Editing))) 
 
@@ -1937,11 +1944,11 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the TFVC Repositories you are looking for.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link to change the selected TFVC Repository.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected TFVC Repository.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-VCR-TFVC-Edit.png[,648,585] 
+image::GlobAdm-VCR-TFVC-Edit.png[,648,585] 
 +
 . Edit the fields as required.
 +
@@ -1961,7 +1968,7 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_vcr_tfvc_delete]]
 ==== Deleting a TFVC Repository 
 (((Git ,Deleting))) 
 
@@ -1971,11 +1978,11 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the TFVC Repositories you are looking for.
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ link to delete the selected TFVC Repository.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link to delete the selected TFVC Repository.
 +
 If the TFVC Repository is not connected to any Project, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-TFVC-Delete.png[,544,280] 
+image::GlobAdm-VCR-TFVC-Delete.png[,544,280] 
 +
 . Click _Delete_ to confirm the deletion.
 +
@@ -1983,11 +1990,11 @@ You can also click __Back __to return to the previous screen without deleting th
 +
 __Note:__ If the TFVC Repository is connected to one or more Projects, the following screen is displayed:
 +
-image::images/GlobAdm-VCR-TFVC-Delete-Error.png[,648,433] 
+image::GlobAdm-VCR-TFVC-Delete-Error.png[,648,433] 
 +
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
-
+[[_globadm_vcr_tfvc_history]]
 ==== Viewing the TFVC Repository History 
 (((Git ,History))) 
 
@@ -1997,7 +2004,7 @@ The overview of all defined Version Control Repositories is displayed.
 +
 Use the search criteria on the _Search Version
 Control Repository_ panel to only display the TFVC Repositories you are looking for.
-. Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ TFVC Repository History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link to display the__ TFVC Repository History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.

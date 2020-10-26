@@ -1,4 +1,5 @@
 
+[[_desktop_introduction]]
 == Desktop (((Desktop)))  (((Desktop ,Introduction))) 
 
 The Desktop makes up the work environment for the regular IKAN ALM end user.
@@ -14,9 +15,9 @@ It gives access to common actions as:
 
 This section describes the following Desktop Administration tasks: 
 
-* <<_desktop_levelrequests>>
-* <<_desktop_packages>> and <<_desktop_packagegroups>>
-* <<_desktop_outstandingapprovals>>
+* <<Desktop_LevelRequests.adoc#_desktop_levelrequests,Level Requests>>
+* <<Desktop_Packages.adoc#_desktop_packages,Packages>> and <<Desktop_PackageGroups.adoc#_desktop_packagegroups,Package Build Groups>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovals,Approvals>>
 * <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
 * <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
-* <<_desktop_personalsettings>>
+* <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>

@@ -1,4 +1,4 @@
-[[_projadm_projectsoverview_hidingshowing]]
+[[_projadm_projectsoverview_hidingshowing]] [[_projadm_projects]]
 == Projects  
 (((Project Administration ,Projects)))  (((Projects))) 
 
@@ -8,23 +8,23 @@ However, only users with view rights (belonging to the Project`'s Users group) c
 
 Refer to the following procedures for more information:
 
-* <<_projadmin_projectsoverview_accessing>>
-* <<_projadmin_projectsoverview_viewing>>
-* <<_projadmin_projectsoverview_editing>>
-* <<_projadmin_projectsoverview_deleting>>
-* <<_porjadm_projectsoverview_locking>>
-* <<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Projects>>
-* <<_projadm_projectsoverview_historyview>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_accessing,The Projects Overview Screen>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_viewing,Viewing Project Settings>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_deleting,Deleting a Project>>
+* <<ProjAdm_Projects.adoc#_porjadm_projectsoverview_locking,Locking/Unlocking a Project>>
+* <<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Projects Hiding/Showing a Project>>
+* <<ProjAdm_Projects.adoc#_projadm_projectsoverview_historyview,Viewing the Project History>>
 
-
+[[_projadmin_projectsoverview_accessing]]
 === The Projects Overview Screen
 (((Projects ,Overview Screen))) 
 
-. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
+. Click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
 +
 The __Projects Overview __screen is displayed.
 +
-image::images/ProjAdmin-Projects-Overview.png[,970,410] 
+image::ProjAdmin-Projects-Overview.png[,970,410] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -47,56 +47,56 @@ For a description of the fields, refer to <<GlobAdm_Project.adoc#_globadm_projec
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/view.gif[,15,15] 
+|image:icons/view.gif[,15,15] 
 |View
 
 This option is available to IKAN ALM Users with Project User Access Rights.
 It allows viewing the selected Project definition.
 
-<<_projadmin_projectsoverview_viewing>>
+<<ProjAdm_Projects.adoc#_projadmin_projectsoverview_viewing,Viewing Project Settings>>
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to all IKAN ALM Users with Project Admin Access Rights.
 It allows editing the selected Project definition and switching to the other Project Administration options.
 
-<<_projadmin_projectsoverview_editing>>
+<<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Project Admin Access Rights.
 It allows deleting a Project.
 
-<<_projadmin_projectsoverview_deleting>>
+<<ProjAdm_Projects.adoc#_projadmin_projectsoverview_deleting,Deleting a Project>>
 
-|image:images/icons/lock.gif[,15,15] / image:images/icons/unlock.gif[,15,15] 
+|image:icons/lock.gif[,15,15] / image:images/icons/unlock.gif[,15,15] 
 |Lock / Unlock
 
 This option is available to IKAN ALM Users with Project Admin Access Rights.
 It allows locking or unlocking the selected Project.
 
-<<_porjadm_projectsoverview_locking>>
+<<ProjAdm_Projects.adoc#_porjadm_projectsoverview_locking,Locking/Unlocking a Project>>
 
-|image:images/icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
+|image:icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
 |Hide / Show
 
 This option is available to IKAN ALM Users with Project Admin Access Rights.
 It allows hiding the selected Project.
 
-<<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Projects>>
+<<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Projects Hiding/Showing a Project>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users with Project User Access Rights.
 It allows to display the History of all create, update and delete operations performed on a Project.
 
-<<_projadm_projectsoverview_historyview>>
+<<ProjAdm_Projects.adoc#_projadm_projectsoverview_historyview,Viewing the Project History>>
 |===
 
-
+[[_projadmin_projectsoverview_viewing]]
 === Viewing Project Settings 
 (((Projects ,Viewing))) 
 
@@ -105,15 +105,15 @@ It allows to display the History of all create, update and delete operations per
 This option is only available to IKAN ALM Users with User Access Rights.
 ====
 
-. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
+. Click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
 
-. Click the image:images/icons/view.gif[,15,15] _View_ link on the __Projects Overview__ panel.
+. Click the image:icons/view.gif[,15,15] _View_ link on the __Projects Overview__ panel.
 +
 This link is available if you have User Access Rights to the Project.
 +
 The _Project Info_ screen is displayed:
 +
-image::images/ProjAdmin-Projects-View.png[,1044,641] 
+image::ProjAdmin-Projects-View.png[,1044,641] 
 +
 . Verify the settings.
 +
@@ -133,11 +133,12 @@ Underneath the _Project Info_ panel, the following links and buttons are availab
 To make it easier to view all project`'s settings, the most important Project User actions have been grouped in subpanels aside the _Project Info_ panel. 
 ====
 
+[[_projadmin_projectsoverview_editing]]
+=== Editing Project Settings 
+(((Projects ,Editing))) 
 
-.Procedure: Editing Project Settings (((Projects ,Editing))) 
-
-. Click the _Project Administration _image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link on the Projects Overview panel.
+. Click the _Project Administration _image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link on the Projects Overview panel.
 +
 
 [NOTE]
@@ -147,13 +148,13 @@ This link is only available if you have Project Admin Access Rights to the Proje
 +
 The _Project Info_ screen is displayed.
 +
-image::images/ProjAdmin-Projects-AdminRights-Edit.png[,555,779] 
+image::ProjAdmin-Projects-AdminRights-Edit.png[,555,779] 
 +
 . Click the _Edit_ button.
 +
 The __Edit Project__ window pops up.
 +
-image::images/ProjAdmin-Projects-Edit_Edit.png[,458,534] 
+image::ProjAdmin-Projects-Edit_Edit.png[,458,534] 
 +
 . Edit the fields as required and click __Save__.
 +
@@ -197,7 +198,7 @@ Level Requests cannot be created for a locked Project.
 |This read-only field indicates whether or not the Project is hidden.
 
 By default newly created Projects are not hidden.
-For more information on hiding Projects, refer to <<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Projects>>.
+For more information on hiding Projects, refer to <<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Projects Hiding/Showing a Project>>.
 
 |VCR
 |This field contains the VCR used for the Project.
@@ -211,7 +212,7 @@ For more information on hiding Projects, refer to <<ProjAdm_Projects.adoc#_proja
 If an Issue Tracking System is selected, IKAN ALM will from then on automatically create an Issue Tracking Level Phase when a new Level is created for the Project. <<App_Phases.adoc#_phases_levelphases_issuetracking,Issue Tracking Phase>>
 
 This field is only visible when there are external Issue Tracking Systems defined in IKAN ALM.
-See also <<_globadm_issuetracking>>.
+See also <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking,Issue Tracking>>.
 
 |Build Tool Type
 |This field contains the Build Tool Type used for the Project.
@@ -267,20 +268,20 @@ On this page the following buttons are available:
 +
 To make setting up a project easier, the most important project administration actions have also been grouped in subpanels aside the _Project Info_ panel.
 +
-image::images/ProjAdmin-Projects-EasyAccessPanels.png[,488,453] 
+image::ProjAdmin-Projects-EasyAccessPanels.png[,488,453] 
 +
-For an overview of the submenu options, refer to section <<_projadm_projmgtoptions>>.
+For an overview of the submenu options, refer to section <<ProjAdm_ProjMgtOptions.adoc#_projadm_projmgtoptions,Project Administration Options>>.
 
-
+[[_projadmin_projectsoverview_deleting]]
 === Deleting a Project 
 (((Projects ,Deleting))) 
 
-. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ link on the _Projects Overview_ panel.
+. Click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link on the _Projects Overview_ panel.
 +
 The _Delete Project_ screen is displayed:
 +
-image::images/ProjAdmin-Projects-Delete.png[,673,553] 
+image::ProjAdmin-Projects-Delete.png[,673,553] 
 +
 . Verify if you really want to irrevocably delete the Project.
 +
@@ -289,7 +290,7 @@ Deleting a Project will also delete all Project Streams, Lifecycles, Levels, Env
 +
 You can also click _Back_ to return to the _Projects_ screen without deleting the Project.
 
-
+[[_porjadm_projectsoverview_locking]]
 === Locking/Unlocking a Project 
 (((Locking ,Projects)))  (((Unlocking ,Projects)))  (((Projects ,Locking)))  (((Projects ,Unlocking))) 
 
@@ -299,30 +300,30 @@ You may want to lock a Project, if configuration parameters are changed, or if a
 
 Unlocking a Project means reallowing these actions on a Project.
 
-. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
+. Click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
 
-. Click the image:images/icons/lock.gif[,15,15] _Lock_ or image:images/icons/unlock.gif[,15,15] _Unlock_ link on the _Projects Overview_ panel.
+. Click the image:icons/lock.gif[,15,15] _Lock_ or image:images/icons/unlock.gif[,15,15] _Unlock_ link on the _Projects Overview_ panel.
 +
 
 [NOTE]
 ====
-This functionality is also available via the _Lock/Unlock_ button on the _Project Info_ panel. <<_projadmin_projectsoverview_editing>>
+This functionality is also available via the _Lock/Unlock_ button on the _Project Info_ panel. <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
 ====
 
-
+[[_projadm_projectsoverview_hidingshowing]]
 === Hiding/Showing a Project 
 (((Projects ,Hiding)))  (((Projects ,Showing))) 
 
 Specifying that a Project is "`hidden`", causes it not to be displayed by default on Overview panels.
 This can be very useful to hide older Projects on the overviews, without losing the historical information (Level Requests, ...) associated with those Projects.
 
-. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu. 
-. Click the image:images/icons/hide.gif[,15,15] _Hide_ link in front of the Project you want to hide.
+. Click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu. 
+. Click the image:icons/hide.gif[,15,15] _Hide_ link in front of the Project you want to hide.
 +
 The Project will disappear from the overview since Hidden Projects will not be shown by default.
 In order to show it again, you have to set the _Show Hidden
 Projects_ search criterion to _Yes_ or _All_ in the Search panel.
-. To "`unhide`" a hidden Project, click the image:images/icons/show.gif[,15,15] _show_ link.
+. To "`unhide`" a hidden Project, click the image:icons/show.gif[,15,15] _show_ link.
 +
 The icon will be changed appropriately.
 +
@@ -334,12 +335,12 @@ Hidden Projects_ has been added to the Search panels to specify whether or not y
 Click the _Show advanced options_ link to display this criterion.
 ====
 
-
+[[_projadm_projectsoverview_historyview]]
 === Viewing the Project History 
 (((Projects ,History))) 
 
-. Click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
-. Click the image:images/icons/history.gif[,15,15] _History_ link on the _Projects Overview_ panel to display the __Project History View__.
+. Click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
+. Click the image:icons/history.gif[,15,15] _History_ link on the _Projects Overview_ panel to display the __Project History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.
@@ -350,5 +351,5 @@ Click __Back __to return to the previous screen.
 [NOTE]
 ====
 This link is also available on the _Project
-Info_ panel. <<_projadmin_projectsoverview_viewing>>
+Info_ panel. <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_viewing,Viewing Project Settings>>
 ====

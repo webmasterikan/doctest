@@ -1,4 +1,5 @@
 [[_desktop_packagegroupsoverview]]
+[[_desktop_packagegroups]]
 == Package Build Groups 
 (((Desktop ,Package Build Groups)))  (((Package Build Groups))) 
 
@@ -25,7 +26,7 @@ Refer to the following procedures for more information:
 ** <<Desktop_PackageGroups.adoc#_desktop_packagegroups_addpackage,Adding a Package to a Package Build Group>>
 ** <<Desktop_PackageGroups.adoc#_bacdbadi,Removing a Package from a Package Build Group>>
 * <<Desktop_PackageGroups.adoc#_desktop_hideshowpackagegroup,Hiding/Showing a Package Build Group>>
-* <<_desktop_viewpackagegrouphistory>>
+* <<Desktop_PackageGroups.adoc#_desktop_viewpackagegrouphistory,Viewing the Package Build Group History>>
 
 
 [[_desktop_createpackagegroup]]
@@ -35,7 +36,7 @@ Refer to the following procedures for more information:
 +
 The _Create Package Build Group_ screen is displayed.
 +
-image::images/Desktop-PackageGoups-Create.png[,600,327] 
+image::Desktop-PackageGoups-Create.png[,600,327] 
 +
 . Fill out the fields. Fields marked with a red asterisk are mandatory:
 +
@@ -74,7 +75,7 @@ For more information on adding Packages and rearranging the order of Packages, r
 +
 The _Edit Package Build Group_ is displayed.
 +
-image::images/Desktop-PackageGoups-Create2.png[,763,370] 
+image::Desktop-PackageGoups-Create2.png[,763,370] 
 +
 . Next, you can add Packages using the _Add Package_ link.
 +
@@ -89,11 +90,11 @@ For more information, refer to the section <<Desktop_PackageGroups.adoc#_desktop
 +
 The _Package Build Groups Overview_ window is displayed.
 +
-image::images/Desktop-PackageGoups-Overview.png[,670,385] 
+image::Desktop-PackageGoups-Overview.png[,670,385] 
 +
 . Use the search criteria on the _Search Package Build Groups_ panel to only display the Package Build Groups you are looking for.
 +
-image::images/Desktop-PackageGoups-Overview-SearchPanel.png[,996,98] 
+image::Desktop-PackageGoups-Overview-SearchPanel.png[,996,98] 
 +
 The following options are available:
 
@@ -111,31 +112,31 @@ For more information on the usage of search panels and filters, refer to the sec
 [cols="1,1", frame="topbot"]
 |===
 
-|image:images/icons/edit.gif[,15,15] __
+|image:icons/edit.gif[,15,15] __
 |Edit
 
 This option allows editing the Package Build Group and/or its connected Packages. <<Desktop_PackageGroups.adoc#_desktop_editpackagegroup,Editing a Package Build Group>>
 
-|image:images/icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
+|image:icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
 |Hide / Show
 
 This option allows hiding the selected Package Build Group.
 
 <<Desktop_PackageGroups.adoc#_desktop_hideshowpackagegroup,Hiding/Showing a Package Build Group>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option allows to display the History of all create, update and delete operations performed on a Package Build Group.
 
-<<_desktop_viewpackagegrouphistory>>
+<<Desktop_PackageGroups.adoc#_desktop_viewpackagegrouphistory,Viewing the Package Build Group History>>
 |===
 +
 
 [NOTE]
 ====
 
-Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
 ====
 
 
@@ -144,17 +145,17 @@ Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be so
 (((Package Build Groups ,Editing))) 
 
 . Select _Packages > Overview Package Build Groups_ on the Main Menu.
-. On the _Package Build Groups Overview_ panel, click the image:images/icons/edit.gif[,15,15] _Edit_ link next to the Package Build Group you want to edit.
+. On the _Package Build Groups Overview_ panel, click the image:icons/edit.gif[,15,15] _Edit_ link next to the Package Build Group you want to edit.
 +
 The following screen is displayed.
 +
-image::images/Desktop-PackageGoups-Edit.png[,843,653] 
+image::Desktop-PackageGoups-Edit.png[,843,653] 
 +
 . Click the _Edit_ button if you need to modify the definition of the Package Build Group.
 +
 The following pop-up window is displayed:
 +
-image::images/Desktop-PackageGoups-Edit_Popup.png[,558,270] 
+image::Desktop-PackageGoups-Edit_Popup.png[,558,270] 
 +
 Edit the Package Build Group Information as required and click the _Save_ button.
 +
@@ -172,7 +173,7 @@ For more information, refer to the section <<Desktop_PackageGroups.adoc#_desktop
 +
 The following window is displayed.
 +
-image::images/Desktop-PackageGoups-AddPackage.png[,630,431] 
+image::Desktop-PackageGoups-AddPackage.png[,630,431] 
 +
 . Search for the Package you want to add.
 +
@@ -258,7 +259,7 @@ Build Results_ is set to __Yes__, all Build Results will be retrieved regardless
 +
 Modify the Dependency Level by selecting the appropriate level from the drop-down list.
 +
-image::images/Desktop-PackageGoups-ModifyDependencyLevel.png[,845,361] 
+image::Desktop-PackageGoups-ModifyDependencyLevel.png[,845,361] 
 +
 . Modifying the order of the packages.
 +
@@ -276,7 +277,7 @@ Valid positions are indicated with a green bar above the selected elements, inva
 +
 Example:
 +
-image::images/Desktop-PackageGoups-MovePackage.png[,959,359] 
+image::Desktop-PackageGoups-MovePackage.png[,959,359] 
 +
 [NOTE]
 ====
@@ -285,27 +286,27 @@ If you change the order of the Packages, the Dependency Level may change as well
 
 . Viewing a Package`'s settings.
 +
-.. To display a connected Package`'s Settings, click the image:images/icons/view.gif[,15,15] _ View_ link in the _Actions_ column after the required Package.
+.. To display a connected Package`'s Settings, click the image:icons/view.gif[,15,15] _ View_ link in the _Actions_ column after the required Package.
 +
-The _View Package_ screen is displayed. <<_desktop_viewpackage>>
+The _View Package_ screen is displayed. <<Desktop_Packages.adoc#_desktop_viewpackage,Viewing Package Settings>>
 .. Click _Back_ to return to the _Edit Package Build Group_ screen.
 . Editing a Package`'s settings
 +
-.. To modify a connected Package Settings, click the image:images/icons/edit.gif[,15,15] _ Edit_ link in the Actions column after the required Package.
+.. To modify a connected Package Settings, click the image:icons/edit.gif[,15,15] _ Edit_ link in the Actions column after the required Package.
 +
 The _Edit Package_ screen is displayed.
-For more information on how to edit the Package, refer to <<_desktop_editpackage>>.
+For more information on how to edit the Package, refer to <<Desktop_Packages.adoc#_desktop_editpackage,Editing a Package>>.
 .. Click _Back_ to return to the _Edit Package Build Group_ screen.
 
 
 [[_bacdbadi]]
 ==== Removing a Package from a Package Build Group
 
-. On the _Packages_ panel of the _Edit Package Build Group_ screen, click the image:images/icons/delete.gif[,15,15] _ Remove_ link after the required Package in the _Actions_ column.
+. On the _Packages_ panel of the _Edit Package Build Group_ screen, click the image:icons/delete.gif[,15,15] _ Remove_ link after the required Package in the _Actions_ column.
 +
 A pop-up window asking you to confirm the removal is displayed.
 +
-image::images/Desktop-PackageGoups-ConfirmRemoval.png[,436,145] 
+image::Desktop-PackageGoups-ConfirmRemoval.png[,436,145] 
 +
 . Click__ Yes__ to confirm the removal.
 +
@@ -325,10 +326,10 @@ Specifying that a Package Build Group is "`hidden`", causes it not to be display
 This can be very useful to hide older Package Build Groups, without losing the historical information associated with them.
 
 . Select _Packages > Overview Package Build Groups_ on the Main Menu.
-. Click the image:images/icons/hide.gif[,15,15] _Hide_ link in front of the Package Build Group you want to hide.
+. Click the image:icons/hide.gif[,15,15] _Hide_ link in front of the Package Build Group you want to hide.
 +
-The icon in front of the Package Build Group changes to image:images/icons/show.gif[,15,15] .
-. To "`unhide`" a hidden Package Build Group, click the image:images/icons/show.gif[,15,15] _Show_ link.
+The icon in front of the Package Build Group changes to image:icons/show.gif[,15,15] .
+. To "`unhide`" a hidden Package Build Group, click the image:icons/show.gif[,15,15] _Show_ link.
 +
 The icon will be changed appropriately.
 +
@@ -339,12 +340,12 @@ A search criterion is available on the _Search
 Package Build Group_ panel to specify whether or not you want to display hidden Package Build Groups. 
 ====
 
-
+[[_desktop_viewpackagegrouphistory]]
 === Viewing the Package Build Group History 
 (((Package Build Groups ,History))) 
 
 . Select _Packages > Overview Package Build Groups_ on the Main Menu.
-. Click the image:images/icons/history.gif[,15,15] _History_ link on the _Package Build Groups Overview_ panel to display the __Package Build Group History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link on the _Package Build Groups Overview_ panel to display the __Package Build Group History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.

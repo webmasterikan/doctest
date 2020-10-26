@@ -1,4 +1,4 @@
-
+[[_projadm_projectstreams]]
 == Project Streams 
 (((Project Administration ,Project Streams)))  (((Project Management Options ,Project Streams)))  (((Project Streams))) 
 
@@ -11,7 +11,7 @@ When the Global Administrator creates a Project, he or she will also have to def
 
 The _Project Stream_ submenu option lets you start the following procedures:
 
-* <<_projadmin_projectstream_createbranch>>
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Creating a Branch Project Stream>>
 * Modifying the Project Stream definition via the <<ProjAdm_ProjMgt_ProjectStream.adoc#_projectstreams_overviewscreen,Project Streams Overview>>
 
 
@@ -19,21 +19,21 @@ The _Project Streams Overview_ screen lets you verify and change the information
 The following actions are possible:
 
 * Modifying Project Stream definitions
-** <<_projadmin_projectstream_viewing>>
-** <<_projadmin_projectstream_editing>>
-** <<_projadm_projectstream_deleting>>
-** <<_projadm_projectstream_locking>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_viewing,Viewing Project Stream Settings>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Editing Project Stream Settings>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deleting,Deleting a Project Stream>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_locking,Locking/Unlocking a Project Stream>>
 ** <<_hideshowprojectstream>>
-** <<_projadm_projectstream_historyview>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_historyview,Viewing the Project Stream History.>>
 
 
 * Modifying the Project Stream Dependencies
-** <<_projadmin_projectstream_dependencies>>
-** <<_projadmin_projectstream_editdependency>>
-** <<_projadmin_projectstream_adddependency>>
-** <<_projadm_projectstream_deletedependency>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_dependencies,Project Stream Dependencies>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editdependency,Editing a Project Stream Dependency>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Adding a Project Stream Dependency>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Deleting a Project Stream Dependency>>
 
-
+[[_projadmin_projectstream_createbranch]]
 === Creating a Branch Project Stream
 (((Project Streams ,Creating a Branch Project Stream ))) 
 
@@ -45,14 +45,14 @@ You can create a new Branch if you want to
 
 [WARNING]
 --
-Create an additional Lifecycle before creating a Branch. <<_plifecyclemgt_createlifecycle>>
+Create an additional Lifecycle before creating a Branch. <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_createlifecycle,Creating a Lifecycle>>
 --
 
 . In the __Project Administration context__, select__ Project Stream > Create Branch__.
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-ProjMgt-ProjectStream-CreateBranch.png[,958,427] 
+image::ProjAdmin-ProjMgt-ProjectStream-CreateBranch.png[,958,427] 
 +
 At the bottom of the screen, the _Project Streams
 Overview_ panel displays the currently defined Project Streams for the selected Project.
@@ -227,7 +227,7 @@ You can also click:
 +
 Underneath the _Create Branch Project Stream_ panel, you will find an overview of the existing Project Streams in the Project.
 +
-For more information, refer to <<_projadmin_projectstreamsoverview_accessing>>.
+For more information, refer to <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstreamsoverview_accessing,The Project Streams Overview Screen>>.
 
 
 [[_projectstreams_overviewscreen]]
@@ -237,20 +237,20 @@ The _Project Streams Overview_ screen lets you verify and change the information
 The following actions are possible:
 
 * Modifying Project Stream definitions
-** <<_projadmin_projectstream_viewing>>
-** <<_projadmin_projectstream_editing>>
-** <<_projadm_projectstream_deleting>>
-** <<_projadm_projectstream_locking>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_viewing,Viewing Project Stream Settings>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Editing Project Stream Settings>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deleting,Deleting a Project Stream>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_locking,Locking/Unlocking a Project Stream>>
 ** <<_hideshowprojectstream>>
-** <<_projadm_projectstream_historyview>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_historyview,Viewing the Project Stream History.>>
 
 * Modifying the Project Stream Dependencies
-** <<_projadmin_projectstream_dependencies>>
-** <<_projadmin_projectstream_editdependency>>
-** <<_projadmin_projectstream_adddependency>>
-** <<_projadm_projectstream_deletedependency>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_dependencies,Project Stream Dependencies>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editdependency,Editing a Project Stream Dependency>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Adding a Project Stream Dependency>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Deleting a Project Stream Dependency>>
 
-
+[[_projadmin_projectstreamsoverview_accessing]]
 ==== The Project Streams Overview Screen 
 (((Project Streams ,Overview Screen))) 
 
@@ -258,37 +258,37 @@ The following actions are possible:
 +
 The _Project Streams Overview_ screen is displayed:
 +
-image::images/ProjAdmin-ProjMgt-ProjectStream-Overview.png[,962,366] 
+image::ProjAdmin-ProjMgt-ProjectStream-Overview.png[,962,366] 
 +
 At the bottom of the screen, the _Project Streams
 Overview_ panel displays the currently defined Project Streams for the selected Project.
 +
-For a detailed description of the fields and the links, refer to <<_projadmin_projectstream_createbranch>>.
+For a detailed description of the fields and the links, refer to <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Creating a Branch Project Stream>>.
 . Depending on your access rights, the following links may be available:
 +
 
 [cols="1,1", frame="none"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with User or Project Administrator Access Rights.
-It allows <<_projadmin_projectstream_editing>> or<<_projadmin_projectstream_editing>>.
+It allows <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Editing Project Stream Settings>> or<<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Editing Project Stream Settings>>.
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
-It allows deleting the selected Project Stream. <<_projadm_projectstream_deleting>>
+It allows deleting the selected Project Stream. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deleting,Deleting a Project Stream>>
 
-|image:images/icons/lock.gif[,15,15] / image:images/icons/unlock.gif[,15,15] 
+|image:icons/lock.gif[,15,15] / image:images/icons/unlock.gif[,15,15] 
 |Lock / Unlock
 
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
-It allows locking or unlocking the selected Project Stream. <<_projadm_projectstream_locking>>
+It allows locking or unlocking the selected Project Stream. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_locking,Locking/Unlocking a Project Stream>>
 
-|image:images/icons/hide.gif[,15,15] / image:images/icons/show.gif[,15,15] 
+|image:icons/hide.gif[,15,15] / image:images/icons/show.gif[,15,15] 
 |Hide / Show
 
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
@@ -296,47 +296,47 @@ It allows hiding or showing the selected Project Stream.
 
 <<_hideshowprojectstream>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users with Project User Access Rights.
 It allows to display the History of all create, update and delete operations performed on a Project Stream.
 
-<<_projadm_projectstream_historyview>>
+<<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_historyview,Viewing the Project Stream History.>>
 |===
 
-
+[[_projadmin_projectstream_viewing]]
 ==== Viewing Project Stream Settings 
 (((Project Streams ,Viewing the Settings))) 
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
 +
 The _Edit Project Stream_ screen is displayed:
 +
-image::images/ProjAdmin-ProjectStreams-View.png[,918,269] 
+image::ProjAdmin-ProjectStreams-View.png[,918,269] 
 +
 . Verify the settings.
 +
-For a description of the fields, refer to <<_projadmin_projectstream_createbranch>>.
+For a description of the fields, refer to <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Creating a Branch Project Stream>>.
 . Click _Back_ to return to the _Project Streams Overview_ screen.
 
-
+[[_projadmin_projectstream_editing]]
 ==== Editing Project Stream Settings 
 (((Project Streams ,Editing))) 
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
 +
 The _Edit Project Stream_ screen is displayed:
 +
-image::images/ProjAdmin-ProjectStreams-View.png[,918,269] 
+image::ProjAdmin-ProjectStreams-View.png[,918,269] 
 +
 . Click the _Edit_ button on the _Project Stream Info_ panel to edit the fields.
 +
-image::images/ProjAdmin-ProjMgt-ProjectStream-Edit-EditProjectStream.png[,559,442] 
+image::ProjAdmin-ProjMgt-ProjectStream-Edit-EditProjectStream.png[,559,442] 
 +
-For a description of the fields, refer to <<_projadmin_projectstream_createbranch>>.
+For a description of the fields, refer to <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Creating a Branch Project Stream>>.
 . Click__ Save__ to save your changes.
 +
 You can also click:
@@ -350,29 +350,30 @@ You can also click:
 
 a|_RELATED TOPICS_
 
-* <<_projadmin_projectstream_dependencies>>
-* <<_projadmin_projectstream_adddependency>>
-* <<_projadmin_projectstream_editdependency>>
-* <<_projadm_projectstream_deletedependency>>
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_dependencies,Project Stream Dependencies>>
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Adding a Project Stream Dependency>>
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editdependency,Editing a Project Stream Dependency>>
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Deleting a Project Stream Dependency>>
 
 |===
 
+[[_projadm_projectstream_deleting]]
 ==== Deleting a Project Stream 
 (((Project Streams ,Deleting))) 
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ link on the _Projects Streams Overview_ panel.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link on the _Projects Streams Overview_ panel.
 +
 The following screen is displayed:
 +
-image::images/ProjAdmin-ProjMgt-ProjectStream-Delete.png[,820,328] 
+image::ProjAdmin-ProjMgt-ProjectStream-Delete.png[,820,328] 
 +
 . Verify if you really want to irrevocably delete the Project Stream.
 . Click__ Delete__ to confirm the deletion. 
 +
 You can also click _Back_ to return to the previous screen without deleting the Project.
 
-
+[[_projadm_projectstream_locking]]
 ==== Locking/Unlocking a Project Stream 
 (((Locking ,Project Streams)))  (((Unlocking ,Project Streams)))  (((Project Streams ,Locking)))  (((Project Streams ,Unlocking))) 
 
@@ -382,7 +383,7 @@ You may want to lock a Project Stream, if configuration parameters have changed,
 Unlocking a Project Stream means reallowing these actions on a Project Stream
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
-. Click the image:images/icons/lock.gif[,15,15] _Lock_ or image:images/icons/unlock.gif[,15,15] _Unlock_ link on the _Project Streams Overview_ panel.
+. Click the image:icons/lock.gif[,15,15] _Lock_ or image:images/icons/unlock.gif[,15,15] _Unlock_ link on the _Project Streams Overview_ panel.
 
 
 ==== Hiding/Showing a Project Stream 
@@ -392,10 +393,10 @@ Specifying that a Project Stream is "`hidden`", adds an extra search attribute t
 This can be very useful to leave out older Project Streams on the _Overview_ panels
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
-. Click the image:images/icons/hide.gif[,15,15] _Hide_ link in front of the Project Stream you want to hide.
+. Click the image:icons/hide.gif[,15,15] _Hide_ link in front of the Project Stream you want to hide.
 +
 The Project Stream will be hidden and disappears from the __Project Streams Overview__.
-. To "`unhide`" a hidden Project Stream, set the _Hidden_ criterion to _Yes_ or _All_ and click the image:images/icons/show.gif[,15,15] _ Show_ link.
+. To "`unhide`" a hidden Project Stream, set the _Hidden_ criterion to _Yes_ or _All_ and click the image:icons/show.gif[,15,15] _ Show_ link.
 +
 The Project Stream will become visible and the icon will be changed appropriately.
 +
@@ -407,18 +408,18 @@ Click the _Show advanced
 options_ link to display this criterion.
 ====
 
-
+[[_projadm_projectstream_historyview]]
 ==== Viewing the Project Stream History.
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
-. Click the image:images/icons/history.gif[,15,15] _History_ link on the _Project Streams Overview_ panel to display the__ Project Stream History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link on the _Project Streams Overview_ panel to display the__ Project Stream History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.
 +
 Click __Back __to return to the previous screen.
 
-
+[[_projadmin_projectstream_dependencies]]
 ==== Project Stream Dependencies 
 (((Project Streams ,Dependencies)))  (((Project Stream Dependencies))) 
 
@@ -426,17 +427,17 @@ Project Stream dependencies allow the reuse of common Projects (e.g., libraries)
 When the code in the Master Project Stream is built, the process will use the source code or the build result from the Child Project Stream(s), which is stored in the Source Environment in a new folder having the same name as the name of the Project in the VCR.
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
-. On the __Project Streams Overview__, click the image:images/icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
+. On the __Project Streams Overview__, click the image:icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
 +
 The _Edit Project Stream_ screen is displayed, containing the _Project Stream Info_ and the _Dependencies_ panels.
 +
-image::images/ProjAdmin-ProjectStream-Dependencies.png[,947,506] 
+image::ProjAdmin-ProjectStream-Dependencies.png[,947,506] 
 +
 The Dependencies panel contains:
 
 * the overview of the Project Streams whose results or sources the current Project Stream depends on,
 * the overview of the Project Streams using the results or sources of the current Project Stream, and
-* the__ Add Dependency__ link. <<_projadmin_projectstream_adddependency>>
+* the__ Add Dependency__ link. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Adding a Project Stream Dependency>>
 
 +
 For each of the Project Streams on the Overviews, the following information is available:
@@ -495,9 +496,9 @@ Retrieval_ field explanation above.
 +
 The following links may be available:
 
-* The image:images/icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to modify the order of the Project Streams.
-* image:images/icons/edit.gif[,15,15] __ Edit__: This option allows editing the selected dependency. <<_projadmin_projectstream_editdependency>>
-* image:images/icons/remove.gif[,15,15] __ Remove__: This option allows removing the selected dependency. <<_projadm_projectstream_deletedependency>>
+* The image:icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to modify the order of the Project Streams.
+* image:icons/edit.gif[,15,15] __ Edit__: This option allows editing the selected dependency. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editdependency,Editing a Project Stream Dependency>>
+* image:icons/remove.gif[,15,15] __ Remove__: This option allows removing the selected dependency. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Deleting a Project Stream Dependency>>
 
 +
 
@@ -513,24 +514,24 @@ Stream Dependency__ screen of these Master Project Streams to edit their Depende
 
 . Click__ Back__ to return to the previous screen.
 
-
+[[_projadmin_projectstream_adddependency]]
 ==== Adding a Project Stream Dependency
 (((Project Streams ,Dependencies ,Adding))) 
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
-. On the __Project Streams Overview__, click the image:images/icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
-. Click the image:images/icons/dependency.gif[,15,15] _Add Dependency_ link on the__ Dependencies__ panel.
+. On the __Project Streams Overview__, click the image:icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
+. Click the image:icons/dependency.gif[,15,15] _Add Dependency_ link on the__ Dependencies__ panel.
 +
 The following pop-up screen is displayed:
 +
-image::images/ProjAdmin-ProjectStream-AddDependency-Step1.png[,760,518] 
+image::ProjAdmin-ProjectStream-AddDependency-Step1.png[,760,518] 
 +
 . Define search criteria on the _Search Project Stream_ panel in case you do not immediately find the Project Stream you want to add.
 +
 The list of elements displayed in the tree at the right, will be limited to the Project Streams matching these search criteria.
 +
 Click the _Reset_ button to clear the Search fields.
-. Expand the tree for the corresponding Project using the image:images/icons/ExpandProjectStream.gif[,10,10]  icon to display its Project Streams. Select the Project Stream you want to add and click __Next__.
+. Expand the tree for the corresponding Project using the image:icons/ExpandProjectStream.gif[,10,10]  icon to display its Project Streams. Select the Project Stream you want to add and click __Next__.
 +
 
 [NOTE]
@@ -539,7 +540,7 @@ If a Project Stream can not be added, an error message will be displayed.
 ====
 . Specify the Build results or sources to be used.
 +
-image::images/ProjAdmin-ProjectStream-AddDependency-Step2.png[,744,231] 
+image::ProjAdmin-ProjectStream-AddDependency-Step2.png[,744,231] 
 +
 .. Select the__ Code Retrieval__ mode from the drop-down list.
 +
@@ -583,21 +584,21 @@ You can also click:
 * _Cancel_ to clear the fields and restore the initial values.
 * _Previous_ to return to the previous screen without saving the changes.
 
-
+[[_projadmin_projectstream_editdependency]]
 ==== Editing a Project Stream Dependency 
 (((Project Streams ,Dependencies ,Editing))) 
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
-. On the __Project Streams Overview__, click the image:images/icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
-. Click the image:images/icons/edit.gif[,15,15] __ Edit __link in front of the required Dependency.
+. On the __Project Streams Overview__, click the image:icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
+. Click the image:icons/edit.gif[,15,15] __ Edit __link in front of the required Dependency.
 +
 The _Update Project Stream Dependency_ pop-up screen is displayed:
 +
-image::images/ProjAdmin-ProjectStream-UpdateDependency.png[,504,174] 
+image::ProjAdmin-ProjectStream-UpdateDependency.png[,504,174] 
 +
 . Edit the _Code Retrieval_ mode and __VCR Tag__, if required. 
 +
-For a description of these fields, refer to the section <<_projadmin_projectstream_adddependency>>.
+For a description of these fields, refer to the section <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Adding a Project Stream Dependency>>.
 . Click__ Save__ to save your modifications.
 +
 You can also click:
@@ -605,13 +606,13 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Cancel_ to return to the previous screen without saving the changes.
 
-
+[[_projadm_projectstream_deletedependency]]
 ==== Deleting a Project Stream Dependency 
 (((Project Streams ,Dependencies ,Deleting))) 
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
-. On the __Project Streams Overview__, click the image:images/icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
-. Click the image:images/icons/remove.gif[,15,15] __Remove __ link in front of the required Dependency.
+. On the __Project Streams Overview__, click the image:icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
+. Click the image:icons/remove.gif[,15,15] __Remove __ link in front of the required Dependency.
 +
 A confirmation message appears to remove the Dependency.
 Click _Yes_ if you want to remove the dependency or _No_ if you want to cancel the action.

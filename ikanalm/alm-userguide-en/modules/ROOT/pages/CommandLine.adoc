@@ -1,4 +1,4 @@
-
+[[_ccommandlineinterface]]
 == Command Line Interface (Optional) 
 (((Command Line Interface))) 
 
@@ -6,9 +6,9 @@ IKAN ALM can be extended with an optional Command Line interface, allowing the c
 
 Possible uses:
 
-* Manual creation of Level Requests (CLR Command): <<_pcommandline_clr_optionsparameters>>
-* Manual generation of Reports (Report Command): <<_pcommandline_report_optionsparameters>>
-* Creation of Level Requests in an external IDE. This guide describes the integration procedure for <<_pintegrateikanalminjdeveloper>> and <<_pintegrateikanalmineclipse>>. Refer to the indicated sections.
+* Manual creation of Level Requests (CLR Command): <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>
+* Manual generation of Reports (Report Command): <<CommandLine.adoc#_pcommandline_report_optionsparameters,Generating Reports by Specifying Options and Parameters>>
+* Creation of Level Requests in an external IDE. This guide describes the integration procedure for <<CommandLine.adoc#_pintegrateikanalminjdeveloper,Integrating IKAN ALM in JDeveloper>> and <<CommandLine.adoc#_pintegrateikanalmineclipse,Integrating IKAN ALM in Eclipse>>. Refer to the indicated sections.
 * Automated creation of Level Requests using a Scripting Tool. A scripting tool is used to define the triggers (e.g., server backup) for Level Request creation. This guide describes the use of an <<CommandLine.adoc#_sautomatecreatinglevelrequestswithant,Automating the Creation of Level Requests Using an ANT script>>. Refer to the indicated section.
 
 
@@ -21,12 +21,12 @@ The connection with the IKAN ALM server is established using XML-RPC.
 
 Refer to the following procedures for detailed information:
 
-* <<_pcommandline_clr_optionsparameters>>
-* <<_pcommandline_clr_propertiesfiles>>
-* <<_pcommandline_report_optionsparameters>>
-* <<_pcommandline_reports_propertiesfile>>
+* <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>
+* <<CommandLine.adoc#_pcommandline_clr_propertiesfiles,Creating Level Requests Using a Properties File>>
+* <<CommandLine.adoc#_pcommandline_report_optionsparameters,Generating Reports by Specifying Options and Parameters>>
+* <<CommandLine.adoc#_pcommandline_reports_propertiesfile,Generating Reports Using a Properties File>>
 
-
+[[_pcommandline_clr_optionsparameters]]
 ==== Creating Level Requests by Specifying Options and Parameters
 (((Command Line Interface ,Parameters))) 
 
@@ -186,7 +186,7 @@ Result:
 
 * If the Level Request is created successfully, the following screen is displayed:
 +
-image::images/CommandLine-LRCreatedSuccessfully.jpg[,539,274] 
+image::CommandLine-LRCreatedSuccessfully.jpg[,539,274] 
 +
 
 [WARNING]
@@ -197,24 +197,24 @@ Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Ov
 
 * If the Level Request cannot be created, because there is no connection with the IKAN ALM Server, the following screen is displayed:
 +
-image::images/CommandLine-ServerConnectionProblem.jpg[,539,282] 
+image::CommandLine-ServerConnectionProblem.jpg[,539,282] 
 +
 * If the user entered an unknown command, the following screen is displayed:
 +
-image::images/CommandLine-UnknownCommand.jpg[,540,190] 
+image::CommandLine-UnknownCommand.jpg[,540,190] 
 +
 * If the user entered unknown or incorrect command options, the screen similar to the following is displayed: 
 +
-image::images/CommandLine-UnknownCommandOption.jpg[,541,275] 
+image::CommandLine-UnknownCommandOption.jpg[,541,275] 
 +
 Similar error messages are provided for unknown Project or Package names and incorrect User ID/Password combinations.
 * If the Level Request cannot be created because of pending Level Requests for the Level, the following screen is displayed:
 +
-image::images/CommandLine-PendingRequests.jpg[,539,274] 
+image::CommandLine-PendingRequests.jpg[,539,274] 
 +
 Similar error messages are shown if there is no suitable Build result to be delivered, the Level is locked, the Project Stream is locked or if there is an authorization error.
 
-
+[[_pcommandline_clr_propertiesfiles]]
 ==== Creating Level Requests Using a Properties File
 
 It is possible to save frequently used settings in a Properties file, so that you do not have to enter the complete Level Request creation parameters.
@@ -223,10 +223,10 @@ After a standard installation, one such properties file, called _clr.properties_
 Open the file in a text editor to display its content:
 
 
-image::images/CommandLine-CLRPropertiesfile.jpg[,578,606] 
+image::CommandLine-CLRPropertiesfile.jpg[,578,606] 
 
 You can edit this standard file so that the settings match your requirements.
-Refer to the <<_pcommandline_clr_optionsparameters>>for a description of the options and parameters.
+Refer to the <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>for a description of the options and parameters.
 You can also create any number of specific properties files by copying the standard file, editing the copies and saving them under logical names for later usage
 
 . Prepare the Level Request creation.
@@ -285,7 +285,7 @@ Result:
 
 * If the Level Request is created successfully, the following screen is displayed:
 +
-image::images/CommandLine-LRCreatedSuccessfully.jpg[,541,274] 
+image::CommandLine-LRCreatedSuccessfully.jpg[,541,274] 
 +
 
 [WARNING]
@@ -297,24 +297,24 @@ Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Ov
 
 * If the Level Request cannot be created, because there is no connection with the IKAN ALM Server, the following screen is displayed:
 +
-image::images/CommandLine-ServerConnectionProblem.jpg[,540,285] 
+image::CommandLine-ServerConnectionProblem.jpg[,540,285] 
 +
 * If the user entered an unknown command, the following screen is displayed:
 +
-image::images/CommandLine-UnknownCommand.jpg[,540,190] 
+image::CommandLine-UnknownCommand.jpg[,540,190] 
 +
 * If the user entered unknown or incorrect command options, the screen similar to the following is displayed: 
 +
-image::images/CommandLine-UnknownCommandOption.jpg[,540,274] 
+image::CommandLine-UnknownCommandOption.jpg[,540,274] 
 +
 Similar error messages are provided for unknown Project names and incorrect User ID/Password combinations.
 * If the Level Request cannot be created because of pending Level Requests for the Level, the following screen is displayed:
 +
-image::images/CommandLine-PendingRequests.jpg[,540,274] 
+image::CommandLine-PendingRequests.jpg[,540,274] 
 +
 Similar error messages are shown if there is no suitable Build result to be delivered, the Level is locked, the Project Stream is locked or if there is an authorization error.
 
-
+[[_pcommandline_report_optionsparameters]]
 ==== Generating Reports by Specifying Options and Parameters
  
 . Prepare the Report generation.
@@ -491,7 +491,7 @@ The following values are allowed:
 +
 The file has the following structure:
 +
-image::images/CommandLine-SearchCriteriaPropertiesFile.jpg[,636,367] 
+image::CommandLine-SearchCriteriaPropertiesFile.jpg[,636,367] 
 +
 
 The following selection criteria are available:
@@ -663,7 +663,7 @@ Do not forget to remove the # sign in order to activate a search criterion.
 +
 The report will be generated.
 
-
+[[_pcommandline_reports_propertiesfile]]
 ==== Generating Reports Using a Properties File
 
 It is possible to save frequently used settings in a Properties file, so that you do not have to enter the complete Report generation parameters.
@@ -672,10 +672,10 @@ After a standard installation, one such properties file, called _report.properti
 Open the file in a text editor to display its content:
 
 
-image::images/CommandLine-ReportPropertiesfile.jpg[,597,470] 
+image::CommandLine-ReportPropertiesfile.jpg[,597,470] 
 
 You can edit this standard file so that the settings match your requirements.
-Refer to the section <<_pcommandline_clr_optionsparameters>>for a description of the options and parameters.
+Refer to the section <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>for a description of the options and parameters.
 You can also create any number of specific properties files by copying the standard file, editing the copies and saving them under logical names for later usage
 
 . Prepare the Report generation.
@@ -740,10 +740,10 @@ The Report will be generated.
 
 Refer to the following procedures for detailed information:
 
-* <<_pintegrateikanalminjdeveloper>>
-* <<_pintegrateikanalmineclipse>>
+* <<CommandLine.adoc#_pintegrateikanalminjdeveloper,Integrating IKAN ALM in JDeveloper>>
+* <<CommandLine.adoc#_pintegrateikanalmineclipse,Integrating IKAN ALM in Eclipse>>
 
-
+[[_pintegrateikanalminjdeveloper]]
 ==== Integrating IKAN ALM in JDeveloper
 
 This procedure describes how to set up IKAN ALM as an external tool in JDeveloper, so that you can create Level Requests (Forced Build, Requested Build or Deliver Build) from within this IDE
@@ -752,36 +752,36 @@ This procedure describes how to set up IKAN ALM as an external tool in JDevelope
 +
 The following dialog is displayed:
 +
-image::images/CommandLine-JDeveloperExternalToolsDialog.jpg[,418,294] 
+image::CommandLine-JDeveloperExternalToolsDialog.jpg[,418,294] 
 +
 . Click _Add..._
 +
 The following dialog is displayed:
 +
-image::images/CommandLine-JDeveloperCreateExternalToolsStep1DialogBlank.jpg[,511,340] 
+image::CommandLine-JDeveloperCreateExternalToolsStep1DialogBlank.jpg[,511,340] 
 +
 . Provide the correct parameters to create a Level Request on the wanted level:
 +
-image::images/CommandLine-JDeveloperCreateExternalToolsStep1Dialog.jpg[,511,340] 
+image::CommandLine-JDeveloperCreateExternalToolsStep1Dialog.jpg[,511,340] 
 +
 In the example above, the options are given to create a Level Request on the _CONTBUILD_ Level in the _DEMOCVS_ Project.
 . Click __Next__.
 +
 The following dialog is displayed:
 +
-image::images/CommandLine-JDeveloperCreateExternalToolsStep2Dialog.jpg[,511,341] 
+image::CommandLine-JDeveloperCreateExternalToolsStep2Dialog.jpg[,511,341] 
 +
 . Provide the display properties and click __Next__.
 +
 The following dialog is displayed:
 +
-image::images/CommandLine-JDeveloperCreateExternalToolsStep3Dialog.jpg[,508,339] 
+image::CommandLine-JDeveloperCreateExternalToolsStep3Dialog.jpg[,508,339] 
 +
 . Specify where you want to integrate this new tool and click __Next__.
 +
 The following dialog is displayed:
 +
-image::images/CommandLine-JDeveloperCreateExternalToolsStep4Dialog.jpg[,511,341] 
+image::CommandLine-JDeveloperCreateExternalToolsStep4Dialog.jpg[,511,341] 
 +
 . Specify the availability of the external tool.
 +
@@ -794,9 +794,9 @@ Result:
 You can now create Level Requests when selecting a java project in JDeveloper.
 The output of the IKAN ALM Command Line will be visible in a message box:
 +
-image::images/CommandLine-JDeveloperResult.jpg[,540,347] 
+image::CommandLine-JDeveloperResult.jpg[,540,347] 
 
-
+[[_pintegrateikanalmineclipse]]
 ==== Integrating IKAN ALM in Eclipse
 
 This procedure describes how to set up IKAN ALM as an external tool in Eclipse, so that you can create Level Requests (Forced Build, Requested Build or Deliver Build) from within this IDE
@@ -805,13 +805,13 @@ This procedure describes how to set up IKAN ALM as an external tool in Eclipse, 
 +
 The following dialog is displayed:
 +
-image::images/CommandLine-EclipseExternalToolsDialogBlank.jpg[,511,461] 
+image::CommandLine-EclipseExternalToolsDialogBlank.jpg[,511,461] 
 +
 . Select the _New launch configuration_ icon.
 +
 The following dialog is displayed:
 +
-image::images/CommandLine-EclipseExternalToolsDialog.jpg[,511,461] 
+image::CommandLine-EclipseExternalToolsDialog.jpg[,511,461] 
 +
 . Provide the correct parameters to create a Level Request on the wanted level:
 +
@@ -823,7 +823,7 @@ The external tools will be tested and saved.
 +
 The output from the command is visible in an Eclipse console:
 +
-image::images/CommandLine-EclipseResult.jpg[,770,366] 
+image::CommandLine-EclipseResult.jpg[,770,366] 
 
 
 [[_sautomatecreatinglevelrequestswithant]]
@@ -843,12 +843,12 @@ If you want to use this ANT Script yourself, customize it by:
 
 *Sample script:*
 
-image::images/CommandLine-SampleANTScript.jpg[,540,487] 
+image::CommandLine-SampleANTScript.jpg[,540,487] 
 
 *Output on success:*
 
-image::images/CommandLine-ANTScriptExecSuccess.jpg[,540,284] 
+image::CommandLine-ANTScriptExecSuccess.jpg[,540,284] 
 
 *Output on failure:*
 
-image::images/CommandLine-ANTScriptExecFailure.jpg[,540,320] 
+image::CommandLine-ANTScriptExecFailure.jpg[,540,320] 

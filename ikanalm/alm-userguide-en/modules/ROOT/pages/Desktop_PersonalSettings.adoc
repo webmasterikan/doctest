@@ -1,4 +1,4 @@
-[[_desktop_personalsettings_edit]]
+[[_desktop_personalsettings_edit]] [[_desktop_personalsettings_hoofdstuk]]
 == Personal Settings
 
 The Personal Settings section focuses on settings directly related to your account, such as your name, e-mail address, phone number, ... 
@@ -7,11 +7,11 @@ It is also the place where you store your personal search filters which you can 
 
 Refer to the following procedures for more information:
 
-* <<Desktop_PersonalSettings.adoc#_desktop_personalsettings_edit,Personal Settings Editing Your Personal Settings>>
+* <<#_desktop_personalsettings_edit,Personal Settings Editing Your Personal Settings>>
 * <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>
 
 
-[[_desktop_personalsettings_edit]]
+[[_desktop_personalsettings_edit]] [[_desktop_personalsettings]]
 === Editing Your Personal Settings (((Desktop ,Personal Settings)))  (((Personal Settings))) 
 
 This option allows you to edit your personal settings.
@@ -22,7 +22,7 @@ These are the settings you (or the Global Administrator using your User ID) defi
 +
 The__ Personal Settings__ screen is displayed:
 +
-image::images/Desktop-PersonalSettings-Edit.png[,359,329] 
+image::Desktop-PersonalSettings-Edit.png[,359,329] 
 +
 . Update the fields as required.
 +
@@ -87,8 +87,8 @@ Refer to the following procedures for more information:
 
 * <<_ciheecjhf2>>
 * <<_cihidaeja2>>
-* <<_cihjfebab8>>
-* <<_cihhjjjej8>>
+* <<#_cihjfebab8,Managing Filter Definitions>>
+* <<Desktop_PersonalSettings.adoc#_cihhjjjej8,Modifying a filter`'s search criteria>>
 
 
 === Creating a search filter 
@@ -96,25 +96,25 @@ Refer to the following procedures for more information:
 
 . Specify the required (advanced) search criteria.
 +
-image::images/Search_DefineCriteria.png[,875,553] 
+image::Search_DefineCriteria.png[,875,553] 
 +
 . Click the _Save filter_ link.
 +
 The following pop-up window is displayed.
 +
-image::images/Search_SaveFilter.png[,484,239] 
+image::Search_SaveFilter.png[,484,239] 
 +
 . Enter the name and a description for the new filter and click the _Save_ button.
 +
 The filter will now become available in the filter drop-down menu.
 . On this screen you can also manage the filter definitions.
 +
-For more information, refer to the section <<_cihjfebab8>>.
+For more information, refer to the section <<#_cihjfebab8,Managing Filter Definitions>>.
 
 
 [NOTE]
 ====
-Editing the name and description of the filter, can be done on the _Personal Settings_ screen (<<_cihjfebab8>>).
+Editing the name and description of the filter, can be done on the _Personal Settings_ screen (<<#_cihjfebab8,Managing Filter Definitions>>).
 ====
 
 === Selecting a Search Filter 
@@ -124,13 +124,13 @@ On the Overview screens, search filters can be used instead of manually specifyi
 
 . To display the list of existing filters, click the down arrow of the _No filter selected_ drop-down box.
 +
-image::images/Search_SelectFilter.png[,854,271] 
+image::Search_SelectFilter.png[,854,271] 
 +
 . Select the required filter from the list.
 +
 The search criteria will be automatically filled in and the filtered result will be displayed on the overview.
 
-
+[[_cihjfebab8]] 
 === Managing Filter Definitions 
 (((Search Filters ,Managing)))  
 (((Search Filters ,Editing))) 
@@ -143,9 +143,9 @@ The __Search Filters __panel displays the list of all filters defined for the cu
 +
 If required, you can limit the list of displayed filters by selecting the required _Search Page_ (Package Overview, Projects Overview, Level Request Overview of Build and Deploy Overview) from the drop-down list.
 +
-image::images/Search_ManageFilters.png[,1039,552] 
+image::Search_ManageFilters.png[,1039,552] 
 +
-. Click the image:images/icons/icon_viewRemote.png[,15,15] _View_ icon in front of the filter, to view the specified search criteria.
+. Click the image:icons/icon_viewRemote.png[,15,15] _View_ icon in front of the filter, to view the specified search criteria.
 +
 You will be forwarded to the related Overview screen and the search criteria will be automatically applied.
 +
@@ -153,28 +153,28 @@ You will be forwarded to the related Overview screen and the search criteria wil
 [NOTE]
 ====
 If required, you can now modify the search criteria and save them to the filter definition.
-See also <<_cihhjjjej8>>.
+See also <<Desktop_PersonalSettings.adoc#_cihhjjjej8,Modifying a filter`'s search criteria>>.
 ====
 
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ icon in front of the filter, to modify the name or the description.
+. Click the image:icons/edit.gif[,15,15] _Edit_ icon in front of the filter, to modify the name or the description.
 +
-image::images/Search_EditFilter.png[,512,239] 
+image::Search_EditFilter.png[,512,239] 
 +
 Confirm the modification, by clicking the _Save_ button.
 +
 
 [NOTE]
 ====
-Modifying the search criteria is only possible on the Overview screens themselves. <<_cihhjjjej8>>
+Modifying the search criteria is only possible on the Overview screens themselves. <<Desktop_PersonalSettings.adoc#_cihhjjjej8,Modifying a filter`'s search criteria>>
 ====
 +
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ icon in front of the filter, to delete a specific filter.
+. Click the image:icons/delete.gif[,15,15] _Delete_ icon in front of the filter, to delete a specific filter.
 +
-image::images/Search_DeleteFilter.png[,509,151] 
+image::Search_DeleteFilter.png[,509,151] 
 +
 Confirm the deletion, by clicking the _Delete_ button.
 
-
+[[_cihhjjjej8]]
 === Modifying a filter`'s search criteria 
 (((Search Filters ,Modifying Search Criteria))) 
 
@@ -184,7 +184,7 @@ Modifying the search criteria of a filter is only possible on the Overview scree
 +
 There are two possible ways to do so:
 
-* via the image:images/icons/edit.gif[,15,15] _ Edit_ icon on the Search Filters panel on the Personal Settings screen (<<_cihjfebab8>>), or
+* via the image:icons/edit.gif[,15,15] _ Edit_ icon on the Search Filters panel on the Personal Settings screen (<<#_cihjfebab8,Managing Filter Definitions>>), or
 * directly on the concerned Overview, by selecting the filter from the drop-down list.
 
 . Adapt the search criteria.
@@ -192,7 +192,7 @@ There are two possible ways to do so:
 +
 The__ Save Filter __pop-up window is displayed.
 +
-image::images/Search_SaveFilter.png[,486,239] 
+image::Search_SaveFilter.png[,486,239] 
 +
 . If required, you can also at the same time adapt the _Name_ and __Description__.
 . Click __Save__.
@@ -200,4 +200,4 @@ image::images/Search_SaveFilter.png[,486,239]
 +
 
 
-image::images/Search_ConfirmUpdate.png[,368,115] 
+image::Search_ConfirmUpdate.png[,368,115] 

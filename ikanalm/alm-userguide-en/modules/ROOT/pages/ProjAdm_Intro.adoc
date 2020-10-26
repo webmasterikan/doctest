@@ -1,15 +1,17 @@
 
-== Project Administration  (((Project Administration))) 
+[[_projadm_introduction]]
+== Project Administration  
+(((Project Administration))) 
 
 The following IKAN ALM elements are typically used by a Project Administrator:
 
-* <<_projadm_projects>>
-* <<_projadm_projmgtoptions>>
+* <<ProjAdm_Projects.adoc#_projadm_projects,Projects [Project Name]>>
+* <<ProjAdm_ProjMgtOptions.adoc#_projadm_projmgtoptions,Project Administration Options>>
 
 
 === Accessing the Projects Overview
 
-On the Main Menu, click the _Project Administration image:images/icons/icon_ProjectAdmin_13x13.png[,13,13]  icon.
+On the Main Menu, click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon.
 
 The overview of all projects will be displayed.
 
@@ -20,7 +22,7 @@ From the __Projects Overview__, you can access the Project Administration Option
 In the remainder of this document, we will refer to this section of the interface as the "`Project Administration context`". 
 
 
-. On the __Projects Overview__, click the image:images/icons/edit.gif[,15,15] _Edit_ link in front of the Project you want to edit.
+. On the __Projects Overview__, click the image:icons/edit.gif[,15,15] _Edit_ link in front of the Project you want to edit.
 +
 
 [NOTE]
@@ -33,4 +35,4 @@ On the submenu, the different Project Administration options have become availab
 +
 
 
-image::images/ProjAdmin-ProjMgt-SubmenuOptions.png[,1023,80] 
+image::ProjAdmin-ProjMgt-SubmenuOptions.png[,1023,80] 

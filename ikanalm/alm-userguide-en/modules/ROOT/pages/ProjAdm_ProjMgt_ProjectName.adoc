@@ -1,4 +1,4 @@
-
+[[_projadm_projects]]
 == [Project Name] 
 (((Project Administration ,Project Name)))  (((Project Management Options ,Project Name)))  (((Project Name))) 
 
@@ -7,4 +7,4 @@ The first option on the Project Administration submenu refers to the name of the
 Select this option to return to the _Project
 Info_ screen. 
 
-For more information, refer to the section <<_projadmin_projectsoverview_viewing>>.
+For more information, refer to the section <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_viewing,Viewing Project Settings>>.

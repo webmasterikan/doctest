@@ -1,4 +1,4 @@
-[[_globadm_system_settings]]
+[[_globadm_system_settings]] [[_globadm_system]]
 == System
 
 The _System_ menu provides an entry to view or edit the IKAN ALM Server configuration settings and to perform Housekeeping Actions in the IKAN ALM Build Archive. 
@@ -34,7 +34,7 @@ Changing some of these settings requires preparatory actions on the IKAN ALM ser
 +
 The following screen is displayed.
 +
-image::images/GlobAdmin-SystemSettings.png[,614,915] 
+image::GlobAdmin-SystemSettings.png[,614,915] 
 +
 
 [NOTE]
@@ -50,7 +50,7 @@ The following subpanels are available:
 * <<GlobAdm_System.adoc#_globadm_systemsettings_miscellaneous,Miscellaneous>>
 
 +
-Underneath the _Edit System Settings_ panel, you will find the image:images/icons/history.gif[,15,15] _ History_ link.
+Underneath the _Edit System Settings_ panel, you will find the image:icons/history.gif[,15,15] _ History_ link.
 Click this link to display the _System Settings History
 View_ screen.
 For more detailed information concerning this __History View__, refer to the section <<_historyeventlogging>>.
@@ -60,7 +60,7 @@ For more detailed information concerning this __History View__, refer to the sec
 ==== Local Environment
 
 
-image::images/GlobAdmin-SystemSettings_LocalEnvironment.png[,704,408] 
+image::GlobAdmin-SystemSettings_LocalEnvironment.png[,704,408] 
 
 The following fields are available on the __Local Environment __subpanel:
 
@@ -122,7 +122,7 @@ The complete path will be assembled as follows: the prefix path (as specified in
 
 Remote Transporters are activated by defining them as the Transporter Protocol when specifying the settings for a Machine. 
 
-For more information, refer to the sections <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>and <<_globadm_machines>>.
+For more information, refer to the sections <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>and <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>.
 
 |Work Copy Location
 |This field contains the location of the Work Copy displayed as a remote location.
@@ -163,7 +163,7 @@ The Transporter Protocol defines how Sources and Build Results will be transport
 This is only necessary if the SSH Server on the IKAN ALM Server uses an SSH Port other than the default port number __22__.
 An SSH Server daemon must be installed on the IKAN ALM server in order to use SSH as a Transporter Protocol.
 
-__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<_globadm_secureshellcreate>>
+__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<GlobAdm_Transporters.adoc#_globadm_secureshellcreate,Creating a Secure Shell Transporter>>
 
 |FTP Port
 |Specify the FTP Port Number.
@@ -177,7 +177,7 @@ __Note: __This port number may be overwritten by the port number defined in the 
 ==== Security
 
 
-image::images/GlobAdmin-SystemSettings_Security.png[,701,106] 
+image::GlobAdmin-SystemSettings_Security.png[,701,106] 
 
 The following fields are available on the _Security_ subpanel.
 
@@ -220,7 +220,7 @@ IKAN ALM Users_ submenu option. <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notifyi
 ====
 
 
-image::images/GlobAdmin-SystemSettings_Mail.png[,702,310] 
+image::GlobAdmin-SystemSettings_Mail.png[,702,310] 
 
 The following fields are available on the _Mail_ subpanel.
 
@@ -298,7 +298,7 @@ The characters you enter are displayed as asterisks.
 ==== Miscellaneous
 
 
-image::images/GlobAdmin-SystemSettings_Misc.png[,697,151] 
+image::GlobAdmin-SystemSettings_Misc.png[,697,151] 
 
 The following fields are available on the _Miscellanous_ subpanel:
 
@@ -321,7 +321,7 @@ As a result an RSS button will become available on the user`'s _Level Requests O
 
 By default the RSS Feeds are enabled.
 
-For more information, refer to the section <<_desktop_lr_rssfeeds>>.
+For more information, refer to the section <<#_desktop_lr_rssfeeds,The IKAN ALM RSS Functionality>>.
 
 |RESTful Web Services Enabled
 |This feature is currently only functional for the integration with the SAP lifecycle. 
@@ -360,7 +360,7 @@ The _Housekeeping_ screen also shows information about the Build Archive, like t
 +
 The__ Housekeeping__ screen is displayed:
 +
-image::images/GlobAdm-Housekeeping-Screen.png[,920,526] 
+image::GlobAdm-Housekeeping-Screen.png[,920,526] 
 +
 On top of the screen, the _Build Archive Info_ panel displays the following information.
 +
@@ -437,7 +437,7 @@ Only Build files older than 3 months will be displayed
 |If you want to specify a range of dates, enter in this field the first _Build End
 Date/Time_ of the range.
 
-You can also click the image:images/icons/calendar.gif[,18,19]  icon to select the Build End Date/Time.
+You can also click the image:icons/calendar.gif[,18,19]  icon to select the Build End Date/Time.
 
 Click the required date to copy it into the field.
 
@@ -451,7 +451,7 @@ End Date_ field has been selected.
 |If you want to specify a range of dates, enter in this field the last _Build End
 Date/Time_ of the range.
 
-You can also click the image:images/icons/calendar.gif[,18,19]  icon to select the Build End Date/Time.
+You can also click the image:icons/calendar.gif[,18,19]  icon to select the Build End Date/Time.
 
 Click the required date to copy it into the field.
 
@@ -526,7 +526,7 @@ The _Build Files Overview_ panel lists the following information for each displa
 | Description
 
 |View Content
-|Click the image:images/icons/view.gif[,15,15] _View_ link to view the content of the Build File. <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
+|Click the image:icons/view.gif[,15,15] _View_ link to view the content of the Build File. <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
 
 |File Name
 |The name of the Build File.
@@ -567,14 +567,14 @@ Click the link to display the details for this Level Request.
 Select the check box in the table heading in order to select all the displayed Build Files.
 . The _Confirm Build Files Deletion_ popup window is displayed.
 +
-image::images/GlobAdm-Housekeeping-Delete.png[,258,90] 
+image::GlobAdm-Housekeeping-Delete.png[,258,90] 
 +
 . Click__ Delete __to confirm the deletion or __Back __to return to the previous screen without deleting the Build Files.
 +
 When the delete is confirmed, the removal is executed.
 The action is logged in the _Housekeeping History_ and the User is redirected to the _View Housekeeping Details_ screen where the result of the action is displayed.
 +
-image::images/GlobAdm-Housekeeping-Delete-Success.png[,1032,319] 
+image::GlobAdm-Housekeeping-Delete-Success.png[,1032,319] 
 
 
 [[_globadm_system_housekeepinghistory]]
@@ -591,7 +591,7 @@ It provides a _Search_ panel where the User can enter search criteria to restric
 +
 The__ Housekeeping History__ screen is displayed:
 +
-image::images/GlobAdm-HousekeepingHistory-Screen.png[,668,375] 
+image::GlobAdm-HousekeepingHistory-Screen.png[,668,375] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -619,7 +619,7 @@ You can enter or select several search criteria to narrow your search.
 |Start From
 |If you want to specify a range of dates, enter in this field the start _Date/Time_ of the range.
 
-You can also click the image:images/icons/calendar.gif[,18,19]  icon to select the Date/Time. 
+You can also click the image:icons/calendar.gif[,18,19]  icon to select the Date/Time. 
 
 Click the required date to copy it into the field.
 
@@ -628,7 +628,7 @@ The time will be set to _0:0_ (midnight). However you can still change the time 
 |Start To 
 |If you want to specify a range of dates, enter in this field the end _Date/Time_ of the range.
 
-You can also click the image:images/icons/calendar.gif[,18,19]  icon to select the Date/Time. 
+You can also click the image:icons/calendar.gif[,18,19]  icon to select the Date/Time. 
 
 Click the required date to copy it into the field.
 
@@ -665,11 +665,11 @@ Possible statuses are:
 
 |===
 
-. You can click the image:images/icons/view.gif[,15,15] _View_ link to display the _View Housekeeping Details_ screen.
+. You can click the image:icons/view.gif[,15,15] _View_ link to display the _View Housekeeping Details_ screen.
 +
-image::images/GlobAdm-HousekeepingHistory-Details_success.png[,1032,371] 
+image::GlobAdm-HousekeepingHistory-Details_success.png[,1032,371] 
 +
-image::images/GlobAdm-HousekeepingHistory-Details_error.png[,1030,336] 
+image::GlobAdm-HousekeepingHistory-Details_error.png[,1030,336] 
 
 
 [[_globadm_system_synchronizebuildarchive]]
@@ -685,7 +685,7 @@ During synchronization the status will be set to "`Non existing`".
 +
 The__ Synchronize Build Archive__ screen is displayed:
 +
-image::images/GlobAdm-SynchBuildArchive-screen.png[,864,481] 
+image::GlobAdm-SynchBuildArchive-screen.png[,864,481] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -760,7 +760,7 @@ The _Projects Overview_ panel lists the following information for each displayed
 |Locked
 a|This field indicates whether or not the Project is locked:
 
-* If it is locked, this field contains the locked icon (image:images/icons/locked.gif[,15,15] ). 
+* If it is locked, this field contains the locked icon (image:icons/locked.gif[,15,15] ). 
 * If it is not locked, this field remains empty.
 
 |Hidden
@@ -785,7 +785,7 @@ In order to not overburden the IKAN ALM Server, it is best to limit the number o
 
 . The _Synchronize Build Archive Log_ screen is displayed.
 +
-image::images/GlobAdm-SynchBuildArchive-synchronize.png[,1009,240] 
+image::GlobAdm-SynchBuildArchive-synchronize.png[,1009,240] 
 +
 The extra field _Synchronizing Status_ is displayed for each Project on the _Project Synchronization_ panel.
 +

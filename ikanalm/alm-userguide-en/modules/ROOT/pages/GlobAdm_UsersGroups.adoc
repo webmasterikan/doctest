@@ -1,4 +1,4 @@
-[[_globadm_usersgroups_users]]
+[[_globadm_usersgroups_users]] [[_globadm_usersgroups]]
 == Users and Groups
 
 Refer to the following sections for more information on:
@@ -63,7 +63,7 @@ The Users Overview option allows:
 * setting active User IDs as reserved, provided that this action does not exceed the maximum number of active reserved Users.
 * displaying a list of Users connected to IKAN ALM, with the possibility to disconnect them, if needed, before their session has timed out.
 
-
+[[_globadm_usersgroups_usersoverview]]
 ==== The Users Overview Screen
 (((Users ,Overview Screen))) 
 
@@ -71,7 +71,7 @@ The Users Overview option allows:
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-Users.png[,865,291] 
+image::GlobAdm-Users.png[,865,291] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -166,35 +166,35 @@ It is typically assigned to IKAN ALM Users with Global Admin Access Rights.
 [cols="1,1", frame="none"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
-It allows editing a User definition. <<_globadm_usersgroups_edituser>>
+It allows editing a User definition. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_edituser,Editing User Settings>>
 
-|image:images/icons/icon_disconnectUser.png[,15,15] 
+|image:icons/icon_disconnectUser.png[,15,15] 
 |Disconnect
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
-It allows disconnecting Users before their session has timed out. <<_globadm_usersgroups_disconnectingusers>>
+It allows disconnecting Users before their session has timed out. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_disconnectingusers,Disconnecting Users>>
 
-|image:images/icons/history.gif[,15,15] 
+|image:icons/history.gif[,15,15] 
 |History
 
 This option is available to all IKAN ALM Users.
 It allows viewing the User History. <<_globadm_usersgroups_userhistory>>
 |===
 
-
+[[_globadm_usersgroups_edituser]]
 ==== Editing User Settings 
 (((Users ,Editing))) 
 
 . In the Global Administration context, select__ Users & Groups > Overview Users__.
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link to change the selected User ID definition.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected User ID definition.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-Users-Edit.png[,572,620] 
+image::GlobAdm-Users-Edit.png[,572,620] 
 +
 *Description:*
 
@@ -215,28 +215,28 @@ You will have to expand your IKAN ALM license or archive other (obsolete) reserv
 +
 [NOTE]
 ====
-Users can edit their personal settings. <<_desktop_personalsettings>>
+Users can edit their personal settings. <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>
 ====
 
 . Edit the fields as required.
 +
-For a description of the fields, refer to the section <<_globadm_usersgroups_usersoverview>>.
+For a description of the fields, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_usersoverview,The Users Overview Screen>>.
 . Click__ Save__ to save your changes.
 +
 You can also click:
 *** _Refresh_ to retrieve the settings from the database.
 *** _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_usersgroups_disconnectingusers]]
 ==== Disconnecting Users 
 (((Users ,Disconnecting))) 
 
 . In the Global Administration context, select__ Users & Groups > Overview Users__.
 . Set the option _Connected Users_ to _Yes_ to display the list of Users currently connected.
 +
-image::images/GlobAdm-Users-Disconnect.png[,809,264] 
+image::GlobAdm-Users-Disconnect.png[,809,264] 
 +
-. Click the image:images/icons/icon_disconnectUser.png[,15,15] _Disconnect_ link on the _Users Overview_ panel to immediately disconnect the User.
+. Click the image:icons/icon_disconnectUser.png[,15,15] _Disconnect_ link on the _Users Overview_ panel to immediately disconnect the User.
 +
 This will end the User`'s session and disconnect him from IKAN ALM.
 As a result, the User has to log on again if he or she wants to continue his or her activity in IKAN ALM.
@@ -246,7 +246,7 @@ As a result, the User has to log on again if he or she wants to continue his or 
 (((Users ,History))) 
 
 . In the Global Administration context, select __Users & Groups > Overview Users__.
-. Click the image:images/icons/history.gif[,15,15] _History_ link on the _User Overview_ panel to display the __User History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link on the _User Overview_ panel to display the __User History View__.
 +
 
 [NOTE]
@@ -268,14 +268,15 @@ Overview_ screen.
 a|_RELATED TOPICS_
 
 * <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
-* <<_desktop_personalsettings>>
+* <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>
 * <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
-* <<_desktop_outstandingapprovals>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovals,Approvals>>
 
 |===
 
 [[_globadm_usersgroups_groups]]
-=== User Groups (((Global Administration ,User Groups)))  (((User Groups))) 
+=== User Groups 
+(((Global Administration ,User Groups)))  (((User Groups))) 
 
 IKAN ALM uses the JAAS interface to base its User ID/Password authentication on existing Security Systems in your organization.
 This means that User IDs and their adherence to User Groups are maintained outside IKAN ALM.
@@ -302,11 +303,12 @@ To avoid situations where no User with System Admin rights may login anymore, IK
 
 Refer to the following sections for detailed information:
 
-* <<_globadm_usergroupcreate>>
-* <<_globadm_usergroupsoverview>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usergroupcreate,Creating a User Group>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usergroupsoverview,The User Groups Overview Screen>>
 
-
-==== Creating a User Group (((User Groups ,Creating))) 
+[[_globadm_usergroupcreate]]
+==== Creating a User Group 
+(((User Groups ,Creating))) 
 
 [NOTE]
 ====
@@ -317,7 +319,7 @@ This option is only available if you have Global Administrator Access Rights in 
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-UserGroup-Create.png[,589,303] 
+image::GlobAdm-UserGroup-Create.png[,589,303] 
 +
 . Fill out the fields in the _Create User Group_ panel at the top of the screen. Fields marked with a red asterisk are mandatory:
 +
@@ -341,7 +343,7 @@ The possible values are:
 * External: the User Group membership is synchronized with the external security system. This is done for each User individually at login.
 * Internal: the User Group membership is managed in IKAN ALM 
 
-For more information, refer to the section <<_globadm_usersgroups_editusergroup>>.
+For more information, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Editing a User Group>>.
 |===
 
 . Once you have filled out the fields, click__ Create__.
@@ -349,7 +351,7 @@ For more information, refer to the section <<_globadm_usersgroups_editusergroup>
 The newly created User Group is added to the__ User
 Groups Overview__ panel at the bottom of the screen.
 
-
+[[_globadm_usergroupsoverview]]
 ==== The User Groups Overview Screen 
 (((User Groups ,Overview Screen))) 
 
@@ -357,7 +359,7 @@ Groups Overview__ panel at the bottom of the screen.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-UserGroup-Overview.png[,968,425] 
+image::GlobAdm-UserGroup-Overview.png[,968,425] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -393,33 +395,33 @@ The following information is available for each displayed User Group:
 [cols="1,1", frame="none"]
 |===
 
-|image:images/icons/edit.gif[,15,15] 
+|image:icons/edit.gif[,15,15] 
 |Edit
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
-It allows editing a User Group definition. <<_globadm_usersgroups_editusergroup>>
+It allows editing a User Group definition. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Editing a User Group>>
 
-|image:images/icons/delete.gif[,15,15] 
+|image:icons/delete.gif[,15,15] 
 |Delete
 
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
-It allows deleting a User Group definition. <<_globadm_usersgroups_deleteusergroup>>
+It allows deleting a User Group definition. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_deleteusergroup,Deleting a User Group>>
 
-|image:images/icons/history.gif[,15,15] ______
+|image:icons/history.gif[,15,15] ______
 |History
 
 This option is available to all IKAN ALM Users.
-It allows viewing the User Group History. <<_globadm_usersgroups_usergrouphistory>>
+It allows viewing the User Group History. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_usergrouphistory,Viewing the User Group History>>
 |===
 +
 
 [NOTE]
 ====
 
-Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
 ====
 
-
+[[_globadm_usersgroups_editusergroup]]
 ==== Editing a User Group 
 (((User Groups ,Editing))) 
 
@@ -427,18 +429,18 @@ Columns marked with the image:images/icons/icon_sort.png[,15,15]  icon can be so
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-UserGroup-Edit.png[,977,428] 
+image::GlobAdm-UserGroup-Edit.png[,977,428] 
 +
-. Click the image:images/icons/edit.gif[,15,15] _Edit_ link in front of the User Group for which you want to modify the members.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link in front of the User Group for which you want to modify the members.
 +
-image::images/GlobAdm-UserGroup-EditUserGroup.png[,581,535] 
+image::GlobAdm-UserGroup-EditUserGroup.png[,581,535] 
 +
 . In the _Edit User Group_ panel, edit the fields as required.
-. Underneath the _Edit User Group_ panel, click the image:images/icons/edit.gif[,15,15] _ Edit User Group Members_ link to change the selected User Group definition.
+. Underneath the _Edit User Group_ panel, click the image:icons/edit.gif[,15,15] _ Edit User Group Members_ link to change the selected User Group definition.
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-UserGroup-EditUserGroupMembers.png[,575,292] 
+image::GlobAdm-UserGroup-EditUserGroupMembers.png[,575,292] 
 +
 .. Edit the fields in the __Edit User Group Members__ panel as required.
 +
@@ -469,7 +471,7 @@ You can also click:
 
 .. The _User Group Usage_ panel displays the System Settings Access Rights and Levels and Projects the User Groups are connected to.
 +
-image::images/GlobAdm-UserGroup-UserGroupsUsage.png[,622,396] 
+image::GlobAdm-UserGroup-UserGroupsUsage.png[,622,396] 
 
 . Click _Save_ to confirm your changes.
 +
@@ -481,14 +483,14 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_usersgroups_editusergroupmembers]]
 ==== Editing the User Group Members
 
-. On the __User Group Members __panel underneath the _Edit User Group_ panel (See <<_globadm_usersgroups_editusergroup>>), click the image:images/icons/edit.gif[,15,15] _Edit User Group Members_ link to change the selected User Group definition. 
+. On the __User Group Members __panel underneath the _Edit User Group_ panel (See <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Editing a User Group>>), click the image:icons/edit.gif[,15,15] _Edit User Group Members_ link to change the selected User Group definition. 
 +
 The following screen is displayed:
 +
-image::images/GlobAdm-UserGroup-EditUserGroupMembers.png[,575,292] 
+image::GlobAdm-UserGroup-EditUserGroupMembers.png[,575,292] 
 +
 Edit the fields in the__ Edit
 User Group Members__ panel as required.
@@ -518,21 +520,21 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Cancel_ to return to the previous screen without saving the changes.
 
-
+[[_globadm_usersgroups_deleteusergroup]]
 ==== Deleting a User Group 
 (((User Groups ,Deleting))) 
 
 . In the Global Administration context, select__ Users & Groups > Overview User Groups__.
-. Click the image:images/icons/delete.gif[,15,15] _Delete_ link to delete the selected User Group definition.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link to delete the selected User Group definition.
 
 * If the User Group is not connected to any other IKAN ALM Object, the following screen is displayed:
 +
-image::images/GlobAdm-UserGroup-Delete.png[,429,176] 
+image::GlobAdm-UserGroup-Delete.png[,429,176] 
 +
 Click__ Delete__ to confirm the deletion or __Back __to return to the previous screen without deleting the entry.
 * If the User Group is still connected to IKAN ALM Objects on the System Project or Level Settings, the following dialog is displayed:
 +
-image::images/GlobAdm-UserGroup-Delete-Error.png[,658,639] 
+image::GlobAdm-UserGroup-Delete-Error.png[,658,639] 
 +
 
 [NOTE]
@@ -540,12 +542,12 @@ image::images/GlobAdm-UserGroup-Delete-Error.png[,658,639]
 You will need to cancel the displayed connections, before you can delete the User Group.
 ====
 
-
+[[_globadm_usersgroups_usergrouphistory]]
 ==== Viewing the User Group History 
 (((User Groups ,History))) 
 
 . In the Global Administration context, select__ Users & Groups > Overview User Groups__.
-. Click the image:images/icons/history.gif[,15,15] _History_ link to display the__ User Group History View__.
+. Click the image:icons/history.gif[,15,15] _History_ link to display the__ User Group History View__.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<_historyeventlogging>>.
@@ -562,10 +564,10 @@ a|_RELATED TOPICS_
 * <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users and Groups Users>>
 * <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
 * <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notifying IKAN ALM Users>>
-* <<_globadm_project>>
-* <<_projadmin_projectsoverview_editing>>
-* <<_plevelenvmgt_createbuildlevel>>
-* <<_plevelenvmgt_createtestorproductionlevel>>
-* <<_plifecyclemgt_editlevelsettings>>
+* <<GlobAdm_Project.adoc#_globadm_project,Projects>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>>
+* <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlevelsettings,Editing a Level>>
 
 |===

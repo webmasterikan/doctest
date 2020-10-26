@@ -1,12 +1,14 @@
 
-== History Log (((History Log)))  (((Global Administration ,History Log))) 
+[[_globadm_historylog]]
+== History Log 
+(((History Log)))  (((Global Administration ,History Log))) 
 
 
 . In the Global Administration context, select__ History Log__.
 +
 The __Global Admin History Log View __screen is displayed.
 +
-image::images/GlobAdm-HistoryLog-Screen.png[,971,788] 
+image::GlobAdm-HistoryLog-Screen.png[,971,788] 
 +
 . Define the required search criteria on the search panel.
 +
@@ -70,7 +72,7 @@ The association has been removed
 +
 A _Comparison_ panel is added to the right of the _Versions_ panel.
 +
-image::images/GlobAdm-HistoryLog-Comparison.png[,934,652] 
+image::GlobAdm-HistoryLog-Comparison.png[,934,652] 
 +
 The _Version Comparison_ panel displays the differences between the latest version of the object (shown in the "Latest" column) and the selected version of the object (shown in the "Selected" column). If the Object was deleted, the latest version will be equal to the status of the Object before it was deleted.
 
@@ -84,4 +86,4 @@ The lower part will be different if the object type is an association for an Add
 ====
 
 +
-image::images/GlobAdm-HistoryLog-Comparison2.png[,758,598] 
+image::GlobAdm-HistoryLog-Comparison2.png[,758,598] 
