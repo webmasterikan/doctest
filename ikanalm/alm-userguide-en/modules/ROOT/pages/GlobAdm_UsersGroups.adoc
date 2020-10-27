@@ -182,7 +182,7 @@ It allows disconnecting Users before their session has timed out. <<GlobAdm_User
 |History
 
 This option is available to all IKAN ALM Users.
-It allows viewing the User History. <<_globadm_usersgroups_userhistory>>
+It allows viewing the User History. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_userhistory,Viewing the User History>>
 |===
 
 [[_globadm_usersgroups_edituser]]
@@ -241,7 +241,7 @@ image::GlobAdm-Users-Disconnect.png[,809,264]
 This will end the User`'s session and disconnect him from IKAN ALM.
 As a result, the User has to log on again if he or she wants to continue his or her activity in IKAN ALM.
 
-
+[[_globadm_usersgroups_userhistory]]
 ==== Viewing the User History 
 (((Users ,History))) 
 
@@ -256,7 +256,7 @@ Groups Overview_ panel.
 ====
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 +
 Click __Back __to return to the _Users
 Overview_ screen.
@@ -550,7 +550,7 @@ You will need to cancel the displayed connections, before you can delete the Use
 . Click the image:icons/history.gif[,15,15] _History_ link to display the__ User Group History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 +
 Click __Back __to return to the _User
 Groups Overview_ screen.

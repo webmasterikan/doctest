@@ -19,7 +19,7 @@ The following sections describe these Level Request types in detail:
 
 The following sections deal with the procedures involved when creating new Level Requests:
 
-* <<_desktop_lr_createlevelrequest_selectlevel>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_selectlevel,The Create Level Request: Select Level Screen>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_build,Creating a Build Level Request>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_deliver,Creating a Deliver Build Level Request>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_rollback,Creating a Rollback Build Level Request>>
@@ -83,7 +83,7 @@ image::Desktop-LevelRequests-Flow-Build.png[,872,1262]
 
 
 |1.
-|A Level Request is created manually by the User (via the <<_desktop_lr_createlevelrequest_selectlevel>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
+|A Level Request is created manually by the User (via the <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_selectlevel,The Create Level Request: Select Level Screen>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
 
 A Build Level Request directly goes on to step 5; a Rebuild Level Request may pass steps 2, 3 and/or 4.
 
@@ -289,7 +289,7 @@ image::Desktop-LevelRequests-Flow-BuildAndDeploy.png[,891,1238]
 
 
 |1.
-|A Level Request is created manually by the User (via the <<_desktop_lr_createlevelrequest_selectlevel>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
+|A Level Request is created manually by the User (via the <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_selectlevel,The Create Level Request: Select Level Screen>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
 
 A Build Level Request directly goes on to step 5, a Rebuild Level Request may pass steps 2,3 and/or 4.
 
@@ -568,7 +568,7 @@ image::Desktop-LevelRequests-Flow-Deploy.png[,759,1067]
 
 
 |1.
-|A Level Request is created manually by the User (via the <<_desktop_lr_createlevelrequest_selectlevel>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
+|A Level Request is created manually by the User (via the <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_selectlevel,The Create Level Request: Select Level Screen>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters>>) or automatically by the Scheduler.
 
 |2.
 |The Monitor Process on the IKAN ALM Server picks up the Level Request and optionally sends the required Pre- and Post-Notifications.
@@ -682,7 +682,7 @@ The Notification type (mail, netsend) and the Notification criteria (if Level Re
 
 The following sections deal with the procedures involved when creating new Level Requests:
 
-* <<_desktop_lr_createlevelrequest_selectlevel>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_selectlevel,The Create Level Request: Select Level Screen>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_build,Creating a Build Level Request>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_deliver,Creating a Deliver Build Level Request>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_rollback,Creating a Rollback Build Level Request>>
@@ -696,6 +696,7 @@ If you often need to create Level Requests for specific Levels, you can assign t
 This way, you will be able to easily create Level Requests by simply clicking an icon.
 ====
 
+[[_desktop_lr_createlevelrequest_selectlevel]]
 ==== The Create Level Request: Select Level Screen
 (((Level Requests ,Creating ,Selecting a Level))) 
 
@@ -1222,12 +1223,12 @@ It contains the information about the new Level Request (as well as about the ol
 For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>>.
 
 
-[[_desktop_lr_overview]]
+[[_desktop_lr_overview]] [[_desktop_lr_overviewscreen]]
 === Level Requests Overview
 
 The following sections deal with the procedures involved when using the __Level Requests Overview__:
 
-* <<_desktop_lr_overviewscreen>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen,Level Requests Overview>>
 * <<#_desktop_lr_rssfeeds,The IKAN ALM RSS Functionality>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_generatereport,Generating a Report>>
 * <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>
@@ -1260,7 +1261,7 @@ The following options are available:
 * Save filter: to save the current search criteria for future use.
 
 +
-For more information on the usage of search panels and filters, refer to the sections <<_babcjedaj8>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
+For more information on the usage of search panels and filters, refer to the sections <<UserInterface.adoc#_babcjedaj8,Search Panels>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
 
 . Click the _Search_ button once again if you want to verify the changing status of existing and new Level Requests.
 +
@@ -1418,7 +1419,7 @@ To do so, select and copy the URL from the Location Bar of your browser window, 
 The RSSOwl plug-in can be found on the Eclipse update site: http://www.rssowl.org/[
 http://www.rssowl.org/].
 +
-You find a detailed explanation of the structure of the IKAN ALM URL in the section <<_drssfeedurldetails>>.
+You find a detailed explanation of the structure of the IKAN ALM URL in the section <<App_RSS.adoc#_drssfeedurldetails,RSS URL Details>>.
 
 [[_desktop_lr_generatereport]]
 ==== Generating a Report 
@@ -1889,7 +1890,7 @@ This panel is only shown if there are Issues related to the Level Request.
 image::Desktop-LevelRequests-Detailed-Summary-Issues.png[,619,265] 
 
 Issues can get linked to a Level Request in two ways: automatically by IKAN ALM during the execution of the Level Request or manually by a User after the Level Request has ended.
-Refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking,Issue Tracking>> for more information on defining an external Issue Tracking System, and to the section <<_phases_generalinformation>> for more information on the Issue Tracking Phase.
+Refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking,Issue Tracking>> for more information on defining an external Issue Tracking System, and to the section <<App_Phases.adoc#_phases_generalinformation,Phases - General Information>> for more information on the Issue Tracking Phase.
 
 For each issue the following information is displayed:
 
@@ -2104,7 +2105,7 @@ image::Desktop-LevelRequests-Detailed-PhaseLogs-LevelParameters.png[,959,572]
 
 For each of the parameters, the table displays its key and value.
 
-For more information on Level Parameters, refer to the section <<_cpredefinedbuildparameters>>.
+For more information on Level Parameters, refer to the section <<App_PredefLevelParams.adoc#_cpredefinedbuildparameters,Predefined Level Parameters>>.
 
 [[_desktop_lr_phaselogs_levelphases]]
 ===== Level Phases
@@ -2122,7 +2123,7 @@ image::Desktop-LevelRequests-Detailed-PhaseLogs-Phases2.png[,927,481]
 Underneath the Level Parameters, the list of all different Level Phases and their status (__Success__, __Warning__, __Fail__, __Running__, _Not
 executed_ or __Aborted__), Start Date/Time and Duration is displayed.
 
-For more information, refer to <<_phases_generalinformation>>.
+For more information, refer to <<App_Phases.adoc#_phases_generalinformation,Phases - General Information>>.
 
 [NOTE]
 ====
@@ -2297,7 +2298,7 @@ The Build was rejected.
 
 For each of the parameters, the table displays its key and value.
 
-For more information, refer to the section <<_cpredefinedbuildparameters>>.
+For more information, refer to the section <<App_PredefLevelParams.adoc#_cpredefinedbuildparameters,Predefined Level Parameters>>.
 
 image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedBuildParameters.png[,651,120] 
 |===
@@ -2316,7 +2317,7 @@ The Phases listed in the following table may be available.
 However, since the defined Build Environment workflow can be altered (<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_buildenvphasesoverview,The Build Environment Phases Overview Screen>>), not all Phases may be present in the Phase Log. 
 
 The description in this table is very concise.
-For a complete description of the Build Phases, refer to <<_phases_generalinformation>>.
+For a complete description of the Build Phases, refer to <<App_Phases.adoc#_phases_generalinformation,Phases - General Information>>.
 
 [cols="1,1", frame="topbot", options="header"]
 |===
@@ -2453,7 +2454,7 @@ The Deploy was rejected.
 
 For each of the parameters, the table displays its key and value.
 
-For more information, refer to the section <<_cpredefineddeployparameters>>.
+For more information, refer to the section <<App_PredefDeployParams.adoc#_cpredefineddeployparameters,Predefined Deploy Parameters>>.
 
 image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedDeployParameters.png[,664,152] 
 |===
@@ -2469,7 +2470,7 @@ The Phases listed in the following table may be available.
 However, since the defined Deploy Environment workflow can be altered (<<ProjAdm_DeployEnv.adoc#_projadm_deplenv_phaseoverviewscreen,The Deploy Environment Phases Overview Screen>>), not all Phases may be present in the Phase Log. 
 
 The description in this table is very concise.
-For a complete description of the Deploy Phases, refer to <<_phases_generalinformation>>.
+For a complete description of the Deploy Phases, refer to <<App_Phases.adoc#_phases_generalinformation,Phases - General Information>>.
 
 [cols="1,1", frame="topbot", options="header"]
 |===
@@ -2739,7 +2740,7 @@ Issues can get linked to a Level Request automatically by IKAN ALM during the ex
 
 image::Desktop-LevelRequests-Detailed-Issues.png[,701,275] 
 
-Refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking,Issue Tracking>>for more information on defining on external Issue Tracking System, and to <<_phases_generalinformation>>for more information on the Issue Tracking Phase.
+Refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking,Issue Tracking>>for more information on defining on external Issue Tracking System, and to <<App_Phases.adoc#_phases_generalinformation,Phases - General Information>>for more information on the Issue Tracking Phase.
 
 [NOTE]
 ====
@@ -3411,7 +3412,7 @@ The following options are available:
 * Save filter: to save the current search criteria for future use.
 
 +
-For more information on the usage of search panels and filters, refer to the sections <<_babcjedaj8>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
+For more information on the usage of search panels and filters, refer to the sections <<UserInterface.adoc#_babcjedaj8,Search Panels>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
 
 . Verify the information on the _Builds and Deploys Overview_ panel.
 +
@@ -3498,7 +3499,7 @@ The following status indications are possible:
 * image:icons/cancelled.gif[,15,15] _Canceled_
 * image:icons/aborted.gif[,15,15] _Aborted_
 
-For more information, refer to the section <<_desktop_lr_overviewscreen>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen,Level Requests Overview>>.
 
 |Build Number
 |This field contains the Build Number of the Level Request.

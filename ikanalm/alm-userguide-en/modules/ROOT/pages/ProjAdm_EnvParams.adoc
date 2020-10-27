@@ -19,8 +19,8 @@ Environment Parameters can be divided into two categories:
 
 * __Predefined Parameters__: these are Environment Parameters that are always available. A list of these predefined parameters can be found in:
 
-** <<_cpredefinedbuildparameters>>
-** <<_cpredefineddeployparameters>>
+** <<App_PredefLevelParams.adoc#_cpredefinedbuildparameters,Predefined Level Parameters>>
+** <<App_PredefDeployParams.adoc#_cpredefineddeployparameters,Predefined Deploy Parameters>>
 
 +
 To override the predefined parameter value for a specific Environment, define a Parameter with the same name on that Environment.
@@ -34,7 +34,7 @@ On the _Miscellaneous_ tab of the _System Settings_ screen, you can specify the 
 
 There also exist Predefined Level Parameters.
 They are available during the execution of a Custom Phase on a Level, They may not be overridden, since it is not (yet) possible to define Level Parameters.
-For more information, refer to the appendix <<_cpredefinedbuildparameters>>.
+For more information, refer to the appendix <<App_PredefLevelParams.adoc#_cpredefinedbuildparameters,Predefined Level Parameters>>.
 ====
 
 The _Parameters Overview_ screen lets you create, edit, delete and copy Environment Parameters and allows checking their history.
@@ -227,7 +227,7 @@ Switch to the _Parameters Overview_ screen for the required Project.
 . Click the image:icons/history.gif[,15,15] _History_ link on the _Parameters Overview_ panel to display the__ Environment History View__.
 
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 
 Click __Back __to return to the previous screen.
 

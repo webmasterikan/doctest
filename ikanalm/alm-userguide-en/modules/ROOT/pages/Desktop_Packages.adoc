@@ -139,7 +139,7 @@ The following options are available:
 * Save filter: to save the current search criteria for future use.
 
 +
-For more information on the usage of search panels and filters, refer to the sections <<_babcjedaj8>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
+For more information on the usage of search panels and filters, refer to the sections <<UserInterface.adoc#_babcjedaj8,Search Panels>> and <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
 
 . Depending on your access rights, the following links may be available on the _Packages Overview_ panel:
 +
@@ -295,7 +295,7 @@ Package_ panel to specify whether or not you want to display hidden Packages.
 . Click the image:icons/history.gif[,15,15] _History_ link on the _Package Overview_ panel to display the __Package History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 +
 Click __Overview __to return to the _Packages
 Overview_ screen.

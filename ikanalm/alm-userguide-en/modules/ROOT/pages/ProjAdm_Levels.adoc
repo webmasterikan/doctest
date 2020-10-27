@@ -719,7 +719,7 @@ The following screen is displayed:
 image::ProjAdmin-Levels-BuildEnv-Create.png[,1019,444] 
 +
 For a complete description of the _Create Build
-Environment_ procedure, refer to <<_pcreatebuildenvironment>>.
+Environment_ procedure, refer to <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>.
 
 [[_plevelenvmgt_createdeployenvironment]]
 ====== Creating a Deploy Environment 
@@ -880,6 +880,6 @@ You also might want to change the Source and/or Target Locations, especially the
 <<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
 . Click the _History_ image:icons/history.gif[,15,15]  link on the _Levels Overview_ panel.
 +
-For more detailed information concerning this __History View__, refer to the section <<_historyeventlogging>>.
+For more detailed information concerning this __History View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 +
 Click __Back __to return to the previous screen.

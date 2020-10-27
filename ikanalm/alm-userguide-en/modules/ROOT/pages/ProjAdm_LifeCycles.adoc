@@ -461,7 +461,7 @@ Remove the Lifecycle from the Project Stream before deleting it. <<ProjAdm_ProjM
 image::ProjAdmin-LifeCycles-HistoryView.png[,709,431] 
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 +
 Click __Back __to return to the previous screen.
 
@@ -496,7 +496,7 @@ You can also click__ Refresh __to retrieve the settings from the database or__ C
 For more information, refer to the sections:
 
 * <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>>
-* <<_pcreatebuildenvironment>>
+* <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>
 * <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Creating a Deploy Environment>>
 * <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Approvals>>
 * <<ProjAdm_Levels.adoc#_plevelenvmgt_changedeploysequence,Editing the Deploy Sequence>>

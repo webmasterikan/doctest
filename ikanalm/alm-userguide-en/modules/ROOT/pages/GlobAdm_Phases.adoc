@@ -36,7 +36,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_Phases.adoc#_globadm_phases_importing,Importing a Phase Definition>>
 
 
-For a complete explanation of the concept of Phases, refer to <<_phases_generalinformation>>.
+For a complete explanation of the concept of Phases, refer to <<App_Phases.adoc#_phases_generalinformation,Phases - General Information>>.
 [[_globadm_phases_creating]]
 === Creating a Phase Definition
 (((Phases ,Creating))) 
@@ -322,7 +322,7 @@ A Core Phase is an internal IKAN ALM Phase that performs some core functionality
 
 It cannot be edited nor deleted.
 
-For more information, refer to <<_phases_generalinformation>>.
+For more information, refer to <<App_Phases.adoc#_phases_generalinformation,Phases - General Information>>.
 
 |Certified
 |This field indicates whether a Phase is Certified or not.
@@ -331,7 +331,7 @@ A Certified Phase is a Phase that has been tested and approved by IKAN.
 
 It cannot be modified and its parameters cannot be deleted. 
 
-For more information, refer to <<_phases_generalinformation>>.
+For more information, refer to <<App_Phases.adoc#_phases_generalinformation,Phases - General Information>>.
 
 |Released
 |This field indicates whether a Phase has been Released or not.
@@ -341,7 +341,7 @@ A Phase that has not been released is regarded as being in development, i.e., it
 To facilitate Phase development, IKAN ALM will automatically re-install a non-released Phase just before it is executed.
 Once a Phase has been released, its contents (scripts) cannot change anymore, so the _Upload_ button will not be available.
 
-For more information, refer to <<_phases_generalinformation>>.
+For more information, refer to <<App_Phases.adoc#_phases_generalinformation,Phases - General Information>>.
 |===
 +
 
@@ -1033,7 +1033,7 @@ You can also click _Overview_ to return to the _Phases Overview_ screen without 
 The _Phase History View_ screen is displayed.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>. 
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>. 
 
  . Click _Back_ to return to the _Phases Overview_ screen.
 

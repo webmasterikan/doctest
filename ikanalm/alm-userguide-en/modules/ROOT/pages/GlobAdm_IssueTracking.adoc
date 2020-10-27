@@ -355,7 +355,7 @@ You must change the definition of the listed Projects, before you can delete the
 . Click the image:icons/history.gif[,15,15] _History_ link to display the _Issue Tracking System History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 
 . Click __Back __to return to the _Issue Tracking Systems Overview_ screen.
 

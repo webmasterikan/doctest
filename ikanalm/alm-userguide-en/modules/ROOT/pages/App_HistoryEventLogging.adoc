@@ -2,6 +2,7 @@
 :sectnums!:
 
 [appendix]
+[[_historyeventlogging]]
 == History and Event Logging 
 (((History)))  (((Event Logging))) 
 

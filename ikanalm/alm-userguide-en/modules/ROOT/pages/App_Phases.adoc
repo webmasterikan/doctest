@@ -2,6 +2,7 @@
 :sectnums!:
 
 [appendix]
+[[_phases_generalinformation]]
 == Phases - General Information 
 (((Phases)))  (((Phases ,General Information))) 
 
@@ -382,7 +383,7 @@ See also <<App_Phases.adoc#_phases_levelphases_retrievecode,Retrieve Code Phase>
 The _Verify Build Script_ Phase tries to locate the defined Build Script, and fails if it cannot.
 
 First, it determines what Build Script to look for.
-If there`'s a Build Script defined on the Build Environment (<<_pcreatebuildenvironment>>), it will try to find that.
+If there`'s a Build Script defined on the Build Environment (<<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>), it will try to find that.
 If not, it will look for the Build Script defined on the Project (<<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>).
 
 Then, it tries to find the Build Script in the Build Environment`'s Source Location.

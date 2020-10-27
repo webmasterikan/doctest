@@ -85,12 +85,12 @@ This way, you can reuse the same criteria for future search actions.
 
 Refer to the following procedures for more information:
 
-* <<_ciheecjhf2>>
-* <<_cihidaeja2>>
+* <<Desktop_PersonalSettings.adoc#_ciheecjhf2,Creating a search filter>>
+* <<Desktop_PersonalSettings.adoc#_cihidaeja2,Selecting a Search Filter>>
 * <<#_cihjfebab8,Managing Filter Definitions>>
 * <<Desktop_PersonalSettings.adoc#_cihhjjjej8,Modifying a filter`'s search criteria>>
 
-
+[[_ciheecjhf2]]
 === Creating a search filter 
 (((Search Filters ,Creating))) 
 
@@ -117,6 +117,7 @@ For more information, refer to the section <<#_cihjfebab8,Managing Filter Defini
 Editing the name and description of the filter, can be done on the _Personal Settings_ screen (<<#_cihjfebab8,Managing Filter Definitions>>).
 ====
 
+[[_cihidaeja2]]
 === Selecting a Search Filter 
 (((Search Filters ,Selecting))) 
 

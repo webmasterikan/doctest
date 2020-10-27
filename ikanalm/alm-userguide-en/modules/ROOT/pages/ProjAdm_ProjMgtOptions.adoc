@@ -68,7 +68,7 @@ a|This drop-down menu contains the following options:
 
 * _Create_
 +
-Select this option to create a new Build Environment for the selected Project. <<_pcreatebuildenvironment>>
+Select this option to create a new Build Environment for the selected Project. <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>
 * _Overview_
 +
 Select this option to switch to the Build Environment Overview for the selected Project. <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>

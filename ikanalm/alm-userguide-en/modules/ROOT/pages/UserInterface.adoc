@@ -50,6 +50,7 @@ Option_
 
 image::UserInterface-SearchPanel.png[,965,156] 
 
+[[_babcjedaj8]]
 ==== Search Panels
 _Search_ panels allow specifying search criteria, which restrict the list of items displayed in the _Overview_ panel.
 While defining those search criteria in comboboxes and text fields, you may use the standard * and ? wild card characters.

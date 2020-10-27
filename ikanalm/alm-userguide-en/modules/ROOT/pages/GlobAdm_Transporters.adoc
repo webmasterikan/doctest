@@ -51,7 +51,7 @@ The relative locations for all remote transporters must be defined in the _Syste
 
 [NOTE]
 ====
-A Transporter will be activated by linking the Transporter to a Machine representing the IKAN ALM Agent (<<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines The Machines Overview Screen>>), and by linking that Machine to a Build or Deploy environment (<<_pcreatebuildenvironment>> or <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Creating a Deploy Environment>>).
+A Transporter will be activated by linking the Transporter to a Machine representing the IKAN ALM Agent (<<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines The Machines Overview Screen>>), and by linking that Machine to a Build or Deploy environment (<<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>> or <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Creating a Deploy Environment>>).
 ====
 
 This chapter describes three different Transporters, each of them enabling different protocols for transferring sources, scripts or build results.
@@ -87,7 +87,7 @@ The _Details_ panel for the type of Transporter Protocol you selected is display
 For more information on those details, refer to the appropriate sections: 
 
 * <<GlobAdm_Transporters.adoc#_globadm_filecopycreate,Creating a FileCopy Transporter>>
-* <<_globadm_ftpcreate>>
+* <<GlobAdm_Transporters.adoc#_globadm_ftpcreate,Creating an FTP Transporter>>
 * <<GlobAdm_Transporters.adoc#_globadm_secureshellcreate,Creating a Secure Shell Transporter>>
 
 [[_sglobadm_transporters_overview]]
@@ -394,7 +394,7 @@ Use the search criteria on the search panel to display the FileCopy Transporter 
 . Click the image:icons/history.gif[,15,15] _History_ link to display the__ FileCopy Transporter History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 . Click __Back __to return to the _FileCopy Transporters Overview_ screen.
 
 
@@ -426,13 +426,13 @@ In order to use the FTP Client for build and deploy actions, you must link the T
 
 Refer to the following sections for detailed information:
 
-* <<_globadm_ftpcreate>>
+* <<GlobAdm_Transporters.adoc#_globadm_ftpcreate,Creating an FTP Transporter>>
 * <<GlobAdm_Transporters.adoc#_globadm_ftpoverview,The FTP Transporters Overview Screen>>
 * <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp_edit,Editing an FTP Transporter Definition>>
 * <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp_delete,Deleting an FTP Transporter Definition>>
 * <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp_history,Viewing the FTP Transporter History>>
 
-
+[[_globadm_ftpcreate]]
 ==== Creating an FTP Transporter 
 (((FTP Transporters ,Creating))) 
 
@@ -576,7 +576,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ FTP Transporters Overview__ panel.
 +
-For a detailed description of the fields, refer to <<_globadm_ftpcreate>>.
+For a detailed description of the fields, refer to <<GlobAdm_Transporters.adoc#_globadm_ftpcreate,Creating an FTP Transporter>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
 +
 
@@ -625,7 +625,7 @@ image::GlobAdm-Transporters-FTP-Edit.png[,607,630]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_globadm_ftpcreate>>.
+For a description of the fields, refer to <<GlobAdm_Transporters.adoc#_globadm_ftpcreate,Creating an FTP Transporter>>.
 +
 
 [NOTE]
@@ -676,7 +676,7 @@ Use the search criteria on the search panel to display the FTP Transporter Proto
 . Click the image:icons/history.gif[,15,15] _History_ link to display the__ FTP Transporter History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 . Click __Back __to return to the _FTP Transporters Overview_ screen.
 
 
@@ -972,7 +972,7 @@ Use the search criteria on the search panel to display the Secure Shell Transpor
 . Click the image:icons/history.gif[,15,15] _History_ link to display the __Secure Shell Transporter History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 . Click __Back __to return to the _Secure Shell Transporters Overview_ screen.
 
 

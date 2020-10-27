@@ -428,7 +428,7 @@ When a Phase of a Level Request is executed on a certain Agent or Server and tha
 The _Machine History View_ is displayed.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 . Click__ Back__ to return to the __Machines Overview __screen.
 
 
@@ -691,6 +691,6 @@ You can also click:
 . Click the image:icons/history.gif[,15,15] _History_ link on the _Parameters Overview_ panel to display the __Machine History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 +
 Click __Back __to return to the previous screen.

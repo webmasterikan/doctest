@@ -44,7 +44,7 @@ For more information on those details, refer to the appropriate sections:
 * <<GlobAdm_ScriptingTools.adoc#_pcreateantscriptingtool,Creating an ANT Scripting Tool>>
 * <<GlobAdm_ScriptingTools.adoc#_pcreategradlescriptingtool,Creating a Gradle Scripting Tool>>
 * <<GlobAdm_ScriptingTools.adoc#_pcreatenantscriptingtool,Creating a NANT Scripting Tool>>
-* <<_pcreatemaven2scriptingtool>>
+* <<GlobAdm_ScriptingTools.adoc#_pcreatemaven2scriptingtool,Creating a Maven2 Scripting Tool>>
 
 [[_sglobadm_scriptingtools_overview]]
 === The Scripting Tools Overview Screen 
@@ -412,7 +412,7 @@ Use the search criteria on the search panel to display the ANT Scripting Tools y
 . Click the image:icons/history.gif[,15,15] _History_ link to display the _ANT Scripting Tool History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 
 . Click __Back __to return to the _Scripting Tools Overview_ screen.
 
@@ -749,7 +749,7 @@ Use the search criteria on the search panel to display the Gradle Scripting Tool
 . Click the image:icons/history.gif[,15,15] _History_ link to display the _Gradle Scripting Tool History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 
 . Click __Back __to return to the _Scripting Tools Overview_ screen.
 
@@ -782,9 +782,9 @@ Refer to the following sections for detailed information:
 
 * <<GlobAdm_ScriptingTools.adoc#_pcreatenantscriptingtool,Creating a NANT Scripting Tool>>
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_overview,The NANT Scripting Tools Overview Screen>>
-* <<_globadm_scriptingtool_nant_edit>>
-* <<_globadm_scriptingtool_nant_delete>>
-* <<_globadm_scriptingtool_nant_history>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_edit,Editing a NANT Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_delete,Deleting a NANT Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_history,Viewing the NANT Scripting Tool History>>
 
 [[_pcreatenantscriptingtool]]
 ==== Creating a NANT Scripting Tool 
@@ -959,7 +959,7 @@ This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Scripting Tool
 |===
 
-
+[[_globadm_scriptingtool_nant_edit]]
 ==== Editing a NANT Scripting Tool Definition 
 (((NANT Scripting Tools ,Editing))) 
 
@@ -992,7 +992,7 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_scriptingtool_nant_delete]]
 ==== Deleting a NANT Scripting Tool Definition 
 (((NANT Scripting Tools ,Deleting))) 
 
@@ -1019,7 +1019,7 @@ image::GlobAdm-ScriptingTools-NANT-Delete-Error.png[,800,528]
 +
 You need to assign another Scripting Tool to these Environments, before deleting this NANT Scripting Tool.
 
-
+[[_globadm_scriptingtool_nant_history]]
 ==== Viewing the NANT Scripting Tool History 
 (((NANT Scripting Tools ,History))) 
 
@@ -1032,7 +1032,7 @@ Use the search criteria on the search panel to display the NANT Scripting Tools 
 . Click the image:icons/history.gif[,15,15] _History_ link to display the _NANT Scripting Tool History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 
 . Click __Back __to return to the _Scripting Tools Overview_ screen.
 
@@ -1061,13 +1061,14 @@ Therefore, you must define the Maven2 Scripting Tool in the IKAN ALM application
 
 Refer to the following sections for detailed information:
 
-* <<_pcreatemaven2scriptingtool>>
-* <<_globadm_scriptingtool_maven2_overview>>
-* <<_globadm_scriptingtool_maven2_edit>>
-* <<_globadm_scriptingtool_maven2_delete>>
-* <<_globadm_scriptingtool_maven2_history>>
+* <<GlobAdm_ScriptingTools.adoc#_pcreatemaven2scriptingtool,Creating a Maven2 Scripting Tool>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_overview,The Maven2 Scripting Tools Overview Screen>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_edit,Editing a Maven2 Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_delete,Deleting a Maven2 Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_history,Viewing the Maven2 Scripting Tool History>>
 
 
+[[_pcreatemaven2scriptingtool]]
 ==== Creating a Maven2 Scripting Tool 
 (((Maven2 Scripting Tools ,Creating))) 
 
@@ -1240,6 +1241,7 @@ a|_RELATED TOPICS_
 
 |===
 
+[[_globadm_scriptingtool_maven2_overview]]
 ==== The Maven2 Scripting Tools Overview Screen 
 (((Gradle ,Overview Screen))) 
 
@@ -1260,7 +1262,7 @@ The following options are available:
 
  . Verify the information on the _Scripting Tools Overview_ panel.
 +
-For a detailed description of the fields, refer to <<_globadm_scriptingtool_maven2_overview>>.
+For a detailed description of the fields, refer to <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_overview,The Maven2 Scripting Tools Overview Screen>>.
 
  . Depending on your access rights, the following links may be available on the _Maven2 Scripting Tools Overview_ panel:
 +
@@ -1287,7 +1289,7 @@ This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Scripting Tool
 |===
 
-
+[[_globadm_scriptingtool_maven2_edit]]
 ==== Editing a Maven2 Scripting Tool Definition 
 (((Maven2 Scripting Tools ,Editing))) 
 
@@ -1306,7 +1308,7 @@ image::GlobAdm-ScriptingTools-Maven2-Edit.png[,1029,649]
 
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_pcreatemaven2scriptingtool>>.
+For a description of the fields, refer to <<GlobAdm_ScriptingTools.adoc#_pcreatemaven2scriptingtool,Creating a Maven2 Scripting Tool>>.
 +
 
 [NOTE]
@@ -1321,7 +1323,7 @@ You can also click:
 * _Refresh_ to retrieve the settings from the database.
 * _Back_ to return to the previous screen without saving the changes
 
-
+[[_globadm_scriptingtool_maven2_delete]]
 ==== Deleting a Maven2 Scripting Tool Definition 
 (((Maven2 Scripting Tools ,Deleting))) 
 
@@ -1347,7 +1349,7 @@ image::GlobAdm-ScriptingTools-Maven2-Delete-Error.png[,790,510]
 +
 You need to assign another Scripting Tool to these Environments, before deleting this Maven2 Scripting Tool.
 
-
+[[_globadm_scriptingtool_maven2_history]]
 ==== Viewing the Maven2 Scripting Tool History 
 (((Maven2 Scripting Tools ,History))) 
 
@@ -1360,7 +1362,7 @@ Use the search criteria on the search panel to display the Maven2 Scripting Tool
 . Click the image:icons/history.gif[,15,15] _History_ link to display the _Maven2 Scripting Tool History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 
 . Click __Back __to return to the _Scripting Tools Overview_ screen.
 

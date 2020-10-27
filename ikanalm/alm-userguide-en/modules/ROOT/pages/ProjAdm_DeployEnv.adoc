@@ -580,6 +580,6 @@ For a more detailed description of this screen, refer to the section <<ProjAdm_E
 . Click the image:icons/history.gif[,15,15] _History_ link to display the __Deploy Environment History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 +
 Click __Back __to return to the previous screen.

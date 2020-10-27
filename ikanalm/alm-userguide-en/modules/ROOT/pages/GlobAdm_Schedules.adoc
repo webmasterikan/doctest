@@ -246,7 +246,7 @@ You must remove the Schedule from the listed Levels before you can delete it.
 . Click the image:icons/history.gif[,15,15] _History_ link to display the _Schedule History View_.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 
 . Click __Back __to return to the _Schedules Overview_ screen.
 

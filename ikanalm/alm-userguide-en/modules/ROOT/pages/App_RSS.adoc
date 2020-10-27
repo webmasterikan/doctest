@@ -2,6 +2,7 @@
 :sectnums!:
 
 [appendix]
+[[_drssfeedurldetails]]
 == RSS URL Details 
 (((RSS URL Details))) 
 

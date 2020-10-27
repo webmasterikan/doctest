@@ -16,7 +16,7 @@ Typical uses of Build Environments:
 
 The Build Environments submenu option lets you start the following procedures:
 
-* <<_pcreatebuildenvironment>>
+* <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>
 * <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
 +
 The _Build Environments Overview_ screen lets you verify and change the information concerning Build Environments and related Phases.
@@ -33,7 +33,7 @@ The following actions are possible:
 The _Parameters Overview_ screen lets you create, edit, delete and copy Build Parameters and allows to check their history.
 For more information, refer to the chapter <<ProjAdm_EnvParams.adoc#_projadm_environmentparameters,Environment Parameters>>.
 
-
+[[_pcreatebuildenvironment]]
 === Creating a Build Environment
 (((Build Environments ,Creating))) 
  
@@ -162,7 +162,7 @@ You can also:
 * click the _Reset search_ link to clear the search fields,
 . Verify the Information available on the __Build Environments Overview__.
 +
-For a detailed description of the fields, see <<_pcreatebuildenvironment>>.
+For a detailed description of the fields, see <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>.
 +
 
 [NOTE]
@@ -239,7 +239,7 @@ image::ProjAdmin-BuildEnv-Edit_popup.png[,540,337]
 +
 . Edit the fields as required.
 +
-For a detailed description of the fields, refer to <<_pcreatebuildenvironment>>.
+For a detailed description of the fields, refer to <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>.
 . Click Save, once you have finished your changes.
 +
 You can also click__ Refresh __to retrieve the settings from the database or__ Cancel __to return to the __Edit Build Environment __screen without saving your changes.
@@ -285,7 +285,7 @@ image::ProjAdmin-BuildEnv-Clone.png[,1014,438]
 . On the _Clone Build Environment_ panel, specify the _Name_ and __Target Location__, and specify a Level for the new Environment.
 +
 If required, you can also edit the other fields.
-For a detailed description of the fields, refer to <<_pcreatebuildenvironment>>.
+For a detailed description of the fields, refer to <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>.
 . Click _Clone_ to confirm the action.
 +
 You can also click__ Back __to return to the previous screen without cloning the Environment.
@@ -614,6 +614,6 @@ For a more detailed description of this screen, refer to the section <<ProjAdm_E
 . Click the image:icons/history.gif[,15,15] _History_ link to display the __Build Environment History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 +
 Click __Back __to return to the previous screen.

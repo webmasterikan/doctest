@@ -15,7 +15,7 @@ This chapter only describes how to create and manage a Package Build Group.
 To transfer Packages belonging to a Package Build Group when building a Package, a new core Phase has been added, namely the _Transport Package Results_ Phase.
 This Phase must be inserted in the workflow of the Build Environment.
 
-For more details, refer to the description of this Phase in the appendix <<_phases_generalinformation>>.
+For more details, refer to the description of this Phase in the appendix <<App_Phases.adoc#_phases_generalinformation,Phases - General Information>>.
 ====
 
 Refer to the following procedures for more information:
@@ -348,7 +348,7 @@ Package Build Group_ panel to specify whether or not you want to display hidden 
 . Click the image:icons/history.gif[,15,15] _History_ link on the _Package Build Groups Overview_ panel to display the __Package Build Group History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 +
 Click __Back __to return to the _Package
 Build Groups Overview_ screen.

@@ -2,6 +2,7 @@
 :sectnums!:
 
 [appendix]
+[[_csubversiongeneralinformation]]
 == Subversion - General Information 
 (((Subversion)))  (((Subversion ,General Information))) 
 

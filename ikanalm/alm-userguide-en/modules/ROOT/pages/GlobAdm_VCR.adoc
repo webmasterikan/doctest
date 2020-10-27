@@ -45,12 +45,12 @@ The _Connection Details_ panel for the type of Repository you selected is displa
 For more information on those details, refer to the appropriate sections:
 
 * <<GlobAdm_VCR.adoc#_pcreatesvnrepository,Creating a Subversion Repository>>
-* <<_globadm_vcr_git_create>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_create,Creating a Git Repository>>
 * <<GlobAdm_VCR.adoc#_pcreatecvsrepository,Creating a CVS Repository>>
 * <<GlobAdm_VCR.adoc#_pcreatevssrepository,Creating a VSS Version Control Repository>>
 * <<GlobAdm_VCR.adoc#_pcreateclearcasebaserepository,Creating a ClearCase Repository>>
-* <<_pcreatepvcsrepository>>
-* <<_pcreatepvcsrepository>>
+* <<GlobAdm_VCR.adoc#_pcreatepvcsrepository,Creating a PVCS Repository>>
+* <<GlobAdm_VCR.adoc#_pcreatepvcsrepository,Creating a PVCS Repository>>
 
 
 [[_globadm_vcr_overview]]
@@ -190,7 +190,7 @@ The characters you enter are displayed as asterisks.
 |Enter the URL of the machine hosting the Subversion Repository.
 This field is mandatory.
 
-For more information regarding a correct Subversion Repository URL, refer to the section <<_csubversiongeneralinformation>>.
+For more information regarding a correct Subversion Repository URL, refer to the section <<App_Subversion.adoc#_csubversiongeneralinformation,Subversion - General Information>>.
 
 |Tags Directory
 |Enter the Tags Directory for the Subversion Repository or accept the default setting.
@@ -209,7 +209,7 @@ The following options are available:
 
 The selection of a Repository Layout is mandatory.
 
-For more information regarding the different Repository Layouts, refer to the section <<_csubversiongeneralinformation>>.
+For more information regarding the different Repository Layouts, refer to the section <<App_Subversion.adoc#_csubversiongeneralinformation,Subversion - General Information>>.
 
 |Time-Out (Sec.)
 |Enter the Time-Out value in seconds.
@@ -221,7 +221,7 @@ The definition of a Time-Out value is mandatory.
 |Select the _Yes_ option button to automatically retrieve the Meta Properties set on source files in the Subversion VCR during the__ Retrieve code __Phase.
 These Meta Properties can be used by the Build and Deploy Scripting Tool. 
 
-For more information regarding fetching Meta Properties, refer to the section <<_csubversiongeneralinformation>>.
+For more information regarding fetching Meta Properties, refer to the section <<App_Subversion.adoc#_csubversiongeneralinformation,Subversion - General Information>>.
 |===
 . Click__ Test Connection__ to verify if IKAN ALM can establish a connection to the Subversion Repository. If the test is successful, the following message is displayed:
 +
@@ -377,7 +377,7 @@ Control Repository_ panel to only display the Subversion Repositories you are lo
 . Click the image:icons/history.gif[,15,15] _History_ link to display the__ Subversion Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 . Click__ Back__ to return to the __Subversion Repositories Overview __screen.
 
 
@@ -387,13 +387,13 @@ View__, refer to the section <<_historyeventlogging>>.
 
 Refer to the following sections for detailed information:
 
-* <<_globadm_vcr_git_create>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_create,Creating a Git Repository>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_git_overview,The Git Repositories Overview Screen>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_git_edit,Editing a Git Repository>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_git_delete,Deleting a Git Repository>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_git_history,Viewing the Git Repository History>>
 
-
+[[_globadm_vcr_git_create]]
 ==== Creating a Git Repository (((Git ,Creating))) 
 
 [NOTE]
@@ -599,7 +599,7 @@ image::GlobAdm-VCR-Git-Edit.png[,624,635]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_globadm_vcr_git_create>>.
+For a description of the fields, refer to <<GlobAdm_VCR.adoc#_globadm_vcr_git_create,Creating a Git Repository>>.
 +
 
 [NOTE]
@@ -654,7 +654,7 @@ Control Repository_ panel to only display the Git Repositories you are looking f
 . Click the image:icons/history.gif[,15,15] _History_ link to display the__ Git Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 . Click__ Back__ to return to the __Git Repositories Overview __screen.
 
 
@@ -932,7 +932,7 @@ Control Repository_ panel to only display the CVS Repositories you are looking f
 . Click the image:icons/history.gif[,15,15] _History_ link to display the__ CVS Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 . Click__ Back__ to return to the __CVS Repositories Overview __screen.
 
 
@@ -1196,7 +1196,7 @@ Control Repository_ panel to only display the VSS Repositories you are looking f
 . Click the image:icons/history.gif[,15,15] _History_ link to display the__ VSS Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 . Click__ Back__ to return to the __VSS Repositories Overview __screen.
 
 
@@ -1474,7 +1474,7 @@ Control Repository_ panel to only display the ClearCase Repositories you are loo
 . Click the image:icons/history.gif[,15,15] _History_ link to display the__ ClearCase Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 . Click__ Back__ to return to the __ClearCase Repositories Overview __screen.
 
 
@@ -1484,13 +1484,13 @@ View__, refer to the section <<_historyeventlogging>>.
 
 Refer to the following sections for detailed information:
 
-* <<_pcreatepvcsrepository>>
+* <<GlobAdm_VCR.adoc#_pcreatepvcsrepository,Creating a PVCS Repository>>
 * <<GlobAdm_VCR.adoc#_pworkwithpvcsoverview,The PVCS Repositories Overview Screen>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_edit,Editing a PVCS Repository>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_delete,Deleting a PVCS Repository>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_history,Viewing the PVCS Repository History>>
 
-
+[[_pcreatepvcsrepository]]
 ==== Creating a PVCS Repository (((PVCS ,Creating))) 
 
 [NOTE]
@@ -1646,7 +1646,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the__ PVCS Repositories Overview__ panel.
 +
-For a detailed description of the fields, refer to <<_pcreatepvcsrepository>>.
+For a detailed description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatepvcsrepository,Creating a PVCS Repository>>.
 . Depending on your access rights, the following links may be available on the _PVCS Repositories Overview_ panel:
 +
 
@@ -1696,7 +1696,7 @@ image::GlobAdm-VCR-PVCS-Edit.png[,571,688]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_pcreatepvcsrepository>>.
+For a description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatepvcsrepository,Creating a PVCS Repository>>.
 +
 
 [NOTE]
@@ -1751,7 +1751,7 @@ Control Repository_ panel to only display the PVCS Repositories you are looking 
 . Click the image:icons/history.gif[,15,15] _History_ link to display the__ PVCS Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 . Click__ Back__ to return to the __PVCS Repositories Overview __screen.
 
 
@@ -1761,13 +1761,13 @@ View__, refer to the section <<_historyeventlogging>>.
 
 Refer to the following sections for detailed information:
 
-* <<_globadm_vcr_tfvc_create>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_create,Creating a TFVC Repository>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_overview,The TFVC Repositories Overview Screen>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_edit,Editing a TFVC Repository>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_delete,Deleting a TFVC Repository>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_history,Viewing the TFVC Repository History>>
 
-
+[[_globadm_vcr_tfvc_create]]
 ==== Creating a TFVC Repository 
 (((Git ,Creating))) 
 
@@ -1902,7 +1902,7 @@ The following options are available:
 * the _Reset search_ link to clear the search fields.
 . Verify the information on the _TFVC Repositories Overview_ panel.
 +
-For a detailed description of the fields, refer to <<_globadm_vcr_tfvc_create>>.
+For a detailed description of the fields, refer to <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_create,Creating a TFVC Repository>>.
 . Depending on your access rights, the following links may be available on the _TFVC Repositories Overview_ panel:
 +
 
@@ -1952,7 +1952,7 @@ image::GlobAdm-VCR-TFVC-Edit.png[,648,585]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<_globadm_vcr_tfvc_create>>.
+For a description of the fields, refer to <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_create,Creating a TFVC Repository>>.
 +
 
 [NOTE]
@@ -2007,5 +2007,5 @@ Control Repository_ panel to only display the TFVC Repositories you are looking 
 . Click the image:icons/history.gif[,15,15] _History_ link to display the__ TFVC Repository History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 . Click__ Back__ to return to the __TFVC Repositories Overview __screen.

@@ -53,7 +53,7 @@ The following subpanels are available:
 Underneath the _Edit System Settings_ panel, you will find the image:icons/history.gif[,15,15] _ History_ link.
 Click this link to display the _System Settings History
 View_ screen.
-For more detailed information concerning this __History View__, refer to the section <<_historyeventlogging>>.
+For more detailed information concerning this __History View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 
 
 [[_globadm_systemsettings_localenvironment]]
@@ -170,7 +170,7 @@ __Note: __This port number may be overwritten by the port number defined in the 
 This is only necessary if the FTP Server on the IKAN ALM Server uses a TCP Port other than the default port number __21__.
 An FTP server must be installed on the IKAN ALM Server in order to use FTP as a Transporter protocol.
 
-__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<_globadm_ftpcreate>>
+__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<GlobAdm_Transporters.adoc#_globadm_ftpcreate,Creating an FTP Transporter>>
 |===
 
 [[_globadm_systemsettings_security]]
@@ -556,7 +556,7 @@ Click the link to display the details for this Level Request.
 <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>
 
 |Level Request Status
-|This field contains the Level Request Status. <<_desktop_lr_overviewscreen>>
+|This field contains the Level Request Status. <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen,Level Requests Overview>>
 
 |Deployed
 |This field indicates whether or not the Build has been used by a Deploy.

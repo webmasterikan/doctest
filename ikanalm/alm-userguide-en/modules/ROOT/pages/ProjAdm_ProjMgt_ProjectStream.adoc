@@ -23,7 +23,7 @@ The following actions are possible:
 ** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Editing Project Stream Settings>>
 ** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deleting,Deleting a Project Stream>>
 ** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_locking,Locking/Unlocking a Project Stream>>
-** <<_hideshowprojectstream>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_hideshowprojectstream,Hiding/Showing a Project Stream>>
 ** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_historyview,Viewing the Project Stream History.>>
 
 
@@ -102,7 +102,7 @@ Locking a Project Stream means blocking all activity on that Project Stream.
 |This field indicates whether or not the Project Stream is hidden.
 
 By default newly created Project Streams are not hidden.
-For more information on hiding Project Streams, refer to <<_hideshowprojectstream>>.
+For more information on hiding Project Streams, refer to <<ProjAdm_ProjMgt_ProjectStream.adoc#_hideshowprojectstream,Hiding/Showing a Project Stream>>.
 
 |Tag-Based
 |Indicate whether or not the Project Stream is tag-based. 
@@ -241,7 +241,7 @@ The following actions are possible:
 ** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Editing Project Stream Settings>>
 ** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deleting,Deleting a Project Stream>>
 ** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_locking,Locking/Unlocking a Project Stream>>
-** <<_hideshowprojectstream>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_hideshowprojectstream,Hiding/Showing a Project Stream>>
 ** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_historyview,Viewing the Project Stream History.>>
 
 * Modifying the Project Stream Dependencies
@@ -294,7 +294,7 @@ It allows locking or unlocking the selected Project Stream. <<ProjAdm_ProjMgt_Pr
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
 It allows hiding or showing the selected Project Stream.
 
-<<_hideshowprojectstream>>
+<<ProjAdm_ProjMgt_ProjectStream.adoc#_hideshowprojectstream,Hiding/Showing a Project Stream>>
 
 |image:icons/history.gif[,15,15] 
 |History
@@ -385,7 +385,7 @@ Unlocking a Project Stream means reallowing these actions on a Project Stream
 . In the __Project Administration context__, select__ Project Stream > Overview__.
 . Click the image:icons/lock.gif[,15,15] _Lock_ or image:images/icons/unlock.gif[,15,15] _Unlock_ link on the _Project Streams Overview_ panel.
 
-
+[[_hideshowprojectstream]]
 ==== Hiding/Showing a Project Stream 
 (((Project Streams ,Hiding)))  (((Project Streams ,Showing))) 
 
@@ -415,7 +415,7 @@ options_ link to display this criterion.
 . Click the image:icons/history.gif[,15,15] _History_ link on the _Project Streams Overview_ panel to display the__ Project Stream History View__.
 +
 For more detailed information concerning this __History
-View__, refer to the section <<_historyeventlogging>>.
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 +
 Click __Back __to return to the previous screen.
 
