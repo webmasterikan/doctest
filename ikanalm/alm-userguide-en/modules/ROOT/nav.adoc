@@ -1,5 +1,4 @@
 .Getting Started
-* xref:whats-new.adoc[What's new]
 * xref:Introduction.adoc[Introduction]
 * xref:Logon.adoc[Logging in and out]
 * xref:UserInterface.adoc[User Interface Overview]
@@ -11,6 +10,7 @@
 * xref:Desktop_LevelRequests.adoc[Level Requests]
 * xref:Desktop_Packages.adoc[Packages]
 * xref:Desktop_PackageGroups.adoc[Package Groups]
+* xref:Desktop_ManageDesktop.adoc[Managing the Desktop]
 
 .Project Administration
 * xref:ProjAdm_Intro.adoc[Project Administration]
@@ -25,7 +25,6 @@
 * xref:ProjAdm_DeployEnv.adoc[Deploy Environments]
 * xref:ProjAdm_EnvParams.adoc[Environment Parameters]
 * xref:ProjAdm_AuditProjects.adoc[Auditing Projects]
-* xref:ProjAdm_ProjMgt_Projects.adoc[]
 
 .Global Administration
 * xref:GlobAdm_Introduction.adoc[Global Administration]
