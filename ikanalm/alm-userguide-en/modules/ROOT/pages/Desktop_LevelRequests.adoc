@@ -1223,7 +1223,8 @@ It contains the information about the new Level Request (as well as about the ol
 For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>>.
 
 
-[[_desktop_lr_overview]] [[_desktop_lr_overviewscreen]]
+[[_desktop_lr_overview]]
+[[_desktop_lr_overviewscreen]]
 === Level Requests Overview
 
 The following sections deal with the procedures involved when using the __Level Requests Overview__:

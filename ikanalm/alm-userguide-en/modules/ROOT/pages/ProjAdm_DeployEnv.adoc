@@ -1,4 +1,5 @@
-[[_projadm_deployenvironmentsoverview]] [[_projadm_deployenvironments]]
+[[_projadm_deployenvironmentsoverview]]
+[[_projadm_deployenvironments]]
 == Deploy Environments 
 
 (((Project Administration ,Deploy Environments)))  (((Project Management Options ,Deploy Environments)))  (((Deploy Environments))) 

@@ -1,4 +1,5 @@
-[[_globadm_machinesoverview]] [[_globadm_machines]]
+[[_globadm_machinesoverview]]
+[[_globadm_machines]]
 == Machines 
 (((Global Administration ,Machines)))  (((Machines))) 
 

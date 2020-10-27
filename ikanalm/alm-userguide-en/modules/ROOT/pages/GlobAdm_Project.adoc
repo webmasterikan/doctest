@@ -1,4 +1,5 @@
-[[_globadm_projectcreate]] [[_globadm_project]]
+[[_globadm_projectcreate]]
+[[_globadm_project]]
 == Projects 
 (((Global Administration ,Projects)))  (((Projects))) 
 

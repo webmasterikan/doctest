@@ -1,4 +1,5 @@
-[[_globadm_phases_creating]] [[_globadm_phases]]
+[[_globadm_phases_creating]]
+[[_globadm_phases]]
 == Phases 
 (((Global Administration ,Phases)))  (((Phases))) 
 

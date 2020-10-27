@@ -1,4 +1,5 @@
-[[_globadm_system_settings]] [[_globadm_system]]
+[[_globadm_system_settings]]
+[[_globadm_system]]
 == System
 
 The _System_ menu provides an entry to view or edit the IKAN ALM Server configuration settings and to perform Housekeeping Actions in the IKAN ALM Build Archive. 

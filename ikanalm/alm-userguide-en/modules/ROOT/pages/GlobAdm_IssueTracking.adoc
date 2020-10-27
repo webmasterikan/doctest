@@ -1,4 +1,5 @@
-[[_globadm_issuetrackingcreate]] [[_globadm_issuetracking]]
+[[_globadm_issuetrackingcreate]]
+[[_globadm_issuetracking]]
 == Issue Tracking 
 (((Global Administration ,Issue Tracking)))  (((Issue Tracking))) 
 

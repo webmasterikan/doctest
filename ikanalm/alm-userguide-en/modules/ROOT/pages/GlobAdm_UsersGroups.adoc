@@ -1,4 +1,5 @@
-[[_globadm_usersgroups_users]] [[_globadm_usersgroups]]
+[[_globadm_usersgroups_users]]
+[[_globadm_usersgroups]]
 == Users and Groups
 
 Refer to the following sections for more information on:

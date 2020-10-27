@@ -1,4 +1,5 @@
-[[_globadm_vcr_svn]] [[_globadm_vcr]]
+[[_globadm_vcr_svn]]
+[[_globadm_vcr]]
 == Version Control Repositories 
 (((Global Administration ,Version Control Repositories)))  (((Version Control Repositories))) 
 

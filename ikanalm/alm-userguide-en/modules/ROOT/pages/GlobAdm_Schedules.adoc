@@ -1,4 +1,5 @@
-[[_globadm_schedulesoverview]] [[_globadm_schedules]]
+[[_globadm_schedulesoverview]]
+[[_globadm_schedules]]
 == Schedules 
 (((Global Administration ,Schedules)))  (((Schedules))) 
 
