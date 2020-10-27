@@ -123,7 +123,7 @@ If the option is activated, the compressed Build Results appear as a hyperlink o
 |Debug
 |Indicate whether or not the Debug option must be activated for this Build Environment.
 
-If Debug is activated for a Build Environment, the Source and Result Clean-up actions (<<Desktop_LevelRequests.adoc#_srebuildanddeploylr>>) will not be performed, so that the user may use the available source to run the build script manually for testing purposes.
+If Debug is activated for a Build Environment, the Source and Result Clean-up actions (<<Desktop_LevelRequests.adoc#_srebuildanddeploylr,(Re)Build and Deploy Level Requests>>) will not be performed, so that the user may use the available source to run the build script manually for testing purposes.
 |===
 
 . Verify the information on the _Build Environments Overview_ panel.

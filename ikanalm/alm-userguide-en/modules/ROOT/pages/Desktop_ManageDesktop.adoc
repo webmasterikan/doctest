@@ -103,22 +103,22 @@ a|This field contains the following information for the latest Request on the di
 * The VCR Tag (matching the defined template) and timestamp for Requests with status __Success__, _Failed_ and __Warning__.
 +
 These indications are displayed as a link.
-Click the link to access the <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview>> for the selected Level Request.
-* Link (image:icons/desktop_link.gif[,22,11] ) to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview>> with Project name and Level name already filled in as Search Criteria.
+Click the link to access the <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>> for the selected Level Request.
+* Link (image:icons/desktop_link.gif[,22,11] ) to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>> with Project name and Level name already filled in as Search Criteria.
 
 
 |Latest Successful Level Request
 |This field contains the VCR Tag (matching the defined template) and timestamp for the latest successful Request on the displayed Level.
 
 These indications are displayed as a link.
-Click the link to access the <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview>> selected Level Request.
+Click the link to access the <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>> selected Level Request.
 
 |Action
 a|This field contains the action icons which are available for the Level:
 
 * image:icons/request.gif[,15,15] : For a Build Level, this icon allows creating a Level Request that will generate a new Build. For Build Levels with an active Scheduler, this matches a Forced Build. For Build Levels without active Scheduler, this matches a Requested Build. <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_build,Creating a Build Level Request>>
 +
-For Test and Production Levels, this icon allows creating a Level Request for <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_deliver>>.
+For Test and Production Levels, this icon allows creating a Level Request for <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_deliver,Creating a Deliver Build Level Request>>.
 * image:icons/requestPlus.gif[,15,15] : This icon (only available for Build Levels) allows creating a Level Request that will generate a new Build. The Create Level Request dialog will contain additional information about the modifications since the last Level Request. For Levels with an active Scheduler, this matches a Force+ Build. For Build Levels without active Scheduler, this matches a Request+ Build. <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_build,Creating a Build Level Request>>
 * image:icons/rollback.gif[,15,15] : This icon (only available for Production Levels) allows creating a Level Request that will restore a previous Build on that Level. Refer to <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_rollback,Creating a Rollback Build Level Request>>.
 
@@ -133,7 +133,7 @@ You will need to wait until the current Level Request is completed, before you c
 * _The Level is locked_
 +
 It is not possible to define Level Requests for Locked Levels.
-You (or the Project Manager) must <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects>>, before you can define Level Requests for this Level.
+You (or the Project Manager) must <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,Auditing Projects>>, before you can define Level Requests for this Level.
 * _No Request Rights_
 +
 It is not possible to define Level Requests, if the User ID you are logged in with does not have the required access rights.

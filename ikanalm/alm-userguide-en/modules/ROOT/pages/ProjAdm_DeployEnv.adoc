@@ -106,7 +106,7 @@ The decompressed files are compared and the following actions are taken:
 |Debug
 |Select whether or not the Debug option must be activated for this Deploy Environment.
 
-If Debug is activated for a Deploy Environment, the Build Clean-up action (<<Desktop_LevelRequests.adoc#_srebuildanddeploylr>>) will not be performed, so that the user may use the available build results to run the deploy script manually for testing purposes.
+If Debug is activated for a Deploy Environment, the Build Clean-up action (<<Desktop_LevelRequests.adoc#_srebuildanddeploylr,(Re)Build and Deploy Level Requests>>) will not be performed, so that the user may use the available build results to run the deploy script manually for testing purposes.
 |===
 
 . Verify the information on the _Deploy Environments Overview_ panel.

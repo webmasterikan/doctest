@@ -19,7 +19,7 @@ As a result, Users may not be created in IKAN ALM via a menu entry: a User must 
 If a User has the appropriate rights, he or she may log on to IKAN ALM.
 Based on this first successful logon, the User will be automatically created in IKAN ALM.
 
-A User ID can only be used to<<Logon.adoc#_desktop_loggingon>> and to<<Desktop_PersonalSettings.adoc#_desktop_personalsettings>>, if it exists in this external Security System.
+A User ID can only be used to <<Logon.adoc#_desktop_loggingon,Logging in>> and to <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>, if it exists in this external Security System.
 
 If your IKAN ALM license allows no floating users and is fully based on reserved users it will not be possible to log on with another User ID once the maximum number of reserved active users is reached.
 If additional users need to log on to IKAN ALM, there are two possibilities:
@@ -281,7 +281,7 @@ a|_RELATED TOPICS_
 
 IKAN ALM uses the JAAS interface to base its User ID/Password authentication on existing Security Systems in your organization.
 This means that User IDs and their adherence to User Groups are maintained outside IKAN ALM.
-A User ID can only be used to <<Logon.adoc#_desktop_loggingon>> and to <<Desktop_PersonalSettings.adoc#_desktop_personalsettings>>, if it exists in this external Security System.
+A User ID can only be used to <<Logon.adoc#_desktop_loggingon,Logging in>> and to <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>, if it exists in this external Security System.
 
 Access Rights in IKAN ALM are based on the adherence of User IDs to User Groups.
 There are two types of User Groups: external and internal.

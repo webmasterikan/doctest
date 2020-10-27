@@ -119,9 +119,8 @@ image::Desktop-LicenseNotAccepted.png[,445,237]
 +
 Most likely the problem is either a corrupted License file (or a file that doesn`'t contain an IKAN ALM License), or an expired License in the file.
 Contact your IKAN ALM Administrator or your IKAN ALM vendor to obtain a new License file.
-. You can now log in to IKAN ALM.
+. You can now log in to IKAN ALM. See: <<Logon.adoc#_desktop_loggingon,Logging in>>
 +
-<<Logon.adoc#_desktop_loggingon,Logging in>>
 
 
 [[_desktop_errormessages]]
