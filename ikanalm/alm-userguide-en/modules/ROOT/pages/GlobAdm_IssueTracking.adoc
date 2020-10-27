@@ -392,11 +392,8 @@ image::GlobAdmin-IssueTracking-Info-ITSPropertiesPanel.png[,725,673]
 +
 This screen lets you create, edit or delete ITS Properties.
 +
-[[_globadm_issuetrackingproperties_create]]
-+
 Depending on the Properties available in the Issue Tracking System and on your access rights, the following links may be available on the _Issue Tracking Systems Properties Overview_ panel:
 +
-[[_globadm_issuetrackingproperties_create]]
 
 [NOTE]
 ====
