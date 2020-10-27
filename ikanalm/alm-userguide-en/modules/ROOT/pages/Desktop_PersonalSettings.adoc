@@ -1,4 +1,5 @@
-[[_desktop_personalsettings_edit]] [[_desktop_personalsettings_hoofdstuk]]
+[[_desktop_personalsettings_edit]] 
+[[_desktop_personalsettings_hoofdstuk]]
 == Personal Settings
 
 The Personal Settings section focuses on settings directly related to your account, such as your name, e-mail address, phone number, ... 
@@ -11,7 +12,8 @@ Refer to the following procedures for more information:
 * <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>
 
 
-[[_desktop_personalsettings_edit]] [[_desktop_personalsettings]]
+[[_desktop_personalsettings_edit]] 
+[[_desktop_personalsettings]]
 === Editing Your Personal Settings (((Desktop ,Personal Settings)))  (((Personal Settings))) 
 
 This option allows you to edit your personal settings.
