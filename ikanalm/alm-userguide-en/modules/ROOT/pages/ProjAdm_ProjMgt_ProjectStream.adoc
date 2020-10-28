@@ -274,7 +274,7 @@ For a detailed description of the fields and the links, refer to <<ProjAdm_ProjM
 |Edit
 
 This option is available to IKAN ALM Users with User or Project Administrator Access Rights.
-It allows <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Editing Project Stream Settings>> or<<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Editing Project Stream Settings>>.
+It allows <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,viewing>> or <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,editing the selected Project Stream definition>>.
 
 |image:icons/delete.gif[,15,15] 
 |Delete

@@ -41,7 +41,7 @@ You can also:
 For more information on the usage of filters, refer to the section <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>
 . Verify the available information on the _Projects Overview_ panel.
 +
-For a description of the fields, refer to <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>.
+For a description of the fields, refer to <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>>.
 . Depending on your access rights, the following links may be available on the _Projects Overview_ panel:
 +
 
@@ -86,7 +86,7 @@ It allows locking or unlocking the selected Project.
 This option is available to IKAN ALM Users with Project Admin Access Rights.
 It allows hiding the selected Project.
 
-<<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Projects Hiding/Showing a Project>>
+<<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Hiding/Showing a Project>>
 
 |image:icons/history.gif[,15,15] 
 |History
@@ -118,7 +118,7 @@ image::ProjAdmin-Projects-View.png[,1044,641]
 +
 . Verify the settings.
 +
-For a description of the fields, refer to <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>.
+For a description of the fields, refer to <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>>.
 +
 Underneath the _Project Info_ panel, the following links and buttons are available:
 
@@ -188,7 +188,7 @@ a|This read-only field contains the Project Type:
 * Release-based
 * Package-based
 
-The type of the Project is defined at the moment the Project is created (or cloned) by the Global Administrator. <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
+The type of the Project is defined at the moment the Project is created (or cloned) by the Global Administrator. <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>>
 
 |Locked
 |This read-only field indicates whether or not the Project is locked:
@@ -199,7 +199,7 @@ Level Requests cannot be created for a locked Project.
 |This read-only field indicates whether or not the Project is hidden.
 
 By default newly created Projects are not hidden.
-For more information on hiding Projects, refer to <<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Projects Hiding/Showing a Project>>.
+For more information on hiding Projects, refer to <<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Hiding/Showing a Project>>.
 
 |VCR
 |This field contains the VCR used for the Project.

@@ -8,8 +8,8 @@ Possible uses:
 
 * Manual creation of Level Requests (CLR Command): <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>
 * Manual generation of Reports (Report Command): <<CommandLine.adoc#_pcommandline_report_optionsparameters,Generating Reports by Specifying Options and Parameters>>
-* Creation of Level Requests in an external IDE. This guide describes the integration procedure for <<CommandLine.adoc#_pintegrateikanalminjdeveloper,Integrating IKAN ALM in JDeveloper>> and <<CommandLine.adoc#_pintegrateikanalmineclipse,Integrating IKAN ALM in Eclipse>>. Refer to the indicated sections.
-* Automated creation of Level Requests using a Scripting Tool. A scripting tool is used to define the triggers (e.g., server backup) for Level Request creation. This guide describes the use of an <<CommandLine.adoc#_sautomatecreatinglevelrequestswithant,Automating the Creation of Level Requests Using an ANT script>>. Refer to the indicated section.
+* Creation of Level Requests in an external IDE. This guide describes the integration procedure for <<CommandLine.adoc#_pintegrateikanalminjdeveloper,JDeveloper>> and <<CommandLine.adoc#_pintegrateikanalmineclipse,Eclipse>>. Refer to the indicated sections.
+* Automated creation of Level Requests using a Scripting Tool. A scripting tool is used to define the triggers (e.g., server backup) for Level Request creation. This guide describes the use of an <<CommandLine.adoc#_sautomatecreatinglevelrequestswithant,ANT script>>. Refer to the indicated section.
 
 
 The IKAN ALM Command Line interface can be installed on each client machine requiring its functionality.

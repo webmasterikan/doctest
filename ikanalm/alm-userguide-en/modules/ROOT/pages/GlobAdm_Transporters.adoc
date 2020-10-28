@@ -36,7 +36,7 @@ The Transporter is also involved in the distribution process of Custom Phases fr
 Before the execution of the Level Phases for a Level Request, all non-released Custom Phases will be transported from the Phase Catalog to the execution environment on the IKAN ALM Server.
 This will be done using the Transporter that is linked to the IKAN ALM Server.
 Released Level Phases will only be transported if they are not yet installed on the IKAN ALM Server.
-You can check the installed Phases using the _Installed Phases_ link next to the IKAN ALM Server Machine on the __Machines Overview__. <<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines The Machines Overview Screen>>
+You can check the installed Phases using the _Installed Phases_ link next to the IKAN ALM Server Machine on the __Machines Overview__. See: <<GlobAdm_Machines.adoc#_globadm_machinesoverview,The Machines Overview Screen>>
 * Build and Deploy Phases:
 +
 Before the execution of the Build/Deploy Phases for Build/Deploy, all non-released Custom Phases will be transported from the Phase Catalog on the IKAN ALM Server to the execution environment on the IKAN ALM Agent.
@@ -44,7 +44,7 @@ This will be done using the Transporter that is linked to the IKAN ALM Agent.
 Released Build/Deploy Phases will only be transported if they are not yet installed on the IKAN ALM Agent.
 You can check the installed Phases using the _Installed
 Phases_ link next to the IKAN ALM Agent Machine on the __Machines
-Overview__. <<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines The Machines Overview Screen>>
+Overview__. See: <<GlobAdm_Machines.adoc#_globadm_machinesoverview,The Machines Overview Screen>>
 
 
 The relative locations for all remote transporters must be defined in the _System Settings_ section. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
@@ -153,7 +153,7 @@ Since most transport actions are handled by the Agent (transport of Custom Level
 The "Local FileCopy" Transporter is created automatically during the IKAN ALM installation and will be automatically connected to the IKAN ALM Server Machine.
 This "Local FileCopy" Transporter is different in this aspect that it cannot be edited, updated nor deleted on the __FileCopy Transporters Overview__.
 Its definition is retrieved from the System Settings`' _Local
-FileCopy Locations_ and can only be updated in the System Settings section. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+FileCopy Locations_ and can only be updated in the System Settings section. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 If you want to use FileCopy for transferring resources to a Machine (Agent) other than the IKAN ALM server, a (Remote) FileCopy Transporter must be created.
 Keep in mind that the specified prefix locations are a view of the IKAN ALM Agent Machine on the IKAN ALM Server Machine.
@@ -219,7 +219,7 @@ Fields marked with a red asterisk are mandatory.
 | Meaning
 
 |Work Copy Path Prefix
-a|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+a|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 _Example:_
 
@@ -236,14 +236,14 @@ If in the System Settings the Relative Work Copy location is defined as "workCop
 
 
 |Build Archive Path Prefix
-|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from by an IKAN ALM Agent handling a Build or Deploy process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from by an IKAN ALM Agent handling a Build or Deploy process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 For an example, refer to __Work Copy Path Prefix__.
 
 |Script Path Prefix
 |Enter the prefix for the Script Location (the location where the IKAN ALM Agent will retrieve the build or deploy script from, if it cannot be found in the sources).
 
-The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 For an example, refer to __Work Copy Path Prefix__.
 
@@ -506,7 +506,7 @@ _Note:_ The value entered in this field will override the value specified in the
 |Choose the Directory Listing Style: _Unix_ or __Windows__.
 
 |Work Copy Path Prefix
-|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 _Example:_
 
@@ -515,7 +515,7 @@ If the FTP Server is configured to control the `E:/Ikan/alm/system` (Windows) or
 In that case, the sources will be copied to the Agent by a GET command from a subdirectory under `/workCopy` from the FTP Server.
 
 |Build Archive Path Prefix
-|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 _Example:_
 
@@ -524,7 +524,7 @@ If the FTP Server is configured to control the `E:/Ikan/alm/system` (Windows) or
 In that case, the build result will be copied from the Agent to the Build Archive by a PUT command into the subdirectory `/buildArchive` on the FTP Server.
 
 |Script Path Prefix
-|Enter the prefix for the Script Location (the location where the IKAN ALM Agent will retrieve the build or deploy script from if it cannot be found in the sources). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+|Enter the prefix for the Script Location (the location where the IKAN ALM Agent will retrieve the build or deploy script from if it cannot be found in the sources). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 _Example:_
 
@@ -795,10 +795,10 @@ It allows you to define the hostname of the IKAN ALM Server Machine in case it i
 |Server SSH Port
 |Enter the Port Number of the SSH Server running on the IKAN ALM Server.
 
-_Note:_ The value entered in this field will overrule the value specified in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>If not specified in the System Settings nor on this screen, the default SSH Port Number `22` will be used.
+_Note:_ The value entered in this field will overrule the value specified in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>If not specified in the System Settings nor on this screen, the default SSH Port Number `22` will be used.
 
 |Work Copy Path Prefix
-|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 _Example 1:_
 
@@ -817,13 +817,13 @@ System Settings: the Local FileCopy Work Copy location being defined as `/opt/ik
 The IKAN ALM Agent will try to Secure Copy the sources from a location under ``/opt/ikan/alm/workCopy``.
 
 |Build Archive Path Prefix
-|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+|Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 For an example, refer to __Work Copy Path Prefix__.
 
 |Script Path Prefix
 |Enter the prefix for the Script Location.
-The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 For an example, refer to __Work Copy Path Prefix__.
 

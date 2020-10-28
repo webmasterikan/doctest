@@ -99,7 +99,7 @@ There are two possible types:
 * __Test__: The Approval is associated with a TEST Level.
 * __Production__: The Approval is associated with a PRODUCTION Level.
 
-<<ProjAdm_Levels.adoc#_projadm_levels,Levels>>
+See <<ProjAdm_Levels.adoc#_projadm_levels,Levels>>
 
 |Level Request OID
 |This field contains the sequential number of the Level Request.
@@ -118,7 +118,7 @@ There are 2 possibilities:
 |This field contains the VCR Tag of the Level Request.
 This Tag matches a Build with its source code in the VCR.
 
-The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstreams,Project Streams>>
+The format of the VCR Tag normally matches the Tag Template defined for the Stream. See <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstreams,Project Streams>>
 
 However, the user can override the default VCR Tag while creating a Level Request, so that the Tag Format can be completely different.
 
@@ -303,14 +303,14 @@ With: H = Head and 1-0 = Prefix
 |Level Name
 a|This field contains the name and type of the Level, to which a Build will be delivered as a result of this Level Request.
 
-<<ProjAdm_Levels.adoc#_projadm_levels,Levels>>
+See <<ProjAdm_Levels.adoc#_projadm_levels,Levels>>
 
 There are two possible types:
 
 * __Test__: The Approval is associated with a TEST Level.
 * __Production__: The Approval is associated with a PRODUCTION Level.
 
-<<ProjAdm_Levels.adoc#_projadm_levels,Levels>>
+See <<ProjAdm_Levels.adoc#_projadm_levels,Levels>>
 
 |Level Request OID
 |This field contains the sequential number of the Level Request.

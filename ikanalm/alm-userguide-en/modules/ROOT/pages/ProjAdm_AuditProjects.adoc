@@ -41,7 +41,7 @@ Locked Project Streams and Levels have a image:icons/locked.gif[,15,15] _ Locked
 In the sample screen above, this is the case for the _TestPartialBuild_ Level.
 Error or warning messages are displayed in red in the _Message_ field.
 +
-For the list of possible error and warning messages, refer to the section <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects_errorswarnings,Auditing Projects Error and Warning Messages>>.
+For the list of possible error and warning messages, refer to the section <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects_errorswarnings,Error and Warning Messages>>.
 . Verify if all Project Streams and Levels are properly defined and accessible for IKAN ALM, and correct the errors if required.
 . If the Project Configuration is consistent, click the _Unlock_ button in the _Actions_ panel to unlock all locked Project Streams and Levels of the Project.
 

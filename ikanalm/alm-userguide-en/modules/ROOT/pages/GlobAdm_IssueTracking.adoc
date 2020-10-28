@@ -30,7 +30,7 @@ Refer to the following sections for detailed information.
 
 *Issue Tracking System*
 
-* <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue Tracking Creating an Issue Tracking System>>
+* <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Creating an Issue Tracking System>>
 * <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingoverview,The Issue Tracking Systems Overview Screen>>
 ** <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking_edit,Editing an Issue Tracking System Definition>>
 ** <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking_delete,Deleting an Issue Tracking System Definition>>
@@ -242,7 +242,7 @@ You can also:
 * click the _Reset search_ link to clear the search fields,
 . Verify the information on the _Issue Tracking Systems Overview_ panel.
 +
-For a detailed description of the fields, refer to <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue Tracking Creating an Issue Tracking System>>.
+For a detailed description of the fields, refer to <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Creating an Issue Tracking System>>.
 . Depending on your access rights, the following links may be available on the _Issue Tracking Systems Overview_ panel: 
 +
 
@@ -294,7 +294,7 @@ image::GlobAdmin-IssueTracking-Edit.png[,595,440]
 +
 . Edit the fields as required.
 +
-For a description of the fields, refer to <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue Tracking Creating an Issue Tracking System>>.
+For a description of the fields, refer to <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Creating an Issue Tracking System>>.
 +
 
 [NOTE]
@@ -413,7 +413,7 @@ Otherwise, only the links __Edit__, _Delete_ and _History_ are available.
 This option is available to IKAN ALM Users with Global Administrator Access Rights.
 It allows creating an Issue Tracking System Property definition.
 
-<<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_create,Creating an Issue Tracking System Property Creating an Issue Tracking System Property>>
+<<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_create,Creating an Issue Tracking System Property>>
 
 |image:icons/edit.gif[,15,15] 
 |Edit
@@ -504,7 +504,7 @@ The following screen is displayed:
 +
 image::GlobAdmin-IssueTracking-EditProperties-Edit.png[,502,238] 
 +
-For a description of the fields, refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_create,Creating an Issue Tracking System Property Creating an Issue Tracking System Property>>.
+For a description of the fields, refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_create,Creating an Issue Tracking System Property>>.
 
 . If required, modify the value in the _Value_ field and click __Save__.
 +

@@ -41,7 +41,7 @@ The following section deals with the Build History:
 === Level Request Action Flows
 
 The following sections describe how Level Requests are handled once they have been created, with the default behavior as starting point.
-When adapting the <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>>, the <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Editing a Build Environment Phase>> or the <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phaseedit,Editing a Deploy Environment Phase>>, this will result in an action flow differing from this default flow. 
+When adapting the <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Level Phase>>, the <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Build Environment Phase>> or the <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phaseedit,Deploy Environment Phase>>, this will result in an action flow differing from this default flow. 
 
 The following different action flows are possible, depending on the composition of the Level (the Level Type and the related Build and/or Deploy Environment(s)):
 
@@ -56,7 +56,7 @@ The following different action flows are possible, depending on the composition 
 (((Level Requests ,Rebuild))) 
 
 The following graphic displays the action flow of a Build Level Request or a Rebuild Level Request.
-If the <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>> or the <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Editing a Build Environment Phase>> have been modified, the sequence of actions may be different.
+If the <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Level Phase>> or the <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Build Environment Phase>> have been modified, the sequence of actions may be different.
 
 The Build Level Request is generated for the first Level in a Lifecycle, e.g., a Level on which a Nightly Build (or even a Continuous Build) is executed to verify the stability of the latest sources in the VCR.
 Usually, such a Level has one Build Environment.
@@ -83,7 +83,7 @@ image::Desktop-LevelRequests-Flow-Build.png[,872,1262]
 
 
 |1.
-|A Level Request is created manually by the User (via the <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_selectlevel,The Create Level Request: Select Level Screen>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>) or automatically by the Scheduler.
+|A Level Request is created manually by the User (via the <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_selectlevel,Web Interface>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Command Line>>) or automatically by the Scheduler.
 
 A Build Level Request directly goes on to step 5; a Rebuild Level Request may pass steps 2, 3 and/or 4.
 
@@ -92,21 +92,21 @@ A Build Level Request directly goes on to step 5; a Rebuild Level Request may pa
 
 This is an optional step in case of a Rebuild, since there are no Pre- or Post Notifications on a Build Level.
 
-If required, the Pre- and Post-Approval groups are defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Approvals>>.
+If required, the Pre- and Post-Approval groups are defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Settings screen>>.
 
 |3.
 |The Monitor generates the required Pre- and Post-Approvals.
 This is an optional step in case of a Rebuild, since there are no Pre- or Post Notifications on a Build Level.
 
-If required, the Pre- and Post-Approval groups are defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Approvals>>.
+If required, the Pre- and Post-Approval groups are defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Settings screen>>.
 
 |4.
-|As soon as one of the Approvals is <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting Outstanding Approvals>>, the Monitor sets the Level Request status to _Reject_ and the action flow is terminated.
+|As soon as one of the Approvals is <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejected>>, the Monitor sets the Level Request status to _Reject_ and the action flow is terminated.
 
 This step is optional in case of a Rebuild.
 
 |5.
-|If all Approvals of a Rebuild with Pre- or Post-Approval(s) are <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>, and if the requested Date/Time is reached, the Monitor sets the Level Request status to _Run_ and retrieves the Source Code from the VCR to a subdirectory of the Work Copy location on the IKAN ALM Server.
+|If all Approvals of a Rebuild with Pre- or Post-Approval(s) are <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,granted>>, and if the requested Date/Time is reached, the Monitor sets the Level Request status to _Run_ and retrieves the Source Code from the VCR to a subdirectory of the Work Copy location on the IKAN ALM Server.
 
 This location is defined in the <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>.
 
@@ -141,7 +141,7 @@ This process comprises two phases.
 
 __In the first phase__, the Builder Agent determines which Build Script must be used.
 If a specific Build Script was defined for the <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>, the Builder assumes it must locate and use this Build Script.
-If no specific Build Script was defined for the Build Environment, the Builder assumes it must locate and use the Build Script defined in the <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_viewing,Viewing Project Settings>>. 
+If no specific Build Script was defined for the Build Environment, the Builder assumes it must locate and use the Build Script defined in the <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_viewing,Project Settings>>. 
 
 __In the second phase__, the Builder tries to locate the Build Script it has determined it must use during the first phase.
 First the Builder searches checked-out source code available in the Source Location of the Build Environment.
@@ -252,7 +252,7 @@ The final Level Request Status is set to __Warning__, if at least one non-blocki
 |24.
 |The required Notifications are sent.
 
-All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>> screen) receive the required notifications, as well as the Users having Request Rights on the Level.
+All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate,Project>> screen) receive the required notifications, as well as the Users having Request Rights on the Level.
 
 The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>>, <<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing a Level>>.
 |===
@@ -267,7 +267,7 @@ The following graphic displays the action flow of a Build and Deploy Level Reque
 The (Re)Build and Deploy Level Request may be created on any Level in the Lifecycle, e.g., as a Build and Deploy Level Request on the (first) Build Level that has a Deploy Environment to directly deploy the Build Result of the latest sources for integration testing, or on a QA Test Level which is very similar to the Production Level, and where a Rebuild is done so that the Build Result may be deployed later on to a Production Level. 
 
 The following section describes the default Action Flow.
-If the <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>>, the <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Editing a Build Environment Phase>> or the <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phaseedit,Editing a Deploy Environment Phase>> have been modified, the sequence of actions may be different.
+If the <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Level Phases>>, the <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Build Environment Phase>> or the <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phaseedit,Deploy Environment Phase>> have been modified, the sequence of actions may be different.
 
 [NOTE]
 ====
@@ -289,7 +289,7 @@ image::Desktop-LevelRequests-Flow-BuildAndDeploy.png[,891,1238]
 
 
 |1.
-|A Level Request is created manually by the User (via the <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_selectlevel,The Create Level Request: Select Level Screen>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>) or automatically by the Scheduler.
+|A Level Request is created manually by the User (via the <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_selectlevel,Web Interface>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Command Line>>) or automatically by the Scheduler.
 
 A Build Level Request directly goes on to step 5, a Rebuild Level Request may pass steps 2,3 and/or 4.
 
@@ -298,21 +298,21 @@ A Build Level Request directly goes on to step 5, a Rebuild Level Request may pa
 
 This is an optional step in case of a Rebuild, since there are no Pre- or Post Notifications on a Build Level.
 
-If required, the Pre- and Post-Notification groups are defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Approvals>>.
+If required, the Pre- and Post-Notification groups are defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Settings screen>>.
 
 |3.
 |The Monitor generates the required Pre- and Post-Approvals.
 This is an optional step in case of a Rebuild, since there are no Pre- or Post Notifications on a Build Level.
 
-If required, the Pre- and Post-Approval groups are defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Approvals>>).
+If required, the Pre- and Post-Approval groups are defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Settings screen>>).
 
 |4.
-|As soon as one of the Approvals is <<Des<<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting Outstanding Approvals>>, the Monitor sets the Level Request status to _Reject_ and the action flow is terminated.
+|As soon as one of the Approvals is <<Des<<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejected>>, the Monitor sets the Level Request status to _Reject_ and the action flow is terminated.
 
 This step is optional in case of a Rebuild
 
 |5.
-|If all Approvals of a Rebuild with Pre- or Post-Approval(s) are <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>> and if the requested Date/Time is reached, the Monitor sets the Level Request status to _Run_ and retrieves the Source Code from the VCR to a subdirectory of the Work Copy location on the IKAN ALM Server.
+|If all Approvals of a Rebuild with Pre- or Post-Approval(s) are <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,granted>>> and if the requested Date/Time is reached, the Monitor sets the Level Request status to _Run_ and retrieves the Source Code from the VCR to a subdirectory of the Work Copy location on the IKAN ALM Server.
 
 This location is defined in the <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>.
 
@@ -348,7 +348,7 @@ This process comprises two phases.
 __In the first phase__, the Builder Agent determines which Build Script must be used.
 If a specific Build Script was defined for the <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>.
 The Builder assumes it must locate and use this Build Script.
-If no specific Build Script was defined for the Build Environment, the Builder assumes it must locate and use the Build Script defined on the <<ProjAdm_Projects.adoc#_projadm_projects,Projects>> screen.
+If no specific Build Script was defined for the Build Environment, the Builder assumes it must locate and use the Build Script defined on the <<ProjAdm_Projects.adoc#_projadm_projects,Project Settings>> screen.
 
 __In the second phase__, the Builder tries to locate the Build Script it has determined it must use in the first phase.
 First it searches in the checked out source code available in the Source Location of the Build Environment. 
@@ -484,7 +484,7 @@ This process comprises two phases.
 __In the first phase__, the Deployer Agent determines which Deploy Script it must use.
 First, it verifies if a specific Deploy Script was defined for the Deploy Environment (<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>). If this is the case, the Deployer assumes it must locate and use this Deploy Script.
 
-If no specific Deploy Script was defined for the Deploy Environment, the Deployer assumes it must locate and use the Deploy Script defined on the <<ProjAdm_Projects.adoc#_projadm_projects,Projects>> screen.
+If no specific Deploy Script was defined for the Deploy Environment, the Deployer assumes it must locate and use the Deploy Script defined on the <<ProjAdm_Projects.adoc#_projadm_projects,Project Settings>> screen.
 
 If no Deploy Script was defined there either, the Verify Deploy Script process fails and steps 25 and 26 are performed.
 
@@ -536,7 +536,7 @@ The final Level Request Status is set to __Warning__, if at least one non-blocki
 |33.
 |The required Notifications are sent.
 
-All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>> screen) receive the required notifications, together with the users that have Request Rights on the Level.
+All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate,Project>> screen) receive the required notifications, together with the users that have Request Rights on the Level.
 
 The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>>, <<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing a Level>>.
 |===
@@ -554,7 +554,7 @@ Most often, such a Level has one or more Deploy Environments, and will reuse the
 ====
 The following section describes the default Action Flow. 
 
-If the <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>> or the <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phaseedit,Editing a Deploy Environment Phase>> have been modified, the sequence of actions may be different.
+If the <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Level Phases>> or the <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phaseedit,Deploy Environment Phase>> have been modified, the sequence of actions may be different.
 ====
 
 
@@ -568,23 +568,23 @@ image::Desktop-LevelRequests-Flow-Deploy.png[,759,1067]
 
 
 |1.
-|A Level Request is created manually by the User (via the <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_selectlevel,The Create Level Request: Select Level Screen>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>) or automatically by the Scheduler.
+|A Level Request is created manually by the User (via the <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_selectlevel,Web Interface>> or the <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Command Line>>) or automatically by the Scheduler.
 
 |2.
 |The Monitor Process on the IKAN ALM Server picks up the Level Request and optionally sends the required Pre- and Post-Notifications.
 
-The Pre- and Post-Notification groups are optionally defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Approvals>>.
+The Pre- and Post-Notification groups are optionally defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Settings screen>>.
 
 |3.
 |The Monitor optionally generates the required Pre- and Post-Approvals.
 
-The Pre- and Post-Approval groups are optionally defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Approvals>>.
+The Pre- and Post-Approval groups are optionally defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Settings screen>>.
 
 |4.
-|As soon as one of the Approvals is <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting Outstanding Approvals>>, the Monitor sets the Level Request status to _Reject_ and the action flow is terminated.
+|As soon as one of the Approvals is <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejected>>, the Monitor sets the Level Request status to _Reject_ and the action flow is terminated.
 
 |5.
-|When the Level Request is <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>, and the requested Date/Time is reached, the Monitor sets the Level Request status to __Run__.
+|When the Level Request is <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,approved>>, and the requested Date/Time is reached, the Monitor sets the Level Request status to __Run__.
 Then the Monitor sets the Deploy Status of all Deploys related to the Level Request to __Ready__.
 Since a Deploy Level Request may have more than one Deploy, steps 6 till 10 will be performed for each Deploy related to the Level Request.
 
@@ -620,7 +620,7 @@ This process comprises two phases.
 __In the first phase__, the Deployer Agent determines which Deploy Script it must use.
 First, it verifies if a specific Deploy Script was defined for the <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>.
 If this is the case, the Deployer assumes it must locate and use this Deploy Script.
-If no specific Deploy Script was defined for the Deploy Environment, the Deployer assumes it must locate and use the Deploy Script defined on the <<ProjAdm_Projects.adoc#_projadm_projects,Projects>> screen.
+If no specific Deploy Script was defined for the Deploy Environment, the Deployer assumes it must locate and use the Deploy Script defined on the <<ProjAdm_Projects.adoc#_projadm_projects,projects Settings>> screen.
 
 __In the second phase__, the Deployer tries to locate the Deploy Script it has determined it must use during the first phase.
 First it searches the decompressed Build Result in the Source location of the Deploy Environment.
@@ -671,7 +671,7 @@ The final Level Request Status is set to __Warning__, if the Deploy Status has b
 |15.
 |The required Notifications are sent.
 
-All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>> screen) receive the required notifications, together with the users that have Request Rights on the Level.
+All Users belonging to the User Group with User Access Rights or the User Group with Admin Access Rights (both defined on the <<GlobAdm_Project.adoc#_globadm_projectcreate,Project>> screen) receive the required notifications, together with the users that have Request Rights on the Level.
 
 The Notification type (mail, netsend) and the Notification criteria (if Level Request Status is SUCCESS, FAIL, WARNING or ALWAYS) are defined in the sections <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>>, <<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing a Level>>.
 |===
@@ -836,7 +836,7 @@ You will need to wait until the current Level Request is completed, before you c
 |_The Level is locked_
 |It is not possible to define Level Requests for Locked Levels.
 
-You (or the Project Manager) must <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,Auditing Projects>>, before you can define Level Requests for this Level.
+You (or the Project Manager) must <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,audit the Project to unlock the Level>>, before you can define Level Requests for this Level.
 
 |_No Request Rights_
 |It is not possible to define Level Requests, if your User ID does not have the required access rights.
@@ -2516,7 +2516,7 @@ It logs the result of the cleanup in the _Message_ field.
 [cols="1", frame="topbot"]
 |===
 
-|_RELATED TOPICS_
+a|_RELATED TOPICS_
 
 * <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>>
@@ -2561,7 +2561,7 @@ image::Desktop-LevelRequests-Detailed-Results-NoRelatedBuilds.png[,436,153]
 a|The name of the Build File that holds the compressed Build results.
 This file is stored in the IKAN ALM Build Archive Location.
 
-If the option <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>> is activated for this Build Environment, this name is displayed as a hyperlink.
+If the option <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,Downloadable Build>> is activated for this Build Environment, this name is displayed as a hyperlink.
 
 Click the hyperlink to save a local copy of the Build file on your system.
 
@@ -2764,7 +2764,7 @@ The following information is available:
 If the URL field of the Issue Tracking System definition is not empty, this field will be displayed as a link.
 Click the link to directly view the Issue in the external Issue Tracking System's Web interface.
 
-Refer to <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue Tracking Creating an Issue Tracking System>>for more information on the URL field.
+Refer to <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Creating an Issue Tracking System>> for more information on the URL field.
 
 |Description
 |This field displays the Description of the Issue.
@@ -3080,6 +3080,7 @@ Project Stream dependencies are defined on the Edit Project Stream Dependency De
 ====
 
 The _Dependencies_ page is the starting point to find all the information concerning:
+
 . <<Desktop_LevelRequests.adoc#_desktop_lr_viewdependency,Build Dependencies>>
 . <<Desktop_LevelRequests.adoc#_deskopt_lr_viewbuildusage,Build Usage>>
 . <<Desktop_LevelRequests.adoc#_desktop_lr_viewusage,Level Request Usage>>

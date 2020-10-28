@@ -5,7 +5,7 @@
 
 The following IKAN ALM elements are typically used by a Project Administrator:
 
-* <<ProjAdm_Projects.adoc#_projadm_projects,Projects [Project Name]>>
+* <<ProjAdm_Projects.adoc#_projadm_projects,Projects>>
 * <<ProjAdm_ProjMgtOptions.adoc#_projadm_projmgtoptions,Project Administration Options>>
 
 

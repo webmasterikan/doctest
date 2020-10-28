@@ -103,7 +103,7 @@ a|This field contains the following information for the latest Request on the di
 * The VCR Tag (matching the defined template) and timestamp for Requests with status __Success__, _Failed_ and __Warning__.
 +
 These indications are displayed as a link.
-Click the link to access the <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>> for the selected Level Request.
+Click the link to access the <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Detailed Overview>> for the selected Level Request.
 * Link (image:icons/desktop_link.gif[,22,11] ) to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>> with Project name and Level name already filled in as Search Criteria.
 
 

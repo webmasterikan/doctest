@@ -5,7 +5,7 @@
 
 IKAN ALM currently supports different types of Version Control Repositories (VCR):
 
-* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,Subversion Repositories Subversion Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,Subversion Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_git,Git Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_cvs,CVS Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_vss,Visual SourceSafe (VSS) Repositories>>
@@ -101,7 +101,7 @@ It allows displaying the History of all create, update and delete operations per
 +
 For more information, refer to the appropriate sections:
 
-* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,Subversion Repositories Subversion Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn,Subversion Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_git,Git Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_cvs,CVS Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_vss,Visual SourceSafe (VSS) Repositories>>
@@ -247,7 +247,7 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
 * <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>>
 
 |===
 
@@ -462,7 +462,7 @@ This field is mandatory.
 Valid URLs are of the following format:
 
 * /path/to/repo.git
-* file:///path/to/repo.git 
+* \file:///path/to/repo.git 
 * ssh://[user @]host.xz[:port]/path/to/repo.git
 * [user@]host.xz:path/to/repo.git
 * git://host.xz[:port]/path/to/repo.git
@@ -524,7 +524,7 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
 * <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>>
 
 |===
 
@@ -801,7 +801,7 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
 * <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>>
 
 |===
 
@@ -1066,7 +1066,7 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
 * <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>>
 
 |===
 
@@ -1344,7 +1344,7 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
 * <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>>
 
 |===
 
@@ -1621,7 +1621,7 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
 * <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>>
 
 |===
 
@@ -1827,8 +1827,8 @@ a|Provide the URL to your Team Project Collection, in the following format: ``ht
 
 Some sample URLs for connecting to an on premises installation and a Visual Studio Online:
 
-* http://ikan_tfs:8080/tfs/DefaultCollection
-* https://ikan.visualstudio.com/DefaultCollection
+* \http://ikan_tfs:8080/tfs/DefaultCollection
+* \https://ikan.visualstudio.com/DefaultCollection
 
 This field is mandatory.
 
@@ -1877,7 +1877,7 @@ a|_RELATED TOPICS_
 
 * <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
 * <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
-* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Creating a Project>>
 
 |===
 

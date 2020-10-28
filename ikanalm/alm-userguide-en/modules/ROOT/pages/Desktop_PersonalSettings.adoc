@@ -8,7 +8,7 @@ It is also the place where you store your personal search filters which you can 
 
 Refer to the following procedures for more information:
 
-* <<#_desktop_personalsettings_edit,Personal Settings Editing Your Personal Settings>>
+* <<#_desktop_personalsettings_edit,Editing Your Personal Settings>>
 * <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>
 
 
@@ -187,7 +187,7 @@ Modifying the search criteria of a filter is only possible on the Overview scree
 +
 There are two possible ways to do so:
 
-* via the image:icons/edit.gif[,15,15] _ Edit_ icon on the Search Filters panel on the Personal Settings screen (<<#_cihjfebab8,Managing Filter Definitions>>), or
+* via the image:icons/edit.gif[,15,15] _Edit_ icon on the Search Filters panel on the Personal Settings screen (<<#_cihjfebab8,Managing Filter Definitions>>), or
 * directly on the concerned Overview, by selecting the filter from the drop-down list.
 
 . Adapt the search criteria.

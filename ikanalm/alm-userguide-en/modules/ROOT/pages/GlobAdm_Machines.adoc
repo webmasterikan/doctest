@@ -388,7 +388,7 @@ The possible options are:
 * __No__: show only non-Core Phases
 * __All__: show Core and non-Core Phases
 . Verify the information on the _Installed Server Phases_ and _Install Agent Phases_ panels.
-* The _Installed Server Phases_ panel shows all phases that are installed on the Server daemon of the Machine. This panel is only shown if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+* The _Installed Server Phases_ panel shows all phases that are installed on the Server daemon of the Machine. This panel is only shown if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 * The _Installed Agent Phases_ panel shows all phases that are installed on the Agent daemon of the Machine.
 
 +

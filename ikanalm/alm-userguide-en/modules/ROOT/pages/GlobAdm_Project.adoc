@@ -123,7 +123,7 @@ This script will be used by default when executing Deploys in the Project, but m
 
 If defined, this setting overrides the__ User
 Group with User Access Rights__ defined in the _System
-Settings_ dialog. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+Settings_ dialog. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 This group is the default group that is set as Requester when creating a Level Request.
 
@@ -132,7 +132,7 @@ This group is the default group that is set as Requester when creating a Level R
 
 If defined, this setting overrides the__ User
 Group with Admin Access Rights __defined in the__ System
-Settings__ dialog. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+Settings__ dialog. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 |===
 
 * Head Project Stream Settings
@@ -387,7 +387,7 @@ You may select another User Group from the drop-down list, if required.
 
 If defined, this setting overrides the _User
 Group with User Access Rights_ defined in the _System
-Settings_ dialog. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+Settings_ dialog. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 This group is the default group that is seen as Requester when creating a Level Request.
 
@@ -397,7 +397,7 @@ You may select another User Group from the drop-down list, if required.
 
 If defined, this setting overrides the__ User
 Group with Admin Access Rights _defined in the_ System
-Settings__ dialog. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+Settings__ dialog. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 |===
 . Expand the tree structure of the _Project Elements to be cloned_ and check the validity of the Elements.
 +

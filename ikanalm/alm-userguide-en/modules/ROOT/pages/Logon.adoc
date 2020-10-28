@@ -34,7 +34,7 @@ This chapter provides more information on:
 +
 Your IKAN ALM Administrator will provide the exact URL.
 +
-This URL is specified on the _Mail_ subpanel on the _System Settings_ screen. <<GlobAdm_System.adoc#_globadm_system,System>>
+This URL is specified on the _Mail_ subpanel on the _System Settings_ screen. See <<GlobAdm_System.adoc#_globadm_system,System>>.
 +
 The _IKAN ALM Log in_ screen is displayed:
 +

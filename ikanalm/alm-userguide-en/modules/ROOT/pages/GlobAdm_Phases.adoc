@@ -20,7 +20,7 @@ There are two options:
 
 Refer to the following sections for detailed information:
 
-* <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>
+* <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>
 * <<GlobAdm_Phases.adoc#_globadm_phases_overview,The Phases Overview Screen>>
 * <<GlobAdm_Phases.adoc#_globadm_phases_editing,Editing a Phase Definition>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,The Phase Parameters Overview Screen>>
@@ -104,17 +104,17 @@ Phases Overview_ screen.
 This default name will be used when no language-specific display name is provided.This field is mandatory.
 
 |Display Name [English]
-|The English name of the Phase as it will be displayed in the IKAN ALM user interface for a User whose language is set to English in his or her __Personal Settings__. <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>
+|The English name of the Phase as it will be displayed in the IKAN ALM user interface for a User whose language is set to English in his or her __Personal Settings__. See: <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Personal Settings>>
 
 This field is optional.
 
 |Display Name [French]
-|The French name of the Phase as it will be displayed in the IKAN ALM user interface for a User whose language is set to French in his or her __Personal Settings__. <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>
+|The French name of the Phase as it will be displayed in the IKAN ALM user interface for a User whose language is set to French in his or her __Personal Settings__. See: <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Personal Settings>>
 
 This field is optional.
 
 |Display Name [German]
-|The German name of the Phase as it will be displayed in the IKAN ALM interface for a User whose language is set to German in his or her __Personal Settings__. <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>
+|The German name of the Phase as it will be displayed in the IKAN ALM interface for a User whose language is set to German in his or her __Personal Settings__. See: <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Personal Settings>>
 
 This field is optional.
 
@@ -183,7 +183,7 @@ When clicking the _Create_ button, the Phase is created in the Phase Catalog and
 
 [NOTE]
 ====
-The location of the Phase Catalog is specified in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+The location of the Phase Catalog is specified in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 ====
 +
 You can also click _Reset_ to clear the fields and restore its initial values.
@@ -198,7 +198,7 @@ a|_RELATED TOPICS_
 * <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Inserting a Level Phase>>
 * <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phases,Build Environment Phases>>
 * <<ProjAdm_DeployEnv.adoc#_projadm_deplanv_phases,Deploy Environment Phases>>
-* Phase Catalog settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+* Phase Catalog settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
 |===
 
@@ -223,7 +223,7 @@ You can also:
 * click the _Reset search_ link to clear the search fields.
 . Verify the information on the _Phases Overview_ panel.
 +
-For a detailed description of the fields, refer to <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>and <<GlobAdm_Phases.adoc#_globadm_phases_editing,Editing a Phase Definition>>.
+For a detailed description of the fields, refer to <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>and <<GlobAdm_Phases.adoc#_globadm_phases_editing,Editing a Phase Definition>>.
 . Depending on your access rights, the following links may be available on the _Phases Overview_ panel:
 +
 
@@ -306,7 +306,7 @@ The _Edit Phase_ pop-up window is displayed.
 +
 image::GlobAdm-Phases-Edit-popup.png[,573,626] 
 +
-For a description of the fields, refer to <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>.
+For a description of the fields, refer to <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>.
 +
 The following additional fields are displayed on this screen:
 +
@@ -371,7 +371,7 @@ The new uploaded files will only be persisted when you click the _Save_ button.
 To redisplay the originally uploaded files, click the _Refresh_ button.
 ====
 +
-For more information on uploading files, refer to the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>.
+For more information on uploading files, refer to the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>.
 
 . Verify the Phase parameters.
 +
@@ -432,7 +432,7 @@ For more information on mass replacing and mass deleting Phases, refer also to t
 +
 When clicking the _Save_ button, the Phase`'s data are persisted and you will be redirected to the _Phases Overview_ screen.
 +
-Meanwhile, IKAN ALM re-packages the uploaded files in a .jar file and replaces the existing .jar file in the Phase Catalog location (as defined in the System Settings (<<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>) with the new .jar file.
+Meanwhile, IKAN ALM re-packages the uploaded files in a .jar file and replaces the existing .jar file in the Phase Catalog location (as defined in the <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>) with the new .jar file.
 There, it is ready to be picked up by an IKAN ALM Server or Agent Daemon process when the Phase needs to be (re-)installed on an IKAN ALM Server or Agent.
 +
 You can also click:
@@ -998,7 +998,7 @@ image::GlobAdm-Phases-Copy.png[,1005,886]
 +
 . Modify the fields as required.
 +
-For a description of the fields, refer to the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>.
+For a description of the fields, refer to the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>.
 +
 
 [NOTE]
@@ -1059,7 +1059,7 @@ image::GlobAdm-Phases-Import-Success.png[,1011,785]
 . Verify the properties of the Phase to be imported.
 +
 All the properties of the Phase will be shown in the fields.
-For a description of the fields, refer to the sections <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>and <<GlobAdm_Phases.adoc#_globadm_phases_editing,Editing a Phase Definition>>.
+For a description of the fields, refer to the sections <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>and <<GlobAdm_Phases.adoc#_globadm_phases_editing,Editing a Phase Definition>>.
 +
 The scripts and other files contained within the Phase are shown in the _Uploaded Files_ field.
 +
@@ -1068,6 +1068,6 @@ The _Import Phase Parameters_ panel shows the defined Parameters of the Phase th
 . Click _Import_ to import the Phase.
 +
 When clicking __Import__, the Phase and its Parameters are created in the IKAN ALM database.
-The scripts and other files contained within the Phase are packaged into a .jar file and copied to the Phase Catalog location (as defined in the <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>).
+The scripts and other files contained within the Phase are packaged into a .jar file and copied to the Phase Catalog location (as defined in the <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>).
 +
 You can also click _Overview_ to return to the _Phases Overview_ screen without importing the Phase.

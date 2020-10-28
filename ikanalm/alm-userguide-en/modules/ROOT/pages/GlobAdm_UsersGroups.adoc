@@ -4,7 +4,7 @@
 
 Refer to the following sections for more information on:
 
-* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users and Groups Users>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users>>
 * <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
 
 
@@ -19,7 +19,7 @@ As a result, Users may not be created in IKAN ALM via a menu entry: a User must 
 If a User has the appropriate rights, he or she may log on to IKAN ALM.
 Based on this first successful logon, the User will be automatically created in IKAN ALM.
 
-A User ID can only be used to <<Logon.adoc#_desktop_loggingon,Logging in>> and to <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>, if it exists in this external Security System.
+A User ID can only be used to <<Logon.adoc#_desktop_loggingon,log on to IKAN ALM>> and to <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,define  Personal Settings>>, if it exists in this external Security System.
 
 If your IKAN ALM license allows no floating users and is fully based on reserved users it will not be possible to log on with another User ID once the maximum number of reserved active users is reached.
 If additional users need to log on to IKAN ALM, there are two possibilities:
@@ -211,12 +211,12 @@ __Error: Maximum number of reserved active Users
 (X) reached__, where X is the maximum allowed number of reserved active users.
 You will have to expand your IKAN ALM license or archive other (obsolete) reserved User IDs, or mark other active reserved User IDs as non reserved, before you can reactive this User ID.
 
-* At the bottom of the screen, the__ Related User Groups Overview__ panel is displayed. The overview contains the definitions of the User Groups to which the selected User ID belongs. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
+* At the bottom of the screen, the__ Related User Groups Overview__ panel is displayed. The overview contains the definitions of the User Groups to which the selected User ID belongs. See: <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
 
 +
 [NOTE]
 ====
-Users can edit their personal settings. <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>
+Users can edit their personal settings. See: <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Personal Settings>>
 ====
 
 . Edit the fields as required.
@@ -225,8 +225,9 @@ For a description of the fields, refer to the section <<GlobAdm_UsersGroups.adoc
 . Click__ Save__ to save your changes.
 +
 You can also click:
-*** _Refresh_ to retrieve the settings from the database.
-*** _Back_ to return to the previous screen without saving the changes
+
+* _Refresh_ to retrieve the settings from the database.
+* _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_usersgroups_disconnectingusers]]
 ==== Disconnecting Users 
@@ -269,7 +270,7 @@ Overview_ screen.
 a|_RELATED TOPICS_
 
 * <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
-* <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>
+* <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Personal Settings>>
 * <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
 * <<Desktop_Approvals.adoc#_desktop_outstandingapprovals,Approvals>>
 
@@ -281,7 +282,7 @@ a|_RELATED TOPICS_
 
 IKAN ALM uses the JAAS interface to base its User ID/Password authentication on existing Security Systems in your organization.
 This means that User IDs and their adherence to User Groups are maintained outside IKAN ALM.
-A User ID can only be used to <<Logon.adoc#_desktop_loggingon,Logging in>> and to <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>, if it exists in this external Security System.
+A User ID can only be used to <<Logon.adoc#_desktop_loggingon,log on to IKAN ALM>> and to <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,define Your Personal Settings>>, if it exists in this external Security System.
 
 Access Rights in IKAN ALM are based on the adherence of User IDs to User Groups.
 There are two types of User Groups: external and internal.

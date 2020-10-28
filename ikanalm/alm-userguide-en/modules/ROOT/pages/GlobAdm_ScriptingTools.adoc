@@ -4,10 +4,10 @@
 
 IKAN ALM supports the following Scripting Tools:
 
-* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_ant,ANT Scripting Tools>>
-* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_gradle,Gradle Scripting Tools>>
-* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_nant,NANT Scripting Tools>>
-* <<GlobAdm_ScriptingTools.adoc#_sglobad_scriptingtool_maven2,Maven2 Scripting Tools>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_ant,ANT>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_gradle,Gradle>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_nant,NANT>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobad_scriptingtool_maven2,Maven2>>
 
 
 The following sections explain how to define a Scripting Tool so that the IKAN ALM Agent may use it for Build and Deploy actions.
@@ -109,6 +109,7 @@ If ANT is installed on a machine connected to your Build/Deploy Environments, IK
 Therefore, you must define the ANT Scripting Tool in the IKAN ALM application and, when creating the Build or Deploy Environment, specify it as being the Build or Deploy Tool to be used.
 
 Refer to the following sections for detailed information:
+
 * <<GlobAdm_ScriptingTools.adoc#_pcreateantscriptingtool,Creating an ANT Scripting Tool>>
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_ant_overview,The ANT Scripting Tools Overview Screen>>
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_ant_edit,Editing an ANT Scripting Tool Definition>>

@@ -311,7 +311,7 @@ The following fields are available on the _Miscellanous_ subpanel:
 |Auto Refresh Rate
 |In this field, you can enter the number of seconds for the automatic refresh function on the <<Desktop_ManageDesktop.adoc#_managedesktop_desktopoverview,The Desktop Overview Screen>>, <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen,Level Requests Overview>> and <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build History Screen>>.
 
-As a result, these overview screens will be refreshed each time the interval expires (if the user has activated the <<Desktop_AutoRefresh.adoc#_desktop_autorefresh,Auto Refresh>>).
+As a result, these overview screens will be refreshed each time the interval expires (if the user has activated the <<Desktop_AutoRefresh.adoc#_desktop_autorefresh,Auto Refresh function on his or her Desktop submenu>>).
 
 If you do not want to allow the use of the Auto Refresh option, enter __0 __(zero) in this field.
 
@@ -557,7 +557,7 @@ Click the link to display the details for this Level Request.
 <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>
 
 |Level Request Status
-|This field contains the Level Request Status. <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen,Level Requests Overview>>
+|This field contains the Level Request Status. <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen,See Level Requests Overview screen>>
 
 |Deployed
 |This field indicates whether or not the Build has been used by a Deploy.

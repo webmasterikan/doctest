@@ -106,7 +106,7 @@ The decompressed files are compared and the following actions are taken:
 |Debug
 |Select whether or not the Debug option must be activated for this Deploy Environment.
 
-If Debug is activated for a Deploy Environment, the Build Clean-up action (<<Desktop_LevelRequests.adoc#_srebuildanddeploylr,(Re)Build and Deploy Level Requests>>) will not be performed, so that the user may use the available build results to run the deploy script manually for testing purposes.
+If Debug is activated for a Deploy Environment, the Build Clean-up action (<<Desktop_LevelRequests.adoc#_srebuildanddeploylr,action 28 of the Build and Deploy Level Requests Overview>>) will not be performed, so that the user may use the available build results to run the deploy script manually for testing purposes.
 |===
 
 . Verify the information on the _Deploy Environments Overview_ panel.
@@ -205,7 +205,7 @@ This option allows viewing the Deploy Environment History.
 
 . Switch to the _Deploy Environments Overview_ screen.
 +
-<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>
+<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
 . Click image:icons/edit.gif[,15,15] _Edit_ to change the selected Deploy Environment definition.
 +
 The following screen is displayed:
@@ -231,7 +231,7 @@ You can also click__ Refresh __to retrieve the settings from the database or__ C
 
 . Switch to the _Deploy Environments Overview_ screen.
 +
-<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>
+<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
 . Click image:icons/delete.gif[,15,15] __Delete __to delete the selected Deploy Environment definition.
 +
 The following screen is displayed:
@@ -256,7 +256,7 @@ When cloning an Environment, all settings, including the Phases and Parameters, 
 
 . Switch to the _Deploy Environments Overview_ screen.
 +
-<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>
+<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
 . Click image:icons/clone.gif[,15,15] _Clone_ to clone the selected Deploy Environment definition.
 +
 The following screen is displayed:
@@ -303,7 +303,7 @@ Refer to the following procedures for more information:
 
 . Switch to the _Deploy Environments Overview_ screen.
 +
-<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>
+<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
 . On the _Deploy Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _ Edit Phases_ link.
 +
 The _Deploy Environment Phases Overview_ screen is displayed:
@@ -385,7 +385,7 @@ You can also click _Cancel_ to return to the previous screen without saving the 
 
 . Switch to the _Deploy Environments Overview_ screen.
 +
-<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>
+<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
 . On the _Deploy Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
 . Click the image:icons/edit.gif[,15,15]  Edit link in front of the Phase you want to edit.
 +
@@ -407,7 +407,7 @@ You can also click__ Refresh __to retrieve the settings from the database or__ C
 
 . Switch to the _Deploy Environments Overview_ screen.
 +
-<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>
+<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
 +
 . On the _Deploy Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
 . Use the image:icons/up.gif[,15,15] __Up __and image:images/icons/down.gif[,15,15] _Down_ links in front of a Deploy Environment Phase to change its position in the sequence.
@@ -425,7 +425,7 @@ Avoid changing a Phase`'s position in such a way that its _Next Phase on Error_ 
 
 . Switch to the _Deploy Environments Overview_ screen.
 +
-<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>
+<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
 . On the _Deploy Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
 . Click the image:icons/icon_viewparameters.png[,15,15] _View Parameters_ links in front of a Deploy Environment Phase you want to manage the Phase Parameters for.
 +
@@ -543,7 +543,7 @@ Parameters_ panel.
 [[_cacfbgcc]]
 . Switch to the _Deploy Environments Overview_ screen.
 +
-<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>
+<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
 . On the _Deploy Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _ Edit Phases_ link.
 . On the__ Phases Overview__ panel, click the Delete link.
 +
@@ -561,7 +561,7 @@ You can also click _No_ to return to the previous screen without deleting the De
 
 . Switch to the _Deploy Environments Overview_ screen.
 +
-<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>
+<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
 . Click image:icons/icon_viewparameters.png[,15,15] _View Parameters_ to view all parameters defined for the selected Deploy Environment.
 +
 The following screen is displayed:
@@ -577,7 +577,7 @@ For a more detailed description of this screen, refer to the section <<ProjAdm_E
 
 . Switch to the _Deploy Environments Overview_ screen.
 +
-<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>
+<<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
 . Click the image:icons/history.gif[,15,15] _History_ link to display the __Deploy Environment History View__.
 +
 For more detailed information concerning this __History

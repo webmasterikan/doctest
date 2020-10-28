@@ -63,7 +63,7 @@ All types of Phases inserted into the workflow of a Level/Build/Deploy Environme
 |This field, together with the Phase name, forms the unique identifier of the Phase.
 The version of the Core Phases matches the IKAN ALM version (e.g., 5.5.0).
 
-The version of Custom Phases conforms to the format as explained in the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>.
+The version of Custom Phases conforms to the format as explained in the section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>.
 
 |Next Phase On Success (Phase Position)
 |This field defines which Phase should be executed next if the current Phase completes successfully.
@@ -85,7 +85,13 @@ Possible values:
 |===
 
 
-For more information on defining and configuring Phases, refer to the following sections: <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>>, <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Editing a Build Environment Phase>>, <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phaseedit,Editing a Deploy Environment Phase>>, <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>and <<GlobAdm_Phases.adoc#_globadm_phases_editing,Editing a Phase Definition>>.
+For more information on defining and configuring Phases, refer to the following sections: 
+
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>> 
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Editing a Build Environment Phase>>, 
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phaseedit,Editing a Deploy Environment Phase>>, 
+* <<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>
+* <<GlobAdm_Phases.adoc#_globadm_phases_editing,Editing a Phase Definition>>
 
 When executing a Phase, it can have the following status:
 
@@ -235,7 +241,7 @@ In that case, you could remove the _Deploy_ Phase from the Level`'s workflow.
 
 The _Issue Tracking_ Phase links Issues, managed in an external Issue Tracking System, with a Level Request, by searching for references to the Issues in the commit comments of the VCR.
 
-In the case of a Build Level Request, the Issue Tracking Phase parses the commit comments that have been entered since the last successful Level Request for that Level and tries to match the Issue Pattern of the attached Issue Tracking System (<<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Issue Tracking Creating an Issue Tracking System>>). All found Issues will be attached to the Level Request.
+In the case of a Build Level Request, the Issue Tracking Phase parses the commit comments that have been entered since the last successful Level Request for that Level and tries to match the Issue Pattern of the attached Issue Tracking System (<<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingcreate,Creating an Issue Tracking System>>). All found Issues will be attached to the Level Request.
 
 For an Atlassian JIRA, HP Quality Center or CollabNet TeamForge Issue Tracking System, the Issue Tracking Phase will also connect to and try to identify the issues in JIRA, HP ALM or TeamForge.
 For each identified Issue, it will try to get additional information from JIRA, HP ALM or TeamForge (like description, status, owner and priority) and store it in IKAN ALM.
@@ -300,7 +306,7 @@ Script_ Phase exits with status __Success__.
 If not, it exits with status _Error_ and logs the errors on the _Phase Logs_ panel of the _Level
 Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,Level Phases>>).
 
-Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>) and specify that they may be used on a Level.
+Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>) and specify that they may be used on a Level.
 Once inserted into the workflow of a Level, we call them Custom Level Phases.
 
 [[_phases_levelphases_customlevelphase]]
@@ -378,7 +384,7 @@ See also <<App_Phases.adoc#_phases_levelphases_retrievecode,Retrieve Code Phase>
 
 [[_babcijhh]]
 ==== Verify Build Script Phase 
- (((Phases ,Build Phases ,Verify Build Script))) 
+(((Phases ,Build Phases ,Verify Build Script))) 
 
 The _Verify Build Script_ Phase tries to locate the defined Build Script, and fails if it cannot.
 
@@ -388,7 +394,7 @@ If not, it will look for the Build Script defined on the Project (<<ProjAdm_Proj
 
 Then, it tries to find the Build Script in the Build Environment`'s Source Location.
 
-If not found, it tries to copy the Build Script from the IKAN ALM Script Location as defined in the System Settings (<<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>).
+If not found, it tries to copy the Build Script from the IKAN ALM Script Location as defined in the <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>.
 
 If not found there either, the Verify Build Script Phase exits with status __Error__.
 
@@ -458,7 +464,7 @@ The _Cleanup Result_ Phase deletes all files in the Build Environment`'s Target 
 
 If the Build Environment has its Debug flag set to '`Yes`', the Cleanup Result Phase does nothing, and exits with status __Error__, reporting that the Debug flag was set in the Build Environment.
 
-Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>) and specify that they may be used on a Build Environment.
+Next to the Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>) and specify that they may be used on a Build Environment.
 Once inserted into the workflow of a Build Environment, we call them Custom Build Phases.
 
 [[_phases_buildphases_custombuildphase]]
@@ -557,7 +563,7 @@ If not, it will look for the Deploy Script defined on the Project (<<ProjAdm_Pro
 
 Then, it tries to find the Deploy Script in the decompressed Build result available in the Deploy Environment`'s Source Location.
 
-If not found, it tries to copy the Deploy Script from the IKAN ALM Script Location as defined in the System Settings (<<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>).
+If not found, it tries to copy the Deploy Script from the IKAN ALM Script Location as defined in the <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>.
 
 If not found there either, the Verify Deploy Script Phase exits with status __Error__.
 
@@ -584,7 +590,7 @@ The _Cleanup Build Result_ Phase deletes all files in the Deploy Environment`'s 
 
 If the Deploy Environment has its Debug flag set to '`Yes`', the Cleanup Build Result Phase does nothing, and exits with status __Error__, reporting that the Debug flag was set in the Deploy Environment.
 
-Next to Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition Creating a Phase Definition>>) and specify that they may be used on a Deploy Environment.
+Next to Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>) and specify that they may be used on a Deploy Environment.
 Once inserted into the workflow of a Deploy Environment, we call them _Custom Deploy_ Phases.
 
 [[_phases_deployphases_customdeployphase]]

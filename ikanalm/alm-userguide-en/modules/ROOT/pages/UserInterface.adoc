@@ -174,9 +174,9 @@ Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted al
 [[_desktop_autorefresh]]
 === Auto Refresh
 
-If your IKAN ALM Global Manager has defined an _Automatic Refresh Rate_ on the _Miscellaneous_ panel in the <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>, the _Auto Refresh_ option will be available on the Desktop, and on the Level Requests and Builds and Deploys overviews.
+If your IKAN ALM Global Manager has defined an _Automatic Refresh Rate_ on the _Miscellaneous_ panel in the <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>, the _Auto Refresh_ option will be available on the Desktop, and on the Level Requests and Builds and Deploys overviews.
 
-If the__ Auto Refresh __option is activated, the screen will be refreshed following the interval specified by the Auto Refresh Rate specified in the System Settings.
+If the __Auto Refresh__ option is activated, the screen will be refreshed following the interval specified by the Auto Refresh Rate specified in the System Settings.
 
 Select the option to toggle its status.
 
