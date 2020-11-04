@@ -37,7 +37,7 @@ If there are errors in the Project configuration, the following screen is displa
 +
 image::ProjAdmin-Audit-Error.png[,1037,573] 
 +
-Locked Project Streams and Levels have a image:icons/locked.gif[,15,15] _ Locked_ icon in the _Locked_ field.
+Locked Project Streams and Levels have a image:icons/locked.gif[,15,15] _Locked_ icon in the _Locked_ field.
 In the sample screen above, this is the case for the _TestPartialBuild_ Level.
 Error or warning messages are displayed in red in the _Message_ field.
 +

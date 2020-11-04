@@ -306,7 +306,7 @@ L'écran _Aperçu du Paquet_ s'affiche. <<Desktop_Packages.adoc#_desktop_viewpac
 L'écran _Modifier un Paquet_ s'affiche.
 Pour plus d'informations concernant la modification d'une définition de Paquet, se référer à la section <<Desktop_Packages.adoc#_desktop_editpackage,Modifier la définition d`'un paquet>>.
 
-.. Cliquez sur le bouton _Précédent__ pour retourner à l'écran __Modifier un Groupe de Paquets de Construction_.
+.. Cliquez sur le bouton _Précédent_ pour retourner à l'écran _Modifier un Groupe de Paquets de Construction_.
 
 
 [[_bacdbadi]]

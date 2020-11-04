@@ -219,12 +219,12 @@ If IKAN ALM is not able to establish a connection with the Subversion Repository
 The definition of a Time-Out value is mandatory.
 
 |Fetch Meta Properties
-|Select the _Yes_ option button to automatically retrieve the Meta Properties set on source files in the Subversion VCR during the__ Retrieve code __Phase.
+|Select the _Yes_ option button to automatically retrieve the Meta Properties set on source files in the Subversion VCR during the __Retrieve code__ Phase.
 These Meta Properties can be used by the Build and Deploy Scripting Tool. 
 
 For more information regarding fetching Meta Properties, refer to the section <<App_Subversion.adoc#_csubversiongeneralinformation,Subversion - General Information>>.
 |===
-. Click__ Test Connection__ to verify if IKAN ALM can establish a connection to the Subversion Repository. If the test is successful, the following message is displayed:
+. Click __Test Connection__ to verify if IKAN ALM can establish a connection to the Subversion Repository. If the test is successful, the following message is displayed:
 +
 __Info: Could successfully establish a connection
 with the Repository.__
@@ -332,7 +332,7 @@ Click _Test Connection_ to verify if IKAN ALM can establish a connection to the 
 
 The _Connected Projects_ panel displays the Projects the Repository is linked to. 
 ====
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -379,7 +379,7 @@ Control Repository_ panel to only display the Subversion Repositories you are lo
 +
 For more detailed information concerning this __History
 View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
-. Click__ Back__ to return to the __Subversion Repositories Overview __screen.
+. Click __Back __to return to the __Subversion Repositories Overview__ screen.
 
 
 [[_globadm_vcr_git]]
@@ -501,7 +501,7 @@ If IKAN ALM is not able to establish a connection with the Git Repository within
 
 The definition of a Time-Out value is mandatory.
 |===
-. Click__ Test Connection__ to verify if IKAN ALM can establish a connection to the Git Repository. If the test is successful, the following message is displayed:
+. Click __Test Connection__ to verify if IKAN ALM can establish a connection to the Git Repository. If the test is successful, the following message is displayed:
 +
 __Info: Could successfully establish a connection
 with the Repository.__
@@ -586,7 +586,7 @@ It allows displaying the History of all create, update and delete operations per
 ==== Editing a Git Repository 
 (((Git ,Editing))) 
 
-. In the Global Administration context, select__ Version Control Repositories > Overview__ on the Submenu.
+. In the Global Administration context, select __Version Control Repositories > Overview__ on the Submenu.
 +
 The overview of all defined Version Control Repositories is displayed.
 +
@@ -609,7 +609,7 @@ Click _Test Connection_ to verify if IKAN ALM can establish a connection to the 
 
 The _Connected Projects_ panel displays the Projects the Repository is linked to. 
 ====
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -656,7 +656,7 @@ Control Repository_ panel to only display the Git Repositories you are looking f
 +
 For more detailed information concerning this __History
 View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
-. Click__ Back__ to return to the __Git Repositories Overview __screen.
+. Click __Back __to return to the __Git Repositories Overview__ screen.
 
 
 [[_globadm_vcr_cvs]]
@@ -767,7 +767,7 @@ This field may remain empty if the _local_ Protocol is used, or if the default p
 |Root Path
 |Enter the repository CVS ROOT used to log in to CVS.
 This is the location containing the CVSROOT directory.
-For instance, if CVSROOT is located under__ E:/cvs/repository/CVSROOT__, the Root Path is __E:/cvs/repository__.
+For instance, if CVSROOT is located under __E:/cvs/repository/CVSROOT__, the Root Path is__ E:/cvs/repository__.
 
 This field is mandatory.
 
@@ -778,7 +778,7 @@ If IKAN ALM is not able to establish a connection with the CVS Repository within
 The definition of a Time-Out value is mandatory.
 |===
 
-. Click__ Test Connection__ to verify if IKAN ALM can establish a connection to the CVS Repository. If the test is successful, the following message is displayed:
+. Click __Test Connection__ to verify if IKAN ALM can establish a connection to the CVS Repository. If the test is successful, the following message is displayed:
 +
 __Info: Could successfully establish a connection
 with the Repository.__
@@ -825,7 +825,7 @@ The following options are available:
 * click the _Show/hide advanced options_ link to display or hide all available search criteria,
 * the _Search_ link to refresh the list based on the current search criteria,
 * the _Reset search_ link to clear the search fields.
-. Verify the information on the__ CVS Repositories Overview__ panel.
+. Verify the information on the __CVS Repositories Overview__ panel.
 +
 For a detailed description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatecvsrepository,Creating a CVS Repository>>.
 . Depending on your access rights, the following links may be available on the _CVS Repositories Overview_ panel:
@@ -886,7 +886,7 @@ Click _Test Connection_ to verify if IKAN ALM can establish a connection to the 
 
 The _Connected Projects_ panel displays the Projects the Repository is linked to. 
 ====
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -910,7 +910,7 @@ If the CVS Repository is not connected to any Project, the following screen is d
 +
 image::GlobAdm-VCR-CVS-Delete.png[,427,360] 
 +
-. Click__ Delete__ to confirm the deletion.
+. Click __Delete__ to confirm the deletion.
 +
 You can also click __Back __to return to the previous screen without deleting the entry.
 +
@@ -934,7 +934,7 @@ Control Repository_ panel to only display the CVS Repositories you are looking f
 +
 For more detailed information concerning this __History
 View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
-. Click__ Back__ to return to the __CVS Repositories Overview __screen.
+. Click __Back __to return to the __CVS Repositories Overview__ screen.
 
 
 [[_globadm_vcr_vss]]
@@ -1004,10 +1004,10 @@ Fields marked with a red asterisk are mandatory:
 | Meaning
 
 |Command Path
-|Enter the required Command Path of the VSS Client (absolute path to the__ ss.exe __file).
+|Enter the required Command Path of the VSS Client (absolute path to the __ss.exe__ file).
 
 |INI Path
-|Enter the VSS ROOT used to log in to VSS, or the__ ssdir__ environment variable (absolute path to the __srcsafe.ini __file).
+|Enter the VSS ROOT used to log in to VSS, or the __ssdir __environment variable (absolute path to the __srcsafe.ini__ file).
 
 |User ID
 |Enter the User ID that IKAN ALM will use to access the VSS Repository.
@@ -1090,7 +1090,7 @@ The following options are available:
 * click the _Show/hide advanced options_ link to display or hide all available search criteria,
 * the _Search_ link to refresh the list based on the current search criteria,
 * the _Reset search_ link to clear the search fields.
-. Verify the information on the__ VSS Repositories Overview__ panel.
+. Verify the information on the __VSS Repositories Overview__ panel.
 +
 For a detailed description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatevssrepository,Creating a VSS Version Control Repository>>.
 . Depending on your access rights, the following links may be available on the _VSS Repositories Overview_ panel:
@@ -1151,7 +1151,7 @@ Click _Test Connection_ to verify if IKAN ALM can establish a connection to the 
 
 The _Connected Projects_ panel displays the Projects the Repository is linked to. 
 ====
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -1198,7 +1198,7 @@ Control Repository_ panel to only display the VSS Repositories you are looking f
 +
 For more detailed information concerning this __History
 View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
-. Click__ Back__ to return to the __VSS Repositories Overview __screen.
+. Click __Back __to return to the __VSS Repositories Overview__ screen.
 
 
 [[_globadm_vcr_clearcase]]
@@ -1321,7 +1321,7 @@ __Select NO__, if you do not want to promote each tagged Build (__Baseline__) cr
 In this case, this will be a manual process performed outside IKAN ALM.
 |===
 
-. Click__ Test Connection __to verify if IKAN ALM can establish a connection to the ClearCase Repository. If the test is successful, the following message is displayed:
+. Click __Test Connection__ to verify if IKAN ALM can establish a connection to the ClearCase Repository. If the test is successful, the following message is displayed:
 +
 __Info: Could successfully establish a connection
 with the Repository.__
@@ -1429,7 +1429,7 @@ Click _Test Connection_ to verify if IKAN ALM can establish a connection to the 
 
 The _Connected Projects_ panel displays the Projects the Repository is linked to. 
 ====
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -1454,7 +1454,7 @@ image::GlobAdm-VCR-ClearCase-Delete.png[,542,398]
 +
 . Click _Delete_ to confirm the deletion.
 +
-You can also click__ Back __to return to the previous screen without deleting the entry.
+You can also click __Back__ to return to the previous screen without deleting the entry.
 +
 __Note:__ If one or more Projects are connected to the Repository, the following screen is displayed:
 +
@@ -1476,7 +1476,7 @@ Control Repository_ panel to only display the ClearCase Repositories you are loo
 +
 For more detailed information concerning this __History
 View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
-. Click__ Back__ to return to the __ClearCase Repositories Overview __screen.
+. Click __Back __to return to the __ClearCase Repositories Overview__ screen.
 
 
 [[_globadm_vcr_pvcs_]]
@@ -1598,7 +1598,7 @@ If IKAN ALM is not able to establish a connection with the PVCS Repository withi
 The definition of a Time-Out value is mandatory.
 |===
 
-. Click__ Test Connection__ to verify if IKAN ALM can establish a connection to the PVCS Repository. If the test is successful, the following message is displayed:
+. Click __Test Connection__ to verify if IKAN ALM can establish a connection to the PVCS Repository. If the test is successful, the following message is displayed:
 +
 __Info: Could successfully establish a connection
 with the Repository.__
@@ -1645,7 +1645,7 @@ The following options are available:
 * click the _Show/hide advanced options_ link to display or hide all available search criteria,
 * the _Search_ link to refresh the list based on the current search criteria,
 * the _Reset search_ link to clear the search fields.
-. Verify the information on the__ PVCS Repositories Overview__ panel.
+. Verify the information on the __PVCS Repositories Overview__ panel.
 +
 For a detailed description of the fields, refer to <<GlobAdm_VCR.adoc#_pcreatepvcsrepository,Creating a PVCS Repository>>.
 . Depending on your access rights, the following links may be available on the _PVCS Repositories Overview_ panel:
@@ -1706,7 +1706,7 @@ Click _Test Connection_ to verify if IKAN ALM can establish a connection to the 
 
 The _Connected Projects_ panel displays the Projects the Repository is linked to. 
 ====
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -1753,7 +1753,7 @@ Control Repository_ panel to only display the PVCS Repositories you are looking 
 +
 For more detailed information concerning this __History
 View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
-. Click__ Back__ to return to the __PVCS Repositories Overview __screen.
+. Click __Back __to return to the __PVCS Repositories Overview__ screen.
 
 
 [[_globadm_vcr_tfvc]]
@@ -1854,7 +1854,7 @@ If IKAN ALM is not able to establish a connection with the TFVC Repository withi
 The definition of a Time-Out value is mandatory.
 |===
 
-. Click__ Test Connection__ to verify if IKAN ALM can establish a connection to the TFVC Repository. If the test is successful, the following message is displayed:
+. Click __Test Connection__ to verify if IKAN ALM can establish a connection to the TFVC Repository. If the test is successful, the following message is displayed:
 +
 __Info: Could successfully establish a connection
 with the Repository.__
@@ -1962,7 +1962,7 @@ Click _Test Connection_ to verify if IKAN ALM can establish a connection to the 
 
 The _Connected Projects_ panel displays the Projects the Repository is linked to. 
 ====
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -2009,4 +2009,4 @@ Control Repository_ panel to only display the TFVC Repositories you are looking 
 +
 For more detailed information concerning this __History
 View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
-. Click__ Back__ to return to the __TFVC Repositories Overview __screen.
+. Click __Back __to return to the __TFVC Repositories Overview__ screen.

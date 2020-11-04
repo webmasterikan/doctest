@@ -277,7 +277,7 @@ Pour plus d'informations, se référer aux sections suivantes:
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu__.
 
-. Cliquez sur le lien _Supprimer__ sur le panneau __Aperçu des Machines_. 
+. Cliquez sur le lien _Supprimer_ sur le panneau _Aperçu des Machines_. 
 +
 L`'écran suivant s`'affiche:
 +

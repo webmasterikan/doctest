@@ -315,7 +315,7 @@ Déverrouiller le Projet signifie que vous autorisez à nouveau ces actions pour
 
 . Dans le menu principal, cliquez sur l`'icône image:icons/icon_ProjectAdmin_13x13.png[,13,13]  _Administration des Projets_.
 
-. Cliquez sur le lien image:icons/lock.gif[,15,15] _Verrouiller_ ou image:images/icons/unlock.gif[,15,15] _ Déverrouiller_ dans le panneau __Aperçu des Projets__.
+. Cliquez sur le lien image:icons/lock.gif[,15,15] _Verrouiller_ ou image:images/icons/unlock.gif[,15,15] _Déverrouiller_ dans le panneau __Aperçu des Projets__.
 +
 
 [NOTE]

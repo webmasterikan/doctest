@@ -108,7 +108,7 @@ where:
 ** __b12__: Build Number
 ** __CONTBUILD__: Build Environment name
 ** __win__: Build suffix
-** __$$.$$zip__: extension referring to the compression method,__ zip __for Windows platforms, __tar.gz __for Unix and Linux platforms.
+** __$$.$$zip__: extension referring to the compression method, __zip __for Windows platforms, __tar.gz__ for Unix and Linux platforms.
 
 |Build Suffix
 |In this field, enter the Build Suffix for the Build Environment, if required.
@@ -131,11 +131,11 @@ If Debug is activated for a Build Environment, the Source and Result Clean-up ac
 
 [NOTE]
 ====
-This Overview lists__ all __Build Environments defined for __all __Levels belonging to the selected Project.
+This Overview lists __all __Build Environments defined for __all__ Levels belonging to the selected Project.
 ====
 +
 For more information on the available links, refer to <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>.
-. Click__ Create__ to confirm the creation of the new Build Environment.
+. Click __Create__ to confirm the creation of the new Build Environment.
 +
 You can also click the _Reset_ button to clear the fields and restore the initial values.
 
@@ -225,7 +225,7 @@ This option allows viewing the Build Environment History.
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. Click image:icons/edit.gif[,15,15] __ Edit __to change the selected Build Environment definition.
+. Click image:icons/edit.gif[,15,15] __Edit__ to change the selected Build Environment definition.
 +
 The following screen is displayed:
 +
@@ -242,7 +242,7 @@ image::ProjAdmin-BuildEnv-Edit_popup.png[,540,337]
 For a detailed description of the fields, refer to <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>.
 . Click Save, once you have finished your changes.
 +
-You can also click__ Refresh __to retrieve the settings from the database or__ Cancel __to return to the __Edit Build Environment __screen without saving your changes.
+You can also click __Refresh __to retrieve the settings from the database or __Cancel __to return to the __Edit Build Environment__ screen without saving your changes.
 
 [[_projadm_buildenv_delete]]
 ==== Deleting a Build Environment 
@@ -257,9 +257,9 @@ The following screen is displayed:
 +
 image::ProjAdmin-BuildEnv-Delete.png[,764,463] 
 +
-. Click__ Delete __to confirm the deletion.
+. Click __Delete__ to confirm the deletion.
 +
-You can also click__ Back __to return to the previous screen without deleting the Environment.
+You can also click __Back__ to return to the previous screen without deleting the Environment.
 +
 
 [NOTE]
@@ -288,7 +288,7 @@ If required, you can also edit the other fields.
 For a detailed description of the fields, refer to <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>.
 . Click _Clone_ to confirm the action.
 +
-You can also click__ Back __to return to the previous screen without cloning the Environment.
+You can also click __Back__ to return to the previous screen without cloning the Environment.
 
 
 [[_projadm_buildenv_phases]]
@@ -409,7 +409,7 @@ The Phase Position is also indicated on the _Phases Overview_ panel.
 In case you use the same Phase several times, adding a label is useful to provide additional information concerning the usage of the Phase.
 |===
 
-. Click__ Insert__ to confirm the creation of the new Phase.
+. Click __Insert__ to confirm the creation of the new Phase.
 +
 You can also click _Cancel_ to return to the previous screen without saving the changes.
 
@@ -433,7 +433,7 @@ image::ProjAdmin-BuildEnv-EditBuildEnvPhase.png[,578,247]
 For a description of the fields, refer to the section <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_insertphase,Inserting a Build Environment Phase>>.
 . Click __Save __to save your changes.
 +
-You can also click__ Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
+You can also click __Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
 
 [[_projadm_buildenv_modifyorderphases]]
 ===== Changing the Order of the Build Environment Phases 
@@ -578,8 +578,8 @@ Parameters_ panel.
 . Switch to the _Build Environments Overview_ screen.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
-. On the _Build Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _ Edit Phases_ link.
-. On the__ Phases Overview__ panel, click the Delete link.
+. On the _Build Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
+. On the __Phases Overview__ panel, click the Delete link.
 +
 The _Delete Build Environment Phase_ screen is displayed.
 +

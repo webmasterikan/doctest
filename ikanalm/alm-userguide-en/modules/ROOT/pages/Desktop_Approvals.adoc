@@ -43,7 +43,7 @@ Refer to the following sections for more information about:
 [[_pworkwithoutstandingapprovals]]
 . Select _Approvals > Outstanding Approvals_ on the Main Menu.
 +
-The__ Outstanding Approvals__ screen displays all currently outstanding Approvals which you (or another member of your User Group) can approve or reject.
+The __Outstanding Approvals__ screen displays all currently outstanding Approvals which you (or another member of your User Group) can approve or reject.
 +
 image::Desktop-OutstandingApprovals-Overview.png[,967,139] 
 +

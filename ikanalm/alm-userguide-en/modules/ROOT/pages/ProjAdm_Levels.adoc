@@ -154,10 +154,10 @@ _Note:_ If you create a Build Level using the _Create Build Level_ link on the _
 |===
 . Additional Information
 +
-The__ Build Levels Defined in Project__ panel displays the different Build Levels defined for the Project.
+The __Build Levels Defined in Project__ panel displays the different Build Levels defined for the Project.
 +
 For more information on this panel, refer to <<ProjAdm_Levels.adoc#_levelenvmgt_overview,Levels Overview>>.
-. Click__ Create__ to confirm the creation of the new Build Level.
+. Click __Create__ to confirm the creation of the new Build Level.
 +
 You can also click _Reset_ to clear the fields and restore the initial values.
 
@@ -298,11 +298,11 @@ Test Level_ or _Create Production Level_ link on the _Edit Lifecycle_ screen, th
 
 . Verify the settings of the other Test or Production Levels defined in the Project.
 +
-The__ Test Levels Defined in Project__ or _Production
+The __Test Levels Defined in Project__ or _Production
 Levels Defined in Project_ panel displays the different Test or Production Levels defined for the Project.
 +
 For more information on this panel, refer to <<ProjAdm_Levels.adoc#_levelenvmgt_overview,Levels Overview>>.
-. Click__ Create__ to confirm the creation of the new Test or Production Level.
+. Click __Create__ to confirm the creation of the new Test or Production Level.
 +
 You can also click
 
@@ -383,7 +383,7 @@ image::ProjAdmin-Levels-TestLevel-Edit_Popup.png[,445,396]
 For a description of the fields, refer to the sections <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>> and <<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>>.
 .. Click __Save __to save your changes.
 +
-You can also click__ Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
+You can also click __Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
 . Underneath the _Level Info_ panel, an overview of the defined Phases, Environments and, optionally, Pre- and Post-Approvals is displayed, as well as the necessary links to edit Phases, to create Build and Deploy Environments and, optionally, to edit the Deploy Sequence and the Approvals. 
 +
 For more information, refer to the sections: 
@@ -501,7 +501,7 @@ image::ProjAdmin-Levels-TestLevel-LevelPhase-Edit.png[,556,244]
 For a description of the fields, refer to the section <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Inserting a Level Phase>>.
 . Click __Save __to save your changes.
 +
-You can also click__ Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
+You can also click __Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
 
 [[_plevelenvmgt_viewlevelphaseparams]]
 ====== Viewing the Level Phase Parameters 
@@ -634,7 +634,7 @@ image::ProjAdmin-Levels-TestLevel-LevelPhase-Delete.png[,375,107]
 
 . Confirm the deletion by clicking the _Yes_ button.
 +
-You can also click__ No__ to return to the previous screen without deleting the Level Phase.
+You can also click __No__ to return to the previous screen without deleting the Level Phase.
 
 [[_plevelenvmgt_insertphase]]
 ====== Inserting a Level Phase
@@ -680,7 +680,7 @@ The Phase Position is also indicated on the _Phases Overview_ panel.
 In case you use the same Phase several times, adding a label is useful to provide additional information concerning the usage of the Phase.
 |===
 +
-. Click__ Insert__ to confirm the creation of the new Phase.
+. Click __Insert__ to confirm the creation of the new Phase.
 +
 You can also click _Cancel_ to return to the previous screen without saving the changes.
 
@@ -712,7 +712,7 @@ Refer to the following procedures for more information:
 . Switch to the _Edit Level_ screen.
 +
 <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing a Level>>
-. Underneath the__ Environments__ panel, click__ Create Build Environment__.
+. Underneath the __Environments__ panel, click__ Create Build Environment__.
 +
 The following screen is displayed:
 +
@@ -728,7 +728,7 @@ Environment_ procedure, refer to <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironmen
 . Switch to the _Edit Level_ screen.
 +
 <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Editing a Level>>
-. On the__ Environments__ panel, click__ Create Deploy Environment__.
+. On the __Environments__ panel, click__ Create Deploy Environment__.
 +
 The following screen is displayed:
 +
@@ -770,7 +770,7 @@ image::ProjAdmin-Levels-EditDeploySequence.png[,298,203]
 Use the drop-down menu at the left of the Deploy Environment to change the Sequence Number.
 . Click Save to save the new sequence order.
 +
-You can also click__ Refresh __to retrieve the settings from the database or__ Cancel __to return to the previous screen without saving your changes.
+You can also click __Refresh __to retrieve the settings from the database or __Cancel__ to return to the previous screen without saving your changes.
 
 [[_levelenvmgt_approvalsequence]]
 ===== Level Approvals 
@@ -814,7 +814,7 @@ Select the User Group after which the new User Group should be inserted from the
 ====
 If you do not select an existing Approval User Group from the __Insert after __drop-down list, the new Approval User Group will be inserted at the top of the sequence.
 ====
-. Click the__ Insert __button, to confirm your changes.
+. Click the __Insert__ button, to confirm your changes.
 +
 The Approval is added to the Sequence on the _Edit Level_ screen.
 . If necessary, you can use the image:icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ buttons to modify the order of the different User Groups, or use the image:images/icons/delete.gif[,15,15] _Remove_ button to remove a User Group from the Sequence list.
@@ -840,7 +840,7 @@ The following screen is displayed:
 +
 image::ProjAdmin-Levels-Delete.png[,644,599] 
 +
-. Click__ Delete__ to confirm the deletion or _Back_ to return to the previous screen without deleting the Level.
+. Click __Delete__ to confirm the deletion or _Back_ to return to the previous screen without deleting the Level.
 . If you try deleting a Level that is assigned to a Lifecycle, the following screen is displayed:
 +
 image::ProjAdmin-Levels-TestLevel-Delete.png[,547,520] 
@@ -862,7 +862,7 @@ image::ProjAdmin-Levels-CloneLevel.png[,905,484]
 . Edit the fields on the _Level Info_ panel.
 +
 For a description of the fields, refer to the sections <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>> or <<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>>.
-. Click__ Clone Level__ to confirm the action.
+. Click __Clone Level__ to confirm the action.
 +
 You can also click _Back_ to return to the _Levels Overview_ screen.
 +

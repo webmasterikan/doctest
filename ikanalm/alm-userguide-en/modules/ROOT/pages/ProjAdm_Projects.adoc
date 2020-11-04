@@ -231,7 +231,7 @@ If the Build Script file is located in another folder belonging to the Project, 
 If this field is left blank, the Build Script may be specified on the Build Environment, or as a Phase Parameter of the Execute Script Phase.
 
 |Deploy Script
-|This field__ may__ contain the Deploy Script used for the Project.
+|This field __may__ contain the Deploy Script used for the Project.
 
 If the Deploy Script file is located in the root folder of the Project, it refers to a filename directly, e.g.__,
 deploy.xml__

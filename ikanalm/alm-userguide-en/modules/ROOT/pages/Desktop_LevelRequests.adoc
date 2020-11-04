@@ -6,7 +6,7 @@
 
 Level Requests are action requests in relation to a Level.
 
-From a logical point of view, they are requests to _create_ a Build on a Build Level, to _deliver_ a Build to the next Level (Test or Production) or to__ rollback__ a Build on a Level (Test or Production) defined in the applicable Lifecycle.
+From a logical point of view, they are requests to _create_ a Build on a Build Level, to _deliver_ a Build to the next Level (Test or Production) or to __rollback__ a Build on a Level (Test or Production) defined in the applicable Lifecycle.
 
 From a physical point of view, Level Requests can match a Build with or without a Deploy, a Rebuild with or without a Deploy or just a Deploy.
 
@@ -1247,7 +1247,7 @@ image::Desktop-LevelRequests-Overview.png[,1023,668]
 
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the __Level Requests Overview __screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
+If the __Auto Refresh __option is activated, the __Level Requests Overview__ screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
 ====
 
 . Use the search criteria on the _Search_ panel to only display the Level Requests you are looking for.
@@ -1269,7 +1269,7 @@ For more information on the usage of search panels and filters, refer to the sec
 
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the _Level Requests Overview_ will be refreshed following the interval specified by the Auto Refresh Rate specified in the System Settings. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
+If the __Auto Refresh__ option is activated, the _Level Requests Overview_ will be refreshed following the interval specified by the Auto Refresh Rate specified in the System Settings. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
 ====
 
 . Use the _Generate Report_ button to run the _Level Requests Overview_ Report.
@@ -3308,7 +3308,7 @@ The _Build History_ screen is displayed:
 +
 image::Desktop-BuildHistory-Detail.png[,943,500] 
 +
-If the__ Auto Refresh __option is activated, the _Build History_ screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
+If the __Auto Refresh__ option is activated, the _Build History_ screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
 +
 
 [NOTE]
@@ -3392,7 +3392,7 @@ image::Desktop-BuildsDeploys-Overview.png[,994,412]
 
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the _Build and Deploys Overview_ screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
+If the __Auto Refresh__ option is activated, the _Build and Deploys Overview_ screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
 ====
 
 . Use the search criteria on the _Search Builds and Deploys_ panel to only display the Builds and/or Deploys you are looking for.

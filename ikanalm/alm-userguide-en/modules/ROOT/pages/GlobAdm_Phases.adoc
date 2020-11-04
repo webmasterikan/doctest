@@ -690,7 +690,7 @@ You can also click:
 * _Reset_ to retrieve the settings from the database.
 * _Cancel_ to return to the _Phase Parameter Overview_ screen without saving a value. <<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,The Phase Parameters Overview Screen>>
 +
-To go back to the _Edit Phase Parameter_ window (in the Global Administration context), click one of the image:icons/Phase_EditEnvPhaseParameter.png[,15,15] _ Edit Global Phase Parameter_ links.
+To go back to the _Edit Phase Parameter_ window (in the Global Administration context), click one of the image:icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Global Phase Parameter_ links.
 +
 [cols="1", frame="topbot"]
 |===

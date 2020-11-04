@@ -46,7 +46,7 @@ There are two types of User Groups: external and internal.
 External User Groups must exist in the external Security System, before they can be defined and used in IKAN ALM.
 There is no automatic mechanism for importing external User Groups from the external Security System into IKAN ALM, as a lot of these User Groups may not be required in IKAN ALM.
 
-It is possible to add a User ID to an external User Group or to delete a User ID from such a User Group__ within__ IKAN ALM, but these actions have only a__ temporary__ effect.
+It is possible to add a User ID to an external User Group or to delete a User ID from such a User Group __within__ IKAN ALM, but these actions have only a __temporary__ effect.
 As soon as the IKAN ALM session is terminated and a new session is opened, IKAN ALM reads the settings from the external Security System and synchronizes the external IKAN ALM User Groups with the definitions available in this external security system.
 In other words, if the adherence of a User ID to an external User Group changes permanently, this change must be configured in the external Security System, not in IKAN ALM.
 
@@ -83,7 +83,7 @@ You can also:
 * click the _Show/hide advanced options_ link to display or hide all available search criteria,
 * click the _Search_ link to refresh the list based on the current search criteria,
 * click the _Reset search_ link to clear the search fields.
-. Verify the information on the__ Users Overview__ panel.
+. Verify the information on the __Users Overview__ panel.
 +
 The following information is available for each displayed User ID:
 +
@@ -199,7 +199,7 @@ image::GlobAdm-Users-Edit.png[,572,620]
 +
 *Description:*
 
-* At the top of the screen, the__ Edit User__ panel is displayed. Edit the fields as required.
+* At the top of the screen, the __Edit User__ panel is displayed. Edit the fields as required.
 +
 You may also reactivate an archived User by clicking the _No_ option button next to the archived field.
 +
@@ -211,7 +211,7 @@ __Error: Maximum number of reserved active Users
 (X) reached__, where X is the maximum allowed number of reserved active users.
 You will have to expand your IKAN ALM license or archive other (obsolete) reserved User IDs, or mark other active reserved User IDs as non reserved, before you can reactive this User ID.
 
-* At the bottom of the screen, the__ Related User Groups Overview__ panel is displayed. The overview contains the definitions of the User Groups to which the selected User ID belongs. See: <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
+* At the bottom of the screen, the __Related User Groups Overview__ panel is displayed. The overview contains the definitions of the User Groups to which the selected User ID belongs. See: <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
 
 +
 [NOTE]
@@ -222,7 +222,7 @@ Users can edit their personal settings. See: <<Desktop_PersonalSettings.adoc#_de
 . Edit the fields as required.
 +
 For a description of the fields, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_usersoverview,The Users Overview Screen>>.
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -292,7 +292,7 @@ There is no automatic mechanism for importing external User Groups from the exte
 Deleting an external User Group in IKAN ALM means that it is not known to IKAN ALM anymore.
 It is however not deleted in the external Security System.
 
-It is possible to add a User ID to a User Group or to delete a User ID from an external User Group__ within__ IKAN ALM, but these actions have only a _temporary_ effect.
+It is possible to add a User ID to a User Group or to delete a User ID from an external User Group __within__ IKAN ALM, but these actions have only a _temporary_ effect.
 As soon as the IKAN ALM session is terminated and a new session is opened, IKAN ALM reads the settings from the external Security System and synchronizes the external IKAN ALM User Groups with the definitions available in this external security system.
 In other words, if the adherence of a User ID to an external User Group changes permanently, this change must be configured in the external Security System, not in IKAN ALM.
 
@@ -438,7 +438,7 @@ image::GlobAdm-UserGroup-Edit.png[,977,428]
 image::GlobAdm-UserGroup-EditUserGroup.png[,581,535] 
 +
 . In the _Edit User Group_ panel, edit the fields as required.
-. Underneath the _Edit User Group_ panel, click the image:icons/edit.gif[,15,15] _ Edit User Group Members_ link to change the selected User Group definition.
+. Underneath the _Edit User Group_ panel, click the image:icons/edit.gif[,15,15] _Edit User Group Members_ link to change the selected User Group definition.
 +
 The following screen is displayed:
 +
@@ -454,7 +454,7 @@ Determine the allocation of User IDs to this User Group:
 By default, archived Users are filtered out of the _Non Group Members_ list.
 To display all the Users, including the archived ones, select the _Show
 Archived Users_ check box. 
-.. Click__ Save__ to save your changes.
+.. Click __Save__ to save your changes.
 +
 
 [NOTE]
@@ -505,7 +505,7 @@ Determine the allocation of User IDs to this User Group:
 By default, archived Users are filtered out of the _Non Group Members_ list.
 To display all the Users, including the archived ones, select the _Show
 Archived Users_ check box. 
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 
 [NOTE]
@@ -533,7 +533,7 @@ You can also click:
 +
 image::GlobAdm-UserGroup-Delete.png[,429,176] 
 +
-Click__ Delete__ to confirm the deletion or __Back __to return to the previous screen without deleting the entry.
+Click __Delete __to confirm the deletion or __Back__ to return to the previous screen without deleting the entry.
 * If the User Group is still connected to IKAN ALM Objects on the System Project or Level Settings, the following dialog is displayed:
 +
 image::GlobAdm-UserGroup-Delete-Error.png[,658,639] 

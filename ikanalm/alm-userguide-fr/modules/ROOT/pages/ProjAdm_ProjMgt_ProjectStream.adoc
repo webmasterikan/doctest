@@ -378,7 +378,7 @@ Déverrouiller la Branche signifie que vous autorisez à nouveau ces actions pou
 
 . Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
 
-. Cliquez sur le lien image:icons/lock.gif[,15,15] _Verrouiller_ ou image:images/icons/unlock.gif[,15,15] _ Déverrouiller_ dans le panneau __Aperçu des Branches__.
+. Cliquez sur le lien image:icons/lock.gif[,15,15] _Verrouiller_ ou image:images/icons/unlock.gif[,15,15] _Déverrouiller_ dans le panneau __Aperçu des Branches__.
 
 [[_hideshowprojectstream]]
 ==== Cacher/Montrer une branche 
@@ -492,7 +492,7 @@ Voir l'explication du champ _Récupération des données issues de_ ci-dessus.
 +
 les liens peuvent être disponibles:
 
-* Le lien image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _ Descendre_ pour modifier la séquence des Branches.
+* Le lien image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _Descendre_ pour modifier la séquence des Branches.
 * image:icons/edit.gif[,15,15]  _Modifier_: Cette option permet de modifier la Dépendance sélectionnée. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editdependency,Modifier une Dépendance de Branche>>
 * image:icons/remove.gif[,15,15]  _Retirer_: Cette option permet de retirer la Dépendance sélectionnée. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Retirer une Dépendance de Branche>>
 +

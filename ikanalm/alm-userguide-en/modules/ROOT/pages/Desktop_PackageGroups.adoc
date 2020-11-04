@@ -286,13 +286,13 @@ If you change the order of the Packages, the Dependency Level may change as well
 
 . Viewing a Package`'s settings.
 +
-.. To display a connected Package`'s Settings, click the image:icons/view.gif[,15,15] _ View_ link in the _Actions_ column after the required Package.
+.. To display a connected Package`'s Settings, click the image:icons/view.gif[,15,15] _View_ link in the _Actions_ column after the required Package.
 +
 The _View Package_ screen is displayed. <<Desktop_Packages.adoc#_desktop_viewpackage,Viewing Package Settings>>
 .. Click _Back_ to return to the _Edit Package Build Group_ screen.
 . Editing a Package`'s settings
 +
-.. To modify a connected Package Settings, click the image:icons/edit.gif[,15,15] _ Edit_ link in the Actions column after the required Package.
+.. To modify a connected Package Settings, click the image:icons/edit.gif[,15,15] _Edit_ link in the Actions column after the required Package.
 +
 The _Edit Package_ screen is displayed.
 For more information on how to edit the Package, refer to <<Desktop_Packages.adoc#_desktop_editpackage,Editing a Package>>.
@@ -302,13 +302,13 @@ For more information on how to edit the Package, refer to <<Desktop_Packages.ado
 [[_bacdbadi]]
 ==== Removing a Package from a Package Build Group
 
-. On the _Packages_ panel of the _Edit Package Build Group_ screen, click the image:icons/delete.gif[,15,15] _ Remove_ link after the required Package in the _Actions_ column.
+. On the _Packages_ panel of the _Edit Package Build Group_ screen, click the image:icons/delete.gif[,15,15] _Remove_ link after the required Package in the _Actions_ column.
 +
 A pop-up window asking you to confirm the removal is displayed.
 +
 image::Desktop-PackageGoups-ConfirmRemoval.png[,436,145] 
 +
-. Click__ Yes__ to confirm the removal.
+. Click __Yes__ to confirm the removal.
 +
 You can also click __No __to return to the previous screen without removing the Package.
 

@@ -189,7 +189,7 @@ Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted al
 (((Packages ,View Settings))) 
 
 . Select _Packages > Overview Packages_ on the Main Menu.
-. Click the image:icons/view.gif[,15,15] _View_ link on the__ Packages Overview__ panel.
+. Click the image:icons/view.gif[,15,15] _View_ link on the __Packages Overview__ panel.
 +
 The __Summary __tab page of the _Package Details_ screen is displayed.
 +
@@ -225,7 +225,7 @@ For more detailed information on the different tab pages, refer to the section <
 (((Packages ,Editing))) 
 
 . Select _Packages > Overview Packages_ on the Main Menu.
-. Click the image:icons/edit.gif[,15,15] _Edit_ link on the__ Packages Overview__ panel.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link on the __Packages Overview__ panel.
 +
 The __Edit Contents __tab page of the _Package Details_ screen is displayed.
 +
@@ -242,7 +242,7 @@ Other available buttons:
 +
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
+If the __Auto Refresh__ option is activated, the screen will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
 ====
 
 . Click _Save_ to confirm your changes.
@@ -276,7 +276,7 @@ The icon in front of the Package changes to image:icons/show.gif[,15,15] .
 Hidden Packages will not appear on the Overview screens for Level Requests, Approvals, Build and Deploys, nor on the _Create
 Level Request: Select Package_ screen when creating a Level Request for Package-based Projects.
 ====
-..... To "`unhide`" a hidden Package, click the image:icons/show.gif[,15,15] _ Show_ link.
+..... To "`unhide`" a hidden Package, click the image:icons/show.gif[,15,15] _Show_ link.
 +
 The icon will be changed appropriately.
 +

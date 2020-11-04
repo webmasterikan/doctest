@@ -95,7 +95,7 @@ Si vous disposez des droits d'accès d'Utilisateur, les liens suivants sont disp
 | Description
 
 |image:icons/view.gif[,15,15]  Afficher 
-|Si vous sélectionnez l'option _Afficher__, un panneau d'__Aperçu__ sera affiché en-dessous du __fil d'Ariane_.
+|Si vous sélectionnez l'option __Afficher__, un panneau d'__Aperçu__ sera affiché en-dessous du __fil d'Ariane__.
 
 Vous ne pourrez pas modifier les valeurs.
 

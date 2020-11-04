@@ -185,14 +185,14 @@ The following possibilities apply:
 |In this field, enter a description for the Parameter.
 
 |Mandatory
-|Select the__ Yes__ option button, if the new Environment Parameter must be defined as mandatory.
+|Select the __Yes__ option button, if the new Environment Parameter must be defined as mandatory.
 When you create a Level Request for this Environment, the mandatory Environment Parameters will always be provided to the Script.
 
 Select the _No_ option button, if the new Environment Parameter should not be defined as mandatory.
 When you create a Level Request for this Environment, you can decide whether you want to provide the non-mandatory Environment Parameter to the Script.
 
 |Editable
-|Select the__ Yes__ option button, if the new Environment Parameter must be defined as editable.
+|Select the __Yes__ option button, if the new Environment Parameter must be defined as editable.
 When you create a Level Request for this Environment, you can accept the default value (the one you enter in the Value field during creation) or define a value yourself for this Environment Parameter.
 
 Select the _No_ option button, if the new Environment Parameter should not be defined as editable.
@@ -238,7 +238,7 @@ Click __Back __to return to the previous screen.
 . Switch to the _Parameters Overview_ screen for the required Project.
 +
 <<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
-. In the _Actions_ column, click the image:icons/edit.gif[,15,15] __ Edit __link in front of the Environment Parameter to be edited.
+. In the _Actions_ column, click the image:icons/edit.gif[,15,15] __Edit__ link in front of the Environment Parameter to be edited.
 +
 The following window is displayed:
 +
@@ -260,7 +260,7 @@ You can also click:
 . Switch to the _Parameters Overview_ screen for the required Project.
 +
 <<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
-. In the _Actions_ column, click the image:icons/delete.gif[,15,15] __ Delete __link in front of the Environment Parameter to be deleted.
+. In the _Actions_ column, click the image:icons/delete.gif[,15,15] __Delete__ link in front of the Environment Parameter to be deleted.
 +
 The following confirmation window is displayed:
 +
@@ -280,7 +280,7 @@ To avoid having to redefine Environment Parameters which are identical for multi
 . Switch to the _Parameters Overview_ screen for the required Project.
 +
 <<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
-. In the _Actions_ column, click the image:icons/copy_parameter.gif[,15,15] __ Copy __link in front of the Environment Parameter to be copied.
+. In the _Actions_ column, click the image:icons/copy_parameter.gif[,15,15] __Copy__ link in front of the Environment Parameter to be copied.
 +
 The following window displays the values of the parameter you are about to copy.
 +

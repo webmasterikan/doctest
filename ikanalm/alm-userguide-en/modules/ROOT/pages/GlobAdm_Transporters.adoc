@@ -191,7 +191,7 @@ The following screen is displayed:
 +
 image::GlobAdm-Transporters-FileCopy-Create.png[,621,458] 
 +
-. Fill out the fields in the__ Create FileCopy Transporter__ panel at the top of the screen. Fields marked with a red asterisk are mandatory:
+. Fill out the fields in the __Create FileCopy Transporter__ panel at the top of the screen. Fields marked with a red asterisk are mandatory:
 +
 
 [cols="1,1", frame="none", options="header"]
@@ -291,7 +291,7 @@ The following options are available:
 * click the _Show/hide advanced options_ link to display or hide all available search criteria,
 * the _Search_ link to refresh the list based on the current search criteria,
 * the _Reset search_ link to clear the search fields.
-. Verify the information on the__ FileCopy Transporters Overview__ panel.
+. Verify the information on the __FileCopy Transporters Overview__ panel.
 +
 For a detailed description of the fields, refer to <<GlobAdm_Transporters.adoc#_globadm_filecopycreate,Creating a FileCopy Transporter>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
@@ -349,7 +349,7 @@ For a description of the fields, refer to <<GlobAdm_Transporters.adoc#_globadm_f
 ====
 The _Connected Machine(s)_ panel displays the Machines the Transporter is linked to. 
 ====
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -447,7 +447,7 @@ The following screen is displayed:
 +
 image::GlobAdm-Transporters-FTP-Create.png[,618,626] 
 +
-. Fill out the fields in the__ Create FTP Transporter__ panel at the top of the screen. Fields marked with a red asterisk are mandatory:
+. Fill out the fields in the __Create FTP Transporter__ panel at the top of the screen. Fields marked with a red asterisk are mandatory:
 +
 
 [cols="1,1", frame="none", options="header"]
@@ -574,7 +574,7 @@ The following options are available:
 * the _Show/hide advanced options_ link to display or hide all available search criteria,
 * the _Search_ link to refresh the list based on the current search criteria,
 * the _Reset search_ link to clear the search fields.
-. Verify the information on the__ FTP Transporters Overview__ panel.
+. Verify the information on the __FTP Transporters Overview__ panel.
 +
 For a detailed description of the fields, refer to <<GlobAdm_Transporters.adoc#_globadm_ftpcreate,Creating an FTP Transporter>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
@@ -632,7 +632,7 @@ For a description of the fields, refer to <<GlobAdm_Transporters.adoc#_globadm_f
 ====
 The _Connected Machine(s)_ panel displays the Machines the Transporter is linked to. 
 ====
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -870,7 +870,7 @@ The following options are available:
 * click the _Show/hide advanced options_ link to display or hide all available search criteria,
 * the _Search_ link to refresh the list based on the current search criteria,
 * the _Reset search_ link to clear the search fields.
-. Verify the information on the__ Secure Shell Transporters Overview__ panel
+. Verify the information on the __Secure Shell Transporters Overview__ panel
 +
 For a detailed description of the fields, refer to <<GlobAdm_Transporters.adoc#_globadm_secureshellcreate,Creating a Secure Shell Transporter>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
@@ -913,7 +913,7 @@ It allows displaying the History of all create, update and delete operations per
 The overview of all defined Transporter Protocols is displayed.
 +
 Use the search criteria on the search panel to display the Secure Shell Transporter Protocols your are looking for.
-. Click the image:icons/edit.gif[,15,15] __ Edit __link to change the selected Secure Shell Transporter.
+. Click the image:icons/edit.gif[,15,15] __Edit__ link to change the selected Secure Shell Transporter.
 +
 The following screen is displayed:
 +
@@ -928,7 +928,7 @@ For a description of the fields, refer to <<GlobAdm_Transporters.adoc#_globadm_s
 ====
 The _Connected Machine(s)_ panel displays the Machines the Transporter is linked to. 
 ====
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 

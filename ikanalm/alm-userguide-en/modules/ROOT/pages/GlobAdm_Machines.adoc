@@ -35,7 +35,7 @@ The following screen is displayed:
 +
 image::GlobAdmin-Machines-Create.png[,597,506] 
 +
-. Fill out the fields in the__ Create Machine__ panel at the top of the screen. Fields marked with a red asterisk are mandatory:
+. Fill out the fields in the __Create Machine__ panel at the top of the screen. Fields marked with a red asterisk are mandatory:
 +
 
 [cols="1,1", frame="none", options="header"]
@@ -146,7 +146,7 @@ You can also:
 * click the _Search_ link to refresh the list based on the current search criteria,
 * click the _Reset search_ link to clear the search fields.
 
-. Verify the information on the__ Machines Overview__ panel.
+. Verify the information on the __Machines Overview__ panel.
 +
 For a detailed description of the fields, refer to <<GlobAdm_Machines.adoc#_globadm_machinecreate,Creating a Machine Definition>>.
 . Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
@@ -216,7 +216,7 @@ Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted al
 (((Machines ,Editing))) 
 
 . In the Global Administration context, select__ Machines > Overview__.
-. Click the image:icons/edit.gif[,15,15] __ Edit __link on the _Machines Overview_ panel.
+. Click the image:icons/edit.gif[,15,15] __Edit__ link on the _Machines Overview_ panel.
 +
 The following screen is displayed: 
 +
@@ -231,7 +231,7 @@ For a description of the fields, refer to <<GlobAdm_Machines.adoc#_globadm_machi
 ====
 The _Connected Environments_ panel displays the Environments the Machine is linked to. 
 ====
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -242,7 +242,7 @@ You can also click:
 === Viewing the Machine Parameters
 
 . In the Global Administration context, select__ Machines > Overview__.
-. Click the image:icons/icon_viewparameters.png[,15,15] __ View Parameters __link on the _Machines Overview_ panel.
+. Click the image:icons/icon_viewparameters.png[,15,15] __View Parameters__ link on the _Machines Overview_ panel.
 +
 The following screen is displayed: 
 +
@@ -275,7 +275,7 @@ The following screen is displayed:
 +
 image::GlobAdmin-Machines-Delete.png[,432,388] 
 +
-. Click__ Delete__ to confirm the deletion.
+. Click __Delete__ to confirm the deletion.
 +
 You can also click __Back __to return to the previous screen without deleting the entry.
 +
@@ -353,7 +353,7 @@ Contact your IKAN ALM Administrator.
 . Verify the __Machine Log__.
 +
 The _Machine Log_ panel displays the last 150 lines of output of the Agent Daemon process running on this Machine.
-. Click__ Back__ to return to the __Machines Overview __screen.
+. Click __Back __to return to the __Machines Overview__ screen.
 
 [[_globadm_machines_installedphases]]
 === The Installed Phases Overview Screen 
@@ -430,7 +430,7 @@ The _Machine History View_ is displayed.
 +
 For more detailed information concerning this __History
 View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
-. Click__ Back__ to return to the __Machines Overview __screen.
+. Click __Back __to return to the __Machines Overview__ screen.
 
 
 [[_globadm_machineparameters]]
@@ -600,7 +600,7 @@ Select the _No_ option button, if the new Machine Parameter should not be define
 When you create a Level Request, you can decide whether you want to provide the non-mandatory Parameter to the Build/Deploy Script.
 
 |Editable
-|Select the__ Yes__ option button, if the new Machine Parameter must be defined as editable.
+|Select the __Yes__ option button, if the new Machine Parameter must be defined as editable.
 When you create a Level Request, you can accept the default value (the one you enter in the Value field during creation) or specify the value of your choice for the Parameter.
 
 Select the _No_ option button, if the new Machine Parameter should not be defined as editable.
@@ -609,7 +609,7 @@ When you create a Level Request, only the preset value (the one you entered in t
 This field is not provided for secured Machine Parameters.
 
 |Dynamic
-|Select the__ Yes__ option button, if the new Machine Parameter must be defined as dynamic.
+|Select the __Yes__ option button, if the new Machine Parameter must be defined as dynamic.
 When you create a Level Request, you can Select one of the predefined values from the drop-down list.
 These are the values you enter in the Value field during creation and which you separate by a semicolon (;). The selected value will be offered to the Build/Deploy Script.
 
@@ -618,7 +618,7 @@ Select the _No_ option button, if the new Machine Parameter should not be define
 This field is not provided for secured Machine Parameters.
 |===
 
-. Click__ Create__ to confirm the creation of the Machine Parameter.
+. Click __Create__ to confirm the creation of the Machine Parameter.
 +
 You can also click:
 
@@ -630,7 +630,7 @@ You can also click:
 (((Machine Parameters ,Editing))) 
 
 . In the Global Administration context, select__ Machines > Parameters Overview__.
-. In the _Actions_ column, click the image:icons/edit.gif[,15,15] __ Edit __link in front of the Machine Parameter to be edited.
+. In the _Actions_ column, click the image:icons/edit.gif[,15,15] __Edit__ link in front of the Machine Parameter to be edited.
 +
 The following window is displayed:
 +
@@ -639,7 +639,7 @@ image::GlobAdmin-Machines-MachineParameters-Edit.png[,391,385]
 . Edit the fields as required.
 +
 For a description of the fields, refer to <<GlobAdm_Machines.adoc#_globadm_machineparameters_create,Creating Machine Parameters>>.
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -651,7 +651,7 @@ You can also click:
 (((Machine Parameters ,Deleting))) 
 
 . In the Global Administration context, select__ Machines > Parameters Overview__.
-. In the _Actions_ column, click the image:icons/delete.gif[,15,15] __ Delete __link in front of the Machine Parameter to be deleted.
+. In the _Actions_ column, click the image:icons/delete.gif[,15,15] __Delete__ link in front of the Machine Parameter to be deleted.
 +
 The following confirmation window is displayed:
 +
@@ -669,7 +669,7 @@ You can also click _Cancel_ to return to the previous screen without deleting th
 This functionality allows copying a complete Machine Parameter definition from one source Machine to one or more target Machines.
 
 . In the Global Administration context, select__ Machines > Parameters Overview__.
-. In the _Actions_ column, click the image:icons/copy_parameter.gif[,15,15] __ Copy __link in front of the Machine Parameter to be copied.
+. In the _Actions_ column, click the image:icons/copy_parameter.gif[,15,15] __Copy__ link in front of the Machine Parameter to be copied.
 +
 The following window displays the values of the parameter you are about to copy.
 +

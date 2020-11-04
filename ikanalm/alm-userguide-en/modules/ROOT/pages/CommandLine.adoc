@@ -264,7 +264,7 @@ The following elements are available:
 | Mandatory
 
 |alm
-|This element calls the _alm.cmd__ (Windows) or __alm.sh _(Linux) file.
+|This element calls the __alm.cmd__ (Windows) or __alm.sh__ (Linux) file.
 |Yes
 
 |clr
@@ -355,7 +355,7 @@ The following elements are available:
 | Mandatory
 
 |alm
-|This element calls the _alm.cmd__ (Windows) or__ alm.sh_ (Linux) file.
+|This element calls the _alm.cmd __(Windows) or__ alm.sh_ (Linux) file.
 |Yes
 
 |serverhost
@@ -379,7 +379,7 @@ If this element is not provided, the default port number (20021) will be used.
 |secured
 |This element allows determining whether an encrypted connection must be used or not.
 
-If the IKAN ALM Server is using an encrypted connection, set the _secured__ element to__ true_:
+If the IKAN ALM Server is using an encrypted connection, set the _secured __element to__ true_:
 
 _-secured=true_
 

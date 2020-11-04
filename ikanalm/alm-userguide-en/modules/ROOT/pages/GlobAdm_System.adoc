@@ -51,7 +51,7 @@ The following subpanels are available:
 * <<GlobAdm_System.adoc#_globadm_systemsettings_miscellaneous,Miscellaneous>>
 
 +
-Underneath the _Edit System Settings_ panel, you will find the image:icons/history.gif[,15,15] _ History_ link.
+Underneath the _Edit System Settings_ panel, you will find the image:icons/history.gif[,15,15] _History_ link.
 Click this link to display the _System Settings History
 View_ screen.
 For more detailed information concerning this __History View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
@@ -254,9 +254,9 @@ The locale directories match the language settings of the user:
 * _fr_ for French
 * _de_ for German
 
-If no match is found, the templates in the__ default __directory will be used.
+If no match is found, the templates in the __default__ directory will be used.
 
-For the HTML formatted templates, a__ _html__ suffix is added before the _$$.$$vm_ extension.
+For the HTML formatted templates, a ___html__ suffix is added before the _$$.$$vm_ extension.
 
 For plain text templates, there is no such suffix.
 
@@ -359,7 +359,7 @@ The _Housekeeping_ screen also shows information about the Build Archive, like t
 
 . In the Global Administration context, select__ System > Housekeeping__.
 +
-The__ Housekeeping__ screen is displayed:
+The __Housekeeping__ screen is displayed:
 +
 image::GlobAdm-Housekeeping-Screen.png[,920,526] 
 +
@@ -570,7 +570,7 @@ Select the check box in the table heading in order to select all the displayed B
 +
 image::GlobAdm-Housekeeping-Delete.png[,258,90] 
 +
-. Click__ Delete __to confirm the deletion or __Back __to return to the previous screen without deleting the Build Files.
+. Click __Delete __to confirm the deletion or __Back__ to return to the previous screen without deleting the Build Files.
 +
 When the delete is confirmed, the removal is executed.
 The action is logged in the _Housekeeping History_ and the User is redirected to the _View Housekeeping Details_ screen where the result of the action is displayed.
@@ -590,7 +590,7 @@ It provides a _Search_ panel where the User can enter search criteria to restric
 
 . In the Global Administration context, select__ System > Housekeeping History__.
 +
-The__ Housekeeping History__ screen is displayed:
+The __Housekeeping History__ screen is displayed:
 +
 image::GlobAdm-HousekeepingHistory-Screen.png[,668,375] 
 +
@@ -684,7 +684,7 @@ During synchronization the status will be set to "`Non existing`".
 
 . In the Global Administration context, select__ System > Synchronize Build Archive__.
 +
-The__ Synchronize Build Archive__ screen is displayed:
+The __Synchronize Build Archive__ screen is displayed:
 +
 image::GlobAdm-SynchBuildArchive-screen.png[,864,481] 
 +
@@ -797,4 +797,4 @@ It can have the following values:
 * __Waiting__: The synchronization of this Project has not yet started.
 * __Error__: There was a problem synchronizing the Project.
 
-. Click__ Refresh __to update the Synchronization statuses.
+. Click __Refresh__ to update the Synchronization statuses.

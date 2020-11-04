@@ -57,7 +57,7 @@ image::ProjAdmin-ProjMgt-ProjectStream-CreateBranch.png[,958,427]
 At the bottom of the screen, the _Project Streams
 Overview_ panel displays the currently defined Project Streams for the selected Project.
 
-. Fill out the fields in the__ Create Branch Project Stream__ panel.
+. Fill out the fields in the __Create Branch Project Stream__ panel.
 +
 The following fields are available: 
 +
@@ -198,7 +198,7 @@ They all have the format ${name}:
 * ${buildNumber}: This variable returns the number of the Build, so that the Build can be matched with its Tag.
 * ${projectName}: This variable returns the name of the IKAN ALM Project.
 * ${vcrProjectName}: This variable returns the VCR name of the Project.
-* ${dateTime(dateformat)}: This variable returns the timestamp of the Building action in the indicated format.__ yyyy-MM-dd__ is a valid format. For other valid formats, refer to http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html[ http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html]
+* ${dateTime(dateformat)}: This variable returns the timestamp of the Building action in the indicated format. __yyyy-MM-dd__ is a valid format. For other valid formats, refer to http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html[ http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html]
 * ${packageName}: This variable returns the name of the package in a Package-based Project Stream.
 
 
@@ -216,7 +216,7 @@ For Head Streams belonging to a Team Foundation VC Project, enter the name of th
 For Head Streams belonging to other Project types, this field is not available.
 |===
 
-. Click__ Create__ to create the new Project Stream.
+. Click __Create__ to create the new Project Stream.
 +
 You can also click:
 
@@ -337,7 +337,7 @@ image::ProjAdmin-ProjectStreams-View.png[,918,269]
 image::ProjAdmin-ProjMgt-ProjectStream-Edit-EditProjectStream.png[,559,442] 
 +
 For a description of the fields, refer to <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Creating a Branch Project Stream>>.
-. Click__ Save__ to save your changes.
+. Click __Save__ to save your changes.
 +
 You can also click:
 
@@ -369,7 +369,7 @@ The following screen is displayed:
 image::ProjAdmin-ProjMgt-ProjectStream-Delete.png[,820,328] 
 +
 . Verify if you really want to irrevocably delete the Project Stream.
-. Click__ Delete__ to confirm the deletion. 
+. Click __Delete__ to confirm the deletion. 
 +
 You can also click _Back_ to return to the previous screen without deleting the Project.
 
@@ -396,7 +396,7 @@ This can be very useful to leave out older Project Streams on the _Overview_ pan
 . Click the image:icons/hide.gif[,15,15] _Hide_ link in front of the Project Stream you want to hide.
 +
 The Project Stream will be hidden and disappears from the __Project Streams Overview__.
-. To "`unhide`" a hidden Project Stream, set the _Hidden_ criterion to _Yes_ or _All_ and click the image:icons/show.gif[,15,15] _ Show_ link.
+. To "`unhide`" a hidden Project Stream, set the _Hidden_ criterion to _Yes_ or _All_ and click the image:icons/show.gif[,15,15] _Show_ link.
 +
 The Project Stream will become visible and the icon will be changed appropriately.
 +
@@ -437,7 +437,7 @@ The Dependencies panel contains:
 
 * the overview of the Project Streams whose results or sources the current Project Stream depends on,
 * the overview of the Project Streams using the results or sources of the current Project Stream, and
-* the__ Add Dependency__ link. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Adding a Project Stream Dependency>>
+* the __Add Dependency__ link. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Adding a Project Stream Dependency>>
 
 +
 For each of the Project Streams on the Overviews, the following information is available:
@@ -512,7 +512,7 @@ Switch to the__ Project
 Stream Dependency__ screen of these Master Project Streams to edit their Dependency settings.
 ====
 
-. Click__ Back__ to return to the previous screen.
+. Click __Back__ to return to the previous screen.
 
 [[_projadmin_projectstream_adddependency]]
 ==== Adding a Project Stream Dependency
@@ -520,7 +520,7 @@ Stream Dependency__ screen of these Master Project Streams to edit their Depende
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
 . On the __Project Streams Overview__, click the image:icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
-. Click the image:icons/dependency.gif[,15,15] _Add Dependency_ link on the__ Dependencies__ panel.
+. Click the image:icons/dependency.gif[,15,15] _Add Dependency_ link on the __Dependencies__ panel.
 +
 The following pop-up screen is displayed:
 +
@@ -542,7 +542,7 @@ If a Project Stream can not be added, an error message will be displayed.
 +
 image::ProjAdmin-ProjectStream-AddDependency-Step2.png[,744,231] 
 +
-.. Select the__ Code Retrieval__ mode from the drop-down list.
+.. Select the __Code Retrieval__ mode from the drop-down list.
 +
 From the drop-down list, select the required code retrieval type.
 The following options are available:
@@ -590,7 +590,7 @@ You can also click:
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
 . On the __Project Streams Overview__, click the image:icons/edit.gif[,15,15] _Edit_ link in front of the required Project Stream.
-. Click the image:icons/edit.gif[,15,15] __ Edit __link in front of the required Dependency.
+. Click the image:icons/edit.gif[,15,15] __Edit__ link in front of the required Dependency.
 +
 The _Update Project Stream Dependency_ pop-up screen is displayed:
 +
@@ -599,7 +599,7 @@ image::ProjAdmin-ProjectStream-UpdateDependency.png[,504,174]
 . Edit the _Code Retrieval_ mode and __VCR Tag__, if required. 
 +
 For a description of these fields, refer to the section <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Adding a Project Stream Dependency>>.
-. Click__ Save__ to save your modifications.
+. Click __Save__ to save your modifications.
 +
 You can also click:
 

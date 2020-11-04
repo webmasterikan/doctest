@@ -285,7 +285,7 @@ un Cycle de vie__.
 
 Si vous avez utilisé l'option "Niveaux > Créer un Niveau de Test (ou de Production)" dans le sous-menu de la section Administration des projets, le nouveau Niveau de Test ou de Production sera créé après le Niveau de Test ou de Production existant éventuel.
 
-Vous pouvez toujours modifier la séquence des Niveaux en utilisant les options image:icons/up.gif[,15,15] _Monter_ ou image:images/icons/down.gif[,15,15] _ Descendre_ dans le panneau _Niveaux associés_ dans l'écran __Modifier
+Vous pouvez toujours modifier la séquence des Niveaux en utilisant les options image:icons/up.gif[,15,15] _Monter_ ou image:images/icons/down.gif[,15,15] _Descendre_ dans le panneau _Niveaux associés_ dans l'écran __Modifier
 un Cycle de vie__. <<ProjAdm_LifeCycles.adoc#_lifecycles_changingorderlevels,Modifier la séquence des niveaux>>
 
 |Cycle de vie
@@ -450,7 +450,7 @@ Pour plus d`'informations, se référer aux procédures suivantes:
 +
 Les liens suivants sont possibles:
 
-* Le lien image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _ Descendre_ pour modifier la séquence des Phases. <<ProjAdm_Levels.adoc#_plevelenvmgt_modifyorderphases,Modifier la séquence des Phases de niveau>>
+* Le lien image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _Descendre_ pour modifier la séquence des Phases. <<ProjAdm_Levels.adoc#_plevelenvmgt_modifyorderphases,Modifier la séquence des Phases de niveau>>
 * Le lien image:icons/edit.gif[,15,15]  _Modifier_: Cette option permet de modifier les Informations de la Phase sélectionnée. <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Modifier une Phase de niveau>>
 * Le lien image:icons/icon_viewparameters.png[,15,15] _Voir les Paramètres_ pour gérer les Paramètres de phase obligatoires et optionnels. <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Afficher les Paramètres de Phase de niveau>>
 * Le lien image:icons/remove.gif[,15,15]  _Supprimer_: Cette option permet de supprimer une Phase. <<ProjAdm_Levels.adoc#_plevelenvmgt_deletephase,Supprimer une Phase de niveau>>
@@ -479,7 +479,7 @@ une Phase_ en bas du panneau __Aperçu des Phases__. <<ProjAdm_Levels.adoc#_plev
 
 . Cliquez sur le lien _Modifier les Phases _image:icons/edit_phases.gif[,15,15]  dans le panneau __Aperçu des Niveaux__.
 
-. Utilisez les liens image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _ Descendre_ devant la Phase de niveau pour modifier la position de la Phase sélectionnée dans la séquence. 
+. Utilisez les liens image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _Descendre_ devant la Phase de niveau pour modifier la position de la Phase sélectionnée dans la séquence. 
 
 . Utilisez le lien _Précédent_ pour retourner à l`'écran __Aperçu des Niveaux__.
 
@@ -808,7 +808,7 @@ Vous pouvez uniquement définir des Approbations pour les Niveaux de Test et de 
 ====
 +
 
-. Pour y accéder, cliquez sur le lien image:icons/icon_preApproval.png[,15,15] _Ajouter une Pré-approbation_ ou image:images/icons/icon_postApproval.png[,15,15] _ Ajouter une Post-approbation_ en bas de l'écran __Modifier un Niveau__.
+. Pour y accéder, cliquez sur le lien image:icons/icon_preApproval.png[,15,15] _Ajouter une Pré-approbation_ ou image:images/icons/icon_postApproval.png[,15,15] _Ajouter une Post-approbation_ en bas de l'écran __Modifier un Niveau__.
 +
 La fenêtre _Ajouter une Approbation_ s'affiche.
 +
@@ -835,7 +835,7 @@ après__, le nouveau Groupe d`'utilisateurs sera inséré au sommet de la séque
 +
 L'approbation est ajoutée à la Séquence dans l'écran __Modifier un Niveau__.
 
-. Si nécessaire, utilisez les liens image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _ Descendre_ pour modifier la position des différents Groupes d`'utilisateurs, ou utilisez le lien image:images/icons/delete.gif[,15,15] _ Enlever_ pour retirer le Groupe d`'utilisateurs de la liste de séquence. 
+. Si nécessaire, utilisez les liens image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _Descendre_ pour modifier la position des différents Groupes d`'utilisateurs, ou utilisez le lien image:images/icons/delete.gif[,15,15] _ Enlever_ pour retirer le Groupe d`'utilisateurs de la liste de séquence. 
 
 . Répétez cette procédure pour définir toutes les Pré- et Post-Approbations requises.
 

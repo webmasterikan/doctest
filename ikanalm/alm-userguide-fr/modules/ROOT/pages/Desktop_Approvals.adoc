@@ -256,7 +256,7 @@ Les options suivantes sont disponibles:
 
 [NOTE]
 ====
-Les Approbations en attente que vous (ou un autre membre de votre Groupe d`'utilisateurs) pouvez accorder ou rejeter en ce moment sont précédées des icônes _Approuver__ et __ Rejeter_.
+Les Approbations en attente que vous (ou un autre membre de votre Groupe d`'utilisateurs) pouvez accorder ou rejeter en ce moment sont précédées des icônes __Approuver__ et __Rejeter__.
 
 Pour plus d`'informations, se référer aux sections <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approuver une Approbation en attente>> et <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejeter une Approbation en attente>>.
 ====

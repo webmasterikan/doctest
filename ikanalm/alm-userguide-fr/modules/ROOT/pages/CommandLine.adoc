@@ -697,7 +697,7 @@ Les éléments suivants sont disponibles:
 | Obligatoire
 
 |alm
-|Cet élément appelle le fichier _alm.cmd__ (Windows) ou le fichier __alm.sh _(Linux).
+|Cet élément appelle le fichier __alm.cmd__ (Windows) ou le fichier __alm.sh__ (Linux).
 |Oui
 
 |report

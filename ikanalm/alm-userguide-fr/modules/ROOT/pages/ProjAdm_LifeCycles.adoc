@@ -385,7 +385,7 @@ Pour plus d'informations concernant l'audit d'un Projet, se référer à la sect
 +
 <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_accessing,Écran des cycles de vie et des niveaux associés>>
 
-. Utilisez les liens image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _ Descendre_ devant le Niveau pour modifier la position du Niveau sélectionné dans la séquence des Niveaux définis. 
+. Utilisez les liens image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _Descendre_ devant le Niveau pour modifier la position du Niveau sélectionné dans la séquence des Niveaux définis. 
 +
 
 [NOTE]

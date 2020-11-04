@@ -114,7 +114,7 @@ If Debug is activated for a Deploy Environment, the Build Clean-up action (<<Des
 
 [NOTE]
 ====
-This Overview lists__ all __Deploy Environments defined for __all __Levels belonging to the selected Project.
+This Overview lists __all__ Deploy Environments defined for __all__ Levels belonging to the selected Project.
 ====
 +
 For more information on the available links, refer to <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>.
@@ -223,7 +223,7 @@ image::ProjAdmin-DeployEnv-Edit_popup.png[,540,337]
 For a detailed description of the fields, refer to <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Creating a Deploy Environment>>.
 . Click Save, once you have finished your changes.
 +
-You can also click__ Refresh __to retrieve the settings from the database or__ Cancel __to return to the __Edit Build Environment __screen without saving your changes.
+You can also click __Refresh __to retrieve the settings from the database or __Cancel __to return to the __Edit Build Environment__ screen without saving your changes.
 
 [[_projadm_deplenv_delete]]
 ==== Deleting a Deploy Environment 
@@ -238,9 +238,9 @@ The following screen is displayed:
 +
 image::ProjAdmin-DeployEnv-Delete.png[,786,259] 
 +
-. Click__ Delete __to confirm the deletion.
+. Click __Delete__ to confirm the deletion.
 +
-You can also click__ Back __to return to the previous screen without deleting the Environment.
+You can also click __Back__ to return to the previous screen without deleting the Environment.
 +
 
 [NOTE]
@@ -269,7 +269,7 @@ If required, you can also edit the other fields.
 For a detailed description of the fields, refer to <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Creating a Deploy Environment>>.
 . Click _Clone_ to confirm the action.
 +
-You can also click__ Back __to return to the previous screen without cloning the Environment.
+You can also click __Back__ to return to the previous screen without cloning the Environment.
 
 
 [[_projadm_deplanv_phases]]
@@ -304,7 +304,7 @@ Refer to the following procedures for more information:
 . Switch to the _Deploy Environments Overview_ screen.
 +
 <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
-. On the _Deploy Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _ Edit Phases_ link.
+. On the _Deploy Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
 +
 The _Deploy Environment Phases Overview_ screen is displayed:
 +
@@ -337,7 +337,7 @@ Select the _Insert Phase_ link underneath the _Phases Overview_ panel.
 . Switch to the _Deploy Environments Overview_ screen.
 +
 <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Deploy Environments The Deploy Environments Overview Screen>>
-. On the _Deploy Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _ Edit Phases_ link.
+. On the _Deploy Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
 . On the _Phases Overview_ panel, click the _Insert Phase_ link.
 +
 The _Insert Phase_ is displayed.
@@ -375,7 +375,7 @@ The Phase Position is also indicated on the _Phases Overview_ panel.
 In case you use the same Phase several times, adding a label is useful to provide additional information concerning the usage of the Phase.
 |===
 
-. Click__ Insert__ to confirm the creation of the new Phase.
+. Click __Insert__ to confirm the creation of the new Phase.
 +
 You can also click _Cancel_ to return to the previous screen without saving the changes.
 
@@ -399,7 +399,7 @@ image::ProjAdmin-DeployEnv-EditDeployEnvPhase.png[,576,253]
 For a description of the fields, refer to the section <<ProjAdm_DeployEnv.adoc#_projadm_deploenv_phasesinsert,Inserting a Deploy Environment Phase>>.
 . Click __Save __to save your changes.
 +
-You can also click__ Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
+You can also click __Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
 
 [[_projadm_deployenv_modifyorderphases]]
 ===== Changing the Order of the Deploy Environment Phases 
@@ -502,7 +502,7 @@ You can also click:
 * _Cancel_ to return to the _Phase Parameter Overview_ screen without saving a value.
 
 +
-. If you want to create a non-mandatory Phase Parameter, click the image:icons/icon_createparameter.png[,15,15] _ Create Parameter_ link next to a Phase Parameter.
+. If you want to create a non-mandatory Phase Parameter, click the image:icons/icon_createparameter.png[,15,15] _Create Parameter_ link next to a Phase Parameter.
 +
 The following pop-up window will be displayed.
 +
@@ -544,8 +544,8 @@ Parameters_ panel.
 . Switch to the _Deploy Environments Overview_ screen.
 +
 <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
-. On the _Deploy Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _ Edit Phases_ link.
-. On the__ Phases Overview__ panel, click the Delete link.
+. On the _Deploy Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
+. On the __Phases Overview__ panel, click the Delete link.
 +
 The _Delete Deploy Environment Phase_ screen is displayed.
 +

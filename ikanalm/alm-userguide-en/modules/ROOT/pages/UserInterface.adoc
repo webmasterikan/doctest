@@ -96,7 +96,7 @@ If you have User Access Rights, the following links are available:
 | Description
 
 |image:icons/view.gif[,15,15]  View
-|When you select the__ View__ option, a__ View__ panel will be displayed below the __Selected
+|When you select the __View__ option, a __View__ panel will be displayed below the __Selected
 Menu Indication__.
 
 You will not be able to edit any values.

@@ -74,7 +74,7 @@ The Project Stream identification is composed of:
 For non-expanded Project Streams, this field contains the name of the highest Level belonging to the Project Stream.
 This is logically the Production Level.
 
-In case a Level is optional, the image:icons/optional.gif[,15,15] _ Optional_ icon will be displayed in front of the Level Name.
+In case a Level is optional, the image:icons/optional.gif[,15,15] _Optional_ icon will be displayed in front of the Level Name.
 
 |Next Scheduled Request
 a|For Build Levels with active Schedule, this field displays the timestamp that the next Level Request is expected to run.
@@ -159,12 +159,12 @@ You (or the Project Manager) can unfreeze the Project Stream first by selecting 
 
 . Click the _Refresh_ button if you want to verify the changing status of the information on your Desktop.
 +
-The screen will be refreshed each time you click the__ Refresh__ button.
+The screen will be refreshed each time you click the __Refresh__ button.
 +
 
 [NOTE]
 ====
-If the__ Auto Refresh __option is activated, the Desktop will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
+If the __Auto Refresh__ option is activated, the Desktop will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
 ====
 . Click the _Add to Desktop_ button to open the _Add to Desktop_ pop-up window allowing you to add other elements to your desktop.
 +
@@ -175,7 +175,7 @@ If the__ Auto Refresh __option is activated, the Desktop will be refreshed each 
 (((Desktop ,Adding a Desktop Tab Page))) 
 
 . Select _Desktop_ on the Main Menu.
-. Click the image:icons/icon_NewDesktop.gif[,16,16] _ New Desktop_ button.
+. Click the image:icons/icon_NewDesktop.gif[,16,16] _New Desktop_ button.
 +
 
 [NOTE]
@@ -397,7 +397,7 @@ image::Desktop-ManageDesktop-Rearranging.png[,947,362]
 === Removing Desktop Elements 
 (((Desktop ,Removing Desktop Elements))) 
 
-To remove a Project Stream, Level or Package, click the image:icons/remove.gif[,15,15] __ Remove __button at the right of the element row.
+To remove a Project Stream, Level or Package, click the image:icons/remove.gif[,15,15] __Remove__ button at the right of the element row.
 
 The Desktop element is immediately removed from the _Desktop
 Overview_ screen.

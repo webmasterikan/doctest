@@ -8,7 +8,7 @@
 
 Toutes les opérations de création, de modification ou de suppression relatives aux objets et composants d`'administration globale sont enregistrées dans la base de données d`'IKAN ALM.
 
-Pour afficher l`'historique de ces opérations, vous pouvez cliquer sur l`'icône image:icons/history.gif[,15,15]  (ou le lien image:images/icons/history.gif[,15,15]  _Historique__) disponible dans tous les écrans d`'aperçu dans les sections d`'administration globale, ainsi que dans les écrans de modification tels que l`'écran des __Paramètres système__ et l`'écran __Modifier le Niveau__. 
+Pour afficher l`'historique de ces opérations, vous pouvez cliquer sur l`'icône image:icons/history.gif[,15,15]  (ou le lien image:images/icons/history.gif[,15,15]  __Historique__) disponible dans tous les écrans d`'aperçu dans les sections d`'administration globale, ainsi que dans les écrans de modification tels que l`'écran des __Paramètres système__ et l`'écran __Modifier le Niveau__. 
 
 [WARNING]
 --
