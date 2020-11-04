@@ -10,7 +10,7 @@ IKAN ALM currently supports different types of Version Control Repositories (VCR
 * <<GlobAdm_VCR.adoc#_globadm_vcr_cvs,CVS Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_vss,Visual SourceSafe (VSS) Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase,ClearCase Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_,PVCS Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs,PVCS Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc,TFVC Version Control Repositories>>
 
 
@@ -106,7 +106,7 @@ For more information, refer to the appropriate sections:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_cvs,CVS Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_vss,Visual SourceSafe (VSS) Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase,ClearCase Repositories>>
-* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_,PVCS Repositories>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs,PVCS Repositories>>
 * <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc,TFVC Version Control Repositories>>
 
 
@@ -1479,7 +1479,7 @@ View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging
 . Click __Back __to return to the __ClearCase Repositories Overview__ screen.
 
 
-[[_globadm_vcr_pvcs_]]
+[[_globadm_vcr_pvcs]]
 === PVCS Repositories 
 (((PVCS)))  (((Version Control Repositories ,PVCS))) 
 
