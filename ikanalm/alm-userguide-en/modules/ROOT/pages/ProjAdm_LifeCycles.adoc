@@ -112,7 +112,7 @@ The following actions are possible:
 * Modifying Lifecycle definitions
 ** <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlifecycle,Editing a Lifecycle>>
 ** <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_deletelifecycle,Deleting a Lifecycle>>
-** <<#_lifecyclemgt_historyview,Viewing the Lifecycle History>>
+** <<ProjAdm_LifeCycles.adoc#_lifecyclemgt_historyview,Viewing the Lifecycle History>>
 
 [[_plifecyclemgt_screen]]
 ==== The Lifecycles Overview Screen 

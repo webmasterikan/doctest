@@ -1,0 +1,909 @@
+[[_projadm_levels]]
+== Niveaux 
+(((Options relatives à l'administration des projets ,Niveaux)))  (((Niveaux)))  (((Administration des projets ,Niveaux))) 
+
+Cette option permet de définir des Niveaux et leurs Environnements, qui peuvent ensuite être associés à un Cycle de Vie d`'un Projet IKAN ALM.
+
+Un Niveau est un environnement logique, une étape dans le Cycle de Vie.
+Il consiste en un (ou plusieurs) Environnement de Construction et/ou un (ou plusieurs) Environnement de Déploiement qui sont des environnements physiques.
+
+Il y a trois types de Niveaux:
+
+* __Niveau de Construction__: Les Niveaux de Construction doivent avoir au moins un Environnement de Construction.
+* _Niveau de Test:_ Les Niveaux de Test doivent avoir au moins un Environnement de Construction ou de Déploiement. Un niveau de Test peut contenir typiquement un ou plusieurs Environnements de Construction pour exécuter des Reconstructions et un ou plusieurs Environnements de Déploiement pour les activités de déploiements et les tests.
+* _Niveau de Production:_ Les niveaux de productions doivent avoir au moins un Environnement de Construction ou de Déploiement. Un niveau de Production contient typiquement un ou plusieurs Environnements de Déploiement.
+
+
+[NOTE]
+====
+
+Avant de pouvoir définir des Environnements de Construction ou de Déploiement, les <<GlobAdm_Machines.adoc#_globadm_machines,Machines>> et les <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Outils de script>> doivent être définis.
+Cette définition relève de la responsabilité de l`'Administrateur Global pour IKAN ALM.
+Une fois les niveaux créés, vous devez les rattacher à un cycle de vie pour pouvoir les utiliser.
+====
+
+L`'option _Niveaux_ permet de démarrer les procédures suivantes:
+
+* Créer des Niveaux
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_createlevel,Créer un niveau de construction>>
+** <<ProjAdm_Levels.adoc#_beifijci,Créer un niveau de test ou de production>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>
+
+
+L`'écran _Aperçu des Niveaux_ vous permet de vérifier et modifier les informations concernant les Niveaux et les Environnements assignés.
+
+Les actions suivantes sont possibles:
+
+* Modifier les définitions des Niveaux
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Modifier les paramètres d`'un niveau>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_deletelevel,Supprimer un niveau>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_clonelevel,Cloner un Niveau>>
+* Modifier les Phases de niveau
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_levelphasesoverview,Écran de l`'aperçu des phases de niveau>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Modifier une Phase de niveau>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Insérer une Phase de niveau>>
+* Modifier les Approbations
+** <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Les approbations>>
+* Afficher l`'historique d`'un niveau
+** <<ProjAdm_Levels.adoc#_levelenvmgt_historyview,Afficher l`'historique d`'un niveau>>
+
+[[_plevelenvmgt_createlevel]]
+=== Créer un niveau de construction
+(((Niveaux ,Créer))) 
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Niveaux > Créer un Niveau de Construction__.
++
+L'écran _Créer un Niveau de Construction_ s'affiche.
++
+image::ProjAdmin-Levels-BuildLevel-Create.png[,467,436] 
++
+
+[NOTE]
+====
+Vous pouvez également accéder à cet écran à partir de l'écran __Modifier un Cycle de
+vie__.
+Sélectionnez __Cycles de vie > Aperçu__, sélectionnez le Cycle de vie requis et cliquez sur le lien __Créer
+un Niveau de Construction__.
+====
+. Complétez les champs pour le nouveau Niveau de Construction
++
+Les champs suivants sont disponibles.
+Les champs marqués d`'un astérisque rouge doivent être complétés obligatoirement.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Nom
+|Dans ce champ, saisissez la dénomination du nouveau niveau de Construction.
+
+|Description
+|Dans ce champ, vous pouvez saisir une description pour le nouveau niveau de Construction.
+
+|Type
+|Ce champ en lecture seule indique le Type de, dans ce cas __Construction__.
+
+|Verrouillé
+|Ce champ en lecture seule indique si le nouveau niveau est actuellement verrouillé ou non.
+
+Vous devez auditer le Projet pour déverrouiller le niveau de Construction. <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,Auditer un projet>>
+
+|Débogage
+|Indiquez si l`'option de _Débogage_ doit être activée ou non pour ce Niveau.
+
+Si l'option _Débogage_ est activée pour un Niveau, la Phase _Nettoyage copie de travail_ ne sera pas exécutée pour que le contenu de ce répertoire puisse être vérifié par un Utilisateur de type Administrateur et qu'il puisse exécuter une Phase personnalisée manuellement à des fins de test.
+
+|Type de notification
+a|Sélectionnez, à partir du menu déroulant, le Type de notification requis pour ce niveau de Construction.
+
+Les options suivantes sont disponibles:
+
+* Mail
+* Netsend
+* aucune notification
+
+Si l`'option _Mail_ ou _Netsend_ est sélectionnée, les notifications seront créées à la fin de la Requête de Niveau sur la base des critères de notification définis.
+La Notification est envoyée aux membres des Groupes: Utilisateurs du Projet, Administrateurs du Projet et des Demandeurs de Requête de Niveau.
+
+|Critère de notification
+a|Sélectionnez, à partir du menu déroulant, les critères de notification requis pour ce niveau de Construction.
+
+Les options suivantes sont disponibles:
+
+* _Toujours_
++
+Une Notification sera envoyée si la Requête de Niveau pour ce Niveau se termine avec le statut __Échouée__, _Avertissement_ ou __Réussie__.
+* _En cas d`'erreur_
++
+Une Notification sera envoyée si la Requête de Niveau pour ce Niveau se termine avec le statut __Échouée__.
+* _En cas de succès_
++
+Une Notification sera envoyée si la Requête de Niveau pour ce Niveau se termine avec le statut _Avertissement_ ou _Réussie_
+* _Jamais_
++
+Aucune Notification ne sera envoyée si la Requête de Niveau sur le Niveau se termine.
+
+|Plan horaire
+a|Sélectionnez, à partir du menu déroulant, un Plan horaire pour ce niveau de Construction.
+Ce Plan horaire sert à déterminer l`'intervalle pour lancer l`'exécution des constructions automatiquement.
+
+Exemples:
+
+Définissez au niveau de l`'administration globale:
+
+* _Construction nocturne:_ définissant un Plan horaire qui vérifiera le code chaque nuit et qui générera une Requête de Niveau, si le code a été modifié.
+* __Construction continue: __définissant un Plan horaire qui vérifiera le code chaque 10 ou 20 minutes et qui générera une Requête de Niveau, si le code a été modifié.
+
+_Note:_ C'est option n'est pas disponible pour les Projets de type Paquets.
+
+|Groupe d`'utilisateurs du demandeur
+|Sélectionnez, à partir du menu déroulant, le Groupe d`'utilisateurs du demandeur requis.
+Les membres de ce Groupe d`'utilisateurs disposeront des droits de définir des Requêtes de Niveau pour ce niveau de Construction.
+Si un Groupe d`'Utilisateurs du Projet a été défini, ce Groupe sera sélectionné comme Groupe d`'Utilisateurs du demandeur par défaut.
+
+|Cycle de vie
+|Sélectionnez, à partir du menu déroulant, le cycle de vie de rattachement.
+
+_Note:_ Si, dans l'écran __Modifier un Cycle de vie__, vous créez un Niveau de Construction en utilisant le lien __Créer
+un Niveau de Construction__, le nom du Cycle de vie sera déjà rempli.
+|===
+
+. Informations supplémentaires
++
+Le panneau _Niveaux de Construction définis dans
+le Projet_ affiche les différents Niveaux de construction définis dans le Projet.
++
+Pour une description détaillée de ce panneau et des liens disponibles, se référer à la section <<ProjAdm_Levels.adoc#_levelenvmgt_overview,Aperçu des niveaux>>.
+. Cliquez sur le bouton _Créer_ pour confirmer la création du nouveau niveau de Construction.
++
+Les boutons suivants sont également disponibles:
+
+* _Réinitialiser_ afin de nettoyer les champs en vue d`'enregistrer des nouvelles données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_beifijci]]
+=== Créer un niveau de test ou de production 
+(((Niveaux ,Créer un niveau de test)))  (((Niveaux ,Créer un niveau de production))) 
+
+[NOTE]
+====
+Les procédures pour la création de niveaux de Test et de Production sont identiques.
+====
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez _Niveaux > Créer un Niveau de Test_ ou __Créer un Niveau de Production__.
++
+L'écran _Créer un Niveau de Test_ ou _Créer
+un Niveau de Production_ s'affiche.
++
+image::ProjAdmin-Levels-ProductionLevel-Create.png[,508,489] 
++
+
+[NOTE]
+====
+Vous pouvez également accéder à cet écran à partir de l'écran __Modifier un Cycle de
+vie__.
+Sélectionnez _Cycles de vie > Aperçu_, sélectionnez le Cycle de vie requis et cliquez sur le lien _Créer
+un Niveau de Test_ ou le lien __Créer un Niveau
+de Production__.
+====
+. Complétez les champs pour le nouveau Niveau de Test ou de Production
++
+Les champs suivants sont disponibles.
+Les champs marqués d`'un astérisque rouge doivent être complétés obligatoirement.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Nom
+|Dans ce champ, saisissez la dénomination du nouveau niveau de Test ou de production.
+
+|Description
+|Dans ce champ, vous pouvez saisir une description pour le nouveau niveau de Test ou de production.
+
+|Type
+|Ce champ en lecture seule indique le Type de, dans ce cas il s`'agit du type _Test_ ou __Production__.
+
+|Verrouillé
+|Ce champ en lecture seule indique si le nouveau niveau est actuellement verrouillé ou non.
+
+Vous devez auditer le Projet pour déverrouiller le niveau de Test ou de production. <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,Auditer un projet>>
+
+|Débogage
+|Indiquez si l`'option de _Débogage_ doit être activée ou non pour ce Niveau.
+
+Si l'option _Débogage_ est activée pour un Niveau, la Phase _Nettoyage copie de travail_ ne sera pas exécutée pour que le contenu de ce répertoire puisse être vérifié par un Utilisateur de type Administrateur et qu'il puisse exécuter une Phase personnalisée manuellement à des fins de test.
+
+|Type de notification
+a|Sélectionnez, à partir du menu déroulant, le Type de notification requis pour ce niveau de Test ou de production.
+
+Les options suivantes sont disponibles:
+
+* Netsend
+* Mail
+* aucune notification
+
+Si l`'option _Mail_ ou _Netsend_ est sélectionnée, les notifications seront créées à la fin de la Requête de Niveau sur le Niveau sur base des critères de notification définis.
+La Notification est envoyée aux membres des Groupes: Utilisateurs de Projet, Administrateurs de Projet et des Demandeurs de Requête de Niveau.
+
+|Critère de notification
+a|Sélectionnez, à partir du menu déroulant, les critères de notification requis pour ce niveau de Test ou de production.
+
+Les options suivantes sont disponibles:
+
+* _Toujours_
++
+Une Notification sera envoyée si la Requête de Niveau pour ce Niveau se termine avec le statut __Échouée__, _Avertissement_ ou __Réussie__.
+* _En cas d`'erreur_
++
+Une Notification sera envoyée si la Requête de Niveau pour ce Niveau se termine avec le statut __Échouée__.
+* _En cas de succès_
++
+Une Notification sera envoyée si la Requête de Niveau pour ce Niveau se termine avec le statut _Avertissement_ ou _Réussie_
+* _Jamais_
++
+Aucune Notification ne sera envoyée si la Requête de Niveau sur le Niveau se termine.
+
+|Groupe d`'utilisateurs du demandeur
+|Sélectionnez, à partir du menu déroulant, le Groupe d`'utilisateurs du demandeur requis.
+Les membres de ce Groupe d`'utilisateurs disposeront des droits de définir des Requêtes de Niveau pour ce niveau de Test ou de production.
+Si un Groupe d`'Utilisateurs de Projet a été défini, ce Groupe sera sélectionné comme Groupe d`'utilisateurs du Demandeur par défaut.
+
+|Groupe d`'utilisateurs de pré-notification
+|Sélectionnez, à partir du menu déroulant, le Groupe d`'utilisateurs de pré-notification requis.
+Les membres de ce Groupe seront avertis quand une Requête de Niveau sera créée pour ce niveau.
+
+|Groupe d`'utilisateurs de post-notification
+|Sélectionnez, à partir du menu déroulant, le Groupe d`'utilisateurs de post-notification requis.
+Les membres de ce Groupe seront avertis quand une Requête de Niveau sera terminée, en fonction des critères de Post-notification.
+
+|Critère de post-notification
+a|Sélectionnez, à partir du menu déroulant, le critère de post-notification requis pour ce Niveau de Test ou de Production.
+
+Les options suivantes sont disponibles:
+
+* _Toujours_
++
+Une post-notification sera envoyée si la Requête de Niveau se termine avec le statut __Réussie__, _Avertissement_ ou __Échouée__, ou dans le cas d`'une __post__-approbation rejetée.
+* _En erreur/Rejetée_
++
+Une post-notification sera envoyée si la Requête de Niveau se termine avec le statut _Échouée_ ou dans le cas d`'une __post__-approbation rejetée.
+* _Réussie_
++
+Une post-notification sera envoyée si la Requête de Niveau se termine avec le statut _Réussie_ ou _Avertissement_.
+
+|Insérer après le Niveau
+|Le champ n'est disponible que si vous créez un Niveau de Test ou de Production en utilisant le lien _Créer un Niveau de Test_ ou _Créer
+un Niveau de Production_ à partir de l'écran __Modifier
+un Cycle de vie__.
+
+À partir de la liste déroulante, sélectionnez le Niveau qui doit précéder le Niveau de Test ou de Production que vous êtes en train de définir.
+
+Si vous avez utilisé l'option "Niveaux > Créer un Niveau de Test (ou de Production)" dans le sous-menu de la section Administration des projets, le nouveau Niveau de Test ou de Production sera créé après le Niveau de Test ou de Production existant éventuel.
+
+Vous pouvez toujours modifier la séquence des Niveaux en utilisant les options image:icons/up.gif[,15,15] _Monter_ ou image:images/icons/down.gif[,15,15] _ Descendre_ dans le panneau _Niveaux associés_ dans l'écran __Modifier
+un Cycle de vie__. <<ProjAdm_LifeCycles.adoc#_lifecycles_changingorderlevels,Modifier la séquence des niveaux>>
+
+|Cycle de vie
+|Sélectionnez, à partir du menu déroulant, le cycle de vie de rattachement.
+
+_Note:_ Si, dans l'écran __Modifier un Cycle de vie__, vous créez un Niveau de Test ou de Production en utilisant le lien _Créer
+un Niveau de Test_ ou __Créer un Niveau de Production__, le nom du Cycle de vie sera déjà rempli.
+|===
+
+. Vérifiez les détails des autres Niveaux de Test ou de Production définis pour le Projet.
++
+Le panneau _Niveaux de Test définis dans le Projet_ ou _Niveaux
+de Production définis dans le Projet_ affiche les différents Niveaux de test ou de production définis dans le Projet.
++
+Pour une description détaillée de ces panneaux et des liens disponibles, se référer à la section <<ProjAdm_Levels.adoc#_levelenvmgt_overview,Aperçu des niveaux>>.
+. Cliquez sur le bouton _Créer_ pour confirmer la création du nouveau niveau de Test ou de Production.
++
+Les boutons suivants sont également disponibles 
+
+* _Réinitialiser_ pour nettoyer les champs et restaurer les valeurs initiales.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer vos modifications.
+
+
+[[_levelenvmgt_overview]]
+=== Aperçu des niveaux
+
+L`'écran _Aperçu des Niveaux_ affiche les informations concernant les Niveaux de construction, de test et de production définis pour un Projet.
+
+Les actions suivantes sont possibles:
+
+* Modifier les définitions des Niveaux
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Modifier les paramètres d`'un niveau>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_deletelevel,Supprimer un niveau>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_clonelevel,Cloner un Niveau>>
+* Modifier les Phases de niveau 
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_levelphasesoverview,Écran de l`'aperçu des phases de niveau>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Modifier une Phase de niveau>>
+** <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Insérer une Phase de niveau>>
+* Afficher l`'historique d`'un niveau
+** <<ProjAdm_Levels.adoc#_levelenvmgt_historyview,Afficher l`'historique d`'un niveau>>
+
+[[_plevelenvmgt_accessing]]
+==== Écran de l`'administration des niveaux 
+(((Niveaux ,Aperçu))) 
+
+. Dans le contexte de l'__Administration des projets__, sélectionnez __Niveaux > Aperçu__.
++
+L'écran _Aperçu des Niveaux_ s'affiche:
++
+image::ProjAdmin-Levels-Overview.png[,975,366] 
+
+. Définissez les critères de recherche requis dans le panneau de recherche.
++
+La liste des éléments dans l'aperçu est synchronisée automatiquement en fonction des critères sélectionnés.
++
+Vous pouvez également:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* cliquer sur le lien _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* cliquer sur le lien _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les champs d`'information dans le panneau __Aperçu des Niveaux__.
++
+Pour une description détaillée des champs, se référer aux sections <<ProjAdm_Levels.adoc#_plevelenvmgt_createlevel,Créer un niveau de construction>> et <<ProjAdm_Levels.adoc#_beifijci,Créer un niveau de test ou de production>>.
+
+. Les liens suivants sont disponibles:
+
+* image:icons/edit.gif[,15,15] <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Modifier les paramètres d`'un niveau>>
+* image:icons/delete.gif[,15,15] <<ProjAdm_Levels.adoc#_plevelenvmgt_deletelevel,Supprimer un niveau>>
+* image:icons/clone.gif[,15,15] <<ProjAdm_Levels.adoc#_plevelenvmgt_clonelevel,Cloner un Niveau>>
+* image:icons/installed_phases.gif[,15,15] <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Modifier une Phase de niveau>>
+* image:icons/history.gif[,15,15] <<ProjAdm_Levels.adoc#_levelenvmgt_historyview,Afficher l`'historique d`'un niveau>>
+
+
+[[_plevelenvmgt_editlevel]]
+==== Modifier les paramètres d`'un niveau 
+(((Niveaux ,Modifier)))  (((Paramètres ,Niveau))) 
+
+. Accédez à l`'écran _Aperçu des Niveaux_ pour le Projet requis.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>
+
+. Dans le panneau __Aperçu des Niveaux__, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant le Niveau requis.
++
+L'écran _Modifier un Niveau_ s'affiche.
++
+image::ProjAdmin-Levels-TestLevel-Edit.png[,439,239] 
+
+. Ensuite, cliquez sur le lien _Modifier_ dans la fenêtre __Informations du Niveau__.
++
+La fenêtre suivante s'affiche:
++
+image::ProjAdmin-Levels-TestLevel-Edit_Popup.png[,462,427] 
++
+.. Modifiez les champs dans la fenêtre __Modifier un Niveau__.
++
+Pour une description des champs, se référer aux sections <<ProjAdm_Levels.adoc#_plevelenvmgt_createlevel,Créer un niveau de construction>> et <<ProjAdm_Levels.adoc#_beifijci,Créer un niveau de test ou de production>>.
+
+.. Cliquez sur le bouton _Oui_ pour confirmer la suppression de la Phase.
++
+Vous pouvez également cliquer sur le bouton _Actualiser_ pour revenir à la valeur d`'origine ou sur le bouton _Annuler_ pour retourner à l'écran précédant sans enregistrer vos modifications.
+
+. En-dessous du panneau __Informations du Niveau__, vous trouverez la liste des Phases définies, les Environnements et, optionnellement, les Pré- et Post-Approbations, ainsi que les liens nécessaires pour modifier des Phases, créer des Environnements de construction et de déploiement et, optionnellement, pour modifier la séquence des Environnements de déploiement et les Approbations.
++
+Pour plus d`'informations, se référer aux sections:
+
+* <<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Phases de niveau>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Modifier une Phase de niveau>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildenvironments,Créer un environnement de construction>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createdeployenvironments,Créer un environnement de déploiement>>
+* <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Les approbations>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_changedeploysequence,Modifier la séquence des environnements de déploiement>>
+
+
+[[_levelenvmgt_levelphases]]
+===== Phases de niveau 
+(((Phases de Niveaux)))  (((Niveaux ,Phases))) 
+
+Lors de la création d`'un Niveau (Construction, Test ou Production), IKAN ALM lui reliera automatiquement le flux de Phases de niveau de noyau. 
+
+Les Phases de noyau sont:
+
+* Récupération des Sources
+* Construction
+* Balisage
+* Déploiement
+* Nettoyage Copies de travail
+
+
+Pour les Niveaux associés à des Projets reliés à un Système de Suivi des Incidents, ceux-ci recevront une Phase de Suivi des Incidents supplémentaire.
+Sur un Niveau de construction, les recherches des numéros des Incidents dans les commentaires du RCV s`'effectueront dans cette Phase.
+
+Les Phases de Construction et de Déploiement communiquerons avec l'Agent exécutant la(les) Construction(s) ou le(s) Déploiement(s) pour démarrer, faire le suivi et établir le statut final des actions de Construction et de Déploiement. 
+
+[NOTE]
+====
+Le comportement d`'une phase dépend du Type de niveau auquel elle est reliée.
+Par exemple: une phase de Balisage est automatiquement reliée aux Niveaux de test et de production, mais rien ne se passera car le balisage se fait uniquement sur un Type de Niveau Construction.
+Ce comportement changera dans une version future d`'IKAN ALM.
+Pour le moment, nous vous conseillons de manuellement enlever la Phase de balisage pour les Niveaux de test et de production. 
+====
+
+Lors de l`'exécution d`'une Requête de Niveau sur ce Niveau, un Journal sera créé pour chacune des Phases. <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Informations détaillées>>
+
+Pour plus d`'informations, se référer aux procédures suivantes:
+
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_levelphasesoverview,Écran de l`'aperçu des phases de niveau>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_modifyorderphases,Modifier la séquence des Phases de niveau>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Modifier une Phase de niveau>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Afficher les Paramètres de Phase de niveau>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_deletephase,Supprimer une Phase de niveau>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Insérer une Phase de niveau>>
+
+[[_plevelenvmgt_levelphasesoverview]]
+====== Écran de l`'aperçu des phases de niveau
+ 
+. Dans le contexte de l'__Administration des projets__, sélectionnez __Niveaux > Aperçu__.
+
+. Devant le Niveau approprié, cliquez sur l`'icône image:icons/edit_phases.gif[,15,15] _Modifier les Phases_ pour afficher l`'aperçu des Phases de niveau.
+
+. Utilisez les liens dans le panneau _Aperçu des Phases_ pour modifier une Phase.
++
+Les liens suivants sont possibles:
+
+* Le lien image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _ Descendre_ pour modifier la séquence des Phases. <<ProjAdm_Levels.adoc#_plevelenvmgt_modifyorderphases,Modifier la séquence des Phases de niveau>>
+* Le lien image:icons/edit.gif[,15,15]  _Modifier_: Cette option permet de modifier les Informations de la Phase sélectionnée. <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Modifier une Phase de niveau>>
+* Le lien image:icons/icon_viewparameters.png[,15,15] _Voir les Paramètres_ pour gérer les Paramètres de phase obligatoires et optionnels. <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Afficher les Paramètres de Phase de niveau>>
+* Le lien image:icons/remove.gif[,15,15]  _Supprimer_: Cette option permet de supprimer une Phase. <<ProjAdm_Levels.adoc#_plevelenvmgt_deletephase,Supprimer une Phase de niveau>>
++
+
+[NOTE]
+====
+La modification des Phases pourrait avoir des effets indésirables sur le Cycle de Vie.
+Pour plus d'informations se référer au document _HOW TO Using and Developing a Phase in IKAN
+ALM_ (version anglaise).
+====
+
+. Insérez une Phase, si nécessaire.
++
+Cliquez sur le lien image:icons/edit_phases.gif[,15,15] _ Insérer
+une Phase_ en bas du panneau __Aperçu des Phases__. <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Insérer une Phase de niveau>>
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Niveaux__.
+
+[[_plevelenvmgt_modifyorderphases]]
+====== Modifier la séquence des Phases de niveau
+
+. Accédez à l`'__Aperçu des Niveaux__.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>
+
+. Cliquez sur le lien _Modifier les Phases _image:icons/edit_phases.gif[,15,15]  dans le panneau __Aperçu des Niveaux__.
+
+. Utilisez les liens image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _ Descendre_ devant la Phase de niveau pour modifier la position de la Phase sélectionnée dans la séquence. 
+
+. Utilisez le lien _Précédent_ pour retourner à l`'écran __Aperçu des Niveaux__.
+
+[[_plevelenvmgt_editlevelphases]]
+====== Modifier une Phase de niveau
+
+. Accédez à l`'__Aperçu des Niveaux__.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>
+
+. Cliquez sur le lien _Modifier les Phases_ image:icons/edit_phases.gif[,15,15]  dans le panneau __Aperçu des Niveaux__.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant la Phase que vous voulez modifier.
++
+L`'écran _Modifier une Phase de niveau_ s`'affiche.
++
+image::ProjAdmin-Levels-TestLevel-LevelPhase-Edit.png[,582,245] 
+
+. Modifiez les champs dans la fenêtre __Modifier une Phase de niveau__.
++
+Pour une description détaillée des champs, se référer à la section <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Insérer une Phase de niveau>>.
+
+. Cliquez sur le bouton _Enregistrer_ pour enregistrer vos modifications.
++
+Vous pouvez également cliquer sur le bouton _Actualiser_ pour revenir aux valeurs d`'origine ou sur le bouton _Annuler_ pour retourner à l'écran précédant sans enregistrer vos modifications.
+
+[[_plevelenvmgt_viewlevelphaseparams]]
+====== Afficher les Paramètres de Phase de niveau 
+(((Niveaux ,Phases ,Afficher les Paramètres de phase d'Environnement)))  (((Paramètres ,Phase de niveau))) 
+
+. Accédez à l`'écran __Aperçu des Niveaux__.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>
+
+. Cliquez sur le lien _Modifier les Phases _image:icons/edit_phases.gif[,15,15]  dans le panneau __Aperçu des Niveaux__.
+
+. Cliquez sur le lien image:icons/icon_viewparameters.png[,15,15] _Voir les Paramètres_ devant la Phase de niveau pour laquelle vous voulez gérer les Paramètres.
++
+L'écran _Aperçu des Paramètres de la phase_ s'affiche.
++
+image::ProjAdmin-Levels-TestLevel-EditPhases_ViewParams.png[,809,653] 
+
+. Vérifiez les Paramètres de Phases de niveau.
++
+Le panneau _Paramètres de la phase_ affiche tous les Paramètres définis de la Phase de niveau et permet de créer des Paramètres de Phase non-obligatoires.
++
+Les champs suivants sont disponibles:
++
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Modifiable
+| Description
+
+|Nom
+|Non
+|Le nom du Paramètre.
+
+|Valeur
+|Oui
+|La valeur du Paramètre.
+
+Initialement, au moment où la Phase est insérée, la valeur sera copiée à partir de la Valeur par défaut spécifiée dans l'Administration globale (si saisie).
+
+Ce champ peut être modifié en modifiant le Paramètre de phase.
+
+|Type d'intégration
+|Non
+a|Ce champ indique si la valeur du Paramètre est une simple valeur texte, ou si elle représente un lien (une intégration) vers un objet IKAN ALM de l`'Administration globale.
+
+Les valeurs possibles sont:
+
+* Aucun: la valeur se compose de texte simple
+* Transporteur: un lien vers un Transporteur
+* Référentiel: un lien vers un Référentiel de Contrôle de Version
+* Suivi des incidents: un lien vers un Système de Suivi des Incidents
+* Outil de script: un lien vers un Outil de script
+* ANT: un lien vers un Outil de script Ant
+* GRADLE: un lien vers un Outil de script Gradle
+* NANT: un lien vers un Outil de script NAnt
+* MAVEN2: un lien vers un Outil de script Maven2
+
+|Obligatoire
+|Non
+|Ce champ indique si le Paramètre a été créé automatiquement lors de l'insertion de la Phase dans le Niveau.
+Ceci est le cas pour les Paramètres obligatoires.
+
+Les Paramètres non-obligatoires doivent être créés après l'insertion de la Phase dans un Niveau, en utilisant le lien __Créer un
+Paramètre__.
+
+|Sécurisé
+|Non
+|Ce champ indique si le Paramètre est sécurisé ou non.
+|===
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier un Paramètre_ à côté du Paramètre de phase.
++
+La fenêtre suivante s'affiche.
++
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditValue.png[,470,181] 
++
+Spécifiez la valeur du Paramètre de phase de Niveau et cliquez sur le bouton _Enregistrer_ pour enregistrer la valeur.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Annuler_ pour retourner à l'écran _Aperçu des Paramètres de la phase_ sans enregistrer la valeur.
+
+ . Si vous voulez créer un Paramètre de phase non-obligatoire, cliquez sur le lien image:icons/icon_createparameter.png[,15,15] _Créer un Paramètre_ à côté du Paramètre de phase.
++
+L'écran suivant s'affiche.
++
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-CreateParam.png[,467,181] 
++
+Si une valeur de paramètre par défaut a été spécifiée dans la section Administration globale, cette valeur sera proposée.
++
+Spécifiez la valeur du Paramètre de phase de Niveau et cliquez sur le bouton __Créer__.
+
+* _Réinitialiser_ pour revenir à la valeur d`'origine.
+* _Annuler_ pour retourner à l'écran _Aperçu du Paramètre de phase_ sans enregistrer la valeur.
+
+. Si vous voulez supprimer un Paramètre de phase non-obligatoire, cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer un Paramètre_ à côté du Paramètre de phase.
++
+L'écran suivant s'affiche.
++
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-DeleteParamValue.png[,383,121] 
++
+Cliquez sur le bouton _Supprimer_ pour confirmer la suppression du Paramètre de phase de Niveau obligatoire.
++
+Vous pouvez également cliquer sur le bouton _Annuler_ pour fermer l'écran sans supprimer le Paramètre.
+
+. Cliquez sur le lien image:icons/Phase_EditEnvPhaseParameter.png[,15,15] _Modifier un Paramètre de phase global_ à côté du Paramètre de phase.
++
+L'Utilisateur sera renvoyé à l'écran _Modifier
+une Phase_ (dans le contexte de l'Administration globale) et la fenêtre _Modifier un paramètre de Phase_ s'affichera.
++
+image::ProjAdmin-BuildEnv-BuildEnvPhaseParams-EditGlobalPhaseParam.png[,811,681] 
++
+La procédure pour modifier le Paramètre de phase global est décrite dans la section <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Modifier les Paramètres de phase>>.
++
+Pour retourner au Paramètre de phase dans le contexte de l'Administration des projets, cliquez sur le lien image:icons/Phase_EditEnvPhaseParameter.png[,15,15] _ Paramètre
+de phase d'environnement_ approprié dans le panneau __Paramètres
+d'environnement connectés__.
+
+[[_plevelenvmgt_deletephase]]
+====== Supprimer une Phase de niveau
+
+. Accédez à l`'__Aperçu des Niveaux__.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>
+
+. Cliquez sur le lien _Modifier les Phases_ image:icons/edit_phases.gif[,15,15]  dans le panneau __Aperçu des Niveaux__.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ devant la Phase que vous voulez supprimer.
++
+L`'écran __Supprimer une Phase de niveau __s`'affiche.
++
+image::ProjAdmin-Levels-Level-LevelPhase-Delete.png[,757,403] 
++
+. Cliquez sur le bouton _Oui_ pour confirmer la suppression de la Phase.
++
+Vous pouvez également cliquer sur le bouton _Non_ pour retourner à l'écran précédent sans supprimer la Phase de Niveau.
+
+[[_plevelenvmgt_insertphase]]
+====== Insérer une Phase de niveau
+
+. Accédez à l`'__Aperçu des Niveaux__.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>
+
+. Cliquez sur le lien _Modifier les Phases_ image:icons/edit_phases.gif[,15,15]  dans le panneau __Aperçu des Niveaux__.
+
+. Dans le panneau __Aperçu des Phases__, cliquez sur le lien __Insérer une Phase__.
++
+L'écran _Insérer une Phase_ s'affiche. 
++
+image::ProjAdmin-Levels-TestLevel-InsertLevelPhase.png[,801,548] 
+
+. Sélectionnez la Phase à insérer à partir du panneau __Phases disponibles__.
+
+. Complétez les champs pour la nouvelle Phase.
++
+Les champs suivants sont disponibles.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Phase
+|Sélectionnez, à partir du panneau __Phases disponibles__, la Phase de niveau à ajouter.
+
+|Abandon si erreur
+|Dans ce champ, indiquez si la Requête de Niveau doit être considérée comme étant échouée si la Phase rencontre une erreur.
+
+|Insérer à la position
+|Ce champ indique la position dans le flux de travail du Niveau à laquelle la Phase sera insérée.
+La position de la Phase est également affichée dans le panneau __Aperçu
+des Phases__.
+
+|Phase suivante si erreur
+|Ce champ indique la Phase suivante à exécuter si la Phase rencontre une erreur.
+
+|Libellé
+|Dans ce champ optionnel vous pouvez saisir un libellé pour la Phase à insérer.
+
+Si vous utilisez la même Phase plusieurs fois, il est utile d'ajouter un libellé pour donner des informations additionnelles concernant l'usage de la Phase.
+|===
+
+. Cliquez sur le bouton _Insérer_ pour confirmer la création de la nouvelle Phase.
++
+Vous pouvez également utiliser le bouton _Annuler_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+
+[[_levelenvmgt_builddeployenv]]
+===== Les Paramètres des Environnements de construction et de déploiement
+
+L`'écran _Aperçu des Niveaux_ affiche également des informations concernant les Environnements de construction et de déploiement définis pour les Niveaux différents.
+
+Les liens pour créer des Environnements de construction et de déploiement, ainsi que pour modifier la Séquence des Environnements de déploiement sont disponibles dans l`'aperçu des environnements.
+
+[NOTE]
+====
+Vous pouvez également utiliser les options Environnements de construction et Environnements de déploiement dans le sous-menu pour créer les Environnements.
+Par contre, la Séquence des Environnements de déploiement peut seulement être modifiée dans l`'écran __Aperçu
+des Niveaux__.
+====
+
+Pour plus d`'informations, se référer aux procédures suivantes:
+
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildenvironments,Créer un environnement de construction>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createdeployenvironments,Créer un environnement de déploiement>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_changedeploysequence,Modifier la séquence des environnements de déploiement>>
+
+[[_plevelenvmgt_createbuildenvironments]]
+====== Créer un environnement de construction 
+(((Environnements de Construction ,Créer))) 
+
+. Accédez à l`'écran __Modifier un Niveau__.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Modifier les paramètres d`'un niveau>>
+
+. En-dessous du panneau __Environnements__, cliquez sur le lien __Créer un environnement de construction__.
++
+L`'écran suivant s`'affiche:
++
+image::ProjAdmin-Levels-BuildEnv-Create.png[,1018,522] 
++
+Pour une description complète de la procédure, se référer à la section <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Créer un environnement de construction>>.
+
+[[_plevelenvmgt_createdeployenvironments]]
+====== Créer un environnement de déploiement  
+(((Environnements de Déploiement ,Créer))) 
+
+. Accédez à l`'écran __Modifier un Niveau__.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Modifier les paramètres d`'un niveau>>
+
+. En-dessous du panneau __Environnements__, cliquez sur le lien __Créer un environnement de déploiement__.
++
+L`'écran suivant s`'affiche:
++
+image::ProjAdmin-Levels-DeployEnv-Create.png[,1016,532] 
++
+Pour une description complète de la procédure, se référer à la section <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Créer un environnement de déploiement>>.
+
+[[_plevelenvmgt_changedeploysequence]]
+====== Modifier la séquence des environnements de déploiement
+
+Quand un Environnement de déploiement est créé, le Numéro de séquence 0 lui est automatiquement attribué.
+Dans le cas où plusieurs Environnements de déploiement sont reliés à un Niveau donné, ils seront traités en parallèle car ils auront tous 0 comme Numéro de séquence.
+Pour qu`'ils soient traités dans un ordre séquentiel, vous devez modifier le Numéro de séquence.
+Lors de l`'exécution d`'une Requête de Niveau ayant plusieurs Déploiements, d`'abord les Déploiements avec un numéro de séquence 0 seront exécutés en parallèle.
+Si tous ces Déploiements ont réussi, les Déploiements avec le Numéro de séquence 1 seront exécutés en parallèle et ainsi de suite.
+
+Lors de la création d`'une Requête de Niveau, ce Numéro de séquence sera également affiché devant la dénomination de l`'Environnement de déploiement.
+
+Cette fonctionnalité s`'avère utile dans le cas où un Environnement de déploiement dépend d`'un autre et que vous ne voulez pas créer plusieurs Niveaux.
+Par exemple: un Environnement de déploiement met à jour la base de données d`'une application et un deuxième Environnement déploiera le code de l`'application (à condition que le Déploiement de la base de données soit réussi)
+
+. Dans l'écran __Modifier un Niveau__, en bas du panneau des Environnements, cliquez sur le lien __Modifier la séquence des Environnements de déploiement__. 
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Modifier les paramètres d`'un niveau>>
++
+
+[NOTE]
+====
+Ce lien n'est disponible que s'il existe plus d'un Environnement de déploiement pour le Niveau.
+====
++
+L'écran suivant s'affiche:
++
+image::ProjAdmin-Levels-EditDeploySequence.png[,414,213] 
++
+. Modifier le __Numéro de séquence__.
++
+Utilisez la liste déroulante à gauche de l`'Environnement de déploiement pour modifier le Numéro de séquence.
+
+. Cliquez sur le bouton _Enregistrer_ pour enregistrer la nouvelle séquence.
++
+Vous pouvez également cliquer sur le bouton _Actualiser_ pour revenir aux valeurs d`'origine ou sur le bouton _Annuler_ pour retourner à l'écran précédant sans enregistrer vos modifications.
+
+[[_levelenvmgt_approvalsequence]]
+===== Les approbations 
+(((Approbations ,Séquence d’approbations))) 
+
+Pour les Niveaux de Test et de Production vous pouvez spécifier la séquence des Pré- et Post-approbations.
+Pour plus d`'informations concernant les Approbations, se référer à la section <<Desktop_Approvals.adoc#_desktop_outstandingapprovals,Approbations>>
+
+. Accédez à l'écran __Aperçu des Niveaux__.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>
+
+. Dans le panneau __Aperçu des Niveaux__, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant le Niveau requis.
++
+L'écran _Modifier un Niveau_ s'affiche.
++
+image::ProjAdmin-Levels-Level-Edit.png[,986,483] 
++
+
+[NOTE]
+====
+Vous pouvez uniquement définir des Approbations pour les Niveaux de Test et de Production.
+====
++
+
+. Pour y accéder, cliquez sur le lien image:icons/icon_preApproval.png[,15,15] _Ajouter une Pré-approbation_ ou image:images/icons/icon_postApproval.png[,15,15] _ Ajouter une Post-approbation_ en bas de l'écran __Modifier un Niveau__.
++
+La fenêtre _Ajouter une Approbation_ s'affiche.
++
+image::ProjAdmin-Levels-ProductionLevel-LevelApprovalSequence.png[,399,147] 
+
+. Sélectionnez le _Groupe d`'utilisateurs_ requis à partir du menu déroulant. 
++
+Les Pré-approbations doivent être accordées avant l`'exécution de la Requête de Niveau étant donné qu`'elles permettent d`'éviter l`'exécution de la Requête de Niveau.
+Les Post-approbations doivent être accordées après l`'exécution de la Requête de Niveau étant donné qu`'elles permettent d`'empêcher de délivrer une Construction vers le Niveau suivant dans le Cycle de Vie.
+
+ . Définissez la position de nouveau Groupe d`'utilisateurs approbateur dans la séquence. 
++
+Sélectionnez le Groupe d`'utilisateurs après lequel le nouveau Groupe d`'utilisateurs doit être inséré à partir de la liste déroulante __Insérer
+après__.
++
+
+[NOTE]
+====
+Si vous ne sélectionnez pas de Groupe d`'utilisateurs approbateur existant à partir de la liste déroulante __Insérer
+après__, le nouveau Groupe d`'utilisateurs sera inséré au sommet de la séquence.
+====
+
+. Cliquez sur le bouton _Insérer_ pour confirmer les modifications.
++
+L'approbation est ajoutée à la Séquence dans l'écran __Modifier un Niveau__.
+
+. Si nécessaire, utilisez les liens image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _ Descendre_ pour modifier la position des différents Groupes d`'utilisateurs, ou utilisez le lien image:images/icons/delete.gif[,15,15] _ Enlever_ pour retirer le Groupe d`'utilisateurs de la liste de séquence. 
+
+. Répétez cette procédure pour définir toutes les Pré- et Post-Approbations requises.
+
+[[_plevelenvmgt_deletelevel]]
+==== Supprimer un niveau 
+(((Niveaux ,Supprimer))) 
+
+Si vous supprimer un Niveau, vous supprimez également les Environnements de construction et de déploiement connectés à ce Niveau, ainsi que toutes les informations historiques concernant les Requêtes de Niveau, les Constructions et les Déploiements.
+
+[NOTE]
+====
+Si le Niveau est toujours associé à un Cycle de Vie, vous ne pouvez pas supprimer le Niveau.
+====
+. Accédez à l`'écran _Niveaux_ pour le Projet requis.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>
+
+. Cliquez sur le lien _Supprimer_ affiché en-dessous des paramètres du niveau:
++
+L`'écran suivant s`'affiche:
++
+image::ProjAdmin-Levels-Level-Delete.png[,777,585] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression ou utilisez le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer le niveau.
+
+. Si vous essayez de supprimer un niveau associé à un cycle de vie, l`'écran suivant s`'affiche:
++
+image::ProjAdmin-Levels-Level-DeleteError.png[,503,466] 
++
+Enlever le niveau du cycle de vie avant de supprimer le niveau. <<ProjAdm_Levels.adoc#_plevelenvmgt_deletelevel,Supprimer un niveau>>
+
+[[_plevelenvmgt_clonelevel]]
+==== Cloner un Niveau
+
+. Accédez à l'écran __Aperçu des Niveaux__.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>
+
+. Cliquez sur le lien image:icons/clone.gif[,15,15]  _Cloner _devant le Niveau que vous voulez cloner.
++
+L'écran _Cloner un Niveau_ s'affiche.
++
+image::ProjAdmin-Levels-CloneLevel.png[,862,364] 
+
+. Modifiez les champs dans le panneau __Informations du Niveau__.
++
+Pour une description des champs, se référer aux sections <<ProjAdm_Levels.adoc#_plevelenvmgt_createlevel,Créer un niveau de construction>> et <<ProjAdm_Levels.adoc#_beifijci,Créer un niveau de test ou de production>>.
+
+. Cliquez sur _Cloner le Niveau_ pour confirmer l'action.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l'écran __Aperçu des Niveaux__.
++
+Les Environnements associés au Niveau seront automatiquement clonés en même temps que le Niveau.
+Le suffixe "CLONE" sera ajouté aux noms des Environnements.
+Après avoir cloné le Niveau, vous pourrez modifier ces noms.
+Sans doute, vous aurez également à modifier les Emplacements Source et surtout les Emplacements Cible des Environnements de déploiement clonés.
+
+[[_levelenvmgt_historyview]]
+==== Afficher l`'historique d`'un niveau 
+(((Niveaux ,Historique))) 
+
+. Accédez à l`'écran _Niveaux_ pour le Projet requis.
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ affiché en-dessous des paramètres du niveau pour afficher l`'écran __Aperçu de l`'Historique du Niveau__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique du Niveau__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
++
+Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.

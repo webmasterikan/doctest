@@ -1230,7 +1230,7 @@ For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#
 The following sections deal with the procedures involved when using the __Level Requests Overview__:
 
 * <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen,Level Requests Overview>>
-* <<#_desktop_lr_rssfeeds,The IKAN ALM RSS Functionality>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_rssfeeds,The IKAN ALM RSS Functionality>>
 * <<Desktop_LevelRequests.adoc#_desktop_lr_generatereport,Generating a Report>>
 * <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>
 

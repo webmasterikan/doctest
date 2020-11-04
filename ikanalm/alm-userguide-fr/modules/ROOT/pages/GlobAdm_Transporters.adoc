@@ -1,0 +1,1040 @@
+[[_globadm_transporters]]
+== Transporteurs 
+(((Administration globale ,Transporteurs))) 
+
+Chaque action de Construction ou de Déploiement exécutée par un Agent IKAN ALM comprend le transfert de codes Sources, d`'un Script ou d`'un résultat de construction entre l`'Agent IKAN ALM et le Serveur IKAN ALM.
+
+L`'Agent IKAN ALM peut résider localement sur le Serveur IKAN ALM ou sur une Machine distante (c`'est-à-dire, un Serveur autre que le Serveur IKAN ALM).
+
+Les Phases personnalisées qui ont été créées ou importées dans le Catalogue des Phases du Serveur IKAN ALM doivent être transportées et installées dans l'environnement d'exécution du Server IKAN ALM (Phases de Niveau personnalisées) ou de l'Agent (Phases de construction et de déploiement personnalisées).
+
+Le Transporteur est impliqué dans les processus de Construction et de Déploiement suivants:
+
+PROCESSUS DE CONSTRUCTION:
+
+* le transfert des codes Sources récupérés du Serveur IKAN ALM vers l`'Emplacement Source sur l`'Environnement de Construction,
+* le transfert du Script de construction à partir de l`'Emplacement des Scripts sur le Serveur IKAN ALM vers l`'Emplacement Source sur l`'Environnement de Construction (ce processus est exécuté uniquement si le Script de construction n`'est pas inclus dans les codes Sources),
+* le transfert du résultat de Construction compressé à partir de l`'Emplacement Cible sur l`'Environnement de Construction vers les Archives de Construction sur le Serveur IKAN ALM.
+
+
+PROCESSUS DE DEPLOIEMENT:
+
+* le transfert du résultat de construction à partir des Archives de Construction sur le Serveur IKAN ALM vers l`'Emplacement Source sur l`'Environnement de Déploiement,
+* le transfert du Script de Déploiement à partir de l`'Emplacement des Scripts sur le Serveur IKAN ALM vers l`'Emplacement Source sur l`'Environnement de Déploiement (ce processus est exécuté uniquement si le script de Déploiement n`'est pas inclus dans les codes Sources).
+
+
+Les actions de transfert sont toujours initiées par l`'Agent IKAN ALM.
+La définition d`'un Transporteur sera donc toujours une vue de l`'Agent IKAN ALM sur les Emplacements du Serveur IKAN ALM.
+Ces Emplacements peuvent être définis localement (l`'Agent étant sur la même Machine que le Serveur IKAN ALM) ou à distance (l`'Agent est sur une autre Machine que le Serveur IKAN ALM).
+
+Par conséquent, un Transporteur doit être défini pour une Machine spécifique reliée à un Environnement de Construction ou de Déploiement.
+L`'Agent IKAN ALM qui tourne sur cette Machine exécutera les actions de transfert.
+
+Le Transporteur est également impliqué dans le processus de distribution des Phases personnalisées du Catalogue des Phases vers l'environnement d'exécution du Serveur IKAN ALM (Phases de niveau) ou de l'Agent IKAN ALM (Phases de construction et de déploiement):
+
+* Les Phases de niveau:
++
+Avant l'exécution des Phases de niveau pour une Requête de niveau, toutes les Phases personnalisées non-publiées seront transportées à partir du Catalogue des Phases vers l'environnement d'exécution sur le Serveur IKAN ALM.
+Cela sera réalisé en utilisant le Transporteur associé au Serveur IKAN ALM.
+Les Phases de Niveau publiées ne seront transportées que si elles ne sont pas encore installées sur le Serveur IKAN ALM.
+Vous pouvez vérifier les Phases installées en utilisant le lien _Phases installées_ à côté de la Machine Serveur IKAN ALM dans l'__Aperçu des
+Machines__. <<GlobAdm_Machines.adoc#_globadm_machinesoverview,Aperçu des Machines>>
+* Les Phases de construction et de déploiement
++
+Avant l'exécution des Phases de construction/de déploiement pour une Construction/un Déploiement, toutes les Phases personnalisées non-publiées seront transportées à partir du Catalogue des Phases sur le Serveur IKAN ALM vers l'environnement d'exécution sur l'Agent IKAN ALM.
+Cela sera réalisé en utilisant le Transporter associé à l'Agent IKAN ALM.
+Les Phases de construction/de déploiement publiées ne seront transportées que si elles ne sont pas encore installées sur l'Agent IKAN ALM.
+Vous pouvez vérifier les Phases installées en utilisant le lien _Phases installées_ à côté de la Machine Agent IKAN ALM dans l'__Aperçu des Machines__. <<GlobAdm_Machines.adoc#_globadm_machinesoverview,Aperçu des Machines>>
+
+
+Les Emplacements relatifs à tous les Transporteurs distants doivent être définis dans la section __Paramètres système__. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+[NOTE]
+====
+Un Transporteur est activé en reliant le Transporteur à une Machine représentant l`'Agent IKAN ALM (<<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines Aperçu des Machines>>), et en reliant cette Machine à un Environnement de Construction ou de Déploiement (<<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Créer un environnement de construction>> ou <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Créer un environnement de déploiement>>).
+====
+
+Ce chapitre décrit trois Transporteurs différents, chacun favorisant des protocoles différents pour le transfert des codes Sources, des Scripts et des résultats de construction.
+
+Pour une description plus détaillée, se référer aux sections suivantes:
+
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,Transporteurs FileCopy>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp,Transporteurs FTP>>
+* <<GlobAdm_Transporters.adoc#_sglobadmin_secureshellclients,Transporteurs sécurisés SSH>>
+
+
+[[_sglobadm_transporter_create]]
+=== Créer un Protocole de transfert 
+(((Transporteurs ,Créer))) 
+
+[NOTE]
+====
+Cette option n'est disponible que si vous disposez de droits d'accès d'Administrateur global dans IKAN ALM.
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Créer__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-Transporters-Create.png[,572,254] 
+
+. Sélectionnez le _Type de Protocole de transfert_ que vous voulez créer.
++
+Le panneau _Détails_ pour le type de Protocole de transfert sélectionné s'affiche en-dessous.
+. Saisissez le _Nom_ du Protocole de transfert et ajoutez une _Description_ optionnelle.
+. Saisissez les détails du Protocole de transfert. 
++
+Pour plus d'informations concernant ces détails, se référer aux sections appropriées: 
+
+* <<GlobAdm_Transporters.adoc#_globadm_filecopycreate,Créer un Transporteur FileCopy>>
+* <<GlobAdm_Transporters.adoc#_globadm_ftpcreate,Créer un Transporteur FTP>>
+* <<GlobAdm_Transporters.adoc#_globadm_secureshellcreate,Créer un Transporteur sécurisé SSH>>
+
+[[_sglobadm_transporters_overview]]
+=== L'Aperçu des Protocoles de transfert 
+(((Transporteurs ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-Transporters-Overview.png[,1016,345] 
+
+. Définissez les critères de recherche requis dans le panneau de recherche.
++
+La liste des éléments dans l'aperçu est synchronisée automatiquement en fonction des critères sélectionnés.
++
+Vous pouvez également:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* cliquer sur le lien _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* cliquer sur le lien _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans le panneau __Aperçu des Protocoles de transfert__.
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles dans la fenêtre __Aperçu des Protocoles de transfert__:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d'Administrateur global.
+Elle permet de modifier la définition d'un Protocole de transfert.
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d'Administrateur global.
+Elle permet de supprimer la définition d'un Protocole de transfert.
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'Historique de toutes les opérations de création, de mise à jour ou de suppression relatives à un Protocole de transfert.
+|===
++
+Se référer aux sections suivantes pour plus d`'information:
+
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,Transporteurs FileCopy>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp,Transporteurs FTP>>
+* <<GlobAdm_Transporters.adoc#_sglobadmin_secureshellclients,Transporteurs sécurisés SSH>>
+
+
+[[_globadm_transporter_filecopy]]
+=== Transporteurs FileCopy 
+(((Transporteurs ,FileCopy)))  (((Transporteurs FileCopy))) 
+
+Un Transporteur FileCopy permet d'utiliser "file copy" pour transporter des Phases personnalisées, des fichiers et des répertoires entre le Serveur IKAN ALM et un Agent local ou distant exécutant les processus de construction ou de déploiement (voir l'introduction dans la section <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporteurs>>). 
+
+Vu que la plupart des actions de transport sont exécutées par l'Agent (le transport des Phases de niveau personnalisées est exécuté par le Serveur IKAN ALM) et que le Transporteur FileCopy permet de copier les ressources entre l'Agent et le Serveur IKAN ALM, des Transporteurs FileCopy différents doivent être définis pour un Agent (une Machine) local(e) et pour un Agent (une Machine) distant fonctionnant sur un autre Serveur que le Serveur IKAN ALM.
+
+Le Transporteur "`Local FileCopy`" est créé automatiquement lors de l`'installation d`'IKAN ALM et sera automatiquement relié à la Machine Serveur IKAN ALM.
+Ce Transporteur "`Local FileCopy`" est différent dans ce sens que il ne peut être ni modifié, ni mis à jour ni supprimé de l`'__Aperçu des Transporteurs FileCopy__.
+Sa définition est récupérée des paramètres spécifiés pour les Emplacements locaux dans l`'onglet _Environnement local_ des Paramètres système, et elle ne peut être modifiée qu`'à cet endroit. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+Si vous voulez utiliser FileCopy pour transférer des ressources vers une Machine (un Agent) autre que le Serveur IKAN ALM, un Transporteur FileCopy (distant) doit être défini.
+Gardez à l'esprit que les emplacements de préfixe spécifiés sont une représentation de la Machine Agent IKAN ALM sur la Machine Serveur IKAN ALM.
+Pour les Machines Windows, cela signifie que les emplacements des "Copies de travail", des "Archives de construction", du "Catalogue des Phases" et des "Scripts" doivent être partagés sur le Serveur IKAN ALM.
+Les préfixes dans la définition FileCopy utilisent la notation UNC contenant le nom du Serveur IKAN ALM et le répertoire partagé sur le Serveur IKAN ALM.
+Pour les Machines Linux/Unix, cela signifie que les emplacements des "Copies de travail", des "Archives de construction" et des "Scripts" doivent être montés sur la Machine Agent IKAN ALM et que le nom du montage doit être utilisé dans les différents préfixes de la définition du Transporteur FileCopy.
+
+[NOTE]
+====
+Faites attention aux problèmes de droits d`'accès pendant les actions de transfert FileCopy vers les emplacements sur le Serveur IKAN ALM distant si vous tournez un Agent IKAN ALM distant comme un service Windows ou un processus démon Linux/Unix.
+Les problèmes peuvent être résolus si le service/daemon tourne comme un Utilisateur ayant des droits d`'accès sur la partie partagée/montée du Serveur IKAN ALM, ou si la machine Agent IKAN ALM reçoit des droits d`'accès sur les emplacements sur le Serveur IKAN ALM.
+====
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<GlobAdm_Transporters.adoc#_globadm_filecopycreate,Créer un Transporteur FileCopy>>
+* <<GlobAdm_Transporters.adoc#_globadm_filecopyoverview,Aperçu des Transporteurs FileCopy>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy_edit,Modifier la définition d`'un transporteur FileCopy>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy_delete,Supprimer une définition de transporteur FileCopy>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy_history,Afficher l`'historique d`'un transporteur FileCopy>>
+
+[[_globadm_filecopycreate]]
+==== Créer un Transporteur FileCopy 
+(((Transporteurs FileCopy ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Créer__.
+
+. Dans le panneau de recherche, sélectionnez _FileCopy_ à partir de la liste déroulante dans le champ __Type__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-Transporters-FileCopy-Create.png[,781,463] 
+
+. Complétez les champs dans le panneau __Créer un Transporteur FileCopy__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Nom
+|Saisissez dans ce champ le nom du nouveau Transporteur FileCopy.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Transporteur FileCopy.
+Ce champ est optionnel.
+|===
+
+. Saisissez les champs dans le panneau __Détails du Transporteur FileCopy__.
++
+Les champs obligatoires sont marqués d'astérisque rouge.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Préfixe Emplacement des Copies de travail
+a|Saisissez le préfixe de l`'Emplacement des Copies de travail (l`'emplacement sur le Serveur IKAN ALM où l`'interface du RCV copie les codes Source récupérés pour qu`'ils soient disponibles pour un Agent IKAN ALM distant exécutant un processus de Construction). L`'emplacement sur le Serveur sera formé par l`'enchaînement de ce préfixe et de l`'emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+*Exemple:*
+
+* Pour un Transporteur Windows: `//IKAN110/alm`
++
+Dans cet exemple, le nom du Serveur IKAN ALM est "IKAN110" et "alm" est le nom du partage sur ce Serveur. 
++
+Si l`'Emplacement relatif des Copies de travail est établi à "`workCopy`" dans les Paramètres système, l`'Agent IKAN ALM essaiera de récupérer les codes Source à partir d`'un répertoire sous ``\\IKAN110/alm/workCopy``.
+* Pour un Transporteur Linux/Unix: `/mnt/ikan110/alm`
++
+Cet Emplacement est un montage d`'un répertoire sur le Serveur IKAN ALM (sur la Machine IKAN110) contenant l`'Emplacement des Copies de travail.
++
+Si l`'Emplacement relatif des Copies de travail est établi à "`workCopy`" dans les Paramètres système, l`'Agent IKAN ALM essaiera de récupérer les codes Source à partir d`'un répertoire sous ``/mnt/ikan110/alm/workCopy``.
+
+|Préfixe Emplacement Archives de construction
+|Saisissez le préfixe de l`'Emplacement des Archives de construction (l`'Emplacement où les Constructions sont sauvegardées et d`'où elles sont récupérées par un Agent IKAN ALM exécutant un processus de Construction ou de Déploiement). L`'Emplacement sur le Serveur sera formé par l`'enchaînement du préfixe et l`'Emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+Pour un exemple, se référer à la description du champ __Préfixe Emplacement
+des Copies de travail__.
+
+|Préfixe Emplacement des Scripts
+|Saisissez le préfixe de l`'Emplacement des Scripts (l`'Emplacement d`'où l`'Agent IKAN ALM récupérera le script de construction ou de déploiement, si ce script n`'est pas retrouvé dans les codes Source).
+
+L`'Emplacement sur le Serveur sera formé par l`'enchaînement du préfixe et l`'Emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+Pour un exemple, se référer à la description du champ __Préfixe Emplacement
+des Copies de travail__.
+
+|Préfixe Emplacement du Catalogue des Phases
+|Saisissez le préfixe de l'Emplacement du Catalogue des Phases (l'emplacement sur le Serveur IKAN ALM où sont sauvegardées les Phases importées ou créées).
+
+Si un Agent/Serveur IKAN ALM doit installer une Phase manquante, il utilisera ce préfixe et l'Emplacement du Catalogue des Phases relatif défini dans les Paramètres Système pour construire le chemin à utiliser pour copier la Phase manquante.
+|===
+
+. Une fois les champs remplis, cliquez sur le bouton __Créer__.
++
+La nouvelle définition du Transporteur FileCopy est ajoutée à l'__Aperçu des Transporteurs FileCopy__ en bas de l'écran.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporteurs>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+* <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===
+
+[[_globadm_filecopyoverview]]
+==== Aperçu des Transporteurs FileCopy 
+(((Transporteurs FileCopy ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
+
+. Spécifiez _FileCopy_ dans le champ _Type_ dans le panneau de recherche.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-Transporters-FileCopy-Overview.png[,1024,374] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Transporteurs FileCopy__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_Transporters.adoc#_globadm_filecopycreate,Créer un Transporteur FileCopy>>.
+
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un Transporteur FileCopy.
+
+<<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy_edit,Modifier la définition d`'un transporteur FileCopy>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition de Transporteur FileCopy.
+
+<<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy_delete,Supprimer une définition de transporteur FileCopy>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique d`'un Transporteur FileCopy.
+
+<<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy_history,Afficher l`'historique d`'un transporteur FileCopy>>
+|===
+
+[[_globadm_transporter_filecopy_edit]]
+==== Modifier la définition d`'un transporteur FileCopy 
+(((Transporteurs FileCopy ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Protocoles de transfert FileCopy qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier le Transporteur FileCopy sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-Transporters-FileCopy-Edit.png[,740,494] 
+
+. Si nécessaire, modifier les champs dans le panneau __Modifier le Transporteur FileCopy__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_Transporters.adoc#_globadm_filecopycreate,Créer un Transporteur FileCopy>>.
++
+
+[NOTE]
+====
+Le panneau __Machine(s) connectée(s__) affiche les Machines reliées au Transporteur sélectionné.
+====
+
+. Cliquez sur le bouton _Enregistrer_ pour sauvegarder vos modifications.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_transporter_filecopy_delete]]
+==== Supprimer une définition de transporteur FileCopy 
+(((Transporteurs FileCopy ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Protocoles de transfert FileCopy qui vous intéressent.
++
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer le Transporteur FileCopy sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-Transporters-FileCopy-Delete.png[,552,240] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression du Transporteur FileCopy.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer le Transporteur FileCopy.
++
+__Note:__ Si le Transporteur FileCopy est associé à une ou plusieurs Machines, l'écran suivant s'affiche:
++
+image::GlobAdm-Transporters-FileCopy-Delete-Error.png[,642,401] 
++
+Avant de pouvoir supprimer le Transporteur FileCopy, vous devez modifier la définition des Machines listées.
+
+[[_globadm_transporter_filecopy_history]]
+==== Afficher l`'historique d`'un transporteur FileCopy 
+(((Transporteurs FileCopy ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Protocoles de transfert FileCopy qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique du Transporteur FileCopy__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporteurs>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+* <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===
+
+[[_globadm_transporter_ftp]]
+=== Transporteurs FTP 
+(((Transporteurs ,FTP)))  (((Transporteurs FTP))) 
+
+Le Client Transporteur FTP intégré permet d'utiliser FTP comme protocole pour transporter une Phase personnalisée, des résultats de construction, des scripts ou des sources entre le Serveur IKAN ALM et un ou plusieurs Agents.
+
+[NOTE]
+====
+Un Serveur FTP doit être installé sur la machine Serveur IKAN ALM et doit être configuré correctement de sorte qu'il puisse contrôler les différents emplacements des Paramètres Système (les emplacements des Copies de travail, des Archives de construction, du Catalogue des Phases et des Scripts)
+====
+
+Avant de pouvoir utiliser le Client FTP pour les actions de Construction et de Déploiement, vous devez relier le Transporteur à une Machine représentant un Agent IKAN ALM et relier cette Machine aux Environnements de construction et de déploiement que vous voulez "`servir`" via FTP.
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<GlobAdm_Transporters.adoc#_globadm_ftpcreate,Créer un Transporteur FTP>>
+* <<GlobAdm_Transporters.adoc#_globadm_ftpoverview,Aperçu des Transporteurs FTP>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp_edit,Modifier la définition d`'un transporteur FTP>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp_delete,Supprimer une définition de transporteur FTP>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp_history,Afficher l`'historique d`'un transporteur FTP>>
+
+[[_globadm_ftpcreate]]
+==== Créer un Transporteur FTP 
+(((Transporteurs FTP ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Créer__.
+
+. Dans le panneau de recherche, sélectionnez _FTP_ à partir de la liste déroulante dans le champ __Type__.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-Transporters-FTP-Create.png[,777,628] 
+
+. Complétez les champs dans le panneau __Créer un Transporteur FTP__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Nom
+|Saisissez dans ce champ le nom du nouveau Transporteur FTP.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Transporteur FTP.
+Ce champ est optionnel.
+|===
+
+. Saisissez les champs dans le panneau __Détails du Transporteur FTP__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Utilisateur
+|Saisissez dans ce champ le Nom d`'Utilisateur.
+
+|Mot de passe
+|Saisissez dans ce champ le Mot de Passe.
+
+Les caractères seront remplacés par des astérisques.
+
+|Répétez le Mot de passe
+|Ressaisissez dans ce champ le Mot de Passe.
+
+|Nom du Serveur
+|Nom du Serveur
+
+Il permet de définir le nom de connexion dans le cas où ce nom serait différent du nom DHCP du Serveur IKAN ALM ou de l`'adresse IP.
+
+*Exemple:*
+
+Un Serveur FTP apparié au nom d`'une Machine hébergeante: ``ftp.ikan.be``.
+
+|Port du Serveur FTP
+|Saisissez le numéro de port du Serveur FTP installé sur le Serveur IKAN ALM.
+
+_Note:_ La valeur saisie dans ce champ écrasera la valeur spécifiée dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>> Si la valeur n`'est spécifiée ni ici ni dans les Paramètres système, le numéro de port FTP par défaut `21` sera utilisé.
+
+|Mode de Connexion
+|Sélectionnez le mode de connexion: _Passif_ ou __Actif__.
+
+|Style de répertoire
+|Sélectionnez le style de répertoire: _Unix_ ou __Windows__.
+
+|Préfixe Emplacement des Copies de travail
+|Saisissez le préfixe de l`'Emplacement des Copies de travail (l`'emplacement sur le serveur IKAN ALM où l`'interface du RCV copie les codes Source récupérés pour qu`'ils soient disponibles pour un Agent IKAN ALM distant exécutant un processus de Construction). L`'emplacement sur le Serveur sera formé par l`'enchaînement de ce préfixe et de l`'emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+*Exemple:*
+
+Si le Serveur FTP est configuré pour contrôler le répertoire (Windows) `E:/Ikan/alm/system` ou le répertoire (Linux/Unix) ``/ikan/alm/system``, un `/` suffira comme préfixe.
+
+Dans ce cas, les codes Source seront copiés à partir d`'un sous-répertoire de `/workCopy` sur le Serveur FTP vers l`'Agent via une commande GET.
+
+|Préfixe Emplacement Archives de construction
+|Saisissez le préfixe de l`'Emplacement des Archives de construction (l`'Emplacement où les Constructions sont sauvegardées et d`'où elles sont récupérées). L`'Emplacement sur le Serveur sera formé par l`'enchaînement du préfixe et l`'Emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+*Exemple:*
+
+Si le Serveur FTP est configuré pour contrôler le répertoire (Windows) `E:/Ikan/alm/system` ou le répertoire (Linux/Unix) ``/ikan/alm/system``, un `/` suffira comme préfixe.
+
+Dans ce cas, le résultat de construction sera copié à partir de l`'Agent vers le sous-répertoire `/buildArchive` sur le Serveur FTP via une commande PUT.
+
+|Préfixe Emplacement des Scripts
+|Saisissez le préfixe de l`'Emplacement des Scripts (l`'Emplacement d`'où l`'Agent IKAN ALM récupèrera le script de construction ou de déploiement, si ce script n`'est pas retrouvé dans les codes Source).
+
+L`'Emplacement sur le Serveur sera formé par l`'enchaînement du préfixe et l`'Emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+Pour un exemple, se référer à la description du champ __Préfixe Emplacement
+des Copies de travail__.
+
+_Exemple:_
+
+Si le Serveur FTP est configuré pour contrôler le répertoire (Windows) `E:/Ikan/alm/system` ou le répertoire (Linux/Unix) ``/ikan/alm/system``, un `/` suffira comme préfixe.
+
+|Préfixe Chemin du Catalogue des Phases
+|Saisissez le préfixe de l'Emplacement du Catalogue des Phases (l'emplacement sur le Serveur IKAN ALM où sont sauvegardées les Phases importées ou créées).
+
+Si un Agent/Serveur IKAN ALM doit installer une Phase manquante, il utilisera ce préfixe et l'Emplacement du Catalogue des Phases relatif défini dans les Paramètres Système pour construire le chemin à utiliser pour copier la Phase manquante.
+|===
+
+. Après avoir complété les champs, cliquez sur le bouton __Créer__.
++
+Le nouveau Transporteur FTP est ajouté à l`'__Aperçu
+des Transporteurs FTP__ dans la partie inférieure de l`'écran.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporteurs>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+* <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===
+
+[[_globadm_ftpoverview]]
+==== Aperçu des Transporteurs FTP  
+(((Transporteurs FTP ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
+
+. Spécifiez _FTP_ dans le champ _Type_ dans le panneau de recherche.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-Transporters-FTP-Overview.png[,1032,252] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Clients FTP__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_Transporters.adoc#_globadm_ftpcreate,Créer un Transporteur FTP>>.
+
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un Transporteur FTP.
+
+<<GlobAdm_Transporters.adoc#_globadm_transporter_ftp_edit,Modifier la définition d`'un transporteur FTP>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition de Transporteur FTP.
+
+<<GlobAdm_Transporters.adoc#_globadm_transporter_ftp_delete,Supprimer une définition de transporteur FTP>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique d`'un Transporteur FTP.
+
+<<GlobAdm_Transporters.adoc#_globadm_transporter_ftp_history,Afficher l`'historique d`'un transporteur FTP>>
+|===
+
+[[_globadm_transporter_ftp_edit]]
+==== Modifier la définition d`'un transporteur FTP 
+(((Transporteurs FTP ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Protocoles de transfert FTP qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier le Transporteur FTP sélectionné.
++
+L`'écran suivant s`'affiche: 
++
+image::GlobAdm-Transporters-FTP-Edit.png[,748,670] 
+
+. Si nécessaire, modifier les champs dans le panneau __Modifier un Transporteur FTP__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_Transporters.adoc#_globadm_ftpcreate,Créer un Transporteur FTP>>.
++
+
+[NOTE]
+====
+Le panneau __Machine(s) connectée(s__) affiche les Machines reliées au Transporteur sélectionné.
+====
+
+. Cliquez sur le bouton _Enregistrer_ pour sauvegarder vos modifications.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_transporter_ftp_delete]]
+==== Supprimer une définition de transporteur FTP 
+(((Transporteurs FTP ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Protocoles de transfert FTP qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer le Transporteur FTP sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-Transporters-FTP-Delete.png[,478,392] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression du Transporteur FTP.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer le Transporteur FTP.
++
+__Note: __Si le Transporteur FTP est associé à une ou plusieurs Machine(s), l`'écran suivant s`'affiche:
++
+image::GlobAdm-Transporters-FTP-Delete-Error.png[,640,528] 
++
+Avant de pouvoir supprimer le Transporteur FTP, vous devez modifier la définition des Machines listées.
+
+[[_globadm_transporter_ftp_history]]
+==== Afficher l`'historique d`'un transporteur FTP 
+(((Transporteurs FTP ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Protocoles de transfert FTP qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique du Transporteur FTP__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporteurs>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+* <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===
+
+[[_sglobadmin_secureshellclients]]
+=== Transporteurs sécurisés SSH 
+(((Transporteurs ,SSH)))  (((Transporteurs sécurisés SSH))) 
+
+Les Transporteurs SSH sécurisés permettent de transporter de manière sécurisée les Phases personnalisées, les sources, les scripts et les résultats de construction entre le Serveur IKAN ALM et un Agent IKAN ALM.
+Le Transporteur SSH fait partie de l'installation de l'Agent IKAN ALM.
+La section suivante décrit plus en détail sa configuration.
+
+[NOTE]
+====
+Un Serveur SSH doit être installé sur la machine Serveur IKAN ALM et doit être configuré correctement de sorte qu'il puisse contrôler les différents emplacements des Paramètres Système (les emplacements des Copies de travail, des Archives de construction, du Catalogue des Phases et des Scripts)
+====
+
+Pour pouvoir assurer un transport sécurisé pour les actions de construction et de déploiement, vous devez associer le Transporteur à une Machine représentant l'Agent IKAN ALM et associer cette Machine aux Environnements de construction et de déploiement que vous voulez "servir" via Secure Shell. 
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<GlobAdm_Transporters.adoc#_globadm_secureshellcreate,Créer un Transporteur sécurisé SSH>>
+* <<GlobAdm_Transporters.adoc#_globadm_secureshelloverview,Aperçu des Transporteurs sécurisés SSH>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell_edit,Modifier la définition d`'un transporteur SSH>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell_delete,Supprimer une définition de transporteur SSH>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell_history,Afficher l`'historique d`'un transporteur SSH>>
+
+[[_globadm_secureshellcreate]]
+==== Créer un Transporteur sécurisé SSH 
+(((Transporteurs sécurisés SSH ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Créer__.
+
+. Dans le panneau de recherche, sélectionnez _SSH_ à partir de la liste déroulante dans le champ __Type__.
++
+L`'écran suivant s`'affiche: 
++
+image::GlobAdm-Transporters-SecureShell-Create.png[,1013,512] 
+
+. Complétez les champs dans le panneau __Créer un Transporteur SSH__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Nom
+|Saisissez dans ce champ le nom du nouveau Transporteur sécurisé SSH.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Transporteur sécurisé SSH.
+Ce champ est optionnel.
+|===
+
+. Saisissez les champs dans le panneau __Détails du Transporteur SSH__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Type d`'authentification
+a|Sélectionnez, à partir du menu déroulant, le type d`'authentification nécessaire.
+
+Les types suivants sont disponibles:
+
+* Nom/Mot de passe
+* Clé authentification
+
+|Nom d`'utilisateur
+|Si vous utilisez l`'authentification __Nom/Mot
+de passe__, saisissez dans ce champ le Nom d`'Utilisateur.
+
+|Mot de passe
+|Si vous utilisez l`'authentification __Nom/Mot
+de passe__, saisissez dans ce champ le Mot de Passe.
+
+Les caractères seront remplacés par des astérisques.
+
+|Répétez le mot de passe
+|Ressaisissez dans ce champ le Mot de Passe.
+
+|Chemin du fichier des clés
+|Si vous utilisez l`'authentification __Clé
+authentification__, saisissez dans ce champ le chemin du fichier des clés.
+
+|Phrase de passe
+|Si vous utilisez une phrase de passe pour protéger votre clé d`'authentification, saisissez dans ce champ la phrase de passe.
+
+Les caractères seront remplacés par des astérisques.
+
+|Répétez la Phrase de passe
+|Répétez dans ce champ la phrase de passe.
+
+|Nom du Serveur
+|Ce champ est optionnel.
+
+Il permet de définir le nom de la Machine hébergeant le Serveur IKAN ALM dans le cas où ce nom serait différent du nom DHCP de cette Machine ou de l`'adresse IP.
+
+|Port du Serveur SSH
+|Saisissez le numéro de port du Serveur SSH installé sur le Serveur IKAN ALM.
+
+*Note:* La valeur saisie dans ce champ écrasera la valeur spécifiée dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>> Si la valeur n`'est spécifiée ni ici ni dans les Paramètres système, le numéro de port par défaut `22` sera utilisé.
+
+|Préfixe Emplacement des Copies de travail
+|Saisissez le préfixe de l`'Emplacement des Copies de travail (l`'emplacement sur le serveur IKAN ALM où l`'interface du RCV copie les codes Source récupérés pour qu`'ils soient disponibles pour un Agent IKAN ALM distant exécutant un processus de Construction). L`'emplacement sur le Serveur sera formé par l`'enchaînement de ce préfixe et de l`'emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+*EXEMPLE 1:*
+
+Un Serveur IKAN ALM sur une Machine Windows sur laquelle est installé un Serveur SSH supportant la notation "`cygdrive`".
+
+Paramètres système: l`'Emplacement des Copies de travail Local FileCopy établi à `e:/ikan/alm/workCopy` et l`'Emplacement relatif des Copies de travail établi comme "`workCopy`" résultent en `/cygdrive/e/ikan/alm` comme préfixe du chemin de l`'Emplacement des Copies de travail.
+
+L`'Agent IKAN ALM essaiera de copier de manière sécurisée les codes Source d`'un Emplacement sous le répertoire ``/cygdrive/e/ikan/alm/workCopy``.
+
+*EXEMPLE 2:*
+
+Un Serveur IKAN ALM sur une Machine Linux.
+
+Paramètres système: l`'Emplacement des Copies de travail Local FileCopy établi à `/opt/ikan/alm/workCopy` et l`'Emplacement relatif des Copies de travail établi comme "`workCopy`" résultent en `/opt/ikan/alm` comme préfixe du chemin de l`'Emplacement des Copies de travail.
+
+L`'Agent IKAN ALM essaiera de copier de manière sécurisée les codes Source d`'un Emplacement sous le répertoire ``/opt/ikan/alm/workCopy``.
+
+|Préfixe Emplacement Archives de construction
+|Saisissez le préfixe de l`'Emplacement des Archives de construction (l`'Emplacement où les Constructions sont sauvegardées et d`'où elles sont récupérées). L`'Emplacement sur le Serveur sera formé par l`'enchaînement du préfixe et l`'Emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+Pour un exemple, se référer à la description du champ __Préfixe Emplacement
+des Copies de travail__.
+
+|Préfixe Emplacement des Scripts
+|Saisissez le préfixe de l`'Emplacement des Scripts.
+L`'Emplacement sur le Serveur sera formé par l`'enchaînement du préfixe et l`'Emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+Pour un exemple, se référer à la description du champ __Préfixe Emplacement
+des Copies de travail__.
+
+|Préfixe Chemin du Catalogue des Phases
+|Saisissez le préfixe de l'Emplacement du Catalogue des Phases (l'emplacement sur le Serveur IKAN ALM où sont sauvegardées les Phases importées ou créées).
+
+Si un Agent/Serveur IKAN ALM doit installer une Phase manquante, il utilisera ce préfixe et l'Emplacement du Catalogue des Phases relatif défini dans les Paramètres Système pour construire le chemin à utiliser pour copier la Phase manquante.
+|===
+
+. Après avoir complété les champs, cliquez sur le bouton __Créer__.
++
+Le nouveau Transporteur sécurisé SSH est ajouté à l`'__Aperçu
+des Transporteurs SSH__ dans la partie inférieure de l`'écran.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporteurs>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+* <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===
+
+[[_globadm_secureshelloverview]]
+==== Aperçu des Transporteurs sécurisés SSH 
+(((Transporteurs sécurisés SSH ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
+
+. Spécifiez _SSH_ dans le champ _Type_ dans le panneau de recherche.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-Transporters-SecureShell-Overview.png[,1026,284] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Clients SSH__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_Transporters.adoc#_globadm_secureshellcreate,Créer un Transporteur sécurisé SSH>>.
+
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un Transporteur FTP. <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell_edit,Modifier la définition d`'un transporteur SSH>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition de Transporteur FTP.
+
+<<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell_delete,Supprimer une définition de transporteur SSH>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique d`'un Transporteur FTP.
+
+<<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell_history,Afficher l`'historique d`'un transporteur SSH>>
+|===
+
+[[_globadm_transporter_secureshell_edit]]
+==== Modifier la définition d`'un transporteur SSH 
+(((Transporteurs sécurisés SSH ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Protocoles de transfert SSH qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier le Transporteur SSH sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-Transporters-SecureShell-Edit.png[,974,392] 
+
+. Si nécessaire, modifier les champs dans le panneau __Modifier le Transporteur SSH__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_Transporters.adoc#_globadm_secureshellcreate,Créer un Transporteur sécurisé SSH>>.
++
+
+[NOTE]
+====
+Le panneau __Machine(s) connectée(s__) affiche les Machines reliées au Transporteur sélectionné.
+====
+
+ . Cliquez sur le bouton _Enregistrer_ pour sauvegarder vos modifications.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_transporter_secureshell_delete]]
+==== Supprimer une définition de transporteur SSH 
+(((Transporteurs sécurisés SSH ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Protocoles de transfert SSH qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer le Transporteur SSH sélectionné.
++
+Si le Transporteur SSH n'est pas associé à une Machine, l'écran suivant s'affiche:
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-Transporters-SecureShell-Delete.png[,488,397] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression du Transporteur SSH.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer le Transporteur SSH.
++
+__Note: __Si le Transporteur SSH est associé à une ou plusieurs Machine(s), l`'écran suivant s`'affiche:
++
+image::GlobAdm-Transporters-SecureShell-Delete-Error.png[,669,570] 
++
+Avant de pouvoir supprimer le Transporteur SSH, vous devez modifier la définition des Machines listées.
+
+[[_globadm_transporter_secureshell_history]]
+==== Afficher l`'historique d`'un transporteur SSH 
+(((Transporteurs sécurisés SSH ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
++
+L'aperçu des tous les Protocoles de transfert définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Protocoles de transfert SSH qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique du Transporteur SSH__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporteurs>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+* <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===

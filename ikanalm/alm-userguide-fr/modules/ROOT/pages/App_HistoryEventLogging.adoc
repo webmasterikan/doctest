@@ -1,0 +1,239 @@
+
+:sectnums!:
+
+[appendix]
+[[_historyeventlogging]]
+== Enregistrement de l`'historique et des événements 
+(((Historique)))  (((Événements)))  (((Enregistrement ,Historique et événements))) 
+
+Toutes les opérations de création, de modification ou de suppression relatives aux objets et composants d`'administration globale sont enregistrées dans la base de données d`'IKAN ALM.
+
+Pour afficher l`'historique de ces opérations, vous pouvez cliquer sur l`'icône image:icons/history.gif[,15,15]  (ou le lien image:images/icons/history.gif[,15,15]  _Historique__) disponible dans tous les écrans d`'aperçu dans les sections d`'administration globale, ainsi que dans les écrans de modification tels que l`'écran des __Paramètres système__ et l`'écran __Modifier le Niveau__. 
+
+[WARNING]
+--
+Les opérations de suppression résultant de suppressions en cascade ne sont enregistrées dans l`'historique que pour les objets de regroupement.
+
+Par exemple: si vous supprimez un Projet, uniquement la suppression du Projet même sera enregistrée dans l`'historique et pas la suppression des Branches, Cycles de Vie, Niveaux, Environnements de Construction et Environnements de Déploiements associés.
+--
+
+. Accédez à l`'écran d`'aperçu approprié.
++
+Pour plus d`'informations concernant l`'accès à un écran d`'aperçu, référez-vous à la section concernée.
++
+Un écran semblable à celui-ci s`'affichera:
++
+image::History_OverviewScreen.png[,944,434] 
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'écran __Aperçu de l`'Historique__.
++
+Ce lien est disponible sur ou en-dessous du panneau d`'aperçu.
++
+
+[NOTE]
+====
+Puisque l`'écran des Paramètres système ne dispose pas de panneau d`'aperçu, le lien _Historique_ pour les Paramètres système se trouve dans l`'écran _Paramètres
+système_ même.
+====
++
+Un écran semblable à celui-ci s`'affichera:
++
+image::History_Versions.png[,720,528] 
++
+Les sections suivantes sont affichées:
+
+* Le panneau _État actuel_ affiche l`'état actuel de l`'objet
+* Un sous-panneau permet de restreindre la recherche aux versions d`'un type d`'objet spécifique.
++
+Ce sous-panneau n`'est disponible que pour les types d`'objet ayant une association (tels que les Utilisateurs ou les Groupes d`'Utilisateurs dans la section des Paramètres système, et les Niveaux et Cycles de Vie dans la section d`'Administration des Projets) ou pour les types d`'objet dont l`'historique est affiché dans les écrans de leur type d`'objet de regroupement (tels que les Paramètres de construction, pour lesquels l`'historique est affiché sur le même écran que l`'Environnement de Construction).
+
+* Le panneau des _Versions_
+. Limitez la liste des éléments affichés dans le panneau des __Versions__.
++
+Pour certains objets, un sous-panneau permet de restreindre le nombre d`'éléments affichés.
++
+Spécifiez les critères de sélection requis et cliquez sur le bouton __Rechercher__.
+Vous pouvez également utiliser le bouton _Réinitialiser_ pour vider les champs de recherche.
++
+Le tableau suivant liste les différentes options de sélection par type d`'objet de recherche:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Type d`'objet recherché
+| Critère de sélection disponible
+
+|Branches
+|Branches du Projet
+
+Dépendances de la Branche maître
+
+Dépendances des Branches dépendantes
+
+|Cycles de Vie
+|Cycles de vie
+
+Associations du Cycle de vie
+
+|Environnement de Construction
+|Environnements de construction
+
+Phases d`'Environnement de construction
+
+Paramètres de construction
+
+|Environnement de Déploiement
+|Environnements de déploiement
+
+Phases d`'Environnement de déploiement
+
+Paramètres de déploiement
+
+|Groupes d`'utilisateurs
+|Groupe d`'utilisateurs
+
+Associations d`'Utilisateurs
+
+|Machines
+|Machines
+
+Paramètres de machine
+
+|Niveaux
+|Niveaux
+
+Phases d'Environnement de niveau
+
+Associations de Phases de niveau
+
+Associations de Cycles de vie
+
+Associations de Groupes Pré-Approbateurs
+
+Associations de Groupes Post-Approbateurs
+
+|Paquets
+|Paquets
+
+Fichiers modifiés
+
+|Groupes de Paquets de Construction
+|Groupes de Paquets de Construction
+
+Associations du Groupe de Paquets de Construction
+
+|Phases
+|Phases
+
+Paramètres de la phase
+
+|Utilisateurs
+|Utilisateurs
+
+Associations Groupes - Utilisateurs
+|===
++
+
+[NOTE]
+====
+
+Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent être rangées par ordre alphabétique (ascendant ou descendant). 
+====
+
+. Vérifiez les informations affichées dans le panneau des __Versions__. 
++
+En-dessous du panneau __Etat actuel__, le panneau des _Versions_ s`'affiche listant toutes les modifications faites à cet objet ou aux objets associés.
+L`'état du premier élément non associé dans la liste devrait toujours être le même que l`'état actuel de l`'objet.
++
+
+[NOTE]
+====
+Il est possible que le panneau des versions soit vide ou qu`'elle ne liste pas toutes les versions précédentes.
+Les objets créés lors du processus d`'installation ne disposeront pas d`'une version de création.
+Les objets créés ou modifiés dans une version de SCM4ALL antérieure à la version 4.3 n`'ont pas d`'historique dans la base de données d`'IKAN ALM.
+====
++
+Les champs d`'information suivants sont disponibles:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Version
+|La version de l`'objet au moment où la modification a été enregistrée.
+
+|[OID objet]
+|l`'Identifiant de l`'objet (uniquement pour les Niveaux, les Environnements de Construction et les Environnements de Déploiement).
+
+|[Nom]
+|La dénomination de l`'Environnement ou du Paramètre (uniquement pour les Environnements de Construction et les Environnements de Déploiement et leurs Paramètres).
+
+|[Type d`'Objet]
+|Le type d`'objet qui a été modifié (uniquement pour les types d`'objet ayant une association).
+
+|[Nom du niveau]
+|La dénomination du Niveau (uniquement pour les Cycles de Vie).
+
+|Date de Modification
+|La date et l`'heure auxquelles la modification a été enregistrée.
+
+|Type d`'Action
+a|Les types d`'action possibles sont:
+
+* _Créé_
++
+L`'objet a été créé.
+* _Modifié_
++
+L`'objet a été modifié.
+* _Ajouté_ (pour une association)
++
+L`'association a été ajoutée.
+* _Retiré_ (pour une association)
++
+L`'association a été supprimée.
+* _Fichiers modifiés_ (pour un Paquet)
++
+Fichiers qui ont été ajoutés ou supprimés du Paquet, ou leur révision a été changée.
+
+|Demandeur
+|Le nom de l`'Utilisateur responsable de la modification.
+|===
+
+. Comparez une version spécifique avec la version actuelle de l`'objet.
++
+Sélectionnez la version à comparer en cliquant sur son numéro de version dans l`'aperçu.
++
+Le panneau __Comparaison des Versions __est ajoutée à droite du panneau __Versions__.
++
+image::History_Differences.png[,878,509] 
++
+Le panneau _Comparaison des Versions_ affiche les différences entre la version actuelle de l`'objet (affichée dans la colonne "`actuelle`") et la version sélectionnée de l`'objet (affichée dans la colonne "`sélectionnée`").
+
+* La partie supérieure du panneau _Comparaison des Versions_ affiche la version, la date de modification, le type d`'action et le demandeur pour les deux versions comparées.
+* La partie inférieure affiche les valeurs spécifiques à l`'objet pour les deux versions comparées, mettant l`'accent sur les champs présentant des différences.
++
+
+[NOTE]
+====
+Le panneau _Comparaison des Versions_ n`'est pas affichée pour l`'association Groupe d`'Utilisateurs - Utilisateur et non plus pour les Paquets.
+Voir les écrans exemples ci-dessous.
+====
++
+
+*Exemple 1 - Association Groupe d’Utilisateurs - Utilisateur*
++
+Le panneau est remplacé par le panneau __Groupe d`'Utilisateurs - Utilisateur__.
++
+image::History_Differences-UserGroupUserAssociation.png[,1010,467] 
++
+*Exemple 2 - Fichiers Modifiés (Paquets)*
++
+Le panneau est remplacé par le panneau __Fichiers
+modifiés__, affichant les fichiers ajoutés (vert), modifiés (noir) ou supprimés (rouge).
++
+image::History_Differences-PackagesModifiedFiles.png[,912,528] 
+
+
+:sectnums:

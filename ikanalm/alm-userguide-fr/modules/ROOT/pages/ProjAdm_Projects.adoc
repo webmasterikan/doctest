@@ -1,0 +1,373 @@
+[[_projadm_projectsoverview_hidingshowing]]
+[[_projadm_projects]]
+== Projets 
+(((Administration des projets ,Projets)))  (((Projets))) 
+
+L`'écran _Aperçu des Projets_ fournit les informations concernant les Projets gérés par IKAN ALM.
+Tous les Utilisateurs IKAN ALM peuvent afficher l'Aperçu des Projets.
+Cependant, seuls les utilisateurs ayant des droits d'affichage (appartenant au Groupe Utilisateurs du Projet) peuvent afficher les paramètres du Projet et seuls les Utilisateurs ayant des droits d'accès d'Administrateur sur le Projet (appartenant au Groupe Administrateurs du Projet) peuvent modifier le projet.
+
+Se référer aux procédures suivantes pour plus d`'information:
+
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_accessing,Écran de l`'aperçu des projets>>
+* <<ProjAdm_ProjMgt_ProjectName.adoc#_projadmin_projectsoverview_viewing,Afficher les paramètres d’un projet>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_deleting,Supprimer un projet>>
+* <<ProjAdm_Projects.adoc#_porjadm_projectsoverview_locking,Verrouiller/Déverrouiller un projet>>
+* <<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Cacher/Montrer un Projet>>
+* <<ProjAdm_Projects.adoc#_projadm_projectsoverview_historyview,Afficher l`'historique d`'un projet>>
+
+[[_projadmin_projectsoverview_accessing]]
+=== Écran de l`'aperçu des projets
+(((Projets ,Aperçu))) 
+
+. Cliquez sur l'icône _Administration des projets _image:icons/icon_ProjectAdmin_13x13.png[,13,13]  dans le Menu Principal.
++
+L'écran __Aperçu des Projets __s'affiche.
++
+image::ProjAdmin-Projects-Overview.png[,1035,425] 
++
+. Définissez les critères de recherche requis dans le panneau de recherche.
++
+La liste des éléments dans l'aperçu est synchronisée automatiquement en fonction des critères sélectionnés.
++
+Vous pouvez également:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* cliquer sur le lien _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* cliquer sur le lien _Réinitialiser la recherche_ pour nettoyer les champs.
+* sélectionnez un Filtre à partir de la liste déroulante (si des Filtres ont été définis) ou utilisez le lien _Sauvegarder le Filtre_ pour sauvegarder les critères de recherche actuels sous forme d'un Filtre pour utilisation ultérieure.
++
+Pour plus d`'informations concernant l'usage des Filtres, se référer à la section <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Définir des Filtres de recherche>>
+. Vérifiez les informations disponibles dans la fenêtre __Aperçu des Projets__.
++
+Pour une description, se référer à la section <<GlobAdm_Project.adoc#_globadm_projectcreate,Créer un projet dans IKAN ALM>>.
+. En fonction de vos droits d`'accès, les liens suivants peuvent être disponibles dans le panneau __Aperçu des Projets__.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Lien
+| Description
+
+|image:icons/view.gif[,15,15] 
+|Afficher
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Utilisateur de Projet.
+Elle permet d`'afficher les paramètres du Projet sélectionné.
+
+<<ProjAdm_ProjMgt_ProjectName.adoc#_projadmin_projectsoverview_viewing,Afficher les paramètres d’un projet>>
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur de projet.
+Elle permet de modifier les Paramètres du Projet sélectionné et d`'accéder aux autres options relatives à l`'administration des Projets.
+
+<<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur de projet.
+Elle permet de supprimer le Projet sélectionné.
+
+<<ProjAdm_Projects.adoc#_projadmin_projectsoverview_deleting,Supprimer un projet>>
+
+|image:icons/lock.gif[,15,15]  / image:images/icons/unlock.gif[,15,15] 
+|Verrouiller / Déverrouiller
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur de projet.
+Elle permet de verrouiller ou déverrouiller le Projet sélectionné.
+
+<<ProjAdm_Projects.adoc#_porjadm_projectsoverview_locking,Verrouiller/Déverrouiller un projet>>
+
+|image:icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
+|Cacher / Montrer
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur de projet.
+Elle permet de cacher le Projet sélectionné.
+
+<<ProjAdm_Projects.adoc#_projadm_projectsoverview_hidingshowing,Cacher/Montrer un Projet>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d'Utilisateur de Projet.
+Elle permet d`'afficher l`'Historique de toutes les opérations de création, de modification ou de suppression relatives à un Projet.
+
+<<ProjAdm_Projects.adoc#_projadm_projectsoverview_historyview,Afficher l`'historique d`'un projet>>
+|===
+
+
+=== Afficher les paramètres d`'un projet 
+(((Projets ,Afficher))) 
+
+[NOTE]
+====
+Cette option n'est disponible que pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Utilisateur.
+====
+
+. Cliquez sur l'icône image:icons/icon_ProjectAdmin_13x13.png[,13,13]  _Administration des projets _dans le Menu Principal.
+. Cliquez sur le lien image:icons/view.gif[,15,15] _Afficher_ dans le panneau __Aperçu des Projets__.
++
+Ce lien est disponible si vous avez des droits d`'accès d`'Utilisateur sur le Projet.
++
+L'écran _Informations sur le Projet_ s'affiche:
++
+image::ProjAdmin-Projects-View.png[,864,529] 
++
+. Vérifiez les Paramètres.
++
+Pour la description des champs, se référer à <<GlobAdm_Project.adoc#_globadm_projectcreate,Créer un projet dans IKAN ALM>>.
++
+En-dessous du panneau __Informations sur le Projet__, les liens et boutons suivants sont disponibles:
+
+* __Historique__. Ce lien affichera l'écran __Aperçu de l'Historique du Projet__.
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran __Aperçu des Projets__.
++
+
+[NOTE]
+====
+Pour faciliter l'affichage de tous les paramètres du Projet, les actions principales des Utilisateurs du Projet sont regroupées dans des sous-panneaux à droite de panneau __Informations
+sur le Projet__. 
+====
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
+
+[[_projadmin_projectsoverview_editing]]
+=== Modifier les paramètres d`'un projet 
+(((Projets ,Modifier))) 
+
+. Dans le menu principal, cliquez sur l`'icône image:icons/icon_ProjectAdmin_13x13.png[,13,13]  _Administration des Projets_.
+
+. Pour y accéder, cliquez sur l'icône image:icons/edit.gif[,15,15] _Modifier_ dans le panneau Aperçu des Projets.
++
+
+[NOTE]
+====
+Ce lien est disponible si vous avez des droits d`'accès d'Administrateur sur le Projet.
+====
++
+L'écran _Informations sur le Projet_ s'affiche.
++
+image::ProjAdmin-Projects-AdminRights-Edit.png[,594,732] 
++
+. Cliquez sur le bouton __Modifier__.
++
+La fenêtre _Modifier le Projet_ s'affiche.
++
+image::ProjAdmin-Projects-Edit_Edit.png[,508,515] 
++
+. Faites les modifications requises et cliquez sur le bouton __Sauvegarder__.
++
+
+[WARNING]
+--
+Dès que les Constructions sont effectuées pour un Projet, la modification du nom de Projet a un impact important car toutes les Constructions déjà sauvegardées dans les Archives de construction deviendront inaccessibles.
+
+Vous pouvez toujours déplacer les anciennes Constructions vers le nouvel Emplacement des Archives de constructions pour les différentes Branches Secondaires du Projet.
+Cela sera mentionné au moment de l'audit du projet.
+--
++
+Le panneau d`'aperçu affiche les informations suivantes pour chaque Projet:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Nom
+|Ce champ contient la dénomination du Projet.
+
+|Description
+|Ce champ contient la description du Projet.
+
+|Type de Projet
+a|Ce champ, accessible en lecture seulement, contient le type de Projet:
+
+* Édition Versions
+* Paquets
+
+Cette information est définie à la création du projet (ou au clonage) par l`'Administrateur global. <<GlobAdm_Project.adoc#_globadm_projectcreate,Créer un projet dans IKAN ALM>>
+
+|Verrouillé
+|Ce champ indique si le Projet est verrouillé ou non.
+
+Il est impossible de créer des Requêtes de Niveau pour un Projet verrouillé.
+
+|Caché
+|Ce champ, accessible en lecture seulement, indique si le Projet est caché ou non.
+
+Par défaut, un Projet qui vient d`'être créé n`'est pas caché.
+Pour plus d`'informations, se référer à la section <<ProjAdm_Projects.adoc#_porjadm_projectsoverview_locking,Verrouiller/Déverrouiller un projet>>.
+
+|Référentiel
+|Ce champ indique le RCV (Référentiel de contrôle de version) utilisé pour le Projet.
+
+|Nom de Projet dans le RCV
+|Ce champ contient la dénomination du Projet dans le RCV.
+
+|Système de Suivi des Incidents
+|Ce champ contient la dénomination du Système de Suivi des Incidents externe.
+
+Si un Système de Suivi des Incidents est sélectionné, IKAN ALM créera automatiquement une Phase de Niveau de Suivi des Incidents, si un nouveau Niveau est créé pour le Projet. <<App_Phases.adoc#_phases_levelphases_issuetracking,Suivi des Incidents>>
+
+Ce champ n`'est visible que si un Système de Suivi des Incidents externe est défini dans IKAN ALM. <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking,Suivi des Incidents>>
+
+|Type outil de construction
+|Ce champ contient le Type d`'Outil de Construction utilisé pour ce Projet.
+
+|Type outil de déploiement
+|Ce champ contient le Type d`'Outil de Déploiement utilisé pour ce Projet.
+
+|Script de construction
+|Ce champ contient le nom du script de construction utilisé pour ce Projet.
+
+Si le script de construction se trouve dans le répertoire racine du Projet, cette indication réfère directement le nom du fichier, par exemple __build.xml__.
+
+Si le script de construction se trouve dans un autre répertoire du Projet, cette indication réfère le chemin relatif du répertoire, par exemple __/dir1/build/build.xml__.
+
+Si ce champ n'est pas rempli, le Script de construction peut être spécifié au niveau de l'Environnement de construction, ou comme un Paramètre de phase de la Phase "Exécution script".
+
+|Script de déploiement
+|Ce champ _peut_ contenir le nom du script de déploiement utilisé pour le Projet.
+
+Si le script de déploiement se trouve dans le répertoire racine du Projet, cette indication réfère directement le nom du fichier, par exemple __deploy.xml__.
+
+Si le script de déploiement se trouve dans un autre répertoire du Projet, cette indication réfère le chemin relatif du répertoire, par exemple __/dir1/deploy/deploy.xml__.
+
+Si ce champ n'est pas rempli, le Script de déploiement peut être spécifié au niveau de l'Environnement de déploiement, ou comme un Paramètre de phase de la Phase "Exécution script".
+
+|Groupe Utilisateurs
+|Ce champ contient le nom du Groupe d`'utilisateurs ayant des droits d`'accès usuels pour ce Projet.
+Ces Utilisateurs seront notifiés du résultat de Requêtes de Niveau suivant les paramètres de notification spécifiés pour le Niveau (<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,Écran de l`'administration des niveaux>>).
+
+Ce Groupe d`'utilisateurs sera le Demandeur par défaut lors de la création d`'une nouvelle Requête de Niveau.
+Ce champ peut rester vide.
+Dans ce cas, tous les Utilisateurs IKAN ALM auront des droits d`'accès d`'Utilisateurs de Projet.
+
+__Note:__ Les Utilisateurs ayant des droits d`'accès d`'Administrateur global ou d`'Administrateur de projet auront toujours des droits d`'accès d`'Utilisateur de projet.
+
+|Groupe Administrateurs
+|Ce champ contient le nom du Groupe d`'Administrateurs ayant des droits d`'accès administratifs pour ce Projet.
+
+_Note:_ Les Utilisateurs ayant des droits d`'accès d`'Administrateur global ou d`'Administrateur de projet auront toujours des droits d`'accès d`'Utilisateur de projet.
+|===
+
+. Les boutons suivants sont également disponibles:
+
+* _Enregistrer_ pour sauvegarder les modifications.
+* __Actualiser __pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Annuler_ pour fermer la fenêtre.
+
+. Si vous cliquez sur le bouton _Sauvegarder_ ou le bouton __Annuler__, la page _Informations sur le Projet_ s'affichera.
++
+Sur cette page, les boutons suivants sont disponibles
+
+* _Vérifier le nom du Projet dans le RCV_ permet de vérifier si le nom du Projet RCV est disponible. Cette fonction utilisera les Paramètres globaux du Projet pour établir une connexion avec le RCV associé au Projet afin de vérifier si le nom du Projet RCV existe déjà dans le RCV.
+* _Historique_ pour afficher l'écran __Aperçu de l'Historique du Projet__.
+* _Cloner_ pour afficher l'écran __Cloner un Projet__. Pour plus d`'informations, se référer à la section <<GlobAdm_Project.adoc#_globadm_projectclone,Cloner un projet existant>>.
+* _Verrouiller_ pour verrouiller le Projet. Cela consiste à bloquer toutes les activités du Projet, telles que les Requêtes de Niveau créées manuellement ou planifiées. Il peut s`'avérer utile de verrouiller un Projet, par exemple, si les Paramètres de configuration ont changé ou si des actions administratives sont nécessaires sur le RCV.
+* _Déverrouiller_ pour enlever le blocage de toutes les activités du Projet, telles que les Requêtes de Niveau créées manuellement ou planifiées. Après avoir complété la maintenance, vous devez déverrouiller un Projet.
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran __Aperçu des Projets__.
+
+. À droite, notez les sous-menus contenant les options de l'__Administration des projets__. 
++
+Pour une description complète des options relatives à l`'administration des projets, se référer à la section <<ProjAdm_ProjMgtOptions.adoc#_projadm_projmgtoptions,Options relatives à l`'administration des projets>>
++
+Pour faciliter la définition d'un Projet, les actions d'administration de projet principales sont regroupées dans les sous-panneaux à droite du panneau __Informations sur le Projet__.
++
+image::ProjAdmin-Projects-EasyAccessPanels.png[,610,411] 
++
+Pour un aperçu des options disponibles dans le sous-menu, se référer à la section <<ProjAdm_ProjMgtOptions.adoc#_projadm_projmgtoptions,Options relatives à l`'administration des projets>>.
+
+[[_projadmin_projectsoverview_deleting]]
+=== Supprimer un projet 
+(((Projets ,Supprimer))) 
+
+. Cliquez sur l'icône image:icons/icon_ProjectAdmin_13x13.png[,13,13]  _Administration des projets _dans le Menu Principal.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ dans le panneau __Aperçu des Projets__.
++
+L`'écran suivant s`'affiche:
++
+image::ProjAdmin-Projects-Delete.png[,982,563] 
++
+. Vérifiez si vous voulez irrévocablement supprimer le Projet.
++
+Si vous supprimer un Projet, les Branches, les Cycles de Vie, les Niveaux, les Environnements et l`'information historique (Requêtes de Niveau, Constructions, Déploiements, etc.) associés à ce Projet seront également supprimés.
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression.
++
+Vous pouvez également cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_porjadm_projectsoverview_locking]]
+=== Verrouiller/Déverrouiller un projet 
+(((Projets ,Verrouiller)))  (((Projets ,Déverrouiller)))  (((Verrouiller ,Projet)))  (((Déverrouiller ,Projet))) 
+
+Verrouiller un Projet consiste à bloquer toutes les activités du Projet, telles que les Requêtes de Niveau créées manuellement ou planifiées.
+Il peut s`'avérer utile de verrouiller un Projet, par exemple, si les Paramètres de configuration ont changé ou si des actions administratives sont nécessaires sur le RCV.
+Déverrouiller le Projet signifie que vous autorisez à nouveau ces actions pour le Projet
+
+. Dans le menu principal, cliquez sur l`'icône image:icons/icon_ProjectAdmin_13x13.png[,13,13]  _Administration des Projets_.
+
+. Cliquez sur le lien image:icons/lock.gif[,15,15] _Verrouiller_ ou image:images/icons/unlock.gif[,15,15] _ Déverrouiller_ dans le panneau __Aperçu des Projets__.
++
+
+[NOTE]
+====
+Cette fonctionnalité est également disponible via le bouton _Verrouiller/Déverrouiller_ sur le panneau __Informations
+sur le Projet__. <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+====
+
+
+=== Cacher/Montrer un Projet 
+(((Projets ,Cacher)))  (((Projets ,Montrer))) 
+
+En définissant un Projet comme "`caché`", par défaut, il ne sera plus affiché dans les panneaux d`'aperçu.
+Cela peut s`'avérer très utile pour ne plus afficher d`'anciens Projets sans perdre les informations historiques (Requêtes de Niveau, ...) associées à ces Projets.
+
+. Cliquez sur l'icône image:icons/icon_ProjectAdmin_13x13.png[,13,13]  _Administration des projets _dans le Menu Principal.
+
+. Cliquez sur le lien image:icons/hide.gif[,15,15] _Cacher_ devant le Projet que vous voulez cacher.
++
+Le Projet ne sera plus affiché dans l'aperçu parce que les Projets cachés ne sont pas montrés par défaut.
+Pour l'afficher à nouveau, vous devez établir le critères de recherche _Montrer
+les Projets cachés_ à _Oui_ ou _Tout_ dans le panneau de recherche.
+
+. Pour "`montrer`" un Projet caché, cliquez sur le lien image:icons/show.gif[,15,15]  _Montrer_.
++
+L`'icône appropriée s`'affichera.
++
+
+[NOTE]
+====
+Le critère _Montrer
+les Projets cachés_ a été ajoutée aux panneaux de recherche afin de pouvoir spécifier si vous voulez afficher les Projets cachés ou non.
+Cliquez sur le lien _Montrer les options avancées_ pour afficher ce critère.
+====
+
+[[_projadm_projectsoverview_historyview]]
+=== Afficher l`'historique d`'un projet 
+(((Projets ,Historique))) 
+
+. Cliquez sur l'icône image:icons/icon_ProjectAdmin_13x13.png[,13,13]  _Administration des projets _dans le Menu Principal.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ dans le panneau _Aperçu des Projets_ pour afficher l`'écran __Aperçu de l`'Historique du Projet__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique du Projet__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
++
+Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
++
+
+[NOTE]
+====
+Ce lien est également disponible sur le panneau __Informations
+sur le Projet__. <<ProjAdm_ProjMgt_ProjectName.adoc#_projadmin_projectsoverview_viewing,Afficher les
+paramètres d’un projet>>
+====

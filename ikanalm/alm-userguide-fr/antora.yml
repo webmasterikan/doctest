@@ -1,0 +1,6 @@
+name: alm-userguide-fr
+title: IKAN ALM User Guide (French)
+version: '5.8'
+start_page: ROOT:Introduction.adoc
+nav:
+- modules/ROOT/nav.adoc

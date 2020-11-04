@@ -27,13 +27,13 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Creating Phase Parameters>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Editing Phase Parameters>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Deleting Phase Parameters>>
-* <<#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massreplacing,Mass Replacing Phases>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massdeleting,Mass Deleting Phases>>
 * <<GlobAdm_Phases.adoc#_globadm_phases_deleting,Deleting a Phase Definition>>
 * <<GlobAdm_Phases.adoc#_globadm_phases_exporting,Exporting a Phase Definition>>
 * <<GlobAdm_Phases.adoc#_globadm_phases_copying,Copying a Phase Definition>>
-* <<#_globadm_phases_history,Viewing the Phase History>>
+* <<GlobAdm_Phases.adoc#_globadm_phases_history,Viewing the Phase History>>
 * <<GlobAdm_Phases.adoc#_globadm_phases_importing,Importing a Phase Definition>>
 
 
@@ -268,7 +268,7 @@ It allows copying a Phase.
 This option is available to all IKAN ALM Users.
 It allows displaying the History of all create, update and delete operations performed on a Phase.
 
-<<#_globadm_phases_history,Viewing the Phase History>>
+<<GlobAdm_Phases.adoc#_globadm_phases_history,Viewing the Phase History>>
 |===
 +
 
@@ -292,7 +292,7 @@ For more detailed information on Phase Parameters, refer to the following sectio
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Creating Phase Parameters>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Editing Phase Parameters>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Deleting Phase Parameters>>
-* <<#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
 
 //
 . In the Global Administration context, select _Phases > Overview_.
@@ -407,7 +407,7 @@ This option allows deleting a Phase Parameter.
 
 This option allows editing the values of a Parameter in its connected Environments.
 
-<<#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
+<<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
 |===
 +
 You can also add a new parameter, by clicking the _Create
@@ -460,7 +460,7 @@ For more information, refer to the section <<GlobAdm_Phases.adoc#_globadm_phases
 
 * _Export_ to export the Phase. <<GlobAdm_Phases.adoc#_globadm_phases_exporting,Exporting a Phase Definition>>
 * _Copy_ to copy the Phase. <<GlobAdm_Phases.adoc#_globadm_phases_copying,Copying a Phase Definition>>
-* _History_ to display the History of all create, update and delete operations performed on a Phase. <<#_globadm_phases_history,Viewing the Phase History>>
+* _History_ to display the History of all create, update and delete operations performed on a Phase. <<GlobAdm_Phases.adoc#_globadm_phases_history,Viewing the Phase History>>
 
 [[_globadm_phaseparameters_overview]]
 === The Phase Parameters Overview Screen 
@@ -514,7 +514,7 @@ It allows deleting the selected Phase Parameter definition.
 This option is available to all Users with Global Administrator Access Rights.
 It allows mass editing the selected Phase Parameter.
 
-<<#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
+<<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
 |===
 +
 
@@ -533,7 +533,7 @@ a|_RELATED TOPICS_
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Creating Phase Parameters>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Editing Phase Parameters>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Deleting Phase Parameters>>
-* <<#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
 * <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Viewing the Level Phase Parameters>>
 * <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_viewbuildenvphaseparams,Viewing the Build Environment Phase Parameters>>
 * <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_viewbuildenvphaseparams,Viewing the Deploy Environment Phase Parameters>>
@@ -638,7 +638,7 @@ a|_RELATED TOPICS_
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Creating Phase Parameters>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Editing Phase Parameters>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Deleting Phase Parameters>>
-* <<#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
 * <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Viewing the Level Phase Parameters>>
 * <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_viewbuildenvphaseparams,Viewing the Build Environment Phase Parameters>>
 * <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_viewbuildenvphaseparams,Viewing the Deploy Environment Phase Parameters>>
@@ -700,7 +700,7 @@ a|_RELATED TOPICS_
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,The Phase Parameters Overview Screen>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Creating Phase Parameters>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Deleting Phase Parameters>>
-* <<#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
 * <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Viewing the Level Phase Parameters>>
 * <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_viewbuildenvphaseparams,Viewing the Build Environment Phase Parameters>>
 * <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_viewbuildenvphaseparams,Viewing the Deploy Environment Phase Parameters>>
@@ -746,7 +746,7 @@ a|_RELATED TOPICS_
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,The Phase Parameters Overview Screen>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Creating Phase Parameters>>
 * <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Editing Phase Parameters>>
-* <<#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
 
 |===
 
@@ -864,7 +864,7 @@ If needed, you can always correct those automatic matches, or match unlinked par
 Matched parameters will get the value from the original Environment Parameter.
 +
 Unmatched parameters for which a default parameter has been specified, will be initialized using that parameter.
-If no default parameter has been specified, you can always specify it later. <<#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
+If no default parameter has been specified, you can always specify it later. <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Mass Editing Phase Parameters>>
 +
 If you do not activate the _Enable Parameter
 Matching_ option, the Environment Parameters will get the default value (if it has been set), or will stay empty.

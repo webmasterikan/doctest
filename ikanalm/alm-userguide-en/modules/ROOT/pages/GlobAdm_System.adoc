@@ -322,7 +322,7 @@ As a result an RSS button will become available on the user`'s _Level Requests O
 
 By default the RSS Feeds are enabled.
 
-For more information, refer to the section <<#_desktop_lr_rssfeeds,The IKAN ALM RSS Functionality>>.
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_rssfeeds,The IKAN ALM RSS Functionality>>.
 
 |RESTful Web Services Enabled
 |This feature is currently only functional for the integration with the SAP lifecycle. 

@@ -1,0 +1,625 @@
+[[_projadm_projectstreams]]
+== Branches 
+(((Administration des projets ,Branches)))  (((Branches)))  (((Options relatives à l’administration des projets ,Branches))) 
+
+Une Branche est une entité de travail au sein d`'IKAN ALM.
+Une Requête de Niveau est créée pour un Niveau associé à une Branche.
+Le développement principal se fait généralement sur la Branche Principale.
+Les activités de maintenance, les corrections et le développement en parallèle peuvent être réalisés sur une ou plusieurs Branches Secondaires.
+
+Quand l`'Administrateur Global crée un Projet, il doit également définir les Paramètres de la Branche Principale.
+
+L`'option _Branches_ permet de démarrer les procédures suivantes:
+
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Créer une branche secondaire>>
+* Modifier la définition de la Branche via l' <<ProjAdm_ProjMgt_ProjectStream.adoc#_projectstreams_overviewscreen,Aperçu des Branches>>
+
+
+L`'écran _Aperçu des Branches_ vous permet de vérifier et modifier les définitions des Branches.
+Les actions suivantes sont possibles: 
+
+* Modifier les définitions des Branches
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_viewing,Afficher les paramètres d'une Branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Modifier les paramètres d`'une branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deleting,Supprimer une branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_locking,Verrouiller/Déverrouiller une branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_hideshowprojectstream,Cacher/Montrer une branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_historyview,Afficher l'Historique de la Branche>>
+* Modifier les Dépendances de Branche
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_dependencies,Dépendances de branches>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editdependency,Modifier une Dépendance de Branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Ajouter une Dépendance de Branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Retirer une Dépendance de Branche>>
+
+[[_projadmin_projectstream_createbranch]]
+=== Créer une branche secondaire
+(((Branches ,Créer une branche secondaire))) 
+
+Vous pouvez créer une Branche Secondaire pour:
+
+* entamer un développement en parallèle
+* créer une version de maintenance
+* développer des modules de correction
+
+
+[WARNING]
+--
+Avant de créer une Branche Secondaire, vous devez créer un Cycle de Vie additionnel. <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_createlifecycle,Créer un cycle de vie>>
+--
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Créer une Branche Secondaire__.
++
+L'écran suivant s'affiche:
++
+image::ProjAdmin-ProjMgt-ProjectStream-CreateBranch.png[,874,413] 
++
+Dans la partie inférieure de l`'écran, le panneau _Aperçu
+des Branches_ affiche les Branches déjà définis pour le Projet sélectionné.
+. Saisissez les données dans le panneau __Créer une Branche Secondaire__.
++
+Les champs suivants sont disponibles: 
++
+*Attributs d’une Branche*
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Préfixe
+|Dans ce champ, saisissez le préfixe de la Construction pour cette Branche.
+Le préfixe de construction est utilisé, entre autres, pour générer des noms des fichiers d`'archive de Construction uniques.
+
+Ce champ est obligatoire.
+
+|Suffixe
+|S`'il s`'agit d`'une Branche Secondaire, saisissez dans ce champ le suffixe de construction.
+
+Pour les Branches Principales, ce champ n'est pas disponible.
+
+|Situation
+a|Dans ce champ, saisissez le statut de la nouvelle Branche secondaire à partir de la liste déroulante.
+
+Les valeurs possibles sont:
+
+* En construction
+* Planifié
+* En développement
+* En test
+* Stable
+* Généralement disponible
+* Figé
+* Fermé
+
+|Description
+|Dans ce champ, saisissez la description pour cette nouvelle Branche.
+
+|Verrouillée
+|Dans ce champ, indiquez si la Branche est verrouillée ou non.
+Verrouiller une Branche signifie que toutes les activités sur cette Branche sont bloquées.
+
+|Cachée
+|Ce champ indique si la Branche est cachée ou non.
+
+Par défaut, une nouvelle Branche n`'est pas cachée.
+Pour plus d`'information concernant cacher des Branches, se référer à la section <<ProjAdm_ProjMgt_ProjectStream.adoc#_hideshowprojectstream,Cacher/Montrer une branche>>.
+
+|Balise existante
+|Dans ce champ, indiquez si la Branche est basée sur une version balisée ou non.
+
+Si la Branche est basée sur une version balisée, il sera possible de récupérer des codes Source marqués d`'une balise spécifiée par l`'Utilisateur dans la Branche Principale ou Secondaire lors d`'une action de construction sur le Niveau de Construction concerné.
+
+*Avertissement:* Cette fonctionnalité requiert une adhérence stricte aux conventions de balisage internes car dans le cas d`'un balisage manuel les objets ne sont plus exclusivement contrôlés par IKAN ALM.
+Les balises peuvent être définies pour une Construction donnée à condition qu`'elles restent cohérentes pour les objets pendant tout leur Cycle de Vie.
+
+Si l`'option _Construction forcée autorisée_ est activée pour la Branche, le modèle de balise n`'a plus d`'effet étant donné que la balise sera définie par l`'Utilisateur lors du processus de création de la Requête de Niveau.
+
+De plus, si le Planificateur repère qu`'un Niveau de Construction est associé à une Branche basée sur une version balisée, il n`'entreprendra aucune action car il ne possède aucune référence pour vérifier les changements dans le système de contrôle des versions.
+Des Constructions déclenchées (par exemple, après la création d`'une balise dans le RCV) peuvent être activées par un script complémentaire dans le système de contrôle de versions qui appellera la ligne de commande d`'IKAN ALM pour créer une Requête de Niveau sur le Niveau de Construction.
+Il est donc recommandé de déconnecter tous les Plans Horaires du Niveau de Construction d`'une Branche basée sur une version balisée.
+Si cela est impossible (par exemple, parce que le Niveau est utilisé par une autre Branche) assurez-vous que la valeur du champ _Construction
+forcée autorisée_ est établie à __Non__.
+
+Si la Branche est de type Paquets, ce champ est forcé à la valeur __Non__.
+Les Constructions basées sur une balise existante n`'ont pas de sens dans un Projet de type "`Paquets`" puisqu`'un Paquet créé dans IKAN ALM peut être comparé à une balise créée dans un système RCV: le paquet contient une ou plusieurs révision(s) de la Branche Principale (Head) ou de la Branche Secondaire du RCV.
+
+|Type de construction
+a|Dans ce champ, saisissez le Type de Construction à partir de la liste déroulante.
+
+Les types suivants sont possibles:
+
+* _Construction complète_
+* __Construction partielle__: seuls les composants modifiés depuis la dernière Construction seront reconstruits.
+* __Construction partielle basée sur Production__: seuls les composants qui diffèrent de la version en production seront reconstruits.
+* __Construction partielle basée sur Version balisée__: seules les sources différentes de la _Construction partielle basée sur Version balisée_ seront à nouveau construites. 
++
+Cette option n'est pas disponible lors de la création d'une Branche Principale ou Branche secondaire.
+Elle n'est disponible que s'il existe une Requête de niveau de Construction réussie.
+
+Si le Projet est de type Paquets, ce champ est forcé à la valeur __Construction complète__.
+
+|Balise RCV construction partielle
+|Sélectionnez une balise RCV à partir du menu déroulant contenant les _Requêtes
+de niveau de Construction_ réussies pour cette Branche.
+
+Ce champ est obligatoire si l'option _Construction
+partielle basée sur Version balisée_ est sélectionnée comme Type de Construction.
+Seules les sources différentes de la Balise RCV sélectionnée seront à nouveau construites.
+
+Cette option n'est pas disponible lors de la création d'une Branche Principale ou Branche secondaire.
+Elle n'est disponible que s'il existe une Requête de niveau de Construction réussie.
+
+|Numéro dernière construction
+|Dans ce champ, saisissez le numéro de construction le plus élevé pour cette Branche.
+
+Ce numéro est incrémenté automatiquement chaque fois qu`'une Requête de Niveau est créée.
+
+Ce numéro ne correspond pas nécessairement au nombre de constructions correctement exécutées.
+Se référer à la section de construction de la Balise RCV pour connaître le nombre de constructions correctement exécutées.
+
+Si le Projet est de type Paquets, ce champ n`'est pas disponible.
+
+|Construction forcée autorisée
+|Dans ce champ, indiquez si la Branche accepte des Constructions forcées ou non, c.-à-d.
+des Constructions sur un Niveau de Construction qui passent outre le Plan Horaire rattaché au Niveau.
+
+Si le Projet est de type Paquets, ce champ est forcé à __Non__.
+Dans ce cas, une Construction forcée n`'a pas de sens car il est impossible de rattacher un Plan Horaire à un Niveau de Construction dans un Projet de type Paquets.
+
+|Modèle de Balise
+a|Dans ce champ, saisissez le modèle utilisé pour baliser les Constructions pour cette Branche.
+Les Balises seront utilisées pour afficher ces constructions dans le RCV.
+
+Un modèle peut être une combinaison de _constantes_ et de __variables__.
+
+Les _constantes_ suivantes sont permises:
+
+* lettres
+* chiffres
+* barres de soulignement
+* traits d`'union
+* quelques autres caractères (comme , ; $ @) peuvent être illégaux, en fonction du Type de RCV.
+
+Les _variables_ suivantes sont disponibles.
+Elles ont toutes le format _${name}:_
+
+* ${prefix}: Cette variable donne le préfixe de construction défini pour la Branche.
+* ${suffix}: Cette variable donne le suffixe de construction défini pour la Branche. (Si cette variable est incluse dans un modèle pour la Branche Principale, elle est ignorée)
+* ${streamType}: Cette variable donne l`'indication du Type de Branche: _H (Head)_ pour une Branche Principale ou _B (Branch)_ pour une Branche Secondaire.
+* ${buildNumber}: Cette variable donne le numéro de la Construction afin d`'associer la Construction à sa Balise.
+* ${projectName}: Cette variable donne la dénomination du Projet IKAN ALM.
+* ${vcrProjectName}: Cette variable donne la dénomination RCV du Projet.
+* ${dateTime(dateformat)}: Cette variable donne le timestamp de l`'action de construction dans le format indiqué. _yyyy-MM-dd_ est un format valide. Pour d`'autres formats valides, se référer à http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html[http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html]
+* ${packageName}: Cette variable donne la dénomination du Paquet pour la Branche d`'un Projet de type "`Paquets`".
+
+|Cycle de vie
+|Sélectionnez le Cycle de Vie associé à ce Projet.
+
+|Branche Secondaire dans le RCV
+|S`'il s`'agit d`'une Branche Secondaire, saisissez l`'identifiant RCV de la Branche.
+Le même identifiant doit être déclaré dans le RCV associé au Projet.
+
+S`'il s`'agit d`'une Branche Principale appartenant à un Projet ClearCase UCM, saisissez la dénomination du flux d`'intégration UCM.
+
+Pour les Branches Principales associées à un projet Team Foundation VC, saisissez le nom de l'ID Branche Principale dans ce champ.
+
+S`'il s`'agit d`'une Branche Principale appartenant à d`'autres types de projet, ce champ n'est pas disponible.
+|===
+
+. Cliquez sur le bouton _Créer_ pour créer la nouvelle Branche secondaire.
++
+Les boutons suivants sont également disponibles:
+
+* __Vérifier le nom de la Branche Secondaire dans le RCV __afin de vérifier si le nom de Branche est disponible dans le RCV associé au Projet.
+* _Réinitialiser_ afin de nettoyer les champs en vue d`'enregistrer des nouvelles données.
+. Informations additionnelles.
++
+En-dessous du panneau __Créer une Branche Secondaire__, vous trouverez l`'aperçu des Branches existantes dans le Projet.
++
+Pour plus d`'informations, se référer à la section <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstreamsoverview_accessing,Écran de l`'aperçu des branches>>.
+
+
+[[_projectstreams_overviewscreen]]
+=== Aperçu des Branches
+
+L`'écran _Aperçu des Branches_ vous permet de vérifier et modifier les définitions des Branches.
+Les actions suivantes sont possibles: 
+
+* Modifier les définitions des Branches
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_viewing,Afficher les paramètres d'une Branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Modifier les paramètres d`'une branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deleting,Supprimer une branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_locking,Verrouiller/Déverrouiller une branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_hideshowprojectstream,Cacher/Montrer une branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_historyview,Afficher l'Historique de la Branche>>
+* Modifier les Dépendances de Branche
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_dependencies,Dépendances de branches>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editdependency,Modifier une Dépendance de Branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Ajouter une Dépendance de Branche>>
+** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Retirer une Dépendance de Branche>>
+
+[[_projadmin_projectstreamsoverview_accessing]]
+==== Écran de l`'aperçu des branches 
+(((Branches ,Écran de l’aperçu des branches))) 
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
++
+L`'écran suivant s`'affiche:
++
+image::ProjAdmin-ProjMgt-ProjectStream-Overview.png[,1002,320] 
++
+En bas de l`'écran, le panneau _Aperçu des Branches_ affiche les Branches actuellement définies pour le Projet sélectionné.
++
+Pour la description des champs, se référer à <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Créer une branche secondaire>>.
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+|Lien
+|Description
+
+|image:icons/edit.gif[,15,15]  Modifier
+|Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d'Utilisateur ou d'Administrateur de Projet.
+Elle permet d'<<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_viewing,afficher>> ou de <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,modifier>> la définition de la Branche sélectionnée.
+
+|image:icons/remove.gif[,15,15]  Supprimer
+|Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur de projet.
+Elle permet de supprimer la Branche sélectionnée.
+
+<<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deleting,Supprimer une branche>>
+
+|image:icons/lock.gif[,15,15]  Verrouiller
+image:icons/unlock.gif[,15,15]  Déverrouiller
+|Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur de projet.
+Elle permet de verrouiller ou déverrouiller la Branche sélectionnée.
+
+<<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_locking,Verrouiller/Déverrouiller une branche>>
+
+|image:icons/hide.gif[,15,15]  Cacher
+image:icons/show.gif[,15,15]  Montrer
+|Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d'Administrateur de Projet.
+Elle permet de montrer ou de cacher la Branche sélectionnée.
+
+<<ProjAdm_ProjMgt_ProjectStream.adoc#_hideshowprojectstream,Cacher/Montrer une branche>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d'Utilisateur.
+Elle permet d`'afficher l`'Historique de toutes les opérations de création, de modification ou de suppression relatives à une Branche.
+
+<<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_historyview,Afficher l'Historique de la Branche>>
+|===
+
+[[_projadmin_projectstream_viewing]]
+==== Afficher les paramètres d'une Branche 
+(((Branches du Projet ,Afficher les paramètres))) 
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
+
+. Pour y accéder, cliquez sur l'icône image:icons/edit.gif[,15,15] _Modifier_ devant la Branche requise.
++
+L'écran _Modifier une Branche_ s'affiche.
++
+image::ProjAdmin-ProjectStreams-View.png[,1066,274] 
++
+. Vérifiez les Paramètres.
++
+Pour une description, se référer à la section <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Créer une branche secondaire>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Branches__.
+
+[[_projadmin_projectstream_editing]]
+==== Modifier les paramètres d`'une branche 
+(((Branches ,Modifier les paramètres d’une branche))) 
+ 
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
+
+. Pour y accéder, cliquez sur l'icône image:icons/edit.gif[,15,15] _Modifier_ devant la Branche requise.
++
+L`'écran suivant s`'affiche:
++
+image::ProjAdmin-ProjectStreams-View.png[,1059,276] 
+
+. Cliquez sur le bouton _Modifier_ dans le panneau _Informations sur la Branche_ pour modifier les champs.
++
+image::ProjAdmin-ProjMgt-ProjectStream-Edit-EditProjectStream.png[,616,435] 
++
+Pour une description, se référer à la section <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Créer une branche secondaire>>.
+
+. Cliquez sur le bouton _Enregistrer_ pour enregistrer les modifications.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Annuler_ pour retourner à l`'écran précédent sans enregistrer vos modifications.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_dependencies,Dépendances de branches>>
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Ajouter une Dépendance de Branche>>
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editdependency,Modifier une Dépendance de Branche>>
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Retirer une Dépendance de Branche>>
+
+|===
+
+[[_projadm_projectstream_deleting]]
+==== Supprimer une branche 
+(((Branches ,Supprimer une branche))) 
+ 
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
+
+. Cliquez sur le lien image:icons/remove.gif[,15,15] _Supprimer_ dans le panneau __Aperçu des Branches__.
++
+L`'écran suivant s`'affiche:
++
+image::ProjAdmin-ProjMgt-ProjectStream-Delete.png[,838,359] 
+
+. Vérifier si vous voulez supprimer irrévocablement la Branche.
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression.
++
+Vous pouvez également cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_projadm_projectstream_locking]]
+==== Verrouiller/Déverrouiller une branche 
+(((Branches ,Verrouiller une branche)))  (((Branches ,Déverrouiller une branche)))  (((Verrouiller ,Branche)))  (((Déverrouiller ,Branche))) 
+
+Verrouiller une Branche consiste à bloquer toutes les activités de la Branche, telles que les Requêtes de Niveau créées manuellement ou planifiées.
+Il peut s`'avérer utile de verrouiller une Branche, par exemple, si des activités administratives sont requises dans le RCV.
+
+Déverrouiller la Branche signifie que vous autorisez à nouveau ces actions pour la Branche
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
+
+. Cliquez sur le lien image:icons/lock.gif[,15,15] _Verrouiller_ ou image:images/icons/unlock.gif[,15,15] _ Déverrouiller_ dans le panneau __Aperçu des Branches__.
+
+[[_hideshowprojectstream]]
+==== Cacher/Montrer une branche 
+(((Branches ,Cacher une branche)))  (((Branches ,Montrer une branche))) 
+
+Si une Branche est définie comme étant "`cachée`", par défaut elle ne sera plus affichée dans les panneaux d`'aperçu.
+Cela peut s`'avérer très utile pour ne plus afficher d`'anciennes Branches sans perdre les informations historiques (Requêtes de Niveau, ...) associées à ces Branches.
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
+
+. Cliquez sur le lien image:icons/hide.gif[,15,15] _Cacher_ en face de la Branche que vous désirez cacher.
++
+La Branche sera cachée et elle disparaîtra de l'__Aperçu des Branches__.
+
+. Pour montrer une Branche cachée, établissez le critère _Cachée_ à _Oui_ ou à _Tout_ et cliquez sur le lien image:icons/show.gif[,15,15]  _Montrer_.
++
+La Branche deviendra visible et l'icône sera modifié en conséquence. 
++
+
+[NOTE]
+====
+Un critère a été ajoutée aux panneaux de _Recherche_ afin de pouvoir spécifier si vous voulez afficher les Projets cachés ou non.
+Cliquez sur le lien _Montrer les options avancées_ pour afficher ce critère.
+====
+
+[[_projadm_projectstream_historyview]]
+==== Afficher l'Historique de la Branche
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
+
+. Pour y accéder, cliquez sur l'icône image:icons/history.gif[,15,15] _Historique_ dans l'__Aperçu des Branches _pour afficher l'__Aperçu de l'Historique de la Branche_.
++
+Pour une description plus détaillée de l`'__Aperçu
+de l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
++
+Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
+
+[[_projadmin_projectstream_dependencies]]
+==== Dépendances de branches 
+(((Branches ,Dépendances de branches)))  (((Dépendances de branches))) 
+
+Les dépendances de Branches permettent la réutilisation de composants communs (par exemple, des librairies) dans d`'autres Projets.
+Au moment de la construction du code appartenant à la Branche, le processus se servira de ce code Source importé ou du Résultat de construction de la Branche importée, *placé dans l`'environnement Source dans un nouveau répertoire ayant le nom du Projet dans le RCV*
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
+
+. Dans l'__Aperçu des Branches__, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant la Branche requise.
++
+L'écran _Modifier une Branche_ s'affiche, contenant les panneaux _Informations de la Branche_ et __Dépendances__.
++
+image::ProjAdmin-ProjMgt-ProjectStream-Dependencies.png[,947,506] 
++
+Le panneau des Dépendances contient:
+
+* l'aperçu des Branches desquelles dépendent les résultats ou les sources de la Branche actuelle,
+* l'Aperçu des Branches utilisant les résultats ou les sources de la Branche actuelle, et
+* le lien __Ajouter une Dépendance__. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Ajouter une Dépendance de Branche>>
++
+Pour chacune des Branches reprises dans l'aperçu, les informations suivantes sont disponibles:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Projet
+|Ce champ affiche le nom du Projet auquel appartient la Branche.
+
+|Type
+a|Ce champ affiche le type de Branche.
+
+Il y deux possibilités:
+
+* Principale
+* Branche Secondaire
+
+|Préfixe
+|Ce champ contient le Préfixe de Construction spécifié pour cette Branche.
+
+|Suffixe
+|Ce champ contient le Suffixe de Construction pour cette Branche.
+Ce champ est vide dans le cas d'une Branche Principale.
+
+Le suffixe sera attaché au Préfixe de Construction afin de pouvoir facilement identifier la Branche.
+
+|Description
+|Ce champ contient la description de la Branche saisie par l'Utilisateur.
+
+|Nom de la branche dans le RCV
+|Ce champ contient le nom de la branche dans le RCV.
+
+Ce champ reste vide pour les Branches principales.
+
+|Récupération des données issues de
+a|Ce champ indique comment le code de la Branche Importée sera récupéré.
+
+* _Dernier code balisé à partir du RCV_
+* __Code balisé spécifique à partir du RCV__: Si cette option est sélectionnée, la balise sélectionnée sera indiquée dans le champ __Balise RCV__.
+* _Dernière Construction balisée à partir des Archives de construction_
+* __Construction spécifique à partir des Archives de construction__: Si cette option est sélectionnée, la balise sélectionnée sera indiquée dans le champ __Balise RCV__.
+* _Dernier code de Production à partir du RCV_
+* _Dernière Construction de Production à partir des Archives de construction_
+
+|Balise RCV
+|Ce champ contient la Balise RCV de la Branche utilisée pour récupérer le code.
+Voir l'explication du champ _Récupération des données issues de_ ci-dessus.
+|===
+
+. Si nécessaire, utilisez les liens __La Branche XXX dépend des résultats ou des Sources de la(des) Branche(s) suivante(s)__.
++
+les liens peuvent être disponibles:
+
+* Le lien image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _ Descendre_ pour modifier la séquence des Branches.
+* image:icons/edit.gif[,15,15]  _Modifier_: Cette option permet de modifier la Dépendance sélectionnée. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editdependency,Modifier une Dépendance de Branche>>
+* image:icons/remove.gif[,15,15]  _Retirer_: Cette option permet de retirer la Dépendance sélectionnée. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Retirer une Dépendance de Branche>>
++
+
+[NOTE]
+====
+
+Dans le panneau _Le résultat ou les Sources
+de la Branche XXX sont utilisés par la(les) Branche(s) suivante(s)_ aucun lien n'est disponible.
+Accédez à l'écran _Dépendance de
+Branche_ de ces Branches Maître pour modifier les paramètres de leur Dépendance.
+====
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran suivant.
+
+[[_projadmin_projectstream_adddependency]]
+==== Ajouter une Dépendance de Branche 
+(((Branches du Projet , Dépendances ,Ajouter))) 
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
+
+. Dans l'__Aperçu des Branches__, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant la Branche requise.
+
+. Pour y accéder, cliquez sur le lien image:icons/dependency_add.gif[,15,15] _Ajouter une Dépendance_ en-dessous du panneau des __Dépendances__.
++
+La fenêtre suivante s'affiche:
++
+image::ProjAdmin-ProjMgt-ProjectStream-AddDependency-Step1.png[,760,518] 
+
+. Si vous ne trouvez pas immédiatement la Branche que vous voulez ajouter, spécifiez des critères de recherche dans le panneau __Rechercher la Branche__.
++
+La liste des éléments affichés dans l'arborescence à droite sera limitée aux Branches correspondant aux critères de recherche définis.
++
+Cliquer sur le bouton _Réinitialiser_ pour nettoyer les champs de recherche.
+
+. Développez l'arborescence du Projet correspondant en cliquant sur l'icône image:icons/ExpandProjectStream.gif[,10,10]  pour afficher ses Branches. Sélectionnez la Branche que vous voulez ajouter et cliquez sur le bouton __Suivant__.
++
+
+[NOTE]
+====
+Si la Branche ne peut pas être ajoutée, un message d'erreur sera affiché.
+====
+
+. Spécifiez les Résultats de construction à utiliser.
++
+image::ProjAdmin-ProjMgt-ProjectStream-AddDependency-Step2.png[,750,239] 
++
+
+.. Sélectionnez l'option _Récupération des données issues de_ à partir de la liste déroulante.
++
+À partir de la liste déroulante, sélectionnez le type de récupération des données requis.
+Les options suivantes sont disponibles:
+
+* _Dernier code balisé à partir du RCV_
++
+Sélectionnez cette option si vous voulez utiliser le _code Source_ de la dernière Construction réussie de la Branche importable pour construire le code du Projet Maître.
+* _Code balisé spécifique à partir du RCV_
++
+Sélectionnez cette option si vous voulez utiliser le _code Source_ de la Branche importable balisée avec la Balise RCV sélectionnée dans le champ _Balise
+RCV_ en-dessous pour construire le code du Projet Maître.
+Le champ Balise RCV doit être rempli.
+* _Dernière Construction balisée à partir des Archives de construction_
++
+Sélectionnez cette option si vous voulez utiliser le _Résultat de construction_ de la dernière Construction réussie de la Branche importable pour construire le code du Projet Maître.
+Le champ Balise RCV doit rester vide.
+* _Construction spécifique à partir des Archives de construction_
++
+Sélectionnez cette option si vous voulez utiliser le _Résultat de construction_ de la Construction de la Branche importable à laquelle est attribuée la Balise RCV sélectionnée pour construire le code du Projet Maître.
+Le champ Balise RCV doit être rempli.
+* _Dernier code de Production à partir du RCV_
++
+Sélectionnez cette option si vous voulez utiliser le _code Source_ auquel est attribué la Balise RCV de la Construction actuellement active sur le dernier Niveau (généralement un Niveau de Production) du Cycle de vie de la Branche importable pour construire le code du Projet Maître.
+* _Dernière Construction de Production à partir des Archives de construction_
++
+Sélectionnez cette option si vous voulez utiliser le _Résultat de Construction_ de la Construction actuellement active sur le DERNIER Niveau du Cycle de vie de la Branche importable pour construire le code du Projet Maître.
+
+.. Sélectionnez la _Balise RCV_ à partir du menu déroulant.
++
+À partir de liste déroulante, sélectionnez la Balise RCV requise.
++
+La Balise RCV n'est utile que si le champ "Récupération des données issues de" est établi à "Code balisé spécifique à partir du RCV" ou "Construction spécifique à partir des Archives de construction".
++
+__Note: __Cette option ne peut être utilisée que s'il existe une Construction, sinon aucune Balise RCV n'est disponible.
+
+. Cliquez sur _Créer_ pour créer la Dépendance de Branche.
++
+Les boutons suivants sont également disponibles:
+
+* _Annuler_ pour nettoyer les champs et restaurer les valeurs initiales.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer vos modifications.
+
+[[_projadmin_projectstream_editdependency]]
+==== Modifier une Dépendance de Branche 
+(((Branches du Projet ,Dépendances ,Modifier))) 
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
+
+. Dans l'__Aperçu des Branches__, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant la Branche requise.
+
+. Pour y accéder, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant le Dépendance requise.
++
+La fenêtre _Modifier la Dépendance
+de branche_ s'affiche:
++
+image::ProjAdmin-ProjectStream-UpdateDependency.png[,668,180] 
+
+. Si nécessaire, modifiez le mode de _Récupération des données_ et la __Balise RCV__. 
++
+Pour une description des champs, se référer à la section <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_adddependency,Ajouter une Dépendance de Branche>>.
+
+. Cliquez sur le bouton _Oui_ pour confirmer la suppression de la Phase.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Annuler_ pour retourner à l`'écran précédent sans enregistrer vos modifications.
+
+[[_projadm_projectstream_deletedependency]]
+==== Retirer une Dépendance de Branche 
+(((Branches du Projet ,Dépendances ,Retirer))) 
+
+. Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
+
+. Dans l'__Aperçu des Branches__, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant la Branche requise.
+
+. Pour y accéder, cliquez sur le lien image:icons/remove.gif[,15,15] _Retirer_ devant le Dépendance requise.
++
+Un message de confirmation s'affichera pour confirmer le retrait de la Dépendance.
+Cliquez sur _Oui_ si vous voulez supprimer la dépendance ou sur _Non_ si vous voulez annuler l'action.
+Si vous cliquez sur Oui, la Branche sera immédiatement retirée de la liste.

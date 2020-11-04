@@ -1,0 +1,437 @@
+[[_globadm_projectcreate]]
+[[_globadm_project]]
+== Projet 
+(((Administration globale ,Projets)))  (((Projets))) 
+
+[NOTE]
+====
+Le menu _Projet_ est uniquement disponible aux Utilisateurs ayant des droits d`'accès d`'administration globale.
+====
+
+Les procédures suivantes décrivent les options du menu Projet:
+
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Créer un projet dans IKAN ALM>>
+* <<GlobAdm_Project.adoc#_globadm_projectclone,Cloner un projet existant>>
+
+[[_globadm_projectcreate]]
+=== Créer un projet dans IKAN ALM
+(((Créer un projet dans IKAN ALM)))  (((Créer un projet dans IKAN ALM ,Édition Versions)))  (((Créer un projet dans IKAN ALM ,Paquets)))  (((Projets ,Édition Versions)))  (((Projets ,Paquets))) 
+
+Il existe deux types de projets:
+
+* Projets de type "`Édition Versions`": IKAN ALM utilisera la structure existante dans le RCV pour que les objets à extraire soient récupérés automatiquement au moment de la Construction, en fonction du type de construction défini dans la Branche.
+* Projets de type "`Paquets`": ce concept permet de travailler avec des fichiers isolés du système RCV. Les objets doivent être ajoutés manuellement dans une structure de paquet créée dans IKAN ALM avant le lancement du processus de Construction.
+
+
+[NOTE]
+====
+Les Projets de type Paquets ne doivent être connectés qu`'à un Référentiel de type Subversion, TFVC ou ClearCase.
+Les autres types de RCV ne supportent pas de travailler avec des fichiers isolés et, par conséquent, de travailler avec des Paquets en IKAN ALM.
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez __Projet > Créer un Projet__.
++
+L`'écran suivant s`'affiche: 
++
+image::GlobAdmin-Project-Create.png[,1037,553] 
+. Saisissez les champs dans les différentes sections.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
+
+* Paramètres du Projet
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Type de Projet
+|Sélectionnez le type de Projet que vous voulez créer: Édition versions ou Paquets.
+
+En fonction du type de Projet sélectionné, vous pourrez modifier d'autres champs dans le panneau __Paramètres de
+la Branche Principale__. 
+
+|Nom
+|Saisissez dans ce champ la dénomination du nouveau Projet.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Projet.
+
+|Référentiel
+|Sélectionnez, à partir du menu déroulant, le RCV à utiliser par le Projet dans IKAN ALM.
+
+|Nom de Projet dans le RCV
+|Saisissez dans ce champ la dénomination du Projet dans le RCV qui correspond au Projet dans IKAN ALM.
+Il est possible que la dénomination du Projet dans le RCV ne soit pas identique à la dénomination du Projet dans IKAN ALM.
+
+Vous pouvez vérifier si le Projet existe bien dans le Référentiel en cliquant sur le bouton __Vérifier le nom du Projet dans
+le RCV__. 
+
+_Note:_ Ce champ reste vide pour des RCVs Subversion ayant une structure "orientée projet unique" et pour les RCVs Git.
+
+|Système de Suivi des Incidents
+|Sélectionnez un des Systèmes de Suivi des Incidents disponibles à partir du menu déroulant.
+
+Si un Système de Suivi des Incidents est spécifié dans ce champ, IKAN ALM créera toujours automatiquement une Phase de Niveau de Suivi des Incidents au moment de la création d`'un nouveau Niveau pour le Projet.
+
+Ce champ n'est visible que si un Système de Suivi des Incidents a été défini dans IKAN ALM.
+
+Pour plus d'informations concernant les Systèmes de Suivi des Incidents, se référer au chapitre <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking,Suivi des Incidents>>
+
+|Système de Suivi des Incidents
+|Sélectionnez, à partir du menu déroulant, le Système de Suivi des Incidents.
+
+Si un Système de Suivi des Incidents est sélectionné, IKAN ALM créera automatiquement une Phase de Niveau de Suivi des Incidents au moment de la création d`'un nouveau Niveau pour le Projet.
+
+Ce champ n`'est visible que si un Système de Suivi des Incidents externe est défini dans IKAN ALM. <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking,Suivi des Incidents>>
+
+|Type outil de construction
+|Sélectionnez, à partir du menu déroulant, le Type d`'Outil de Construction (Ant, Gradle, NAnt ou Maven 2) à utiliser pour ce projet dans IKAN ALM.
+
+Seuls les Outils de script du type d'outil de construction sélectionné, peuvent être associés aux Environnements de construction créés dans le Projet.
+
+|Type outil de déploiement
+|Sélectionnez, à partir du menu déroulant, le Type d`'Outil de Déploiement (Ant, Gradle, NAnt ou Maven 2) à utiliser pour ce projet dans IKAN ALM.
+
+Seuls les Outils de script du type d'outil de déploiement sélectionné, peuvent être associés aux Environnements de déploiement créés dans le Projet.
+
+|Script de construction
+|Saisissez dans ce champ la dénomination du script de construction à utiliser pour ce Projet dans IKAN ALM.
+
+Ce script sera utilisé par défaut pour l'exécution de Constructions dans le Projet, mais il peut être écrasé lors de la définition d'un Environnement de Construction.
+
+|Script de déploiement
+|Saisissez dans ce champ la dénomination du script de déploiement à utiliser pour ce Projet dans IKAN ALM.
+
+Ce script sera utilisé par défaut pour l'exécution de Déploiements dans le Projet, mais il peut être écrasé lors de la définition d'un Environnement de Déploiement.
+
+|Verrouillé
+|La valeur de ce champ en lecture seule est __Oui__, car un Projet dans IKAN ALM ne peut être déverrouillé qu`'après avoir été complètement audité et configuré.
+
+|Caché
+|Par défaut, la valeur de ce champ en lecture seule est __Non__, car un Projet ne peut pas être caché au moment de sa création.
+|===
+
+* Paramètres de Sécurité du Projet (optionnel)
+
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Groupe Utilisateurs
+|Sélectionnez, à partir du menu déroulant, le Groupe d`'Utilisateurs qui aura des droits d`'accès d`'utilisateur pour le nouveau Projet dans IKAN ALM.
+
+Si saisie, cette valeur écrase la valeur définie dans le champ _Groupe d`'utilisateurs IKAN ALM_ dans l`'écran __Paramètres système__. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+Par défaut, ce Groupe sera établi comme le Demandeur lors de la création d`'une Requête de Niveau.
+
+|Groupe Administrateurs
+|Sélectionnez, à partir du menu déroulant, le Groupe d`'Utilisateurs qui aura des droits d`'accès d`'Administrateur pour le nouveau Projet dans IKAN ALM.
+
+Si saisie, cette valeur écrase la valeur définie dans le champ _Groupe d`'Administrateurs IKAN ALM_ dans l`'écran __Paramètres système__. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+|===
+
+* Paramètres de la Branche Principale
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Préfixe de construction
+|Saisissez dans ce champ le préfixe de construction à utiliser pour la Branche PRINCIPALE du nouveau Projet dans IKAN ALM.
+
+|Situation
+|Sélectionnez le statut nécessaire pour la Branche PRINCIPALE du nouveau Projet dans IKAN ALM.
+
+Cette saisie n`'a qu`'une valeur indicative (sauf pour la valeur _Figé_ qui empêche de créer des Requêtes de Niveau).
+
+|Description
+|Saisissez dans ce champ une description pour la Branche PRINCIPALE du nouveau Projet dans IKAN ALM.
+
+|Verrouillée
+|Sélectionnez si la branche PRINCIPALE du nouveau Projet dans IKAN ALM doit être verrouillée ou non.
+
+Par défaut, cette option est établie à __Non__.
+
+|Cachée
+|Par défaut, la valeur de ce champ en lecture seule est __Non__, car une Branche de Projet ne peut pas être cachée au moment de sa création.
+
+|Balise existante
+|Pour la création d`'un projet de type __Édition Versions__, sélectionnez si la Branche PRINCIPALE du nouveau Projet sera basée sur une balise existante ou non.
+
+Par défaut, cette option est établie à __Non__.
+
+Dans une Branche basée sur une balise existante, les Constructions sur le Niveau de Construction seront exécutées sur la base de codes Source ayant une balise pré-appliquée dans le RCV, tandis que pour les Projets qui ne sont pas basés sur une version balisée ces Constructions seront exécutées sur la base des dernières versions de codes Source.
+
+Pour la création d`'un projet de type __Paquets__, cette option est forcée à __Non__.
+
+|Type de construction
+a|Pour la création d`'un projet de type __Édition Versions__, sélectionnez, à partir du menu déroulant, le Type de Construction nécessaire.
+Les options suivantes sont disponibles:
+
+* _Construction complète_
+* _Construction partielle_
+* __Construction partielle basée sur production__: basée sur la Balise de la Construction actuellement en production
+
+Pour la création d`'un projet de type __Paquets__, cette option est forcée à __Construction complète__.
+
+|Construction forcée autorisée
+|Si vous créez un Projet de type Édition versions, indiquez si la Branche Principale HEAD du nouveau Projet IKAN ALM doit accepter des Constructions forcées ou non, par exemple, pour permettre des Constructions qui contournent le Plan horaire spécifié pour le Niveau de construction.
+
+Par défaut, cette option est établie à __Oui__.
+
+Pour la création d`'un projet de type __Paquets__, cette option est forcée à __Non__.
+
+|Modèle de balise
+a|Dans ce champ, saisissez le modèle utilisé pour baliser les Constructions pour cette Branche.
+Les Balises seront utilisées pour afficher ces constructions dans le RCV.
+
+Un modèle peut être une combinaison de _constantes_ et de __variables__.
+
+Les _constantes_ suivantes sont permises:
+
+* lettres
+* chiffres
+* barres de soulignement
+* traits d`'union
+* quelques autres caractères (comme , ; $ @) peuvent être illégaux, en fonction du Type de RCV.
+
+Les _variables_ suivantes sont disponibles.
+Elles ont toutes le format _${name}:_
+
+* ${prefix}: Cette variable donne le préfixe de construction défini pour la Branche.
+* ${suffix}: Cette variable donne le suffixe de construction défini pour la Branche. (Si cette variable est incluse dans un modèle pour la Branche Principale, elle est ignorée)
+* ${streamType}: Cette variable donne l`'indication du Type de Branche: _H (Head)_ pour une Branche Principale ou _B (Branch)_ pour une Branche Secondaire.
+* ${buildNumber}: Cette variable donne le numéro de la Construction afin d`'associer la Construction à sa Balise.
+* ${projectName}: Cette variable donne la dénomination du Projet IKAN ALM.
+* ${vcrProjectName}: Cette variable donne la dénomination RCV du Projet.
+* ${dateTime(dateformat)}: Cette variable donne le timestamp de l`'action de construction dans le format indiqué. _yyyy-MM-dd_ est un format valide. Pour d`'autres formats valides, se référer à http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html[http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html].
+* ${packageName}: Cette variable donne le Nom du Paquet associé au Niveau, au moment de la Construction (uniquement utilisée pour des Projets de type __Paquets__). 
+
+|Branche Secondaire dans le RCV
+|Ce champ contient le Nom de Branche dans le RCV.
+Le même identifiant doit être déclaré dans le RCV associé au Projet.
+
+Ce champ est requis pour les projets ClearCase UCM (apparié à la Branche d'Intégration) ou Team Foundation (apparié à l'ID Branche Principale). S`'il s`'agit d`'une Branche Principale appartenant à d`'autres types de projet RCV, ce champ reste vide.
+|===
++
+Le tableau suivant montre quelques exemples de modèles de balise et les Balises qui en résultent:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Modèle de balise
+| Balise RCV résultant
+
+|${streamType}_${prefix}_${suffix}_b${buildNumber}
+a|_H_1.0_b5_
+
+soit:
+
+* H = Type de branche
+* 1.0 = Préfixe de construction
+* 5 = Numéro de construction
+
+_Note:_ La variable _${suffix}_ est ignorée pour la branche principale!
+
+_B_1.0_bugfix_b5_
+
+soit:
+
+* B = Type de branche
+* 1.0 = Préfixe de construction
+* bugfix = Suffixe de construction
+* 5 = Numéro de construction
+
+|${projectName}_${packageName}_b ${dateTime(yyyy-MM-dd)}_b${buildNumber}
+a|_DEMOCVS_
+Package2_2006-03-27_b5_
+
+soit:
+
+* DEMOCVS = Dénomination du projet
+* 2006-03-27 = Date de création de la Construction
+* Package2 = Nom du paquet utilisé pour la construction
+* 5 = Numéro de construction
+
+|===
+. Cliquez sur le bouton _Vérifier le nom du Projet dans le RCV_ afin de vérifier si le nom de Projet est disponible dans le RCV.
++
+Si le test réussit, le message suivant s`'affiche:
++
+__Info: Le Nom de Projet est présent dans le RCV.__
++
+Si le test échoue, l`'écran suivant s`'affiche:
++
+image::GlobAdmin-Project-Create-ErrorProjName.png[,736,465] 
++
+L`'écran principal affiche le message: __ERREUR:
+Le nom du Projet RCV n`'est pas défini dans le référentiel de contrôle
+de version__.
++
+Corrigez les erreurs spécifiées dans la trace de pile et refaites le test.
+. Si les contrôles se terminent correctement, cliquez sur le bouton __Créer__.
++
+Le Projet est créé et l'écran _Informations sur
+le Projet_ s'affichera dans le contexte de la gestion des projets.
+Vous pouvez gérer le nouveau Projet en créant des Niveaux etc.
+Pour plus d`'informations, se référer à la section <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>.
++
+image::GlobAdmin-Project-Create-EditProject.png[,626,755] 
++
+En-dessous du panneau __Informations sur le Projet__, les liens et boutons suivants sont disponibles:
+
+* __Historique__. Ce lien affichera l'écran __Aperçu de l'Historique du Projet__.
+* _Déverrouiller_ pour enlever le blocage de toutes les activités du Projet, telles que les Requêtes de Niveau créées manuellement ou planifiées. Après avoir complété la maintenance, vous devez déverrouiller un Projet.
+* _Modifier_ pour modifier les paramètres du Projet.
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
++
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstreams,Branches>>
+* <<ProjAdm_LifeCycles.adoc#_projadm_lifecycles,Cycles de vie>>
+* <<ProjAdm_Levels.adoc#_projadm_levels,Niveaux>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===
+
+[[_globadm_projectclone]]
+=== Cloner un projet existant 
+(((Projets ,Cloner un projet existant)))  (((Cloner un projet existant))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Projet > Cloner un Projet existant__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdmin-Project-Clone.png[,947,416] 
+. Définissez les critères de recherche requis dans le panneau de recherche.
++
+La liste des éléments dans l'aperçu est synchronisée automatiquement en fonction des critères sélectionnés.
++
+Vous pouvez également:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* cliquer sur le lien _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* cliquer sur le lien _Réinitialiser la recherche_ pour nettoyer les champs.
+. Ensuite, cliquez sur le lien image:icons/clone.gif[,15,15] _cloner_ devant le Projet requis.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdmin-Project-Clone-Clone.png[,787,774] 
+. Complétez ou modifiez les champs disponibles.
++
+Les champs suivants sont disponibles:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Nom
+|Saisissez dans ce champ la dénomination du nouveau Projet.
+Le nom du Projet cloné n`'est pas affiché car il est impossible d`'avoir deux Projets ayant la même dénomination.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Projet.
+La description du Projet cloné n`'est pas affichée car il est logique que le nouveau Projet ait sa propre description.
+
+|Référentiel
+|Par défaut, le RCV utilisé pour le Projet cloné est affiché.
+Si nécessaire, vous pouvez sélectionner un autre RCV à partir du menu déroulant.
+
+|Nom de Projet dans RCV
+|Saisissez dans ce champ la dénomination qu`'a le nouveau Projet dans le RCV.
+La dénomination du Projet dans le RCV n`'est pas affichée car il est impossible d`'avoir deux Projets ayant la même dénomination dans le RCV.
+
+|Système de Suivi d`'incidents
+|Par défaut, le Système de Suivi des Incidents utilisé pour le Projet cloné est affiché.
+Si nécessaire, vous pouvez sélectionner un autre Système de Suivi des Incidents à partir du menu déroulant.
+
+|Type de Projet
+|Le type de Projet utilisé pour le Projet cloné est affiché et ne peut pas être modifié.
+
+|Type outil de construction
+|Par défaut, le Type d`'Outil de Déploiement utilisé pour le Projet cloné est affiché.
+Si nécessaire vous pouvez sélectionner un autre Outil de Construction à partir du menu déroulant.
+
+|Type outil de déploiement
+|Par défaut, le Type d`'Outil de Déploiement utilisé pour le Projet cloné est affiché.
+Si nécessaire vous pouvez sélectionner un autre Outil de Déploiement à partir du menu déroulant.
+
+|Script de construction
+|Par défaut, le script de construction utilisé pour le Projet cloné est affiché.
+Si nécessaire, vous pouvez sélectionner un autre script de construction.
+
+|Script de déploiement
+|Par défaut, le script de déploiement utilisé pour le Projet cloné est affiché.
+Si nécessaire, vous pouvez sélectionner un autre script de déploiement.
+
+|Verrouillé
+|La valeur de ce champ en lecture seule est __Non__, car un nouveau Projet dans IKAN ALM est configuré par rapport au Projet cloné.
+
+|Caché
+|Par défaut, la valeur de ce champ en lecture seule est __Non__, car une Branche de Projet ne peut pas être cachée au moment de sa création.
+
+|Paramètres de Sécurité du Projet - Groupe Utilisateurs
+|Par défaut, le Groupe d`'Utilisateurs ayant des droits d`'accès d`'utilisateur pour le Projet cloné est affiché.
+Si nécessaire, vous pouvez sélectionner un autre Groupe d`'utilisateurs à partir du menu déroulant.
+
+Si saisie, cette valeur écrase la valeur définie dans le champ _Groupe d`'utilisateurs IKAN ALM_ dans l`'écran __Paramètres système__. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+Par défaut, ce Groupe sera attribué comme le Demandeur lors de la création d`'une Requête de Niveau.
+
+|Paramètres de Sécurité du Projet - Groupe Administrateurs
+|Par défaut, le Groupe d`'utilisateurs ayant des droits d`'accès d`'Administrateur pour le Projet cloné dans IKAN ALM.
+Si nécessaire, vous pouvez sélectionner un autre Groupe d`'utilisateurs à partir du menu déroulant.
+
+Si saisie, cette valeur écrase la valeur définie dans le champ _Groupe d`'Administrateurs IKAN ALM_ dans l`'écran __Paramètres système__. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+|===
+
+. Étendez la structure arborescente du projet dans le panneau _Configuration du projet à cloner_ et contrôlez la validité des composants.
++
+La structure contient les types d`'objets suivants:
+
+* Branches
+* Cycles de vie
+* Niveaux
+* Phases de niveaux
+* Environnements de construction
+* Environnements de déploiement
+* Phases d`'environnements
+* Paramètres de construction
+* Paramètres de déploiement
+* Paramètres de la phase
+* Approbations
+
+. Complétez les champs et cliquez sur le bouton __Vérifier le nom de projet dans le RCV__.
+. Si le Projet existe dans le RCV, cliquez sur le bouton __Cloner le projet__.
++
+Le Projet sera cloné.
+. Si nécessaire, modifiez la définition des composants.
++
+
+[WARNING]
+--
+Tous les composants du nouveau Projet seront des copies exactes de leurs pendants dans le Projet cloné.
+Il est de la responsabilité de l`'Utilisateur de vérifier si les composants doivent être uniques dans le nouveau Projet.
+Par exemple: _Emplacement cible_ ou _Environnements
+de déploiement_ qui se réfèrent à des répertoires fixes.
+Vérifiez si c`'est souhaitable.
+--
+
+. Auditez le Projet pour le déverrouiller.
++
+Voir <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,Auditer un projet>>

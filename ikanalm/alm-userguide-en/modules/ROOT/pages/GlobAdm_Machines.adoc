@@ -261,7 +261,7 @@ For detailed information, refer to the following sections:
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters_create,Creating Machine Parameters>>
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters__edit,Editing Machine Parameters>>
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters_delete,Deleting Machine Parameters>>
-* <<#_globadm_machineparameters_copy,Copying Machine Parameters>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters_copy,Copying Machine Parameters>>
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters_history,Viewing the Machine Parameter History>>
 
 [[_globadm_machinesoverview_delete]]
@@ -458,7 +458,7 @@ The following actions are possible:
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters_create,Creating Machine Parameters>>
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters__edit,Editing Machine Parameters>>
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters_delete,Deleting Machine Parameters>>
-* <<#_globadm_machineparameters_copy,Copying Machine Parameters>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters_copy,Copying Machine Parameters>>
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters_history,Viewing the Machine Parameter History>>
 
 [[_globadm_machineparameters_overview]]
@@ -544,7 +544,7 @@ It allows deleting the selected Machine Parameter definition and (optionally) de
 This option is available to all Users with Global Administrator Access Rights.
 It allows copying the selected Machine Parameter definition.
 
-<<#_globadm_machineparameters_copy,Copying Machine Parameters>>
+<<GlobAdm_Machines.adoc#_globadm_machineparameters_copy,Copying Machine Parameters>>
 |===
 
 [[_globadm_machineparameters_create]]
