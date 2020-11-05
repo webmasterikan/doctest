@@ -399,7 +399,7 @@ Select _Help_ on the main menu.
 A new internet browser window will pop up, displaying the "`Table of Contents`" of the "`IKAN ALM Help`".
 * as context-sensitive help on each ALM user interface screen.
 +
-Click the image:images/icons/help.gif[,16,16]  icon next to the selected menu indication to access it.
+Click the image:icons/help.gif[,16,16]  icon next to the selected menu indication to access it.
 
 [[_webpadproject]]
 == Sample Java Project (Projects)
@@ -448,7 +448,7 @@ The Subversion Repository definition was created during the installation, and an
 Most settings are OK to connect with the Subversion Repository created in the __ALM_HOME/vcr/subversion/repository__, but its Command Path might need to be adapted in case it could not be detected during installation.
 By default, the repository does not need a User ID or Password.
 
-Click the _Edit_ image:images/icons/edit.gif[,15,15]  icon.
+Click the _Edit_ image:icons/edit.gif[,15,15]  icon.
 
 
 image::subversion_definition.png[,532,561] 
@@ -493,7 +493,7 @@ Press the _Close_ button to close the _Add to Desktop_ window.
 You can also select individual Levels in the tree and add them to your Desktop.
 ====
 
-On the __Desktop Overview__, expand the Project Stream Levels by clicking the image:images/icons/ExpandProjectStream.gif[,10,10]  icon in front of the _Customers 1-0_ Project Stream Desktop item.
+On the __Desktop Overview__, expand the Project Stream Levels by clicking the image:icons/ExpandProjectStream.gif[,10,10]  icon in front of the _Customers 1-0_ Project Stream Desktop item.
 The following Levels are now displayed:
 
 
@@ -514,11 +514,11 @@ Administration_ on the main menu to start the unlock procedure.
 
 image::fig6.2_1.png[,797,371] 
 
-Click the _Edit_ image:images/icons/edit.gif[,15,15]  icon in front of the Customers Project.
+Click the _Edit_ image:icons/edit.gif[,15,15]  icon in front of the Customers Project.
 
 [NOTE]
 ====
-There is also an__ Unlock __image:images/icons/unlock.gif[,15,15]  icon for each Project in the list here.
+There is also an__ Unlock __image:icons/unlock.gif[,15,15]  icon for each Project in the list here.
 This icon will only unlock the Project, leaving the Levels locked.
 ====
 
@@ -531,7 +531,7 @@ Select _Audit Project_ on the submenu in order to check the consistency of the P
 image::fig6.2_2.png[,892,79] 
 
 Before showing the _Audit Project_ screen, several checks will be done to verify the setup of the Project.
-You can click the image:images/icons/help.gif[,16,16]  button to get context-sensitive help on this function.
+You can click the image:icons/help.gif[,16,16]  button to get context-sensitive help on this function.
 For more information, refer to the chapter _Auditing
 Projects_ in the _IKAN ALM User Guide_ for more information. 
 
@@ -603,7 +603,7 @@ Select _Desktop_ on the main menu.
 
 image::fig6.3_4.png[,943,274] 
 
-Click the _Deliver_ image:images/icons/icon_deliverBuild.png[,15,15]  icon at the right of the _Customers 1-0 TEST_ Level.
+Click the _Deliver_ image:icons/icon_deliverBuild.png[,15,15]  icon at the right of the _Customers 1-0 TEST_ Level.
 
 
 image::fig6.3_5.png[,900,611] 
@@ -619,8 +619,8 @@ Click the__ Create__ button.
 You will be forwarded to the __Desktop__.
 A Deliver Build Level Request is created for the Test Level of your project. 
 
-The status of the Level Request is set to__ Waiting Date/Time__ (image:images/icons/waiting_datetime.gif[,15,15] ) until it will be handled by the IKAN ALM Server.
-Then the status changes to__ Run__ (image:images/icons/run.gif[,15,15] ). 
+The status of the Level Request is set to__ Waiting Date/Time__ (image:icons/waiting_datetime.gif[,15,15] ) until it will be handled by the IKAN ALM Server.
+Then the status changes to__ Run__ (image:icons/run.gif[,15,15] ). 
 
 On the _Desktop Overview,_ click the _Latest Level Request_ link for the TEST Level.
 
@@ -630,7 +630,7 @@ image::fig6.3_5b.png[,951,262]
 The __Level Request Detail __screen will be displayed.
 
 Click the _Refresh_ link or activate the _Auto Refresh_ function on the submenu.
-Finally, the Level Request should end with the status__ Success__ (image:images/icons/succes.gif[,15,15] ).
+Finally, the Level Request should end with the status__ Success__ (image:icons/succes.gif[,15,15] ).
 
 
 image::fig6.3_6.png[,942,420] 
@@ -676,7 +676,7 @@ Requests > Create Level Request_ on the menu.
 
 image::fig6.3_9.png[,880,388] 
 
-Click the__ Deliver __image:images/icons/icon_deliverBuild.png[,15,15]  icon at the right of the Customers H_1-0 PRODUCTION Level.
+Click the__ Deliver __image:icons/icon_deliverBuild.png[,15,15]  icon at the right of the Customers H_1-0 PRODUCTION Level.
 
 As you did when creating the Level Request for the TEST level, provide a Description, and select the Build Number __1__.
 Leaving the _Requested Date/Time_ field blank means that the Deliver Level Request will be executed immediately.
@@ -690,11 +690,11 @@ Requests Detail_ screen.
 image::fig6.3_10.png[,957,543] 
 
 A new Level Request will be created, with status _Awaiting
-Pre-Approval_ (image:images/icons/waiting_approval.gif[,15,15] ). Since a Pre-Approval is linked to the PRODUCTION level, a notification mail will be sent to all members of the _ALM User_ User Group.
+Pre-Approval_ (image:icons/waiting_approval.gif[,15,15] ). Since a Pre-Approval is linked to the PRODUCTION level, a notification mail will be sent to all members of the _ALM User_ User Group.
 
 The newly created Level Request will stay in the _Awaiting Pre-Approval_ status until the approval is granted.
 Since the global user is a member of the _ALM User_ User Group, select _Approvals
-> Outstanding Approvals_ on the main menu, then click the__ Approve __image:images/icons/approve.gif[,15,15]  link.
+> Outstanding Approvals_ on the main menu, then click the__ Approve __image:icons/approve.gif[,15,15]  link.
 
 
 image::fig6.3_11.png[,955,483] 
@@ -704,9 +704,9 @@ Enter any approval text (optional) and click the _Approve_ button.
 The Level Request will now be handled by the IKAN ALM Server. 
 
 Return to the _Desktop Overview_ by selecting _Desktop_ on the main menu.
-The status of the _Latest Level Request_ for the Production Level is now set to__ Run__ (image:images/icons/run.gif[,15,15] ). Click the__ Refresh__ link or activate _Auto
+The status of the _Latest Level Request_ for the Production Level is now set to__ Run__ (image:icons/run.gif[,15,15] ). Click the__ Refresh__ link or activate _Auto
 Refresh_ on the submenu.
-Finally, the Level Request should end with the status__ Success__ (image:images/icons/succes.gif[,15,15] ).
+Finally, the Level Request should end with the status__ Success__ (image:icons/succes.gif[,15,15] ).
 
 You may click also click the _Latest Level Request_ link on the __Desktop Overview __to follow up the execution of the different phases. 
 
@@ -768,7 +768,7 @@ Administration > Phases > Overview__.
 
 image::fig6.5_1.png[,964,511] 
 
-Click the _Edit _image:images/icons/edit.gif[,15,15]  icon before the __com.ikanalm.phases.ant.scripting.tomcatDeploy Phase__.
+Click the _Edit _image:icons/edit.gif[,15,15]  icon before the __com.ikanalm.phases.ant.scripting.tomcatDeploy Phase__.
 
 
 image::fig6.5_2.png[,873,725] 
@@ -787,7 +787,7 @@ As you can see on the _Connected Levels and Environments_ panel, our Tomcat Depl
 
 
 For an example of a more advanced usage of Parameters, look at the "`contextPath`" Phase Parameter.
-Its default value is set to ``/${applicationName}``, and it has this value set in both the testdeploy and proddeploy Environments (you can see them by clicking the _Edit _image:images/icons/edit.gif[,15,15]  icon in front of the _contextPath_ Parameter). Still, the Customers application is deployed to 2 different contexts, namely "`customers_test`" and "`customers`". 
+Its default value is set to ``/${applicationName}``, and it has this value set in both the testdeploy and proddeploy Environments (you can see them by clicking the _Edit _image:icons/edit.gif[,15,15]  icon in front of the _contextPath_ Parameter). Still, the Customers application is deployed to 2 different contexts, namely "`customers_test`" and "`customers`". 
 
 How does this work?
 
