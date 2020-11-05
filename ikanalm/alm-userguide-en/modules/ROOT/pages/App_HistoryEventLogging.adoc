@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 [[_historyeventlogging]]
 == History and Event Logging 
 (((History)))  (((Event Logging))) 
@@ -232,5 +229,3 @@ The panel is replaced with the _Modified Files_ panel, displaying which files ha
 
 image::History_Differences-PackagesModifiedFiles.png[,1026,541] 
 
-
-:sectnums:

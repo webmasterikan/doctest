@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 [[_historyeventlogging]]
 == Enregistrement de l`'historique et des événements 
 (((Historique)))  (((Événements)))  (((Enregistrement ,Historique et événements))) 
@@ -236,4 +233,3 @@ modifiés__, affichant les fichiers ajoutés (vert), modifiés (noir) ou supprim
 image::History_Differences-PackagesModifiedFiles.png[,912,528] 
 
 
-:sectnums:

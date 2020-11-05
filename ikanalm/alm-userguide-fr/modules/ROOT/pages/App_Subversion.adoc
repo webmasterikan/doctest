@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 [[_subversiongeneralinformation]]
 == Subversion - informations générales 
 (((Subversion)))  (((Subversion ,Informations générales))) 
@@ -472,5 +469,3 @@ Cela s`'accomplit en incluant une instruction de copie dans le script de constru
 +
 Ainsi, le fichier `vcr.properties` sera inclu dans le résultat de construction, et, par conséquent, il sera disponible pour le script de déploiement pendant le processus de déploiement de ce résultat de construction.
 
-
-:sectnums:

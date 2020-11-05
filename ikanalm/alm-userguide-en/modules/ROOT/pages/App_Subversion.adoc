@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 [[_csubversiongeneralinformation]]
 == Subversion - General Information 
 (((Subversion)))  (((Subversion ,General Information))) 
@@ -460,5 +457,3 @@ This can be achieved by including a copy instruction in the build script which c
 +
 In that way the `vcr.properties` file will be included in the build result, and as a consequence it will be available to be used in the deploy script during a deploy action of this build result.
 
-
-:sectnums:

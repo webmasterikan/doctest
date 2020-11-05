@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 [[_cpredefinedbuildparameters]]
 == Paramètres de niveau prédéfinis 
 (((Paramètres prédéfinis ,Niveau)))  (((Paramètres de niveau ,Paramètres de niveau prédéfinis))) 
@@ -132,4 +129,3 @@ Cet Emplacement peut être étendu avec l`'OID Requête de niveau, "workcopy", l
 (Par exemple, ``E:\Ikan\alm\system\system\workCopy\1170\workcopy\Webpad\webpad``)
 |===
 
-:sectnums:

@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 == Predefined Build Parameters 
 (((Predefined Parameters)))  (((Predefined Parameters ,Build)))  (((Build Parameters ,Predefined Build Parameters))) 
 
@@ -168,4 +165,3 @@ The named directory in this property will contain all the sources from the paren
 The name will be expanded with the number of the __alm.build.oid__.
 |===
 
-:sectnums:

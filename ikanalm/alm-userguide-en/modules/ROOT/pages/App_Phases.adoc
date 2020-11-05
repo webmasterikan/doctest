@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 [[_phases_generalinformation]]
 == Phases - General Information 
 (((Phases)))  (((Phases ,General Information))) 
@@ -622,4 +619,3 @@ Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deplo
 A _Custom Deploy_ Phase may also be a Custom Level or Build Phase: the definition in Global Administration can also specify that it may be used on a Level or Build Environment.
 ====
 
-:sectnums:

@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 [[_phases_generalinformation]]
 == Phases - Informations générales 
 (((Phases)))  (((Phases ,Informations générales))) 
@@ -632,4 +629,3 @@ Une Phase de déploiement personnalisée peut également être une Phase de nive
 La définition dans l'Administration globale peut également spécifier qu'elle peut être utilisée sur un Niveau ou sur un Environnement de construction.
 ====
 
-:sectnums:

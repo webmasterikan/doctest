@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 [[_cpredefineddeployparameters]]
 == Predefined Deploy Parameters 
 (((Predefined Parameters ,Deploy)))  (((Build Parameters ,Predefined Deploy Parameters))) 
@@ -170,4 +167,3 @@ The name will be expanded with the number of the alm.deploy.oid to create the co
 |This parameter provides the name of the Target location as defined in the current Deploy Environment definition, the target of the deploy action.
 |===
 
-:sectnums:

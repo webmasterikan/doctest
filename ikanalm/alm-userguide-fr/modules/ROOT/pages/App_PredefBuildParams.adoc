@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 [[_predefinedbuildparameters]]
 == Paramètres de construction prédéfinis 
 (((Paramètres prédéfinis)))  (((Paramètres prédéfinis ,Construction)))  (((Paramètres de construction ,Paramètres de construction prédéfinis))) 
@@ -169,4 +166,3 @@ Le répertoire mentionné dans cette propriété contiendra toutes les Sources d
 A cette dénomination sera ajouté le numéro __alm.build.oid____$$.$$__
 |===
 
-:sectnums:

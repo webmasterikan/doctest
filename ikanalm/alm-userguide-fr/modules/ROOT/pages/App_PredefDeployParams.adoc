@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 [[_predefineddeployparameters]]
 == Paramètres de déploiement prédéfinis 
 (((Paramètres prédéfinis ,Déploiement)))  (((Paramètres de déploiement ,Paramètres de déploiement prédéfinis))) 
@@ -169,4 +166,3 @@ Ce nom sera complété avec le numéro du alm.deploy.oid pour créer le réperto
 |Ce Paramètre donne l`'emplacement de la Cible tel que défini pour l`'Environnement de Déploiement actuel, c`'est-à-dire la Cible de l`'action de déploiement. 
 |===
 
-:sectnums:

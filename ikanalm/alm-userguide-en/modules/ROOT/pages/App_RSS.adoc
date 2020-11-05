@@ -1,7 +1,4 @@
 
-:sectnums!:
-
-[appendix]
 [[_drssfeedurldetails]]
 == RSS URL Details 
 (((RSS URL Details))) 
@@ -85,4 +82,3 @@ Valid sample URLs:
 
 \https://pe4600:8080/alm/displayRss.action?projectName=DEMOCVS&projectStreamBuildPrefix=1&projectStreamBuildSuffix=1&levelType=0&title=IKAN ALM+builds+in+project+DEMOCVS
 
-:sectnums:
