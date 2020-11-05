@@ -1,3 +1,5 @@
+* xref:index.adoc[Index]
+
 .Getting Started
 * xref:Introduction.adoc[Introduction]
 * xref:Logon.adoc[Logging in and out]
