@@ -1,0 +1,1289 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+:description: Demo Installation Guide for Linux
+:revnumber: v5.8
+:revdate: 01.10.2016
+
+= Demo Installation Guide for Linux
+
+== Introduction
+
+Many IT organizations control their application development with the aid of tools.
+These tools vary depending on the size of the development team or the complexity of the applications being developed.
+Most of these tools enable some form of version control, maybe even some form of defect tracking and probably some form of change management to assure control over the development process of the code.
+But what happens when code leaves the development team(s)? To what extent is your (re)build process for QA and Production automated? How sophisticated are your deployment capabilities?
+
+IKAN ALM extends the control beyond the development teams.
+IKAN`'s (r)evolutionary approach combines existing development tools with automated build and deploy management and lifecycle support for any size of organization.
+You do not want to miss the (r)evolution!
+
+This document describes how to install the IKAN ALM 5.8 Demo application.
+This demo version offers most of the functionality of the full version, although it is limited in the following ways:
+
+* Time-limited: the license expires 30 days after installation
+* Usage-limited: 2 defined machines, 2 floating users, 2 reserved users.
+* Database-limited: a light-weight HSQLDB database is used, the full version supports MySQL, Oracle, DB2, MS SQL Server and (on demand) any other JDBC compliant database
+* Server and Agent processes will run in the same JVM of the OSGi container. In the full version they may be installed as daemons running independently on local or remote systems.
+
+
+This document will guide you through the installation of the IKAN ALM 5.8 Demo application.
+However, if you need additional assistance, don`'t hesitate to contact our support services via e-mail at __support@ikanalm.com__.
+
+== Prerequisites
+
+Before starting the installation, verify and, if necessary, update the configuration of the target install system. 
+
+[NOTE]
+====
+It is recommended to uninstall previous IKAN ALM Demo installations before doing a re-install (<<_windemo_uninstalling>>).
+====
+
+=== Windows-based Operating System
+
+The IKAN ALM 5.8 Windows Demo installation has been tested on:
+
+* Microsoft Windows Vista/2008
+* Microsoft Windows 7/2008 R2
+* Microsoft Windows 8/2012
+* Microsoft Windows 8.1/2012 R2
+* Microsoft Windows 10/2016 Server
+
+
+[[_chbbgjeb]]
+=== Java SE Development Kit
+
+Java SE Development Kit (JDK) V1.7.x or 1.8.x is required.
+
+All IKAN ALM components need at least a Java Development Kit (JDK) or a Server Java Runtime (Server JRE ). IKAN ALM has been tested to run with both Oracle Java and OpenJDK.
+The Java SE Server Runtime Environment (Server JRE) or Software Development Kit (SDK) can be freely obtained from Oracle's website.
+Both 32-bit and 64-bit versions are supported. 
+
+The latest version of Java SE can be downloaded from http://www.oracle.com/technetwork/java/javase/downloads/index.htm[
+http://www.oracle.com/technetwork/java/javase/downloads/index.html].
+
+[[_chbidjhb]]
+=== Microsoft Windows SDK for Windows 7 and .NET Framework 4
+
+The Microsoft Windows SDK for Windows 7 and the .NET Framework 4 must be installed if you want to see the Monocalendar .NET demo project in action.
+If not installed, it will not be possible to build or run the Monocalendar project.
+
+You can install the Windows SDK and .NET Framework afterwards.
+It can be downloaded from Microsoft`'s website: http://www.microsoft.com/en-us/download/details.aspx?id=8279[
+http://www.microsoft.com/en-us/download/details.aspx?id=8279].
+
+[NOTE]
+====
+Windows SDK 7 has issues when installing on Windows 10, see following link on how to solve these:
+
+http://stackoverflow.com/questions/32091593/cannot-install-windows-sdk-7-1-on-windows-10[
+http://stackoverflow.com/questions/32091593/cannot-install-windows-sdk-7-1-on-windows-10].
+
+Pre-Windows 7 versions need the Microsoft .NET Framework 3.5 and also, at least, .NET Framework 2.0 SDK.
+It can be downloaded from Microsoft`'s website: http://www.microsoft.com/en-us/download/details.aspx?id=21#_blank[
+.NET Framework 3.5] and https://www.microsoft.com/en-us/download/details.aspx?id=19988#_blank[
+.NET Framework 2.0 Software Development Kit (SDK) (x86)].
+====
+
+== Installation Steps
+
+[NOTE]
+====
+The screenshots used in this document assume the English language has been selected.
+For the other languages the screens will be similar.
+====
+
+=== Step 1: Starting the Installation
+
+The IKAN ALM Windows Demo is distributed as a 32-bit and a 64-bit self-extractable archive.
+The first step of the installation is to choose one of the archives and unpack it locally on the machine where you want to install the IKAN ALM Demo.
+
+To do so, double-click or execute the archive (``ikanalm_trial_x86.exe`` or ``ikanalm_trial_x64.exe``).
+
+A window similar to this one will pop up:
+
+
+image::images/startingup.png[,361,167] 
+
+Choose a destination folder.
+The files will be extracted in a subfolder named "ikanalm_trial_x86" or "ikanalm_trial_x64". 
+
+After extraction, the folder should contain :
+
+* alm_license.lic: a Demo license (valid for 30 days) for IKAN ALM
+* 32-bit version: almdemo_install_5-8_x86.exe
++
+The 32-bit installer image for IKAN ALM Demo
+* 64-bit version: almdemo_install_5-8_x64.exe
++
+The 64-bit installer image for IKAN ALM Demo
+* IKAN ALM 5.8 Windows Demo Installation Guide.pdf : installation guide for installing IKAN ALM Demo
+
+
+Execute either the 32-bit or the 64-bit installer :
+
+* almdemo_install_5-8_x86.exe: To run this installer image, you will need to have a 32-bit Public Java Runtime Environment (Public JRE) installed.
+* almdemo_install_5-8_x64.exe: To run this installer image, you will need to have a 64-bit Public Java Runtime Environment (Public JRE) installed.
+
+
+The graphical IKAN ALM installer will start.
+Refer to the section <<_windemo_troubleshooting>> if the IKAN ALM installer does not start.
+
+Depending on the flavor of Windows OS used, there can be differences in the installer`'s behavior.
+
+If UAC is enabled (Windows Vista and later), Windows will ask for a confirmation for the program to make changes to the computer (if your User account is an Administrator). If you are trying to install the application from an account other than Administrator, you might get the message "requested operation requires elevation."
+
+Double-click the `almdemo_install_5.8_xXX.exe` file.
+The following window will pop up:
+
+
+image::images/fig3_1.png[,171,184] 
+
+Select your preferred installation language and click __OK__.
+
+The following welcome screen will be displayed:
+
+
+image::images/fig3_2.png[,813,491] 
+
+Click _Next_ to continue.
+
+
+image::images/fig3_3.png[,815,489] 
+
+Carefully read the readme information.
+Click the _Next_ button to continue.
+
+[[_chbfgfcf]]
+=== Step 2: License Agreement
+
+
+image::images/fig3_4.png[,811,487] 
+
+Read the license agreement carefully.
+Select the option _I
+accept the terms of this license agreement._ and click the _Next_ button.
+
+=== Step 3: Installation Location
+
+
+image::images/fig3_5.png[,812,487] 
+
+Select the home directory for installing the Demo Application on your file system.
+The default home directory is C:\ALMDemo.
+You can change this location using the _Browse_ button.
+
+Further on in this document, this location will be referred to as __ALM_HOME__.
+
+Click _Next_ to continue.
+
+If the directory already exists, a warning message will appear.
+
+
+image::images/directoryexists.png[,618,127] 
+
+All installation packs must be installed.
+
+
+image::images/fig3_6.png[,810,486] 
+
+Click _Next_ to proceed to the selection of a Java Development Kit (JDK).
+
+=== Step 4: Selecting a Java Development Kit
+
+
+image::images/fig3_7.png[,812,488] 
+
+As mentioned in the section <<_chbbgjeb>>, a Java Development Kit (JDK) version 1.7 or 1.8 is required. 
+
+[NOTE]
+====
+A Java Runtime Environment (JRE) will not be sufficient!
+====
+
+If the selected directory does not contain a proper JDK, the following error message will be displayed:
+
+
+image::images/errordirectory.png[,417,142] 
+
+
+[[_chbhbhgj]]
+=== Step 5: Configuration Settings
+
+
+image::images/fig3_9.png[,813,489] 
+
+Configure the network ports used by IKAN ALM.
+Normally, the defaults presented should be OK, but it is important that these port numbers are not in use by other processes.
+
+Get to a DOS prompt and type `netstat -an` to check which ports are currently in use.
+
+In the remainder of this guide, the Application Server Port will be referred to as __ALM_APPSERVER_PORT__.
+
+Click _Next_ to obtain an installation summary.
+
+
+image::images/fig3_10.png[,815,489] 
+
+Click _Next_ to start the installation with the given settings:
+
+
+image::images/fig3_11.png[,810,486] 
+
+Once the installation is finished, click__ Next__ to proceed with setting up the Start Menu.
+
+=== Step 6: Start Menu Shortcuts
+
+
+image::images/fig3_12.png[,816,488] 
+
+Select the Program Group and Shortcut Name for the Start Menu.
+The default group and name is __IKAN ALM
+Demo 5.8__.
+You may change these names.
+
+Click _Next_ to complete the IKAN ALM Demo installation.
+
+
+image::images/fig3_13.png[,814,488] 
+
+
+== Setup After Installation
+
+=== Installing the IKAN ALM License
+
+Together with this Installation Guide and the installer, you should have received a license file named __alm_license.lic__.
+
+This demo license will expire after 30 days (<<_chbfgfcf>>). Contact IKAN ALM support if you did not receive the license file or if you want to extend the license period.
+
+Start the IKAN ALM Demo Server:
+
+* Via the Start Menu: 
++
+__Applications > IKAN ALM
+Demo 5.8 > Start IKAN ALM Demo server__
+* Or via the batch file:
++
+Double click the _ALM_HOME/startDemo.cmd_ file.
+
+
+Open the IKAN ALM web application:
+
+* Via the start menu:
++
+__Start > Programs > IKAN
+ALM Demo 5.8 > Open IKAN ALM in browser__
+* Or via a web browser:
++
+Provide the following URL: _\http://MACHINE_NAME:ALM_APPSERVER_PORT/alm_ (e.g., \http://ikan009:9080/alm)
+
+
+The _Install license_ screen will appear.
+
+
+image::images/novalidlicense.png[,497,273] 
+
+Enter or browse to the file location of the _alm_license.lic_ file you received and click __Submit__.
+Do not alter the file or filename.
+The following screen will appear when the license is installed:
+
+
+image::images/install_license.png[,514,306] 
+
+
+== Using the IKAN ALM 5.8 Demo Application
+
+[[_chbgjjeb]]
+=== Starting and Stopping the IKAN ALM Server
+
+The IKAN ALM Demo Server must be running in order to work with IKAN ALM.
+
+Start the IKAN ALM Demo Server:
+
+* Via the shortcut menu: 
++
+__Start > Programs > IKAN
+ALM Demo 5.8 > Start IKAN ALM Demo server__
+* Or via the batch file:
++
+Double click the _ALM_HOME/startDemo.cmd_ file.
+
+
+This will launch a Tomcat webserver and the IKAN ALM Demo server (which runs both the IKAN ALM Server and Agent). When the IKAN ALM Demo server prompt window displays a message like: "Successfully connected with IKAN ALM server", the ALM Demo is fully started.
+
+
+image::images/fig5_1.png[,687,351] 
+
+If a message such as "INFO : Server startup in nnn ms" is displayed, the Tomcat Server is completely up and running and you can use the Web application.
+
+
+image::images/fig5_2.png[,687,351] 
+
+Stop the IKAN ALM Demo Server:
+
+* Via the shortcut menu: 
++
+__Start > Programs > IKAN
+ALM Demo 5.8 > Stop IKAN ALM Demo server__
+* Or via the batch file:
++
+Double click the _ALM_HOME/stopDemo.cmd_ file.
+
+
+=== Opening the IKAN ALM Web Application
+
+If you work on the system where you installed the IKAN ALM demo you can do the following:
+
+_Start > Programs > IKAN
+ALM Demo 5.8 > Open IKAN ALM in browser_
+
+If you did not install the Start Menu shortcuts, or if you work on a remote system on the same network as the machine where you installed the IKAN ALM demo, do the following:
+
+. Start an internet browser 
+. Provide the following _URL: \http://MACHINE_NAME: ALM_APPSERVER_PORT/alm_
+
+
+[NOTE]
+====
+_
+MACHINE_NAME_ may be replaced by the machine name or IP address (e.g., 127.0.0.1, IKAN001, ... ) of the system where you installed the IKAN ALM demo. _ALM_APPSERVER_PORT_ as configured in section <<_chbhbhgj>>.
+For example, an IKAN ALM start URL could be __\http://ikan009:9080/alm__.
+====
+
+An internet browser window will appear, displaying the IKAN ALM _Log in_ screen.
+
+[[_ceggadeb]]
+=== Logging on to the IKAN ALM Web Application
+
+You are ready to start working with the IKAN ALM web interface.
+
+
+image::images/Logon.png[,524,319] 
+
+You may add this link to your internet browser`'s Favorites.
+
+Log on to IKAN ALM with one of the following predefined User IDs and passwords:
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| User ID
+| Password
+| Access Rights
+
+
+|
+
+user
+|
+
+user
+|
+
+User
+
+|
+
+project
+|
+
+project
+|
+
+Project Administration
+
+|
+
+global
+|
+
+global
+|
+
+Global Administration
+|===
+
+
+We suggest that you start with the User ID _global_ (password: __global__), since this User has complete access to all components in the IKAN ALM Demo.
+
+Provide the User ID and Password, and select __Log
+in__.
+The IKAN ALM home page will be displayed and you can start working in IKAN ALM.
+
+=== IKAN ALM Demo Projects
+
+The IKAN ALM Demo Installation includes two completely configured demo projects with a versioning system (Subversion), scripting tools, scripts, sources, global administration and project administration fully set up and ready for build and deploy activities.
+
+==== Customers Project
+
+The _Customers project_ is a small web application, written in Java, for managing a trivial customers database.
+Its lifecycle contains three stages: the CONTBUILD, TEST and PRODUCTION levels. 
+
+* The CONTBUILD level will automatically build the sources when changed, ensuring Continuous Integration.
+* The TEST level will upload generated test data into a test database and deploy the application to the IKAN ALM web server (Apache Tomcat) under a test context.
+* The PRODUCTION level will deploy the application to the IKAN ALM web server (Apache Tomcat) under a production context.
+
+
+Scripts are executed with Apache Ant.
+
+For a detailed description of this project, refer to the chapter <<_webpadproject>>.
+
+==== Monocalendar Project
+
+The _Monocalendar project_ is a stand-alone calendar application written in C Sharp.
+Its lifecycle in the Head Project Stream also contains three levels:
+
+* CONTBUILD for Continuous Integration
+* TEST for the rebuild and creation of an NSIS installer
+* PRODUCTION for installing/uninstalling the application
+
+
+The scripts are executed with NAnt.
+For a detailed description of this project, refer to the section <<_monocalendarproject>>.
+
+=== Documentation
+
+The _IKAN ALM User Guide_ is available in the following formats:
+
+* _Start > Programs > IKAN ALM Demo 5.8 > IKAN ALM Documentation_
+* in PDF format under _ALM_HOME/doc/ALMUserGuide.pdf_
+* in HTML format, within the IKAN ALM web application:
++
+Select _Help_ on the main menu.
+A new internet browser window will pop up, displaying the "`Table of Contents`".
+* as context-sensitive help on each IKAN ALM user interface screen.
++
+Click the image:images/icons/help.gif[,16,16]  icon next to the selected menu indication to access it.
+
+[[_webpadproject]]
+== Sample Java Project (Customers)
+
+The Customers project is a small web application, written in Java, for managing a trivial customers database.
+Its lifecycle contains three stages (Levels):
+
+. CONTBUILD Level
++
+This Level will automatically build the sources when changed, ensuring Continuous Integration
+. TEST Level
++
+This Level will upload generated test data into a test database and deploy the application to the IKAN ALM web server (Apache Tomcat) under a test context.
+. PRODUCTION Level
++
+This Level will deploy the application to the IKAN ALM web server (Apache Tomcat) under a production context.
+
+
+The scripts used by this Project are executed with Apache Ant.
+
+The following sections describe the different steps:
+
+* <<_webpad_managedesktop>>
+* <<_webpad_unlockproject>>
+* <<_webpad_builddeliver>>
+* <<_cegheagc>>
+
+
+[[_webpad_managedesktop]]
+=== Managing Your Desktop
+
+The Desktop allows you to observe the actions (Builds, Deploys) in a project.
+If you log on for the first time, your Desktop will be empty.
+
+In this section, we will create a desktop item for the Customers project.
+
+On the Desktop screen, click the _Add to Desktop_ button.
+
+
+image::images/desktop.png[,928,203] 
+
+The _Add to Desktop_ window pops up.
+
+
+image::images/fig6.1_2.png[,775,467] 
+
+A Project may have different lifecycles.
+In IKAN ALM, those lifecycles are organized in Project Streams.
+In order to follow up all the activity in a Project Stream, you can create a Project Stream Desktop Type.
+
+Select the "1-0" Project Stream of the Customers Project, then click the _Add to Desktop_ button.
+
+A confirmation message will appear if the item is successfully added to the Desktop.
+Press the _Close_ button to close the _Add to Desktop_ window.
+
+[NOTE]
+====
+You can also select individual Levels in the tree and add them to your Desktop.
+====
+
+On the __Desktop Overview__, expand the Project Stream Levels by clicking the image:images/icons/ExpandProjectStream.gif[,10,10]  icon in front of the _Customers 1-0_ Project Stream Desktop item.
+The following Levels are now displayed:
+
+
+image::images/fig6.1_3.png[,917,264] 
+
+As you can see, there is not much activity going on in the Customers project yet, since the project is locked.
+In the next step, we will unlock the project.
+
+[[_webpad_unlockproject]]
+=== Unlocking a Project
+
+In order to build the Customers Project, it must be unlocked together with the corresponding Levels in the Project Administration section.
+This action can only be performed by a User having Project Administration rights, like the "`global`" or "`project`" User ID (See <<_ceggadeb>>).
+
+Select image:images/icon_ProjectAdmin_13x13.png[,26,28] _Project
+Administration_ on the main menu to start the unlock procedure.
+
+
+image::images/fig6.2_1.png[,905,308] 
+
+Click the _Edit_ image:images/icons/edit.gif[,15,15]  icon in front of the _Customers_ Project.
+
+[NOTE]
+====
+There is also an__ Unlock __image:images/icons/unlock.gif[,15,15]  icon for each Project in the list here.
+This icon will only unlock the Project, leaving the Levels locked.
+====
+
+The resulting _Project Info_ screen appears in the Customers Project Administration context.
+We are not going to change the Project Settings, but you could verify the existence of the Project in the Subversion repository by clicking the _Check Project Name in the VCR_ button.
+
+Select _Audit Project_ on the submenu in order to check the consistency of the Project.
+
+
+image::images/fig6.2_2.png[,892,79] 
+
+Before showing the _Audit Project_ screen, several checks will be done to verify the setup of the Project.
+You can click the image:images/icons/help.gif[,16,16]  button to get context-sensitive help on this function.
+For more information, refer to the chapter _Auditing
+Projects_ in the _IKAN ALM User Guide_ for more information. 
+
+If the project is consistent (branches, levels, environments, phases and parameters are valid), an _Unlock_ link will appear in the _Actions_ panel.
+Click this link to unlock the Project and its Levels.
+
+
+image::images/fig6.2_3.png[,766,510] 
+
+As a result, the _Locked_ icons for the Levels will disappear.
+The Project is not locked anymore.
+Select the Project Administration image:images/icon_ProjectAdmin_13x13.png[,26,28]  icon on the main menu to verify that the _Lock_ button for the Project also disappeared.
+
+As soon as the Project and its Levels are unlocked, there will automatically be some action in the Project.
+Check the next section to understand what is happening.
+
+[[_webpad_builddeliver]]
+=== Building/Delivering in the Lifecycle of a Project
+
+[[_firstbuild]]
+==== Automatic Build on the Build Level
+
+Once the Project is unlocked, it will be built automatically.
+
+Since a Continuous Build schedule is linked to the Project`'s Build Level (CONTBUILD), the IKAN ALM scheduler will check at startup (and from then on every minute) whether there are changes in the trunk of the Subversion repository connected to the Project. 
+
+If changes have been made, or if there has never been a Build before (like in this case), a Build Level Request will be created.
+
+To verify the result of this Build Level Request select _Level Requests > Overview Level
+Requests_ on the main menu.
+
+The following overview will be displayed:
+
+
+image::images/fig6.3_1.png[,919,424] 
+
+Select the _OID_ (1) of the Level Request to display the__ Level Request Detail__ page on which you can verify what happened during the Build Level Request.
+
+In IKAN ALM, the steps of the build process are called Phases.
+To see what happened during the Level Request, select the _Phase
+Logs_ tab:
+
+
+image::images/fig6.3_2.png[,918,480] 
+
+This page displays the logs of the Level Phases, the Build and Deploy actions and their Build and Deploy Phases executed during the handling of a Level Request.
+It also provides more detailed information regarding the used Parameters.
+Since the CONTBUILD Level has one Build Environment, there will be one Build Action with Build Phases, and no Deploy Actions.
+Try clicking on the names of the phases: this will expand the phase, displaying its details.
+
+The log of the Execute Script Phase is the most interesting one.
+It should show a successful compilation process, the creation of a .war file, and some supporting tasks.
+To display it, expand the Build action (called Build 1 on Machine XXX). This shows the Build phases that were executed during the Build action.
+Next, expand the Execute Script phase.
+This will reveal the execution log, where you will find the output of the Ant build script that was executed.
+
+
+image::images/fig6.3_3.png[,874,562] 
+
+
+[[_delivertotest]]
+==== Delivering the Build to the TEST Level
+
+At this point there is a successful Build available on the first level of the Head Project Stream.
+We will now deliver it to the next Levels (TEST and PRODUCTION) in the lifecycle.
+
+Select _Desktop_ on the main menu.
+
+
+image::images/fig6.3_4.png[,943,274] 
+
+Click the _Deliver_ image:images/icons/icon_deliverBuild.png[,15,15]  icon at the right of the _Customers H_1-0 TEST_ Level.
+
+
+image::images/fig6.3_5.png[,900,611] 
+
+On the _Create Level Request_ screen, provide a description and select the Build (1) by clicking the appropriate Build row.
+
+[NOTE]
+====
+If you leave the _Requested Date/Time_ field blank, the Deliver Level Request will be executed immediately.
+====
+
+Click the__ Create__ button.
+You will be forwarded to the __Desktop__.
+A Deliver Build Level Request is created for the Test Level of your project. 
+
+The status of the Level Request is set to__ Waiting Date/Time__ (image:images/icons/waiting_datetime.gif[,15,15] ) until it will be handled by the IKAN ALM Server.
+Then the status changes to__ Run__ (image:images/icons/run.gif[,15,15] ). 
+
+On the _Desktop Overview,_ click the _Latest Level Request_ link for the TEST Level.
+
+
+image::images/fig6.3_5b.png[,951,262] 
+
+The __Level Request Detail __screen will be displayed.
+
+Click the _Refresh_ link or activate the _Auto Refresh_ function on the submenu.
+Finally, the Level Request should end with the status__ Success__ (image:images/icons/succes.gif[,15,15] ).
+
+
+image::images/fig6.3_6.png[,942,420] 
+
+
+===== What is the result of this Deliver to Test?
+
+The Test Level of the Customers project contains a Deploy action.
+During the Deploy step, the Customers web application was deployed to the Tomcat server that also runs the ALM Demo.
+The application was deployed under a test context ("`/customers_test`"). Before the application was deployed, a database (a HSQLDB, also running in Tomcat) was uploaded with test data.
+
+To see the deployed application, open a web browser and enter the following URL: `\http://MACHINE_NAME:ALM_APPSERVER_PORT/customers_test` (for example: \http://ikan009:9080/customers_test).
+
+
+image::images/fig6.3_7.png[,661,260] 
+
+
+[NOTE]
+====
+The general color of the application is green.
+This is to indicate that this is the test version of the application.
+The general color of the production version will be red.
+
+Also notice that the version of the sources (the VCR tag) that were used to build this version of the application, is shown in the welcome panel.
+In this example, the VCR tag is H_1-0_b1.
+====
+
+Click on the _List all Customers_ link to display the list of all Customers defined in the test database.
+
+
+image::images/fig6.3_8.png[,643,282] 
+
+
+[[_delivertoproduction]]
+==== Delivering the Build to the PRODUCTION Level
+
+To see what happens next in the lifecycle, we will deliver to the Production level.
+We could do this in a similar way as for the Test level via the Desktop.
+An alternative way is to select _Level
+Requests > Create Level Request_ on the menu.
+
+
+image::images/fig6.3_9.png[,880,388] 
+
+Click the__ Deliver __image:images/icons/icon_deliverBuild.png[,15,15]  icon at the right of the Customers H_1-0 PRODUCTION Level.
+
+As you did when creating the Level Request for the TEST level, provide a Description, and select the Build Number __1__.
+Leaving the _Requested Date/Time_ field blank means that the Deliver Level Request will be executed immediately.
+
+Click the__ Create__ button.
+
+You will be forwarded to the _Level
+Requests Detail_ screen.
+
+
+image::images/fig6.3_10.png[,957,543] 
+
+A new Level Request will be created, with status _Awaiting
+Pre-Approval_ (image:images/icons/waiting_approval.gif[,15,15] ). Since a Pre-Approval is linked to the PRODUCTION level, a notification mail will be sent to all members of the _ALM User_ User Group.
+
+The newly created Level Request will stay in the _Awaiting Pre-Approval_ status until the approval is granted.
+Since the global user is a member of the _ALM User_ User Group, select _Approvals
+> Outstanding Approvals_ on the main menu, then click the__ Approve __image:images/icons/approve.gif[,15,15]  link.
+
+
+image::images/fig6.3_11.png[,955,483] 
+
+Enter any approval text (optional) and click the _Approve_ button.
+
+The Level Request will now be handled by the IKAN ALM Server. 
+
+Return to the _Desktop Overview_ by selecting _Desktop_ on the main menu.
+The status of the _Latest Level Request_ for the Production Level is now set to__ Run__ (image:images/icons/run.gif[,15,15] ). Click the__ Refresh__ link or activate _Auto
+Refresh_ on the submenu.
+Finally, the Level Request should end with the status__ Success__ (image:images/icons/succes.gif[,15,15] ).
+
+You may click also click the _Latest Level Request_ link on the __Desktop Overview __to follow up the execution of the different phases. 
+
+
+image::images/fig6.3_11b.png[,958,269] 
+
+
+===== What is the result of this Deliver to Production?
+
+
+image::images/fig6.3_12.png[,655,234] 
+
+
+[NOTE]
+====
+To see the deployed application on Production, open a web browser and enter the following URL: `\http://MACHINE_NAME:ALM_APPSERVER_PORT/customers` (for example: \http://ikan009:9080/customers).
+
+The general color of the application is red.
+This is to indicate that this is the production version of the application.
+Also notice that the version of the sources (the VCR tag) that were used to build this version of the application, is shown in the welcome panel.
+Here, the VCR tag is H_1-0_b1.
+====
+
+Click on the _List all Customers_ link to display the list of all Customers defined in the production database.
+
+
+image::images/fig6.3_13.png[,652,411] 
+
+
+[[_cegheagc]]
+=== Triggering a Scheduler Build via a Source Commit
+
+It is possible to check out the source code of the demo projects and to commit changes.
+
+Install a Subversion client, for example Tortoise SVN, and check out the source code.
+
+The repository URL is _\file:///ALM_HOME/vcr/subversion/repository/customers/trunk_ for the Customers project.
+
+Modify a source file and commit it.
+The Scheduler will pick up the changes and will start building the Project.
+
+=== Additional Information on Custom Phases
+
+Instead of using one large Ant script that performs all tasks, the deployment of the Customers application uses several small scripts that each perform a specific task.
+The tasks that were reusable have been encapsulated as IKAN ALM Custom Phases.
+
+More specifically, the deploy to the Test level does three things:
+
+* Adapt the .war file (set the database connection parameters in certain config files)
+* Populate a database with test data
+* Deploy the application to Tomcat
+
+
+The first task was not general enough to be reused, but for the other two tasks Custom Phases were made: the "`Update DB`" and the "`Tomcat Deploy`" phases.
+
+To view the definitions of these phases, go to image:images/icon_GlobalAdmin_13x13.png[,26,28] __Global
+Administration > Phases > Overview__.
+
+
+image::images/fig6.5_1.png[,964,511] 
+
+Click the _Edit_ image:images/icons/edit.gif[,15,15]  icon before the __com.ikanalm.phases.ant.scripting.tomcatDeploy Phase__.
+
+
+image::images/fig6.5_2.png[,873,725] 
+
+This page displays general information about the Phase, the Phase Parameters that can be set to configure the execution of the Phase, and where the Phase is currently being used (the _Connected
+Levels and Environments_ panel).
+
+One of the parameters that can be set is "`tomcat.server.url`". It sets the base URL of the Tomcat server where an application needs to be deployed.
+When a Phase is added to an Environment (a Level, Build or Deploy Environment), those parameters can be given a different value for each Environment.
+That means that the same Phase can be reused in a lot of different Environments, each time performing a different task, which offers a lot of flexibility.
+
+As you can see on the _Connected Levels and Environments_ panel, our Tomcat Deploy phase is currently being used in 2 different places:
+
+* In the _testdeploy_ Deploy Environment of the Test Level, where it deploys the Customers application to the test context
+* In the _proddeploy_ Deploy Environment of the Production Level, where it deploys the Customers application to the production context
+
+
+For an example of a more advanced usage of Parameters, look at the "`contextPath`" Phase Parameter.
+Its default value is set to ``/${applicationName}``, and it has this value set in both the testdeploy and proddeploy Environments (you can see them by clicking the _Edit _image:images/icons/edit.gif[,15,15]  icon in front of the _contextPath_ Parameter). Still, the Customers application is deployed to 2 different contexts, namely "`customers_test`" and "`customers`". 
+
+How does this work?
+
+The answer lies in a Deploy Parameter (named "`applicationName`") which is defined on both Deploy Environments.
+
+Go to image:images/icon_ProjectAdmin_13x13.png[,26,28] __Project
+Administration__, and edit the Customers Project.
+Next, in the menu, select __Deploy Environments > Deploy Parameters__:
+
+
+image::images/fig6.5_3.png[,763,447] 
+
+As you can see, for the testdeploy environment, the value of the "`applicationName`" parameter is "`customers_test`", while for the proddeploy environment, the specified value is "`customers`". When the Tomcat Deploy Phase is being executed, the property ${applicationName} will be replaced with the value of the Deploy Parameter, which yields the desired behavior.
+
+For more information on Custom Phases and on how you can create them yourself, please refer to the _IKAN ALM User
+Guide_ (chapter _Global Administration, Phases_ and appendix __Phases: General Information__), and to the document __Using and Developing Custom Phases__.
+[[_monocalendarproject]]
+== Sample .NET Project (Monocalendar)
+
+The Monocalendar Project is a stand-alone calendar application written in C Sharp.
+Its lifecycle in the Head Project Stream contains three stages (Levels):
+
+. CONTBUILD Level
++
+This Level will automatically build the sources when changed, ensuring Continuous Integration.
+. TEST Level
++
+This Level will rebuild and create an NSIS installer.
+. PRODUCTION Level
++
+The Level for installing/uninstalling the application.
+
+
+The scripts are executed with NAnt.
+Microsoft SDK for Windows 7 and Microsoft .NET Framework 4 are needed for compilation (see also <<_chbidjhb>>).
+
+The following sections describe the different steps:
+
+* <<_cegibjjh>>
+* <<_cegdidfh>>
+* <<_cegfgdef>>
+* <<_cegcgjif>>
+
+
+[[_cegibjjh]]
+=== Managing Your Desktop
+
+The Desktop allows you to observe the actions (Builds, Deploys) in a project.
+When you log on for the first time, your Desktop is empty.
+
+In this section, we will create a desktop item for the Monocalendar project.
+
+On the _Desktop_ screen, click the _Add
+to Desktop_ button.
+
+
+image::images/desktop.png[,928,203] 
+
+The _Add to Desktop_ window pops up.
+
+
+image::images/monocal_02.png[,591,359] 
+
+A Project may have different lifecycles.
+In IKAN ALM, these are organized in Project Streams.
+In order to follow up all activity in a Project Stream, you can create a Project Stream Desktop Type.
+
+Select the "1-0" Project Stream of the Monocalendar Project, then click the _Add to Desktop_ button.
+
+A confirmation message will appear if the item is successfully added to the Desktop.
+Press the _Close_ button to close the _Add to Desktop_ window. 
+
+[NOTE]
+====
+You can also select individual Levels in the tree and add them to your Desktop.
+====
+
+Expand the Project Stream Levels by clicking the image:images/icons/ExpandProjectStream.gif[,10,10]  icon in front of the__ Monocalendar 1-0__ Project Stream Desktop item.
+The following Levels are now displayed:
+
+
+image::images/monocal_03.png[,911,255] 
+
+As you can see, there is not much activity going on in the Monocalendar project yet, since the project is locked.
+In the next step, we will unlock the project.
+
+[[_cegdidfh]]
+=== Unlocking a Project
+
+In order to build the Monocalendar Project, it must be unlocked together with the corresponding Levels in the Project Administration section.
+This action can only be performed by a User having Project Administration rights, like the "`global`" or "`project`" User (<<_ceggadeb>>).
+
+Select image:images/icon_ProjectAdmin_13x13.png[,26,28] _Project
+Administration_ on the main menu to start the unlock procedure.
+
+
+image::images/monocal_04.png[,911,319] 
+
+Click the _Edit_ image:images/icons/edit.gif[,15,15]  icon in front of the Monocalendar Project.
+
+[NOTE]
+====
+There is also an__ Unlock __image:images/icons/unlock.gif[,15,15]  icon for each Project in the list here.
+This icon will only unlock the Project, leaving the Levels locked.
+====
+
+The resulting _Project Info_ screen appears in the Monocalendar Project Administration context.
+We are not going to change the Project Settings, but you could verify the existence of the Project in the Subversion repository by clicking the _Check Project Name in the VCR_ button.
+
+Select _Audit Project_ on the submenu in order to check the consistency of the Project.
+
+
+image::images/monocal_05.png[,910,71] 
+
+Before showing the _Audit Project_ screen, several checks will be done to verify the setup of the Project.
+You may click the image:images/icons/help.gif[,16,16]  button to get context-sensitive help on this function.
+Refer to the chapter _Auditing
+Projects_ in the _IKAN ALM User Guide_ for more information. 
+
+If the project is consistent (branches, levels, environments, phases and parameters are valid), an _Unlock_ link will appear in the _Actions_ panel.
+Click this link to unlock the Project and its Levels.
+
+
+image::images/monocal_06.png[,755,508] 
+
+As a result, the _Locked_ icons for the Levels will disappear.
+The Project is not locked anymore.
+Select _Projects Overview_ on the submenu to verify that the _Lock_ button for the Project also disappeared.
+
+As soon as the Project and its Levels are unlocked, there will automatically be some action in the Project.
+Check the next section to understand what is happening.
+
+[[_cegfgdef]]
+=== Building/Delivering in the Lifecycle of a Project
+
+==== Automatic Build on the BUILD Level
+
+Once the Project is unlocked, it will be automatically built.
+
+Since there is a Continuous Build schedule linked to the Project`'s Build Level (CONTBUILD), the IKAN ALM scheduler will check at startup (and from then on every minute) whether there are changes in the trunk of the Subversion repository connected to the Project. 
+
+If changes have been made, or if there has never been a Build before (like in this case), a Build Level Request will be created.
+
+To verify the result of this Build Level Request select _Level Requests > Overview Level
+Requests_ on the main menu
+
+The following overview will be displayed:
+
+
+image::images/monocal_07.png[,913,412] 
+
+Click the OID (1) of the Level Request to display the __Level
+Request Detail __window on which you can verify what happened during the Build Level Request.
+
+In IKAN ALM, the steps of the build process are called Phases.
+To see what happened during the Level Request, select the _Phase
+Logs_ tab:
+
+
+image::images/monocal_08.png[,914,481] 
+
+This page displays the logs of the Level Phases, the Build and Deploy actions and the Build and Deploy Phases executed during the handling of the Level Request.
+It also provides more detailed information regarding the used Parameters.
+Try clicking on the names of the phases: this will expand the phase, displaying its details.
+
+The log of the _Execute Script_ phase is the most interesting one.
+It should show a successful compilation process with some supporting tasks.
+To get to it, expand the Build action (called ``Build 1 on
+Machine XXX``). This shows the Build phases that were executed during the Build action.
+Next, expand the __Execute
+Script __phase.
+This will reveal the execution log, where you will see that some compile actions succeeded and resulted in the creation of a _Monocalendar.exe_ file.
+
+
+image::images/monocal_09.png[,832,680] 
+
+
+==== Delivering the Build to the TEST Level
+
+At this point there is a successful Build available on the first level of the Head Project Stream.
+We will now deliver it to the next Levels (TEST and PRODUCTION) in the lifecycle.
+
+Select _Desktop_ on the main menu.
+
+
+image::images/monocal_10.png[,909,254] 
+
+Click the _Deliver_ image:images/icons/icon_deliverBuild.png[,15,15]  icon at the right of the _Monocalendar 1-0 TEST_ Level.
+
+
+image::images/monocal_11.png[,750,543] 
+
+On the _Create Level Request_ screen, provide a description and select the Build (1) by clicking the appropriate Build row.
+
+[NOTE]
+====
+If you leave the _Requested Date/Time_ field blank, the Deliver Level Request will be executed immediately.
+====
+
+Click the__ Create__ button.
+You will be forwarded to the __Desktop__.
+A Deliver Build Level Request is created for the Test Level of your project. 
+
+The status of the Level Request is set to__ Waiting Date/Time__ (image:images/icons/waiting_datetime.gif[,15,15] ) until it will be handled by the IKAN ALM Server.
+Then the status changes to__ Run__ (image:images/icons/run.gif[,15,15] ). 
+
+On the Desktop, select the _Latest
+Level Request_ of the TEST Level.
+
+
+image::images/monocal_12.png[,923,292] 
+
+The __Level Request Detail __screen will be displayed.
+
+Click the _Refresh_ link or activate the _Auto Refresh_ function on the submenu.
+Finally, the Level Request should end with the status__ Success__ (image:images/icons/succes.gif[,15,15] ).
+
+
+image::images/monocal_12b.png[,920,266] 
+
+
+===== What is the result of this Deliver to Test?
+
+In the Monocalendar project the Test Level includes a Build action that recompiles the sources and creates an `installable .exe` file.
+The Test Level also has a Deploy action that copies this .exe to a folder where the user can test the installation of the Monocalendar application by executing the installer .exe.
+
+This folder is ``ALM_HOME/environments\Monocalendar\testdeploy\target ``(e.g., ``C:\ALMDemo\environments\Monocalendar\testdeploy\target``).
+
+The result of the Build can be viewed by selecting the _Results_ tab on the __Level Request Detail __page:
+
+
+image::images/monocal_13.png[,721,524] 
+
+
+==== Delivering the Build to the PRODUCTION Level
+
+To see what happens next in the lifecycle, we will deliver to the Production level.
+We could do this in a similar way as for the Test level via the Desktop.
+An alternative way is to select _Level
+Requests > Create Level Request_ on the menu.
+
+
+image::images/monocal_14.png[,907,384] 
+
+Click the__ Deliver __image:images/icons/icon_deliverBuild.png[,15,15]  icon at the right of the Monocalendar H_1-0 PRODUCTION Level.
+
+As you did when creating the Level Request for the TEST level, provide a Description, and select the Build Number __1__.
+Leaving the _Requested Date/Time_ field blank means that the Deliver Level Request will be executed immediately.
+
+Click the__ Create__ button.
+
+You will be forwarded to the _Level
+Requests Detail_ screen.
+
+
+image::images/monocal_15.png[,950,519] 
+
+A new Level Request will be created, with status _Awaiting
+Pre-Approval_ (image:images/icons/waiting_approval.gif[,15,15] ). Since a Pre-Approval is linked to the PRODUCTION level, a notification mail will be sent to all members of the _ALM User_ User Group.
+
+The newly created Level Request will stay in the _Awaiting
+Pre-Approval_ status until the approval is granted.
+Since the global user is a member of the _ALM User_ User Group, select _Approvals > Outstanding Approvals_ on the main menu, then click the _Approve_ (image:images/icons/approve.gif[,15,15] ) button.
+
+
+image::images/monocal_16.png[,954,540] 
+
+Enter any approval text (optional) and click the _Approve_ button.
+
+The Level Request will now be handled by the IKAN ALM Server. 
+
+Return to the _Desktop Overview_ by selecting _Desktop_ on the main menu. 
+
+The status of the Level Request is set to__ Waiting
+Date/Time__ (image:images/icons/waiting_datetime.gif[,15,15] ) until it will be handled by the IKAN ALM Server.
+Next, the status changes to__ Run__ (image:images/icons/run.gif[,15,15] ). 
+
+
+image::images/monocal_16b.png[,917,315] 
+
+You may click on the Level Request`'s _OID_ to follow up the execution of the different phases.
+Click the__ Refresh__ link or activate _Auto Refresh_ on the submenu.
+Finally, the Level Request should end with the status__ Success__ (image:images/icons/succes.gif[,15,15] ).
+
+[NOTE]
+====
+If you are running the IKAN ALM Demo version locally, a User Account Control warning will pop up asking you to allow the program `monocalendar.win32.installer.exe` to make changes to the computer.
+Click _Yes_ to continue.
+====
+
+===== What is the result of this Deliver to Production?
+
+In the Monocalendar project, the Production Level included a Deploy action.
+The Monocalendar application will be installed and launched with the following result:
+
+
+image::images/aboutmonocalendar.png[,835,459] 
+
+
+[[_cegcgjif]]
+=== Triggering a Scheduler Build via a Source Commit
+
+It is possible to check out the source code of the demo projects and to commit changes.
+
+Install a Subversion client, for example Tortoise SVN, and check out the source code.
+
+The repository URL is _file:///ALM_HOME/vcr/subversion/repository/monocalendar/trunk_ for the Monocalendar Demo project.
+
+Modify a source file and commit it.
+The Scheduler will pick up the changes and will start building the project.
+[[_windemo_uninstalling]]
+== Uninstalling the IKAN ALM Demo Application
+
+To uninstall the Demo Application, follow these steps:
+
+. Stop the IKAN ALM Demo Server:
+** Via the shortcut menu: 
++
+__Start > Programs > IKAN
+ALM Demo 5.8 > Stop IKAN ALM Demo server__
+** Or via the batch file:
++
+Double click the _ALM_HOME/stopDemo.cmd_ file.
+. Run the Uninstaller:
++
+Open __Programs and Features__, select the entry _ALMDemo 5.8_ and click _Uninstall/Change_
+. Select the checkbox _Force the deletion of ..._ to remove all files related to the demo installation. If not, the files changed since the installation will be kept.
++
+image::images/uninstalldemo.png[,372,247] 
++
+. During the uninstallation, the following pop-up window is shown asking whether to uninstall the license key:
++
+image::images/uninstalldemo_license.png[,343,174] 
++
+Wait until the uninstallation has finished, then press _Quit_ to end the uninstaller:
++
+image::images/uninstalldemo_quit.png[,263,179] 
+
+
+:sectnums!:
+
+[appendix]
+== Appendix: JAAS Configuration
+
+For authentication and authorization of users, IKAN ALM uses the Java Authentication and Authorization Service (JAAS) (see http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html[
+http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html]).
+
+The IKAN ALM demo installation automatically pre-configures JAAS, so this appendix is only for troubleshooting, or if you want to adapt the authentication, e.g., for using Windows domain authentication.
+
+JAAS authentication is performed in a pluggable way.
+This permits applications to remain independent from underlying authentication technologies.
+New or updated authentication technologies can be plugged into IKAN ALM without requiring modifications to the application itself.
+
+=== IKAN ALM Demo JAAS Configuration
+
+The IKAN ALM Demo installation has its own jaas.config file located in __ALM_HOME /system/security__.
+
+By default, the _passwd.config_ file is used as a flat security file.
+
+[NOTE]
+====
+IKAN ALM must be restarted if you add/change a record in the security file in order to make those changes visible.
+====
+
+=== JAAS Implementation: Flat File Security
+
+The IKAN ALM Demo application uses this simple JAAS implementation whereby User Groups and Users are configured in a flat file.
+In the JAAS configuration file this is specified as follows (where ALM_HOME=`"C:/ALMDemo`"):
+
+[source]
+----
+/** * IKAN ALM flat file security configuration * Attention : the passwords in the passwd.config file must
+be stored in MD5 encryption format **/**/ALM{ com.tagish.auth.FileLogin requiredpwdFile="C:/ALMDemo/system/security/passwd.config";};
+----
+
+=== JAAS Implementation: Windows Domain Authentication
+
+If you want to use windows domain authentication, replace the IKAN ALM flat file configuration with the following lines (with YOURDOMAIN being the Windows domain, e.g., IKAN):
+
+[source]
+----
+/** Example NTLogin (http://free.tagish.net)* Attention : the module NTSystem.dll must be copied to the
+%WIN_HOME%/system32 directory.**/ALM{ com.tagish.auth.win32.NTSystemLogin required returnNames=true
+returnSIDs=false defaultDomain=YOURDOMAIN;;
+----
+
+=== Flat File Security: Contents
+
+The contents of the _passwd.config_ file, when using flat file security, is fairly easy and self-explanatory:
+
+[source]
+----
+userid:encrypted password:groupname:groupname:groupnameuser:ee11cbb19052e40b07aac0ca060c23ee:ALM Userproject:46f86faa6bbf9ac94a7e459509a20ed0:ALM User:ALM Projectglobal:9c70933aff6b2a6d08c687a6cbb6b765:ALM User:ALM Administrator
+----
+
+The encrypted password in MD5 encryption format can be generated with a utility like HashCalc (http://www.slavasoft.com/hashcalc/overview.htm[
+http://www.slavasoft.com/hashcalc/overview.htm]).
+
+For example: Adding a User with User ID "`testuser`" and password "`testuser`" who belongs to the _ALM User_ and _ALM
+Project_ User Groups:
+
+
+image::images/hashcalc.png[,527,534] 
+
+
+. Add the following entry to the __passwd.config file__:
++
+
+[source]
+----
+testuser:5d9c68c6c50ed3d02a2fcf54f63993b6:ALM
+User:ALM Project
+----
+. Stop and restart the IKAN ALM Demo Server. <<_chbgjjeb>>
+. Log on to IKAN ALM using User ID "`testuser`" and Password "`testuser`".
+
+
+:sectnums:
+
+:sectnums!:
+[[_windemo_troubleshooting]]
+[appendix]
+== Troubleshooting
+
+=== MSVCR71.dll was not found
+
+
+image::images/msvcr71notfound.png[,502,172] 
+
+The IKAN ALM Demo installer is unable to locate the following file: __MSVCR71.dll__.
+You can read more about this issue on http://www.duckware.com/tech/java6msvcr71.html[
+http://www.duckware.com/tech/java6msvcr71.html].
+There exists, however, no good solution.
+Sun proposes to fix the problem by copying the msvcr71.dll located in the Java installation bin folder next to the__ java.exe__ located in the__ windows\system32__ directory.
+
+=== Internet Browser cannot display the webpage
+
+
+image::images/ie_cannotdisplay.png[,461,72] 
+
+
+
+image::images/pagenotdisplayed.png[,326,50] 
+
+
+
+image::images/failedtoconnect.png[,519,78] 
+
+Cause: the IKAN ALM Demo server is not running.
+
+Solution:
+
+. Start the IKAN ALM Demo server: _Start > Programs > IKAN ALM Demo 5.8 > Start IKAN ALM Demo server_
+. Refresh the__ login__ page in your internet browser.
+
+
+=== License has expired
+
+The last day of the 30 day trial period has ended.
+If you want to extend your trial period, you must request a new license by sending a mail to __support@ikanalm.com__.
+
+=== The installer doesn't start and displays the error:"Java Runtime not found"
+
+When launching the 32-bit or 64-bit IKAN ALM Demo installer on Windows, you may receive the following error, after which the IKAN ALM Demo installer quits.
+
+
+image::images/JRE_NotFound.png[,435,229] 
+
+The most likely cause is that there is no suitable Java Runtime Environment (JRE) installed.
+The 32-bit installer needs a 32-bit JRE installed, while the 64-bit installer needs a 64-bit JRE installed.
+Furthermore, the JRE should be version 1.6 or higher.
+The solution is to install a suitable JRE.
+
+If for some reason you don't want to install a JRE, there is a workaround to launch the IKAN ALM installer with only a Java Development Kit (JDK) or a Server JRE installed: set the JAVA_HOME environment variable to point to the JDK or Server JRE folder, either globally on the system, or from a commandline prompt, and then launch the IKAN ALM installer.
+When you set JAVA_HOME from a commandline prompt, there are two possible pitfalls:
+
+* don't wrap the JAVA_HOME path in quotes, even when it contains spaces
+* when UAC is enabled (Windows Vista and later), the commandline prompt must have Administrative privileges (the title of the prompt must start with "Administrator:")
+
+
+:sectnums:

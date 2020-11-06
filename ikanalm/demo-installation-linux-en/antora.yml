@@ -1,5 +1,5 @@
 name: demo-installation-linux-en
-title: Installation Guide for the Linux Demo Application
+title: Demo Installation Guide (Linux)
 version: '5.8'
 start_page: ROOT:LinuxDemo.adoc
 nav:

@@ -1,0 +1,6 @@
+name: getting-started-fr
+title: Getting Started Guide (FR)
+version: '5.8'
+start_page: ROOT:GettingStarted.adoc
+nav:
+- modules/ROOT/nav.adoc  

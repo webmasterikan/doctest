@@ -1,0 +1,6 @@
+name: demo-installation-windows-en
+title: Demo Installation Guide (Windows)
+version: '5.8'
+start_page: ROOT:WindowsDemo.adoc
+nav:
+- modules/ROOT/nav.adoc  
