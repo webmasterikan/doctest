@@ -102,7 +102,7 @@ To do so, double-click or execute the archive (``ikanalm_trial_x86.exe`` or ``ik
 A window similar to this one will pop up:
 
 
-image::images/startingup.png[,361,167] 
+image::startingup.png[,361,167] 
 
 Choose a destination folder.
 The files will be extracted in a subfolder named "ikanalm_trial_x86" or "ikanalm_trial_x64". 
@@ -136,19 +136,19 @@ Double-click the `almdemo_install_5.8_xXX.exe` file.
 The following window will pop up:
 
 
-image::images/fig3_1.png[,171,184] 
+image::fig3_1.png[,171,184] 
 
 Select your preferred installation language and click __OK__.
 
 The following welcome screen will be displayed:
 
 
-image::images/fig3_2.png[,813,491] 
+image::fig3_2.png[,813,491] 
 
 Click _Next_ to continue.
 
 
-image::images/fig3_3.png[,815,489] 
+image::fig3_3.png[,815,489] 
 
 Carefully read the readme information.
 Click the _Next_ button to continue.
@@ -157,7 +157,7 @@ Click the _Next_ button to continue.
 === Step 2: License Agreement
 
 
-image::images/fig3_4.png[,811,487] 
+image::fig3_4.png[,811,487] 
 
 Read the license agreement carefully.
 Select the option _I
@@ -166,7 +166,7 @@ accept the terms of this license agreement._ and click the _Next_ button.
 === Step 3: Installation Location
 
 
-image::images/fig3_5.png[,812,487] 
+image::fig3_5.png[,812,487] 
 
 Select the home directory for installing the Demo Application on your file system.
 The default home directory is C:\ALMDemo.
@@ -179,19 +179,19 @@ Click _Next_ to continue.
 If the directory already exists, a warning message will appear.
 
 
-image::images/directoryexists.png[,618,127] 
+image::directoryexists.png[,618,127] 
 
 All installation packs must be installed.
 
 
-image::images/fig3_6.png[,810,486] 
+image::fig3_6.png[,810,486] 
 
 Click _Next_ to proceed to the selection of a Java Development Kit (JDK).
 
 === Step 4: Selecting a Java Development Kit
 
 
-image::images/fig3_7.png[,812,488] 
+image::fig3_7.png[,812,488] 
 
 As mentioned in the section <<_chbbgjeb>>, a Java Development Kit (JDK) version 1.7 or 1.8 is required. 
 
@@ -203,14 +203,14 @@ A Java Runtime Environment (JRE) will not be sufficient!
 If the selected directory does not contain a proper JDK, the following error message will be displayed:
 
 
-image::images/errordirectory.png[,417,142] 
+image::errordirectory.png[,417,142] 
 
 
 [[_chbhbhgj]]
 === Step 5: Configuration Settings
 
 
-image::images/fig3_9.png[,813,489] 
+image::fig3_9.png[,813,489] 
 
 Configure the network ports used by IKAN ALM.
 Normally, the defaults presented should be OK, but it is important that these port numbers are not in use by other processes.
@@ -222,19 +222,19 @@ In the remainder of this guide, the Application Server Port will be referred to 
 Click _Next_ to obtain an installation summary.
 
 
-image::images/fig3_10.png[,815,489] 
+image::fig3_10.png[,815,489] 
 
 Click _Next_ to start the installation with the given settings:
 
 
-image::images/fig3_11.png[,810,486] 
+image::fig3_11.png[,810,486] 
 
 Once the installation is finished, click__ Next__ to proceed with setting up the Start Menu.
 
 === Step 6: Start Menu Shortcuts
 
 
-image::images/fig3_12.png[,816,488] 
+image::fig3_12.png[,816,488] 
 
 Select the Program Group and Shortcut Name for the Start Menu.
 The default group and name is __IKAN ALM
@@ -244,7 +244,7 @@ You may change these names.
 Click _Next_ to complete the IKAN ALM Demo installation.
 
 
-image::images/fig3_13.png[,814,488] 
+image::fig3_13.png[,814,488] 
 
 
 == Setup After Installation
@@ -280,14 +280,14 @@ Provide the following URL: _\http://MACHINE_NAME:ALM_APPSERVER_PORT/alm_ (e.g., 
 The _Install license_ screen will appear.
 
 
-image::images/novalidlicense.png[,497,273] 
+image::novalidlicense.png[,497,273] 
 
 Enter or browse to the file location of the _alm_license.lic_ file you received and click __Submit__.
 Do not alter the file or filename.
 The following screen will appear when the license is installed:
 
 
-image::images/install_license.png[,514,306] 
+image::install_license.png[,514,306] 
 
 
 == Using the IKAN ALM 5.8 Demo Application
@@ -311,12 +311,12 @@ Double click the _ALM_HOME/startDemo.cmd_ file.
 This will launch a Tomcat webserver and the IKAN ALM Demo server (which runs both the IKAN ALM Server and Agent). When the IKAN ALM Demo server prompt window displays a message like: "Successfully connected with IKAN ALM server", the ALM Demo is fully started.
 
 
-image::images/fig5_1.png[,687,351] 
+image::fig5_1.png[,687,351] 
 
 If a message such as "INFO : Server startup in nnn ms" is displayed, the Tomcat Server is completely up and running and you can use the Web application.
 
 
-image::images/fig5_2.png[,687,351] 
+image::fig5_2.png[,687,351] 
 
 Stop the IKAN ALM Demo Server:
 
@@ -357,7 +357,7 @@ An internet browser window will appear, displaying the IKAN ALM _Log in_ screen.
 You are ready to start working with the IKAN ALM web interface.
 
 
-image::images/Logon.png[,524,319] 
+image::Logon.png[,524,319] 
 
 You may add this link to your internet browser`'s Favorites.
 
@@ -451,7 +451,7 @@ Select _Help_ on the main menu.
 A new internet browser window will pop up, displaying the "`Table of Contents`".
 * as context-sensitive help on each IKAN ALM user interface screen.
 +
-Click the image:images/icons/help.gif[,16,16]  icon next to the selected menu indication to access it.
+Click the image:icons/help.gif[,16,16]  icon next to the selected menu indication to access it.
 
 [[_webpadproject]]
 == Sample Java Project (Customers)
@@ -491,12 +491,12 @@ In this section, we will create a desktop item for the Customers project.
 On the Desktop screen, click the _Add to Desktop_ button.
 
 
-image::images/desktop.png[,928,203] 
+image::desktop.png[,928,203] 
 
 The _Add to Desktop_ window pops up.
 
 
-image::images/fig6.1_2.png[,775,467] 
+image::fig6.1_2.png[,775,467] 
 
 A Project may have different lifecycles.
 In IKAN ALM, those lifecycles are organized in Project Streams.
@@ -512,11 +512,11 @@ Press the _Close_ button to close the _Add to Desktop_ window.
 You can also select individual Levels in the tree and add them to your Desktop.
 ====
 
-On the __Desktop Overview__, expand the Project Stream Levels by clicking the image:images/icons/ExpandProjectStream.gif[,10,10]  icon in front of the _Customers 1-0_ Project Stream Desktop item.
+On the __Desktop Overview__, expand the Project Stream Levels by clicking the image:icons/ExpandProjectStream.gif[,10,10]  icon in front of the _Customers 1-0_ Project Stream Desktop item.
 The following Levels are now displayed:
 
 
-image::images/fig6.1_3.png[,917,264] 
+image::fig6.1_3.png[,917,264] 
 
 As you can see, there is not much activity going on in the Customers project yet, since the project is locked.
 In the next step, we will unlock the project.
@@ -527,17 +527,17 @@ In the next step, we will unlock the project.
 In order to build the Customers Project, it must be unlocked together with the corresponding Levels in the Project Administration section.
 This action can only be performed by a User having Project Administration rights, like the "`global`" or "`project`" User ID (See <<_ceggadeb>>).
 
-Select image:images/icon_ProjectAdmin_13x13.png[,26,28] _Project
+Select image:icon_ProjectAdmin_13x13.png[,26,28] _Project
 Administration_ on the main menu to start the unlock procedure.
 
 
-image::images/fig6.2_1.png[,905,308] 
+image::fig6.2_1.png[,905,308] 
 
-Click the _Edit_ image:images/icons/edit.gif[,15,15]  icon in front of the _Customers_ Project.
+Click the _Edit_ image:icons/edit.gif[,15,15]  icon in front of the _Customers_ Project.
 
 [NOTE]
 ====
-There is also an__ Unlock __image:images/icons/unlock.gif[,15,15]  icon for each Project in the list here.
+There is also an__ Unlock __image:icons/unlock.gif[,15,15]  icon for each Project in the list here.
 This icon will only unlock the Project, leaving the Levels locked.
 ====
 
@@ -547,10 +547,10 @@ We are not going to change the Project Settings, but you could verify the existe
 Select _Audit Project_ on the submenu in order to check the consistency of the Project.
 
 
-image::images/fig6.2_2.png[,892,79] 
+image::fig6.2_2.png[,892,79] 
 
 Before showing the _Audit Project_ screen, several checks will be done to verify the setup of the Project.
-You can click the image:images/icons/help.gif[,16,16]  button to get context-sensitive help on this function.
+You can click the image:icons/help.gif[,16,16]  button to get context-sensitive help on this function.
 For more information, refer to the chapter _Auditing
 Projects_ in the _IKAN ALM User Guide_ for more information. 
 
@@ -558,11 +558,11 @@ If the project is consistent (branches, levels, environments, phases and paramet
 Click this link to unlock the Project and its Levels.
 
 
-image::images/fig6.2_3.png[,766,510] 
+image::fig6.2_3.png[,766,510] 
 
 As a result, the _Locked_ icons for the Levels will disappear.
 The Project is not locked anymore.
-Select the Project Administration image:images/icon_ProjectAdmin_13x13.png[,26,28]  icon on the main menu to verify that the _Lock_ button for the Project also disappeared.
+Select the Project Administration image:icon_ProjectAdmin_13x13.png[,26,28]  icon on the main menu to verify that the _Lock_ button for the Project also disappeared.
 
 As soon as the Project and its Levels are unlocked, there will automatically be some action in the Project.
 Check the next section to understand what is happening.
@@ -585,7 +585,7 @@ Requests_ on the main menu.
 The following overview will be displayed:
 
 
-image::images/fig6.3_1.png[,919,424] 
+image::fig6.3_1.png[,919,424] 
 
 Select the _OID_ (1) of the Level Request to display the__ Level Request Detail__ page on which you can verify what happened during the Build Level Request.
 
@@ -594,7 +594,7 @@ To see what happened during the Level Request, select the _Phase
 Logs_ tab:
 
 
-image::images/fig6.3_2.png[,918,480] 
+image::fig6.3_2.png[,918,480] 
 
 This page displays the logs of the Level Phases, the Build and Deploy actions and their Build and Deploy Phases executed during the handling of a Level Request.
 It also provides more detailed information regarding the used Parameters.
@@ -608,7 +608,7 @@ Next, expand the Execute Script phase.
 This will reveal the execution log, where you will find the output of the Ant build script that was executed.
 
 
-image::images/fig6.3_3.png[,874,562] 
+image::fig6.3_3.png[,874,562] 
 
 
 [[_delivertotest]]
@@ -620,12 +620,12 @@ We will now deliver it to the next Levels (TEST and PRODUCTION) in the lifecycle
 Select _Desktop_ on the main menu.
 
 
-image::images/fig6.3_4.png[,943,274] 
+image::fig6.3_4.png[,943,274] 
 
-Click the _Deliver_ image:images/icons/icon_deliverBuild.png[,15,15]  icon at the right of the _Customers H_1-0 TEST_ Level.
+Click the _Deliver_ image:icons/icon_deliverBuild.png[,15,15]  icon at the right of the _Customers H_1-0 TEST_ Level.
 
 
-image::images/fig6.3_5.png[,900,611] 
+image::fig6.3_5.png[,900,611] 
 
 On the _Create Level Request_ screen, provide a description and select the Build (1) by clicking the appropriate Build row.
 
@@ -638,21 +638,21 @@ Click the__ Create__ button.
 You will be forwarded to the __Desktop__.
 A Deliver Build Level Request is created for the Test Level of your project. 
 
-The status of the Level Request is set to__ Waiting Date/Time__ (image:images/icons/waiting_datetime.gif[,15,15] ) until it will be handled by the IKAN ALM Server.
-Then the status changes to__ Run__ (image:images/icons/run.gif[,15,15] ). 
+The status of the Level Request is set to__ Waiting Date/Time__ (image:icons/waiting_datetime.gif[,15,15] ) until it will be handled by the IKAN ALM Server.
+Then the status changes to__ Run__ (image:icons/run.gif[,15,15] ). 
 
 On the _Desktop Overview,_ click the _Latest Level Request_ link for the TEST Level.
 
 
-image::images/fig6.3_5b.png[,951,262] 
+image::fig6.3_5b.png[,951,262] 
 
 The __Level Request Detail __screen will be displayed.
 
 Click the _Refresh_ link or activate the _Auto Refresh_ function on the submenu.
-Finally, the Level Request should end with the status__ Success__ (image:images/icons/succes.gif[,15,15] ).
+Finally, the Level Request should end with the status__ Success__ (image:icons/succes.gif[,15,15] ).
 
 
-image::images/fig6.3_6.png[,942,420] 
+image::fig6.3_6.png[,942,420] 
 
 
 ===== What is the result of this Deliver to Test?
@@ -664,7 +664,7 @@ The application was deployed under a test context ("`/customers_test`"). Before 
 To see the deployed application, open a web browser and enter the following URL: `\http://MACHINE_NAME:ALM_APPSERVER_PORT/customers_test` (for example: \http://ikan009:9080/customers_test).
 
 
-image::images/fig6.3_7.png[,661,260] 
+image::fig6.3_7.png[,661,260] 
 
 
 [NOTE]
@@ -680,7 +680,7 @@ In this example, the VCR tag is H_1-0_b1.
 Click on the _List all Customers_ link to display the list of all Customers defined in the test database.
 
 
-image::images/fig6.3_8.png[,643,282] 
+image::fig6.3_8.png[,643,282] 
 
 
 [[_delivertoproduction]]
@@ -692,9 +692,9 @@ An alternative way is to select _Level
 Requests > Create Level Request_ on the menu.
 
 
-image::images/fig6.3_9.png[,880,388] 
+image::fig6.3_9.png[,880,388] 
 
-Click the__ Deliver __image:images/icons/icon_deliverBuild.png[,15,15]  icon at the right of the Customers H_1-0 PRODUCTION Level.
+Click the__ Deliver __image:icons/icon_deliverBuild.png[,15,15]  icon at the right of the Customers H_1-0 PRODUCTION Level.
 
 As you did when creating the Level Request for the TEST level, provide a Description, and select the Build Number __1__.
 Leaving the _Requested Date/Time_ field blank means that the Deliver Level Request will be executed immediately.
@@ -705,37 +705,37 @@ You will be forwarded to the _Level
 Requests Detail_ screen.
 
 
-image::images/fig6.3_10.png[,957,543] 
+image::fig6.3_10.png[,957,543] 
 
 A new Level Request will be created, with status _Awaiting
-Pre-Approval_ (image:images/icons/waiting_approval.gif[,15,15] ). Since a Pre-Approval is linked to the PRODUCTION level, a notification mail will be sent to all members of the _ALM User_ User Group.
+Pre-Approval_ (image:icons/waiting_approval.gif[,15,15] ). Since a Pre-Approval is linked to the PRODUCTION level, a notification mail will be sent to all members of the _ALM User_ User Group.
 
 The newly created Level Request will stay in the _Awaiting Pre-Approval_ status until the approval is granted.
 Since the global user is a member of the _ALM User_ User Group, select _Approvals
-> Outstanding Approvals_ on the main menu, then click the__ Approve __image:images/icons/approve.gif[,15,15]  link.
+> Outstanding Approvals_ on the main menu, then click the__ Approve __image:icons/approve.gif[,15,15]  link.
 
 
-image::images/fig6.3_11.png[,955,483] 
+image::fig6.3_11.png[,955,483] 
 
 Enter any approval text (optional) and click the _Approve_ button.
 
 The Level Request will now be handled by the IKAN ALM Server. 
 
 Return to the _Desktop Overview_ by selecting _Desktop_ on the main menu.
-The status of the _Latest Level Request_ for the Production Level is now set to__ Run__ (image:images/icons/run.gif[,15,15] ). Click the__ Refresh__ link or activate _Auto
+The status of the _Latest Level Request_ for the Production Level is now set to__ Run__ (image:icons/run.gif[,15,15] ). Click the__ Refresh__ link or activate _Auto
 Refresh_ on the submenu.
-Finally, the Level Request should end with the status__ Success__ (image:images/icons/succes.gif[,15,15] ).
+Finally, the Level Request should end with the status__ Success__ (image:icons/succes.gif[,15,15] ).
 
 You may click also click the _Latest Level Request_ link on the __Desktop Overview __to follow up the execution of the different phases. 
 
 
-image::images/fig6.3_11b.png[,958,269] 
+image::fig6.3_11b.png[,958,269] 
 
 
 ===== What is the result of this Deliver to Production?
 
 
-image::images/fig6.3_12.png[,655,234] 
+image::fig6.3_12.png[,655,234] 
 
 
 [NOTE]
@@ -751,7 +751,7 @@ Here, the VCR tag is H_1-0_b1.
 Click on the _List all Customers_ link to display the list of all Customers defined in the production database.
 
 
-image::images/fig6.3_13.png[,652,411] 
+image::fig6.3_13.png[,652,411] 
 
 
 [[_cegheagc]]
@@ -780,16 +780,16 @@ More specifically, the deploy to the Test level does three things:
 
 The first task was not general enough to be reused, but for the other two tasks Custom Phases were made: the "`Update DB`" and the "`Tomcat Deploy`" phases.
 
-To view the definitions of these phases, go to image:images/icon_GlobalAdmin_13x13.png[,26,28] __Global
+To view the definitions of these phases, go to image:icon_GlobalAdmin_13x13.png[,26,28] __Global
 Administration > Phases > Overview__.
 
 
-image::images/fig6.5_1.png[,964,511] 
+image::fig6.5_1.png[,964,511] 
 
-Click the _Edit_ image:images/icons/edit.gif[,15,15]  icon before the __com.ikanalm.phases.ant.scripting.tomcatDeploy Phase__.
+Click the _Edit_ image:icons/edit.gif[,15,15]  icon before the __com.ikanalm.phases.ant.scripting.tomcatDeploy Phase__.
 
 
-image::images/fig6.5_2.png[,873,725] 
+image::fig6.5_2.png[,873,725] 
 
 This page displays general information about the Phase, the Phase Parameters that can be set to configure the execution of the Phase, and where the Phase is currently being used (the _Connected
 Levels and Environments_ panel).
@@ -805,18 +805,18 @@ As you can see on the _Connected Levels and Environments_ panel, our Tomcat Depl
 
 
 For an example of a more advanced usage of Parameters, look at the "`contextPath`" Phase Parameter.
-Its default value is set to ``/${applicationName}``, and it has this value set in both the testdeploy and proddeploy Environments (you can see them by clicking the _Edit _image:images/icons/edit.gif[,15,15]  icon in front of the _contextPath_ Parameter). Still, the Customers application is deployed to 2 different contexts, namely "`customers_test`" and "`customers`". 
+Its default value is set to ``/${applicationName}``, and it has this value set in both the testdeploy and proddeploy Environments (you can see them by clicking the _Edit _image:icons/edit.gif[,15,15]  icon in front of the _contextPath_ Parameter). Still, the Customers application is deployed to 2 different contexts, namely "`customers_test`" and "`customers`". 
 
 How does this work?
 
 The answer lies in a Deploy Parameter (named "`applicationName`") which is defined on both Deploy Environments.
 
-Go to image:images/icon_ProjectAdmin_13x13.png[,26,28] __Project
+Go to image:icon_ProjectAdmin_13x13.png[,26,28] __Project
 Administration__, and edit the Customers Project.
 Next, in the menu, select __Deploy Environments > Deploy Parameters__:
 
 
-image::images/fig6.5_3.png[,763,447] 
+image::fig6.5_3.png[,763,447] 
 
 As you can see, for the testdeploy environment, the value of the "`applicationName`" parameter is "`customers_test`", while for the proddeploy environment, the specified value is "`customers`". When the Tomcat Deploy Phase is being executed, the property ${applicationName} will be replaced with the value of the Deploy Parameter, which yields the desired behavior.
 
@@ -862,12 +862,12 @@ On the _Desktop_ screen, click the _Add
 to Desktop_ button.
 
 
-image::images/desktop.png[,928,203] 
+image::desktop.png[,928,203] 
 
 The _Add to Desktop_ window pops up.
 
 
-image::images/monocal_02.png[,591,359] 
+image::monocal_02.png[,591,359] 
 
 A Project may have different lifecycles.
 In IKAN ALM, these are organized in Project Streams.
@@ -883,11 +883,11 @@ Press the _Close_ button to close the _Add to Desktop_ window.
 You can also select individual Levels in the tree and add them to your Desktop.
 ====
 
-Expand the Project Stream Levels by clicking the image:images/icons/ExpandProjectStream.gif[,10,10]  icon in front of the__ Monocalendar 1-0__ Project Stream Desktop item.
+Expand the Project Stream Levels by clicking the image:icons/ExpandProjectStream.gif[,10,10]  icon in front of the__ Monocalendar 1-0__ Project Stream Desktop item.
 The following Levels are now displayed:
 
 
-image::images/monocal_03.png[,911,255] 
+image::monocal_03.png[,911,255] 
 
 As you can see, there is not much activity going on in the Monocalendar project yet, since the project is locked.
 In the next step, we will unlock the project.
@@ -898,17 +898,17 @@ In the next step, we will unlock the project.
 In order to build the Monocalendar Project, it must be unlocked together with the corresponding Levels in the Project Administration section.
 This action can only be performed by a User having Project Administration rights, like the "`global`" or "`project`" User (<<_ceggadeb>>).
 
-Select image:images/icon_ProjectAdmin_13x13.png[,26,28] _Project
+Select image:icon_ProjectAdmin_13x13.png[,26,28] _Project
 Administration_ on the main menu to start the unlock procedure.
 
 
-image::images/monocal_04.png[,911,319] 
+image::monocal_04.png[,911,319] 
 
-Click the _Edit_ image:images/icons/edit.gif[,15,15]  icon in front of the Monocalendar Project.
+Click the _Edit_ image:icons/edit.gif[,15,15]  icon in front of the Monocalendar Project.
 
 [NOTE]
 ====
-There is also an__ Unlock __image:images/icons/unlock.gif[,15,15]  icon for each Project in the list here.
+There is also an__ Unlock __image:icons/unlock.gif[,15,15]  icon for each Project in the list here.
 This icon will only unlock the Project, leaving the Levels locked.
 ====
 
@@ -918,10 +918,10 @@ We are not going to change the Project Settings, but you could verify the existe
 Select _Audit Project_ on the submenu in order to check the consistency of the Project.
 
 
-image::images/monocal_05.png[,910,71] 
+image::monocal_05.png[,910,71] 
 
 Before showing the _Audit Project_ screen, several checks will be done to verify the setup of the Project.
-You may click the image:images/icons/help.gif[,16,16]  button to get context-sensitive help on this function.
+You may click the image:icons/help.gif[,16,16]  button to get context-sensitive help on this function.
 Refer to the chapter _Auditing
 Projects_ in the _IKAN ALM User Guide_ for more information. 
 
@@ -929,7 +929,7 @@ If the project is consistent (branches, levels, environments, phases and paramet
 Click this link to unlock the Project and its Levels.
 
 
-image::images/monocal_06.png[,755,508] 
+image::monocal_06.png[,755,508] 
 
 As a result, the _Locked_ icons for the Levels will disappear.
 The Project is not locked anymore.
@@ -955,7 +955,7 @@ Requests_ on the main menu
 The following overview will be displayed:
 
 
-image::images/monocal_07.png[,913,412] 
+image::monocal_07.png[,913,412] 
 
 Click the OID (1) of the Level Request to display the __Level
 Request Detail __window on which you can verify what happened during the Build Level Request.
@@ -965,7 +965,7 @@ To see what happened during the Level Request, select the _Phase
 Logs_ tab:
 
 
-image::images/monocal_08.png[,914,481] 
+image::monocal_08.png[,914,481] 
 
 This page displays the logs of the Level Phases, the Build and Deploy actions and the Build and Deploy Phases executed during the handling of the Level Request.
 It also provides more detailed information regarding the used Parameters.
@@ -980,7 +980,7 @@ Script __phase.
 This will reveal the execution log, where you will see that some compile actions succeeded and resulted in the creation of a _Monocalendar.exe_ file.
 
 
-image::images/monocal_09.png[,832,680] 
+image::monocal_09.png[,832,680] 
 
 
 ==== Delivering the Build to the TEST Level
@@ -991,12 +991,12 @@ We will now deliver it to the next Levels (TEST and PRODUCTION) in the lifecycle
 Select _Desktop_ on the main menu.
 
 
-image::images/monocal_10.png[,909,254] 
+image::monocal_10.png[,909,254] 
 
-Click the _Deliver_ image:images/icons/icon_deliverBuild.png[,15,15]  icon at the right of the _Monocalendar 1-0 TEST_ Level.
+Click the _Deliver_ image:icons/icon_deliverBuild.png[,15,15]  icon at the right of the _Monocalendar 1-0 TEST_ Level.
 
 
-image::images/monocal_11.png[,750,543] 
+image::monocal_11.png[,750,543] 
 
 On the _Create Level Request_ screen, provide a description and select the Build (1) by clicking the appropriate Build row.
 
@@ -1009,22 +1009,22 @@ Click the__ Create__ button.
 You will be forwarded to the __Desktop__.
 A Deliver Build Level Request is created for the Test Level of your project. 
 
-The status of the Level Request is set to__ Waiting Date/Time__ (image:images/icons/waiting_datetime.gif[,15,15] ) until it will be handled by the IKAN ALM Server.
-Then the status changes to__ Run__ (image:images/icons/run.gif[,15,15] ). 
+The status of the Level Request is set to__ Waiting Date/Time__ (image:icons/waiting_datetime.gif[,15,15] ) until it will be handled by the IKAN ALM Server.
+Then the status changes to__ Run__ (image:icons/run.gif[,15,15] ). 
 
 On the Desktop, select the _Latest
 Level Request_ of the TEST Level.
 
 
-image::images/monocal_12.png[,923,292] 
+image::monocal_12.png[,923,292] 
 
 The __Level Request Detail __screen will be displayed.
 
 Click the _Refresh_ link or activate the _Auto Refresh_ function on the submenu.
-Finally, the Level Request should end with the status__ Success__ (image:images/icons/succes.gif[,15,15] ).
+Finally, the Level Request should end with the status__ Success__ (image:icons/succes.gif[,15,15] ).
 
 
-image::images/monocal_12b.png[,920,266] 
+image::monocal_12b.png[,920,266] 
 
 
 ===== What is the result of this Deliver to Test?
@@ -1037,7 +1037,7 @@ This folder is ``ALM_HOME/environments\Monocalendar\testdeploy\target ``(e.g., `
 The result of the Build can be viewed by selecting the _Results_ tab on the __Level Request Detail __page:
 
 
-image::images/monocal_13.png[,721,524] 
+image::monocal_13.png[,721,524] 
 
 
 ==== Delivering the Build to the PRODUCTION Level
@@ -1048,9 +1048,9 @@ An alternative way is to select _Level
 Requests > Create Level Request_ on the menu.
 
 
-image::images/monocal_14.png[,907,384] 
+image::monocal_14.png[,907,384] 
 
-Click the__ Deliver __image:images/icons/icon_deliverBuild.png[,15,15]  icon at the right of the Monocalendar H_1-0 PRODUCTION Level.
+Click the__ Deliver __image:icons/icon_deliverBuild.png[,15,15]  icon at the right of the Monocalendar H_1-0 PRODUCTION Level.
 
 As you did when creating the Level Request for the TEST level, provide a Description, and select the Build Number __1__.
 Leaving the _Requested Date/Time_ field blank means that the Deliver Level Request will be executed immediately.
@@ -1061,17 +1061,17 @@ You will be forwarded to the _Level
 Requests Detail_ screen.
 
 
-image::images/monocal_15.png[,950,519] 
+image::monocal_15.png[,950,519] 
 
 A new Level Request will be created, with status _Awaiting
-Pre-Approval_ (image:images/icons/waiting_approval.gif[,15,15] ). Since a Pre-Approval is linked to the PRODUCTION level, a notification mail will be sent to all members of the _ALM User_ User Group.
+Pre-Approval_ (image:icons/waiting_approval.gif[,15,15] ). Since a Pre-Approval is linked to the PRODUCTION level, a notification mail will be sent to all members of the _ALM User_ User Group.
 
 The newly created Level Request will stay in the _Awaiting
 Pre-Approval_ status until the approval is granted.
-Since the global user is a member of the _ALM User_ User Group, select _Approvals > Outstanding Approvals_ on the main menu, then click the _Approve_ (image:images/icons/approve.gif[,15,15] ) button.
+Since the global user is a member of the _ALM User_ User Group, select _Approvals > Outstanding Approvals_ on the main menu, then click the _Approve_ (image:icons/approve.gif[,15,15] ) button.
 
 
-image::images/monocal_16.png[,954,540] 
+image::monocal_16.png[,954,540] 
 
 Enter any approval text (optional) and click the _Approve_ button.
 
@@ -1080,15 +1080,15 @@ The Level Request will now be handled by the IKAN ALM Server.
 Return to the _Desktop Overview_ by selecting _Desktop_ on the main menu. 
 
 The status of the Level Request is set to__ Waiting
-Date/Time__ (image:images/icons/waiting_datetime.gif[,15,15] ) until it will be handled by the IKAN ALM Server.
-Next, the status changes to__ Run__ (image:images/icons/run.gif[,15,15] ). 
+Date/Time__ (image:icons/waiting_datetime.gif[,15,15] ) until it will be handled by the IKAN ALM Server.
+Next, the status changes to__ Run__ (image:icons/run.gif[,15,15] ). 
 
 
-image::images/monocal_16b.png[,917,315] 
+image::monocal_16b.png[,917,315] 
 
 You may click on the Level Request`'s _OID_ to follow up the execution of the different phases.
 Click the__ Refresh__ link or activate _Auto Refresh_ on the submenu.
-Finally, the Level Request should end with the status__ Success__ (image:images/icons/succes.gif[,15,15] ).
+Finally, the Level Request should end with the status__ Success__ (image:icons/succes.gif[,15,15] ).
 
 [NOTE]
 ====
@@ -1102,7 +1102,7 @@ In the Monocalendar project, the Production Level included a Deploy action.
 The Monocalendar application will be installed and launched with the following result:
 
 
-image::images/aboutmonocalendar.png[,835,459] 
+image::aboutmonocalendar.png[,835,459] 
 
 
 [[_cegcgjif]]
@@ -1134,15 +1134,15 @@ Double click the _ALM_HOME/stopDemo.cmd_ file.
 Open __Programs and Features__, select the entry _ALMDemo 5.8_ and click _Uninstall/Change_
 . Select the checkbox _Force the deletion of ..._ to remove all files related to the demo installation. If not, the files changed since the installation will be kept.
 +
-image::images/uninstalldemo.png[,372,247] 
+image::uninstalldemo.png[,372,247] 
 +
 . During the uninstallation, the following pop-up window is shown asking whether to uninstall the license key:
 +
-image::images/uninstalldemo_license.png[,343,174] 
+image::uninstalldemo_license.png[,343,174] 
 +
 Wait until the uninstallation has finished, then press _Quit_ to end the uninstaller:
 +
-image::images/uninstalldemo_quit.png[,263,179] 
+image::uninstalldemo_quit.png[,263,179] 
 
 
 :sectnums!:
@@ -1208,7 +1208,7 @@ For example: Adding a User with User ID "`testuser`" and password "`testuser`" w
 Project_ User Groups:
 
 
-image::images/hashcalc.png[,527,534] 
+image::hashcalc.png[,527,534] 
 
 
 . Add the following entry to the __passwd.config file__:
@@ -1233,7 +1233,7 @@ User:ALM Project
 === MSVCR71.dll was not found
 
 
-image::images/msvcr71notfound.png[,502,172] 
+image::msvcr71notfound.png[,502,172] 
 
 The IKAN ALM Demo installer is unable to locate the following file: __MSVCR71.dll__.
 You can read more about this issue on http://www.duckware.com/tech/java6msvcr71.html[
@@ -1244,15 +1244,15 @@ Sun proposes to fix the problem by copying the msvcr71.dll located in the Java i
 === Internet Browser cannot display the webpage
 
 
-image::images/ie_cannotdisplay.png[,461,72] 
+image::ie_cannotdisplay.png[,461,72] 
 
 
 
-image::images/pagenotdisplayed.png[,326,50] 
+image::pagenotdisplayed.png[,326,50] 
 
 
 
-image::images/failedtoconnect.png[,519,78] 
+image::failedtoconnect.png[,519,78] 
 
 Cause: the IKAN ALM Demo server is not running.
 
@@ -1272,7 +1272,7 @@ If you want to extend your trial period, you must request a new license by sendi
 When launching the 32-bit or 64-bit IKAN ALM Demo installer on Windows, you may receive the following error, after which the IKAN ALM Demo installer quits.
 
 
-image::images/JRE_NotFound.png[,435,229] 
+image::JRE_NotFound.png[,435,229] 
 
 The most likely cause is that there is no suitable Java Runtime Environment (JRE) installed.
 The 32-bit installer needs a 32-bit JRE installed, while the 64-bit installer needs a 64-bit JRE installed.

@@ -25,7 +25,7 @@ docbook].
 Vous le trouverez dans le fichier _GettingStarted.zip_ sous ``/init_svn/sources/docbook.xml``.
 
 
-image::images/docbookxml.png[,682,630] 
+image::docbookxml.png[,682,630] 
 
 
 == Prérequis
@@ -136,12 +136,12 @@ Connectez-vous à IKAN ALM avec l'utilisateur _global_ et le mot de passe __glob
 . Sous __Système > Paramètres Système__, vous verrez l'__Emplacement Archives de constructions__ sur le Serveur IKAN ALM où tous les artefacts d'une Construction (par exemple, les documents PDF, les archives à déployer, ...) seront sauvegardés après une Construction réussie de manière à ce qu'ils puissent être déployés plus tard dans le Cycle de vie. Il s'agit d'un chemin d'accès local sur le Serveur, comme par exemple ``C:/ALM/system/buildArchive``, ou ``/opt/alm/system/buildArchive``.
 . Sous __Machines > Aperçu__, vous trouverez la définition du Serveur IKAN ALM. En plus, un Agent doit être installé sur cette machine, et les processus de l'Agent et du Serveur doivent être en cours.
 +
-Vérifiez cela en cliquant sur le lien image:images/icons/installed_phases.gif[,15,15] _ Phases
+Vérifiez cela en cliquant sur le lien image:icons/installed_phases.gif[,15,15] _ Phases
 installées_ dans l'aperçu: vous serez renvoyés vers l'__Aperçu
 des Phases installées__ qui affiche une colonne pour l'__Activité
 actuelle du Serveur__ et une autre pour l'__Activité
-actuelle de l'Agent__, qui toutes les deux doivent avoir un icône vert image:images/icons/status_green.gif[,15,15]  comme statut.
-Si l'icône est rouge image:images/icons/status_red.gif[,15,15] , vérifiez la section expliquant comment _Démarrer l'Agent/le Serveur
+actuelle de l'Agent__, qui toutes les deux doivent avoir un icône vert image:icons/status_green.gif[,15,15]  comme statut.
+Si l'icône est rouge image:icons/status_red.gif[,15,15] , vérifiez la section expliquant comment _Démarrer l'Agent/le Serveur
 IKAN ALM_ dans les Guides d'installation respectivement de l'__Agent__ ou du __Serveur__.
 . Sous __Outils de script > Aperçu des Outils de script ANT__, un outil de script ANT 1.9.3 est défini, pointant vers la version Ant installée sur le Serveur IKAN ALM. Nous utiliserons cet outil de script Ant pour générer un fichier PDF et un fichier HTML à partir du fichier XML docbook, et pour déployer ces résultats vers le Serveur Web.
 
@@ -190,7 +190,7 @@ Exécutez _init_svn_repo.cmd_ (Windows) _ou
 init_svn_repo.sh_ (Linux):
 
 
-image::images/RunCmd_Result.png[,698,725] 
+image::RunCmd_Result.png[,698,725] 
 
 Maintenant que le référentiel est créé, nous devons le définir dans IKAN ALM.
 Dans le contexte de l`'Administration globale, sélectionnez __Référentiels de contrôle de version
@@ -199,7 +199,7 @@ Dans le contexte de l`'Administration globale, sélectionnez __Référentiels de
 L`'écran suivant s`'affiche:
 
 
-image::images/Subversion_CreateRepository_01.png[,585,257] 
+image::Subversion_CreateRepository_01.png[,585,257] 
 
 Sélectionnez _Subversion_ à partir de la liste déroulante dans le champ __Type__.
 Le panneau _Détails de connexion_ s'affiche.
@@ -211,7 +211,7 @@ Passe_ ne sont pas nécessaires car nous établirons la connexion en utilisant u
 du Référentiel_ à _Orienté projet_ et le _Délai d'expiration_ à _30_ secondes.
 
 
-image::images/Subversion_CreateRepository.png[,594,779] 
+image::Subversion_CreateRepository.png[,594,779] 
 
 
 [NOTE]
@@ -236,7 +236,7 @@ Le nom du Projet dans le Référentiel SVN est sensible à la casse!
 ====
 
 
-image::images/CreateProject_Docgen.png[,907,486] 
+image::CreateProject_Docgen.png[,907,486] 
 
 
 [NOTE]
@@ -257,14 +257,14 @@ Cliquez sur le lien _Modifier_ disponible devant le Cycle de vie.
 Pour pouvoir exécuter une Construction, nous devons d'abord créer une première étape (un Niveau) dans le Cycle de vie en sélectionnant le lien _Créer un Niveau de Construction_ en-dessous de l`'aperçu vide des _Niveaux associés._
 
 
-image::images/CreateLevel_BUILD.png[,553,460] 
+image::CreateLevel_BUILD.png[,553,460] 
 
 La plupart des champs sont immédiatement compréhensibles (pour l'instant nous ignorerons les champs "Critère de notification", "Plan horaire" et "Groupe d'utilisateurs du demandeur"). Si vous activez l'option __Débogage__, il sera plus facile de tracer les actions au début, surtout en cas d'une Construction échouée.
 Dès que tout se déroulera bien, vous rétablirez l'option à __Non__.
 En même temps que le Niveau, les Phases associées au Niveau seront créées.
 Ces Phases seront exécutées quand une Requête de Niveau sera exécutée sur le Serveur IKAN ALM (à voir plus tard).
 
-Vous pouvez vérifier ces Phases en sélectionnant le lien image:images/icons/edit_phases.gif[,15,15] _ Éditer
+Vous pouvez vérifier ces Phases en sélectionnant le lien image:icons/edit_phases.gif[,15,15] _ Éditer
 les Phases_ en-dessous du Niveau de construction sous __Niveaux
 > Aperçu__.
 
@@ -277,7 +277,7 @@ Sélectionnez _Créer_ dans le sous-menu __Environnements
 de construction__.
 
 
-image::images/CreateEnvironment_build.png[,861,198] 
+image::CreateEnvironment_build.png[,861,198] 
 
 La Construction sera exécutée par l'Agent IKAN ALM sur la _Machine_ que nous sélectionnons, et plus précisément par l'Outil de script _Ant_ (1.9.3). Le fichier _build.xml_ est un script Ant que vous pouvez consulter dans les Sources sous `/init_svn/source` et qui est importé dans le trunk de Subversion du projet __Docgen__.
 Le script n'est pas très compliqué: il exécutera quatre cibles Ant: (1) générer un fichier HTML et (2) générer un fichier PDF sur la base du fichier docbook.xml, (3) copier les fichiers résultants vers l'emplacement Cible pour qu'ils soient repris dans le résultat de Construction et, finalement, (4) générer une archive Web pouvant être déployée dans la Cible que nous pourrons déployer (à voir plus tard).
@@ -302,7 +302,7 @@ Pour pouvoir faire la distinction entre les Niveaux et les Environnements, nous 
 Établissez _Construction chargeable_ à _Oui_ pour que nous puissions télécharger et vérifier le Résultat de construction.
 
 Tout comme pour le Niveau, les Phases associées à l'Environnement sont créées en même temps que l'Environnement de Construction.
-Elles seront exécutées lorsque la Requête de Niveau de Construction sera exécutée sur l'Agent IKAN ALM (à voir plus tard). Vous pouvez vérifier ces Phases en sélectionnant le lien image:images/icons/edit_phases.gif[,15,15] _ Éditer
+Elles seront exécutées lorsque la Requête de Niveau de Construction sera exécutée sur l'Agent IKAN ALM (à voir plus tard). Vous pouvez vérifier ces Phases en sélectionnant le lien image:icons/edit_phases.gif[,15,15] _ Éditer
 les Phases_ à côté de l'Environnement de Construction sous __Environnements de construction > Aperçu__.
 
 === Auditer le Projet
@@ -324,12 +324,12 @@ au Bureau_ en bas de l'écran.
 Dans la fenêtre de sélection, cherchez la Branche Principale (1) du Projet __Docgen__, sélectionnez-la et cliquez sur __Ajouter au Bureau__. 
 
 
-image::images/Desktop.png[,1025,152] 
+image::Desktop.png[,1025,152] 
 
-Cliquez sur l'icône image:images/icons/deliver.gif[,15,15] _ Demander_ dans la colonne _Action_ de notre Branche.
+Cliquez sur l'icône image:icons/deliver.gif[,15,15] _ Demander_ dans la colonne _Action_ de notre Branche.
 
 
-image::images/Create_BuildLevelRequest.png[,867,720] 
+image::Create_BuildLevelRequest.png[,867,720] 
 
 Cliquez sur le lien __Montrer
 les Infos additionnelles__.
@@ -354,19 +354,19 @@ de Phase__).
 Si la Requête de Niveau est terminée, la fenêtre affichée ressemblera à la suivante:
 
 
-image::images/LevelRequestDetailedOverview.png[,936,592] 
+image::LevelRequestDetailedOverview.png[,936,592] 
 
 Sélectionnez l'onglet __Résultats__.
 Cette page affiche le résultat de la Construction exécutée par l'Agent IKAN ALM dans l'Environnement de Construction.
 
 
-image::images/LevelRequestDetailedOverview_Results.png[,929,519] 
+image::LevelRequestDetailedOverview_Results.png[,929,519] 
 
 Cliquez sur le lien _Télécharger le Résultat
 de construction_ pour télécharger et vérifier le Résultat de construction.
 
 
-image::images/Docgen_BUILD_zip.png[,879,698] 
+image::Docgen_BUILD_zip.png[,879,698] 
 
 Ouvrez le fichier _docbook.pdf/index.html_ pour vérifier si la conversion vers PDF/HTML a réussie.
 Vérifiez également le fichier docgen.war qui a été créé.
@@ -381,20 +381,20 @@ Sélectionnez l'onglet __Journaux de Phase__.
 Dans l'aperçu, les lignes grises représentent les différentes Phases et les lignes blanches représentent les actions de Construction et de Déploiement.
 
 
-image::images/LevelRequestDetailedOverview_PhaseLogs_01.png[,919,454] 
+image::LevelRequestDetailedOverview_PhaseLogs_01.png[,919,454] 
 
 Cliquez sur le nom de la Construction (dans notre exemple: __Construction
 1 sur la  machine ikan028__) pour développer le panneau d'information affichant les détails de la Phase.
 
 
-image::images/LevelRequestDetailedOverview_ShowDetails.png[,890,347] 
+image::LevelRequestDetailedOverview_ShowDetails.png[,890,347] 
 
 Ensuite, vous pouvez cliquer sur une des Phases pour en afficher le __Journal des Phases__.
 
 Le Suivi de la Phase _Exécution du Script_ affiche le résultat du script build.xml exécuté par l'Outil de script Ant.
 
 
-image::images/Log_ExecuteScript.png[,874,545] 
+image::Log_ExecuteScript.png[,874,545] 
 
 
 == Définir le Niveau de Test: Déploiement vers le Serveur Web
@@ -411,7 +411,7 @@ Naviguez vers __Cycles de
 vie > Aperçu__, modifiez le Cycle de vie BASE et sélectionnez le lien _Créer un Niveau de Test_ en bas de l'écran.
 
 
-image::images/CreateLevel_TEST.png[,606,503] 
+image::CreateLevel_TEST.png[,606,503] 
 
 La création d'un Niveau de Test est très similaire à la création d'un Niveau de Construction.
 Il y a quelques champs supplémentaires pour la notification que nous ignorerons pour le moment.
@@ -426,7 +426,7 @@ Sélectionnez _Créer_ dans le sous-menu __Environnements
 de déploiement__.
 
 
-image::images/CreateEnvironment_deploy.png[,899,205] 
+image::CreateEnvironment_deploy.png[,899,205] 
 
 Ceci est également très similaire à la création d'un Environnement de construction.
 
@@ -451,7 +451,7 @@ Elle ne fait que placer les fichiers HTML et PDF générés sur le Serveur Web p
 
 En même temps que l'Environnement de déploiement, des Phases y seront associées également.
 Elles seront exécutées lorsque la Requête de Niveau de Déploiement sera exécutée sur l'Agent IKAN ALM.
-Vous pouvez vérifier ces Phases en sélectionnant le lien image:images/icons/edit_phases.gif[,15,15] _ Éditer
+Vous pouvez vérifier ces Phases en sélectionnant le lien image:icons/edit_phases.gif[,15,15] _ Éditer
 les Phases_ à côté de l'Environnement de déploiement sous _Environnements de déploiement > Aperçu._
 
 === Créer les Paramètres de Déploiement pour l'authentificationsur l'application de gestion du Serveur Web.
@@ -478,11 +478,11 @@ Pour pouvoir fournir les paramètres au script, au moment où il sera exécuté,
 Sélectionnez __Environnements de déploiement >
 Paramètres de déploiement__.
 
-Dans l'__Aperçu des Paramètres__, cliquez sur l'icône image:images/icons/icon_createparameter.png[,15,15] _ Créer
+Dans l'__Aperçu des Paramètres__, cliquez sur l'icône image:icons/icon_createparameter.png[,15,15] _ Créer
 un Paramètre_ devant l'Environnement de déploiement __TST_Tomcat__.
 
 
-image::images/CreateDeployParameter.png[,951,514] 
+image::CreateDeployParameter.png[,951,514] 
 
 D'abord nous spécifierons son URL comme paramètre obligatoire dans le Paramètre tomcat.manager.url.
 Il utilise la même machine et le même port que l'URL pour l'application Web IKAN ALM (par exemple, http://localhost:9080) suivi de ``/manager/text``.
@@ -490,7 +490,7 @@ Il utilise la même machine et le même port que l'URL pour l'application Web IK
 Ensuite, créez les Paramètres obligatoires tomcat.manager.username (valeur __tomcat__) et tomcat.manager.password (valeur __tomcat__), et activez l`'option _Sécurisé_ pour le mot de passe (notez qu'il faut saisir le mot de passe deux fois).
 
 
-image::images/CreateDeployParameter_Overview.png[,1048,253] 
+image::CreateDeployParameter_Overview.png[,1048,253] 
 
 
 === Auditer le Projet
@@ -504,12 +504,12 @@ Sélectionnez _Auditer le Projet_ à partir du menu et cliquez sur le bouton _D�
 Tout comme lors de la création de la Requête de niveau de construction, nous créerons la Requête de niveau de déploiement via le "Bureau".
 
 
-image::images/Desktop_Deliver.png[,1056,127] 
+image::Desktop_Deliver.png[,1056,127] 
 
-Sélectionnez l'icône image:images/icons/deliver.gif[,15,15] _ Délivrer_ dans la colonne _Action_ du Niveau de Test pour créer la Requête de Niveau pour délivrer.
+Sélectionnez l'icône image:icons/deliver.gif[,15,15] _ Délivrer_ dans la colonne _Action_ du Niveau de Test pour créer la Requête de Niveau pour délivrer.
 
 
-image::images/Create_DeliverLevelRequest.png[,949,573] 
+image::Create_DeliverLevelRequest.png[,949,573] 
 
 Saisissez une description utile, sélectionnez la Construction créée précédemment sur notre Niveau de construction, et vérifiez les paramètres de gestion Tomcat que nous avons créés sur notre Environnement de déploiement.
 Si tout est OK, cliquez sur le bouton __Créer__.
@@ -525,7 +525,7 @@ Si vous développez les panneaux d'information pour les Phases Récupération de
 Notez que le Déploiement s'est terminé sans erreur, mais que le résultat global s'est terminé en "Avertissement". Cela tient au fait que l'option _Débogage_ est toujours activée pour le Niveau.
 
 
-image::images/Deliver_LevelRequestDetailedOverview.png[,947,583] 
+image::Deliver_LevelRequestDetailedOverview.png[,947,583] 
 
 
 ==== Suivi des Phases de déploiement
@@ -537,13 +537,13 @@ Sélectionnez l'onglet __Journaux de Phase__.
 Dans l'aperçu, les lignes grises représentent les différentes Phases et les lignes blanches représentent les actions de Construction et de Déploiement.
 
 
-image::images/Deliver_LevelRequestDetailedOverview_Phaselogs_01.png[,926,444] 
+image::Deliver_LevelRequestDetailedOverview_Phaselogs_01.png[,926,444] 
 
 Cliquez sur le nom du Déploiement (dans notre exemple: __Déploiement
 1 sur la machine ikan028__) pour développer le panneau d'information affichant les détails de la Phase.
 
 
-image::images/Deliver_LevelRequestDetailedOverview_Phaselogs_02.png[,891,255] 
+image::Deliver_LevelRequestDetailedOverview_Phaselogs_02.png[,891,255] 
 
 La Phase la plus importante est le suivi de la Phase _Exécution
 du script_ qui montre le résultat du script deploy.xml exécuté par Ant.
@@ -551,12 +551,12 @@ du script_ qui montre le résultat du script deploy.xml exécuté par Ant.
 Cliquez sur la Phase _Exécution script_ pour afficher son __Journal des Phases__.
 
 
-image::images/Deliver_LevelRequestDetailedOverview_ShowDetails.png[,870,486] 
+image::Deliver_LevelRequestDetailedOverview_ShowDetails.png[,870,486] 
 
 Vérifiez le résultat final sur http://__tomcat_host:tomcatport__/docgen, par exemple: ``http://localhost:8080/docgen``.
 
 
-image::images/Result_HTML.png[,1005,668] 
+image::Result_HTML.png[,1005,668] 
 
 En plus, en naviguant vers __http://tomcat_host:tomcatport/docgen/docbook.pdf__, le fichier PDF que nous avons vérifié auparavant dans le résultat de construction téléchargé s'ouvrira.
 
@@ -581,11 +581,11 @@ globale > Phases > Importer__.
 Cliquez sur le bouton _Sélectionner le Fichier_ et sélectionnez le fichier associé à la phase _Generate Doc_ (com.ikanalm.generate.doc-1.0.0.jar).
 
 
-image::images/Phases_01_ImportPhase.png[,897,445] 
+image::Phases_01_ImportPhase.png[,897,445] 
 
 
 
-image::images/Phases_02_ImportPhaseParametersOverview.png[,1006,417] 
+image::Phases_02_ImportPhaseParametersOverview.png[,1006,417] 
 
 Après l'avoir importée, toutes les informations concernant la Phase, les fichiers y contenus (le fichier generatedoc.xml, qui est un fichier Ant, et la librairie dépendante ant4docbook) seront affichés, ainsi que les paramètres parmi lesquels sourcefile, targetfile.name et targetfile.type sont spécifiques pour la Phase Generate Doc.
 
@@ -596,11 +596,11 @@ Simple War__.
 
 Dans la section "Administration des projets" du Projet __Docgen__, sélectionnez __Environnements de construction > Aperçu__.
 
-Ensuite, sélectionnez l'icône image:images/icons/edit_phases.gif[,15,15] _ Éditer
+Ensuite, sélectionnez l'icône image:icons/edit_phases.gif[,15,15] _ Éditer
 les Phases_ à côté de l`'Environnement de construction "`build`".
 
 Comme les Phases remplaceront notre script, vous pouvez retirer les Phases _Vérification du script de construction_ et __Exécution
-du script__, en cliquant sur l'icône image:images/icons/remove.gif[,15,15] _ Retirer_ dans l'__Aperçu des Phases__.
+du script__, en cliquant sur l'icône image:icons/remove.gif[,15,15] _ Retirer_ dans l'__Aperçu des Phases__.
 
 Maintenant, nous pouvons insérer les Phase requises.
 Cliquez sur le lien _Insérer une Phase_ en-dessous de l'__Aperçu des Phases__.
@@ -608,7 +608,7 @@ Cliquez sur le lien _Insérer une Phase_ en-dessous de l'__Aperçu des Phases__.
 La Phase _Generate Doc_ générera le fichier HTML:
 
 
-image::images/Phases_03_InsertGenerateDocPhase.png[,804,570] 
+image::Phases_03_InsertGenerateDocPhase.png[,804,570] 
 
 Sélectionnez-la dans la liste des Phases disponibles, établissez la valeur de Abandon si erreur à _Oui_ et insérez-la après la Phase _Transfert des Sources_ (position 2). Si une erreur se produit, nous passerons immédiatement au nettoyage en sélectionnant la Phase _Nettoyage Emplacement Source_ comme Phase suivante si erreur.
 Puisque nous utiliserons deux fois la Phase "Generate Doc", une première fois pour générer le fichier HTLM et ensuite pour générer le fichier PDF, il sera utile d'ajouter un libellé (dans notre exemple: __Generate Doc (HTML)__) pour faire la distinction entre les deux Phases.
@@ -630,31 +630,31 @@ L'ajout d'un libellé n'est donc pas vraiment nécessaire.
 Voilà le résultat dans l'__Aperçu des Phases__:
 
 
-image::images/Phases_04_Result_PhasesOverview.png[,902,458] 
+image::Phases_04_Result_PhasesOverview.png[,902,458] 
 
 Pour que les Phases puissent fonctionner correctement, nous devons modifier quelques paramètres spécifiques.
 
-Cliquez sur l'icône image:images/icons/icon_viewparameters.png[,15,15] _ Voir
+Cliquez sur l'icône image:icons/icon_viewparameters.png[,15,15] _ Voir
 les Paramètres_ devant les Phases insérées. 
 
 D'abord nous modifierons les paramètres pour la Phase _Generate
-Doc_ (la première pour générer le fichier HTML): cliquez sur le lien image:images/icons/edit.gif[,15,15] _ Éditer_ à côté du paramètre targetfile.name et établissez sa valeur à "index". La valeur par défaut de target.type est établie à _html_ et ne peut doit être modifiée.
+Doc_ (la première pour générer le fichier HTML): cliquez sur le lien image:icons/edit.gif[,15,15] _ Éditer_ à côté du paramètre targetfile.name et établissez sa valeur à "index". La valeur par défaut de target.type est établie à _html_ et ne peut doit être modifiée.
 En utilisant ces paramètres, la Phase convertira la source docbook.xml en un fichier index.html.
 
 
-image::images/Phases_05_Result_PhasesParameters_generatedoc1.png[,790,237] 
+image::Phases_05_Result_PhasesParameters_generatedoc1.png[,790,237] 
 
 Modifiez la deuxième Phase _Generate Doc_ pour générer le fichier PDF: targetfile.name = docbook, targetfile.type=pdf, ce qui engendrera la génération du fichier __docbook.pdf__.
 
 
-image::images/Phases_06_Result_PhasesParameters_generatedoc2.png[,792,237] 
+image::Phases_06_Result_PhasesParameters_generatedoc2.png[,792,237] 
 
 Maintenant, modifions la Phase __Generate Simple
 War__: la plupart des paramètres sont corrects, il faudra uniquement établir le paramètre "appname" à __docgen__.
 En utilisant ces paramètres, un fichier docgen.war sera généré, contenant tous les fichiers du répertoire Source css, les fichiers *.html (HTML) et *.pdf (PDF) qui auront été générés par les 2 Phases précédentes.
 
 
-image::images/Phases_07_Result_PhasesParameters_generatesimplewar.png[,768,231] 
+image::Phases_07_Result_PhasesParameters_generatesimplewar.png[,768,231] 
 
 Nos Phases sont maintenant insérées dans le flux de travail de l'Environnement de Construction avec les paramètres corrects.
 Regardons si nous obtenons le même résultat de construction.
@@ -668,18 +668,18 @@ Saisissez la description de la Requête de Niveau, par exemple: "`Tester les Pha
 Vérifiez la Requête de Niveau de construction en cliquant sur le lien dans le Bureau (comme expliqué avant): vérifiez les détails de la Requête de niveau, le contenu du fichier de construction et le suivi des Phases de construction.
 
 
-image::images/Phases_08_VerifyBuildLevelRequest.png[,889,362] 
+image::Phases_08_VerifyBuildLevelRequest.png[,889,362] 
 
 Generate Doc (HTML): cliquez sur le lien _Paramètres
 de phase_ pour afficher les paramètres utilisés.
 
 
-image::images/Phases_09_Log_PhaseParameters_generatedochtml.png[,891,472] 
+image::Phases_09_Log_PhaseParameters_generatedochtml.png[,891,472] 
 
 Générer le fichier Simple War:
 
 
-image::images/Phases_10_Log_PhaseParameters_generatesimplewar.png[,873,374] 
+image::Phases_10_Log_PhaseParameters_generatesimplewar.png[,873,374] 
 
 
 == Informations additionnelles

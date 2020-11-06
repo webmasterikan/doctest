@@ -102,7 +102,7 @@ Pour ce faire, double-cliquez ou exécutez le fichier d'archive (``ikanalm_trial
 Une fenêtre semblable à celle-ci s'affichera:
 
 
-image::images/startingup.png[,361,167] 
+image::startingup.png[,361,167] 
 
 Sélectionnez un répertoire Cible.
 Les fichiers seront extrait dans un sous-répertoire nommé "ikanalm_trial_x86" ou "ikanalm_trial_x64". 
@@ -135,19 +135,19 @@ Double-cliquez sur le fichier ``almdemo_install_5.8_xXX.exe``.
 La fenêtre suivante s'affichera:
 
 
-image::images/scherm_01.png[,171,184] 
+image::scherm_01.png[,171,184] 
 
 Sélectionnez votre langue d'installation préférée et cliquez sur __OK__.
 
 La fenêtre de bienvenue suivante s'affiche:
 
 
-image::images/scherm_02.png[,813,491] 
+image::scherm_02.png[,813,491] 
 
 Cliquez sur le bouton _Suivant_ pour continuer.
 
 
-image::images/scherm_03.png[,815,489] 
+image::scherm_03.png[,815,489] 
 
 Lisez attentivement l'information "Lisez-moi" (uniquement disponible en anglais). Pour continuer, cliquez sur le bouton __Suivant__.
 
@@ -155,7 +155,7 @@ Lisez attentivement l'information "Lisez-moi" (uniquement disponible en anglais)
 === Étape 2: Accord de licence
 
 
-image::images/scherm_04.png[,811,487] 
+image::scherm_04.png[,811,487] 
 
 Lisez attentivement l'accord de licence (uniquement disponible en anglais). Sélectionnez l'option _J'accepte les termes
 de cet accord de licence_ et cliquez sur le bouton __Suivant__.
@@ -163,7 +163,7 @@ de cet accord de licence_ et cliquez sur le bouton __Suivant__.
 === Étape 3: Chemin d'installation
 
 
-image::images/scherm_05.png[,812,487] 
+image::scherm_05.png[,812,487] 
 
 Dans votre système de fichiers, sélectionnez le répertoire de Base pour l'installation Démo.
 Le répertoire de Base par défaut est C:\ALMDemo.
@@ -176,19 +176,19 @@ Cliquez sur le bouton _Suivant_ pour continuer.
 Si le répertoire existe déjà, un message d`'avertissement s'affichera.
 
 
-image::images/scherm_06.png[,498,145] 
+image::scherm_06.png[,498,145] 
 
 Dans la version de Démo, tous les paquetages doivent être installés.
 
 
-image::images/scherm_07.png[,810,486] 
+image::scherm_07.png[,810,486] 
 
 Cliquez sur le bouton _Suivant_ pour continuer avec la sélection d'un Kit de développement Java (JDK).
 
 === Étape 4: Sélectionner un Kit de développement Java
 
 
-image::images/scherm_08.png[,812,488] 
+image::scherm_08.png[,812,488] 
 
 Comme indiqué dans la section <<_chbbgjeb>>, la version 1.7 ou 1.8 du Kit de développement Java (JDK) est requise. 
 
@@ -200,14 +200,14 @@ Un Java Runtime Environnement (JRE) ne sera pas suffisant!
 Si le répertoire sélectionné ne contient pas de JDK approprié, le message d'erreur suivant s'affichera:
 
 
-image::images/scherm_09.png[,376,143] 
+image::scherm_09.png[,376,143] 
 
 
 [[_chbhbhgj]]
 === Étape 5: Paramètres de configuration
 
 
-image::images/scherm_10.png[,813,489] 
+image::scherm_10.png[,813,489] 
 
 Configurez les ports réseau utilisés par IKAN ALM.
 En principe, les valeurs proposées par défaut devraient être correctes.
@@ -220,19 +220,19 @@ Dans le reste du présent guide, le port du Serveur d'application s`'appellera d
 Cliquez sur le bouton _Suivant_ pour afficher le résumé de l'installation.
 
 
-image::images/scherm_11.png[,815,489] 
+image::scherm_11.png[,815,489] 
 
 Cliquez sur le bouton _Suivant_ pour démarrer l'installation utilisant les paramètres spécifiés:
 
 
-image::images/scherm_12.png[,810,486] 
+image::scherm_12.png[,810,486] 
 
 Une fois l'installation terminée, cliquez sur le bouton _Suivant_ pour continuer avec la spécification du menu de démarrage.
 
 === Étape 6: Raccourcis de menu de démarrage
 
 
-image::images/scherm_13.png[,816,488] 
+image::scherm_13.png[,816,488] 
 
 Sélectionnez le Groupe Programme et le Nom du raccourci pour le menu de démarrage.
 Par défaut, _IKAN ALM
@@ -242,7 +242,7 @@ Vous pouvez modifier ces noms.
 Cliquez sur le bouton _Suivant_ pour compléter l'installation IKAN ALM Démo.
 
 
-image::images/scherm_14.png[,814,488] 
+image::scherm_14.png[,814,488] 
 
 
 == Configuration après l'installation
@@ -279,14 +279,14 @@ Saisissez l'URL suivant: _\http://MACHINE_NAME:ALM_APPSERVER_PORT/alm_ (Par exem
 La fenêtre pour installer la licence s`'affiche:
 
 
-image::images/start_01.png[,518,291] 
+image::start_01.png[,518,291] 
 
 Saisissez ou sélectionnez l'emplacement du fichier _alm_license.lic_ que vous avez reçu en utilisant le bouton _Browse_ et cliquez sur le bouton __Submit__.
 Ne modifiez ni le fichier ni le nom du fichier.
 Dès que la licence est installée, la fenêtre suivante s'affiche:
 
 
-image::images/start_02.png[,520,322] 
+image::start_02.png[,520,322] 
 
 
 == Utiliser l'application IKAN ALM Démo 5.8 
@@ -310,12 +310,12 @@ Double-cliquez sur le fichier _ALM_HOME/startDemo.cmd_
 Cela lancera un Serveur Web Tomcat et le Serveur IKAN ALM Démo (sur lequel sont exécutés le Serveur et l'Agent IKAN ALM). Si la fenêtre de commande du Serveur IKAN ALM Démo affiche un message tel que: "Successfully connected with IKAN ALM server", l'application ALM Démo a démarré complètement.
 
 
-image::images/fig5_1.png[,687,351] 
+image::fig5_1.png[,687,351] 
 
 Si la fenêtre de commande du Serveur IKAN ALM Démo affiche un message tel que: "INFO : Server startup in nnn ms" , le Serveur Tomcat a démarré complètement et vous pouvez utiliser l`'application Web avec votre navigateur.
 
 
-image::images/fig5_2.png[,687,351] 
+image::fig5_2.png[,687,351] 
 
 Arrêter le Serveur IKAN ALM Démo
 
@@ -356,7 +356,7 @@ Une session de navigateur Web s'ouvrira affichant la fenêtre de _Connexion_ d'I
 Vous êtes prêts à utiliser l'interface Web IKAN ALM. 
 
 
-image::images/start_03.png[,528,311] 
+image::start_03.png[,528,311] 
 
 Il est utile d'ajouter ce lien aux favoris de votre navigateur Web.
 
@@ -449,7 +449,7 @@ Sélectionnez _Aide_ dans le menu principal.
 Une nouvelle fenêtre de votre navigateur s'ouvrira, affichant la "Table des matières".
 * sous forme d'aide contextuelle disponible sur chaque fenêtre de l'Interface Utilisateur d'IKAN ALM.
 +
-Pour y accéder, cliquez sur l'icône image:images/icons/help.gif[,16,16]  à droite du fil d'Ariane de la fenêtre sélectionnée.
+Pour y accéder, cliquez sur l'icône image:icons/help.gif[,16,16]  à droite du fil d'Ariane de la fenêtre sélectionnée.
 
 [[_webpadproject]]
 == Exemple de projet Java (Customers)
@@ -498,12 +498,12 @@ Dans la fenêtre du Bureau, cliquez sur le bouton __Ajouter
 au Bureau__.
 
 
-image::images/ch6_01.png[,835,215] 
+image::ch6_01.png[,835,215] 
 
 La fenêtre _Ajouter au Bureau_ s'affiche.
 
 
-image::images/ch6_02.png[,673,359] 
+image::ch6_02.png[,673,359] 
 
 Un Projet peut avoir plusieurs Cycles de Vie.
 Dans IKAN ALM, ces Cycles de vie sont organisés dans des Branches.
@@ -519,11 +519,11 @@ Cliquez sur le bouton _Fermer_ pour fermer la fenêtre __Ajouter au Bureau__.
 À partir de l'arborescence, vous pouvez sélectionner des Niveaux individuels et les ajouter à votre Bureau.
 ====
 
-Développez les Niveaux de la Branche en cliquant sur l'icône image:images/icons/ExpandProjectStream.gif[,10,10]  devant l'élément de bureau de la Branche __Customers 1-0__.
+Développez les Niveaux de la Branche en cliquant sur l'icône image:icons/ExpandProjectStream.gif[,10,10]  devant l'élément de bureau de la Branche __Customers 1-0__.
 Les Niveaux suivants s'affichent:
 
 
-image::images/ch6_03.png[,841,310] 
+image::ch6_03.png[,841,310] 
 
 Comme vous pouvez le constater, il n'y a pas encore beaucoup d'activité dans le projet "Customers" puisque le projet est verrouillé.
 Dans l'étape suivante nous déverrouillerons le projet.
@@ -534,17 +534,17 @@ Dans l'étape suivante nous déverrouillerons le projet.
 Pour pouvoir construire le projet "Customers", il faudra déverrouiller le projet, ainsi que les Niveaux correspondants, dans la section Administration des projets.
 Cette action est réservée aux Utilisateurs ayant des droits d'Administration de projets, tels que les Utilisateurs "global" ou "projet" (voir <<_ceggadeb>>).
 
-Pour commencer la procédure de déverrouillage, sélectionnez image:images/icons/icon_ProjectAdmin_13x13.png[,13,13] _Administration
+Pour commencer la procédure de déverrouillage, sélectionnez image:icons/icon_ProjectAdmin_13x13.png[,13,13] _Administration
 des projets_ dans le menu principal. 
 
 
-image::images/ch6_04.png[,836,305] 
+image::ch6_04.png[,836,305] 
 
-Cliquez sur l'icône _Modifier_ image:images/icons/edit.gif[,15,15]  devant le projet "Customers".
+Cliquez sur l'icône _Modifier_ image:icons/edit.gif[,15,15]  devant le projet "Customers".
 
 [NOTE]
 ====
-Vous verrez également l'icône _Déverrouiller_ image:images/icons/unlock.gif[,15,15]  devant chaque Projet dans cette liste.
+Vous verrez également l'icône _Déverrouiller_ image:icons/unlock.gif[,15,15]  devant chaque Projet dans cette liste.
 Cette icône déverrouillera uniquement le Projet, tout en maintenant les Niveaux verrouillés.
 ====
 
@@ -553,21 +553,21 @@ La fenêtre _Modifier un Projet_ s'affiche dans le contexte de l'Administration 
 Dans le sous-menu, sélectionnez _Auditer le projet_ pour vérifier la cohérence du Projet. 
 
 
-image::images/ch6_05.png[,850,86] 
+image::ch6_05.png[,850,86] 
 
 Avant que la fenêtre _Auditer le Projet_ ne soit affichée, plusieurs contrôles sont effectués pour vérifier la configuration du Projet.
-Vous pouvez utiliser le bouton image:images/icons/help.gif[,16,16]  pour afficher l'aide en ligne concernant cette fonction.
+Vous pouvez utiliser le bouton image:icons/help.gif[,16,16]  pour afficher l'aide en ligne concernant cette fonction.
 Pour plus d'informations, se référer au chapitre _Auditer un projet_ dans le __Guide de l'Utilisateur IKAN ALM__. 
 
 Si le projet est cohérent (branches secondaires, niveaux, environnements, phases et paramètres sont valides), le lien _Déverrouiller_ apparaîtra dans le panneau __Actions__.
 Cliquez sur ce lien pour déverrouiller le Projet et ses Niveaux.
 
 
-image::images/ch6_06.png[,844,482] 
+image::ch6_06.png[,844,482] 
 
 Suite à cela, l'icône _Verrouillé_ devant les Niveaux disparaîtra.
 Le projet n'est plus verrouillé.
-Dans le menu principal, sélectionnez image:images/icons/icon_ProjectAdmin_13x13.png[,13,13] __Administration
+Dans le menu principal, sélectionnez image:icons/icon_ProjectAdmin_13x13.png[,13,13] __Administration
 des Projets __pour vérifier, dans __l`'Aperçu
 des Projets__, qu'il n'y a plus de bouton _Verrouillé_ devant le Projet.
 
@@ -592,7 +592,7 @@ de niveau > Aperçu des Requêtes de niveau_ dans le menu principal.
 L'aperçu suivant s'affichera:
 
 
-image::images/ch6_07.png[,836,417] 
+image::ch6_07.png[,836,417] 
 
 Sélectionnez l'__OID__ (1) de la Requête de Niveau pour afficher la fenêtre des _Informations détaillées_ sur laquelle vous pouvez vérifier ce qui s'est passé pendant la Requête de niveau de Construction.
 
@@ -601,7 +601,7 @@ Sélectionnez l'onglet _Journaux
 de Phase_ pour vérifier ce qui s'est passé pendant l'exécution de la Requête de Niveau.
 
 
-image::images/ch6_08.png[,940,487] 
+image::ch6_08.png[,940,487] 
 
 Cet onglet affiche les Journaux des Phases de Niveau, les actions de Construction et de Déploiement, et leurs Phases de construction et de déploiement exécutées lors de l'exécution de la Requête de niveau.
 Il fournit également des informations plus détaillées concernant les Paramètres utilisés.
@@ -614,7 +614,7 @@ Pour l'afficher, développez l'action de Construction (nommé Construction 1 sur
 Ensuite, développez la Phase "Exécution du script". Cela affichera le journal d'exécution dans lequel vous trouverez le résultat du script de construction Ant exécuté.
 
 
-image::images/ch6_09.png[,881,557] 
+image::ch6_09.png[,881,557] 
 
 
 [[_delivertotest]]
@@ -626,12 +626,12 @@ Maintenant nous allons délivrer la Construction vers les Niveaux suivants (TEST
 Sélectionnez _Bureau_ dans le Menu Principal.
 
 
-image::images/ch6_10.png[,946,265] 
+image::ch6_10.png[,946,265] 
 
-Cliquez sur l'icône _Délivrer_ image:images/icons/icon_deliverBuild.png[,15,15]  à droite du Niveau __Customers H_1-0 TEST__.
+Cliquez sur l'icône _Délivrer_ image:icons/icon_deliverBuild.png[,15,15]  à droite du Niveau __Customers H_1-0 TEST__.
 
 
-image::images/ch6_11.png[,940,628] 
+image::ch6_11.png[,940,628] 
 
 Dans l'écran __Créer une Requête de niveau__, saisissez une description et sélectionnez la Construction (1) en cliquant sur la rangée contenant la Construction concernée.
 
@@ -646,21 +646,21 @@ L'écran _Bureau_ s'affichera.
 Sélectionnez la _Dernière Requête de niveau_ du Niveau de Test pour afficher les _Informations détaillées_ de la Requête de Niveau.
 Une Requête de niveau pour délivrer la Construction est créée pour le Niveau TEST de votre Projet.
 
-Le statut de la Requête de niveau est établi à _En attente de l`'heure d`'exécution_ (image:images/icons/waiting_datetime.gif[,15,15] ) jusqu'à ce qu'elle ne soit traitée par le Serveur IKAN ALM.
-Ensuite, le statut sera modifié en _Exécution_ (image:images/icons/run.gif[,15,15] ). 
+Le statut de la Requête de niveau est établi à _En attente de l`'heure d`'exécution_ (image:icons/waiting_datetime.gif[,15,15] ) jusqu'à ce qu'elle ne soit traitée par le Serveur IKAN ALM.
+Ensuite, le statut sera modifié en _Exécution_ (image:icons/run.gif[,15,15] ). 
 
 Dans l`'__Aperçu du Bureau__, cliquez sur le lien _Dernière Requête de niveau_ pour le Niveau de Test.
 
 
-image::images/ch6_12.png[,933,306] 
+image::ch6_12.png[,933,306] 
 
 L`'écran __Informations détaillées __s`'affiche.
 
 Cliquez sur le lien _Actualiser_ ou activez la fonction _Actualisation automatique_ dans le sous-menu.
-Finalement, la Requête de niveau devrait se terminer avec le statut _Réussie_ (image:images/icons/succes.gif[,15,15] ).
+Finalement, la Requête de niveau devrait se terminer avec le statut _Réussie_ (image:icons/succes.gif[,15,15] ).
 
 
-image::images/ch6_13.png[,941,423] 
+image::ch6_13.png[,941,423] 
 
 
 ===== Quel est le résultat de cette action de déploiementvers le Niveau TEST?
@@ -672,7 +672,7 @@ L'application est déployée avec un contexte de test ("/customers_test"). Avant
 Pour afficher l'application déployée, ouvrez une session de navigateur et saisissez l'URL suivant: `\http://MACHINE_NAME:ALM_APPSERVER_PORT/customers_test` (par exemple: \http://ikan009:9080/customers_test).
 
 
-image::images/ch6_14.png[,664,243] 
+image::ch6_14.png[,664,243] 
 
 
 [NOTE]
@@ -688,7 +688,7 @@ Dans cet exemple, la Balise RCV est H_1-0_b1.
 Cliquez sur le lien _List all Customers_ pour afficher la liste de tous les clients définis dans la Base de données de test.
 
 
-image::images/ch6_15.png[,657,257] 
+image::ch6_15.png[,657,257] 
 
 
 [[_delivertoproduction]]
@@ -700,9 +700,9 @@ Une autre méthode consiste à sélectionner _Requêtes
 de niveau > Créer une Requête de niveau_ dans le sous-menu.
 
 
-image::images/ch6_16.png[,936,421] 
+image::ch6_16.png[,936,421] 
 
-Cliquez sur l'icône _Délivrer_ image:images/icons/icon_deliverBuild.png[,15,15]  à droite du Niveau Customers H_1-0 PRODUCTION.
+Cliquez sur l'icône _Délivrer_ image:icons/icon_deliverBuild.png[,15,15]  à droite du Niveau Customers H_1-0 PRODUCTION.
 
 Saisissez une description, comme vous l'avez fait pour la création de la Requête de niveau pour le Niveau TEST, et sélectionnez le Numéro de construction __1__.
 Si vous laissez le champ _Exécution demandée_ vide, la Requête de niveau pour délivrer la Construction sera exécutée immédiatement.
@@ -712,31 +712,31 @@ Cliquez sur le bouton __Créer__.
 L'écran _Informations détaillées_ s'affichera.
 
 
-image::images/ch6_17.png[,938,465] 
+image::ch6_17.png[,938,465] 
 
 Une nouvelle Requête de niveau sera créée, avec le statut _En
-attente de pré-approbation_ (image:images/icons/waiting_approval.gif[,15,15] ). Comme une Pré-approbation est associée au Niveau PRODUCTION, un message de notification sera envoyé à tous les membres du Groupe d`'utilisateurs __ALM
+attente de pré-approbation_ (image:icons/waiting_approval.gif[,15,15] ). Comme une Pré-approbation est associée au Niveau PRODUCTION, un message de notification sera envoyé à tous les membres du Groupe d`'utilisateurs __ALM
 User__.
 
 Le statut de la nouvelle Requête de niveau restera établie à _En attente de pré-approbation_ tant que l'approbation ne sera pas accordée.
-Comme l'Utilisateur "global" fait partie du Groupe d`'utilisateurs __ALM User__, sélectionnez _Approbations > Approbations en attente_ dans le sous-menu et cliquez sur le lien _Approuver _image:images/icons/approve.gif[,15,15] . 
+Comme l'Utilisateur "global" fait partie du Groupe d`'utilisateurs __ALM User__, sélectionnez _Approbations > Approbations en attente_ dans le sous-menu et cliquez sur le lien _Approuver _image:icons/approve.gif[,15,15] . 
 
 
-image::images/ch6_18.png[,940,474] 
+image::ch6_18.png[,940,474] 
 
 Saisissez une description pour l'Approbation et cliquez sur le bouton _Approuver_
 
 Maintenant, la Requête de niveau sera traitée par le Serveur IKAN ALM.
 Le statut de la _Dernière
-Requête de niveau_ sera établi à _Exécution_ (image:images/icons/run.gif[,15,15] ). Cliquez sur le lien _Actualiser_ ou activez la fonction _Actualisation
+Requête de niveau_ sera établi à _Exécution_ (image:icons/run.gif[,15,15] ). Cliquez sur le lien _Actualiser_ ou activez la fonction _Actualisation
 automatique_ dans le sous-menu.
-Finalement, la Requête de niveau devrait se terminer avec le statut _Réussie_ (image:images/icons/succes.gif[,15,15] ).
+Finalement, la Requête de niveau devrait se terminer avec le statut _Réussie_ (image:icons/succes.gif[,15,15] ).
 
 Dans l`'__Aperçu du Bureau__, vous pouvez également cliquer sur le lien _Dernière Requête
 de niveau_ pour afficher le suivi des différentes Phases.
 
 
-image::images/ch6_19.png[,940,261] 
+image::ch6_19.png[,940,261] 
 
 
 ===== Quel est le résultat de cette action de déploiementvers le Niveau PRODUCTION?
@@ -747,7 +747,7 @@ L'application est déployée dans le contexte "/customers". Contrairement à ce 
 En revanche, l'application déployée utilise une Base de données de clients pré-remplie avec des données réalistes. 
 
 
-image::images/ch6_20.png[,665,228] 
+image::ch6_20.png[,665,228] 
 
 
 [NOTE]
@@ -763,7 +763,7 @@ Dans cet exemple-ci, la balise RCV est H_1-0_b1.
 Cliquez sur le lien _List all Customers_ pour afficher la liste de tous les clients définis dans la Base de données de production.
 
 
-image::images/ch6_21.png[,659,419] 
+image::ch6_21.png[,659,419] 
 
 
 [[_cegheagc]]
@@ -792,16 +792,16 @@ Plus spécifiquement, le déploiement vers le Niveau TEST exécute trois tâches
 
 La première tâche n'est pas assez générale pour pouvoir être réutilisée, mais pour les deux autres des Phases personnalisées ont été créées: les Phases "Update DB" et "Tomcat Deploy".
 
-Pour vérifier la définition de ces Phases, sélectionnez image:images/icons/icon_GlobalAdmin_13x13.png[,13,13] __ Administration
+Pour vérifier la définition de ces Phases, sélectionnez image:icons/icon_GlobalAdmin_13x13.png[,13,13] __ Administration
 globale > Phases > Aperçu__.
 
 
-image::images/ch6_22.png[,944,537] 
+image::ch6_22.png[,944,537] 
 
-Cliquez sur l'icône _Modifier_ image:images/icons/edit.gif[,15,15]  devant la Phase __com.ikanalm.phases.ant.scripting.tomcatDeploy Phase__.
+Cliquez sur l'icône _Modifier_ image:icons/edit.gif[,15,15]  devant la Phase __com.ikanalm.phases.ant.scripting.tomcatDeploy Phase__.
 
 
-image::images/ch6_23.png[,949,724] 
+image::ch6_23.png[,949,724] 
 
 Cette fenêtre affiche les informations générales sur la Phase, les Paramètres de phase qui peuvent être spécifiés pour configurer l'exécution de la Phase et les _Niveaux et Environnements
 connectés_ où la Phase est utilisée.
@@ -817,18 +817,18 @@ et Environnements connectés__, notre Phase de Déploiement Tomcat est actuellem
 * Dans l'Environnement de Déploiement _proddeploy_ du Niveau PRODUCTION, où il déploie l'application "Customers" dans le contexte de production.
 
 
-Comme un exemple d'une utilisation plus avancée des Paramètres, prenons le Paramètre de phase "contextPath". Sa valeur par défaut est établie à `/${applicationName}` et cette valeur est spécifiée tant pour l'Environnement "testdeploy" que pour l'Environnement "proddeploy" (cliquez sur l'icône _Modifier_ image:images/icons/edit.gif[,15,15]  devant le Paramètre __contextPath__). Toutefois, l'application "Customers" est déployée dans deux contextes différents: "customers_test" et "customers". 
+Comme un exemple d'une utilisation plus avancée des Paramètres, prenons le Paramètre de phase "contextPath". Sa valeur par défaut est établie à `/${applicationName}` et cette valeur est spécifiée tant pour l'Environnement "testdeploy" que pour l'Environnement "proddeploy" (cliquez sur l'icône _Modifier_ image:icons/edit.gif[,15,15]  devant le Paramètre __contextPath__). Toutefois, l'application "Customers" est déployée dans deux contextes différents: "customers_test" et "customers". 
 
 Comment cela est réalisé?
 
 La réponse se trouve dans le Paramètre de déploiement (nommé "applicationName") qui est spécifié pour les deux Environnements de déploiement .
 
-Accédez à la section image:images/icons/icon_ProjectAdmin_13x13.png[,13,13] _Administration
+Accédez à la section image:icons/icon_ProjectAdmin_13x13.png[,13,13] _Administration
 des projets_ et modifiez le projet "Customers". Dans le menu, sélectionnez ensuite __Environnements de déploiement
 > Paramètres de Déploiement__: 
 
 
-image::images/ch6_24.png[,947,452] 
+image::ch6_24.png[,947,452] 
 
 Vous constaterez que pour l'Environnement "testdeploy" la valeur du Paramètre "applicationName" est "customers_test", tandis que pour l'Environnement "proddeploy" la valeur est établie à "customers". Au moment de l'exécution de la Phase de Déploiement Tomcat, la propriété ${applicationName} sera remplacée par la valeur du Paramètre de déploiement qui donnera le résultat désiré.
 
@@ -884,12 +884,12 @@ Dans cette section, nous créerons un élément de bureau pour le projet "Monoca
 Dans la fenêtre du __Bureau__, cliquez sur le bouton __Ajouter au Bureau__. 
 
 
-image::images/mono_01.png[,904,204] 
+image::mono_01.png[,904,204] 
 
 La fenêtre _Ajouter au Bureau_ s'affiche.
 
 
-image::images/mono_02.png[,671,363] 
+image::mono_02.png[,671,363] 
 
 Un Projet peut avoir plusieurs Cycles de Vie.
 Dans IKAN ALM, ils sont organisés dans des Branches.
@@ -905,10 +905,10 @@ Cliquez sur le bouton _Fermer_ pour fermer la fenêtre __Ajouter au Bureau__.
 À partir de l'arborescence, vous pouvez sélectionner des Niveaux individuels et les ajouter à votre Bureau.
 ====
 
-Développez les Niveaux de la Branche en cliquant sur l'icône image:images/icons/ExpandProjectStream.gif[,10,10]  devant l'élément de bureau de la Branche _Monocalendar 1-0_ . Les Niveaux suivants s'affichent: 
+Développez les Niveaux de la Branche en cliquant sur l'icône image:icons/ExpandProjectStream.gif[,10,10]  devant l'élément de bureau de la Branche _Monocalendar 1-0_ . Les Niveaux suivants s'affichent: 
 
 
-image::images/mono_03.png[,915,258] 
+image::mono_03.png[,915,258] 
 
 Comme vous pouvez le constater, il n'y a pas encore beaucoup d'activité dans le projet "Monocalendar" puisque le projet est verrouillé.
 Dans l'étape suivante nous déverrouillerons le projet.
@@ -919,17 +919,17 @@ Dans l'étape suivante nous déverrouillerons le projet.
 Pour pouvoir construire le projet "Monocalendar", il faut déverrouiller le projet, ainsi que les Niveaux correspondants, dans la section Administration des projets.
 Cette action est réservée aux Utilisateurs ayant des droits d'Administrateur de projets, tels que les Utilisateurs "global" ou "projet" (<<_ceggadeb>>).
 
-Pour commencer la procédure de déverrouillage, sélectionnez image:images/icons/icon_ProjectAdmin_13x13.png[,13,13] _Administration
+Pour commencer la procédure de déverrouillage, sélectionnez image:icons/icon_ProjectAdmin_13x13.png[,13,13] _Administration
 des projets_ dans le menu principal. 
 
 
-image::images/mono_04.png[,932,325] 
+image::mono_04.png[,932,325] 
 
-Cliquez sur l'icône _Modifier_ image:images/icons/edit.gif[,15,15]  devant le projet "Monocalendar".
+Cliquez sur l'icône _Modifier_ image:icons/edit.gif[,15,15]  devant le projet "Monocalendar".
 
 [NOTE]
 ====
-Vous verrez également l'icône _Déverrouiller_ image:images/icons/unlock.gif[,15,15]  devant chaque Projet dans cette liste.
+Vous verrez également l'icône _Déverrouiller_ image:icons/unlock.gif[,15,15]  devant chaque Projet dans cette liste.
 Cette icône déverrouillera uniquement le Projet, tout en maintenant les Niveaux verrouillés.
 ====
 
@@ -938,17 +938,17 @@ L'écran _Informations sur le Projet_ s'affiche dans le contexte de l'Administra
 Dans le sous-menu, sélectionnez _Auditer le projet_ pour vérifier la cohérence du Projet. 
 
 
-image::images/mono_05.png[,905,87] 
+image::mono_05.png[,905,87] 
 
 Avant que la fenêtre _Auditer le Projet_ ne soit affichée, plusieurs contrôles sont effectués pour vérifier la configuration du Projet.
-Vous pouvez utiliser le bouton image:images/icons/help.gif[,16,16]  pour afficher l'aide en ligne concernant cette fonction.
+Vous pouvez utiliser le bouton image:icons/help.gif[,16,16]  pour afficher l'aide en ligne concernant cette fonction.
 Pour plus d'informations, se référer au chapitre _Auditer un projet_ dans le __Guide de l'Utilisateur IKAN ALM__. 
 
 Si le projet est cohérent (branches secondaires, niveaux, environnements, phases et paramètres sont valides), le lien _Déverrouiller_ apparaîtra dans le panneau __Actions__.
 Cliquez sur ce lien pour déverrouiller le Projet et ses Niveaux. 
 
 
-image::images/mono_06.png[,916,507] 
+image::mono_06.png[,916,507] 
 
 Suite à cela, l'icône _Verrouillé_ devant les Niveaux disparaîtra.
 Le projet n'est plus verrouillé.
@@ -975,7 +975,7 @@ de niveau > Aperçu des Requêtes de niveau_ dans le menu principal.
 L'aperçu suivant s'affichera: 
 
 
-image::images/mono_07.png[,915,407] 
+image::mono_07.png[,915,407] 
 
 Sélectionnez l'OID (4) de la Requête de Niveau pour afficher la fenêtre des _Informations détaillées_ sur laquelle vous pouvez vérifier ce qui s'est passé pendant l'exécution de la Requête de niveau de Construction.
 
@@ -984,7 +984,7 @@ Sélectionnez l'onglet _Journaux
 de Phase_ pour vérifier ce qui s'est passé pendant la Requête de Niveau. 
 
 
-image::images/mono_08.png[,915,480] 
+image::mono_08.png[,915,480] 
 
 Cet onglet affiche les Journaux des Phases de Niveau, les actions de Construction et de Déploiement et leurs Phases de construction et de déploiement exécutées lors de l'exécution de la Requête de niveau.
 Il fournit également des informations plus détaillées concernant les Paramètres utilisés.
@@ -999,7 +999,7 @@ Cela affichera le journal d'exécution.
 Vous verrez que certaines actions de compilation ont réussi donnant lieu à la création du fichier __Monocalendar.exe__. 
 
 
-image::images/mono_09.png[,796,668] 
+image::mono_09.png[,796,668] 
 
 
 ==== Délivrer la Construction vers le Niveau TEST
@@ -1010,12 +1010,12 @@ Maintenant nous allons délivrer la Construction vers les Niveaux suivants (TEST
 Sélectionnez _Bureau_ dans le Menu Principal. 
 
 
-image::images/mono_10.png[,906,254] 
+image::mono_10.png[,906,254] 
 
-Cliquez sur l'icône _Délivrer_ image:images/icons/icon_deliverBuild.png[,15,15] à droite du Niveau __Monocalendar 1-0 TEST__. 
+Cliquez sur l'icône _Délivrer_ image:icons/icon_deliverBuild.png[,15,15] à droite du Niveau __Monocalendar 1-0 TEST__. 
 
 
-image::images/mono_11.png[,551,413] 
+image::mono_11.png[,551,413] 
 
 Dans l'écran __Créer des Requêtes de niveau__, saisissez une description et sélectionnez la Construction (1) en cliquant sur la rangée contenant la Construction concernée.
 
@@ -1029,21 +1029,21 @@ Cliquez sur le bouton __Créer__.
 L'écran _Bureau_ s`'affichera.
 Une Requête de niveau pour délivrer la Construction est créée pour le Niveau TEST de votre Projet. 
 
-Le statut de la Requête de niveau est établi à _En attente de l`'heure d`'exécution_ (image:images/icons/waiting_datetime.gif[,15,15]) jusqu'à ce qu'elle ne soit traitée par le Serveur IKAN ALM.
-Ensuite, le statut sera modifié en _Exécution_ (image:images/icons/run.gif[,15,15]). 
+Le statut de la Requête de niveau est établi à _En attente de l`'heure d`'exécution_ (image:icons/waiting_datetime.gif[,15,15]) jusqu'à ce qu'elle ne soit traitée par le Serveur IKAN ALM.
+Ensuite, le statut sera modifié en _Exécution_ (image:icons/run.gif[,15,15]). 
 
 Dans l`'__Aperçu du Bureau__, cliquez sur le lien _Dernière Requête de niveau_ pour le Niveau de Test.
 
 
-image::images/mono_12.png[,922,326] 
+image::mono_12.png[,922,326] 
 
 L`'écran _Informations détaillées_ s`'affichera.
 
 Cliquez sur le lien _Actualiser_ ou activez la fonction _Actualisation automatique_ dans le sous-menu.
-Finalement, la Requête de niveau devrait se terminer avec le statut _Réussie_ (image:images/icons/succes.gif[,15,15]).
+Finalement, la Requête de niveau devrait se terminer avec le statut _Réussie_ (image:icons/succes.gif[,15,15]).
 
 
-image::images/mono_13.png[,907,262] 
+image::mono_13.png[,907,262] 
 
 
 ===== Quel est le résultat de cette action de déploiementvers le Niveau TEST? 
@@ -1057,7 +1057,7 @@ Il s'agit du répertoire ``ALM_HOME/environments\Monocalendar\testdeploy\target 
 Vous pouvez afficher le résultat de la Construction en sélectionnant l'onglet "Résultats" sur la page des Informations détaillées: 
 
 
-image::images/mono_14.png[,730,543] 
+image::mono_14.png[,730,543] 
 
 
 ==== Délivrer la Construction vers le Niveau PRODUCTION 
@@ -1068,9 +1068,9 @@ Une autre méthode consiste à sélectionner _Requêtes
 de niveau > Créer une Requête de niveau_ dans le sous-menu. 
 
 
-image::images/mono_15.png[,938,264] 
+image::mono_15.png[,938,264] 
 
-Cliquez sur l'icône _Délivrer_ image:images/icons/icon_deliverBuild.png[,15,15]  à droite du Niveau Monocalendar H_1-0 PRODUCTION. 
+Cliquez sur l'icône _Délivrer_ image:icons/icon_deliverBuild.png[,15,15]  à droite du Niveau Monocalendar H_1-0 PRODUCTION. 
 
 Saisissez une description, comme vous l'avez fait pour la création de la Requête de niveau pour le Niveau TEST, et sélectionnez le Numéro de construction __1__.
 Si vous laissez le champ _Exécution demandée_ vide, la Requête de niveau pour délivrer la Construction sera exécutée immédiatement.
@@ -1080,17 +1080,17 @@ Cliquez sur le bouton __Créer__.
 L'écran _Informations détaillées_ s'affichera.
 
 
-image::images/mono_16.png[,965,615] 
+image::mono_16.png[,965,615] 
 
 Une nouvelle Requête de niveau sera créée, avec le statut _En
-attente de pré-approbation_ (image:images/icons/waiting_approval.gif[,15,15] ). Comme une Pré-approbation est associée au Niveau PRODUCTION, un message de notification sera envoyé à tous les membres du Groupe d`'utilisateurs __ALM
+attente de pré-approbation_ (image:icons/waiting_approval.gif[,15,15] ). Comme une Pré-approbation est associée au Niveau PRODUCTION, un message de notification sera envoyé à tous les membres du Groupe d`'utilisateurs __ALM
 User__. 
 
 Le statut de la nouvelle Requête de niveau restera établie à _En attente de pré-approbation_ tant que l'approbation ne sera pas accordée.
-Comme l'Utilisateur "global" fait partie du Groupe d`'utilisateurs __ALM User__, sélectionnez _Approbations > Approbations en attente_ dans le menu principal et cliquez sur le bouton _Approuver_ image:images/icons/approve.gif[,15,15] . 
+Comme l'Utilisateur "global" fait partie du Groupe d`'utilisateurs __ALM User__, sélectionnez _Approbations > Approbations en attente_ dans le menu principal et cliquez sur le bouton _Approuver_ image:icons/approve.gif[,15,15] . 
 
 
-image::images/mono_17.png[,747,581] 
+image::mono_17.png[,747,581] 
 
 Saisissez une description pour l'Approbation et cliquez sur le bouton _Approuver_
 
@@ -1099,14 +1099,14 @@ Maintenant, la Requête de niveau sera traitée par le Serveur IKAN ALM.
 Retournez à l`'__Aperçu du
 Bureau__ en sélectionnant _Bureau_ dans le menu principal.
 
-Le statut de la Requête de niveau est établi à _En attente de l`'heure d`'exécution_ (image:images/icons/waiting_datetime.gif[,15,15] ) jusqu'à ce qu'elle ne soit traitée par le Serveur IKAN ALM.
-Ensuite, le statut sera modifié en _Exécution_ (image:images/icons/run.gif[,15,15] ). 
+Le statut de la Requête de niveau est établi à _En attente de l`'heure d`'exécution_ (image:icons/waiting_datetime.gif[,15,15] ) jusqu'à ce qu'elle ne soit traitée par le Serveur IKAN ALM.
+Ensuite, le statut sera modifié en _Exécution_ (image:icons/run.gif[,15,15] ). 
 
 
-image::images/mono_18.png[,981,308] 
+image::mono_18.png[,981,308] 
 
 Cliquez sur le lien _Actualiser_ ou activez la fonction _Actualisation automatique_ dans le sous-menu.
-Finalement, la Requête de niveau devrait se terminer avec le statut _Réussie_ (image:images/icons/succes.gif[,15,15]).
+Finalement, la Requête de niveau devrait se terminer avec le statut _Réussie_ (image:icons/succes.gif[,15,15]).
 
 [NOTE]
 ====
@@ -1120,7 +1120,7 @@ Dans le projet Monocalendar, le Niveau de Production inclut une action de déplo
 L'application Monocalendar sera installée et démarrée, il en résulte:
 
 
-image::images/aboutmonocalendar.png[,835,459] 
+image::aboutmonocalendar.png[,835,459] 
 
 
 [[_cegcgjif]]
@@ -1154,15 +1154,15 @@ fonctionnalités__, sélectionnez l'entrée _IKAN
 ALM 5.8_ et cliquez sur __Désinstaller/Modifier__.
 . Sélectionnez l'option _Forcer la suppression de ..._ pour supprimer tous les fichiers associés à l'application Démo. Sinon, les fichiers modifiés depuis l'installation seront sauvegardés.
 +
-image::images/uninstalldemo.png[,372,247] 
+image::uninstalldemo.png[,372,247] 
 +
 . Pendant la désinstallation, la fenêtre suivante s'affichera vous demandant si vous voulez désinstaller la clé de licence:
 +
-image::images/uninstalldemo_license.png[,343,174] 
+image::uninstalldemo_license.png[,343,174] 
 +
 Attendez la fin de la désinstallation et, ensuite, cliquez sur le bouton _Quitter_ pour arrêter le désinstalleur:
 +
-image::images/uninstalldemo_quit.png[,263,179] 
+image::uninstalldemo_quit.png[,263,179] 
 
 
 :sectnums!:
@@ -1229,7 +1229,7 @@ Par exemple: Ajouter un Utilisateur avec comme identifiant Utilisateur "testuser
 Project_
 
 
-image::images/hashcalc.png[,527,534] 
+image::hashcalc.png[,527,534] 
 
 
 . Ajoutez l'entrée suivante au fichier __passwd.config__:
@@ -1255,7 +1255,7 @@ User:ALM Project
 === MSVCR71.dll was not found
 
 
-image::images/msvcr71notfound.png[,502,172] 
+image::msvcr71notfound.png[,502,172] 
 
 L'installateur de l'application IKAN ALM Démo ne parvient pas à localiser le fichier suivant: __MSVCR71.dll__.
 Vous trouverez plus d'informations sur ce sujet sur http://www.duckware.com/tech/java6msvcr71.html[
@@ -1266,15 +1266,15 @@ Sun propose de résoudre le problème en copiant le fichier msvcr71.dll du répe
 === Le navigateur Web ne peut pas afficher la page Web
 
 
-image::images/ie_cannotdisplay.png[,461,72] 
+image::ie_cannotdisplay.png[,461,72] 
 
 
 
-image::images/pagenotdisplayed.png[,326,50] 
+image::pagenotdisplayed.png[,326,50] 
 
 
 
-image::images/failedtoconnect.png[,630,359] 
+image::failedtoconnect.png[,630,359] 
 
 Cause: Le Serveur IKAN ALM Démo n'est pas en cours d`'exécution.
 
@@ -1294,7 +1294,7 @@ Si vous voulez étendre la période d'essai, vous devez demander une nouvelle li
 Si vous lancez l'installateur IKAN ALM Démo 32 bits ou 64 bits, le message d'erreur suivant pourrait s'afficher, après lequel l'installateur IKAN ALM Démo s'arrête.
 
 
-image::images/JRE_NotFound.png[,435,229] 
+image::JRE_NotFound.png[,435,229] 
 
 La cause la plus probable est qu'aucun environnement Java Runtime (JRE) approprié n'est installé.
 L'installateur 32 bits nécessite un JRE 32 bits, tandis que l'installateur 64 bits nécessite un JRE 64 bits.
