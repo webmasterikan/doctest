@@ -24,13 +24,9 @@ It is generally not recommended to change any of the other properties in the _ka
 
 For more information on the configuration file, refer to: 
 
-http://yajsw.sourceforge.net/YAJSW%20Configuration%20Parameters.html[
+http://yajsw.sourceforge.net/YAJSW%20Configuration%20Parameters.html[http://yajsw.sourceforge.net/YAJSW%20Configuration%20Parameters.html]
 
-http://yajsw.sourceforge.net/YAJSW%20Configuration%20Parameters.html]
-
-http://karaf.apache.org/manual/latest-2.x/users-guide/wrapper.html[
-
-http://karaf.apache.org/manual/latest-2.x/users-guide/wrapper.html]
+http://karaf.apache.org/manual/latest-2.x/users-guide/wrapper.html[http://karaf.apache.org/manual/latest-2.x/users-guide/wrapper.html]
 ====
 
 :sectnums:
