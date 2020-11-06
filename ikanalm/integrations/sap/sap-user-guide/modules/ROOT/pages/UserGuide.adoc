@@ -1,0 +1,304 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+:description: SAP Intergration User Guide
+:revnumber: v1.0
+:revdate: 01.05.2012
+
+= SAP Integration User Guide
+
+== ABAP Part for developers
+
+In this chapter, we will show you how to use the Application Lifecycle Management system for saving and versioning your source code in few easy steps.
+
+
+. In the SAP GUI, enter the transaction ``/n/IKANALM/COMMIT``.
++
+image::image001.png[,449,303] 
++
+The IKAN ALM program will be displayed.
+You will us this program to organize your developments.
+The entire process is carried out in one place, including all commit, update, delete and other related actions.
++
+image::image002.jpg[,661,493] 
++
+. Enter the required information
++
+To start working with the SVN Repository, you must enter the following information:
+
+** Project name: This field will automatically be filled up with all available IKAN ALM Projects. Choose the Project to commit to.
++
+image::image003.jpg[,643,172] 
++
+SVN branches:
++
+If the selected project uses branches, you will  immediately notice the drop-down box which allows you to choose the branch you want to work on.
++
+In our example, the project "`HP-ALM`" has only one branch, i.e.,"`WEBPAD/branches/REL_2011`". You can use it or use the trunk.
+Select what you need.
+** User name (SVN user name)
+** Password (SVN password)
++
+The program can run without a connection to IKAM ALM.
++
+To use the same functionality, you only need the SVN repository URL.
+Therefore, you must maintain the table "`/IKANALM/CUST`", the key IKANALM should have an empty value.
++
+If the value = '`X`' , you can choose a project from the drop-down menu.
+. Select the User.
++
+If your User exists in this table, you can select it and use it. 
++
+image::image004.png[,399,290] 
++
+. Check your SVN repository by clicking the _Check SVN Repository_ button.
++
+image::image005.png[,193,40] 
++
+The following information is displayed:
++
+image::image006.jpg[,624,425] 
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Color
+| Explanation
+
+
+|Green
+|Objects in green with status "`OK`" exist in the SAP Workbench and have the same version and source code.
+
+|Orange
+|Objects in orange with status "`MODIFIED`" have been modified and committed to the SVN repository and exist in your SAP Workbench, but with a different source version.
+
+|Red
+|Objects in red with status "`DELETED`" exist in the SVN repository, but do not exist in the SAP Workbench.
+|===
+
+. To commit new objects to SVN, select _PLUGIN_ and click the _Select object_ button.
++
+
+.. Search and select the objects one by one while holding down the _CTRL_ key, then click _Accept_ (or press __Enter__). The new objects are marked in blue with status "`NEW`", but they have not been committed yet. 
++
+image::image007.jpg[,629,248] 
++
+.. To commit , click the _Commit_ button at the bottom of the screen. The following screen will be displayed:
++
+image::image008.jpg[,645,392] 
++
+You can commit all objects on this screen or just some of them.
+Only selected objects will be committed to the SVN repository.
++
+In this case we only marked "`PROG Z_FIRST_PROGRAM`", because we made a mistake on the previous screen and we want to commit only this program.
+If, in this example, you would have marked "`PROG ZCALC1`", it would have been deleted from SVN Repository.
++
+The other functionality that we can use is to commit modified objects.
+In this case, objects on your SAP workbench will be updated in the SVN Repository. 
++
+Further down on the screen, you will find an  SVN comment input box where you must enter SVN comment.
+.. Enter an SVN comment and click the _Commit_ button.
++
+Next, the SVN log will be displayed showing every change on this repository.
++
+__Note:__ Each time you want to check the log, you should click the _Show log_ button.
+.. Check the SVN log
++
+On the log, the author, date, message and revision are displayed.
++
+image::image009.jpg[,637,383] 
++
+This information will be useful in the following example.
++
+*Example - Revert functionality*
++
+If you made a mistake and committed a defective source, or if you want to use a previous version of the code, you can use the "`Revert`" functionality.
++
+image::image010.jpg[,464,330] 
++
+From the text box, you can click the _Help_ button.
+A pop-up window will be displayed showing only the message and revision number: this is for your convenience,  the information is exactly the same as the information on the "`log window`". 
++
+image::image011.jpg[,536,345] 
++
+Next, select the revision that you want to revert and click the _Status_ button.
++
+The program now compares the current ABAP source code with the selected revision to revert.
+In our case, this is  version 12.
+As you will notice, the program "`ZCALC1`" is marked with status "`NEW`". On the previous screen, when we executed "`Checkout`", "`ZCALC1`" is marked with status "`DELETED`", this means that in revision 12, "`ZCALC1`" exists, but in the current ABAP workbench it does not.
+So the program informs about this situation.
++
+Now there are two options:
++
+* you can mark this program and revert. The program will import "`ZCALC1`" and it will appear again in the system, or
+* you can skip the revert process for this object.
++
+Program "`Z_NEW_PROGRAM`" has the status "`OK`", so it is identical to version 12 – no difference.
++
+Program "`Z_FIRST_PROGRAM`" has the status "`MODIFIED`", so they exist in ABAP workbench and in SVN repository, but there are some differences.
++
+When you have decided which objects must be reverted, select them and click the _Revert_ button.
+
+
+== JAVA Part for Developers
+
+Java developers who work with SAP system will use _Sap
+Netweaver Developer Studio 7.0x_ for their developments.
+
+To use an SVN repository, they must install an SVN Plugin to work with Subversion.
+We recommend _Subversion Subclipse
+0.9x_ which is free, very flexible and user-friendly. 
+
+=== Adding the Subclipse Plugin to Eclipse
+
+You can add the Subclipse plugin to Eclipse by creating an update site in Eclipse and download and install Subclipse.
+
+
+. Create an update site for Subclipse
+
+. Select _Help > Software Updates > Find_ and click __Install__.
+
+. Select _Search for new feature to install_ and click __Next__.
+
+. Click the _New Remote Site_ button.
+
+. Give the update site a name, for example ``Subclipse``, and enter the following address: ``http://subclipse.tigris.org/``.
+
+. Click __OK__.
++
+The new update site will be added to the list.
+
+. Press the _\+_ next to your Subclipse update site.
++
+Eclipse will connect with the site and will list all of the updates available.
+
+. Select the most recent Subclipse update by checking the box next to the update and click __Next__.
+
+. Check the Subversion feature that you want to install and click __Next__.
+
+. Accept the terms of the license agreement and click __Next__.
+
+. Make sure that the Subversion feature is selected and click __Finish__.
++
+You will be asked to verify the feature that you wish to install.
+Next, click __Install__.
+
+. You will now be asked to restart the Workbench. Click __Yes__.
+
+
+=== Subclipse Perspectives 
+
+To change to the Subclipse perspective select __Window
+> Open Perspective >Other ... > SVN Repository Exploring__.
+
+The SVN Repository Exploring provides three new views:
+
+* SVN Repository
++
+The _SVN Repository_ view lists all current repositories you have access to.
+You can also create a new SVN Repository. 
+* SVN Annotate
++
+The _SVN Annotate_ view shows the annotations of a file in the repository.
+In order to view the annotations of a file, you must right-click on the file and select __Team
+> Show Annotations__. 
+* SVN Resource History
++
+The _SVN Resource History_ shows the revision history for a file that is selected in the SVN Repository view.
+
+
+=== Adding a New Repository
+
+
+. Right-click in the SVN Repository view and select __New > SVN Repository__.
++
+
+[NOTE]
+====
+You can also click the _add repository_ button in the toolbar of the SVN Repository view.
+====
+
+. Enter the URL for the repository.
+
+. Enter you User ID and Password.
+
+. Click __Finish__.
++
+The newly created repository will be displayed in the SVN Repository view.
+
+
+=== Checking In: Adding an Existing Project to the Repository
+
+
+. Switch to the Java perspective or Plugin perspective where your project is located.
+
+. Add the project to the repository
++
+To add a project to the repository, right-click the project and select _Team > Share Project ..._
+
+. Select _SVN_ from the list of repository types and click __Next__.
++
+If the project had not been shared previously, Eclipse will ask if you would like to create a new repository to share the project in, or if you would like to use an already existing repository to share the project in.
+Choose the repository that you have already created for your project and click __Next__.
+
+. Select the module name
++
+Select the radio button _Use project name as
+module name_ and click __Next__.
++
+
+[NOTE]
+====
+You can choose to have other module names if you are afraid of name space conflicts.
+====
+
+. Click __Finish__.
++
+If the project has been shared previously, Eclipse will ask if you wish toe establish a connection.
+Click __Finish__.
+
+
+=== Checking Out a Project from the Repository
+
+
+. Switch to the SVN Repository Exploring perspective.
+
+. Click the + sign next to your repository.
+
+. To check out a project right-click on any folder/project and select __Check Out as Project__.
++
+If the project that you are checking out already exists in the workspace, the old project will be destroyed and the project from the SVN repository will be created in its place.
++
+Otherwise, a new project will be created in the workspace.
+
+. Switch back to the Java or Plugin Development perspective to modify the code.
+
+
+=== Sample screenshots
+
+This section provides some screenshots from Sap Netweaver Developer Studio to show you how to work with Subclipse.
+
+
+image::image012.png[,624,400] 
+
+
+. In Java Perspective, right-click the project and select __DTR >Show pending operations__.
++
+In the SVN Operation window, nothing is shown as no changes have been made yet.
+
+. Go to the Web DynPro Perspective and make some changes.
++
+If you repeat the same action, you can already see the modified sources which will be ready to commit.
++
+image::image013.png[,625,172] 
++
+. Right-click the project again and select __DTR > Commit project__.
++
+SVN selects all objects that have been changed and opens a pop-up window to add a commit comment.
++
+image::image014.png[,633,398] 
++
+. Add the comment and click __OK__.
++
+The _SVN Console_ panel will display all SVN logs.
++
+image::image015.png[,628,198] 

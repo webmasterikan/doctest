@@ -1,0 +1,463 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+:description: SAP Integration Technical Documentation
+:revnumber: v1.0
+:revdate: 01.05.2012
+
+= SAP Integration Technical Documentation
+
+== Pre-requirements
+
+The following needs to be installed to ensure the integration of IKAN ALM with SAP:
+
+* IKAN ALM
+* ANT
+* SVN
+* If there are any Java developments, Netweaver development studio 7.0 xs with Java 1.4.2 must be installed on the server side
+* SAP systems:
+** ABAP stack and/or Java stack (Netweaver 7.0/7.01)
+** TMS configured
+** CTS+ configured (optional)
+* Connectivity.
+** SVN
+** IKAN ALM ABAP SVN tool
+
++
+SVN in the ABAP stack is a multilayer application.
+It consists of:
+** SVN client – this client is a Java-based web service installed on the Web Application Server (the same server on which IKAN ALM is installed)
+** ABAP web service consumer – this is a web service consumer in the ABAP stack which can call the SVN client web service
+** ABAP commit program – program in the ABAP stack which calls the ABAP web service consumer
+** IKAN ALM SAP Communication
+** IKAN ALM uses RFCs (Remote function calls and BAPI calls) to connect to SAP systems
+
+
+== IKAN ALM ABAP framework 
+
+In the ABAP stack, there is a set of custom-made developments which extracts all types of development objects to an xml-like universal format.
+The ABAP development object is taken from the SAP database with all its relevant parameters and is packed as xml structure.
+This structure can be saved as a file, or can be passed to a web service for commitment to an SVN server. 
+
+All developments are stored in one package named _/IKANALM/IAAF_ (IKAN ALM ABAP functionalities)
+
+There are three core objects in the framework:
+
+* /IKANALM/DOFC (/IKANALM/DOFC development object file content) – program
++
+The program /IKANALM/DOFC is able to export and import all types of development objects to and from the local computer, with a suitable user interface.
+It is a program intended for testing purposes.
+* /IKANALM/COMMIT_TOOL – program
++
+The program /IKANALM/COMMIT_TOOL allows developers to work with SVN.
+They connect to the SVN repository via Web services which open a new session for every new client with their SVN path, user name and password.
+The program saves their login parameters for future use.
+Developers are able to commit their sources and to check the SVN repository to compare their sources.
+* /IKANALM/DOFC (/IKANALM/DOFC development object file content) – abstract class
++
+The /IKANALM/DOFC abstract class is the core class containing all functionality needed to export and import development objects in xml-like content format.
+This class is the parent class for all classes that implement different types of development objects.
+This class gives the functionality to read and write xml structures.
+All development objects must be read successfully from the database, with all their parameters (the package they belong to, the name and description, etc.). This information must be structured in a suitable and readable style.
+Moreover, it must be stored as a file and, next, be successfully read and recreated on the same or on another system.
++
+Every successor of the /IKANALM/DOFC class is implementing one development object, because every development object has its own unique parameters that are needed for its recreation.
++
+The convention for successor classes is: /IKANALM/DOFC <name of a development object> (ex.: /IKANALM/DOFC_CLASS or /IKANALM/DOFC_BSP).
+
+
+Below you will find the list of implemented development objects.
+All these types of development objects can be exported and imported in an ABAP stack.
+
+* BSP (Business Server Pages) 
+* CLASS
+* Data element
+* Domain
+* Function group
+* Index
+* Interface
+* Lock object
+* Message class
+* PDF Interface 
+* PDF Form
+* Data Dictionary - Search Help
+* Smart form
+* Smart Style
+* Table
+* Table type
+* Transaction
+* Views
+
+
+There are three function groups:
+
+* /IKANALM/DEV_OBJECTS – all function modules related to exporting and importing development objects (activating objects, assigning to dev class, etc.).
+* /IKANALM/TR_REQ – all function modules related to transport requests (creating, releasing, importing transport requests, etc.)
+* /IKANALM/SVN_COMMANDS – all function modules related to SVN (commit, delete and update)
+
+
+an one transaction:
+
+* /n/IKANALM/COMMIT– transaction which calls the program for committing ABAP development objects.
+
+
+ANT tasks are available for uploading and activating ABAP developments, creating transport request, inserting development objects, releasing and importing transport request.
+
+== IKAN ALM Java framework
+
+As for other projects, the sources of SAP Java projects are kept in the SVN repository.
+The only difference lays in the way they are built and deployed. 
+
+=== Building Java projects
+
+The building procedure depends on the type of the project – is it a portal application, is it a DC or not. 
+
+Ant tasks have been created for building portal applications and DC.
+
+=== Deploying Java projects
+
+The deploy is done in two ways: by SDM and by web service.
+DC components are deployed with SDM, portal applications are deployed via web service.
+
+== ANT tasks
+
+=== Java
+
+==== be.ikan.alm.sap.anttasks.CreateParArchiveTask
+
+Creates a portal application archive.
+
+===== Parameters
+
+[cols="1,1", frame="all"]
+|===
+
+|projFolder
+|Project root folder
+
+|projSrcCoreFolder
+|Project src.core folder
+
+|projSrcApiFolder
+|Project src.api folder
+
+|projClassFolder
+|Folder where classes will be compiled
+
+|projName
+|Project name
+|===
+
+==== be.ikan.alm.sap.anttasks.DeployParFile
+
+Deploys a portal application archive on a Netweaver portal.
+
+===== Parameters
+
+[cols="1,1", frame="all"]
+|===
+
+|Host
+|Host name of Netweaver server
+
+|Port
+|Port number (5<instance number>00)
+
+|User
+|User with rights to deploy Java developments
+
+|Password
+|User password
+
+|parFileName
+|Path to the portal application archive
+
+|deleteMode
+|A portal application will be deleted before it is deployed, and this parameter configures the behavior of the Ant task:
+
+"`none`" – deploy without deletion
+
+"`try`" – it tries to delete the portal application, but in either case it tries to deploy the portal application;
+
+"`fail`" – if there is an error when deleting the old application, this mode throws an exception
+|===
+
+==== be.ikan.alm.sap.anttasks.ParseClasspathAndCompileSourcesTask
+
+Parses the .classpath file from a project, gets all the libraries paths from there, and compiles the sources.
+
+[cols="1,1", frame="all"]
+|===
+
+|classPathLoc
+|Full path to the .classpath file
+
+|eclipsePropertiesLoc
+|Path to the properties file
+
+_Note:_ This file must contain key=value pairs.
+The key=value pairs must set all classpath variables that are defined in the Eclipse installation. 
+
+Ex.: content of eclipseProperties.properties
+
+ECLIPSE_HOME=E:/program files/SAP/IDE/IDE70/eclipse/
+
+WD_RUNTIME=E:/program files/SAP/IDE/IDE70/eclipse/plugins/
+|===
+
+=== ABAP
+
+==== be.ikan.alm.sap.anttasks.UploadAndActivateObject
+
+Gets all .abap files from the root folder and all its subfolders, uploads all of them to the server and, after that, activates the objects.
+
+[cols="1,1", frame="all"]
+|===
+
+|sourceProjectFolder
+|ABAP project root folder
+
+|targetProjectFolder
+|Folder where all .abap files will be copied to
+
+|serverName
+|Host name of the server where the ABAP stack is located
+
+|sysNumber
+|System number (e.g., 00)
+
+|clientNumber
+|Client (e.g., 200)
+
+|username
+|User name
+
+|pass
+|Password
+
+|lang
+|Language
+|===
+
+==== be.ikan.alm.sap.anttasks.CreateTransportRequestTask
+
+Creates and imports objects, and releases transport requests.
+
+[cols="1,1", frame="all"]
+|===
+
+|projectFolder
+|ABAP project root folder
+
+|serverName
+|Host name of the server where the ABAP stack is located
+
+|sysNumber
+|System number (e.g., 00)
+
+|clientNumber
+|Client number (e.g.,200)
+
+|username
+|User name
+
+|pass
+|Password
+
+|lang
+|Language
+|===
+
+==== be.ikan.alm.sap.anttasks.ImportRequestTask
+
+Imports a given transport request into the target system.
+
+[cols="1,1", frame="all"]
+|===
+
+|reqID
+|Transport request ID
+
+|serverName
+|Host name of the server where the ABAP stack is located
+
+|sysNumber
+|System number (e.g., 00)
+
+|systemID
+|System ID (e.g., ESD)
+
+|clientNumber
+|Client number (e.g., 200)
+
+|username
+|User name
+
+|pass
+|Password
+
+|lang
+|Language
+|===
+
+==== be.ikan.alm.sap.anttasks.InsertNonAbapInTransportRequestTask
+
+Inserts non-ABAP objects in the transport request (such as EAR or PAR - Java project archives).
+
+[cols="1,1", frame="all"]
+|===
+
+|projectFolder
+|ABAP project root folder
+
+|serverName
+|Host name of the server where ABAP stack is located
+
+|sysNumber
+|System number (e.g., 00)
+
+|clientNumber
+|Client number (e.g., 200)
+
+|username
+|User name
+
+|pass
+|Password
+
+|lang
+|Language
+
+|reqID
+|Transport request ID
+|===
+
+==== be.ikan.alm.sap.anttasks.NetweaverDeploymentTool
+
+Deploys an Enterprise Application Project file to the J2EE engine.
+
+[cols="1,1", frame="all"]
+|===
+
+|Host
+|Host name of Netweaver server
+
+|Port
+|Port number (5<instance number>00)
+
+|User
+|User with rights to deploy java developments
+
+|Password
+|Password
+
+|earFile
+|Path to the enterprise application project
+|===
+
+==== be.ikan.alm.sap.anttasks.ReleaseTransportRequestTask
+
+Releases a Transport Request.
+
+[cols="1,1", frame="all"]
+|===
+
+|projectFolder
+|ABAP project root folder
+
+|serverName
+|Host name of the server where the ABAP stack is located
+
+|sysNumber
+|System number (e.g.,00)
+
+|clientNumber
+|Client number (e.g., 200)
+
+|username
+|User name
+
+|pass
+|Password
+
+|lang
+|Language
+
+|reqID
+|Transport request ID
+|===
+
+== IKAN ALM Development Lifecycle withSAP project
+
+There are two types of configuration available: with or without CTS+ being configured (or available). In these different cases, the ABAP development will be transported to the corresponding target system through a transport request.
+No difference will be experienced by the ABAP developments, the difference sits in Java.
+
+* CTS+ is configured  – all developments (ABAP and Java) will be transported to the dual-stack system with only one request. Java objects will be imported in the same request, and the import of this request will automatically trigger the deployment of Java archives stored in the transport request.
+* CTS+ is not configured (or available) – After the building process, Java project archives will not be stored and transported with the transport requests. Java archives will be deployed on the target server by a custom deployment procedure, simultaneously with the import of the transport request.
+
+
+As an example, we will use a simple configuration with only one project.
+There are 3 servers: development, QA and production.
+Every project, which is either Java, ABAP or mixed, has 3 corresponding levels: build, test and production.
+
+=== Build Level
+
+==== In the build environment
+
+* In case the project has ABAP sources:
++
+Create a build environment which will get the ABAP sources from SVN, will import them in the SAP development system and will activate them.
+After that, it will create a transport request, include all development objects in the transport request and release the transport request.
+* In case the project has Java sources:
++
+Create a build environment which will get the Java project from SVN, will know what type of project this is (portal application, web dynpro, DC, 
+ .) and will start the corresponding build and pack procedure.
+
+
+==== In the deploy environment
+
+* In case the project has ABAP sources:
++
+There will be no deploy environment for the ABAP project.
+* In case the project has Java sources:
++
+Get the build archives from the build environment, insert them in the same transport request (only for configured CTS+) and deploy them on the server.
+
+
+=== Test Level
+
+A Test level only has a deploy environment(s). The transport request has been created in the build level, and now has to be imported on the test server. 
+
+==== In the deploy environment
+
+* In case the project has ABAP sources:
++
+The transport request is already released in the build level, it only needs to be imported.
+* In case the project has Java sources:
++
+All Java archives created in the build level`'s build environment are deployed on the server.
+(For configured CTS+: Java developments are contained in a transport request and will be automatically deployed when the request is imported).
+
+
+=== Production Level
+
+A Production level is the same as a Test level.
+
+Dependencies
+
+* To synchronize Java and ABAP developments (or any other type) you can create dependencies between two (or more) projects. The dependencies are created in the "`project stream dependency`" configuration in IKAN ALM. One project may have many dependencies. This project is the main project. All other projects can execute their levels separately, but only the main project can build and deploy itself and all dependent projects into one. That way we can assure that every time you are uploading the main project on a server, you will upload all connected projects with their right versions.
+* Users point of view
+** Java developer
++
+Java developers in SAP are using Netweaver Developer Studio.
+They will be able to commit their sources in SVN with their preferred SVN client.
+An Eclipse plugin, which will come with the installation of SAP integration package, can be installed by every java developer in Netweaver Developer Studio.
+The plugin is an SVN client and enables the developer to use all needed functionality from SVN.
+** ABAP developer
++
+ABAP developers are using ABAP workbench to write and manage their code.
+Also, for every type of development object there is a specific transaction code to edit only this type of objects.
+With the installation of the IKAN ALM integration, a new transaction is created to enable the ABAP developer to commit sources to the SVN repository.
+Note: Developers must know the path of their project, their user name and password, to be able to commit to SVN.
+* Release manager
++
+A Release manager in IKAN ALM can only work in an IKAN ALM environment.
