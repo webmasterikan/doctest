@@ -1,10 +1,10 @@
 // The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
 :imagesdir: ../images
-:description: Demo Installation Guide for Linux
+:description: Demo Installation Guide for Windows
 :revnumber: v5.8
 :revdate: 01.10.2016
 
-= Demo Installation Guide for Linux
+= Demo Installation Guide for Windows
 
 == Introduction
 
