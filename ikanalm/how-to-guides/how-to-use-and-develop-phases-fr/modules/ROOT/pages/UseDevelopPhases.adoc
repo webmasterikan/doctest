@@ -66,7 +66,7 @@ Initialement, après avoir installé une version IKAN ALM originale (dite "vanil
 Elles peuvent être vérifiées via __Administration globale > Phases > Aperçu__:
 
 
-image::images/Picture_01.png[,926,360] 
+image::Picture_01.png[,926,360] 
 
 
 === Les Phases de Noyau dans le flux de travail pardéfaut d'un Niveau de construction et d'un Environnement de construction
@@ -77,7 +77,7 @@ Après avoir créé ce Niveau, nous pouvons afficher le flux de travail par déf
 Phases_ dans la définition du Niveau.
 
 
-image::images/Picture_02.png[,750,203] 
+image::Picture_02.png[,750,203] 
 
 Comme mentionné auparavant, les Phases de Noyau exécutent les actions de base pour un Niveau de construction sur le serveur IKAN ALM: récupérer les sources à partir du système de contrôle des versions, démarrer et faire le suivi de la Construction sur l'Environnement de construction, baliser les sources dans le système de contrôle des versions, vérifier les commentaires de validation pour les Incidents et les associer à la Requête de niveau, et nettoyer l'Emplacement des Copies de travail.
 
@@ -89,7 +89,7 @@ Nous avons optimisé le flux de travail en retirant la Phase de Déploiement vu 
 Maintenant, examinons le flux de travail de l'Environnement de construction (en sélectionnant _Éditer les Phases_ dans la définition de l'Environnement de Construction):
 
 
-image::images/Picture_03.png[,731,300] 
+image::Picture_03.png[,731,300] 
 
 Ici aussi les différentes Phase de Noyau exécutent les actions de base, mais cette fois-ci sur l'Environnement de construction qui est exécuté sur l'Agent IKAN ALM et qui peut être sur une autre machine que celle du Serveur IKAN ALM.
 
@@ -101,7 +101,7 @@ Au bout du compte, dans un tel cas, vous pouvez vous retrouver avec un script de
 === Améliorer le flux de travail du Niveau de Constructionet de l'Environnement de Construction en utilisant des Phases personnalisées
 
 
-image::images/Picture_04.png[,859,125] 
+image::Picture_04.png[,859,125] 
 
 Dans cet exemple, nous avons créé nos propres Phases personnalisées dans le Catalogue des Phases IKAN ALM.
 Il y une Phase qui compile les Sources, une autre qui exécute les tests d'unité et une troisième qui met en paquet le code compilé dans une entité à déployer (par exemple, un fichier war, exe ou dll).
@@ -109,7 +109,7 @@ Il y une Phase qui compile les Sources, une autre qui exécute les tests d'unit�
 Dans le chapitre suivant, nous décrirons comment vous pouvez créer ces Phases, mais d'abord nous expliquerons comment les appliquer.
 
 
-image::images/Picture_05.png[,717,370] 
+image::Picture_05.png[,717,370] 
 
 Dans le flux de travail de l'Environnement de Construction, la Phase __Exécution du script __a été retirée et remplacée par l'insertion de trois nouvelles Phases.
 Résultat: maintenant nous pouvons clairement voir quand une compilation échoue sans devoir analyser en détail le journal de construction.
@@ -123,7 +123,7 @@ si erreur_ de la Phase à __Non__), ce qui pourrait être utile dans un flux exp
 Chacune de ces Phases peut avoir son propre jeu de paramètres qui influencera le script sous-jacent et qui peut être différent en fonction de l'Environnement et du Projet, ce qui facilite la réutilisation de la Phase. 
 
 
-image::images/Picture_06.png[,763,223] 
+image::Picture_06.png[,763,223] 
 
 Les Phases personnalisées peuvent également être utilisées sur un Niveau, ce qui peut être très utile si vous voulez exécuter des actions spécifiques sur le serveur IKAN ALM.
 Dans notre exemple nous avons créé une Phase qui récupère des fichiers (par exemple, des composants "prêts à utiliser" ou des librairies, tels que des fichiers dll, jar, exe ou autres) à partir d'une Archive ou d'un Référentiel accessible à partir du Serveur IKAN ALM.
@@ -133,13 +133,13 @@ Dans notre exemple nous avons créé une Phase qui récupère des fichiers (par 
 Afin de montrer les nombreux avantages des Phases personnalisées, nous montrons également le flux de travail adapté sur le Niveau Test et son Environnement de déploiement.
 
 
-image::images/Picture_07.png[,736,186] 
+image::Picture_07.png[,736,186] 
 
 Les Phases _Démarrer/arrêter la Machine de Test
 virtuelle_ sur le Niveau Test interagissent avec la Machine du client virtuel sur le Serveur IKAN ALM pour démarrer/arrêter la Machine de Test sur laquelle s'effectuera le Déploiement et sur laquelle seront exécutés les tests automatisés.
 
 
-image::images/Picture_08.png[,717,302] 
+image::Picture_08.png[,717,302] 
 
 Sur l'Environnement de déploiement, les Phases personnalisées effectuent également le travail le plus important: la Phase _Mise
 à jour Base de données_ mettra à jour la Base de données si le script SQL est présent dans le Résultat de construction, la Phase _Deploiement sur le Serveur Web_ mettra à jour le serveur Web avec l'archive à déployer (dlls, war, fichiers config, ...) qui a été créée dans l'Archive de construction.
@@ -169,7 +169,7 @@ Nous prenons comme point de départ un script existant, créé selon les meilleu
 Vous trouverez la première version du script Ant _UpdateDB.xml_ qui se trouve dans la section <<_script_and_variables>>.
 
 
-image::images/Picture_09.png[,863,127] 
+image::Picture_09.png[,863,127] 
 
 Pour plus d'informations concernant le développement de scripts Ant, se référer au Manuel de Ant (voir http://ant.apache.org/manual/using.html#buildfile[http://ant.apache.org/manual/using.html#buildfile)].
 
@@ -186,7 +186,7 @@ Vérifie la Base de données choisie (MS SQL Server, MySQL, Oracle ou DB2).
 En fonction de la base de données choisie, une sous-cible est appelée pour établir les variables de connexion à la base de données (driver, URL). Ensuite, il vérifie si le script _update.sql_ existe dans le chemin indiqué et, finalement, il utilise la tâche SQL Ant (voir http://ant.apache.org/manual/Tasks/sql.html[http://ant.apache.org/manual/Tasks/sql.html]) pour exécuter le script SQL sur la base de données.
 Des messages _echo_ traceront des informations différentes lors de l'exécution de cette Cible.
 +
-image::images/Picture_10.png[,810,465] 
+image::Picture_10.png[,810,465] 
 
 Le script contient plusieurs variables (des propriétés Ant), tels que `${rdbms.type}` (le type de base de données, valeurs possibles: MYSQL, MSSQL, DB2 ou ORACLE) et d'autres variables de connexion de base de données, qui sont décrits dans l'appendice et qui doivent être fournis lors de l'exécution du script.
 Nous avons testé ce script avec un fichier de propriétés sur les bases de données supportées.
@@ -199,7 +199,7 @@ Assurez-vous que vous avez des droits d'Administration globale et sélectionnez 
 globale__.
 
 
-image::images/Picture_11.png[,633,588] 
+image::Picture_11.png[,633,588] 
 
 Fournissez les données nécessaires pour créer la nouvelle Phase personnalisée: le nom unique (de préférence un nom DNS inversé), la version (par exemple, major.minor.maintenance) et le nom d'affichage _Mise
 à jour Base de données_ (utilisé lors de l'insertion ou de l'affichage dans les informations détaillées d'une Requête de niveau).
@@ -215,12 +215,12 @@ de l'Utilisateur IKAN ALM__.
 Après avoir cliqué sur le bouton __Créer__, la Phase sera créée dans le Catalogue des Phases sur le Serveur IKAN ALM (à l'Emplacement du Catalogue des Phases tel que spécifié dans __Administration globale > Système > Paramètres système__): 
 
 
-image::images/Picture_12.png[,860,420] 
+image::Picture_12.png[,860,420] 
 
 Le fichier d'archive résultant (name-version.jar) contiendra le script et quelques métadonnées et sera automatiquement transporté vers l'environnement du Serveur ou de l'environnement d'exécution de l'Agent IKAN ALM après le traitement de la Requête de niveau (voir plus loin).
 
 Naviguez vers _Administration globale > Phases
-> Aperçu_ et sélectionnez le lien image:images/edit.gif[,24,24] _ Éditer_ devant la nouvelle Phase _Mise à jour Base de données_ pour pouvoir ajouter les paramètres requis.
+> Aperçu_ et sélectionnez le lien image:edit.gif[,24,24] _ Éditer_ devant la nouvelle Phase _Mise à jour Base de données_ pour pouvoir ajouter les paramètres requis.
 
 [NOTE]
 ====
@@ -234,7 +234,7 @@ Sa valeur par défaut peut être établie à un des Outils de script Ant qui son
 Créez les paramètres comme spécifiés dans l'Appendice (voir <<_script_and_variables>>) en sélectionnant le lien _Créer un Paramètre_ en-dessous de la fenêtre d'aperçu __Paramètres de phase__. 
 
 
-image::images/Picture_13.png[,1058,713] 
+image::Picture_13.png[,1058,713] 
 
 Tous les paramètres sont obligatoires, sauf les paramètres sql.script et rdbms.dbschema.
 Le paramètre sql.script est déjà défini dans le script.
@@ -261,7 +261,7 @@ Assurez-vous que vous avez des droits d'Administration des projets, naviguez ver
 Pour un Niveau, sélectionnez le lien _Éditer
 les Phases_ dans la fenêtre __Aperçu des Niveaux__.
 
-Pour un Environnement de construction/déploiement, cliquez sur le lien image:images/edit_phases.gif[,24,24] _ Éditer
+Pour un Environnement de construction/déploiement, cliquez sur le lien image:edit_phases.gif[,24,24] _ Éditer
 les Phases_ dans l'__Aperçu des Environnements
 de construction/déploiement__.
 ====
@@ -269,32 +269,32 @@ de construction/déploiement__.
 Ensuite, cliquez sur le lien _Insérer une Phase_ en bas de la fenêtre __Aperçu des Phases__:
 
 
-image::images/Picture_14.png[,861,449] 
+image::Picture_14.png[,861,449] 
 
 Dans ce document, nous supposons que la Phase est insérée dans un Environnement de déploiement.
 Sélectionnez la Phase _Mise
 à jour Base de données_ parmi les Phases disponibles, établissez l'attribut _Abandon si erreur_ à _Oui_ ou à __Non__, spécifiez sa Position d'insertion, indiquez quelle Phase devra être exécutée en cas d'échec et, finalement, cliquez sur le bouton __Insérer__:
 
 
-image::images/Picture_15.png[,935,678] 
+image::Picture_15.png[,935,678] 
 
 Dans l`'aperçu des Phases, sélectionnez le lien__ Voir
 les Paramètres__ à côté de la Phase _Mise à
 jour Base de données_ qui vient d'être insérée, pour pouvoir vérifier tous les paramètres de Phase que nous avons définis dans l'Administration globale:
 
 
-image::images/Picture_16.png[,722,520] 
+image::Picture_16.png[,722,520] 
 
 Tous les paramètres obligatoires sont automatiquement créés au moment où la Phase est insérée dans le flux de travail d'un Niveau ou d'un Environnement, et leurs valeurs sont copiées à partir des valeurs par défaut spécifiées dans l'Administration globale.
-Si vous voulez que cette Phase mette à jour une Base de données DB2, vous devez écraser les valeurs par défaut en cliquant sur le lien image:images/edit.gif[,24,24] _ Éditer
+Si vous voulez que cette Phase mette à jour une Base de données DB2, vous devez écraser les valeurs par défaut en cliquant sur le lien image:edit.gif[,24,24] _ Éditer
 le Paramètre_ à côté des paramètres.
 Cependant, les paramètres optionnels doivent être créés si vous voulez les fournir lors de l'exécution du script.
 Donc, pour mettre à jour une base de données DB2 il vous faut le paramètre optionnel rdbms.dbschema nécessaire à l'URL jdbc.
 
-Cliquez sur le lien image:images/icon_createparameter.png[,24,24] _ Créer
+Cliquez sur le lien image:icon_createparameter.png[,24,24] _ Créer
 un Paramètre_ à côté du paramètre requis.
 
-Utilisez le lien image:images/Phase_EditEnvPhaseParameter.png[,24,24] _ Éditer
+Utilisez le lien image:Phase_EditEnvPhaseParameter.png[,24,24] _ Éditer
 un Paramètre de phase global_ (uniquement disponible si vous avez des droits d'Administration globale) à côté du paramètre pour afficher la fenêtre _Éditer un Paramètre de phase_ dans l'Administration globale.
 Là, vous verrez que votre Phase est maintenant connectée à un Environnement de déploiement, et que vous pouvez retourner dans le contexte du Projet en cliquant sur le même icône de lien _Éditer
 un Paramètre de phase d'environnement._
@@ -307,7 +307,7 @@ Si vous avez ignoré l'astuce au début de cette section et que vous avez insér
 Parce que vous avez changé le flux de travail, vous devez sélectionner _Auditer le Projet_ à partir du menu _Administration des projets_ et cliquer sur le bouton _Déverrouiller_ avant de pouvoir créer une Requête de niveau.
 
 
-image::images/Picture_17.png[,787,77] 
+image::Picture_17.png[,787,77] 
 
 
 [[_cihgbijb]]
@@ -325,7 +325,7 @@ Le driver jdbc doit être présent dans le chemin de classe au moment de l'exéc
 Une manière de procéder est de le copier vers le répertoire ANT_Home/lib de l'installation Ant sur l'Agent IKAN ALM qui exécutera la Phase.
 
 
-image::images/Picture_18.png[,1058,406] 
+image::Picture_18.png[,1058,406] 
 
 Nous optimiserons la configuration de ce driver lorsque nous traitons le Cycle de vie de la Phase dans le chapitre suivant.
 Maintenant que le script _update.sql_ et le driver jdbc ont été correctement distribués, nous pouvons exécuter une Requête de niveau pour le Niveau qui contient l'Environnement de déploiement contenant notre Phase __Mise à jour Base
@@ -341,32 +341,32 @@ des déploiements_ dans l'Aperçu détaillé de la Requête de niveau). Là, vou
 à jour Base de données__.
 
 
-image::images/Picture_19.png[,889,586] 
+image::Picture_19.png[,889,586] 
 
 Vous reconnaîtrez les instructions cible et _echo_ comme mentionnées dans la section <<_babbfbeg>>.
 
 Cliquez sur le lien _Paramètres de la phase_ dans le journal de la Phases Mise à jour Base de données pour en afficher les propriétés:
 
 
-image::images/Picture_20.png[,900,309] 
+image::Picture_20.png[,900,309] 
 
 En plus de ces Paramètres de phase, le script peut également utiliser les Paramètres de Déploiement (affichés dans le panneau "Paramètres de Déploiement" près du sommet du Journal des "Actions de Déploiement"). Il s'agit là des Paramètres de déploiement prédéfinis (voir l'appendice à ce sujet dans le __Guide de l'Utilisateur IKAN ALM__) ainsi que des Paramètres d'Environnement de déploiement et des Paramètres de machine (optionnels). Si vous activez le flag de _Débogage_ pour l'Environnement de déploiement, vous pouvez vérifier les paramètres dans le fichier _alm_ant.properties_ qui contient toutes les propriétés disponibles que vous pouvez utiliser dans le script.
 Il se trouve dans le sous-répertoire de la Phase extraite sous le répertoire des sources de l'Environnement de déploiement.
 
 
-image::images/Picture_21.png[,982,321] 
+image::Picture_21.png[,982,321] 
 
 Dans ce répertoire vous trouverez également le script __UpdateDB.xml__.
 Avant l'exécution de toute Phase de déploiement, la _Mise
 à jour Base de données_ a été transportée automatiquement à partir de l'Emplacement du Catalogue des Phases sur le Serveur IKAN ALM et installée dans l'Agent IKAN ALM, en utilisant le Transporteur (FileCopy, FTP ou SCP) connecté à la Machine représentant l'Agent.
 Tant que votre Phase se trouve dans l'état non-publié (ce qui est l'état par défaut pour une Phase qui vient d'être créée), ce processus sera répété avant chaque action de Déploiement.
 Nous expliquerons plus en détails le Cycle de vie de la Phase dans le chapitre suivant.
-Vous pouvez voir quelles Phases sont actuellement installées sur la Machine Agent en sélectionnant le lien image:images/installed_phases.gif[,24,24] _Phases
+Vous pouvez voir quelles Phases sont actuellement installées sur la Machine Agent en sélectionnant le lien image:installed_phases.gif[,24,24] _Phases
 installées_ à côté de la Machine Agent dans la fenêtre __Aperçu
 des Machines__: 
 
 
-image::images/Picture_22.png[,1045,755] 
+image::Picture_22.png[,1045,755] 
 
 
 
@@ -381,20 +381,20 @@ Cependant, il reste un problème avec la configuration du driver de la base de d
 Nous pouvons résoudre cela en spécifiant une référence au chemin de classe dans la tâche SQL du script __UpdateDB.xml__.
 
 
-image::images/Picture_23.png[,719,511] 
+image::Picture_23.png[,719,511] 
 
 Parce que le répertoire de base est établi à "." (la racine) dans la définition de projet du script Ant, cette ligne spécifie que le driver peut être trouvé dans un sous-répertoire de notre script nommé "lib". Donc, créez la structure de répertoires suivante dans un Environnement temporaire: un répertoire racine __UpdateDB__, contenant la nouvelle version du script et un répertoire lib, vers lequel vous copiez les drivers pour toutes les bases de données que vous voulez supporter avec cette Phase.
 Zippez le répertoire _UpdateDB_ pour générer le fichier __UpdateDB.zip__.
 
 
-image::images/Picture_24.png[,805,257] 
+image::Picture_24.png[,805,257] 
 
 Maintenant vous pouvez mettre à jour la Phase dans l'Administration globale.
 Dans le menu principal, sélectionnez _Phases
 > Aperçu_ et cliquez sur le lien _Éditer_ à côté de la Phase __Mise à jour Base de données__:
 
 
-image::images/Picture_25.png[,998,713] 
+image::Picture_25.png[,998,713] 
 
 
 [NOTE]
@@ -409,11 +409,11 @@ Assurez-vous que vous sélectionnez le fichier _UpdateDB/UpdateDB.xml_ comme fic
 Si vous modifiez la Phase, vous verrez que le paramètre alm.phase.mainscript de la Phase a été établi à _UpdateDB/UpdateDB.xml_ lors de la mise à jour.
 Avant de pouvoir tester notre nouvelle Phase, nous devons nous assurer que ce paramètre est également mis à jour dans l'Environnement de déploiement où il est utilisé.
 
-Pour ce faire, cliquez sur le lien image:images/Phase_MassEdit.png[,24,24] _Éditer
+Pour ce faire, cliquez sur le lien image:Phase_MassEdit.png[,24,24] _Éditer
 en masse_ à côté du paramètre alm.phase.mainscript.
 
 
-image::images/Picture_26.png[,694,482] 
+image::Picture_26.png[,694,482] 
 
 Dans la fenêtre des Paramètres d'environnement connectés, vous verrez tous les Niveaux et Environnements où la Phase _Mise
 à jour Base de données_ a été insérée et où, par conséquent, le paramètre alm.phase.mainScript a été créé.
@@ -425,7 +425,7 @@ Parce que notre Phase n'est toujours pas publiée, elle sera à nouveau distribu
 Quand la Requête de niveau a terminé, et si vous avez activé l'option de Débogage pour l'Environnement de déploiement, vous verrez dans le répertoire source de l'Environnement de déploiement que le driver est maintenant fourni dans le répertoire lib de la Phase extraite:
 
 
-image::images/Picture_27.png[,970,375] 
+image::Picture_27.png[,970,375] 
 
 
 === Phase prête pour la Production: Publier la Phase
@@ -439,7 +439,7 @@ Cette action ne pouvant pas être annulée, vous devez la confirmez.
 Maintenant, réessayez d'éditer la Phase:
 
 
-image::images/Picture_28.png[,611,312] 
+image::Picture_28.png[,611,312] 
 
 Parce que la Phase est Publiée, vous ne pouvez plus modifier les scripts.
 Par conséquent, le bouton Charger à côté des Fichiers téléchargés a disparu.
@@ -458,7 +458,7 @@ Un nouveau fichier d'archive sera chargé (name-version.jar) que vous pouvez imp
 > Importer__.
 
 
-image::images/Picture_29.png[,798,577] 
+image::Picture_29.png[,798,577] 
 
 Après avoir sélectionné le fichier d'archive exporté, vous remarquerez que toutes les métadonnées, y-compris les Fichiers téléchargés et les paramètres, sont importées en même temps que le script.
 Seules les valeurs des paramètres sécurisés doivent être établies pour pouvoir commencer à travailler avec la Phase importée.
