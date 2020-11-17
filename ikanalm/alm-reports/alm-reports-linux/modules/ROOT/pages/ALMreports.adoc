@@ -433,7 +433,7 @@ Check whether the IKANALM Data Source is configured correctly.
 .. Browse to __root > IKANALM > Data Sources__.
 .. Click on the __IKANALM MYSQL Data Source__, and click __Edit__.
 +
-image::almrep_fig4.png[,904,795] 
+image::../images/almrep_fig4.png[,904,795] 
 +
 .. Verify the connection parameters.
 .. Test the connection by clicking the _Test Connection_ button at the bottom of the page.
