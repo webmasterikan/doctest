@@ -1,0 +1,6 @@
+name: how-to-use-and-develop-phases-fr
+title: Use and Develop Custom Phases Howto (French)
+version: '5.7'
+start_page: ROOT:UseDevelopPhases.adoc
+nav:
+- modules/ROOT/nav.adoc  
