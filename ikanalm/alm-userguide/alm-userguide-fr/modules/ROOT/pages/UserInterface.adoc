@@ -1,5 +1,5 @@
 
-== Aperçu de l`'interface utilisateur 
+= Aperçu de l`'interface utilisateur 
 (((Interface Utilisateur)))  (((Administration des projets ,Interface utilisateur))) 
 
 Se référer aux sections suivantes pour des informations plus détaillées concernant:
@@ -10,10 +10,10 @@ Se référer aux sections suivantes pour des informations plus détaillées conc
 
 
 [[_navigationikanalm]]
-=== Naviguer dans IKAN ALM  
+== Naviguer dans IKAN ALM  
 (((Interface Utilisateur ,Navigation))) 
 
-==== Menu Principal
+=== Menu Principal
 L'Interface Utilisateur d'IKAN ALM est composée de 3 sections principales: le Bureau, la section Administration des projets et la section Administration globale.
 Ces sections sont accessibles à partir du __Menu Principal__, la barre d'outils bleue en haut de l'écran.
 À droite, elle contient les Paramètres Utilisateur de l'Utilisateur actuel ainsi que l'aide contextuelle.
@@ -21,7 +21,7 @@ Ces sections sont accessibles à partir du __Menu Principal__, la barre d'outils
 
 image::UserInterface_MainMenu_Sections.png[,936,299] 
 
-==== Sous-menus
+=== Sous-menus
 Si vous sélectionnez l'option "Administration des projets" ou "Administration globale" à partir du Menu Principal, le sous-menu dépendant s'affiche dans la barre grise en-dessous du Menu Principal.
 
 Les options de sous-menu suivi d'un petit triangle disposent d'un menu déroulant contenant des options de sélection supplémentaires.
@@ -34,7 +34,7 @@ image::UserInterface_MainMenu_Navigating.png[,937,392]
 
 
 [[_regularikanalmscreens]]
-=== L'écran IKAN ALM 
+== L'écran IKAN ALM 
 (((Interface Utilisateur ,Écrans))) 
 
 Un écran IKAN ALM contient les éléments principaux suivants:
@@ -42,13 +42,13 @@ Un écran IKAN ALM contient les éléments principaux suivants:
 
 image::UserInterface-Screens.png[,948,551] 
 
-==== Le fil d'Ariane
+=== Le fil d'Ariane
 Le _Fil d'Ariane_ en-dessous du sous-menu montre comment l'utilisateur a accédé l'écran IKAN ALM affiché.
 Le format suivant est utilisé: _Option du Menu Principal
 > option du sous-menu_
 
 [[_babcjedaj8]]
-==== Les panneaux de recherche
+=== Les panneaux de recherche
 image::UserInterface-SearchPanel.png[,965,156] 
 
 Les panneaux de _Recherche_ permettent de spécifier les critères de recherche qui limiteront la liste des éléments dans le panneau __Aperçu__.
@@ -65,7 +65,7 @@ Dans certains des panneaux de recherche plus complexes, vous pouvez sauvegarder 
 Les Filtres existants peuvent être sélectionnés à partir du menu déroulant.
 Pour plus d`'informations concernant l'utilisation des Filtres, se référer à la section <<Desktop_PersonalSettings.adoc#_cihjfebab8,Gérer les définitions des Filtres>>.
 
-==== Les panneaux de création
+=== Les panneaux de création
 image::UserInterface-CreatePanel.png[,488,259] 
 
 Les panneaux de _Création_ permettent de définir de nouveaux objets IKAN ALM.
@@ -74,7 +74,7 @@ Les champs obligatoires sont marqués d'un astérisque rouge.
 Cliquez sur le bouton _Créer_ pour créer l'objet.
 En fonction de l'objet que vous créez, le bouton _Réinitialiser_ nettoiera les champs et/ou restaurera les valeurs initiales.
 
-==== Les panneaux d'Aperçu
+=== Les panneaux d'Aperçu
 Les panneaux d'__Aperçu _sont affichés en-dessous du panneau de _Recherche_ ou de __Création_.
 Si aucun critère de recherche n'est spécifié, l'aperçu liste tous les objets IKAN ALM du type sélectionné.
 Si des critères de recherche sont spécifiés, seuls les objets IKAN ALM correspondant aux critères de recherche sont affichés.
@@ -168,7 +168,7 @@ Les colonnes marquées de l'icône image:icons/sort.gif[,18,19]  peuvent être r
 ====
 
 [[_desktop_autorefresh]]
-=== Actualisation automatique
+== Actualisation automatique
 
 Si votre Administrateur global IKAN ALM a spécifié un _Intervalle d'actualisation automatique_ dans le panneau _Autres activités_ dans l'écran <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>, l'option __Actualiser automatiquement__ sera disponible dans le Bureau et dans les aperçus des Requêtes de niveau et des Constructions et Déploiements.
 

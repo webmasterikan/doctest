@@ -4,10 +4,9 @@
 :revnumber: v5.8
 :revdate: 01.04.2018
 
-= Guide de l’Utilisateur
 
 [[_projadm_introduction]]
-== Introduction 
+= Guide de l’Utilisateur: Introduction 
 (((IKAN ALM ,Introduction))) 
 
 IKAN ALM offre une plateforme unique d`'__Application
@@ -30,7 +29,7 @@ IKAN ALM offre à votre organisation un seul processus polyvalent et un seul cad
 IKAN ALM continue là où les autres Systèmes de gestion de versions s`'arrêtent, améliore le processus de développement de logiciel dans son ensemble et réduit de manière radicale le temps et les budgets nécessaires lors des efforts de développement.
 
 [[_susethisguide]]
-=== Comment utiliser ce manuel?
+== Comment utiliser ce manuel?
 
 La façon dont vous utilisez IKAN ALM est déterminée par la catégorie d`'utilisateurs à laquelle vous appartenez.
 Le tableau ci-dessus liste les trois catégories d`'utilisateurs d`'IKAN ALM.

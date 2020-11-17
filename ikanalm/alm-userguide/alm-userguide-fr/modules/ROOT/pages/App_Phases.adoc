@@ -1,6 +1,6 @@
 
 [[_phases_generalinformation]]
-== Phases - Informations générales 
+= Phases - Informations générales 
 (((Phases)))  (((Phases ,Informations générales))) 
 
 Cet appendice donne des informations plus détaillées concernant le concept des "`Phases`" dans IKAN ALM.
@@ -116,7 +116,7 @@ Lors de l`'exécution d`'une Phase, le statut peut être établi à une des vale
 L'exécution d'une Phase peut être suivie sur l'onglet <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Journaux de Phase>> de l'écran _Informations détaillées_
 
 [[_phases_levelphases]]
-=== Phases de niveau 
+== Phases de niveau 
 (((Niveaux ,Phases)))  (((Phases ,Phases de niveau))) 
 
 Les Phases de niveau sont des actions qui doivent être exécutées pour achever une Requête de Niveau.
@@ -149,7 +149,7 @@ Outre les Phases de niveau de noyau, vous pouvez créer vos propres Phases de ni
 
 
 [[_phases_levelphases_retrievecode]]
-==== Récupération des Sources 
+=== Récupération des Sources 
 (((Phases ,Phases de niveau ,Récupération des Sources))) 
 
 En général, la Phase __Récupération des Source__s est la première Phase exécutée dans une Requête de Niveau.
@@ -174,7 +174,7 @@ Dans ce cas, vous pourriez supprimer la Phase _Récupération
 Code_ du flux de travail du Niveau.
 
 [[_phases_levelphases_build]]
-==== Construction 
+=== Construction 
 (((Phases ,Phases de niveau ,Construction))) 
 
 La Phase _Construction_ démarre l`'exécution des Constructions de la Requête de Niveau et en fait le suivi.
@@ -195,7 +195,7 @@ Si aucune Construction n`'est définie pour la Requête de Niveau, la Phase _Con
 Dans ce cas, vous pourriez supprimer la Phase _Construction_ du flux de travail du Niveau.
 
 [[_phases_levelphases_tagcode]]
-==== Balisage 
+=== Balisage 
 (((Phases ,Phases de niveau ,Balisage))) 
 
 La Phase _Balisage_ associe une Balise aux codes Source récupérés du RCV sur la base de la Balise définie dans les Paramètres de la Requête de Niveau.
@@ -208,7 +208,7 @@ Dans ces deux cas, du code balisé a été récupéré et par conséquent un bal
 Vous pourriez donc supprimer la Phase _Balisage_ du flux de travail du Niveau.
 
 [[_phases_levelphases_deploy]]
-==== Déploiement 
+=== Déploiement 
 (((Phases ,Phases de niveau ,Déploiement))) 
 
 La Phase _Déploiement_ démarre l`'exécution des Déploiements de la Requête de Niveau et en fait le suivi.
@@ -230,7 +230,7 @@ Si aucun Déploiement n`'est défini pour la Requête de Niveau, la Phase _Dépl
 Dans ce cas, vous pourriez supprimer la Phase _Déploiement_ du flux de travail du Niveau.
 
 [[_phases_levelphases_issuetracking]]
-==== Suivi des Incidents 
+=== Suivi des Incidents 
 (((Phases ,Phases de niveau ,Suivi des Incidents))) 
 
 La Phase _Suivi des Incidents_ relie les Incidents, gérés dans un Système de Suivi des Incidents externe, à une Requête de Niveau en recherchant des références vers les Incidents dans les commentaires fournis lors des processus d`'enregistrement (commit) dans le RCV.
@@ -264,7 +264,7 @@ des Incidents_ pour les Niveaux pour lesquels vous voulez activer le Suivi des I
 ====
 
 [[_phases_levelphases_linkfilerevisions]]
-==== Jonction Révisions des Fichiers 
+=== Jonction Révisions des Fichiers 
 (((Phases ,Phases de niveau ,Jonction Révisions des Fichiers))) 
 
 La phase _Jonction Révisions des Fichiers_ rattache les révisions des fichiers concernées à la Requête de Niveau.
@@ -277,7 +277,7 @@ Même si ces Révisions des Fichiers sont également rattachées au Paquet, cett
 Etant donné que cette Phase n`'est applicable que pour les Requêtes de Niveau de Paquets, elle ne s`'affichera que pour les Niveaux des Projets de type Paquets.
 
 [[_phases_levelphases_cleanupworkcopy]]
-==== Nettoyage Copies de travail 
+=== Nettoyage Copies de travail 
 (((Phases ,Phases de niveau ,Nettoyage Copies de travail))) 
 
 La Phase _Nettoyage Copies de travail_ libère l`'Emplacement des Copies de travail à partir duquel les codes Source de la Requête de Niveau ont été récupérés.
@@ -289,7 +289,7 @@ erreur_ de cette Phase est mise à __Non__, ce qui engendre la fin de la Requêt
 Si l`'option _Débogage_ est activée pour le Niveau, la Phase _Nettoyage Copies de travail_ ne fait rien et se termine avec le statut __Erreur__, rapportant que l`'option _Débogage_ est activée pour le Niveau.
 
 [[_phases_levelphases_executescriptphase]]
-==== Exécution script 
+=== Exécution script 
 (((Phases ,Phases de Niveau ,Exécution script))) 
 
 La Phase _Exécution script_ exécute un script sur la Machine du Serveur IKAN ALM en utilisant l'Outil de script spécifié et les Paramètres de niveau prédéfinis.
@@ -306,7 +306,7 @@ Outre les Phases de noyau, vous pouvez définir vos propres Phases dans l'Admini
 Une fois insérée dans le flux de travail d'un Niveau, nous les appelons des Phases de niveau personnalisées.
 
 [[_phases_levelphases_customlevelphase]]
-==== Phases de niveau personnalisées 
+=== Phases de niveau personnalisées 
 (((Phases ,Phases de niveau ,Phases de niveau personnalisées))) 
 
 [NOTE]
@@ -335,7 +335,7 @@ La définition dans l'Administration globale peut également spécifier qu'elle 
 ====
 
 [[_phases_buildphases]]
-=== Phases de construction 
+== Phases de construction 
 (((Phases ,Phases de construction))) 
 
 Les Phases de construction sont des actions qui doivent être exécutées pour achever une Construction.
@@ -367,7 +367,7 @@ Outre les Phases de construction de noyau, vous pouvez créer vos propres Phases
 
 
 [[_cjagcbaj]]
-==== Transfert des Sources  
+=== Transfert des Sources  
 (((Phases ,Phases de construction ,Transfert des Sources))) 
 
 La Phase _Transfert des Sources_ transfère les codes Source et, éventuellement, les résultats de construction des Projets dépendants à partir de l`'Emplacement des Copies de travail sur la Machine Serveur IKAN ALM vers la Machine Agent IKAN ALM, utilisant le Transporteur associé à la Machine Agent IKAN ALM.
@@ -379,7 +379,7 @@ Notez que la valeur par défaut de ce Paramètre est établie à __false/Non__.
 Voir également la section <<App_Phases.adoc#_phases_levelphases_retrievecode,Récupération des Sources>>.
 
 [[_cjabicbc]]
-==== Vérification du script de construction 
+=== Vérification du script de construction 
 (((Phases ,Phases de construction ,Vérification du script de construction))) 
 
 La Phase _Vérification du script de construction_ essaie de localiser le Script de construction défini.
@@ -399,7 +399,7 @@ Si le script est localisé, la Phase _Vérification
 du script de construction_ se termine avec le statut _Réussi_ rapportant où elle a localisé le script de construction.
 
 [[_phases_buildphases_executebuildscript]]
-==== Exécution script 
+=== Exécution script 
 (((Phases ,Phases de construction ,Exécution script))) 
 
 La Phase _Exécution script_ exécute le script de construction sur la Machine définie en utilisant l`'Outil de script spécifié ainsi que les Paramètres de construction définis. 
@@ -411,7 +411,7 @@ script_ se termine avec le statut __Réussi__.
 Si non, il se termine avec le statut _Erreur_ et affiche les erreurs sur l'onglet _Journaux de Phase_ de l'écran _Informations détaillées_ (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,Actions de Construction>>).
 
 [[_phases_buildphases_transportdeployscript]]
-==== Transfert du script de déploiement 
+=== Transfert du script de déploiement 
 (((Phases ,Phases de construction ,Transfert du script de déploiement))) 
 
 La Phase _Transfert du script de déploiement_ copie les scripts de déploiement définis au niveau des Environnements de Déploiement associés à l`'Environnement de Construction de cette Construction à partir de l`'Emplacement Source de l`'Environnement de Construction vers l`'Emplacement Cible.
@@ -420,7 +420,7 @@ Cette action sert à inclure les scripts de déploiement dans le fichier de cons
 de la construction__.
 
 [[_phases_buildphases_transportpackagerersults]]
-==== Transfert des résultats du Groupe de Paquets  
+=== Transfert des résultats du Groupe de Paquets  
 (((Phases ,Phases de construction ,Transfert des résultats du Groupe de Paquets))) 
 
 Cette Phase n'est utile que pour les Constructions de Paquet,
@@ -434,7 +434,7 @@ de tous les Résultats de Construction_ est établi à __true/Oui__, ou uniqueme
 de tous les Résultats de Construction_ est établi à __false/Non__.
 
 [[_phases_buildphases_compressbuild]]
-==== Compression de la construction 
+=== Compression de la construction 
 (((Phases ,Phases de construction ,Compression de la construction))) 
 
 La Phase _Compression de la construction_ compresse les fichiers de résultat de construction dans l`'Emplacement Cible de l`'Environnement de Construction.
@@ -442,13 +442,13 @@ La Phase _Compression de la construction_ compresse les fichiers de résultat de
 Si Windows est utilisé comme système d`'exploitation sur la Machine Agent, la Phase _Compression de la construction_ créera un fichier ``$$.$$zip``, sinon un fichier `$$.$$tar.gz` sera créé.
 
 [[_phases_buildphases_archiveresult]]
-==== Archivage Résultat 
+=== Archivage Résultat 
 (((Phases ,Phases de construction ,Archivage Résultat))) 
 
 La Phase _Archivage du résultat_ transfère le fichier de construction compressé à partir de l`'Emplacement Cible de l`'Environnement de Construction sur la Machine Agent IKAN ALM vers l`'Emplacement des Archives de construction sur la Machine Serveur IKAN ALM, utilisant le Transporteur associé à la Machine Agent IKAN ALM.
 
 [[_phases_buildphases_cleanupsource]]
-==== Nettoyage Emplacement Source 
+=== Nettoyage Emplacement Source 
 (((Phases ,Phases de construction ,Nettoyage Emplacement Source))) 
 
 La Phase _Nettoyage de l`'Emplacement Source_ libère tous les fichiers dans l`'Emplacement Source de l`'Environnement de Construction.
@@ -457,7 +457,7 @@ Si l`'option _Débogage_ est activée pour l`'Environnement de Construction, la 
 de l`'Emplacement Source_ ne fait rien et se termine avec le statut __Erreur__, rapportant que l`'option _Débogage_ est activée pour l`'Environnement de Construction.
 
 [[_phases_buildphases_cleanupresult]]
-==== Nettoyage Emplacement Cible 
+=== Nettoyage Emplacement Cible 
 (((Phases ,Phases de construction ,Nettoyage Emplacement Cible))) 
 
 La Phase _Nettoyage de l`'Emplacement Cible_ libère tous les fichiers dans l`'Emplacement Cible de l`'Environnement de Construction.
@@ -469,7 +469,7 @@ Outre les Phases de noyau, vous pouvez définir vos propres Phases dans l'Admini
 Une fois insérée dans le flux de travail d'un Environnement de construction, nous les appelons des Phases de construction personnalisées.
 
 [[_phases_buildphases_custombuildphase]]
-==== Phases de construction personnalisées 
+=== Phases de construction personnalisées 
 (((Phases ,Phases de construction ,Phases de construction personnalisées))) 
 
 [NOTE]
@@ -498,7 +498,7 @@ La définition dans l'Administration globale peut également spécifier qu'elle 
 ====
 
 [[_phases_deployphases]]
-=== Phases de déploiement 
+== Phases de déploiement 
 (((Phases ,Phases de déploiement))) 
 
 Les Phases de déploiement sont des actions qui doivent être exécutées pour achever un Déploiement.
@@ -538,7 +538,7 @@ Outre les Phases de déploiement de noyau, vous pouvez créer vos propres Phases
 
 
 [[_phases_deployphases_transportbuildresult]]
-==== Transfert du fichier de construction archivée 
+=== Transfert du fichier de construction archivée 
 (((Phases ,Phases de déploiement ,Transfert du fichier de construction archivée))) 
 
 La Phase _Transfert du fichier de construction
@@ -548,7 +548,7 @@ Dans le cas d`'un Déploiement partiel, uniquement les fichiers modifiés et ajo
 Pour la description du champ __Déploiement partiel__, se référer à la section <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Créer un environnement de déploiement>>.
 
 [[_phases_deployphases_decompressbuildresult]]
-==== Décompression du fichier de construction 
+=== Décompression du fichier de construction 
 (((Phases ,Phases de déploiement ,Décompression du fichier de construction))) 
 
 La Phase _Décompression du fichier de construction_ décompresse le fichier du résultat de construction transféré vers l`'Emplacement Source de l`'Environnement de Déploiement par la Phase __Transfert
@@ -556,7 +556,7 @@ du résultat de construction__.
 Ensuite, elle libère le fichier du résultat de construction.
 
 [[_phases_deployphases_verifydeployscript]]
-==== Vérification du script de déploiement 
+=== Vérification du script de déploiement 
 (((Phases ,Phases de déploiement ,Vérification du script de déploiement))) 
 
 La Phase _Vérification du script de déploiement_ essaie de localiser le Script de déploiement défini.
@@ -576,7 +576,7 @@ Si le script est localisé, la Phase _Vérification
 du script de déploiement_ se termine avec le statut _Réussi_ rapportant où elle a localisé le script de déploiement.
 
 [[_phases_deployphases_executedeployscript]]
-==== Exécution script 
+=== Exécution script 
 (((Phases ,Phases de déploiement ,Exécution script))) 
 
 La Phase _Exécution script_ exécute le script de déploiement sur la Machine définie en utilisant l`'Outil de script spécifié ainsi que les Paramètres de déploiement définis. 
@@ -588,7 +588,7 @@ script_ se termine avec le statut __Réussi__.
 Si non, il se termine avec le statut _Erreur_ et affiche les erreurs sur l'onglet _Journaux de Phase_ de l'écran _Informations détaillées_ (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,Actions de Déploiement>>).
 
 [[_phases_deployphases_cleanupbuidlresult]]
-==== Nettoyage du fichier de construction archivée 
+=== Nettoyage du fichier de construction archivée 
 (((Phases ,Phases de déploiement ,Nettoyage du fichier de construction archivée))) 
 
 La Phase _Nettoyage du fichier de construction
@@ -601,7 +601,7 @@ Outre les Phases de noyau, vous pouvez définir vos propres Phases dans l'Admini
 Une fois insérée dans le flux de travail d'un Environnement de déploiement, nous les appelons des Phases de déploiement personnalisées.
 
 [[_phases_deployphases_customdeployphase]]
-==== Phases de déploiement personnalisées 
+=== Phases de déploiement personnalisées 
 (((Phases ,Phases de déploiement ,Phases de déploiement personnalisées))) 
 
 [NOTE]

@@ -1,6 +1,6 @@
 
 [[_subversiongeneralinformation]]
-== Subversion - informations générales 
+= Subversion - informations générales 
 (((Subversion)))  (((Subversion ,Informations générales))) 
 
 Cet appendice donne des informations générales concernant la configuration du Référentiel Subversion, ainsi que quelques exemples concrets et une section concernant les métapropriétés.
@@ -11,7 +11,7 @@ Cet appendice donne des informations générales concernant la configuration du 
 
 
 [[_sappc_repositoryconnection]]
-=== Connexion au référentiel 
+== Connexion au référentiel 
 (((Subversion ,Connexion au référentiel))) 
 
 IKAN ALM se connecte au Référentiel via le Client SVN (Subversion) qui doit être installé sur le Serveur IKAN ALM.
@@ -24,7 +24,7 @@ Le chapitre 7 de ce manuel montre un tableau concernant les URLs du Référentie
 Dans la plupart des cas, un Identifiant Utilisateur et un Mot de passe doivent être saisis, sauf si le Référentiel n`'est pas protégé (par exemple: pour le protocole __svn__, _anon-access = write_ dans le fichier ``svnserver.conf``) ou si les identifiants de l`'utilisateur exécutant le Serveur Web d`'IKAN ALM ou le processus serveur de l`'application sont sauvegardés dans la zone Utilisateur privée d`'exécutions ( _~/.subversion/auth/_ ou __%APPDATA%/Subversion/Auth/__). Pour plus d`'informations, se référer également à http://svnbook.red-bean.com/en/1.7/svn.serverconfig.netmodel.html#svn.serverconfig.netmodel.credcache[http://svnbook.red-bean.com/en/1.7/svn.serverconfig.netmodel.html#svn.serverconfig.netmodel.credcache].
 
 [[_sappc_repositorydefinition]]
-=== Définition du référentiel 
+== Définition du référentiel 
 (((Subversion ,Définition du référentiel))) 
 
 La définition de Subversion nécessite l`'utilisation de champs spécifiques pour permettre une configuration flexible de la structure de Référentiel Subversion (voir http://svnbook.red-bean.com/en/1.2/svn.reposadmin.projects.html#svn.reposadmin.projects.chooselayout[http://svnbook.red-bean.com/en/1.2/svn.reposadmin.projects.html#svn.reposadmin.projects.chooselayout]).
@@ -36,7 +36,7 @@ Dans les sections suivantes, vous trouverez des informations concernant:
 
 
 [[_sappc_specificfields]]
-==== Champs de configuration spécifiques
+=== Champs de configuration spécifiques
 
 Les champs spécifiques suivants ont été ajoutés à la définition de Subversion:
 
@@ -45,7 +45,7 @@ Les champs spécifiques suivants ont été ajoutés à la définition de Subvers
 * Structure du référentiel
 
 
-===== Répertoire des projets (Trunk)
+==== Répertoire des projets (Trunk)
 
 Le répertoire des projets (Trunk) est le répertoire du flux de développement principal ("`head`" ou "`main`"). La dénomination par défaut de ce répertoire est __trunk__, mais d`'autres dénominations sont permises, par exemple, _main_ ou __head__.
 
@@ -58,14 +58,14 @@ Pour une structure de référentiel _Orientée projet_ ou __Orientée projet
 unique__, le répertoire des projets doit être spécifié pour éviter des Construction continues infinies dans le cas où un Plan horaire serait défini pour une telle définition de référentiel (Le répertoire des versions faisant partie du répertoire des projets, le processus de balisage créerait une modification du répertoire des projets, ce qui engendrerait une boucle sans fin).
 ====
 
-===== Répertoire des versions (Tags)
+==== Répertoire des versions (Tags)
 
 Le répertoire des versions (Tags) est l`'emplacement où IKAN ALM crée les Balises (appelés également des tags) après une Construction exécutée correctement.
 La dénomination par défaut de ce répertoire est __tags__, mais d`'autres dénominations sont permises, par exemple, __tag__.
 
 Ce répertoire peut se trouver directement en-dessous du chemin de référentiel, ou peut être spécifique par projet en fonction des Paramètres saisis dans le champ __Structure du référentiel__.
 
-===== Structure du référentiel
+==== Structure du référentiel
 
 La structure du référentiel par défaut est établie à __Orienté
 projet__.
@@ -75,7 +75,7 @@ projet unique__.
 Référez-vous aux <<App_Subversion.adoc#_sappc_layoutexamples,Exemples de structure>> pour plus d`'informations concernant la configuration des structures possibles.
 
 [[_sappc_layoutexamples]]
-==== Exemples de structure
+=== Exemples de structure
 
 Cette section décrit les structures de référentiel possibles ainsi qu`'une solution possible dans IKAN ALM pour un Référentiel Subversion.
 
@@ -86,7 +86,7 @@ Si vous désirez appeler le répertoire des projets "`main`" ou "`head`", ou le 
  ., vous pouvez le faire librement.
 ====
 
-===== Structure 1 (Orienté projet)
+==== Structure 1 (Orienté projet)
 
 La structure dans le Référentiel Subversion:
 
@@ -175,7 +175,7 @@ URL/calc/tags
 |URL/calc/tags/B_1-2_b5
 |===
 
-===== Structure 2 (Orienté référentiel)
+==== Structure 2 (Orienté référentiel)
 
 La structure dans le Référentiel Subversion:
 
@@ -260,7 +260,7 @@ URL/tags/calc
 |URL /tags/calc/B_1-2_b5
 |===
 
-===== Structure 3 (Un référentiel = un Projet)
+==== Structure 3 (Un référentiel = un Projet)
 
 La structure dans le Référentiel Subversion:
 
@@ -339,7 +339,7 @@ URL/tags
 |URL /tags/B_1-2_b5
 |===
 
-===== Structure 4 (Orienté référentiel, pas de répertoirede projets)
+==== Structure 4 (Orienté référentiel, pas de répertoirede projets)
 
 La structure dans le Référentiel Subversion:
 
@@ -423,7 +423,7 @@ URL/tags/calc
 |===
 
 [[_sappc_fetchmetaproperties]]
-=== Collecte des métapropriétés 
+== Collecte des métapropriétés 
 (((Subversion ,Collecte des métapropriétés))) 
 
 Subversion offre des interfaces pour ajouter, modifier et supprimer des métadonnées versionnées de répertoires et de fichiers versionnés.

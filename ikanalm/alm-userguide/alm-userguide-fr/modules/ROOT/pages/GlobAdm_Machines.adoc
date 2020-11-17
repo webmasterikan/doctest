@@ -1,6 +1,6 @@
 [[_globadm_machinesoverview]]
 [[_globadm_machines]]
-== Machines 
+= Machines 
 (((Administration globale ,Machines)))  (((Machines))) 
 
 Toutes les Machines hébergeant des Environnements de Construction et/ou de Déploiement utilisés par les Projets IKAN ALM, doivent être déclarées au sein d`'IKAN ALM par l`'Administrateur global.
@@ -19,7 +19,7 @@ Se référer aux sections suivantes pour des informations plus détaillées:
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters,Gérer les Paramètres d`'une Machine>> 
 
 [[_globadm_machinecreate]]
-=== Créer une définition de machine
+== Créer une définition de machine
 (((Machines ,Créer))) 
 
 [NOTE]
@@ -132,7 +132,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_machinesoverview]]
-=== Aperçu des Machines 
+== Aperçu des Machines 
 (((Machines ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu__.
@@ -216,7 +216,7 @@ Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent �
 ====
 
 [[_globadm_machinesoverview_edit]]
-=== Modifier la définition d`'une machine 
+== Modifier la définition d`'une machine 
 (((Machines ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu__.
@@ -245,7 +245,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_machinesoverview_viewparameters]]
-=== Afficher les Paramètres d`'une Machine
+== Afficher les Paramètres d`'une Machine
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu__.
 
 . Pour y accéder, cliquez sur le lien image:icons/icon_viewparameters.png[,15,15] _Voir les Paramètres_ dans le panneau __Aperçu des Machines__.
@@ -272,7 +272,7 @@ Pour plus d'informations, se référer aux sections suivantes:
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters_history,Afficher l`'historique d`'un paramètre de machine>>
 
 [[_globadm_machinesoverview_delete]]
-=== Supprimer une définition de machine 
+== Supprimer une définition de machine 
 (((Machines ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu__.
@@ -294,7 +294,7 @@ image::GlobAdmin-Machines-Delete-Error.png[,819,504]
 Vous devez d`'abord lier les Environnements à une autre Machine, ou supprimer les Environnements d`'IKAN ALM, avant de pouvoir supprimer la définition de la Machine.
 
 [[_globadm_machinesoverview_status]]
-=== Vérifier le statut d`'une machine 
+== Vérifier le statut d`'une machine 
 (((Machines ,Statut))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu__.
@@ -361,7 +361,7 @@ Le panneau _Trace de la Machine_ affiche les dernières 150 lignes de sortie du 
 . Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
 
 [[_globadm_machines_installedphases]]
-=== Écran de l`'Aperçu des Phases installées 
+== Écran de l`'Aperçu des Phases installées 
 (((Aperçu des Phases installées))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu__.
@@ -431,7 +431,7 @@ Si une Phase d'une Requête de niveau est exécutée sur un Agent ou un Serveur 
  . Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Machines__.
 
 [[_globadm_machinesoverview_history]]
-=== Afficher l`'historique d`'une machine 
+== Afficher l`'historique d`'une machine 
 (((Machines ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu__.
@@ -445,7 +445,7 @@ l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_hist
 
 
 [[_globadm_machineparameters]]
-=== Gérer les Paramètres d`'une Machine 
+== Gérer les Paramètres d`'une Machine 
 (((Paramètres machines)))  (((Paramètres ,Machine))) 
 
 A l`'opposé des Paramètres de construction et de déploiement, les Paramètres de machine sont rattachés à une Machine plutôt qu`'à un Environnement spécifique.
@@ -473,7 +473,7 @@ Les actions suivantes sont possibles:
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters_history,Afficher l`'historique d`'un paramètre de machine>>
 
 [[_globadm_machineparameters_overview]]
-==== Aperçu des paramètres de machine 
+=== Aperçu des paramètres de machine 
 (((Paramètres machines ,Aperçu)))  (((Machines ,Paramètres))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu des Paramètres de Machine__.
@@ -562,7 +562,7 @@ Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent �
 ====
 
 [[_globadm_machineparameters_create]]
-==== Créer un paramètre de machine 
+=== Créer un paramètre de machine 
 (((Paramètres machines ,Créer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu des Paramètres de machine__.
@@ -648,7 +648,7 @@ Les boutons suivants sont également disponibles:
 * _Annuler_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_machineparameters__edit]]
-==== Modifier un paramètre de machine 
+=== Modifier un paramètre de machine 
 (((Paramètres machines ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu des Paramètres de machine__.
@@ -671,7 +671,7 @@ Les boutons suivants sont également disponibles:
 * _Annuler_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_machineparameters_delete]]
-==== Supprimer un paramètre de machine 
+=== Supprimer un paramètre de machine 
 (((Paramètres machines ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu des Paramètres de machine__.
@@ -689,7 +689,7 @@ image::GlobAdmin-Machines-MachineParameters-Delete.png[,388,332]
 Vous pouvez également cliquer sur le bouton _Annuler_ pour retourner à l`'écran précédent sans supprimer le paramètre.
 
 [[_globadm_machineparameters_copy]]
-==== Copier un paramètre de machine 
+=== Copier un paramètre de machine 
 (((Paramètres machines ,Copier))) 
 
 Cette fonctionnalité permet de copier la définition complète d`'un Paramètre de machine d`'une Machine source vers une ou plusieurs Machine(s) cible(s)
@@ -714,7 +714,7 @@ Les boutons suivants sont également disponibles:
 * _Annuler_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_machineparameters_history]]
-==== Afficher l`'historique d`'un paramètre de machine 
+=== Afficher l`'historique d`'un paramètre de machine 
 (((Paramètres machines ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Machines > Aperçu des Paramètres de machine__.

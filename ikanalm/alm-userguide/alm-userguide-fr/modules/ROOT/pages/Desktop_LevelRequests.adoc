@@ -1,5 +1,5 @@
 [[_desktop_levelrequests]]
-== Requêtes de niveau 
+= Requêtes de niveau 
 (((Bureau ,Requêtes de niveau)))  (((Requêtes de niveau))) 
 
 Les Requêtes de Niveau sont des requêtes d`'actions liées à un niveau.
@@ -36,7 +36,7 @@ La section suivante traite l`'historique des constructions
 
 
 [[_desktop_lr_actionflows]]
-=== Séquences d`'actions des Requêtes de Niveau
+== Séquences d`'actions des Requêtes de Niveau
 
 Les sections suivantes décrivent le traitement par défaut des Requêtes de Niveau après leur création.
 
@@ -50,7 +50,7 @@ En fonction de la composition du Niveau (le Type de niveau et les Environnements
 
 
 [[_srebuildlr]]
-==== Requêtes de niveau de (re)construction 
+=== Requêtes de niveau de (re)construction 
 (((Requêtes de niveau ,Requêtes de niveau de construction)))  (((Requêtes de niveau ,Requêtes de niveau de reconstruction))) 
 
 Le graphique suivant montre la séquence des actions par défaut pour une _Requête de Niveau de Construction_ ou pour une __Requête de Niveau de Reconstruction__.
@@ -267,7 +267,7 @@ Le type de Notification (mail, netsend) et les critères de Notification (le sta
 |===
 
 [[_srebuildanddeploylr]]
-==== Requêtes de niveau de (re)construction et déploiement 
+=== Requêtes de niveau de (re)construction et déploiement 
 (((Requêtes de niveau ,Requêtes de niveau de construction et déploiement)))  (((Requêtes de niveau ,Requêtes de niveau de reconstruction et déploiement))) 
 
 Le graphique suivant montre la séquence des actions par défaut pour une _Requête de Niveau de Construction et Déploiement_ ou pour une __Requête de Niveau de Reconstruction et Déploiement__.
@@ -561,7 +561,7 @@ Le type de Notification (mail, netsend) et les critères de Notification (le sta
 |===
 
 [[_sdeploylr]]
-==== Requêtes de niveau de déploiement 
+=== Requêtes de niveau de déploiement 
 (((Requêtes de niveau ,Requêtes de niveau de déploiement))) 
 
 Le graphique suivant montre la séquence des actions par défaut pour une __Requête de Niveau de Déploiement__.
@@ -697,7 +697,7 @@ Le type de Notification (mail, netsend) et les critères de Notification (le sta
 |===
 
 [[_desktop_lr_creatinglevelrequest]]
-=== Création de requêtes de niveau 
+== Création de requêtes de niveau 
 (((Requêtes de niveau ,Créer))) 
 
 Les sections suivantes traitent les procédures concernant la création d`'une nouvelle Requête de Niveau:
@@ -717,7 +717,7 @@ Ainsi, vous pourrez facilement créer des Requêtes de Niveau en cliquant direct
 ====
 
 [[_desktop_lr_createlevelrequest_selectlevel]]
-==== Écran de création de requêtes de niveau: Sélectionner unniveau
+=== Écran de création de requêtes de niveau: Sélectionner unniveau
 (((Requêtes de niveau ,Créer ,Sélectionner un niveau))) 
 
 . Dans le Menu Principal, sélectionnez __Requêtes de niveau > Créer une Requête de niveau__.
@@ -916,7 +916,7 @@ a|_SUJETS APPARENTÉS_
 |===
 
 [[_desktop_lr_createlevelrequest_build]]
-==== Création d`'une requête de niveau de construction 
+=== Création d`'une requête de niveau de construction 
 (((Requêtes de niveau ,Construction demandée)))  (((Requêtes de niveau ,Construction forcée))) 
 
 Les Requêtes de Niveau sont créées en cliquant sur les icônes _Demander/Forcer_ (image:icons/request.gif[,15,15]  / image:images/icons/requestPlus.gif[,15,15] ).
@@ -1048,7 +1048,7 @@ L`'écran _Aperçu des Requêtes de niveau_ s`'affiche.
 Il contient les informations concernant la nouvelle Requête de Niveau (ainsi que celles concernant les Requêtes de Niveau antérieures). Vous trouverez une description détaillée de cet écran dans la section <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen,L`'écran de l`'aperçu des requêtes de niveau>>.
 
 [[_desktop_lr_createlevelrequest_deliver]]
-==== Création d`'une requête de niveau pour délivrer une construction 
+=== Création d`'une requête de niveau pour délivrer une construction 
 (((Requêtes de niveau ,Délivrer une construction))) 
 
 . Dans le Menu Principal, sélectionnez __Requêtes de niveau > Créer une Requête de niveau__.
@@ -1150,7 +1150,7 @@ L`'écran _Aperçu des Requêtes de niveau_ s`'affiche.
 Il contient les informations concernant la nouvelle Requête de Niveau (ainsi que celles concernant les Requêtes de Niveau antérieures). Vous trouverez une description détaillée de cet écran dans la section <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen,L`'écran de l`'aperçu des requêtes de niveau>>.
 
 [[_desktop_lr_createlevelrequest_rollback]]
-==== Création d`'une requête de niveau pour restaurer une construction 
+=== Création d`'une requête de niveau pour restaurer une construction 
 (((Requêtes de niveau ,Restaurer une construction))) 
 
 . Dans le Menu Principal, sélectionnez __Requêtes de niveau > Créer une Requête de niveau__.
@@ -1245,7 +1245,7 @@ Il contient les informations concernant la nouvelle Requête de Niveau (ainsi qu
 
 
 [[_desktop_lr_overview]]
-=== Aperçu des requêtes de niveau
+== Aperçu des requêtes de niveau
 
 Les sections suivantes traitent les procédures concernées lorsque vous consultez l`'aperçu des Requêtes de Niveau.
 
@@ -1255,7 +1255,7 @@ Les sections suivantes traitent les procédures concernées lorsque vous consult
 * <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Informations détaillées>>
 
 [[_desktop_lr_overviewscreen]]
-==== L`'écran de l`'aperçu des requêtes de niveau 
+=== L`'écran de l`'aperçu des requêtes de niveau 
 (((Requêtes de niveau ,Aperçu ,Requêtes de niveau))) 
 
 . Dans le Menu Principal, sélectionnez __Requêtes de niveau > Aperçu des Requêtes de niveau__.
@@ -1411,7 +1411,7 @@ Cliquez sur le lien OID devant la Requête de Niveau requise.
 Pour plus d`'informations, se référer à la section <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Informations détaillées>>.
 
 [[_prssfeeds]]
-==== La fonctionnalité RSS 
+=== La fonctionnalité RSS 
 (((Fonctionnalité RSS))) 
 
 Si l`'Administrateur global d`'IKAN ALM a activé les flux RSS dans les Paramètres Système, le bouton RSS de couleur orange est disponible sur l`'écran __Rechercher des Requêtes de
@@ -1453,7 +1453,7 @@ Vous trouverez l'extension RSSOwl sur le site des mises à jour d'Eclipse: http:
 Pour une description plus détaillée de la structure de l`'URL IKAN ALM, se référer à l`'appendice <<App_RSS.adoc#_rssfeedurldetails,Détails de l`'URL du flux RSS>>.
 
 [[_desktop_lr_generatereport]]
-==== Génération d`'un rapport 
+=== Génération d`'un rapport 
 (((Requêtes de niveau ,Rapports)))  (((Rapports ,Requêtes de niveau))) 
 
 Cette fonctionnalité permet de générer un Rapport pour les Requêtes de Niveau spécifiées.
@@ -1543,7 +1543,7 @@ Pour plus d`'informations, se référer à la section <<CommandLine.adoc#_comand
 
 
 [[_dekstop_lr_detailedoverview]]
-=== Informations détaillées 
+== Informations détaillées 
 (((Informations détaillées)))  (((Informations détaillées ,Actualisation automatique))) 
 
 L'écran _Informations détaillées_ contient le détail de la Requête de niveau sélectionnée. 
@@ -1593,7 +1593,7 @@ automatique__, se référer à la section <<UserInterface.adoc#_desktop_autorefr
 
 
 [[_desktop_lr_summary]]
-==== Résumé 
+=== Résumé 
 (((Informations détaillées ,Résumé)))  (((Requêtes de niveau ,Résumé)))  (((Requêtes de niveau ,Résumé ,Actions)))  (((Requêtes de niveau ,Résumé ,Info)))  (((Requêtes de niveau ,Résumé ,Constructions et Déploiements)))  (((Requêtes de niveau ,Résumé ,Approbations)))  (((Requêtes de niveau ,Résumé ,Incidents)))  (((Requêtes de niveau ,Résumé ,Journal d’erreurs)))  (((Requêtes de niveau ,Résumé ,Journal des Avertissements))) 
 
 La page _Résumé_ affiche le statut de la Requête de Niveau et, en-dessous, plusieurs panneaux contenant des informations détaillées.
@@ -1602,7 +1602,7 @@ Le statut de la Requête de niveau détermine quels panneaux seront affichés.
 image::Desktop-LevelRequests-Detailed-Summary.png[,935,712] 
 
 
-===== Indication du statut
+==== Indication du statut
 Quelques exemples de Requêtes de niveau pour des Projets de type Édition versions:
 
 image::Desktop-LevelRequests-Detailed-Summary-Status.png[,743,234] 
@@ -1658,7 +1658,7 @@ En fonction du statut de la Requête de niveau, l'onglet _Résumé_ peut conteni
 * <<Desktop_LevelRequests.adoc#_desktop_lr_summary_errorwarning,Infos Erreurs/Avertissements>>[[_desktop_lr_summary_actions]]
 
 
-===== Actions
+==== Actions
 Selon le statut de la Requête de niveau, différentes actions seront disponibles dans ce panneau.
 
 image::Desktop-LevelRequests-Detailed-Summary-Actions.png[,326,182] 
@@ -1745,7 +1745,7 @@ Vous pouvez également cliquer sur le bouton _Fermer_ pour annuler l'annulation 
 détaillées__.[[_desktop_lr_summary_info]]
 
 
-===== Panneau d'information
+==== Panneau d'information
 Ce panneau contient des informations détaillées concernant la Requête de niveau.
 
 image::Desktop-LevelRequests-Detailed-Summary-Info.png[,644,272] 
@@ -1824,7 +1824,7 @@ Les types suivants sont disponibles:
 |===
 
 
-===== Constructions et Déploiements
+==== Constructions et Déploiements
 Ce panneau contient les différents Constructions et/ou Déploiements associés à la Requête de niveau.
 
 image::Desktop-LevelRequests-Detailed-Summary-BuildsDeploys.png[,622,290] 
@@ -1903,7 +1903,7 @@ Pendant la Phase __Récupération Code__, seules les sources ayant une Balise di
 Se référer à l'onglet _Journaux de Phase_ en-dessous de l'en-tête de statut, pour des informations plus détaillées concernant la Construction/le Déploiement de la Requête de niveau.[[_desktop_lr_summary_approvals]]
 ====
 
-===== Approbations
+==== Approbations
 Ce panneau n'est affiché que si la Requête de Niveau a été rejetée ou si la Requête de Niveau attend sa Pré-approbation ou sa Post-approbation.
 
 Il affiche le type et l'OID de l'approbation _En
@@ -1921,7 +1921,7 @@ Sélectionnez l'onglet _Approbations_ en-dessous de l'en-tête de statut pour af
 ====
 
 
-===== Incidents
+==== Incidents
 Ce panneau n'est affiché que si des Incidents sont liés à la Requête de niveau.
 
 image::Desktop-LevelRequests-Detailed-Summary-Issues.png[,652,199] 
@@ -1964,7 +1964,7 @@ Dans ce panneau vous ne pouvez pas modifier les Incidents.
 Si vous voulez les modifier, supprimer ou synchroniser, sélectionnez l'onglet _Incidents_ en-dessous de l'en-tête de statut. <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Incidents>>[[_desktop_lr_summary_errorwarning]]
 ====
 
-===== Infos Erreurs/Avertissements
+==== Infos Erreurs/Avertissements
 Ce panneau n'est affiché que si le statut de la Requête de niveau est établi à _Échouée_ ou __Avertissement__.
 Il n'affiche que le Journal de la _première_ Phase avec statut _Échouée_ ou __Avertissement__.
 Il ne s'agit pas nécessairement de la cause du statut d'erreur de la Requête de niveau.
@@ -2043,7 +2043,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_desktop_lr_phaselogs]]
-==== Journaux de Phase 
+=== Journaux de Phase 
 (((Informations détaillées ,Journaux de Phase)))  (((Requêtes de niveau ,Journaux de Phase)))  (((Journaux de Phase)))  (((Phases ,Journaux)))  (((Journaux de Phase)))  (((Requêtes de niveau ,Log d'une phase de construction)))  (((Journaux de Phase)))  (((Requêtes de niveau ,Log d'une phase de déploiement)))  (((Paramètres de niveau))) 
 
 Cet onglet affiche les Journaux des Phases de Niveau, les actions de Construction et de Déploiement et leurs Phases de construction et de déploiement exécutées lors de l'exécution de la Requête de niveau.
@@ -2128,7 +2128,7 @@ image::Desktop-LevelRequests-Detailed-PhaseLogs-Example_SkippedDeploy.png[,918,5
 
 
 [[_desktop_lr_phaselogs_levelparameters]]
-===== Paramètres de niveau 
+==== Paramètres de niveau 
 (((Paramètres)))  (((Paramètres ,Niveau))) 
 
 Pour afficher les Paramètres de niveau utilisés lors de l'exécution de la Requête de niveau, développez le panneau en cliquant sur l'en-tête "Paramètres de niveau". 
@@ -2140,7 +2140,7 @@ Le panneau affiche le code et la valeur pour chacun des paramètres.
 Pour plus d`'informations concernant les Paramètres de niveau, se référer à la section <<App_PredefLevelParams.adoc#_cpredefinedbuildparameters,Paramètres de niveau prédéfinis>>.
 
 [[_desktop_lr_phaselogs_levelphases]]
-===== Phases de niveau
+==== Phases de niveau
 
 *Exemple d'une Phase de noyau*
 
@@ -2251,7 +2251,7 @@ des Sources__.
 |===
 
 [[_desktop_lr_phaselogs_buildactions]]
-===== Actions de Construction
+==== Actions de Construction
 
 Les Actions de Construction sont affichées sur un fond blanc dans la liste des Journaux de Phase.
 Leur description contient l'OID de la Requête de construction et le nom de la Machine sur laquelle elles sont exécutées.
@@ -2331,7 +2331,7 @@ image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedBuildParameters.png[,
 |===
 
 [[_chddiacf]]
-====== Phases de construction
+===== Phases de construction
 
 Les Phases de construction sont exécutées par l'Agent IKAN ALM lors de l'exécution d'une Construction.
 
@@ -2402,7 +2402,7 @@ Dans la Log, le champ _Dernier Message_ indique le résultat de nettoyage.
 |===
 
 [[_desktop_lr_phaselogs_deployactions]]
-===== Actions de Déploiement
+==== Actions de Déploiement
 
 Les Actions de Déploiement sont affichées sur un fond blanc dans la liste des Journaux de Phase.
 Leur description contient l'OID de déploiement et le nom de la Machine sur laquelle elles sont exécutées.
@@ -2482,7 +2482,7 @@ image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedDeployParameters.png[
 |===
 
 [[_chdceehj]]
-====== Phases de déploiement
+===== Phases de déploiement
 
 Pour chacune de ces Phases, le statut est indiqué.
 Le statut _Erreur_ ne signifie pas toujours que le Déploiement dans son ensemble a échoué, car sa signification dépend de la définition du paramètre _Abandon
@@ -2553,7 +2553,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_desktop_lr_results]]
-==== Résultats 
+=== Résultats 
 (((Requêtes de niveau ,Résultats)))  (((Informations détaillées ,Résultats)))  (((Résultat de construction)))  (((Résultat de construction ,Télécharger)))  (((Télécharger le Résultat de construction))) 
 
 Sur la page __Résultats__, vous pouvez afficher (pour chaque Construction associée à la Requête de niveau) le contenu du fichier de Résultat de construction compressé, c.-à-d., les fichiers qui étaient présents dans l'emplacement Cible au moment où le script de construction s'est terminé et qui se trouvent maintenant dans les Archives de construction.
@@ -2651,7 +2651,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_desktop_lr_approvals]]
-==== Approbations 
+=== Approbations 
 (((Informations détaillées ,Approbations)))  (((Requêtes de niveau ,Approbations)))  (((Approbations))) 
 
 La page _Approbations_ affiche le statut des Approbations définies pour la Requête de Niveau.
@@ -2747,7 +2747,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_desktop_lr_issues]]
-==== Incidents 
+=== Incidents 
 (((Requêtes de niveau ,Incidents)))  (((Informations détaillées ,Incidents)))  (((Incidents))) 
 
 La page _Incidents_ affiche la liste des Incidents liés à une Requête de niveau.
@@ -2822,7 +2822,7 @@ Ces liens ne sont disponibles que pour les Niveaux de Construction.
 
 
 [[_desktop_lr_issueedit]]
-===== Modifier un Incident 
+==== Modifier un Incident 
 (((Incidents ,Modifier))) 
 
 Cette option permet de manuellement mettre à jour les champs d`'un Incident lié à cette Requête de Niveau. 
@@ -2846,7 +2846,7 @@ Les boutons suivants sont également disponibles:
 
 
 [[_desktop_lr_issuedelete]]
-===== Supprimer un Incident 
+==== Supprimer un Incident 
 (((Incidents ,Supprimer))) 
 
 Cette option permet de supprimer un Incident lié à cette Requête de Niveau.
@@ -2864,7 +2864,7 @@ Vous pouvez également cliquer sur le bouton _Annuler_ pour retourner à la page
 
 
 [[_desktop_lr_issuesynchronize]]
-===== Synchroniser un Incident 
+==== Synchroniser un Incident 
 (((Incidents ,Synchroniser))) 
 
 [NOTE]
@@ -2887,7 +2887,7 @@ Si la synchronisation échoue, un message d`'erreur indiquant le problème s`'af
 
 
 [[_desktop_lr_issueadd]]
-===== Ajouter un Incident 
+==== Ajouter un Incident 
 (((Incidents ,Ajouter))) 
 
 Cette option permet de lier des Incidents manuellement à une Requête de Niveau.
@@ -2973,7 +2973,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_desktop_lr_sources]]
-==== Sources 
+=== Sources 
 (((Requêtes de niveau ,Sources)))  (((Informations détaillées ,Sources)))  (((Sources))) 
 
 La page _Sources_ affiche la liste de toutes les Sources (et leurs numéros de révision) dans le RCV qui sont utilisées par la Requête de niveau.
@@ -3007,7 +3007,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_desktop_lr_modifications]]
-==== Modifications 
+=== Modifications 
 (((Informations détaillées ,Modifications)))  (((Requêtes de niveau ,Modifications)))  (((Modifications))) 
 
 La page _Modifications_ permet de consulter les différences entres les Sources utilisées pour créer la Construction actuelle et celles utilisées pour la Construction générée par la Requête de niveau précédente.
@@ -3076,7 +3076,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_desktop_lr_dependencies]]
-==== Dépendances 
+=== Dépendances 
 (((Informations détaillées ,Dépendances)))  (((Requêtes de niveau ,Dépendances)))  (((Dépendances))) 
 
 La fonctionnalité de Dépendances de Projet permet la réutilisation de librairies communes ou de composants communs dans d`'autres Projets dépendants.
@@ -3107,7 +3107,7 @@ La page _Dépendances_ est le point de départ pour rechercher toutes les inform
 
 
 [[_desktop_lr_viewdependency]]
-===== Dépendances de construction 
+==== Dépendances de construction 
 (((Informations détaillées ,Dépendances de construction)))  (((Requêtes de niveau ,Dépendances de construction)))  (((Dépendances de construction))) 
 
 La page _Dépendances_ affiche les Constructions et/ou les Sources spécifiques pour les Projets dépendants dont dépend cette Construction.
@@ -3179,7 +3179,7 @@ S`'il s`'agit d`'une Dépendance du type __Code Source__, ce champ reste vide.
 . Vous pouvez utiliser les liens _OID_ pour afficher les informations détaillées de la Requête de niveau.
 
 [[_deskopt_lr_viewbuildusage]]
-===== Usage d'une construction - Détail 
+==== Usage d'une construction - Détail 
 (((Informations détaillées ,Usage)))  (((Requêtes de niveau ,Usage d'une construction)))  (((Usage d'une construction))) 
 
 Dans le cas d`'une *réutilisation d`'un résultat de construction*, un lien sera établi entre la *Construction maître* et la *Construction dépendante*. 
@@ -3237,7 +3237,7 @@ Cliquez sur le lien pour afficher les détails de la Requête de Niveau.
 . Vous pouvez utiliser les liens _OID_ pour afficher les informations détaillées de la Requête de niveau.
 
 [[_desktop_lr_viewusage]]
-===== Usage d'une Requête de niveau - Détail 
+==== Usage d'une Requête de niveau - Détail 
 (((Informations détaillées ,Usage d'une Requête de niveau)))  (((Requêtes de niveau ,Usage d'une Requête de niveau)))  (((Usage d'une Requête de niveau))) 
 
 Dans le cas d`'une *réutilisation des composants Source*, un lien sera établi entre la *Construction maître* et *la Requête de Niveau dépendante*.
@@ -3309,7 +3309,7 @@ a|_Sujets apparentés:_
 
 [[_desktop_lr_buildhistory]]
 [[_sdesktop_buildhistory_detail]]
-=== Écran de l'Historique de Construction 
+== Écran de l'Historique de Construction 
 (((Bureau ,Historique des constructions)))  (((Historique des constructions))) 
 
 L'option _Historique de Construction_ permet de vérifier rapidement le Cycle de Vie d`'une Construction spécifique (identifiée par son numéro).
@@ -3395,7 +3395,7 @@ si active__.
 
 
 [[_desktop_lr_buildsdeploysoverview]]
-=== Aperçu des Constructions et des Déploiements 
+== Aperçu des Constructions et des Déploiements 
 (((Requêtes de niveau ,Aperçu ,Constructions et Déploiements)))  (((Aperçu des constructions et des déploiements))) 
 
 . Dans le Menu Principal, sélectionnez __Requêtes de niveau > Aperçu des Constructions et des Déploiements__.

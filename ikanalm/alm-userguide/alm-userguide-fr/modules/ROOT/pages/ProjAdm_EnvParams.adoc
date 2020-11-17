@@ -1,5 +1,5 @@
 [[_projadm_environmentparameters]]
-== Paramètres d`'environnement  
+= Paramètres d`'environnement  
 (((Paramètres d’Environnement)))  (((Administration des projets ,Paramètres d’Environnement))) 
 
 Les Paramètres d`'environnement sont des paramètres qui peuvent être utilisés pendant la Phase _Exécution script_ qui exécute un Script de construction/déploiement.
@@ -47,7 +47,7 @@ Les actions suivantes sont possibles:
 * <<ProjAdm_EnvParams.adoc#_environmentparams_copy,Copier un Paramètre d`'environnement>>
 
 [[_environmentparams_overview]]
-=== L'Aperçu des Paramètres
+== L'Aperçu des Paramètres
 (((Paramètres d’environnement ,Aperçu))) 
 
 [NOTE]
@@ -135,7 +135,7 @@ Elle permet de copier la définition du Paramètre d'environnement sélectionné
 |===
 
 [[_environmentparams__create]]
-=== Créer un Paramètre d`'Environnement 
+== Créer un Paramètre d`'Environnement 
 (((Paramètres d’Environnement ,Créer))) 
 
 . Accédez à l`'écran _Aperçu des Paramètres_ pour le Projet requis
@@ -221,7 +221,7 @@ Les boutons suivants sont également disponibles:
 * _Annuler_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_environmentparams_history]]
-=== Afficher l`'historique des paramètres d`'environnement 
+== Afficher l`'historique des paramètres d`'environnement 
 (((Paramètres d’Environnement ,Historique))) 
 
 . Accédez à l`'écran _Aperçu des Paramètres_ pour le Projet requis
@@ -236,7 +236,7 @@ l`'Historique de l`'Environnement de Construction (ou de Déploiement)__, se ré
 Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
 
 [[_environmentparams_edit]]
-=== Modifier un Paramètre d`'environnement 
+== Modifier un Paramètre d`'environnement 
 (((Paramètres d’Environnement ,Modifier))) 
 
 . Accédez à l`'écran _Aperçu des Paramètres_ pour le Projet requis
@@ -259,7 +259,7 @@ Les boutons suivants sont également disponibles:
 * _Annuler_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_environmentparams_delete]]
-=== Supprimer un Paramètre d`'environnement 
+== Supprimer un Paramètre d`'environnement 
 (((Paramètres d’Environnement ,Supprimer))) 
 
 . Accédez à l`'écran _Aperçu des Paramètres_ pour le Projet requis
@@ -279,7 +279,7 @@ image::ProjAdmin-EnvParams-Delete.png[,387,389]
 Vous pouvez également utiliser le bouton _Annuler_ pour retourner à l`'écran précédent sans supprimer le Paramètre.
 
 [[_environmentparams_copy]]
-=== Copier un Paramètre d`'environnement 
+== Copier un Paramètre d`'environnement 
 (((Paramètres d’Environnement ,Copier))) 
 
 Pour éviter de devoir (re)définir des Paramètres d`'environnement qui sont identiques pour plusieurs Environnements, vous pouvez copier le Paramètre d`'environnement requis vers d`'autres Environnements de Construction et/ou de Déploiement du Projet. 

@@ -1,5 +1,5 @@
 [[_globadm_historylog]]
-== Suivi de l`'Historique 
+= Suivi de l`'Historique 
 (((Suivi de l’historique)))  (((Administration globale ,Suivi de l’historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Historique__.

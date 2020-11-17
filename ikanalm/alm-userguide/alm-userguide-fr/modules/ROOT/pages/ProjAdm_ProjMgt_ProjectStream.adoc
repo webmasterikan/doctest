@@ -1,5 +1,5 @@
 [[_projadm_projectstreams]]
-== Branches 
+= Branches 
 (((Administration des projets ,Branches)))  (((Branches)))  (((Options relatives à l’administration des projets ,Branches))) 
 
 Une Branche est une entité de travail au sein d`'IKAN ALM.
@@ -32,7 +32,7 @@ Les actions suivantes sont possibles:
 ** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Retirer une Dépendance de Branche>>
 
 [[_projadmin_projectstream_createbranch]]
-=== Créer une branche secondaire
+== Créer une branche secondaire
 (((Branches ,Créer une branche secondaire))) 
 
 Vous pouvez créer une Branche Secondaire pour:
@@ -221,7 +221,7 @@ Pour plus d`'informations, se référer à la section <<ProjAdm_ProjMgt_ProjectS
 
 
 [[_projectstreams_overviewscreen]]
-=== Aperçu des Branches
+== Aperçu des Branches
 
 L`'écran _Aperçu des Branches_ vous permet de vérifier et modifier les définitions des Branches.
 Les actions suivantes sont possibles: 
@@ -240,7 +240,7 @@ Les actions suivantes sont possibles:
 ** <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Retirer une Dépendance de Branche>>
 
 [[_projadmin_projectstreamsoverview_accessing]]
-==== Écran de l`'aperçu des branches 
+=== Écran de l`'aperçu des branches 
 (((Branches ,Écran de l’aperçu des branches))) 
 
 . Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
@@ -294,7 +294,7 @@ Elle permet d`'afficher l`'Historique de toutes les opérations de création, de
 |===
 
 [[_projadmin_projectstream_viewing]]
-==== Afficher les paramètres d'une Branche 
+=== Afficher les paramètres d'une Branche 
 (((Branches du Projet ,Afficher les paramètres))) 
 
 . Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
@@ -312,7 +312,7 @@ Pour une description, se référer à la section <<ProjAdm_ProjMgt_ProjectStream
 . Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Branches__.
 
 [[_projadmin_projectstream_editing]]
-==== Modifier les paramètres d`'une branche 
+=== Modifier les paramètres d`'une branche 
 (((Branches ,Modifier les paramètres d’une branche))) 
  
 . Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
@@ -350,7 +350,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_projadm_projectstream_deleting]]
-==== Supprimer une branche 
+=== Supprimer une branche 
 (((Branches ,Supprimer une branche))) 
  
 . Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
@@ -368,7 +368,7 @@ image::ProjAdmin-ProjMgt-ProjectStream-Delete.png[,838,359]
 Vous pouvez également cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_projadm_projectstream_locking]]
-==== Verrouiller/Déverrouiller une branche 
+=== Verrouiller/Déverrouiller une branche 
 (((Branches ,Verrouiller une branche)))  (((Branches ,Déverrouiller une branche)))  (((Verrouiller ,Branche)))  (((Déverrouiller ,Branche))) 
 
 Verrouiller une Branche consiste à bloquer toutes les activités de la Branche, telles que les Requêtes de Niveau créées manuellement ou planifiées.
@@ -381,7 +381,7 @@ Déverrouiller la Branche signifie que vous autorisez à nouveau ces actions pou
 . Cliquez sur le lien image:icons/lock.gif[,15,15] _Verrouiller_ ou image:images/icons/unlock.gif[,15,15] _Déverrouiller_ dans le panneau __Aperçu des Branches__.
 
 [[_hideshowprojectstream]]
-==== Cacher/Montrer une branche 
+=== Cacher/Montrer une branche 
 (((Branches ,Cacher une branche)))  (((Branches ,Montrer une branche))) 
 
 Si une Branche est définie comme étant "`cachée`", par défaut elle ne sera plus affichée dans les panneaux d`'aperçu.
@@ -405,7 +405,7 @@ Cliquez sur le lien _Montrer les options avancées_ pour afficher ce critère.
 ====
 
 [[_projadm_projectstream_historyview]]
-==== Afficher l'Historique de la Branche
+=== Afficher l'Historique de la Branche
 
 . Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
 
@@ -417,7 +417,7 @@ de l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_h
 Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
 
 [[_projadmin_projectstream_dependencies]]
-==== Dépendances de branches 
+=== Dépendances de branches 
 (((Branches ,Dépendances de branches)))  (((Dépendances de branches))) 
 
 Les dépendances de Branches permettent la réutilisation de composants communs (par exemple, des librairies) dans d`'autres Projets.
@@ -509,7 +509,7 @@ Branche_ de ces Branches Maître pour modifier les paramètres de leur Dépendan
 . Cliquez sur le bouton _Précédent_ pour retourner à l`'écran suivant.
 
 [[_projadmin_projectstream_adddependency]]
-==== Ajouter une Dépendance de Branche 
+=== Ajouter une Dépendance de Branche 
 (((Branches du Projet , Dépendances ,Ajouter))) 
 
 . Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
@@ -585,7 +585,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer vos modifications.
 
 [[_projadmin_projectstream_editdependency]]
-==== Modifier une Dépendance de Branche 
+=== Modifier une Dépendance de Branche 
 (((Branches du Projet ,Dépendances ,Modifier))) 
 
 . Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.
@@ -611,7 +611,7 @@ Les boutons suivants sont également disponibles:
 * _Annuler_ pour retourner à l`'écran précédent sans enregistrer vos modifications.
 
 [[_projadm_projectstream_deletedependency]]
-==== Retirer une Dépendance de Branche 
+=== Retirer une Dépendance de Branche 
 (((Branches du Projet ,Dépendances ,Retirer))) 
 
 . Dans le __Contexte de l'Administration des projets__, sélectionnez __Branches > Aperçu__.

@@ -1,6 +1,6 @@
 [[_desktop_packagegroupsoverview]]
 [[_desktop_packagegroups]]
-== Groupes de Paquets de Construction 
+= Groupes de Paquets de Construction 
 (((Bureau ,Groupes de Paquets de Construction)))  (((Groupes de Paquets de Construction))) 
 
 Un Groupe de Paquets de Construction établit la relation entre des Paquets permettant de transférer les dernières Constructions de tous ces Paquets, ou de Paquets spécifiques, d'un tel Groupe avant l'exécution du processus de Construction d'un Paquet.
@@ -31,7 +31,7 @@ Se référer aux procédures suivantes pour plus d`'information:
 
 
 [[_desktop_createpackagegroup]]
-=== Créer un Groupe de Paquets de Construction 
+== Créer un Groupe de Paquets de Construction 
 (((Groupes de Paquets de Construction ,Créer))) 
 
 . Dans le Menu Principal, sélectionnez __Paquets > Créer un Groupe de Paquets de Construction__.
@@ -85,7 +85,7 @@ Pour plus d`'informations, se référer à la section <<Desktop_PackageGroups.ad
 
 
 [[_desktop_packagegroupsoverview]]
-=== L'Aperçu d'un Groupe de Paquets de Construction 
+== L'Aperçu d'un Groupe de Paquets de Construction 
 (((Groupes de Paquets de Construction , Aperçu))) 
 
 . Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Groupes de Paquets de Construction__.
@@ -144,7 +144,7 @@ Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent �
 
 
 [[_desktop_editpackagegroup]]
-=== Modifier la définition d`'un Groupe de Paquets de Construction 
+== Modifier la définition d`'un Groupe de Paquets de Construction 
 (((Groupes de Paquets de Construction ,Modifier))) 
 
 . Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Groupes de Paquets de Construction__.
@@ -171,7 +171,7 @@ Pour plus d`'informations, se référer à la section <<Desktop_PackageGroups.ad
 
 
 [[_desktop_packagegroups_addpackage]]
-==== Ajouter un Paquet à un Groupe de Paquets de Construction 
+=== Ajouter un Paquet à un Groupe de Paquets de Construction 
 (((Groupes de Paquets de Construction ,Ajouter des Paquets)))  (((Groupes de Paquets de Construction ,Séquence des Paquets)))  (((Groupes de Paquets de Construction ,Niveaux de dépendance))) 
 
 . Dans l'écran __Modifier un Groupe de Paquets de Construction__, cliquez sur le lien _Ajouter un Paquet_ ou cliquez avec le bouton droit dans le tableau d'aperçu des _Paquets_ et, ensuite, sélectionnez __Ajouter un Paquet__.
@@ -310,7 +310,7 @@ Pour plus d'informations concernant la modification d'une définition de Paquet,
 
 
 [[_bacdbadi]]
-==== Retirer un Paquet d'un Groupe de Paquets de Construction
+=== Retirer un Paquet d'un Groupe de Paquets de Construction
 
 . Dans le panneau _Paquets_ sur l'écran __Modifier un Groupe de Paquets de Construction__, cliquez sur le lien image:icons/delete.gif[,15,15] _Retirer_ dans la colonne des _Actions_ du Paquet concerné.
 +
@@ -329,7 +329,7 @@ Si vous retirer un des Paquets, le Niveau de dépendance des autres Paquets chan
 ====
 
 [[_desktop_hideshowpackagegroup]]
-=== Cacher/montrer un Groupe de Paquets de Construction 
+== Cacher/montrer un Groupe de Paquets de Construction 
 (((Paquets ,Montrer)))  (((Paquets ,Cacher))) 
 
 En définissant un Groupe de Paquets de Construction comme "`caché`", par défaut, il ne sera plus affiché dans les panneaux d`'aperçu.
@@ -354,7 +354,7 @@ un Groupe de Paquets de Construction_ pour pouvoir spécifier si vous voulez aff
 ====
 
 [[_desktop_viewpackagegrouphistory]]
-=== Afficher l'Historique des Groupes de Paquets de Construction 
+== Afficher l'Historique des Groupes de Paquets de Construction 
 (((Groupes de Paquets de Construction ,Historique))) 
 
 . Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Groupes de Paquets de Construction__.

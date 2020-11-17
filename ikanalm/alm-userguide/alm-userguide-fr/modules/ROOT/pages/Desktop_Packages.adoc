@@ -1,5 +1,5 @@
 [[_desktop_packages]]
-== Paquets 
+= Paquets 
 (((Bureau ,Paquets)))  (((Paquets))) 
 
 Les Paquets vous permettent de déplacer manuellement un ou plusieurs fichiers individuels d`'une Branche dans le RCV (Branche principale ou Branche secondaire) à travers le Cycle de Vie d`'IKAN ALM.
@@ -38,7 +38,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 
 
 [[_desktop_createpackage]]
-=== Créer un paquet 
+== Créer un paquet 
 (((Paquets ,Créer))) 
 
 . Dans le Menu Principal, sélectionnez __Paquets > Créer un Paquet__.
@@ -119,7 +119,7 @@ Pour plus d`'informations concernant l'ajout des Fichiers et des Révisions au P
 
 
 [[_desktop_packageoverview]]
-=== Aperçu des paquets 
+== Aperçu des paquets 
 (((Paquets ,Aperçu))) 
 
 . Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Paquets__.
@@ -188,7 +188,7 @@ Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent �
 ====
 
 [[_desktop_viewpackage]]
-=== Afficher les paramètres d`'un paquet 
+== Afficher les paramètres d`'un paquet 
 (((Paquets ,Afficher les paramètres))) 
 
 . Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Paquets__.
@@ -225,7 +225,7 @@ Ici vous pouvez également lancer les Requêtes de Niveau pour le Paquet sélect
 Pour plus d'informations concernant les différents onglets, se référer à la section <<Desktop_Packages.adoc#_desktop_packagedetails,Détails du Paquet>>.
 
 [[_desktop_editpackage]]
-=== Modifier la définition d`'un paquet 
+== Modifier la définition d`'un paquet 
 (((Paquets ,Modifier))) 
 
 . Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Paquets__.
@@ -264,7 +264,7 @@ Notez qu'en sélectionnant en même temps le bouton Supprimer et la touche CTRL,
 
 
 [[_desktop_hideshowpackage]]
-=== Montrer/cacher un paquet 
+== Montrer/cacher un paquet 
 (((Paquets ,Montrer)))  (((Paquets ,Cacher))) 
 
 En définissant un Paquet comme "`caché`", par défaut, il ne sera plus affiché dans les panneaux d`'aperçu.
@@ -296,7 +296,7 @@ Un critère de sélection _Montrer les Paquets_ cachés est disponible dans le p
 ====
 
 [[_desktop_viewpackagehistory]]
-=== Afficher l`'historique d`'un paquet 
+== Afficher l`'historique d`'un paquet 
 (((Paquets ,Historique))) 
 
 . Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Paquets__.
@@ -310,7 +310,7 @@ Cliquez sur le bouton _Retour Aperçu des Paquets_ pour retourner à l`'écran p
 
 
 [[_desktop_packagedetails]]
-=== Détails du Paquet
+== Détails du Paquet
 
 L'écran _Détails du Paquet_ contient les informations détaillées concernant le Paquet sélectionné. 
 
@@ -346,7 +346,7 @@ automatique__, se référer à la section <<UserInterface.adoc#_desktop_autorefr
 
 
 [[_desktop_packagedetails_summary]]
-==== L'onglet "Résumé"
+=== L'onglet "Résumé"
 
 Les informations concernant le Paquet et les actions possibles sont réparties sur deux panneaux différents.
 
@@ -354,7 +354,7 @@ image::Desktop-PackageDetails-Tab-Summary.png[,892,483]
 
 
 [[_desktop_packagedetails_actions]]
-===== Le panneau "Actions"
+==== Le panneau "Actions"
 
 
 image::Desktop-PackageDetails-Panel-Acttions.png[,330,254] 
@@ -366,7 +366,7 @@ image::Desktop-PackageDetails-Panel-Acttions_EditPackage.png[,478,236]
 
 
 [[_desktop_packagedetails_info]]
-===== Le panneau "Info"
+==== Le panneau "Info"
 
 image::Desktop-PackageDetails-Panel-Info.png[,858,273] 
 
@@ -409,7 +409,7 @@ Pour plus d`'informations, se référer à la section <<Desktop_PackageGroups.ad
 |===
 
 [[_desktop_packagedetails_latestlevelrequests]]
-===== Le panneau "Dernières Requêtes de niveau"
+==== Le panneau "Dernières Requêtes de niveau"
 
 
 image::Desktop-PackageDetails-Panel-LatestLR.png[,930,154] 
@@ -419,7 +419,7 @@ Dans cette liste, vous pouvez cliquer sur le lien _OID_ d'une des Requêtes de n
 Si vous cliquez sur le Numéro de construction, l'Historique de Construction de cette Requête de niveau sera affichée.
 
 [[_desktop_packagedetails_viewcontents]]
-==== Vue Fichiers
+=== Vue Fichiers
 
 image::Desktop-PackageDetails-Tab-ViewContents.png[,939,431] 
 
@@ -444,7 +444,7 @@ Ce champ peut rester vide, signifiant que la dernière Révision du fichier est 
 |===
 
 [[_desktop_packagedetails_editcontents]]
-==== Modification Fichiers 
+=== Modification Fichiers 
 
 image::Desktop-PackageDetails-Tab-EditContents.png[,849,500] 
 
@@ -541,7 +541,7 @@ image::Desktop-Packages-SelectProjectStream-ModifyRevision.png[,471,108]
 
 
 [[_desktop_packagedetails_lifecycleactions]]
-==== Actions du Cycle de vie
+=== Actions du Cycle de vie
 
 image::Desktop-PackageDetails-Tab-LifecycleActions.png[,946,500] 
 

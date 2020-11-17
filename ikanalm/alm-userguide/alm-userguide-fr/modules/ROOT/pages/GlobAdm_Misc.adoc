@@ -1,5 +1,5 @@
 [[_globadm_miscellaneous]]
-== Autres activités 
+= Autres activités 
 (((Administration globale ,Autres Activités)))  (((Autres activités))) 
 
 [NOTE]
@@ -12,7 +12,7 @@ Pour des informations plus détaillées concernant les options du menu __Autres 
 * <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notification des utilisateurs>>
 
 [[_globadm_notifyusers]]
-=== Notification des utilisateurs
+== Notification des utilisateurs
 (((Notification des utilisateurs)))  (((Autres Activités ,Notification des utilisateurs))) 
 
 Cette option permet d`'envoyer, à partir de l`'application IKAN ALM, des messages électroniques à d`'autres Utilisateurs d`'IKAN ALM.

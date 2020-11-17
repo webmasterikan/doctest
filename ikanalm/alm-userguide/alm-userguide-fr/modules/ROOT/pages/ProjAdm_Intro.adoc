@@ -1,5 +1,5 @@
 
-== Administration des projets 
+= Administration des projets 
 (((Administration des projets))) 
 
 Les éléments IKAN ALM suivants sont couramment utilisés par les Administrateurs de Projet.
@@ -8,14 +8,14 @@ Les éléments IKAN ALM suivants sont couramment utilisés par les Administrateu
 * <<ProjAdm_ProjMgtOptions.adoc#_projadm_projmgtoptions,Options relatives à l`'administration des projets>>
 
 
-=== Accéder à l'Aperçu des Projets
+== Accéder à l'Aperçu des Projets
 
 Dans le Menu Principal, cliquez sur l'icône _Administration
 des projets _image:icons/icon_ProjectAdmin_13x13.png[,13,13].
 
 L'aperçu de tous les Projets sera affiché.
 
-=== Accéder aux Options de l'Administration des projets
+== Accéder aux Options de l'Administration des projets
 
 À partir de l'__Aperçu des Projets__, vous pouvez accéder aux options de l'Administration des projets.
 

@@ -1,6 +1,6 @@
 [[_globadm_projectcreate]]
 [[_globadm_project]]
-== Projet 
+= Projet 
 (((Administration globale ,Projets)))  (((Projets))) 
 
 [NOTE]
@@ -14,7 +14,7 @@ Les procédures suivantes décrivent les options du menu Projet:
 * <<GlobAdm_Project.adoc#_globadm_projectclone,Cloner un projet existant>>
 
 [[_globadm_projectcreate]]
-=== Créer un projet dans IKAN ALM
+== Créer un projet dans IKAN ALM
 (((Créer un projet dans IKAN ALM)))  (((Créer un projet dans IKAN ALM ,Édition Versions)))  (((Créer un projet dans IKAN ALM ,Paquets)))  (((Projets ,Édition Versions)))  (((Projets ,Paquets))) 
 
 Il existe deux types de projets:
@@ -308,7 +308,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_projectclone]]
-=== Cloner un projet existant 
+== Cloner un projet existant 
 (((Projets ,Cloner un projet existant)))  (((Cloner un projet existant))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Projet > Cloner un Projet existant__.

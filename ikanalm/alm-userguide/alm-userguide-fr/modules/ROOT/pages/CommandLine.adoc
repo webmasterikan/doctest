@@ -1,5 +1,5 @@
 [[_comandlineinterface]]
-== Interface de ligne de commande (optionnelle) 
+= Interface de ligne de commande (optionnelle) 
 (((Interface de ligne de commande))) 
 
 IKAN ALM peut être enrichi d`'une Interface optionnelle de ligne de commande, permettant la création de Requêtes de Niveau et la génération de Rapports en utilisant un Client shell au lieu de l`'application Web d`'IKAN ALM.
@@ -17,7 +17,7 @@ L`'interface a besoin d`'une connexion (TCP/IP) au serveur central d`'IKAN ALM.
 Elle se connecte via XML-RPC avec le serveur IKAN ALM.
 
 [[_smanualusagecommandlineinterface]]
-=== Utilisation manuelle de l`'interface de ligne de commande
+== Utilisation manuelle de l`'interface de ligne de commande
 
 Référez-vous aux procédures suivantes, pour plus d`'informations:
 
@@ -27,7 +27,7 @@ Référez-vous aux procédures suivantes, pour plus d`'informations:
 * <<CommandLine.adoc#_pcommandline_reports_propertiesfile,Génération de rapports en utilisant un fichier de propriétés>>
 
 [[_pcommandline_clr_optionsparameters]]
-==== Création de requêtes de niveau en spécifiant des optionset des paramètres
+=== Création de requêtes de niveau en spécifiant des optionset des paramètres
 
 . Préparation de la création de la Requête de Niveau.
 +
@@ -212,7 +212,7 @@ image::CommandLine-PendingRequests.jpg[,539,274]
 Des messages d`'erreur comparables sont affichés si le résultat de construction ne peut pas être délivré, si le Niveau est verrouillé, si la Branche Secondaire est verrouillée ou s`'il y a une erreur d`'autorisation.
 
 [[_pcommandline_clr_propertiesfiles]]
-==== Création de requêtes de niveau en utilisant un fichier depropriétés
+=== Création de requêtes de niveau en utilisant un fichier depropriétés
 
 Vous pouvez enregistrer des Paramètres fréquemment utilisés dans un Fichier de Propriétés.
 Ainsi vous ne devez pas à chaque fois réintroduire tous les Paramètres de création de Requête de Niveau.
@@ -308,7 +308,7 @@ image::CommandLine-PendingRequests.jpg[,540,274]
 Des messages d`'erreur comparables sont affichés si le résultat de construction ne peut pas être délivré, si le Niveau et verrouillé, si la Branche Secondaire est verrouillée ou s`'il y a une erreur d`'autorisation.
 
 [[_pcommandline_report_optionsparameters]]
-==== Génération de rapports en définissant des options et desparamètres
+=== Génération de rapports en définissant des options et desparamètres
 
 . Préparation de la génération du Rapport.
 +
@@ -648,7 +648,7 @@ N`'oubliez pas d`'enlever le signe # pour pouvoir activer un critère de recherc
 Le Rapport est généré.
 
 [[_pcommandline_reports_propertiesfile]]
-==== Génération de rapports en utilisant un fichier de propriétés
+=== Génération de rapports en utilisant un fichier de propriétés
 
 Vous pouvez enregistrer des Paramètres fréquemment utilisés dans un Fichier de Propriétés.
 Ainsi vous ne devez pas à chaque fois ressaisir tous les Paramètres de génération de Rapport.
@@ -719,7 +719,7 @@ Le Rapport est généré.
 
 
 [[_sintegratingikanalminide]]
-=== Intégration d`'IKAN ALM dans un IDE externe
+== Intégration d`'IKAN ALM dans un IDE externe
 
 Pour plus d`'informations, se référer aux procédures suivantes:
 
@@ -727,7 +727,7 @@ Pour plus d`'informations, se référer aux procédures suivantes:
 * <<CommandLine.adoc#_pintegrateikanalmineclipse,Intégration d`'IKAN ALM dans Eclipse>>
 
 [[_pintegrateikanalminjdeveloper]]
-==== Intégration d`'IKAN ALM dans JDeveloper
+=== Intégration d`'IKAN ALM dans JDeveloper
 
 Cette procédure décrit comment installer IKAN ALM comme outil externe dans JDeveloper pour pouvoir créer des Requêtes de Niveau (forcées, demandées ou de distribution ou de déploiement) à partir de cet IDE
 
@@ -782,7 +782,7 @@ Le résultat de la ligne de commande d`'IKAN ALM sera affiché dans la fenêtre 
 image::CommandLine-JDeveloperResult.jpg[,540,347] 
 
 [[_pintegrateikanalmineclipse]]
-==== Intégration d`'IKAN ALM dans Eclipse
+=== Intégration d`'IKAN ALM dans Eclipse
 
 Cette procédure décrit comment installer IKAN ALM comme outil externe dans Eclipse pour pouvoir créer des Requêtes de Niveau (forcées, demandées ou de distribution) à partir de cet IDE
 
@@ -812,7 +812,7 @@ image::CommandLine-EclipseResult.jpg[,770,366]
 
 
 [[_sautomatecreatinglevelrequestswithant]]
-=== Automatisation de la création de requêtes de niveau via un script ANT
+== Automatisation de la création de requêtes de niveau via un script ANT
 
 Dans cette section vous trouverez un exemple d`'un script ANT qui:
 

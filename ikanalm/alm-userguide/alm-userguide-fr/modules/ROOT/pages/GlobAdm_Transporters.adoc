@@ -1,5 +1,5 @@
 [[_globadm_transporters]]
-== Transporteurs 
+= Transporteurs 
 (((Administration globale ,Transporteurs))) 
 
 Chaque action de Construction ou de Déploiement exécutée par un Agent IKAN ALM comprend le transfert de codes Sources, d`'un Script ou d`'un résultat de construction entre l`'Agent IKAN ALM et le Serveur IKAN ALM.
@@ -64,7 +64,7 @@ Pour une description plus détaillée, se référer aux sections suivantes:
 
 
 [[_sglobadm_transporter_create]]
-=== Créer un Protocole de transfert 
+== Créer un Protocole de transfert 
 (((Transporteurs ,Créer))) 
 
 [NOTE]
@@ -91,7 +91,7 @@ Pour plus d'informations concernant ces détails, se référer aux sections appr
 * <<GlobAdm_Transporters.adoc#_globadm_secureshellcreate,Créer un Transporteur sécurisé SSH>>
 
 [[_sglobadm_transporters_overview]]
-=== L'Aperçu des Protocoles de transfert 
+== L'Aperçu des Protocoles de transfert 
 (((Transporteurs ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -144,7 +144,7 @@ Se référer aux sections suivantes pour plus d`'information:
 
 
 [[_globadm_transporter_filecopy]]
-=== Transporteurs FileCopy 
+== Transporteurs FileCopy 
 (((Transporteurs ,FileCopy)))  (((Transporteurs FileCopy))) 
 
 Un Transporteur FileCopy permet d'utiliser "file copy" pour transporter des Phases personnalisées, des fichiers et des répertoires entre le Serveur IKAN ALM et un Agent local ou distant exécutant les processus de construction ou de déploiement (voir l'introduction dans la section <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporteurs>>). 
@@ -176,7 +176,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 * <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy_history,Afficher l`'historique d`'un transporteur FileCopy>>
 
 [[_globadm_filecopycreate]]
-==== Créer un Transporteur FileCopy 
+=== Créer un Transporteur FileCopy 
 (((Transporteurs FileCopy ,Créer))) 
 
 [NOTE]
@@ -276,7 +276,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_filecopyoverview]]
-==== Aperçu des Transporteurs FileCopy 
+=== Aperçu des Transporteurs FileCopy 
 (((Transporteurs FileCopy ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -333,7 +333,7 @@ Elle permet d`'afficher l`'historique d`'un Transporteur FileCopy.
 |===
 
 [[_globadm_transporter_filecopy_edit]]
-==== Modifier la définition d`'un transporteur FileCopy 
+=== Modifier la définition d`'un transporteur FileCopy 
 (((Transporteurs FileCopy ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -366,7 +366,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_transporter_filecopy_delete]]
-==== Supprimer une définition de transporteur FileCopy 
+=== Supprimer une définition de transporteur FileCopy 
 (((Transporteurs FileCopy ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -393,7 +393,7 @@ image::GlobAdm-Transporters-FileCopy-Delete-Error.png[,642,401]
 Avant de pouvoir supprimer le Transporteur FileCopy, vous devez modifier la définition des Machines listées.
 
 [[_globadm_transporter_filecopy_history]]
-==== Afficher l`'historique d`'un transporteur FileCopy 
+=== Afficher l`'historique d`'un transporteur FileCopy 
 (((Transporteurs FileCopy ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -424,7 +424,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_transporter_ftp]]
-=== Transporteurs FTP 
+== Transporteurs FTP 
 (((Transporteurs ,FTP)))  (((Transporteurs FTP))) 
 
 Le Client Transporteur FTP intégré permet d'utiliser FTP comme protocole pour transporter une Phase personnalisée, des résultats de construction, des scripts ou des sources entre le Serveur IKAN ALM et un ou plusieurs Agents.
@@ -445,7 +445,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 * <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp_history,Afficher l`'historique d`'un transporteur FTP>>
 
 [[_globadm_ftpcreate]]
-==== Créer un Transporteur FTP 
+=== Créer un Transporteur FTP 
 (((Transporteurs FTP ,Créer))) 
 
 [NOTE]
@@ -577,7 +577,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_ftpoverview]]
-==== Aperçu des Transporteurs FTP  
+=== Aperçu des Transporteurs FTP  
 (((Transporteurs FTP ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -634,7 +634,7 @@ Elle permet d`'afficher l`'historique d`'un Transporteur FTP.
 |===
 
 [[_globadm_transporter_ftp_edit]]
-==== Modifier la définition d`'un transporteur FTP 
+=== Modifier la définition d`'un transporteur FTP 
 (((Transporteurs FTP ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -667,7 +667,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_transporter_ftp_delete]]
-==== Supprimer une définition de transporteur FTP 
+=== Supprimer une définition de transporteur FTP 
 (((Transporteurs FTP ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -693,7 +693,7 @@ image::GlobAdm-Transporters-FTP-Delete-Error.png[,640,528]
 Avant de pouvoir supprimer le Transporteur FTP, vous devez modifier la définition des Machines listées.
 
 [[_globadm_transporter_ftp_history]]
-==== Afficher l`'historique d`'un transporteur FTP 
+=== Afficher l`'historique d`'un transporteur FTP 
 (((Transporteurs FTP ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -724,7 +724,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_sglobadmin_secureshellclients]]
-=== Transporteurs sécurisés SSH 
+== Transporteurs sécurisés SSH 
 (((Transporteurs ,SSH)))  (((Transporteurs sécurisés SSH))) 
 
 Les Transporteurs SSH sécurisés permettent de transporter de manière sécurisée les Phases personnalisées, les sources, les scripts et les résultats de construction entre le Serveur IKAN ALM et un Agent IKAN ALM.
@@ -747,7 +747,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 * <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell_history,Afficher l`'historique d`'un transporteur SSH>>
 
 [[_globadm_secureshellcreate]]
-==== Créer un Transporteur sécurisé SSH 
+=== Créer un Transporteur sécurisé SSH 
 (((Transporteurs sécurisés SSH ,Créer))) 
 
 [NOTE]
@@ -893,7 +893,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_secureshelloverview]]
-==== Aperçu des Transporteurs sécurisés SSH 
+=== Aperçu des Transporteurs sécurisés SSH 
 (((Transporteurs sécurisés SSH ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -948,7 +948,7 @@ Elle permet d`'afficher l`'historique d`'un Transporteur FTP.
 |===
 
 [[_globadm_transporter_secureshell_edit]]
-==== Modifier la définition d`'un transporteur SSH 
+=== Modifier la définition d`'un transporteur SSH 
 (((Transporteurs sécurisés SSH ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -981,7 +981,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_transporter_secureshell_delete]]
-==== Supprimer une définition de transporteur SSH 
+=== Supprimer une définition de transporteur SSH 
 (((Transporteurs sécurisés SSH ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.
@@ -1009,7 +1009,7 @@ image::GlobAdm-Transporters-SecureShell-Delete-Error.png[,669,570]
 Avant de pouvoir supprimer le Transporteur SSH, vous devez modifier la définition des Machines listées.
 
 [[_globadm_transporter_secureshell_history]]
-==== Afficher l`'historique d`'un transporteur SSH 
+=== Afficher l`'historique d`'un transporteur SSH 
 (((Transporteurs sécurisés SSH ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Transporteurs > Aperçu__.

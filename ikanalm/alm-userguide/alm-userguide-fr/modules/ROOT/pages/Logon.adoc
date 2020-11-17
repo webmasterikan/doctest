@@ -1,5 +1,5 @@
 
-== Procédures de connexion et de déconnexion
+= Procédures de connexion et de déconnexion
 
 IKAN ALM utilise l`'interface JAAS pour l`'authentification du Nom Utilisateur/Mot de passe via le Système de Sécurité installé dans votre entreprise.
 Les Utilisateurs et les Groupes d`'utilisateurs sont ainsi gérés dans un Système de Sécurité externe à IKAN ALM, bien que l`'administrateur global puisse également définir des Utilisateurs et des Groupes d`'utilisateurs dans un fichier de configuration (par exemple, pour des petites entreprises ou pour démonstrations). Il en résulte que les Utilisateurs se connecteront à IKAN ALM via un Nom Utilisateur et Mot de Passe issus du Système de Sécurité externe tel que: Active Directory ou LDAP.
@@ -23,7 +23,7 @@ Se référer aux sections suivantes pour une description plus détaillée:
 * <<Logon.adoc#_desktop_warningmessages,Messages d`'avertissement>>
 
 [[_ploggingin]]
-=== Connexion à IKAN ALM
+== Connexion à IKAN ALM
 (((IKAN ALM ,Connexion à IKAN ALM)))  (((Connexion à IKAN ALM))) 
 
 . Ouvrez une session de votre navigateur et introduisez l`'URL de connexion pour IKAN ALM.
@@ -59,7 +59,7 @@ Pour plus d`'informations, se référer à la section <<Desktop_PersonalSettings
 ====
 
 [[_ploggingout]]
-=== Déconnexion d`'IKAN ALM 
+== Déconnexion d`'IKAN ALM 
 (((IKAN ALM ,Déconnexion de SCM4ALL)))  (((Déconnexion de SCM4ALL))) 
 
 . Dans le Menu Principal, à droite, sélectionnez _Déconnexion_ à partir du menu déroulant des Paramètres Utilisateur.
@@ -81,7 +81,7 @@ Pour accéder à cette option, sélectionnez _À propos de_ à partir du menu d�
 
 
 [[_cjhbjaja]]
-=== Installer une Nouvelle Licence 
+== Installer une Nouvelle Licence 
 (((Licence ,Installer)))  (((IKAN ALM ,Installer une nouvelle licence))) 
 
 Si, lors de la connexion à IKAN ALM, aucune licence valide n`'est trouvée, un erreur de message s`'affiche et le lien _Installer
@@ -119,7 +119,7 @@ Contactez votre Administrateur IKAN ALM ou votre vendeur IKAN ALM pour obtenir u
 
 
 [[_desktop_errormessages]]
-=== Messages d`'erreur
+== Messages d`'erreur
 
 Si une erreur se produit lors de la connexion à IKAN ALM, un des messages d`'erreur suivants peut s`'afficher.
 Référez-vous au tableau ci-dessous pour trouver la solution adéquate:
@@ -167,7 +167,7 @@ Contactez votre vendeur IKAN ALM.
 |===
 
 [[_desktop_warningmessages]]
-=== Messages d`'avertissement
+== Messages d`'avertissement
 
 Lors de la connexion à IKAN ALM, un des messages d`'avertissement suivants peut s`'afficher.
 Référez-vous au tableau ci-dessous pour trouver la solution adéquate:

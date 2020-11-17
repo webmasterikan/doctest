@@ -1,6 +1,6 @@
 [[_globadm_usersgroups_users]]
 [[_globadm_usersgroups]]
-== Utilisateurs et Groupes d`'utilisateurs
+= Utilisateurs et Groupes d`'utilisateurs
 
 Se référer aux sections suivantes pour une description plus détaillée:
 
@@ -9,7 +9,7 @@ Se référer aux sections suivantes pour une description plus détaillée:
 
 
 [[_globadm_usersgroups_users]]
-=== Utilisateurs 
+== Utilisateurs 
 (((Administration globale ,Utilisateurs)))  (((Utilisateurs)))  (((Utilisateurs ,Créer))) 
 
 Comme IKAN ALM se sert de l`'interface JAAS pour enregistrer l`'authentification des Identifiants Utilisateur/Mots de Passe à partir des Systèmes de sécurité existants dans votre organisation, les Identifiants Utilisateur et les Groupes d`'Utilisateurs externes sont maintenus en dehors d`'IKAN ALM.
@@ -64,7 +64,7 @@ L`'__Aperçu des noms d`'Utilisateurs__ permet les actions suivantes:
 * l`'affichage des Utilisateurs connectés à IKAN ALM avec la possibilité de les déconnecter, si nécessaire, avant la fin de leur session.
 
 [[_globadm_usersgroups_usersoverview]]
-==== Écran de l`'aperçu des utilisateurs
+=== Écran de l`'aperçu des utilisateurs
 (((Utilisateurs ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Utilisateurs_.
@@ -172,7 +172,7 @@ Elle permet d`'afficher l`'historique d`'un Utilisateur.
 |===
 
 [[_globadm_usersgroups_edituser]]
-==== Modifier les paramètres d`'un utilisateur 
+=== Modifier les paramètres d`'un utilisateur 
 (((Utilisateurs ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Utilisateurs_.
@@ -212,7 +212,7 @@ Pour la description des champs, se référer à la section <<GlobAdm_UsersGroups
 Vous pouvez également utiliser le bouton _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données ou le bouton _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_usersgroups_disconnectingusers]]
-==== Déconnecter un utilisateur 
+=== Déconnecter un utilisateur 
 (((Utilisateurs ,Déconnecter))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Utilisateurs_.
@@ -227,7 +227,7 @@ Cette action terminera la session de l`'Utilisateur et le déconnectera d`'IKAN 
 Par conséquent, l`'Utilisateur devra se reconnecter s`'il veut continuer ses activités dans IKAN ALM.
 
 [[_globadm_usersgroups_userhistory]]
-==== Afficher l`'historique d`'un utilisateur 
+=== Afficher l`'historique d`'un utilisateur 
 (((Utilisateurs ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Utilisateurs_.
@@ -257,7 +257,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_usersgroups_groups]]
-=== Groupes d`'utilisateurs 
+== Groupes d`'utilisateurs 
 (((Administration globale ,Groupes d’utilisateurs)))  (((Groupes d’utilisateurs))) 
 
 Comme IKAN ALM se sert de l`'interface JAAS pour enregistrer l`'authentification des Identifiants Utilisateur/Mots de Passe à partir des Systèmes de sécurité existants dans votre organisation, les Identifiants Utilisateur et leur appartenance à des Groupes d`'Utilisateurs sont gérés en dehors d`'IKAN ALM.
@@ -289,7 +289,7 @@ Se référer aux sections suivantes pour des informations plus détaillées:
 * <<GlobAdm_UsersGroups.adoc#_globadm_usergroupsoverview,Aperçu des groupes d`'utilisateurs>>
 
 [[_globadm_usergroupcreate]]
-==== Créer un groupe d`'utilisateurs 
+=== Créer un groupe d`'utilisateurs 
 (((Groupes d’utilisateurs ,Créer))) 
 
 [NOTE]
@@ -335,7 +335,7 @@ Le nouveau Groupe d`'Utilisateurs sera ajouté à l`'__Aperçu
 des Groupes d`'utilisateurs__ dans la partie inférieure de l`'écran.
 
 [[_globadm_usergroupsoverview]]
-==== Aperçu des groupes d`'utilisateurs 
+=== Aperçu des groupes d`'utilisateurs 
 (((Groupes d’utilisateurs ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Groupes Utilisateurs_.
@@ -410,7 +410,7 @@ Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent �
 ====
 
 [[_globadm_usersgroups_editusergroup]]
-==== Modifier un groupe d`'utilisateurs 
+=== Modifier un groupe d`'utilisateurs 
 (((Groupes d’utilisateurs ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Groupes Utilisateurs_.
@@ -473,7 +473,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer vos modifications
 
 [[_globadm_usersgroups_editusergroupmembers]]
-==== Modifier les membres du Groupe d'utilisateurs
+=== Modifier les membres du Groupe d'utilisateurs
 
 . Dans le panneau _Membres du Groupe d`'utilisateurs_ en-dessous du panneau _Modifier un Groupe d'utilisateurs_ (voir <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Modifier un groupe d`'utilisateurs>>), cliquez sur le lien image:icons/edit.gif[,15,15] __Modifier les membres d'un Groupe d`'utilisateurs__ pour modifier la définition du Groupe d`'utilisateurs sélectionné. 
 +
@@ -509,7 +509,7 @@ Les boutons suivants sont également disponibles:
 * _Annuler_ pour retourner à l`'écran précédent sans enregistrer vos modifications.
 
 [[_globadm_usersgroups_deleteusergroup]]
-==== Supprimer un groupe d`'utilisateurs 
+=== Supprimer un groupe d`'utilisateurs 
 (((Groupes d’utilisateurs ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Groupes Utilisateurs_.
@@ -531,7 +531,7 @@ Vous aurez à annuler les connexions affichées avant de pouvoir supprimer le Gr
 ====
 
 [[_globadm_usersgroups_usergrouphistory]]
-==== Afficher l`'historique d`'un groupe d`'utilisateurs 
+=== Afficher l`'historique d`'un groupe d`'utilisateurs 
 (((Groupes d’utilisateurs ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Groupes Utilisateurs_.

@@ -1,6 +1,6 @@
 [[_globadm_phases_creating]]
 [[_globadm_phases]]
-== Phases 
+= Phases 
 (((Administration globale ,Phases)))  (((Phases))) 
 
 Quand IKAN ALM exécute des Requêtes de Niveau, des Constructions et des Déploiements, toutes les actions sont effectuées en exécutant une séquence de Phases.
@@ -40,7 +40,7 @@ Se référer aux sections suivantes pour des informations plus détaillées:
 
 Pour une explication complète du concept des Phases, se référer à la section <<App_Phases.adoc#_phases_generalinformation,Phases - Informations générales>>.
 
-=== Créer une définition de Phase
+== Créer une définition de Phase
 (((Phases ,Créer))) 
 
 [NOTE]
@@ -206,7 +206,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_phases_overview]]
-=== Écran de l`'aperçu des Phases 
+== Écran de l`'aperçu des Phases 
 (((Phases ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
@@ -281,7 +281,7 @@ Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent �
 ====
 
 [[_globadm_phases_editing]]
-=== Modifier la définition d`'une Phase  
+== Modifier la définition d`'une Phase  
 (((Phases ,Modifier))) 
 
 Le panneau _Informations de la Phase_ vous permet de modifier la définition d'une Phase.
@@ -475,7 +475,7 @@ Pour plus d`'informations, se référer à la section <<GlobAdm_Phases.adoc#_glo
 * _Historique_ pour afficher l'historique de toutes les opérations de création, de modification ou de suppression relatives à une Phase. <<GlobAdm_Phases.adoc#_globadm_phases_history,Afficher l`'historique d`'une Phase>>
 
 [[_globadm_phaseparameters_overview]]
-=== Aperçu des paramètres de Phase 
+== Aperçu des paramètres de Phase 
 (((Phases ,Paramètres de phase)))  (((Paramètres de phase)))  (((Paramètres de phase ,Aperçu)))  (((Phases ,Paramètres de phase ,Aperçu)))  (((Paramètres ,Phase))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
@@ -553,7 +553,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_phaseparameters_creating]]
-=== Créer des Paramètres de phase 
+== Créer des Paramètres de phase 
 (((Phases ,Paramètres de phase ,Créer)))  (((Paramètres de phase ,Créer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
@@ -659,7 +659,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_phaseparameters_editing]]
-=== Modifier les Paramètres de phase 
+== Modifier les Paramètres de phase 
 (((Phases ,Paramètres de phase ,Modifier)))  (((Paramètres de phase ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
@@ -724,7 +724,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_phaseparameters_deleting]]
-=== Supprimer les Paramètres de phase 
+== Supprimer les Paramètres de phase 
 (((Phases ,Paramètres de phase ,Supprimer)))  (((Paramètres de phase ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
@@ -768,7 +768,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_phaseparameters_massediting]]
-=== Modifier en masse les Paramètres de phase 
+== Modifier en masse les Paramètres de phase 
 (((Phases ,Paramètres de phase ,Modifier en masse)))  ((( Paramètres de phase ,Modifier en masse))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
@@ -827,7 +827,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_phaseparameters_massreplacing]]
-=== Remplacer des Phases en masse 
+== Remplacer des Phases en masse 
 (((Phases ,Remplacer des Phases en masse)))  (((Remplacer des Phases en masse))) 
 
 L'option _Remplacer des Phases en masse_ vous permet de remplacer une Phase dans plusieurs Environnements de plusieurs Projets différents à la fois, ce qui peut être utile lors de l'installation d'une nouvelle version d'une Phase dans plusieurs Projets.
@@ -915,7 +915,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_phaseparameters_massdeleting]]
-=== Supprimer des Phases en masse 
+== Supprimer des Phases en masse 
 (((Phases ,Supprimer des Phases en masse)))  (((Supprimer des Phases en masse))) 
 
 L'option _Supprimer des Phases en masse_ vous permet de supprimer une Phase dans plusieurs Environnements de Projets différents à la fois.
@@ -964,7 +964,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_phases_deleting]]
-=== Supprimer une définition de Phase 
+== Supprimer une définition de Phase 
 (((Phases ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
@@ -993,7 +993,7 @@ En supprimant une définition de Phase, vous supprimerez également le fichier .
 
 
 [[_globadm_phases_exporting]]
-=== Exporter la définition d`'une Phase. 
+== Exporter la définition d`'une Phase. 
 (((Phases ,Paramètres de phase ,Exporter)))  (((Paramètres de phase ,Exporter))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
@@ -1018,7 +1018,7 @@ La combinaison des actions _Exporter_ puis _Importer_ une Phase ne permet pas la
 ====
 
 [[_globadm_phases_copying]]
-=== Copier la définition d`'une Phase. 
+== Copier la définition d`'une Phase. 
 (((Phases ,Copier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
@@ -1066,7 +1066,7 @@ Si vous cliquez sur le bouton __Copier__, une nouvelle Phase sera créée avec l
 Vous pouvez également utiliser le bouton _Aperçu_ pour retourner à l`'__Aperçu des Phases__ sans enregistrer les modifications.
 
 [[_globadm_phases_history]]
-=== Afficher l`'historique d`'une Phase 
+== Afficher l`'historique d`'une Phase 
 (((Phases ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
@@ -1081,7 +1081,7 @@ l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_hist
 . Cliquez sur le bouton _Précédent_ pour retourner à l`'__Aperçu des Phases__.
 
 [[_globadm_phases_importing]]
-=== Importer une définition de Phase 
+== Importer une définition de Phase 
 (((Phases ,Importer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Phases > Importer__.

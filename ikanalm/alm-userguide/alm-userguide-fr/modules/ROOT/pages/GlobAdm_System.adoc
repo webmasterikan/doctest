@@ -1,6 +1,6 @@
 [[_globadm_system_settings]]
 [[_globadm_system]]
-== Système
+= Système
 
 Le menu _Système_ propose des options pour afficher ou modifier les paramètres de configuration du Serveur IKAN ALM et pour exécuter des actions d`'épuration d`'archives dans IKAN ALM.
 
@@ -20,7 +20,7 @@ Les utilisateurs n`'ayant pas de droits d`'accès d`'Administrateur global auron
 
 [[_globadm_system_settings]]
 [[_pdefinesystemsettings]]
-=== Paramètres du système 
+== Paramètres du système 
 (((Paramètres du système)))  (((Administration globale ,Paramètres du système))) 
 
 Les paramètres globaux du Serveur IKAN ALM, tels que les différents emplacements (les Archives, les Scripts, les Copies de travail et le Catalogue des Phases), les paramètres courrier et les paramètres de sécurité, sont définis dans l'écran __Paramètres
@@ -60,7 +60,7 @@ Pour plus d`'informations concernant l`'aperçu de l`'historique, se référer �
 
 
 [[_ssystemsettings_tablocalenvironment]]
-==== Environnement local
+=== Environnement local
 
 image::GlobAdmin-SystemSettings_LocalEnv.png[,734,472] 
 
@@ -172,7 +172,7 @@ _Note:_ Ce numéro de port peut être écrasé par le numéro de port spécifié
 |===
 
 [[_ssytemsettings_tabsecurity]]
-==== Sécurité
+=== Sécurité
 
 image::GlobAdmin-SystemSettings_Security.png[,735,107] 
 
@@ -202,7 +202,7 @@ Si vous laissez ce champ vide, tous les Utilisateurs authentifiés auront des dr
 |===
 
 [[_ssystemsettings_tabmail]]
-==== Courrier
+=== Courrier
 
 IKAN ALM peut envoyer des courriers de notification, automatiquement ou sur demande, en cas Constructions échouées ou réussies, pour demander une approbation avant de délivrer vers un Niveau de Test ou de Production, ou simplement pour notifier des Utilisateurs de modifications de Paramètres.
 
@@ -296,7 +296,7 @@ Ce champ est obligatoire si _Authentification_ a été sélectionné comme type 
 |===
 
 [[_ssytemsettings_tabmiscellaneous]]
-==== Autres activités
+=== Autres activités
 
 image::GlobAdmin-SystemSettings_Miscl.png[,735,159] 
 
@@ -345,7 +345,7 @@ Vous pouvez également utiliser le bouton _Actualiser_ pour récupérer les Para
 
 
 [[_globadm_system_housekeeping]]
-=== Épuration des archives 
+== Épuration des archives 
 (((Épuration des archives)))  (((Administration globale ,Épuration des archives))) 
 
 L`'option _Épuration des archives_ vous permet de gérer les Archives de Construction.
@@ -581,7 +581,7 @@ image::GlobAdm-Housekeeping-Delete-Success.png[,1030,311]
 
 
 [[_globadm_system_housekeepinghistory]]
-=== Historique de l`'Épuration des Archives 
+== Historique de l`'Épuration des Archives 
 (((Historique de l’épuration des archives)))  (((Administration globale ,Historique de l’épuration des archives))) 
 
 Cette fonctionnalité vous permet de rechercher les actions de suppression antérieures.
@@ -678,7 +678,7 @@ image::GlobAdm-HousekeepingHistory-Details_error.png[,840,354]
 
 
 [[_globadm_system_synchronizebuildarchive]]
-=== Synchronisation des Archives de construction 
+== Synchronisation des Archives de construction 
 (((Synchronisation des archives de construction)))  (((Administration globale ,Synchronisation des archives de construction))) 
 
 L`'écran _Synchronisation des archives de construction_ permet à l`'Administrateur IKAN ALM de synchroniser la représentation physique des Archives de Construction dans le système de fichiers et la représentation logique des Archives de Construction dans la base de données d`'IKAN ALM.

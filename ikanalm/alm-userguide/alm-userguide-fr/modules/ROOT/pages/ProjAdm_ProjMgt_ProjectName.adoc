@@ -1,5 +1,5 @@
 [[_projadmin_projectsoverview_viewing]]
-== [Dénomination du Projet] 
+= [Dénomination du Projet] 
 (((Administration des projets ,Dénomination du Projet)))  (((Options relatives à l’administration des projets ,Dénomination du Projet)))  (((Dénomination du Projet))) 
 
 La première option du sous-menu de l'Administration des projets indique le nom du Projet sélectionné.

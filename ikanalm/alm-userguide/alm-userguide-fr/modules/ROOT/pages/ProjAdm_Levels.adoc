@@ -1,5 +1,5 @@
 [[_projadm_levels]]
-== Niveaux 
+= Niveaux 
 (((Options relatives à l'administration des projets ,Niveaux)))  (((Niveaux)))  (((Administration des projets ,Niveaux))) 
 
 Cette option permet de définir des Niveaux et leurs Environnements, qui peuvent ensuite être associés à un Cycle de Vie d`'un Projet IKAN ALM.
@@ -48,7 +48,7 @@ Les actions suivantes sont possibles:
 ** <<ProjAdm_Levels.adoc#_levelenvmgt_historyview,Afficher l`'historique d`'un niveau>>
 
 [[_plevelenvmgt_createlevel]]
-=== Créer un niveau de construction
+== Créer un niveau de construction
 (((Niveaux ,Créer))) 
 
 . Dans le __Contexte de l'Administration des projets__, sélectionnez __Niveaux > Créer un Niveau de Construction__.
@@ -164,7 +164,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_beifijci]]
-=== Créer un niveau de test ou de production 
+== Créer un niveau de test ou de production 
 (((Niveaux ,Créer un niveau de test)))  (((Niveaux ,Créer un niveau de production))) 
 
 [NOTE]
@@ -310,7 +310,7 @@ Les boutons suivants sont également disponibles
 
 
 [[_levelenvmgt_overview]]
-=== Aperçu des niveaux
+== Aperçu des niveaux
 
 L`'écran _Aperçu des Niveaux_ affiche les informations concernant les Niveaux de construction, de test et de production définis pour un Projet.
 
@@ -328,7 +328,7 @@ Les actions suivantes sont possibles:
 ** <<ProjAdm_Levels.adoc#_levelenvmgt_historyview,Afficher l`'historique d`'un niveau>>
 
 [[_plevelenvmgt_accessing]]
-==== Écran de l`'administration des niveaux 
+=== Écran de l`'administration des niveaux 
 (((Niveaux ,Aperçu))) 
 
 . Dans le contexte de l'__Administration des projets__, sélectionnez __Niveaux > Aperçu__.
@@ -361,7 +361,7 @@ Pour une description détaillée des champs, se référer aux sections <<ProjAdm
 
 
 [[_plevelenvmgt_editlevel]]
-==== Modifier les paramètres d`'un niveau 
+=== Modifier les paramètres d`'un niveau 
 (((Niveaux ,Modifier)))  (((Paramètres ,Niveau))) 
 
 . Accédez à l`'écran _Aperçu des Niveaux_ pour le Projet requis.
@@ -401,7 +401,7 @@ Pour plus d`'informations, se référer aux sections:
 
 
 [[_levelenvmgt_levelphases]]
-===== Phases de niveau 
+==== Phases de niveau 
 (((Phases de Niveaux)))  (((Niveaux ,Phases))) 
 
 Lors de la création d`'un Niveau (Construction, Test ou Production), IKAN ALM lui reliera automatiquement le flux de Phases de niveau de noyau. 
@@ -440,7 +440,7 @@ Pour plus d`'informations, se référer aux procédures suivantes:
 * <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Insérer une Phase de niveau>>
 
 [[_plevelenvmgt_levelphasesoverview]]
-====== Écran de l`'aperçu des phases de niveau
+===== Écran de l`'aperçu des phases de niveau
  
 . Dans le contexte de l'__Administration des projets__, sélectionnez __Niveaux > Aperçu__.
 
@@ -471,7 +471,7 @@ une Phase_ en bas du panneau __Aperçu des Phases__. <<ProjAdm_Levels.adoc#_plev
 . Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Niveaux__.
 
 [[_plevelenvmgt_modifyorderphases]]
-====== Modifier la séquence des Phases de niveau
+===== Modifier la séquence des Phases de niveau
 
 . Accédez à l`'__Aperçu des Niveaux__.
 +
@@ -484,7 +484,7 @@ une Phase_ en bas du panneau __Aperçu des Phases__. <<ProjAdm_Levels.adoc#_plev
 . Utilisez le lien _Précédent_ pour retourner à l`'écran __Aperçu des Niveaux__.
 
 [[_plevelenvmgt_editlevelphases]]
-====== Modifier une Phase de niveau
+===== Modifier une Phase de niveau
 
 . Accédez à l`'__Aperçu des Niveaux__.
 +
@@ -507,7 +507,7 @@ Pour une description détaillée des champs, se référer à la section <<ProjAd
 Vous pouvez également cliquer sur le bouton _Actualiser_ pour revenir aux valeurs d`'origine ou sur le bouton _Annuler_ pour retourner à l'écran précédant sans enregistrer vos modifications.
 
 [[_plevelenvmgt_viewlevelphaseparams]]
-====== Afficher les Paramètres de Phase de niveau 
+===== Afficher les Paramètres de Phase de niveau 
 (((Niveaux ,Phases ,Afficher les Paramètres de phase d'Environnement)))  (((Paramètres ,Phase de niveau))) 
 
 . Accédez à l`'écran __Aperçu des Niveaux__.
@@ -626,7 +626,7 @@ de phase d'environnement_ approprié dans le panneau __Paramètres
 d'environnement connectés__.
 
 [[_plevelenvmgt_deletephase]]
-====== Supprimer une Phase de niveau
+===== Supprimer une Phase de niveau
 
 . Accédez à l`'__Aperçu des Niveaux__.
 +
@@ -645,7 +645,7 @@ image::ProjAdmin-Levels-Level-LevelPhase-Delete.png[,757,403]
 Vous pouvez également cliquer sur le bouton _Non_ pour retourner à l'écran précédent sans supprimer la Phase de Niveau.
 
 [[_plevelenvmgt_insertphase]]
-====== Insérer une Phase de niveau
+===== Insérer une Phase de niveau
 
 . Accédez à l`'__Aperçu des Niveaux__.
 +
@@ -697,7 +697,7 @@ Vous pouvez également utiliser le bouton _Annuler_ pour retourner à l`'écran 
 
 
 [[_levelenvmgt_builddeployenv]]
-===== Les Paramètres des Environnements de construction et de déploiement
+==== Les Paramètres des Environnements de construction et de déploiement
 
 L`'écran _Aperçu des Niveaux_ affiche également des informations concernant les Environnements de construction et de déploiement définis pour les Niveaux différents.
 
@@ -717,7 +717,7 @@ Pour plus d`'informations, se référer aux procédures suivantes:
 * <<ProjAdm_Levels.adoc#_plevelenvmgt_changedeploysequence,Modifier la séquence des environnements de déploiement>>
 
 [[_plevelenvmgt_createbuildenvironments]]
-====== Créer un environnement de construction 
+===== Créer un environnement de construction 
 (((Environnements de Construction ,Créer))) 
 
 . Accédez à l`'écran __Modifier un Niveau__.
@@ -733,7 +733,7 @@ image::ProjAdmin-Levels-BuildEnv-Create.png[,1018,522]
 Pour une description complète de la procédure, se référer à la section <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Créer un environnement de construction>>.
 
 [[_plevelenvmgt_createdeployenvironments]]
-====== Créer un environnement de déploiement  
+===== Créer un environnement de déploiement  
 (((Environnements de Déploiement ,Créer))) 
 
 . Accédez à l`'écran __Modifier un Niveau__.
@@ -749,7 +749,7 @@ image::ProjAdmin-Levels-DeployEnv-Create.png[,1016,532]
 Pour une description complète de la procédure, se référer à la section <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Créer un environnement de déploiement>>.
 
 [[_plevelenvmgt_changedeploysequence]]
-====== Modifier la séquence des environnements de déploiement
+===== Modifier la séquence des environnements de déploiement
 
 Quand un Environnement de déploiement est créé, le Numéro de séquence 0 lui est automatiquement attribué.
 Dans le cas où plusieurs Environnements de déploiement sont reliés à un Niveau donné, ils seront traités en parallèle car ils auront tous 0 comme Numéro de séquence.
@@ -785,7 +785,7 @@ Utilisez la liste déroulante à gauche de l`'Environnement de déploiement pour
 Vous pouvez également cliquer sur le bouton _Actualiser_ pour revenir aux valeurs d`'origine ou sur le bouton _Annuler_ pour retourner à l'écran précédant sans enregistrer vos modifications.
 
 [[_levelenvmgt_approvalsequence]]
-===== Les approbations 
+==== Les approbations 
 (((Approbations ,Séquence d’approbations))) 
 
 Pour les Niveaux de Test et de Production vous pouvez spécifier la séquence des Pré- et Post-approbations.
@@ -840,7 +840,7 @@ L'approbation est ajoutée à la Séquence dans l'écran __Modifier un Niveau__.
 . Répétez cette procédure pour définir toutes les Pré- et Post-Approbations requises.
 
 [[_plevelenvmgt_deletelevel]]
-==== Supprimer un niveau 
+=== Supprimer un niveau 
 (((Niveaux ,Supprimer))) 
 
 Si vous supprimer un Niveau, vous supprimez également les Environnements de construction et de déploiement connectés à ce Niveau, ainsi que toutes les informations historiques concernant les Requêtes de Niveau, les Constructions et les Déploiements.
@@ -868,7 +868,7 @@ image::ProjAdmin-Levels-Level-DeleteError.png[,503,466]
 Enlever le niveau du cycle de vie avant de supprimer le niveau. <<ProjAdm_Levels.adoc#_plevelenvmgt_deletelevel,Supprimer un niveau>>
 
 [[_plevelenvmgt_clonelevel]]
-==== Cloner un Niveau
+=== Cloner un Niveau
 
 . Accédez à l'écran __Aperçu des Niveaux__.
 +
@@ -894,7 +894,7 @@ Après avoir cloné le Niveau, vous pourrez modifier ces noms.
 Sans doute, vous aurez également à modifier les Emplacements Source et surtout les Emplacements Cible des Environnements de déploiement clonés.
 
 [[_levelenvmgt_historyview]]
-==== Afficher l`'historique d`'un niveau 
+=== Afficher l`'historique d`'un niveau 
 (((Niveaux ,Historique))) 
 
 . Accédez à l`'écran _Niveaux_ pour le Projet requis.

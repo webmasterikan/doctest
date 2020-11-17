@@ -1,6 +1,6 @@
 [[_globadm_schedulesoverview]]
 [[_globadm_schedules]]
-== Plans horaires 
+= Plans horaires 
 (((Administration globale ,Plans horaires)))  (((Plans horaires))) 
 
 Les Plans horaires sont des définitions précisant au Planificateur quand les Requêtes de Niveau pour un Niveau spécifique doivent être exécutées automatiquement.
@@ -20,7 +20,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 * <<GlobAdm_Schedules.adoc#_globadm_schedules_history,Afficher l`'historique d`'un plan horaire>>
 
 [[_globadm_schedulecreate]]
-=== Créer un plan horaire
+== Créer un plan horaire
 (((Plans horaires ,Créer))) 
 
 [NOTE]
@@ -135,7 +135,7 @@ a|_Sujets apparentés:_
 
 [[_globadm_schedulesoverview]]
 [[_pschedulesoverview]]
-=== Aperçu des plans horaires 
+== Aperçu des plans horaires 
 (((Plans horaires ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Plans horaires > Aperçu__.
@@ -187,7 +187,7 @@ Elle permet d`'afficher l`'historique d`'un Plan horaire.
 |===
 
 [[_globadm_schedules_edit]]
-==== Modifier la définition d`'un plan horaire 
+=== Modifier la définition d`'un plan horaire 
 (((Plans horaires ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Plans horaires > Aperçu__.
@@ -216,7 +216,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_schedules_delete]]
-==== Supprimer une définition de plan horaire 
+=== Supprimer une définition de plan horaire 
 (((Plans horaires ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Plans horaires > Aperçu__.
@@ -238,7 +238,7 @@ image::GlobAdm-Schedules-Delete-Error.png[,642,550]
 Avant de pouvoir supprimer le Plan horaire, vous devez enlever le Plan horaire pour tous les Niveaux listés.
 
 [[_globadm_schedules_history]]
-==== Afficher l`'historique d`'un plan horaire 
+=== Afficher l`'historique d`'un plan horaire 
 (((Plans horaires ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Plans horaires > Aperçu__.

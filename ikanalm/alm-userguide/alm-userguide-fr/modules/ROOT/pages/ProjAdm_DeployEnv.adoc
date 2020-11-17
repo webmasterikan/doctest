@@ -1,6 +1,6 @@
 [[_projadm_deployenvironmentsoverview]]
 [[_projadm_deployenvironments]]
-== Environnements de déploiement  
+= Environnements de déploiement  
 (((Administration des projets ,Environnements de Déploiement)))  (((Options relatives à l'administration des projets ,Environnements de Déploiement)))  (((Environnements de Déploiement))) 
 
 Les Environnements de Déploiement sont des emplacements où un Outil de Déploiement utilise un script de déploiement pour décompresser et déployer un résultat de construction.
@@ -28,7 +28,7 @@ L`'écran __Aperçu des Paramètres __vous permet de créer, modifier, supprimer
 Pour plus d`'informations se référer au chapitre <<ProjAdm_EnvParams.adoc#_projadm_environmentparameters,Paramètres d`'environnement>>
 
 [[_pcreatedeployenvironment]]
-=== Créer un environnement de déploiement
+== Créer un environnement de déploiement
 (((Environnements de Déploiement ,Créer))) 
 
 . Dans le contexte de l'__Administration des projets__, sélectionnez __Environnements de Déploiement > Créer__.
@@ -120,7 +120,7 @@ Vous pouvez également utiliser le bouton _Réinitialiser_ pour nettoyer les cha
 
 
 [[_projadm_deployenvironmentsoverview]]
-=== Aperçu des environnements de déploiement 
+== Aperçu des environnements de déploiement 
 (((Environnements de Déploiement ,Aperçu))) 
 
 . Dans le contexte de l'__Administration des projets__, sélectionnez __Environnements de Déploiement > Aperçu__.
@@ -199,7 +199,7 @@ Cette option permet d'afficher l'Historique de l'Environnement de Déploiement.
 |===
 
 [[_projadm_deplenv_edit]]
-==== Modifier un environnement de déploiement 
+=== Modifier un environnement de déploiement 
 (((Environnements de Déploiement ,Modifier))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de déploiement__.
@@ -228,7 +228,7 @@ Pour une description détaillée, se référer à la section <<ProjAdm_DeployEnv
 Vous pouvez également cliquer sur le bouton _Actualiser_ pour revenir aux valeurs d`'origine ou sur le bouton _Annuler_ pour retourner à l'écran _Modifier un Environnement de déploiement_ sans enregistrer vos modifications.
 
 [[_projadm_deplenv_delete]]
-==== Supprimer un environnement de déploiement 
+=== Supprimer un environnement de déploiement 
 (((Environnements de Déploiement ,Supprimer))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de déploiement__.
@@ -252,7 +252,7 @@ Si vous supprimez un Environnement de Déploiement, vous supprimez également le
 ====
 
 [[_projadm_deplenv_clone]]
-==== Cloner un environnement de déploiement 
+=== Cloner un environnement de déploiement 
 (((Environnements de Déploiement ,Cloner))) 
 
 Si vous clonez un Environnement, toute la définition, y compris les Phases et les Paramètres, sera clonée
@@ -278,7 +278,7 @@ Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'
 
 
 [[_projadm_deplanv_phases]]
-==== Phases d`'environnement de déploiement 
+=== Phases d`'environnement de déploiement 
 (((Environnements de déploiement ,Phases)))  (((Phases ,Environnements de déploiement))) 
 
 Lors de la création d`'un Environnement de déploiement, IKAN ALM lui reliera automatiquement le flux de Phases d`'Environnement de déploiement par défaut.
@@ -304,7 +304,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 * <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phasedelete,Supprimer une Phase d`'environnement de déploiement>>
 
 [[_projadm_deplenv_phaseoverviewscreen]]
-===== L'Aperçu des Phases d'Environnement de Déploiement 
+==== L'Aperçu des Phases d'Environnement de Déploiement 
 (((Environnements de déploiement ,Phases ,Aperçu))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de déploiement__.
@@ -342,7 +342,7 @@ Cliquez sur le lien _Insérer une Phase_ en bas du panneau __Aperçu des Phases_
 . Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Environnements de Déploiement__.
 
 [[_projadm_deploenv_phasesinsert]]
-===== Insérer une Phase d`'environnement de déploiement 
+==== Insérer une Phase d`'environnement de déploiement 
 (((Environnements de déploiement ,Phases ,Insérer))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de déploiement__.
@@ -393,7 +393,7 @@ Si vous utilisez la même Phase plusieurs fois, il est utile d'ajouter un libell
 Vous pouvez également utiliser le bouton _Annuler_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_projadm_deployenv_phaseedit]]
-===== Modifier une Phase d`'environnement de déploiement 
+==== Modifier une Phase d`'environnement de déploiement 
 (((Environnements de déploiement ,Phases ,Insérer))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de déploiement__.
@@ -418,7 +418,7 @@ Pour une description détaillée des champs, se référer à la section <<ProjAd
 Vous pouvez également cliquer sur le bouton _Actualiser_ pour revenir aux valeurs d`'origine ou sur le bouton _Annuler_ pour retourner à l'écran précédant sans enregistrer vos modifications.
 
 [[_projadm_deployenv_modifyorderphases]]
-===== Modifier la séquence des Phases d'Environnement de déploiement 
+==== Modifier la séquence des Phases d'Environnement de déploiement 
 (((Environnements de déploiement ,Phases ,Modifier la séquence))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de déploiement__.
@@ -446,7 +446,7 @@ Sinon, modifiez sa __Phase suivante si erreur __avec une Phase postérieure.
 
 
 [[_projadm_deployenv_viewbuildenvphaseparams]]
-===== Afficher les Paramètres de phase d'Environnement de déploiement 
+==== Afficher les Paramètres de phase d'Environnement de déploiement 
 (((Environnements de déploiement ,Phases ,Afficher les Paramètres de phase d'Environnement de déploiement)))  (((Paramètres ,Phase d’Environnement de déploiement))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de déploiement__.
@@ -566,7 +566,7 @@ d'environnement connectés__.
 
 
 [[_projadm_deployenv_phasedelete]]
-===== Supprimer une Phase d`'environnement de déploiement 
+==== Supprimer une Phase d`'environnement de déploiement 
 (((Environnements de déploiement ,Phases ,Supprimer))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de déploiement__.
@@ -587,7 +587,7 @@ image::ProjAdmin-DeployEnv-DeletePhase.png[,523,120]
 Vous pouvez également cliquer sur le bouton _Non_ pour retourner à l'écran précédent sans supprimer la Phase d'Environnement de déploiement.
 
 [[_projadm_deployenv_viewdeployenvparams]]
-==== Afficher les paramètres d`'environnement de déploiement 
+=== Afficher les paramètres d`'environnement de déploiement 
 (((Environnements de déploiement ,Voir les Paramètres)))  (((Paramètres ,Environnement de déploiement))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de déploiement__.
@@ -604,7 +604,7 @@ Pour une description détaillée des champs, se référer à la section <<ProjAd
 
 
 [[_projadm_deployenv_historyview]]
-==== Afficher l`'historique d`'un environnement de déploiement 
+=== Afficher l`'historique d`'un environnement de déploiement 
 (((Environnements de Déploiement ,Historique))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de déploiement__.

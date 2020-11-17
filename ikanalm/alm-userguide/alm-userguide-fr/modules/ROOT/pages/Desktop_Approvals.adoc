@@ -1,6 +1,6 @@
 [[_desktop_outstandingapprovalsscreen]]
 [[_desktop_outstandingapprovals]]
-== Approbations 
+= Approbations 
 (((Bureau ,Approbations)))  (((Approbations)))  (((Approbations))) 
 
 Il existe deux types d`'Approbations qui peuvent être définies pour des Niveaux de Test ou de Production (<<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Les approbations>>):
@@ -37,7 +37,7 @@ Se référer aux sections suivantes pour une description plus détaillée:
 
 
 [[_desktop_outstandingapprovalsscreen]]
-=== Écran des Approbations en attente 
+== Écran des Approbations en attente 
 (((Approbations ,Approbations en attente))) 
 
 . Dans le Menu Principal, sélectionnez __Approbations > Approbations en attente__.
@@ -135,7 +135,7 @@ En plus de ces champs informatifs, les liens suivants sont disponibles pour chaq
 
 
 [[_desktop_outstandingapprovalsapprove]]
-=== Approuver une Approbation en attente 
+== Approuver une Approbation en attente 
 (((Approbations ,Approuver))) 
 
 . Dans le Menu Principal, sélectionnez __Approbations > Approbations en attente__.
@@ -203,7 +203,7 @@ attente_ sans approuver la Requête de Niveau, cliquez sur le bouton __Annuler__
 
 
 [[_desktop_outstandingapprovalsreject]]
-=== Rejeter une Approbation en attente 
+== Rejeter une Approbation en attente 
 (((Approbations ,Rejeter))) 
 
 . Dans le Menu Principal, sélectionnez __Approbations > Approbations en attente__.
@@ -233,7 +233,7 @@ attente_ sans rejeter la Requête de Niveau, cliquez sur le bouton __Annuler__.
 
 
 [[_desktop_approvals_overview]]
-=== Écran de l`'aperçu des approbations 
+== Écran de l`'aperçu des approbations 
 (((Approbations, Aperçu))) 
 
 . Dans le Menu Principal, sélectionnez __Approbations > Aperçu des Approbations__.

@@ -1,6 +1,6 @@
 
 [[_predefinedbuildparameters]]
-== Paramètres de construction prédéfinis 
+= Paramètres de construction prédéfinis 
 (((Paramètres prédéfinis)))  (((Paramètres prédéfinis ,Construction)))  (((Paramètres de construction ,Paramètres de construction prédéfinis))) 
 
 Le tableau suivant offre un aperçu des Paramètres de construction prédéfinis:

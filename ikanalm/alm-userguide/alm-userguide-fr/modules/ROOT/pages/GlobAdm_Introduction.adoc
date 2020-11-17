@@ -1,5 +1,5 @@
 [[_globadm_introduction]]
-== Administration globale 
+= Administration globale 
 (((Administration globale))) 
 
 La page d'accueil d`'Administration globale affiche l`'aperçu des toutes les activités qui peuvent aussi être sélectionnées à partir du menu principal.

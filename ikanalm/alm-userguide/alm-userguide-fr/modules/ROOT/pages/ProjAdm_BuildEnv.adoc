@@ -1,5 +1,5 @@
 [[_projadm_buildenvironments]]
-== Environnements de construction  
+= Environnements de construction  
 (((Options relatives à l'administration des projets ,Environnements de Construction)))  (((Administration des projets ,Environnements de Construction)))  (((Environnements de Construction))) 
 
 Les Environnements de Construction sont des emplacements où le code récupéré du RCV est construit.
@@ -34,7 +34,7 @@ L`'écran __Aperçu des Paramètres __vous permet de créer, modifier, supprimer
 Pour plus d`'informations se référer au chapitre <<ProjAdm_EnvParams.adoc#_projadm_environmentparameters,Paramètres d`'environnement>>
 
 [[_pcreatebuildenvironment]]
-=== Créer un environnement de construction
+== Créer un environnement de construction
 (((Environnements de Construction ,Créer))) 
 
 . Dans le contexte de l'__Administration des projets__, sélectionnez __Environnements de construction > Créer__.
@@ -137,7 +137,7 @@ Vous pouvez également cliquer sur le bouton _Réinitialiser_ pour nettoyer les 
 
 
 [[_buildenvironmentsoverview]]
-=== Aperçu des environnements de construction 
+== Aperçu des environnements de construction 
 (((Environnements de Construction ,Aperçu)))  (((Environnements de Construction ,Modifier)))  (((Environnements de Construction ,Supprimer)))  (((Environnements de Construction ,Cloner))) 
 
 . Dans le contexte de l'__Administration des projets__, sélectionnez __Environnements de construction > Aperçu__.
@@ -222,7 +222,7 @@ Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent �
 ====
 
 [[_projadm_buildenv_edit]]
-==== Modifier un environnement de construction
+=== Modifier un environnement de construction
 . Accédez à l`'écran __Aperçu des Environnements de construction__.
 Voir <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,Aperçu des environnements de construction>>
 
@@ -248,7 +248,7 @@ Pour une description détaillée, se référer à la section <<ProjAdm_BuildEnv.
 Vous pouvez également cliquer sur le bouton _Actualiser_ pour revenir aux valeurs d`'origine ou sur le bouton _Annuler_ pour retourner à l'écran _Modifier l'Environnement de construction_ sans enregistrer vos modifications.
 
 [[_projadm_buildenv_delete]]
-==== Supprimer un environnement de construction
+=== Supprimer un environnement de construction
 . Accédez à l`'écran __Aperçu des Environnements de construction__.
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,Aperçu des environnements de construction>>
@@ -270,7 +270,7 @@ Si vous supprimez un Environnement de Construction, vous supprimez également le
 ====
 
 [[_projadm_buildenv_clone]]
-==== Cloner un environnement de construction 
+=== Cloner un environnement de construction 
 (((Environnements de Construction ,Cloner))) 
 
 Si vous clonez un Environnement, toute la définition, y compris les Phases et les Paramètres, sera clonée
@@ -296,7 +296,7 @@ Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'
 
 
 [[_projadm_buildenv_phases]]
-==== Phases d`'environnement de construction 
+=== Phases d`'environnement de construction 
 (((Environnements de construction ,Phases)))  (((Phases ,Environnement de construction))) 
 
 Lors de la création d`'un Environnement de construction, IKAN ALM créera automatiquement le flux de Phases d`'Environnement de construction par défaut. 
@@ -325,7 +325,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 * <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phasedelete,Supprimer une Phase d`'environnement de construction>>
 
 [[_projadm_buildenv_buildenvphasesoverview]]
-===== L'Aperçu des Phases d'Environnement de construction 
+==== L'Aperçu des Phases d'Environnement de construction 
 (((Environnements de construction ,Phases ,Aperçu))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de construction__.
@@ -372,7 +372,7 @@ Cliquez sur le lien _Insérer une Phase_ en bas du panneau __Aperçu des Phases_
 . Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Environnements de Construction__.
 
 [[_projadm_buildenv_insertphase]]
-===== Insérer une Phase d`'environnement de construction 
+==== Insérer une Phase d`'environnement de construction 
 (((Environnements de construction ,Phases ,Insérer))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de construction__.
@@ -423,7 +423,7 @@ Si vous utilisez la même Phase plusieurs fois, il est utile d'ajouter un libell
 Vous pouvez également utiliser le bouton _Annuler_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_projadm_buildenv_editphase]]
-===== Modifier une Phase d`'environnement de construction 
+==== Modifier une Phase d`'environnement de construction 
 (((Phases ,Environnements de Construction))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de construction__.
@@ -448,7 +448,7 @@ Pour une description détaillée des champs, se référer à la section <<ProjAd
 Vous pouvez également cliquer sur le bouton _Actualiser_ pour revenir aux valeurs d`'origine ou sur le bouton _Annuler_ pour retourner à l'écran Modifier l'Environnement de construction sans enregistrer vos modifications.
 
 [[_projadm_buildenv_modifyorderphases]]
-===== Modifier la séquence des Phases d'Environnement de construction 
+==== Modifier la séquence des Phases d'Environnement de construction 
 (((Environnements de construction ,Phases ,Modifier la séquence))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de construction__.
@@ -471,7 +471,7 @@ Sinon, modifiez sa __Phase suivante si erreur __avec une Phase postérieure.
 
 
 [[_projadm_buildenv_viewbuildenvphaseparams]]
-===== Afficher les Paramètres de phase d'Environnement de construction 
+==== Afficher les Paramètres de phase d'Environnement de construction 
 (((Environnements de construction ,Phases ,Afficher les Paramètres de phase d'Environnement de construction)))  (((Paramètres ,Phase d’Environnement de construction))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de construction__.
@@ -591,7 +591,7 @@ d'environnement connectés__.
 
 
 [[_projadm_buildenv_phasedelete]]
-===== Supprimer une Phase d`'environnement de construction 
+==== Supprimer une Phase d`'environnement de construction 
 (((Environnements de construction ,Phases ,Supprimer))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de Construction__.
@@ -612,7 +612,7 @@ image::ProjAdmin-BuildEnv-DeletePhase.png[,507,133]
 Vous pouvez également cliquer sur le bouton _Non_ pour retourner à l'écran précédent sans supprimer la Phase d'Environnement de construction.
 
 [[_projadm_buildenv_viewparameters]]
-==== Afficher les paramètres d`'environnement de construction 
+=== Afficher les paramètres d`'environnement de construction 
 (((Environnements de Construction ,Aperçu des Paramètres de Construction)))  (((Paramètres ,Environnement de construction))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de construction__.
@@ -629,7 +629,7 @@ Pour une description détaillée des champs, se référer à la section <<ProjAd
 
 
 [[_projadm_buildenv_historyview]]
-==== Afficher l`'historique d`'un environnement de construction 
+=== Afficher l`'historique d`'un environnement de construction 
 (((Environnements de Construction ,Historique))) 
 
 . Accédez à l`'écran __Aperçu des Environnements de construction__.

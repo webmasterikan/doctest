@@ -1,5 +1,5 @@
 [[_desktop_managedesktop]]
-== Administrer son bureau 
+= Administrer son bureau 
 (((Bureau ,Administrer votre bureau)))  (((Administrer votre bureau))) 
 
 Chaque Utilisateur IKAN ALM dispose de son Bureau personnel composé d`'onglets de Bureau administrables, chacun contenant l`'information actuelle des Branches de projet, des Niveaux et des Paquets qui l`'intéressent.
@@ -20,7 +20,7 @@ Les actions suivantes sont possibles:
 ** <<Desktop_ManageDesktop.adoc#_managedesktop_removingelements,Supprimer un élément de bureau>>
 
 [[_managedesktop_desktopoverview]]
-=== Aperçu du bureau
+== Aperçu du bureau
 (((Bureau ,Aperçu))) 
 
 . Sélectionnez _Bureau_ dans le Menu Principal.
@@ -179,7 +179,7 @@ automatique __est activée, le Bureau sera actualisé en fonction du délai de r
 <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Administrer son bureau>>
 
 [[_managedesktop_addingtabs]]
-=== Ajouter un onglet de bureau 
+== Ajouter un onglet de bureau 
 (((Bureau ,Ajouter un onglet de bureau))) 
 
 . Sélectionnez _Bureau_ dans le Menu Principal.
@@ -220,7 +220,7 @@ Cette description s`'affichera dès que le pointeur de la souris est positionné
 Vous pouvez également utiliser le bouton _Annuler_ pour retourner à l`'__Aperçu du bureau__ sans faire de modifications.
 
 [[_managedesktop_modifyingtabinformation]]
-=== Modifier le nom d`'un onglet de bureau 
+== Modifier le nom d`'un onglet de bureau 
 (((Bureau ,Modifier le nom d’un onglet de bureau))) 
 
 . Sélectionnez _Bureau_ dans le Menu Principal.
@@ -248,7 +248,7 @@ Vous pouvez également utiliser le bouton _Annuler_ pour retourner à l`'__Aper�
 
 
 [[_managedesktop_removingtabpage]]
-=== Supprimer un onglet de Bureau 
+== Supprimer un onglet de Bureau 
 (((Bureau ,Supprimer un onglet de bureau))) 
 
 Cliquez sur le bouton image:icons/icon_removeDesktop.gif[,15,14] __ Supprimer
@@ -267,7 +267,7 @@ image::Desktop-ManageDesktop-RemoveTabPage.png[,454,147]
 Confirmez ou annulez la suppression de l`'onglet.
 
 [[_managedesktop_addingelements]]
-=== Ajouter un élément à un onglet de bureau 
+== Ajouter un élément à un onglet de bureau 
 (((Bureau ,Ajouter un élément à un onglet de bureau))) 
 
 . Sélectionnez _Bureau_ dans le Menu Principal.
@@ -386,7 +386,7 @@ Si vous ajoutez une Branche ou un Paquet contenant plusieurs Niveaux, cette Bran
 
 
 [[_managedesktop_arrangingelements]]
-=== Déplacer un élément dans un bureau 
+== Déplacer un élément dans un bureau 
 (((Bureau ,Déplacer un élément dans un bureau))) 
 
 Pour modifier l`'ordre des éléments, il faut sélectionner l`'élément avec la souris et, en gardant le bouton de la souris enfoncé, le déplacer à l`'endroit de votre choix entre les autres éléments de l`'onglet.
@@ -405,7 +405,7 @@ image::Desktop-ManageDesktop-Rearranging.png[,899,314]
 
 
 [[_managedesktop_removingelements]]
-=== Supprimer un élément de bureau 
+== Supprimer un élément de bureau 
 (((Bureau ,Supprimer un élément de bureau))) 
 
 Pour retirer une Branche, un Niveau ou un Paquet, cliquez le bouton image:icons/remove.gif[,15,15] _Retirer_ à droite de l`'élément.

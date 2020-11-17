@@ -1,5 +1,5 @@
 [[_desktop_introduction]]
-== Bureau 
+= Bureau 
  (((Bureau))) 
 
 Le Bureau constitue l`'environnement de travail de l`'utilisateur régulier d`'IKAN ALM.

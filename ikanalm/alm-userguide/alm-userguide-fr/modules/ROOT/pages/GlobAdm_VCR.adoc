@@ -1,6 +1,6 @@
 [[_globadm_vcr_git]]
 [[_globadm_vcr]]
-== Référentiels de contrôle de version 
+= Référentiels de contrôle de version 
 (((Administration globale ,Référentiels de contrôle de version)))  (((Référentiels de contrôle de version))) 
 
 Actuellement, IKAN ALM supporte différents types de Référentiels de Contrôle de Version (RCV):
@@ -22,7 +22,7 @@ Vous devez d`'abord installer un client RCV sur le Serveur IKAN ALM pour pouvoir
 ====
 
 [[_globaadm_vcr_create]]
-=== Créer un Référentiel 
+== Créer un Référentiel 
 (((Référentiel ,Créer))) 
 
 [NOTE]
@@ -53,7 +53,7 @@ Pour plus d'informations concernant ces détails, se référer aux sections appr
 
 
 [[_globadm_vcr_overview]]
-=== Écran de l`'aperçu des Référentiels 
+== Écran de l`'aperçu des Référentiels 
 (((Référentiel ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -109,7 +109,7 @@ Pour plus d`'informations, se référer aux sections appropriées:
 
 
 [[_sglobadmin_vcr_svn]]
-=== Référentiels de contrôle de version Subversion 
+== Référentiels de contrôle de version Subversion 
 (((Référentiels de contrôle de version ,Subversion))) 
 
 Pour des informations plus détaillées, se référer aux sections suivantes:
@@ -121,7 +121,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_svn_history,Afficher l`'historique d`'un Référentiel Subversion>>
 
 [[_pcreatesvnrepository]]
-==== Créer un Référentiel Subversion 
+=== Créer un Référentiel Subversion 
 (((Subversion ,Créer))) 
 
 [NOTE]
@@ -260,7 +260,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_pworkwithsvnoverview]]
-==== Aperçu des Référentiels Subversion 
+=== Aperçu des Référentiels Subversion 
 (((Subversion))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -315,7 +315,7 @@ Elle permet d`'afficher l`'historique d`'un Référentiel Subversion.
 |===
 
 [[_globadm_vcr_svn_edit]]
-==== Modifier un référentiel Subversion 
+=== Modifier un référentiel Subversion 
 (((Subversion ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -351,7 +351,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_vcr_svn_delete]]
-==== Supprimer un Référentiel Subversion 
+=== Supprimer un Référentiel Subversion 
 (((Subversion ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -378,7 +378,7 @@ image::GlobAdm-VCR-Subversion-Delete-Error.png[,710,694]
 Avant de supprimer le Référentiel, vous devez assigner le(s) Projet(s) listés à un autre Référentiel de Contrôle de Version.
 
 [[_globadm_vcr_svn_history]]
-==== Afficher l`'historique d`'un Référentiel Subversion 
+=== Afficher l`'historique d`'un Référentiel Subversion 
 (((Subversion ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -397,7 +397,7 @@ l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_hist
 
 
 [[_globadm_vcr_git]]
-=== Référentiels de contrôle de version Git 
+== Référentiels de contrôle de version Git 
 (((Référentiels de contrôle de version ,Git))) 
 
 Se référer aux sections suivantes pour des informations plus détaillées:
@@ -409,7 +409,7 @@ Se référer aux sections suivantes pour des informations plus détaillées:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_git_history,Afficher l'Historique d`'un Référentiel Git>>
 
 [[_globadm_vcr_git_create]]
-==== Créer un Référentiel Git 
+=== Créer un Référentiel Git 
 (((Git ,Créer))) 
 
 [NOTE]
@@ -544,7 +544,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_vcr_git_overview]]
-==== Écran de l'Aperçu des Référentiels Git 
+=== Écran de l'Aperçu des Référentiels Git 
 (((Git ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Créer__.
@@ -601,7 +601,7 @@ Elle permet d`'afficher l`'historique de toutes les opérations de création, de
 |===
 
 [[_globadm_vcr_git_edit]]
-==== Modifier un Référentiel Git 
+=== Modifier un Référentiel Git 
 (((Git ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -636,7 +636,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_vcr_git_delete]]
-==== Supprimer un Référentiel Git 
+=== Supprimer un Référentiel Git 
 (((Git ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -663,7 +663,7 @@ image::GlobAdm-VCR-Git-Delete-Error.png[,624,480]
 Avant de supprimer les RCVs, vous devez connecter les Projets signalés à un autre RCV.
 
 [[_globadm_vcr_git_history]]
-==== Afficher l'Historique d`'un Référentiel Git 
+=== Afficher l'Historique d`'un Référentiel Git 
 (((Git ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -682,7 +682,7 @@ de l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_h
 
 
 [[_sglobadmin_vcr_cvs]]
-=== Référentiels de contrôle de version CVS 
+== Référentiels de contrôle de version CVS 
 (((Référentiels de contrôle de version ,CVS))) 
 
 Pour des informations plus détaillées, se référer aux sections suivantes:
@@ -694,7 +694,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_cvs_history,Afficher l`'historique d`'un Référentiel CVS>>
 
 [[_pcreatecvsrepository]]
-==== Créer un Référentiel CVS 
+=== Créer un Référentiel CVS 
 (((CVS ,Créer))) 
 
 [NOTE]
@@ -840,7 +840,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_pworkwithcvsoverview]]
-==== Aperçu des Référentiels CVS 
+=== Aperçu des Référentiels CVS 
 (((CVS ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -897,7 +897,7 @@ Elle permet d`'afficher l`'historique d`'un Référentiel CVS.
 |===
 
 [[_globadm_vcr_cvs_edit]]
-==== Modifier un Référentiel CVS 
+=== Modifier un Référentiel CVS 
 (((CVS ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -933,7 +933,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_vcr_cvs_delete]]
-==== Supprimer un Référentiel CVS 
+=== Supprimer un Référentiel CVS 
 (((CVS ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -960,7 +960,7 @@ image::GlobAdm-VCR-CVS-Delete-Error.png[,496,500]
 Avant de supprimer le Référentiel, vous devez assigner le(s) Projet(s) listés à un autre Référentiel de Contrôle de Version.
 
 [[_globadm_vcr_cvs_history]]
-==== Afficher l`'historique d`'un Référentiel CVS 
+=== Afficher l`'historique d`'un Référentiel CVS 
 (((CVS ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -979,7 +979,7 @@ l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_hist
 
 
 [[_sglobadmin_vcr_vss]]
-=== Référentiels de contrôle de version Visual Source Safe (VSS) 
+== Référentiels de contrôle de version Visual Source Safe (VSS) 
 (((Référentiels de contrôle de version ,VSS))) 
 
 Pour des informations plus détaillées, se référer aux sections suivantes:
@@ -991,7 +991,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_vss_history,Afficher l`'historique d`'un Référentiel VSS>>
 
 [[_pcreatevssrepository]]
-==== Créer un Référentiel VSS 
+=== Créer un Référentiel VSS 
 (((VSS ,Créer))) 
 
 [NOTE]
@@ -1113,7 +1113,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_pworkwithvssoverview]]
-==== Aperçu des Référentiels VSS 
+=== Aperçu des Référentiels VSS 
 (((VSS ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1170,7 +1170,7 @@ Elle permet d`'afficher l`'historique d`'un Référentiel VSS.
 |===
 
 [[_globadm_vcr_vss_edit]]
-==== Modifier un Référentiel VSS 
+=== Modifier un Référentiel VSS 
 (((VSS ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1206,7 +1206,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_vcr_vss_delete]]
-==== Supprimer un Référentiel VSS 
+=== Supprimer un Référentiel VSS 
 (((VSS ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1233,7 +1233,7 @@ image::GlobAdm-VCR-VSS-Delete-Error.png[,561,506]
 Avant de supprimer le Référentiel, vous devez assigner le(s) Projet(s) à un autre Référentiel de Contrôle de Version.
 
 [[_globadm_vcr_vss_history]]
-==== Afficher l`'historique d`'un Référentiel VSS 
+=== Afficher l`'historique d`'un Référentiel VSS 
 (((VSS ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1252,7 +1252,7 @@ l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_hist
 
 
 [[_sglobadmin_vcr_clearcasebase]]
-=== Référentiels de contrôle de version ClearCase 
+== Référentiels de contrôle de version ClearCase 
 (((Référentiels de contrôle de version ,ClearCase))) 
 
 Pour des informations plus détaillées, se référer aux sections suivantes:
@@ -1264,7 +1264,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_history,Afficher l`'historique d`'un Référentiel ClearCase>>
 
 [[_pcreateclearcasebaserepository]]
-==== Créer un Référentiel ClearCase 
+=== Créer un Référentiel ClearCase 
 ((( ClearCase ,Créer))) 
 
 [NOTE]
@@ -1409,7 +1409,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_pworkwithclearcasebaseoverview]]
-==== Aperçu des Référentiels ClearCase 
+=== Aperçu des Référentiels ClearCase 
 (((ClearCase ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1464,7 +1464,7 @@ Elle permet d`'afficher l`'historique d`'un Référentiel ClearCase.
 |===
 
 [[_globadm_vcr_clearcase_edit]]
-==== Modifier un Référentiel ClearCase 
+=== Modifier un Référentiel ClearCase 
 ((( ClearCase ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1500,7 +1500,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_vcr_clearcase_delete]]
-==== Supprimer un Référentiel ClearCase 
+=== Supprimer un Référentiel ClearCase 
 ((( ClearCase ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1527,7 +1527,7 @@ image::GlobAdm-VCR-ClearCase-Delete-Error.png[,535,470]
 Avant de supprimer le Référentiel, vous devez assigner le(s) Projet(s) listés à un autre Référentiel de Contrôle de Version.
 
 [[_globadm_vcr_clearcase_history]]
-==== Afficher l`'historique d`'un Référentiel ClearCase 
+=== Afficher l`'historique d`'un Référentiel ClearCase 
 ((( ClearCase ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1546,7 +1546,7 @@ l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_hist
 
 
 [[_sglobadmin_vcr_pvcs]]
-=== Référentiels de contrôle de version PVCS 
+== Référentiels de contrôle de version PVCS 
 ((( Référentiels de contrôle de version ,PVCS))) 
 
 Pour des informations plus détaillées, se référer aux sections suivantes:
@@ -1558,7 +1558,7 @@ Pour des informations plus détaillées, se référer aux sections suivantes:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_history,Afficher l`'historique d`'un Référentiel PVCS>>
 
 [[_pcreatepvcsrepository]]
-==== Créer un Référentiel PVCS 
+=== Créer un Référentiel PVCS 
 (((PVCS ,Créer))) 
 
 [NOTE]
@@ -1699,7 +1699,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_pworkwithpvcsoverview]]
-==== Aperçu des Référentiels PVCS 
+=== Aperçu des Référentiels PVCS 
 (((PVCS ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1756,7 +1756,7 @@ Elle permet d`'afficher l`'historique d`'un Référentiel PVCS.
 |===
 
 [[_globadm_vcr_pvcs_edit]]
-==== Modifier un Référentiel PVCS 
+=== Modifier un Référentiel PVCS 
 (((PVCS ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1792,7 +1792,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_vcr_pvcs_delete]]
-==== Supprimer un Référentiel PVCS 
+=== Supprimer un Référentiel PVCS 
 (((PVCS ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1819,7 +1819,7 @@ image::GlobAdm-VCR-PVCS-Delete-Error.png[,587,527]
 Avant de supprimer le Référentiel, vous devez assigner le(s) Projet(s) listés à un autre Référentiel de Contrôle de Version.
 
 [[_globadm_vcr_pvcs_history]]
-==== Afficher l`'historique d`'un Référentiel PVCS 
+=== Afficher l`'historique d`'un Référentiel PVCS 
 (((PVCS ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -1838,7 +1838,7 @@ l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_hist
 
 
 [[_globadm_vcr_tfvc]]
-=== Référentiels de contrôle de version TFVC 
+== Référentiels de contrôle de version TFVC 
 (((Référentiels de contrôle de version ,TFVC))) 
 
 Se référer aux sections suivantes pour des informations plus détaillées:
@@ -1850,7 +1850,7 @@ Se référer aux sections suivantes pour des informations plus détaillées:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_history,Afficher l'Historique d`'un Référentiel TFVC>>
 
 [[_globadm_vcr_tfvc_create]]
-==== Créer un Référentiel TFVC 
+=== Créer un Référentiel TFVC 
 (((Git ,Créer))) 
 
 [NOTE]
@@ -1966,7 +1966,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_vcr_tfvc_overview]]
-==== Écran de l'Aperçu des Référentiels TFVC 
+=== Écran de l'Aperçu des Référentiels TFVC 
 (((TFVC ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -2023,7 +2023,7 @@ Elle permet d`'afficher l`'historique de toutes les opérations de création, de
 |===
 
 [[_globadm_vcr_tfvc_edit]]
-==== Modifier un Référentiel TFVC 
+=== Modifier un Référentiel TFVC 
 (((Git ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -2059,7 +2059,7 @@ Les boutons suivants sont également disponibles:
 * _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_globadm_vcr_tfvc_delete]]
-==== Supprimer un Référentiel TFVC 
+=== Supprimer un Référentiel TFVC 
 (((Git ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
@@ -2086,7 +2086,7 @@ image::GlobAdm-VCR-TFVC-Delete-Error.png[,661,426]
 Avant de supprimer les RCVs, vous devez connecter les Projets signalés à un autre RCV.
 
 [[_globadm_vcr_tfvc_history]]
-==== Afficher l'Historique d`'un Référentiel TFVC 
+=== Afficher l'Historique d`'un Référentiel TFVC 
 (((Git ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.

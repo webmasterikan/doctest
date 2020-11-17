@@ -1,6 +1,6 @@
 
 [[_projadm_projmgtoptions]]
-== Options relatives à l`'administration des projets  
+= Options relatives à l`'administration des projets  
 (((Administration des projets ,Options)))  (((Options relatives à l'administration des projets))) 
 
 Une fois le Projet sélectionné dans l'Aperçu des Projets, les options de l'Aperçu deviennent disponibles.

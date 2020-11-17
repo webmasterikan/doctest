@@ -1,6 +1,6 @@
 
 [[_cpredefinedbuildparameters]]
-== Paramètres de niveau prédéfinis 
+= Paramètres de niveau prédéfinis 
 (((Paramètres prédéfinis ,Niveau)))  (((Paramètres de niveau ,Paramètres de niveau prédéfinis))) 
 
 Le tableau suivant offre un aperçu des Paramètres des Environnements de niveau prédéfinis:

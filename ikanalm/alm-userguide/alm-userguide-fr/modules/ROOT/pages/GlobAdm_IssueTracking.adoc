@@ -1,6 +1,6 @@
 [[_globadm_issuetrackingcreate]]
 [[_globadm_issuetracking]]
-== Suivi des Incidents 
+= Suivi des Incidents 
 (((Administration globale ,Suivi des Incidents)))  (((Suivi des Incidents))) 
 
 La fonctionnalité de Suivi des Incidents d`'IKAN ALM permet de relier des Incidents d`'un Système de Suivi des Incidents externe à une Requête de Niveau IKAN ALM.
@@ -55,7 +55,7 @@ Pour plus d`'informations, se référer aux sections <<App_Phases.adoc#_phases_l
 
 [[_globadm_issuetrackingcreate]]
 [[_pcreateissuetrackingsystem]]
-=== Créer un Système de Suivi des Incidents 
+== Créer un Système de Suivi des Incidents 
 (((Suivi des Incidents ,Créer))) 
 
 [NOTE]
@@ -230,7 +230,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_issuetrackingoverview]]
-=== Aperçu des Systèmes de Suivi des Incidents 
+== Aperçu des Systèmes de Suivi des Incidents 
 (((Suivi des Incidents ,Aperçu))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Suivi des Incidents > Aperçu__.
@@ -282,7 +282,7 @@ Elle permet d'afficher l'Historique de toutes les opérations de création, de m
 |===
 
 [[_globadm_issuetracking_edit]]
-==== Modifier la définition d`'un système de suivi des incidents 
+=== Modifier la définition d`'un système de suivi des incidents 
 (((Suivi des Incidents ,Modifier))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Suivi des Incidents > Aperçu__.
@@ -334,7 +334,7 @@ Corrigez les erreurs spécifiés dans la trace de pile et refaites le test.
 Pour plus d`'informations, se référer à la section <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_overview,Le panneau "Aperçu des Propriétés du Système de Suivi des Incidents">>
 
 [[_globadm_issuetracking_delete]]
-==== Supprimer une définition de système de suivi des incidents 
+=== Supprimer une définition de système de suivi des incidents 
 (((Suivi des Incidents ,Supprimer))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Suivi des Incidents > Aperçu__.
@@ -356,7 +356,7 @@ image::GlobAdmin-IssueTracking-Delete-Error.png[,748,558]
 Vous devez modifier la définition des Projets affichés, avant de pouvoir supprimer le Système de Suivi des Incidents.
 
 [[_globadm_issuetracking_history]]
-==== Afficher l`'historique d`'un système de suivi des incidents 
+=== Afficher l`'historique d`'un système de suivi des incidents 
 (((Suivi des Incidents ,Historique))) 
 
 . Dans le contexte de l'Administration globale, sélectionnez __Suivi des Incidents > Aperçu__.
@@ -382,7 +382,7 @@ a|_Sujets apparentés:_
 |===
 
 [[_globadm_issuetrackingproperties_overview]]
-=== Le panneau "Aperçu des Propriétés du Système de Suivi des Incidents" 
+== Le panneau "Aperçu des Propriétés du Système de Suivi des Incidents" 
 (((Propriétés d’un Système de Suivi des Incidents)))  (((Systèmes de Suivi des Incidents ,Propriétés ,Aperçu)))  (((Systèmes de Suivi des Incidents ,Propriétés ,Créer)))  (((Systèmes de Suivi des Incidents ,Propriétés ,Modifier)))  (((Systèmes de Suivi des Incidents ,Propriétés ,Supprimer))) 
 
 Le panneau "Aperçu des Propriétés du Système de Suivi des Incidents" est disponible dans l'écran __Modifier
@@ -441,7 +441,7 @@ Elle permet de supprimer une définition de Propriété de Suivi des Incidents.
 
 
 [[_globadm_issuetrackingproperties_create]]
-==== Créer une Propriété d'un Système de Suivi des Incidents.
+=== Créer une Propriété d'un Système de Suivi des Incidents.
 
 . Dans le panneau __Aperçu des Propriétés du Système de Suivi des Incidents__, cliquez sur le lien image:icons/icon_createparameter.png[,15,15] _Créer_ pour la Propriété requise.
 +
@@ -502,7 +502,7 @@ Les boutons suivants sont également disponibles:
 * _Annuler_ pour retourner à l`'écran précédent sans enregistrer vos modifications.
 
 [[_globadm_issuetrackingproperties_edit]]
-==== Modifier une Propriété de Système de Suivi des Incidents
+=== Modifier une Propriété de Système de Suivi des Incidents
 
 . Dans le panneau __Aperçu des Propriétés du Système de Suivi des Incidents__, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour la Propriété requise.
 +
@@ -521,7 +521,7 @@ Les boutons suivants sont également disponibles:
 
 
 [[_globadm_issuetrackingproperties_delete]]
-==== Supprimer une Propriété de Système de Suivi des Incidents
+=== Supprimer une Propriété de Système de Suivi des Incidents
 
 . Dans le panneau __Aperçu des Propriétés du Système de Suivi des Incidents__, cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour la Propriété requise.
 +

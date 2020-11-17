@@ -1,6 +1,6 @@
 [[_desktop_personalsettings_edit]]
 [[_desktop_personalsettings]]
-== Paramètres personnels
+= Paramètres personnels
 
 La section "Paramètres personnels" est centrée sur les paramètres directement liés à votre compte, tels que votre nom, votre adresse de courrier, votre numéro de téléphone, ... 
 
@@ -14,7 +14,7 @@ Se référer aux procédures suivantes pour plus d`'information:
 
 [[_desktop_personalsettings_edit]]
 [[_pdefinepersonalsettings]]
-=== Modifier vos Paramètres personnels 
+== Modifier vos Paramètres personnels 
 (((Bureau ,Paramètres personnels)))  (((Paramètres personnels))) 
 
 . Sélectionnez __Bureau > Paramètres personnels__.
@@ -72,7 +72,7 @@ Cliquez le bouton _Actualiser_ si vous voulez récupérer les Paramètres enregi
 
 
 [[_desktop_searchfilters]]
-=== Définir des Filtres de recherche 
+== Définir des Filtres de recherche 
 (((Bureau ,Filtres de recherche)))  (((Filtres de recherche)))  (((Filtres de recherche ,Définir))) 
 
 Dans les écrans d'aperçu, les options de recherche améliorées permettent de spécifier les objets à afficher sur la liste d'aperçu.
@@ -88,7 +88,7 @@ Se référer aux procédures suivantes pour plus d`'information:
 * <<Desktop_PersonalSettings.adoc#_cihhjjjej8,Modifier les critères de recherche d'un Filtre>>
 
 [[_ciheecjhf2]]
-==== Créer un Filtre de recherche 
+=== Créer un Filtre de recherche 
 (((Filtres de recherche ,Créer))) 
 
 . Spécifiez les critères de recherche (avancés) requis.
@@ -114,7 +114,7 @@ Dans l'écran __Paramètres personnels__, vous pouvez modifier le nom et la desc
 ====
 
 [[_cihidaeja2]]
-==== Sélectionner un Filtre de recherche 
+=== Sélectionner un Filtre de recherche 
 (((Filtres de recherche ,Sélectionner))) 
 
 Dans les écrans d'aperçu, vous pouvez sélectionner un Filtre de recherche existant au lieu de saisir manuellement les critères de recherche
@@ -128,7 +128,7 @@ image::Search_SelectFilter.png[,938,272]
 Les critères de recherche seront remplis automatiquement et le résultat filtré s'affichera dans l'aperçu.
 
 [[_cihjfebab8]]
-==== Gérer les définitions des Filtres 
+=== Gérer les définitions des Filtres 
 (((Filtres de recherche ,Gérer)))  (((Filtres de recherche ,Modifier))) 
 
 Le panneau "Rechercher les Filtres" dans l'écran des Paramètres personnels vous permet d'afficher les définitions des filtres existants, de modifier leur nom et leur description ou de supprimer un Filtre
@@ -172,7 +172,7 @@ image::Search_DeleteFilter.png[,509,151]
 Cliquez sur le bouton _Supprimer_ pour confirmer la suppression du Filtre.
 
 [[_cihhjjjej8]]
-==== Modifier les critères de recherche d'un Filtre 
+=== Modifier les critères de recherche d'un Filtre 
 (((Filtres de recherche ,Modifier les critères de recherche))) 
 
 La modification des critères de recherche d'un Filtre n'est possible que sur les écrans d'aperçu eux-mêmes

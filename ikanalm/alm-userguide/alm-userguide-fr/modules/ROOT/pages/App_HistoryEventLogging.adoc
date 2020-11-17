@@ -1,6 +1,6 @@
 
 [[_historyeventlogging]]
-== Enregistrement de l`'historique et des événements 
+= Enregistrement de l`'historique et des événements 
 (((Historique)))  (((Événements)))  (((Enregistrement ,Historique et événements))) 
 
 Toutes les opérations de création, de modification ou de suppression relatives aux objets et composants d`'administration globale sont enregistrées dans la base de données d`'IKAN ALM.

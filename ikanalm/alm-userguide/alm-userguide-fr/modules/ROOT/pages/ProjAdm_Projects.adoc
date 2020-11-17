@@ -1,6 +1,6 @@
 [[_projadm_projectsoverview_hidingshowing]]
 [[_projadm_projects]]
-== Projets 
+= Projets 
 (((Administration des projets ,Projets)))  (((Projets))) 
 
 L`'écran _Aperçu des Projets_ fournit les informations concernant les Projets gérés par IKAN ALM.
@@ -18,7 +18,7 @@ Se référer aux procédures suivantes pour plus d`'information:
 * <<ProjAdm_Projects.adoc#_projadm_projectsoverview_historyview,Afficher l`'historique d`'un projet>>
 
 [[_projadmin_projectsoverview_accessing]]
-=== Écran de l`'aperçu des projets
+== Écran de l`'aperçu des projets
 (((Projets ,Aperçu))) 
 
 . Cliquez sur l'icône _Administration des projets _image:icons/icon_ProjectAdmin_13x13.png[,13,13]  dans le Menu Principal.
@@ -100,7 +100,7 @@ Elle permet d`'afficher l`'Historique de toutes les opérations de création, de
 |===
 
 
-=== Afficher les paramètres d`'un projet 
+== Afficher les paramètres d`'un projet 
 (((Projets ,Afficher))) 
 
 [NOTE]
@@ -137,7 +137,7 @@ sur le Projet__.
 . Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
 
 [[_projadmin_projectsoverview_editing]]
-=== Modifier les paramètres d`'un projet 
+== Modifier les paramètres d`'un projet 
 (((Projets ,Modifier))) 
 
 . Dans le menu principal, cliquez sur l`'icône image:icons/icon_ProjectAdmin_13x13.png[,13,13]  _Administration des Projets_.
@@ -286,7 +286,7 @@ image::ProjAdmin-Projects-EasyAccessPanels.png[,610,411]
 Pour un aperçu des options disponibles dans le sous-menu, se référer à la section <<ProjAdm_ProjMgtOptions.adoc#_projadm_projmgtoptions,Options relatives à l`'administration des projets>>.
 
 [[_projadmin_projectsoverview_deleting]]
-=== Supprimer un projet 
+== Supprimer un projet 
 (((Projets ,Supprimer))) 
 
 . Cliquez sur l'icône image:icons/icon_ProjectAdmin_13x13.png[,13,13]  _Administration des projets _dans le Menu Principal.
@@ -306,7 +306,7 @@ Si vous supprimer un Projet, les Branches, les Cycles de Vie, les Niveaux, les E
 Vous pouvez également cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
 
 [[_porjadm_projectsoverview_locking]]
-=== Verrouiller/Déverrouiller un projet 
+== Verrouiller/Déverrouiller un projet 
 (((Projets ,Verrouiller)))  (((Projets ,Déverrouiller)))  (((Verrouiller ,Projet)))  (((Déverrouiller ,Projet))) 
 
 Verrouiller un Projet consiste à bloquer toutes les activités du Projet, telles que les Requêtes de Niveau créées manuellement ou planifiées.
@@ -325,7 +325,7 @@ sur le Projet__. <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Mod
 ====
 
 
-=== Cacher/Montrer un Projet 
+== Cacher/Montrer un Projet 
 (((Projets ,Cacher)))  (((Projets ,Montrer))) 
 
 En définissant un Projet comme "`caché`", par défaut, il ne sera plus affiché dans les panneaux d`'aperçu.
@@ -352,7 +352,7 @@ Cliquez sur le lien _Montrer les options avancées_ pour afficher ce critère.
 ====
 
 [[_projadm_projectsoverview_historyview]]
-=== Afficher l`'historique d`'un projet 
+== Afficher l`'historique d`'un projet 
 (((Projets ,Historique))) 
 
 . Cliquez sur l'icône image:icons/icon_ProjectAdmin_13x13.png[,13,13]  _Administration des projets _dans le Menu Principal.

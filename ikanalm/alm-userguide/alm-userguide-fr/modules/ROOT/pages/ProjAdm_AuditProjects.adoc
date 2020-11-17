@@ -1,5 +1,5 @@
 [[_projadm_auditingprojects]]
-== Auditer un projet 
+= Auditer un projet 
 (((Administration des projets ,Auditer un projet)))  (((Options relatives à l'administration des projets ,Auditer un projet)))  (((Auditer))) 
 
 Lorsqu`'un Utilisateur demande un audit d`'un Projet, IKAN ALM vérifie que:
@@ -23,7 +23,7 @@ Les conditions suivantes peuvent engendrer un message d`'avertissement:
 * Au moins un Environnement de déploiement doit être défini pour chaque Niveau de Production. Depuis la version 5.0, IKAN ALM permet la création de Niveaux de Production non liés à un Environnement de construction ou de déploiement, ce qui peut être considéré comme un Niveau de Production de type "`Jalon`". 
 
 
-=== Auditer un Projet
+== Auditer un Projet
 (((Auditer ,Projet))) 
 
 . Dans le contexte de l'__Administration des projets__, sélectionnez __Auditer le Projet__.
@@ -46,7 +46,7 @@ Pour la liste des messages d`'erreur ou d`'avertissement, référez-vous à la s
 
 
 [[_projadm_auditingprojects_errorswarnings]]
-=== Messages d`'erreur et d`'avertissement 
+== Messages d`'erreur et d`'avertissement 
 (((Auditer ,Messages d’erreur et d’avertissement))) 
 
 L`'aperçu suivant liste les messages d`'erreur et d`'avertissement possibles lors de l`'Audit d`'un Projet.
@@ -56,7 +56,7 @@ L`'aperçu suivant liste les messages d`'erreur et d`'avertissement possibles lo
 
 
 [[_babibjdjf2]]
-==== Messages d`'erreur
+=== Messages d`'erreur
 
 [cols="1,1", frame="topbot", options="header"]
 |===
@@ -128,7 +128,7 @@ Ici vous pouvez spécifier une valeur pour le Paramètre alm.phase.builder en cl
 |===
 
 [[_babeffaid5]]
-==== Messages d`'avertissement
+=== Messages d`'avertissement
 
 [cols="1,1", frame="topbot", options="header"]
 |===
