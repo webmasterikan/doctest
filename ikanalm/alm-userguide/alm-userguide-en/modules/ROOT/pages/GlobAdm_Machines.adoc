@@ -1,6 +1,6 @@
 [[_globadm_machinesoverview]]
 [[_globadm_machines]]
-== Machines 
+= Machines 
 (((Global Administration ,Machines)))  (((Machines))) 
 
 All Machines hosting Build and/or Deploy Environments that are used by IKAN ALM Projects, must be defined in IKAN ALM.
@@ -21,7 +21,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters,Machine Parameters>>
 
 [[_globadm_machinecreate]]
-=== Creating a Machine Definition 
+== Creating a Machine Definition 
 (((Machines ,Creating))) 
 
 [NOTE]
@@ -127,7 +127,7 @@ a|_RELATED TOPICS_
 
 |===
 [[_globadm_machinesoverview]]
-=== The Machines Overview Screen 
+== The Machines Overview Screen 
 (((Machines ,Overview Screen))) 
 
 . In the Global Administration context, select__ Machines > Overview__.
@@ -212,7 +212,7 @@ Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted al
 ====
 
 [[_globadm_machinesoverview_edit]]
-=== Editing a Machine Definition 
+== Editing a Machine Definition 
 (((Machines ,Editing))) 
 
 . In the Global Administration context, select__ Machines > Overview__.
@@ -239,7 +239,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_machinesoverview_viewparameters]]
-=== Viewing the Machine Parameters
+== Viewing the Machine Parameters
 
 . In the Global Administration context, select__ Machines > Overview__.
 . Click the image:icons/icon_viewparameters.png[,15,15] __View Parameters__ link on the _Machines Overview_ panel.
@@ -265,7 +265,7 @@ For detailed information, refer to the following sections:
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters_history,Viewing the Machine Parameter History>>
 
 [[_globadm_machinesoverview_delete]]
-=== Deleting a Machine Definition 
+== Deleting a Machine Definition 
 (((Machines ,Deleting))) 
 
 . In the Global Administration context, select__ Machines > Overview__.
@@ -286,7 +286,7 @@ image::GlobAdmin-Machines-Delete-Error.png[,450,444]
 You must link the Environments to a different Machine, or delete them from IKAN ALM, before you can delete the Machine definition.
 
 [[_globadm_machinesoverview_status]]
-=== Viewing the Machine Status 
+== Viewing the Machine Status 
 (((Machines ,Status))) 
 
 . In the Global Administration context, select __Machines > Overview__.
@@ -356,7 +356,7 @@ The _Machine Log_ panel displays the last 150 lines of output of the Agent Daemo
 . Click __Back __to return to the __Machines Overview__ screen.
 
 [[_globadm_machines_installedphases]]
-=== The Installed Phases Overview Screen 
+== The Installed Phases Overview Screen 
 (((Installed Phases Overview))) 
 
 . In the Global Administration context, select__ Machines > Overview__.
@@ -420,7 +420,7 @@ When a Phase of a Level Request is executed on a certain Agent or Server and tha
 . Click _Back_ to return to the __Machines Overview __screen.
 
 [[_globadm_machinesoverview_history]]
-=== Viewing the Machine History 
+== Viewing the Machine History 
 (((Machines ,History))) 
 
 . In the Global Administration context, select__ Machines > Overview__.
@@ -434,7 +434,7 @@ View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging
 
 
 [[_globadm_machineparameters]]
-=== Machine Parameters 
+== Machine Parameters 
 (((Machine Parameters)))  (((Machines ,Parameters)))  (((Parameters ,Machine))) 
 
 Unlike Build and Deploy Parameters, Machine Parameters are (obviously) defined for a Machine and not for a specific Environment.
@@ -462,7 +462,7 @@ The following actions are possible:
 * <<GlobAdm_Machines.adoc#_globadm_machineparameters_history,Viewing the Machine Parameter History>>
 
 [[_globadm_machineparameters_overview]]
-==== The Machine Parameters Overview Screen 
+=== The Machine Parameters Overview Screen 
 (((Machine Parameters ,Overview Screen))) 
 
 . In the Global Administration context, select__ Machines > Machine Parameters__.
@@ -548,7 +548,7 @@ It allows copying the selected Machine Parameter definition.
 |===
 
 [[_globadm_machineparameters_create]]
-==== Creating Machine Parameters 
+=== Creating Machine Parameters 
 (((Machine Parameters ,Creating))) 
 
 . In the Global Administration context, select__ Machines > Parameters Overview__.
@@ -626,7 +626,7 @@ You can also click:
 * _Cancel_ to return to the previous screen without saving the changes.
 
 [[_globadm_machineparameters__edit]]
-==== Editing Machine Parameters 
+=== Editing Machine Parameters 
 (((Machine Parameters ,Editing))) 
 
 . In the Global Administration context, select__ Machines > Parameters Overview__.
@@ -647,7 +647,7 @@ You can also click:
 * _Cancel_ to return to the previous screen without saving the changes
 
 [[_globadm_machineparameters_delete]]
-==== Deleting Machine Parameters 
+=== Deleting Machine Parameters 
 (((Machine Parameters ,Deleting))) 
 
 . In the Global Administration context, select__ Machines > Parameters Overview__.
@@ -663,7 +663,7 @@ image::GlobAdmin-Machines-MachineParameters-Delete.png[,384,313]
 You can also click _Cancel_ to return to the previous screen without deleting the Parameter.
 
 [[_globadm_machineparameters_copy]] 
-==== Copying Machine Parameters 
+=== Copying Machine Parameters 
 (((Machine Parameters ,Copying))) 
 
 This functionality allows copying a complete Machine Parameter definition from one source Machine to one or more target Machines.
@@ -685,7 +685,7 @@ You can also click:
 * _Cancel_ to return to the previous screen without saving the changes.
 
 [[_globadm_machineparameters_history]]
-==== Viewing the Machine Parameter History 
+=== Viewing the Machine Parameter History 
 (((Machine Parameters ,History))) 
 
 . In the Global Administration context, select__ Machines > Parameters Overview__.

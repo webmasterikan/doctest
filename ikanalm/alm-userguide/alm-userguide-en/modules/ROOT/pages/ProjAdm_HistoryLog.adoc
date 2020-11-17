@@ -1,5 +1,5 @@
 [[_projadm_historylog]]
-== History Log 
+= History Log 
 (((History Log)))  (((Project Administration ,History Log))) 
 
 . In the __Project Administration context__, select__ History Log__.

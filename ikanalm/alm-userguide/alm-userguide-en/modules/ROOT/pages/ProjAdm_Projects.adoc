@@ -1,6 +1,6 @@
 [[_projadm_projectsoverview_hidingshowing]]
 [[_projadm_projects]]
-== Projects  
+= Projects  
 (((Project Administration ,Projects)))  (((Projects))) 
 
 The _Projects Overview_ screen provides information about the IKAN ALM Projects.
@@ -18,7 +18,7 @@ Refer to the following procedures for more information:
 * <<ProjAdm_Projects.adoc#_projadm_projectsoverview_historyview,Viewing the Project History>>
 
 [[_projadmin_projectsoverview_accessing]]
-=== The Projects Overview Screen
+== The Projects Overview Screen
 (((Projects ,Overview Screen))) 
 
 . Click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
@@ -98,7 +98,7 @@ It allows to display the History of all create, update and delete operations per
 |===
 
 [[_projadmin_projectsoverview_viewing]]
-=== Viewing Project Settings 
+== Viewing Project Settings 
 (((Projects ,Viewing))) 
 
 [NOTE]
@@ -135,7 +135,7 @@ To make it easier to view all project`'s settings, the most important Project Us
 ====
 
 [[_projadmin_projectsoverview_editing]]
-=== Editing Project Settings 
+== Editing Project Settings 
 (((Projects ,Editing))) 
 
 . Click the _Project Administration _image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
@@ -274,7 +274,7 @@ image::ProjAdmin-Projects-EasyAccessPanels.png[,488,453]
 For an overview of the submenu options, refer to section <<ProjAdm_ProjMgtOptions.adoc#_projadm_projmgtoptions,Project Administration Options>>.
 
 [[_projadmin_projectsoverview_deleting]]
-=== Deleting a Project 
+== Deleting a Project 
 (((Projects ,Deleting))) 
 
 . Click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
@@ -292,7 +292,7 @@ Deleting a Project will also delete all Project Streams, Lifecycles, Levels, Env
 You can also click _Back_ to return to the _Projects_ screen without deleting the Project.
 
 [[_porjadm_projectsoverview_locking]]
-=== Locking/Unlocking a Project 
+== Locking/Unlocking a Project 
 (((Locking ,Projects)))  (((Unlocking ,Projects)))  (((Projects ,Locking)))  (((Projects ,Unlocking))) 
 
 Locking a Project means blocking all activity on that Project, such as manual or scheduled Level Requests.
@@ -312,7 +312,7 @@ This functionality is also available via the _Lock/Unlock_ button on the _Projec
 ====
 
 [[_projadm_projectsoverview_hidingshowing]]
-=== Hiding/Showing a Project 
+== Hiding/Showing a Project 
 (((Projects ,Hiding)))  (((Projects ,Showing))) 
 
 Specifying that a Project is "`hidden`", causes it not to be displayed by default on Overview panels.
@@ -337,7 +337,7 @@ Click the _Show advanced options_ link to display this criterion.
 ====
 
 [[_projadm_projectsoverview_historyview]]
-=== Viewing the Project History 
+== Viewing the Project History 
 (((Projects ,History))) 
 
 . Click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.

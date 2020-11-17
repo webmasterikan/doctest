@@ -1,5 +1,5 @@
 [[_desktop_outstandingapprovals]]
-== Approvals 
+= Approvals 
 (((Approvals)))  
 (((Desktop ,Approvals))) 
 
@@ -37,7 +37,7 @@ Refer to the following sections for more information about:
 
 
 [[_desktop_outstandingapprovalsscreen]]
-=== The Outstanding Approvals 
+== The Outstanding Approvals 
 (((Approvals ,Outstanding Approvals)))  
 (((Outstanding Approvals))) 
 [[_pworkwithoutstandingapprovals]]
@@ -138,7 +138,7 @@ The following links are available in front of each Outstanding Approval:
 
 
 [[_desktop_outstandingapprovalsapprove]]
-=== Approving Outstanding Approvals 
+== Approving Outstanding Approvals 
 (((Approvals ,Approving)))  
 (((Outstanding Approvals ,Approving))) 
 
@@ -205,7 +205,7 @@ You can also click _Cancel_ to close the pop-up window without approving the Lev
 
 
 [[_desktop_outstandingapprovalsreject]]
-=== Rejecting Outstanding Approvals 
+== Rejecting Outstanding Approvals 
 (((Approvals ,Rejecting)))  
 (((Outstanding Approvals ,Rejecting))) 
 
@@ -231,7 +231,7 @@ The _Level Approval List_ displays additional information concerning the Approva
 You can also click _Cancel_ to close the pop-up window without rejecting the Level Request.
 
 [[_desktop_approvals_overview]] 
-=== The Approvals Overview Screen 
+== The Approvals Overview Screen 
 (((Approvals ,Overview Screen)))  
 (((Outstanding Approvals ,Overview Screen))) 
 

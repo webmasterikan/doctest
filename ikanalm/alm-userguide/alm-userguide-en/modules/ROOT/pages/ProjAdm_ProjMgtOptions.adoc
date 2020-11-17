@@ -1,5 +1,5 @@
 [[_projadm_projmgtoptions]]
-== Project Administration Options 
+= Project Administration Options 
 (((Project Administration ,Project Management Options)))  (((Project Management Options))) 
 
 Once you have selected a Project from the Projects Overview, the Project Administration options become available.

@@ -1,6 +1,6 @@
 [[_desktop_packagegroupsoverview]]
 [[_desktop_packagegroups]]
-== Package Build Groups 
+= Package Build Groups 
 (((Desktop ,Package Build Groups)))  (((Package Build Groups))) 
 
 A Package Build Group establishes a relationship between Packages and allows transferring the latest builds from all or specific packages in such a Group before the execution of the build process of a Package.
@@ -30,7 +30,7 @@ Refer to the following procedures for more information:
 
 
 [[_desktop_createpackagegroup]]
-=== Creating a Package Build Group (((Package Build Groups ,Creating))) 
+== Creating a Package Build Group (((Package Build Groups ,Creating))) 
 
 . Select _Packages > Create Package Build Group_ on the Main Menu.
 +
@@ -83,7 +83,7 @@ For more information, refer to the section <<Desktop_PackageGroups.adoc#_desktop
 
 
 [[_desktop_packagegroupsoverview]]
-=== The Package Build Groups Overview Screen 
+== The Package Build Groups Overview Screen 
 (((Package Build Groups ,Overview Screen))) 
 
 . Select _Packages > Overview Package Build Groups_ on the Main Menu.
@@ -141,7 +141,7 @@ Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted al
 
 
 [[_desktop_editpackagegroup]]
-=== Editing a Package Build Group 
+== Editing a Package Build Group 
 (((Package Build Groups ,Editing))) 
 
 . Select _Packages > Overview Package Build Groups_ on the Main Menu.
@@ -166,7 +166,7 @@ For more information, refer to the section <<Desktop_PackageGroups.adoc#_desktop
 
 
 [[_desktop_packagegroups_addpackage]]
-==== Adding a Package to a Package Build Group 
+=== Adding a Package to a Package Build Group 
 (((Package Build Groups ,Adding Packages)))  (((Package Build Groups ,Packages Sequence Order)))  (((Package Build Groups ,Dependency Levels)))  (((Packages ,View Settings))) 
 
 . Click the _Add Package_ link on the _Edit Package Build Group_ screen or right-click the _Packages_ overview table and select __Add Package__.
@@ -300,7 +300,7 @@ For more information on how to edit the Package, refer to <<Desktop_Packages.ado
 
 
 [[_bacdbadi]]
-==== Removing a Package from a Package Build Group
+=== Removing a Package from a Package Build Group
 
 . On the _Packages_ panel of the _Edit Package Build Group_ screen, click the image:icons/delete.gif[,15,15] _Remove_ link after the required Package in the _Actions_ column.
 +
@@ -318,7 +318,7 @@ If you remove one of the Packages, the Dependency Level of the other Packages ma
 ====
 
 [[_desktop_hideshowpackagegroup]]
-=== Hiding/Showing a Package Build Group 
+== Hiding/Showing a Package Build Group 
 (((Packages ,Hiding)))  (((Packages ,Showing))) 
 
 Specifying that a Package Build Group is "`hidden`", causes it not to be displayed by default on the Overview panels.
@@ -341,7 +341,7 @@ Package Build Group_ panel to specify whether or not you want to display hidden 
 ====
 
 [[_desktop_viewpackagegrouphistory]]
-=== Viewing the Package Build Group History 
+== Viewing the Package Build Group History 
 (((Package Build Groups ,History))) 
 
 . Select _Packages > Overview Package Build Groups_ on the Main Menu.

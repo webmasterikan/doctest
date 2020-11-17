@@ -1,6 +1,6 @@
 [[_globadm_issuetrackingcreate]]
 [[_globadm_issuetracking]]
-== Issue Tracking 
+= Issue Tracking 
 (((Global Administration ,Issue Tracking)))  (((Issue Tracking))) 
 
 The IKAN ALM Issue Tracking functionality provides the possibility to link issues from an external issue tracking system to an IKAN ALM Level Request.
@@ -53,7 +53,7 @@ If you activate the Issue Tracking System for a Project with existing Levels, yo
 For more information, refer to the sections <<App_Phases.adoc#_phases_levelphases_issuetracking,Issue Tracking Phase>>and <<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Level Phases>>.
 
 [[_globadm_issuetrackingcreate]]
-=== Creating an Issue Tracking System 
+== Creating an Issue Tracking System 
 (((Issue Tracking Systems ,Creating))) 
 
 
@@ -223,7 +223,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_issuetrackingoverview]]
-=== The Issue Tracking Systems Overview Screen 
+== The Issue Tracking Systems Overview Screen 
 (((Issue Tracking Systems ,Overview Screen))) 
 
 . In the Global Administration context, select _Issue Tracking > Overview_.
@@ -275,7 +275,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_issuetracking_edit]]
-==== Editing an Issue Tracking System Definition 
+=== Editing an Issue Tracking System Definition 
 (((Issue Tracking Systems ,Editing))) 
 
 . In the Global Administration context, select _Issue Tracking > Overview_.
@@ -327,7 +327,7 @@ Correct the errors reported in the Stack Trace field and perform the test again.
 For more information, refer to the section <<GlobAdm_IssueTracking.adoc#_globadm_issuetrackingproperties_overview,The Issue Tracking System Properties Overview Panel>>
 
 [[_globadm_issuetracking_delete]]
-==== Deleting an Issue Tracking System Definition 
+=== Deleting an Issue Tracking System Definition 
 (((Issue Tracking Systems ,Deleting))) 
 . In the Global Administration context, select _Issue Tracking > Overview_.
 
@@ -348,7 +348,7 @@ image::GlobAdmin-IssueTracking-Delete-Error.png[,614,346]
 You must change the definition of the listed Projects, before you can delete the Issue Tracking System.
 
 [[_globadm_issuetracking_history]]
-==== Viewing the Issue Tracking System History 
+=== Viewing the Issue Tracking System History 
 (((Issue Tracking Systems ,History))) 
 
 . In the Global Administration context, select _Issue Tracking > Overview_.
@@ -374,7 +374,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_issuetrackingproperties_overview]]
-=== The Issue Tracking System Properties Overview Panel 
+== The Issue Tracking System Properties Overview Panel 
 (((Issue Tracking System Properties)))  (((Issue Tracking Systems ,Properties ,Overview Screen)))  (((Issue Tracking Systems ,Properties ,Creating)))  (((Issue Tracking Systems ,Properties ,Editing)))  (((Issue Tracking Systems ,Properties ,Deleting))) 
 
 The Issue Tracking System Properties Overview panel is available on the _Edit Issue Tracking
@@ -433,7 +433,7 @@ It allows deleting an Issue Tracking System Property definition.
 |===
 
 [[_globadm_issuetrackingproperties_create]]
-==== Creating an Issue Tracking System Property
+=== Creating an Issue Tracking System Property
 
 
 . On the _Issue Tracking System Properties Overview_ panel, click the image:icons/icon_createparameter.png[,15,15]  _Create_ link for the required Property.
@@ -495,7 +495,7 @@ You can also click:
 * __Cancel __to return to the previous screen without saving your changes.
 
 [[_globadm_issuetrackingproperties_edit]]
-==== Editing an Issue Tracking System Property
+=== Editing an Issue Tracking System Property
 
 
 . On the _Issue Tracking System Properties Overview_ panel, click the image:icons/edit.gif[,15,15]  _Edit _link for the required Property.
@@ -514,7 +514,7 @@ You can also click:
 * __Cancel__: to return to the previous screen without saving the changes to the fields.[[_globadm_issuetrackingproperties_delete]]
 
 
-==== Deleting an Issue Tracking System Property
+=== Deleting an Issue Tracking System Property
 
 . On the _Issue Tracking System Properties Overview_ panel, click the image:icons/delete.gif[,15,15] _Delete link_ for the required Property.
 +

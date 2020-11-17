@@ -1,6 +1,6 @@
 [[_projadm_deployenvironmentsoverview]]
 [[_projadm_deployenvironments]]
-== Deploy Environments 
+= Deploy Environments 
 
 (((Project Administration ,Deploy Environments)))  (((Project Management Options ,Deploy Environments)))  (((Deploy Environments))) 
 
@@ -29,7 +29,7 @@ The _Parameters Overview_ screen lets you create, edit, delete and copy Deploy P
 For more information, refer to the chapter <<ProjAdm_EnvParams.adoc#_projadm_environmentparameters,Environment Parameters>>.
 
 [[_pcreatedeployenvironment]]
-=== Creating a Deploy Environment
+== Creating a Deploy Environment
 (((Deploy Environments ,Creating))) 
 
 . In the __Project Administration context__, select __Deploy Environments > Create__.
@@ -124,7 +124,8 @@ You can also click the _Reset_ button to clear the fields and restore the initia
 
 
 [[_projadm_deployenvironmentsoverview]]
-=== The Deploy Environments Overview Screen (((Deploy Environments ,Overview))) 
+== The Deploy Environments Overview Screen 
+(((Deploy Environments ,Overview))) 
 
 . In the __Project Administration context__, select __Deploy Environments > Overview__.
 +
@@ -200,7 +201,7 @@ This option allows viewing the Deploy Environment History.
 |===
 
 [[_projadm_deplenv_edit]]
-==== Editing a Deploy Environment 
+=== Editing a Deploy Environment 
 (((Deploy Environments ,Editing))) 
 
 . Switch to the _Deploy Environments Overview_ screen.
@@ -226,7 +227,7 @@ For a detailed description of the fields, refer to <<ProjAdm_DeployEnv.adoc#_pcr
 You can also click __Refresh __to retrieve the settings from the database or __Cancel __to return to the __Edit Build Environment__ screen without saving your changes.
 
 [[_projadm_deplenv_delete]]
-==== Deleting a Deploy Environment 
+=== Deleting a Deploy Environment 
 (((Deploy Environments ,Deleting))) 
 
 . Switch to the _Deploy Environments Overview_ screen.
@@ -249,7 +250,7 @@ Deleting a Deploy Environments may also delete Historical information linked to 
 ====
 
 [[_projadm_deplenv_clone]]
-==== Cloning a Deploy Environment 
+=== Cloning a Deploy Environment 
 (((Deploy Environments ,Cloning))) 
 
 When cloning an Environment, all settings, including the Phases and Parameters, will be cloned.
@@ -273,7 +274,8 @@ You can also click __Back__ to return to the previous screen without cloning the
 
 
 [[_projadm_deplanv_phases]]
-==== Deploy Environment Phases (((Deploy Environments ,Phases)))  (((Phases ,Deploy Environment))) 
+=== Deploy Environment Phases 
+(((Deploy Environments ,Phases)))  (((Phases ,Deploy Environment))) 
 
 When creating a Deploy Environment, IKAN ALM will automatically link the default flow of Deploy Environment Phases to it.
 
@@ -298,7 +300,7 @@ Refer to the following procedures for more information:
 * <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phasedelete,Deleting a Deploy Environment Phase>>
 
 [[_projadm_deplenv_phaseoverviewscreen]]
-===== The Deploy Environment Phases Overview Screen 
+==== The Deploy Environment Phases Overview Screen 
 (((Deploy Environments ,Phases ,Overview Screen)))  (((Parameters ,Deploy Environment Phase))) 
 
 . Switch to the _Deploy Environments Overview_ screen.
@@ -331,7 +333,7 @@ Select the _Insert Phase_ link underneath the _Phases Overview_ panel.
 . When done, click _Back_ to return to the _Deploy Environments Overview_ screen.
 
 [[_projadm_deploenv_phasesinsert]]
-===== Inserting a Deploy Environment Phase 
+==== Inserting a Deploy Environment Phase 
 (((Deploy Environments ,Phases ,Inserting))) 
 
 . Switch to the _Deploy Environments Overview_ screen.
@@ -380,7 +382,7 @@ In case you use the same Phase several times, adding a label is useful to provid
 You can also click _Cancel_ to return to the previous screen without saving the changes.
 
 [[_projadm_deployenv_phaseedit]]
-===== Editing a Deploy Environment Phase 
+==== Editing a Deploy Environment Phase 
 (((Deploy Environments ,Phases ,Editing))) 
 
 . Switch to the _Deploy Environments Overview_ screen.
@@ -402,7 +404,7 @@ For a description of the fields, refer to the section <<ProjAdm_DeployEnv.adoc#_
 You can also click __Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
 
 [[_projadm_deployenv_modifyorderphases]]
-===== Changing the Order of the Deploy Environment Phases 
+==== Changing the Order of the Deploy Environment Phases 
 (((Deploy Environments ,Phases ,Changing the order))) 
 
 . Switch to the _Deploy Environments Overview_ screen.
@@ -420,7 +422,7 @@ Avoid changing a Phase`'s position in such a way that its _Next Phase on Error_ 
 --
 
 [[_projadm_deployenv_viewbuildenvphaseparams]]
-===== Viewing the Deploy Environment Phase Parameters 
+==== Viewing the Deploy Environment Phase Parameters 
 (((Deploy Environments ,Phases ,Viewing the Deploy Environment Phase Parameters)))  (((Parameters ,Deploy Environment Phase))) 
 
 . Switch to the _Deploy Environments Overview_ screen.
@@ -538,7 +540,8 @@ Parameters_ panel.
 
 
 [[_projadm_deployenv_phasedelete]]
-===== Deleting a Deploy Environment Phase (((Deploy Environments ,Phases ,Deleting))) 
+==== Deleting a Deploy Environment Phase 
+(((Deploy Environments ,Phases ,Deleting))) 
 
 [[_cacfbgcc]]
 . Switch to the _Deploy Environments Overview_ screen.
@@ -556,7 +559,7 @@ image::ProjAdmin-DeployEnv-DeletePhase.png[,378,125]
 You can also click _No_ to return to the previous screen without deleting the Deploy Environment Phase.
 
 [[_projadm_deployenv_viewdeployenvparams]]
-==== Viewing the Deploy Environment Parameters 
+=== Viewing the Deploy Environment Parameters 
 (((Deploy Environments ,View Parameters)))  (((Parameters ,Deploy Environment))) 
 
 . Switch to the _Deploy Environments Overview_ screen.
@@ -572,7 +575,7 @@ For a more detailed description of this screen, refer to the section <<ProjAdm_E
 
 
 [[_projadm_deployenv_historyview]]
-==== Viewing the Deploy Environment History 
+=== Viewing the Deploy Environment History 
 (((Deploy Environments ,History))) 
 
 . Switch to the _Deploy Environments Overview_ screen.

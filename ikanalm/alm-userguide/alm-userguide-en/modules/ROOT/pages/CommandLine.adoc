@@ -1,5 +1,5 @@
 [[_ccommandlineinterface]]
-== Command Line Interface (Optional) 
+= Command Line Interface (Optional) 
 (((Command Line Interface))) 
 
 IKAN ALM can be extended with an optional Command Line interface, allowing the creation of Level Requests and the generation of Reports by means of a shell interface instead of the IKAN ALM web application.
@@ -17,7 +17,7 @@ It requires a connection (TCP/IP) to the central IKAN ALM server.
 The connection with the IKAN ALM server is established using XML-RPC.
 
 [[_smanualusagecommandlineinterface]]
-=== Manual Usage of the Command Line interface
+== Manual Usage of the Command Line interface
 
 Refer to the following procedures for detailed information:
 
@@ -27,7 +27,7 @@ Refer to the following procedures for detailed information:
 * <<CommandLine.adoc#_pcommandline_reports_propertiesfile,Generating Reports Using a Properties File>>
 
 [[_pcommandline_clr_optionsparameters]]
-==== Creating Level Requests by Specifying Options and Parameters
+=== Creating Level Requests by Specifying Options and Parameters
 (((Command Line Interface ,Parameters))) 
 
 . Prepare the Level Request creation.
@@ -215,7 +215,7 @@ image::CommandLine-PendingRequests.jpg[,539,274]
 Similar error messages are shown if there is no suitable Build result to be delivered, the Level is locked, the Project Stream is locked or if there is an authorization error.
 
 [[_pcommandline_clr_propertiesfiles]]
-==== Creating Level Requests Using a Properties File
+=== Creating Level Requests Using a Properties File
 
 It is possible to save frequently used settings in a Properties file, so that you do not have to enter the complete Level Request creation parameters.
 After a standard installation, one such properties file, called _clr.properties_ is available in the Command Line installation folder.
@@ -315,7 +315,7 @@ image::CommandLine-PendingRequests.jpg[,540,274]
 Similar error messages are shown if there is no suitable Build result to be delivered, the Level is locked, the Project Stream is locked or if there is an authorization error.
 
 [[_pcommandline_report_optionsparameters]]
-==== Generating Reports by Specifying Options and Parameters
+=== Generating Reports by Specifying Options and Parameters
  
 . Prepare the Report generation.
 +
@@ -664,7 +664,7 @@ Do not forget to remove the # sign in order to activate a search criterion.
 The report will be generated.
 
 [[_pcommandline_reports_propertiesfile]]
-==== Generating Reports Using a Properties File
+=== Generating Reports Using a Properties File
 
 It is possible to save frequently used settings in a Properties file, so that you do not have to enter the complete Report generation parameters.
 After a standard installation, one such properties file, called _report.properties_ is available in the Command Line installation folder.
@@ -736,7 +736,7 @@ The Report will be generated.
 
 
 [[_sintegratingikanalminide]]
-=== Integrating IKAN ALM in an External IDE
+== Integrating IKAN ALM in an External IDE
 
 Refer to the following procedures for detailed information:
 
@@ -744,7 +744,7 @@ Refer to the following procedures for detailed information:
 * <<CommandLine.adoc#_pintegrateikanalmineclipse,Integrating IKAN ALM in Eclipse>>
 
 [[_pintegrateikanalminjdeveloper]]
-==== Integrating IKAN ALM in JDeveloper
+=== Integrating IKAN ALM in JDeveloper
 
 This procedure describes how to set up IKAN ALM as an external tool in JDeveloper, so that you can create Level Requests (Forced Build, Requested Build or Deliver Build) from within this IDE
 
@@ -797,7 +797,7 @@ The output of the IKAN ALM Command Line will be visible in a message box:
 image::CommandLine-JDeveloperResult.jpg[,540,347] 
 
 [[_pintegrateikanalmineclipse]]
-==== Integrating IKAN ALM in Eclipse
+=== Integrating IKAN ALM in Eclipse
 
 This procedure describes how to set up IKAN ALM as an external tool in Eclipse, so that you can create Level Requests (Forced Build, Requested Build or Deliver Build) from within this IDE
 
@@ -827,7 +827,7 @@ image::CommandLine-EclipseResult.jpg[,770,366]
 
 
 [[_sautomatecreatinglevelrequestswithant]]
-=== Automating the Creation of Level Requests Using an ANT script
+== Automating the Creation of Level Requests Using an ANT script
 
 This section provides a sample ANT script that
 

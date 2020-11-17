@@ -1,5 +1,5 @@
 [[_desktop_managedesktop]]
-== Managing the Desktop 
+= Managing the Desktop 
 (((Desktop ,Managing Your Desktop)))  (((Managing Your Desktop))) 
 
 Each IKAN ALM User has access to a personal Desktop made up of adjustable Tab Pages, each of them containing current information about the Project Streams, Levels and Packages he or she is interested in.
@@ -20,7 +20,7 @@ The following actions are possible:
 ** <<Desktop_ManageDesktop.adoc#_managedesktop_removingelements,Removing Desktop Elements>>
 
 [[_managedesktop_desktopoverview]]
-=== The Desktop Overview Screen
+== The Desktop Overview Screen
 (((Desktop ,Overview))) 
 
 . Select _Desktop_ on the Main Menu.
@@ -171,7 +171,7 @@ If the __Auto Refresh__ option is activated, the Desktop will be refreshed each 
 <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
 
 [[_managedesktop_addingtabs]]
-=== Adding a Desktop Tab Page 
+== Adding a Desktop Tab Page 
 (((Desktop ,Adding a Desktop Tab Page))) 
 
 . Select _Desktop_ on the Main Menu.
@@ -218,7 +218,7 @@ It is possible to create up to 10 tab pages.
 ====
 
 [[_managedesktop_modifyingtabinformation]]
-=== Editing the Desktop Tab Page Label 
+== Editing the Desktop Tab Page Label 
 (((Desktop ,Editing the Desktop Tab Page Label))) 
 
 . Select _Desktop_ on the Main Menu.
@@ -245,7 +245,7 @@ You can also click _Cancel_ to return to _Desktop Overview_ screen without makin
 
 
 [[_managedesktop_removingtabpage]]
-=== Removing a Desktop Tab Page 
+== Removing a Desktop Tab Page 
 (((Desktop ,Removing a Desktop Tab Page))) 
 
 To remove a Desktop Tab Page, click the image:icons/icon_removeDesktop.gif[,15,14] _Remove Desktop_ button.
@@ -263,7 +263,7 @@ image::Desktop-ManageDesktop-RemoveTabPage.png[,450,141]
 Confirm or cancel the deletion of the Tab Page.
 
 [[_managedesktop_addingelements]]
-=== Adding Elements to a Desktop Tab Page 
+== Adding Elements to a Desktop Tab Page 
 (((Desktop ,Adding Elements to a Desktop Tab Page))) 
 
 . Select _Desktop_ on the Main Menu.
@@ -376,7 +376,7 @@ If you add a Project Stream or Package containing multiple Levels, this Project 
 
 
 [[_managedesktop_arrangingelements]]
-=== Rearranging Desktop Elements 
+== Rearranging Desktop Elements 
 (((Desktop ,Rearranging Desktop Elements))) 
 
 To modify the order of the elements, select the element(s) using the _SHIFT_ or _CTRL_ keys, and, while holding down the left-hand mouse button, drag the element(s) to the required position on the Overview.
@@ -394,7 +394,7 @@ image::Desktop-ManageDesktop-Rearranging.png[,947,362]
 
 
 [[_managedesktop_removingelements]]
-=== Removing Desktop Elements 
+== Removing Desktop Elements 
 (((Desktop ,Removing Desktop Elements))) 
 
 To remove a Project Stream, Level or Package, click the image:icons/remove.gif[,15,15] __Remove__ button at the right of the element row.

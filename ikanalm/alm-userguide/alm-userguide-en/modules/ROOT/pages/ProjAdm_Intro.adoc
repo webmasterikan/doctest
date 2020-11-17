@@ -1,6 +1,6 @@
 
 [[_projadm_introduction]]
-== Project Administration  
+= Project Administration  
 (((Project Administration))) 
 
 The following IKAN ALM elements are typically used by a Project Administrator:
@@ -9,13 +9,13 @@ The following IKAN ALM elements are typically used by a Project Administrator:
 * <<ProjAdm_ProjMgtOptions.adoc#_projadm_projmgtoptions,Project Administration Options>>
 
 
-=== Accessing the Projects Overview
+== Accessing the Projects Overview
 
 On the Main Menu, click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon.
 
 The overview of all projects will be displayed.
 
-=== Accessing the Project Administration Options
+== Accessing the Project Administration Options
 
 From the __Projects Overview__, you can access the Project Administration Options.
 

@@ -1,6 +1,7 @@
 
 [[_desktop_introduction]]
-== Desktop (((Desktop)))  (((Desktop ,Introduction))) 
+= Desktop 
+(((Desktop)))  (((Desktop ,Introduction))) 
 
 The Desktop makes up the work environment for the regular IKAN ALM end user.
 

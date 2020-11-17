@@ -1,6 +1,6 @@
 
 [[_csubversiongeneralinformation]]
-== Subversion - General Information 
+= Subversion - General Information 
 (((Subversion)))  (((Subversion ,General Information))) 
 
 This appendix provides general information on the connection and definition of the Subversion Repository, including some concrete examples and a section on Meta Properties.
@@ -11,7 +11,7 @@ This appendix provides general information on the connection and definition of t
 
 
 [[_sappc_repositoryconnection]]
-=== Repository Connection 
+== Repository Connection 
 (((Subversion ,Repository Connection))) 
 
 IKAN ALM connects with the repository using the SVN client which must be installed on the IKAN ALM Server machine.
@@ -24,7 +24,7 @@ In chapter 7 of this book you will find a table about repository URLs and a topi
 In most cases a User ID and Password must be provided, unless the repository is not protected (e.g., for the _svn_ protocol, _anon-access = write_ in the ``svnserver.con file``) or unless the credentials of the user running the IKAN ALM web server or application server process are stored in this user's private runtime config area (__~/.subversion/auth/ _or __%APPDATA%/Subversion/Auth/_). See also http://svnbook.red-bean.com/en/1.7/svn.serverconfig.netmodel.html#svn.serverconfig.netmodel.credcache[http://svnbook.red-bean.com/en/1.7/svn.serverconfig.netmodel.html#svn.serverconfig.netmodel.credcache].
 
 [[_sappc_repositorydefinition]]
-=== Repository Definition 
+== Repository Definition 
 (((Subversion ,Repository Definition))) 
 
 Specific fields in the Subversion definition are necessary to support the flexible setup of a Subversion Repository Layout (see http://svnbook.red-bean.com/en/1.2/svn.reposadmin.projects.html#svn.reposadmin.projects.chooselayout[http://svnbook.red-bean.com/en/1.2/svn.reposadmin.projects.html#svn.reposadmin.projects.chooselayout]).
@@ -36,7 +36,7 @@ This sections provides the following information:
 
 
 [[_sappc_specificfields]]
-==== Specific Fields
+=== Specific Fields
 
 The following specific fields have been added to the Subversion definition:
 
@@ -45,7 +45,7 @@ The following specific fields have been added to the Subversion definition:
 * Repository Layout
 
 
-===== Trunk Directory
+==== Trunk Directory
 
 The Trunk Directory is the directory of the "`head`" or "`main`" development stream.
 Its default name is __trunk__, but other names are allowed, e.g., __main__, __head__.
@@ -58,21 +58,21 @@ The Trunk field may have an empty value only if the Repository Layout field has 
 In the case of a Project-oriented or Single Project-oriented Repository Layout, the Trunk directory must be specified to avoid infinite continuous builds if a schedule is set on such a repository definition (because the Tags directory would be part of the trunk, tagging would mean changing the trunk, and you would get an infinite loop).
 ====
 
-===== Tags Directory
+==== Tags Directory
 
 The Tags Directory is the directory where IKAN ALM creates the tags (also called labels) after a successful build.
 Its default name is __tags__, but other names are allowed, e.g., __tag__.
 
 This directory may reside directly under the repository path, or be defined per project, depending on the settings of the Repository Layout field.
 
-===== Repository Layout
+==== Repository Layout
 
 The default Repository Layout is "Project-oriented". Other possible values are: "Repository-oriented" and "Single Project-oriented". 
 
 See the <<App_Subversion.adoc#_sappc_layoutexamples,Layout Examples>> for the configuration of the 4 possible Layouts.
 
 [[_sappc_layoutexamples]]
-==== Layout Examples
+=== Layout Examples
 
 This section provides some possible repository project layouts followed by the possible solution in IKAN ALM for a Subversion Repository.
 
@@ -83,7 +83,7 @@ If you decided to call the trunk "main" or "head", or the branches "stream" or
  ., you are free to do so.
 ====
 
-===== Layout 1 (Project-oriented)
+==== Layout 1 (Project-oriented)
 
 Structure in the Subversion Repository:
 
@@ -170,7 +170,7 @@ URL/calc/tags
 |URL/calc/tags/B_1-2_b5
 |===
 
-===== Layout 2 (Repository-oriented)
+==== Layout 2 (Repository-oriented)
 
 Structure in the Subversion Repository:
 
@@ -253,7 +253,7 @@ URL/tags/calc
 |URL /tags/calc/B_1-2_b5
 |===
 
-===== Layout 3 (One Repository = One Project)
+==== Layout 3 (One Repository = One Project)
 
 Structure in the Subversion Repository:
 
@@ -330,7 +330,7 @@ URL/tags
 |URL /tags/B_1-2_b5
 |===
 
-===== Layout 4 (Repository-oriented, no trunk)
+==== Layout 4 (Repository-oriented, no trunk)
 
 Structure in the Subversion Repository:
 
@@ -412,7 +412,7 @@ URL/tags/calc
 |===
 
 [[_sappc_fetchmetaproperties]]
-=== Fetching Meta Properties 
+== Fetching Meta Properties 
  (((Subversion ,Fetching Meta Properties))) 
 
 Subversion provides interfaces for adding, modifying, and removing versioned metadata on versioned directories and files.

@@ -1,6 +1,6 @@
 
 [[_desktop_levelrequests]]
-== Level Requests 
+= Level Requests 
 (((Desktop ,Level Requests)))  
 (((Level Requests))) 
 
@@ -38,7 +38,7 @@ The following section deals with the Build History:
 
 
 [[_desktop_lr_actionflows]]
-=== Level Request Action Flows
+== Level Request Action Flows
 
 The following sections describe how Level Requests are handled once they have been created, with the default behavior as starting point.
 When adapting the <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Level Phase>>, the <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Build Environment Phase>> or the <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_phaseedit,Deploy Environment Phase>>, this will result in an action flow differing from this default flow. 
@@ -51,7 +51,7 @@ The following different action flows are possible, depending on the composition 
 
 
 [[_srebuildlr]]
-==== (Re)Build Level Requests 
+=== (Re)Build Level Requests 
 (((Level Requests ,Build)))  
 (((Level Requests ,Rebuild))) 
 
@@ -258,7 +258,7 @@ The Notification type (mail, netsend) and the Notification criteria (if Level Re
 |===
 
 [[_srebuildanddeploylr]]
-==== (Re)Build and Deploy Level Requests 
+=== (Re)Build and Deploy Level Requests 
 (((Level Requests ,Build and Deploy)))  
 (((Level Requests ,Rebuild and Deploy))) 
 
@@ -542,7 +542,7 @@ The Notification type (mail, netsend) and the Notification criteria (if Level Re
 |===
 
 [[_sdeploylr]]
-==== Deploy Level Requests 
+=== Deploy Level Requests 
 (((Level Requests ,Deploy))) 
 
 The following graphic displays the action flow of a Deploy Level Request. 
@@ -677,7 +677,7 @@ The Notification type (mail, netsend) and the Notification criteria (if Level Re
 |===
 
 [[_desktop_lr_creatinglevelrequest]]
-=== Creating Level Requests 
+== Creating Level Requests 
 (((Level Requests ,Creating))) 
 
 The following sections deal with the procedures involved when creating new Level Requests:
@@ -697,7 +697,7 @@ This way, you will be able to easily create Level Requests by simply clicking an
 ====
 
 [[_desktop_lr_createlevelrequest_selectlevel]]
-==== The Create Level Request: Select Level Screen
+=== The Create Level Request: Select Level Screen
 (((Level Requests ,Creating ,Selecting a Level))) 
 
 . Select _Level Requests > Create Level Request_ on the Main Menu.
@@ -898,7 +898,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_desktop_lr_createlevelrequest_build]]
-==== Creating a Build Level Request 
+=== Creating a Build Level Request 
 (((Level Requests ,Request Build)))  
 (((Level Requests ,Force Build))) 
 
@@ -1031,7 +1031,7 @@ It contains the information about the new Level Request (as well as about the ol
 For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>>.
 
 [[_desktop_lr_createlevelrequest_deliver]]
-==== Creating a Deliver Build Level Request 
+=== Creating a Deliver Build Level Request 
 (((Level Requests ,Deliver Build))) 
 
 . Select _Level Requests > Create Level Request_ on the Main Menu.
@@ -1131,7 +1131,7 @@ It contains the information about the new Level Request (as well as about the ol
 For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>>.
 
 [[_desktop_lr_createlevelrequest_rollback]]
-==== Creating a Rollback Build Level Request 
+=== Creating a Rollback Build Level Request 
 (((Level Requests ,Rollback Build))) 
 
 . Select _Level Requests > Create Level Request_ on the Main Menu.
@@ -1225,7 +1225,7 @@ For a detailed description of this screen refer to <<Desktop_LevelRequests.adoc#
 
 [[_desktop_lr_overview]]
 [[_desktop_lr_overviewscreen]]
-=== Level Requests Overview
+== Level Requests Overview
 
 The following sections deal with the procedures involved when using the __Level Requests Overview__:
 
@@ -1235,7 +1235,7 @@ The following sections deal with the procedures involved when using the __Level 
 * <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>
 
 
-==== The Level Requests Overview Screen 
+=== The Level Requests Overview Screen 
 (((Level Requests ,Overview ,Level Requests))) 
 
 . Select _Level Requests > Overview Level Requests_ on the Main Menu.
@@ -1384,7 +1384,7 @@ Click the Level Request`'s _OID_ link in front of the required Level Request.
 For more information, refer to the section <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>.
 
 [[_desktop_lr_rssfeeds]] 
-==== The IKAN ALM RSS Functionality 
+=== The IKAN ALM RSS Functionality 
 (((RSS Functionality))) 
 
 If your Global IKAN ALM Manager has activated RSS Feeds at System Settings level, the orange _RSS_ button is available on the _Search Level Request_ panel.
@@ -1423,7 +1423,7 @@ http://www.rssowl.org/].
 You find a detailed explanation of the structure of the IKAN ALM URL in the section <<App_RSS.adoc#_drssfeedurldetails,RSS URL Details>>.
 
 [[_desktop_lr_generatereport]]
-==== Generating a Report 
+=== Generating a Report 
 (((Reports ,Level Requests)))  
 (((Level Requests ,Reports))) 
 
@@ -1508,7 +1508,7 @@ For more information, refer to the section <<CommandLine.adoc#_ccommandlineinter
 
 
 [[_dekstop_lr_detailedoverview]]
-=== Level Request Detail 
+== Level Request Detail 
 (((Level Request Detail)))  
 (((Level Request Detail ,Automatic Refresh))) 
 
@@ -1559,7 +1559,7 @@ For more information on the _Auto Refresh_ settings, refer to the section <<User
 
 
 [[_desktop_lr_summary]]
-==== Summary 
+=== Summary 
 (((Level Request Detail ,Summary)))  (((Level Requests ,Summary)))  (((Level Requests ,Summary ,Actions)))  (((Level Requests ,Summary ,Info)))  (((Level Requests ,Summary ,Builds and Deploys)))  (((Level Requests ,Summary ,Approvals)))  (((Level Requests ,Summary ,Issues)))  (((Level Requests ,Summary ,Error Log)))  (((Level Requests ,Summary ,Warning Log))) 
 
 The _Summary_ page displays the status of the Level Request and, underneath, several panels providing detailed information.
@@ -1567,7 +1567,7 @@ The panels displayed depend on the status of the Level Request.
 
 image::Desktop-LevelRequests-Detailed-Summary.png[,953,725] 
 
-===== Status Header
+==== Status Header
 
 Some examples of Level Requests for release-based Projects:
 
@@ -1626,7 +1626,7 @@ Depending on the status of the Level Request, the _Summary_ page may contain the
 * <<Desktop_LevelRequests.adoc#_desktop_lr_summary_errorwarning,Error/Warning Log Panel>>
 
 [[_desktop_lr_summary_actions]]
-===== Actions Panel
+==== Actions Panel
 
 The actions available in this panel depend on the status of the Level Request.
 
@@ -1708,7 +1708,7 @@ Click _Abort Level Request_ to confirm the action and return to the _Level Reque
 You can also click _Close_ to cancel the abort process and return to the _Level Request Detail_ screen.
 
 [[_desktop_lr_summary_info]]
-===== Info Panel
+==== Info Panel
 
 This panel contains detailed information concerning the Level Request.
 
@@ -1791,7 +1791,7 @@ Only the sources that differ from this Tag have been retrieved and made availabl
 Code_ Phase.[[_desktop_lr_summary_buildsdeploys]]
 |===
 
-===== Builds and Deploys Panel
+==== Builds and Deploys Panel
 This panel contains the different Builds and/or Deploys that are related to the Level Request.
 
 
@@ -1865,7 +1865,7 @@ _Note:_ The OID is not equal to the Build/Deploy Number!
 For more detailed information about the Build/Deploy of the Level Request, select the _Phase Logs_ tab underneath the Status header.[[_desktop_lr_summary_approvals]]
 ====
 
-===== Approvals Panel
+==== Approvals Panel
 
 This panel is only displayed if the Level Request has been rejected or if the status of the Level Request is Awaiting a Pre- or Post-approval.
 
@@ -1884,7 +1884,7 @@ image::Desktop-LevelRequests-Detailed-Summary-Approvals-Approved.png[,632,271]
 For a complete list of all Approvals defined for the Level Request, select the _Approvals_ tab underneath the Status header. <<Desktop_LevelRequests.adoc#_desktop_lr_approvals,Approvals>>[[_desktop_lr_summary_issues]]
 ====
 
-===== Issues Panel
+==== Issues Panel
 
 This panel is only shown if there are Issues related to the Level Request.
 
@@ -1927,7 +1927,7 @@ On this panel you cannot modify any of the Issues.
 If you want to edit, delete or synchronize them, select the _Issues_ tab underneath the Status header. <<Desktop_LevelRequests.adoc#_desktop_lr_issues,Issues>>[[_desktop_lr_summary_errorwarning]]
 ====
 
-===== Error/Warning Log Panel
+==== Error/Warning Log Panel
 
 This panel is only shown if the Level Request status is set to _Fail_ or __Warning__.
 It only shows the log of the _first_ Phase with status _Fail_ or __Warning__.
@@ -2007,7 +2007,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_desktop_lr_phaselogs]]
-==== Phase Logs 
+=== Phase Logs 
 (((Level Request Detail ,Phase Logs)))  (((Level Requests ,Phase Logs)))  (((Phases ,Logs)))  (((Phase Logs)))  (((Level Requests ,Build Phases Log)))  (((Build Phases Log)))  (((Level Requests ,Deploy Phases Log)))  (((Deploy Phases Log)))  (((Level Parameters))) 
 
 This page displays the logs of the Level Phases, the Build and Deploy actions and their Build and Deploy Phases executed during the handling of a Level Request.
@@ -2096,7 +2096,7 @@ image::Desktop-LevelRequests-Detailed-PhaseLogs-Example_SkippedDeploy.png[,928,4
 
 
 [[_desktop_lr_phaselogs_levelparameters]]
-===== Level Parameters 
+==== Level Parameters 
 (((Parameters)))  
 (((Parameters ,Level))) 
 
@@ -2109,7 +2109,7 @@ For each of the parameters, the table displays its key and value.
 For more information on Level Parameters, refer to the section <<App_PredefLevelParams.adoc#_cpredefinedbuildparameters,Predefined Level Parameters>>.
 
 [[_desktop_lr_phaselogs_levelphases]]
-===== Level Phases
+==== Level Phases
 
 _Example of a Core Phase_
 
@@ -2222,7 +2222,7 @@ Code_ Phase.
 |===
 
 [[_desktop_lr_phaselogs_buildactions]]
-===== Build Actions
+==== Build Actions
 
 Build Actions are displayed on a white background in the Phase Logs list.
 Their description contains the Build OID and the name of the Machine on which they are executed.
@@ -2305,7 +2305,7 @@ image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedBuildParameters.png[,
 |===
 
 [[_chddiacf]]
-====== Build Phases
+===== Build Phases
 
 Build Phases are executed by the IKAN ALM Agent while handling a Build.
 
@@ -2376,7 +2376,7 @@ It logs the result of the cleanup in the _Message_ field.
 |===
 
 [[_desktop_lr_phaselogs_deployactions]]
-===== Deploy Actions
+==== Deploy Actions
 
 Deploy Actions are displayed on a white background in the Phase Logs list.
 Their description contains the Deploy OID and the name of the Machine on which they are executed.
@@ -2461,7 +2461,7 @@ image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedDeployParameters.png[
 |===
 
 [[_chdceehj]]
-====== Deploy Phases
+===== Deploy Phases
 
 Each of these Phases have a status indication.
 An Error status does not always mean that the Deploy as a whole has failed, this depends on the _Fail on Error_ setting of the Deploy Environment Phase, defined on the _Edit
@@ -2530,7 +2530,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_desktop_lr_results]]
-==== Results 
+=== Results 
 (((Level Requests ,Results)))  (((Level Request Detail ,Results)))  (((Build Result)))  (((Build Result ,Download)))  (((Download Build Result))) 
 
 On the _Results_ page you can (for each Build related to the Level Request) display the content of the compressed Build Result File, i.e., the files that were present in the Target Location at the moment the Build script ended and which are now stored in the Build Archive.
@@ -2633,7 +2633,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_desktop_lr_approvals]]
-==== Approvals 
+=== Approvals 
 (((Level Request Detail ,Approvals)))  (((Level Requests ,Approvals)))  (((Approvals))) 
 
 The _Approvals_ page displays the status of the Approvals that are defined for the Level Request.
@@ -2732,7 +2732,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_desktop_lr_issues]]
-==== Issues 
+=== Issues 
 (((Level Requests ,Issues)))  (((Level Request Detail ,Issues)))  (((Issues))) 
 
 The _Issues_ page displays the list of Issues that have been linked to a Level Request.
@@ -2807,7 +2807,7 @@ These links are only available for Build Levels.
 ====
 
 [[_desktop_lr_issueedit]]
-===== Editing an Issue 
+==== Editing an Issue 
 (((Issues ,Editing))) 
 
 This option is provided to manually update the fields of an Issue linked to this Level Request.
@@ -2830,7 +2830,7 @@ You can also click:
 
 
 [[_desktop_lr_issuedelete]]
-===== Deleting an Issue 
+==== Deleting an Issue 
 (((Issues ,Deleting))) 
 
 This option is provided to manually update the fields of an Issue linked to this Level Request.
@@ -2847,7 +2847,7 @@ You can also click _Cancel_ to return to the _Issues_ page without deleting the 
 
 
 [[_desktop_lr_issuesynchronize]]
-===== Synchronizing an Issue 
+==== Synchronizing an Issue 
 (((Issues ,Synchronizing))) 
 
 [NOTE]
@@ -2869,7 +2869,7 @@ If the synchronization fails, an error message indicating the problem will be di
 
 
 [[_desktop_lr_issueadd]]
-===== Adding an Issue 
+==== Adding an Issue 
 (((Issues ,Adding))) 
 
 This option is provided to manually link Issues to a Level Request.
@@ -2953,7 +2953,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_desktop_lr_sources]]
-==== Sources 
+=== Sources 
 (((Level Requests ,Sources)))  (((Level Request Detail ,Sources)))  (((Sources))) 
 
 The _Sources_ page displays the list of all the sources (and their revision numbers) in the VCR used by this Level Request.
@@ -2987,7 +2987,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_desktop_lr_modifications]]
-==== Modifications 
+=== Modifications 
 (((Level Request Detail ,Modifications)))  (((Level Requests ,Modifications)))  (((Modifications))) 
 
 The _Modifications_ page allows you to verify the differences between the sources used to create the current Build and the ones used for the Build generated by the previous Level Request.
@@ -3057,7 +3057,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_desktop_lr_dependencies]]
-==== Dependencies 
+=== Dependencies 
 (((Level Request Detail ,Dependencies)))  (((Level Requests ,Dependencies)))  (((Dependencies))) 
 
 The Project Dependency functionality makes it possible to reuse common libraries or sources from Child Projects.
@@ -3087,7 +3087,7 @@ The _Dependencies_ page is the starting point to find all the information concer
 
 
 [[_desktop_lr_viewdependency]]
-===== Build Dependencies 
+==== Build Dependencies 
 (((Level Request Detail ,Build Dependencies)))  (((Level Requests ,Build Dependencies)))  (((Build Dependencies))) 
 
 The _Dependencies_ page displays the specific Builds and/or Sources of the Child Projects where this Build depends on.
@@ -3162,7 +3162,7 @@ Code__.
 . You click through on one of the _OID_ links to display its Level Request Details.
 
 [[_deskopt_lr_viewbuildusage]]
-===== Build Usage 
+==== Build Usage 
 (((Level Request Detail ,Build Usage)))  (((Level Requests ,Build Usage)))  (((Build Usage))) 
 
 In the case of __reuse of a Build
@@ -3221,7 +3221,7 @@ Click the link to display the details for this Level Request.
 . You can click through on one of the _OID_ links to display its Level Request Details.
 
 [[_desktop_lr_viewusage]]
-===== Level Request Usage 
+==== Level Request Usage 
 (((Level Request Detail ,Level Request Usage)))  (((Level Requests ,Level Request Usage)))  (((Level Request Usage))) 
 
 In the case of __reuse of sources__, there will be a link between the _parent
@@ -3294,7 +3294,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_desktop_lr_buildhistory]]
-=== Build History Screen 
+== Build History Screen 
 (((Desktop ,Build History)))  (((Build History))) 
 
 The _Build History_ option allows to quickly verify the Lifecycle of a specific Build (identified by its number).
@@ -3380,7 +3380,7 @@ You can deactivate this, by deselecting the _Highlight where active_ option.
 
 
 [[_desktop_lr_buildsdeploysoverview]]
-=== Builds and Deploys Overview 
+== Builds and Deploys Overview 
 (((Level Requests ,Overview ,Builds and Deploys)))  (((Builds and Deploys Overview))) 
 
 . Select _Level Requests > Overview Builds and Deploys Level Request_ on the Main Menu.

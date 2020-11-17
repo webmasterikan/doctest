@@ -1,6 +1,6 @@
 
 [[_phases_generalinformation]]
-== Phases - General Information 
+= Phases - General Information 
 (((Phases)))  (((Phases ,General Information))) 
 
 This appendix provides more detailed information on the IKAN ALM concept of "`Phases`".
@@ -120,7 +120,7 @@ When executing a Phase, it can have the following status:
 The execution of a Phase can be viewed on the <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase Logs>> tab page on the _Level Request Detail_ screen.
 
 [[_phases_levelphases]]
-=== Level Phases 
+== Level Phases 
 (((Levels ,Phases)))  (((Phases ,Level Phases))) 
 
 Level Phases are the actions that must be performed to complete a Level Request.
@@ -155,7 +155,7 @@ Next to the Core Level Phases, you can create your own Custom Level Phases:
 
 
 [[_phases_levelphases_retrievecode]]
-==== Retrieve Code Phase 
+=== Retrieve Code Phase 
 (((Phases ,Level Phases ,Retrieve Code))) 
 
 The _Retrieve Code_ Phase is usually the first Phase executed in a Level Request.
@@ -179,7 +179,7 @@ When the Level Request has no Builds associated with it, the _Retrieve Code_ Pha
 In that case, you could remove the _Retrieve Code_ Phase from the Level`'s workflow.
 
 [[_phases_levelphases_build]]
-==== Build Phase 
+=== Build Phase 
 (((Phases ,Level Phases ,Build))) 
 
 The _Build_ Phase activates and monitors the execution of the Builds of the Level Request.
@@ -200,7 +200,7 @@ When no Builds have been defined for the Level Request, the _Build_ Phase does n
 In that case, you could remove the _Build_ Phase from the Level`'s workflow.
 
 [[_phases_levelphases_tagcode]]
-==== Tag Code Phase 
+=== Tag Code Phase 
 (((Phases ,Level Phases ,Tag Code))) 
 
 The _Tag Code_ Phase tags the code that was checked out with the VCR Tag associated with the Level Request.
@@ -211,7 +211,7 @@ So, it won`'t tag for a Build Level in a Tag Based Project Stream, and it won`'t
 In both of those cases, tagged code was checked out, so no tagging was needed, and you could remove the _Tag Code_ Phase from the Level`'s workflow.
 
 [[_phases_levelphases_deploy]]
-==== Deploy Phase 
+=== Deploy Phase 
 (((Phases ,Level Phases ,Deploy))) 
 
 The _Deploy Phase_ activates and monitors the execution of the Deploys of the Level Request.
@@ -233,7 +233,7 @@ When no Deploys have been defined for the Level Request, the _Deploy_ Phase does
 In that case, you could remove the _Deploy_ Phase from the Level`'s workflow.
 
 [[_phases_levelphases_issuetracking]]
-==== Issue Tracking Phase 
+=== Issue Tracking Phase 
 (((Phases ,Level Phases ,Issue Tracking))) 
 
 The _Issue Tracking_ Phase links Issues, managed in an external Issue Tracking System, with a Level Request, by searching for references to the Issues in the commit comments of the VCR.
@@ -263,7 +263,7 @@ When you attach an Issue Tracking System to a Project after it has been created,
 ====
 
 [[_phases_levelphases_linkfilerevisions]]
-==== Link File Revisions 
+=== Link File Revisions 
 (((Phases ,Level Phases ,Link File Revisions))) 
 
 The _Link File Revisions_ Phase links the involved File Revisions to the Level Request. 
@@ -277,7 +277,7 @@ Although these File Revisions are also linked to the Package, this Phase is nece
 As this Phase is only applicable to Level Requests for Packages, it will only appear in the Levels of Package-based Projects.
 
 [[_phases_levelphases_cleanupworkcopy]]
-==== Cleanup Work Copy Phase 
+=== Cleanup Work Copy Phase 
 (((Phases ,Level Phases ,Cleanup Work Copy))) 
 
 The _Cleanup Work Copy_ Phase cleans up the Work Copy Location where the sources of the Level Request were checked out. 
@@ -288,7 +288,7 @@ Typically, this Phase`'s Fail On Error flag is set to '`No`', causing the Level 
 If the Level has its _Debug_ flag set to "`Yes`", the _Cleanup Work Copy_ Phase does nothing, and exits with status __Error__, reporting that the _Debug_ flag was set for the Level.
 
 [[_phases_levelphases_executescriptphase]]
-==== Execute Script Phase 
+=== Execute Script Phase 
 (((Phases ,Level Phases ,Execute Script Phase))) 
 
 The _Execute Script_ Phase executes a script on the IKAN ALM Server Machine using the specified Scripting Tool and the pre-defined Level Parameters.
@@ -307,7 +307,7 @@ Next to the Core Phases, you may define your own Phases in Global Administration
 Once inserted into the workflow of a Level, we call them Custom Level Phases.
 
 [[_phases_levelphases_customlevelphase]]
-==== Custom Level Phase 
+=== Custom Level Phase 
 (((Phases ,Level Phases ,Custom Level Phase))) 
 
 [NOTE]
@@ -335,7 +335,7 @@ A Custom Level Phase may also be a Custom Build or Deploy Phase: the definition 
 ====
 
 [[_phases_buildphases]]
-=== Build Phases 
+== Build Phases 
 (((Phases ,Build Phases))) 
 
 Build Phases are the actions that must be performed to complete a Build.
@@ -368,7 +368,7 @@ Next to the Core Build Phases, you can create your own Custom Build Phases:
 
 
 [[_babfgbhf]]
-==== Transport Source Phase 
+=== Transport Source Phase 
 (((Phases ,Build Phases ,Transport Source))) 
 
 The _Transport Source_ Phase transports the Source code and, possibly, the build results of Child Projects from the Work Copy Location on the IKAN ALM Server Machine to the Build Environment Source Location on the IKAN ALM Agent Machine, using the Transporter associated with the IKAN ALM Agent Machine.
@@ -380,7 +380,7 @@ Note that the default value of this Parameter is __false__.
 See also <<App_Phases.adoc#_phases_levelphases_retrievecode,Retrieve Code Phase>>.
 
 [[_babcijhh]]
-==== Verify Build Script Phase 
+=== Verify Build Script Phase 
 (((Phases ,Build Phases ,Verify Build Script))) 
 
 The _Verify Build Script_ Phase tries to locate the defined Build Script, and fails if it cannot.
@@ -398,7 +398,7 @@ If not found there either, the Verify Build Script Phase exits with status __Err
 If found, the Verify Build Script Phase exits with status __Success__, and reports where it located the Build Script.
 
 [[_phases_buildphases_executebuildscript]]
-==== Execute Script Phase 
+=== Execute Script Phase 
 (((Phases ,Build Phases ,Execute Script))) 
 
 The _Execute Script_ Phase executes the Build Script on the defined Machine using the specified Scripting Tool and the defined Build Parameters. 
@@ -411,7 +411,7 @@ If not, it exits with status _Error_ and logs the errors on the _Phase Logs_ pan
 Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,Build Actions>>).
 
 [[_phases_buildphases_transportdesployscript]]
-==== Transport Deploy Script Phase 
+=== Transport Deploy Script Phase 
 (((Phases ,Build Phases ,Transport Deploy Script))) 
 
 The _Transport Deploy Script_ Phase copies the Deploy Scripts that are defined in the Deploy Environments linked to the Build Environment of this Build from the Build Environment`'s Source Location to the Target Location. 
@@ -419,7 +419,7 @@ The _Transport Deploy Script_ Phase copies the Deploy Scripts that are defined i
 This action is performed, so that the Deploy Scripts are included in the compressed Build File created by the Compress Build Phase.
 
 [[_phases_buildphases_transportpackagerersults]]
-==== Transport Package Results Phase 
+=== Transport Package Results Phase 
 (((Phases ,Build Phases ,Transport Deploy Script))) 
 
 This Phase is only relevant for Package Builds.
@@ -432,7 +432,7 @@ The _Retrieve All Build Results_ attribute of the Package Build Group, and the s
 All Build Results_ has been set to __false__.
 
 [[_phases_buildphases_compressbuild]]
-==== Compress Build Phase 
+=== Compress Build Phase 
 (((Phases ,Build Phases ,Compress Build))) 
 
 The _Compress Build_ Phase compresses the Build result files in the Build Environment`'s Target Location.
@@ -440,13 +440,13 @@ The _Compress Build_ Phase compresses the Build result files in the Build Enviro
 If the Agent Machine runs a Windows OS, the Compress Build Phase creates a `$$.$$zip` file, otherwise it creates a `$$.$$tar.gz` file
 
 [[_phases_buildphases_archiveresult]]
-==== Archive Result Phase 
+=== Archive Result Phase 
 (((Phases ,Build Phases ,Archive Result))) 
 
 The _Archive Result_ Phase transports the compressed Build file from the Build Environment`'s Target Location on the IKAN ALM Agent Machine to the Build Archive Location on the IKAN ALM Server Machine, using the Transporter associated with the IKAN ALM Agent Machine.
 
 [[_phases_buildphases_cleanupsource]]
-==== Cleanup Source Phase 
+=== Cleanup Source Phase 
 (((Phases ,Build Phases ,Cleanup Source))) 
 
 The _Cleanup Source_ Phase deletes all files in the Build Environment`'s Source Location.
@@ -454,7 +454,7 @@ The _Cleanup Source_ Phase deletes all files in the Build Environment`'s Source 
 If the Build Environment has its Debug flag set to '`Yes`', the Cleanup Source Phase does nothing, and exits with status __Error__, reporting that the Debug flag was set in the Build Environment.
 
 [[_phases_buildphases_cleanupresult]]
-==== Cleanup Result Phase 
+=== Cleanup Result Phase 
 (((Phases ,Build Phases ,Cleanup Result))) 
 
 The _Cleanup Result_ Phase deletes all files in the Build Environment`'s Target Location.
@@ -465,7 +465,7 @@ Next to the Core Phases, you may define your own Phases in Global Administration
 Once inserted into the workflow of a Build Environment, we call them Custom Build Phases.
 
 [[_phases_buildphases_custombuildphase]]
-==== Custom Build Phase 
+=== Custom Build Phase 
 (((Phases ,Build Phases ,Custom Build Phase))) 
 
 [NOTE]
@@ -494,7 +494,7 @@ A Custom Build Phase may also be a Custom Level or Deploy Phase: the definition 
 ====
 
 [[_phases_deployphases]]
-=== Deploy Phases 
+== Deploy Phases 
 (((Phases ,Deploy Phases))) 
 
 Deploy Phases are the actions that must be performed to complete a Deploy.
@@ -534,7 +534,7 @@ Next to the Core Deploy Phases, you can create your own Custom Deploy Phases:
 
 
 [[_phases_deployphases_transportbuildresult]]
-==== Transport Build Result Phase 
+=== Transport Build Result Phase 
 (((Phases ,Deploy Phases ,Transport Build Result))) 
 
 The _Transport Build Result_ Phase transports the Build result from the Build Archive Location on the IKAN ALM Server Machine to the Deploy Environment Source Location on the IKAN ALM Agent Machine, using the Transporter associated with the IKAN ALM Agent Machine.
@@ -543,13 +543,13 @@ When doing a Partial Deploy, only the modified and added files in the Build resu
 See the description of the _Partial Deploy_ field in the section <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Creating a Deploy Environment>>.
 
 [[_phases_deployphases_decompressbuildresult]]
-==== Decompress Build Result Phase 
+=== Decompress Build Result Phase 
 (((Phases ,Deploy Phases ,Decompress Build Result))) 
 
 The _Decompress Build Result_ Phase decompresses the Build result file that was transported by the Transport Build Result Phase into the Deploy Environment`'s Source Location, and afterwards, deletes the Build result file.
 
 [[_phases_deployphases_verifydeployscript]]
-==== Verify Deploy Script Phase 
+=== Verify Deploy Script Phase 
 (((Phases ,Deploy Phases ,Verify Deploy Script))) 
 
 The _Verify Deploy Script_ Phase tries to locate the defined Deploy Script, and fails if it cannot.
@@ -567,7 +567,7 @@ If not found there either, the Verify Deploy Script Phase exits with status __Er
 If found, the Verify Deploy Script Phase exits with status __Success__, and reports where it located the Deploy Script.
 
 [[_phases_deployphases_executedeployscript]]
-==== Execute Script Phase 
+=== Execute Script Phase 
 (((Phases ,Deploy Phases ,Execute Script))) 
 
 The _Execute Script_ Phase executes the Deploy Script on the defined Machine using the specified Scripting Tool and the defined Deploy Parameters. 
@@ -580,7 +580,7 @@ If not, it exits with status _Error_ and logs the errors on the _Phase Logs_ pan
 Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,Deploy Actions>>).
 
 [[_phases_deployphases_cleanupbuidlresult]]
-==== Cleanup Build Result Phase 
+=== Cleanup Build Result Phase 
 (((Phases ,Deploy Phases ,Cleanup Build Result))) 
 
 The _Cleanup Build Result_ Phase deletes all files in the Deploy Environment`'s Source Location.
@@ -591,7 +591,7 @@ Next to Core Phases, you may define your own Phases in Global Administration (<<
 Once inserted into the workflow of a Deploy Environment, we call them _Custom Deploy_ Phases.
 
 [[_phases_deployphases_customdeployphase]]
-==== Custom Deploy Phase 
+=== Custom Deploy Phase 
 (((Phases ,Deploy Phases ,Custom Deploy Phase))) 
 
 [NOTE]

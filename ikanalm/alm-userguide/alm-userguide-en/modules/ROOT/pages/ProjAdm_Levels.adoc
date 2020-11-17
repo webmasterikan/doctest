@@ -1,6 +1,6 @@
 
 [[_projadm_levels]]
-== Levels 
+= Levels 
 (((Project Administration ,Levels)))  (((Project Management Options ,Levels)))  (((Levels))) 
 
 This option allows defining Levels and their Environments, which can be assigned to a IKAN ALM Project Lifecycle.
@@ -48,7 +48,7 @@ The following actions are possible:
 ** <<ProjAdm_Levels.adoc#_levelenvmgt_historyview,Viewing the Level History>>
 
 [[_plevelenvmgt_createbuildlevel]]
-=== Creating a Build Level
+== Creating a Build Level
 (((Levels ,Creating a Level))) 
  
 . In the __Project Administration context__, select __Levels > Create Build Level__.
@@ -164,7 +164,7 @@ You can also click _Reset_ to clear the fields and restore the initial values.
 * _Back_ to return to the previous screen without saving the changes.
 
 [[_plevelenvmgt_createtestorproductionlevel]]
-=== Creating a Test or Production Level 
+== Creating a Test or Production Level 
 (((Levels ,Creating a Test Level)))  (((Levels ,Creating a Production Level))) 
 
 [NOTE]
@@ -311,7 +311,7 @@ You can also click
 
 
 [[_levelenvmgt_overview]]
-=== Levels Overview
+== Levels Overview
 
 The _Levels Overview_ screen displays the information concerning the Build, Test and Production Levels defined for a Project.
 
@@ -329,7 +329,7 @@ The following actions are possible:
 ** <<ProjAdm_Levels.adoc#_levelenvmgt_historyview,Viewing the Level History>>
 
 [[_plevelenvmgt_accessing]]
-==== The Levels Overview Screen 
+=== The Levels Overview Screen 
 (((Levels ,Overview Screen))) 
 
 . In the __Project Administration context__, select __Levels > Overview__.
@@ -360,7 +360,7 @@ For a description of the fields, refer to the sections <<ProjAdm_Levels.adoc#_pl
 
 
 [[_plevelenvmgt_editlevel]]
-==== Editing a Level (((Levels ,Editing))) 
+=== Editing a Level (((Levels ,Editing))) 
 
 [[_editlevel]]
 . Switch to the _Levels Overview_ screen.
@@ -396,7 +396,7 @@ For more information, refer to the sections:
 
 
 [[_levelenvmgt_levelphases]]
-===== Level Phases 
+==== Level Phases 
 (((Levels ,Phases)))  (((Level Phases))) 
 
 When creating a Level (Build, Test or Production), IKAN ALM will automatically link the default flow of core Level Phases to it. 
@@ -436,7 +436,7 @@ Refer to the following procedures for more information:
 * <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Inserting a Level Phase>>
 
 [[_plevelenvmgt_levelphasesoverview]]
-====== The Level Phases Overview Screen
+===== The Level Phases Overview Screen
 
 . In the __Project Administration context__, select __Levels > Overview__.
 . Click the _Edit Phases_ image:icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
@@ -468,7 +468,7 @@ Select the _Insert Phase_ link underneath the _Phases Overview_ panel. <<ProjAdm
 . When done, click _Back_ to return to the _Levels Overview_ screen.
 
 [[_plevelenvmgt_modifyorderphases]]
-====== Changing the Order of the Level Phases
+===== Changing the Order of the Level Phases
 
 . Switch to the _Levels Overview_ screen.
 +
@@ -484,7 +484,7 @@ Avoid changing a Phase`'s position in such a way that its _Next Phase on Error_ 
 --
 
 [[_plevelenvmgt_editlevelphases]]
-====== Editing a Level Phase
+===== Editing a Level Phase
 
 . Switch to the _Levels Overview_ screen.
 +
@@ -504,7 +504,7 @@ For a description of the fields, refer to the section <<ProjAdm_Levels.adoc#_ple
 You can also click __Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
 
 [[_plevelenvmgt_viewlevelphaseparams]]
-====== Viewing the Level Phase Parameters 
+===== Viewing the Level Phase Parameters 
 (((Levels ,Phases ,Viewing the Level Phase Parameters)))  (((Parameters ,Level Phases))) 
 
 . Switch to the _Levels Overview_ screen.
@@ -619,7 +619,7 @@ To go back to the Phase Parameter in the Project Administration context, click t
 Parameters_ panel.
 
 [[_plevelenvmgt_deletephase]]
-====== Deleting a Level Phase
+===== Deleting a Level Phase
 
 . Switch to the _Levels Overview_ screen.
 +
@@ -637,7 +637,7 @@ image::ProjAdmin-Levels-TestLevel-LevelPhase-Delete.png[,375,107]
 You can also click __No__ to return to the previous screen without deleting the Level Phase.
 
 [[_plevelenvmgt_insertphase]]
-====== Inserting a Level Phase
+===== Inserting a Level Phase
 
 . Switch to the _Levels Overview_ screen.
 +
@@ -686,7 +686,7 @@ You can also click _Cancel_ to return to the previous screen without saving the 
 
 
 [[_levelenvmgt_builddeployenv]]
-===== Build and Deploy Environment Settings
+==== Build and Deploy Environment Settings
 
 On the _Edit Level_ screen, you will also find the information concerning the Build and Deploy Environments defined for the different Levels.
 
@@ -706,7 +706,7 @@ Refer to the following procedures for more information:
 * <<ProjAdm_Levels.adoc#_plevelenvmgt_changedeploysequence,Editing the Deploy Sequence>>
 
 [[_plevelenvmgt_createbuildenvironment]]
-====== Creating a Build Environment 
+===== Creating a Build Environment 
 (((Build Environments ,Creating))) 
 
 . Switch to the _Edit Level_ screen.
@@ -722,7 +722,7 @@ For a complete description of the _Create Build
 Environment_ procedure, refer to <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>.
 
 [[_plevelenvmgt_createdeployenvironment]]
-====== Creating a Deploy Environment 
+===== Creating a Deploy Environment 
 (((Deploy Environments ,Creating))) 
 
 . Switch to the _Edit Level_ screen.
@@ -738,7 +738,7 @@ For a complete description of the _Create Deploy
 Environment_ procedure, refer to <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Creating a Deploy Environment>>.
 
 [[_plevelenvmgt_changedeploysequence]]
-====== Editing the Deploy Sequence
+===== Editing the Deploy Sequence
 
 When a Deploy Environment is created, it will automatically get Sequence Number 0.
 When there are multiple Deploy Environments linked to a Level, they will be treated in parallel, since they all have 0 as Sequence Number.
@@ -773,7 +773,7 @@ Use the drop-down menu at the left of the Deploy Environment to change the Seque
 You can also click __Refresh __to retrieve the settings from the database or __Cancel__ to return to the previous screen without saving your changes.
 
 [[_levelenvmgt_approvalsequence]]
-===== Level Approvals 
+==== Level Approvals 
 (((Approvals ,Level Approval Sequence)))  (((Approvals ,Level Approvals))) 
 
 For Test and Production Levels, you can specify the sequence of Pre- and Post-Approvals.
@@ -821,7 +821,7 @@ The Approval is added to the Sequence on the _Edit Level_ screen.
 . Repeat this procedure to define all required Pre- and Post-Approvals.
 
 [[_plevelenvmgt_deletelevel]]
-==== Deleting a Level 
+=== Deleting a Level 
 (((Levels ,Deleting))) 
 
 Deleting a Level will also delete the connected Build and Deploy Environments, as well as the historical information concerning Level Requests, Builds and Deploys.
@@ -848,7 +848,7 @@ image::ProjAdmin-Levels-TestLevel-Delete.png[,547,520]
 Remove the Level from the Lifecycle before deleting it. <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_removelevel,Removing a Level>>
 
 [[_plevelenvmgt_clonelevel]]
-==== Cloning a Level
+=== Cloning a Level
 
 . Switch to the _Levels Overview_ screen.
 +
@@ -872,7 +872,7 @@ You might want to change this after the Level has been cloned.
 You also might want to change the Source and/or Target Locations, especially the Target Locations of cloned Deploy Environments.
 
 [[_levelenvmgt_historyview]]
-==== Viewing the Level History 
+=== Viewing the Level History 
 (((Levels ,History))) 
 
 . Switch to the _Levels Overview_ screen.

@@ -1,6 +1,6 @@
 
 [[_drssfeedurldetails]]
-== RSS URL Details 
+= RSS URL Details 
 (((RSS URL Details))) 
 
 The IKAN ALM URL has the following structure: 

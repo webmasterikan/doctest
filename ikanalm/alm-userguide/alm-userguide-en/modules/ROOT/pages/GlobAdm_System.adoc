@@ -1,6 +1,6 @@
 [[_globadm_system_settings]]
 [[_globadm_system]]
-== System
+= System
 
 The _System_ menu provides an entry to view or edit the IKAN ALM Server configuration settings and to perform Housekeeping Actions in the IKAN ALM Build Archive. 
 
@@ -19,7 +19,7 @@ Users who do not have Global Admin Access rights will only have access to the fo
 
 
 [[_globadm_system_settings]]
-=== System Settings 
+== System Settings 
 (((System Settings)))  (((Global Administration ,System Settings))) 
 
 On the _System Settings_ screen, the global IKAN ALM Server settings are defined, such as the different locations (build archive, script, work copy and phase catalog) and the mail and security settings.
@@ -58,7 +58,7 @@ For more detailed information concerning this __History View__, refer to the sec
 
 
 [[_globadm_systemsettings_localenvironment]]
-==== Local Environment
+=== Local Environment
 
 
 image::GlobAdmin-SystemSettings_LocalEnvironment.png[,704,408] 
@@ -175,7 +175,7 @@ __Note: __This port number may be overwritten by the port number defined in the 
 |===
 
 [[_globadm_systemsettings_security]]
-==== Security
+=== Security
 
 
 image::GlobAdmin-SystemSettings_Security.png[,701,106] 
@@ -208,7 +208,7 @@ In this case, all authenticated users will have Administrator access rights to I
 |===
 
 [[_globadm_systemsettings_mail]]
-==== Mail
+=== Mail
 
 IKAN ALM can send mails automatically or on demand to notify on failed or successful Builds and Deploys, to request an approval before delivering to a Test or Production Level, or just to notify connected users on changed settings. 
 
@@ -296,7 +296,7 @@ The characters you enter are displayed as asterisks.
 |===
 
 [[_globadm_systemsettings_miscellaneous]]
-==== Miscellaneous
+=== Miscellaneous
 
 
 image::GlobAdmin-SystemSettings_Misc.png[,697,151] 
@@ -347,7 +347,7 @@ You may also click _Refresh_ to retrieve the settings from the database.
 
 
 [[_globadm_system_housekeeping]]
-=== Housekeeping 
+== Housekeeping 
 (((Housekeeping)))  (((Global Administration ,Housekeeping))) 
 
 The Housekeeping functionality allows you to manage the Build Archive.
@@ -579,7 +579,7 @@ image::GlobAdm-Housekeeping-Delete-Success.png[,1032,319]
 
 
 [[_globadm_system_housekeepinghistory]]
-=== Housekeeping History 
+== Housekeeping History 
 (((Housekeeping History)))  (((Global Administration ,Housekeeping History))) 
 
 This functionality allows you to search for previously performed delete actions.
@@ -674,7 +674,7 @@ image::GlobAdm-HousekeepingHistory-Details_error.png[,1030,336]
 
 
 [[_globadm_system_synchronizebuildarchive]]
-=== Synchronize Build Archive 
+== Synchronize Build Archive 
 (((Synchronize Build Archive)))  (((Global Administration ,Synchronize Build Archive))) 
 
 The _Synchronize Build Archive_ screen allows an IKAN ALM Administrator to synchronize the physical representation of the Build Archive on the file system with the logical representation of the Build Archive in the IKAN ALM database.

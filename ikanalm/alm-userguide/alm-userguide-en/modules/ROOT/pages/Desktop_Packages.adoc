@@ -1,6 +1,6 @@
 
 [[_desktop_packages]]
-== Packages 
+= Packages 
 (((Desktop ,Packages)))  (((Packages))) 
 
 A Package allows moving one or more individual files selected manually from a VCR Stream (Head or Branch) through the IKAN ALM Lifecycle.
@@ -34,7 +34,7 @@ Refer to the following procedures for more information:
 
 
 [[_desktop_createpackage]]
-=== Creating a Package 
+== Creating a Package 
 (((Packages ,Creating))) 
 
 
@@ -117,7 +117,7 @@ For more information on adding File Revisions to the newly created Package, refe
 
 
 [[_desktop_packageoverview]]
-=== The Package Overview Screen 
+== The Package Overview Screen 
 (((Packages ,Overview Screen))) 
 
 . Select _Packages > Overview Packages_ on the Main Menu.
@@ -185,7 +185,7 @@ Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted al
 ====
 
 [[_desktop_viewpackage]]
-=== Viewing Package Settings 
+== Viewing Package Settings 
 (((Packages ,View Settings))) 
 
 . Select _Packages > Overview Packages_ on the Main Menu.
@@ -221,7 +221,7 @@ Allows to launch Level Requests for the selected Package.
 For more detailed information on the different tab pages, refer to the section <<Desktop_Packages.adoc#_desktop_packagedetails,Package Details>>.
 
 [[_desktop_editpackage]]
-=== Editing a Package 
+== Editing a Package 
 (((Packages ,Editing))) 
 
 . Select _Packages > Overview Packages_ on the Main Menu.
@@ -256,7 +256,7 @@ Note that when clicking the Clear button while holding down the CTRL key, will s
 
 
 [[_desktop_hideshowpackage]]
-=== Hiding/Showing a Package 
+== Hiding/Showing a Package 
 (((Packages ,Hiding)))  (((Packages ,Showing))) 
 
 Specifying that a Package is "`hidden`", causes it not to be displayed by default on Overview panels.
@@ -288,7 +288,7 @@ Package_ panel to specify whether or not you want to display hidden Packages.
 ====
 
 [[_desktop_viewpackagehistory]]
-=== Viewing the Package History 
+== Viewing the Package History 
 (((Packages ,History))) 
 
 . Select _Packages > Overview Packages_ on the Main Menu.
@@ -302,7 +302,7 @@ Overview_ screen.
 
 
 [[_desktop_packagedetails]]
-=== Package Details
+== Package Details
 
 The _Package Details_ screen contains the detailed information concerning the selected Package. 
 
@@ -335,7 +335,7 @@ For more information on the _Auto Refresh_ settings, refer to the section <<User
 
 
 [[_desktop_packagedetails_summary]]
-==== Summary
+=== Summary
 
 The information concerning the Package and the possible actions are spread over different panels.
 
@@ -344,7 +344,7 @@ image::Desktop-PackageDetails-Tab-Summary.png[,892,483]
 
 
 [[_desktop_packagedetails_actions]]
-===== Actions Panel
+==== Actions Panel
 
 
 image::Desktop-PackageDetails-Panel-Acttions.png[,330,254] 
@@ -358,7 +358,7 @@ image::Desktop-PackageDetails-Panel-Acttions_EditPackage.png[,478,236]
 
 
 [[_desktop_packagedetails_info]]
-===== Info Panel
+==== Info Panel
 
 
 image::Desktop-PackageDetails-Panel-Info.png[,826,239] 
@@ -402,7 +402,7 @@ For more information, refer to the section <<Desktop_PackageGroups.adoc#_desktop
 |===
 
 [[_desktop_packagedetails_latestlevelrequests]]
-===== Latest Level Requests Panel
+==== Latest Level Requests Panel
 
 
 image::Desktop-PackageDetails-Panel-LatestLR.png[,933,193] 
@@ -412,7 +412,7 @@ On this list, you can click the _OID_ link of one of the Level Requests to displ
 Clicking the Build Number will show the Build History of that Level Request.
 
 [[_desktop_packagedetails_viewcontents]]
-==== View Contents
+=== View Contents
 
 image::Desktop-PackageDetails-Tab-ViewContents.png[,710,336] 
 
@@ -437,7 +437,7 @@ This field may be empty, indicating that the latest File Revision is retrieved a
 |===
 
 [[_desktop_packagedetails_editcontents]]
-==== Edit Contents
+=== Edit Contents
 
 
 image::Desktop-PackageDetails-Tab-EditContents.png[,476,428] 
@@ -535,7 +535,7 @@ image::Desktop-Packages-SelectProjectStream-ModifyRevision.png[,471,108]
 
 
 [[_desktop_packagedetails_lifecycleactions]]
-==== Lifecycle Actions
+=== Lifecycle Actions
 
 
 image::Desktop-PackageDetails-Tab-LifecycleActions.png[,731,372] 

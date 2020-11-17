@@ -2,7 +2,7 @@
 :sectnums!:
 
 [appendix]
-== Glossary of Terms
+= Glossary of Terms
 
 [cols="1,1", frame="topbot"]
 |===

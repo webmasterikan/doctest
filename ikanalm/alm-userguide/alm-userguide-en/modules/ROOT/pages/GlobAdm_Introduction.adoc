@@ -1,6 +1,6 @@
 
 [[_globadm_introduction]]
-== Global Administration 
+= Global Administration 
 (((Global Administration))) 
 
 On the Global Administration landing page, you will find an overview of all tasks which can also be called via the Global Administration menu.

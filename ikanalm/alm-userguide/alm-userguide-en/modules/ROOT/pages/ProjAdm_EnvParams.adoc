@@ -1,5 +1,5 @@
 [[_projadm_environmentparameters]]
-== Environment Parameters 
+= Environment Parameters 
 (((Project Administration ,Environment Parameters)))  (((Environment Parameters)))  (((Parameters ,Environment))) 
 
 Environment Parameters are parameters that can be used during the _Execute Script_ Phase which runs a Build/Deploy Script.
@@ -47,7 +47,7 @@ The following actions are possible:
 * <<ProjAdm_EnvParams.adoc#_environmentparams_copy,Copying Environment Parameters>>
 
 [[_environmentparams_overview]]
-=== The Parameters Overview Screen
+== The Parameters Overview Screen
 (((Environment Parameters ,Overview Screen))) 
 
 [NOTE]
@@ -134,7 +134,7 @@ It allows copying the selected Environment Parameter definition to one or more E
 |===
 
 [[_environmentparams_create]]
-=== Creating Environment Parameters 
+== Creating Environment Parameters 
 (((Environment Parameters ,Creating))) 
 
 . Switch to the _Parameters Overview_ screen for the required Project.
@@ -218,7 +218,7 @@ You can also click:
 * _Cancel_ to return to the previous screen without saving the changes.
 
 [[_environmentparams_history]]
-=== Viewing the Environment Parameters History 
+== Viewing the Environment Parameters History 
 (((Environment Parameters ,History))) 
 
 Switch to the _Parameters Overview_ screen for the required Project.
@@ -232,7 +232,7 @@ View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging
 Click __Back __to return to the previous screen.
 
 [[_environmentparams_edit]]
-=== Editing Environment Parameters 
+== Editing Environment Parameters 
 (((Environment Parameters ,Editing))) 
 
 . Switch to the _Parameters Overview_ screen for the required Project.
@@ -254,7 +254,7 @@ You can also click:
 * _Cancel_ to return to the previous screen without saving your changes.
 
 [[_environmentparams_delete]]
-=== Deleting Environment Parameters 
+== Deleting Environment Parameters 
 (((Environment Parameters ,Deleting))) 
 
 . Switch to the _Parameters Overview_ screen for the required Project.
@@ -272,7 +272,7 @@ image::ProjAdmin-EnvParams-Delete.png[,383,388]
 You can also click _Cancel_ to return to the previous screen without saving your changes.
 
 [[_environmentparams_copy]]
-=== Copying Environment Parameters 
+== Copying Environment Parameters 
 (((Environment Parameters ,Copying))) 
 
 To avoid having to redefine Environment Parameters which are identical for multiple Environments, you can copy the required Environment Parameter to other Build and/or Deploy Environments.

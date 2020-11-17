@@ -1,6 +1,6 @@
 [[_globadm_usersgroups_users]]
 [[_globadm_usersgroups]]
-== Users and Groups
+= Users and Groups
 
 Refer to the following sections for more information on:
 
@@ -9,7 +9,7 @@ Refer to the following sections for more information on:
 
 
 [[_globadm_usersgroups_users]]
-=== Users 
+== Users 
 (((Global Administration ,Users)))  (((Users)))  (((Users ,Creating))) 
 
 IKAN ALM uses the JAAS interface to base its User ID/Password authentication on existing Security Systems in your organization.
@@ -65,7 +65,7 @@ The Users Overview option allows:
 * displaying a list of Users connected to IKAN ALM, with the possibility to disconnect them, if needed, before their session has timed out.
 
 [[_globadm_usersgroups_usersoverview]]
-==== The Users Overview Screen
+=== The Users Overview Screen
 (((Users ,Overview Screen))) 
 
 . In the Global Administration context, select__ Users & Groups > Overview Users__.
@@ -187,7 +187,7 @@ It allows viewing the User History. <<GlobAdm_UsersGroups.adoc#_globadm_usersgro
 |===
 
 [[_globadm_usersgroups_edituser]]
-==== Editing User Settings 
+=== Editing User Settings 
 (((Users ,Editing))) 
 
 . In the Global Administration context, select__ Users & Groups > Overview Users__.
@@ -230,7 +230,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_usersgroups_disconnectingusers]]
-==== Disconnecting Users 
+=== Disconnecting Users 
 (((Users ,Disconnecting))) 
 
 . In the Global Administration context, select__ Users & Groups > Overview Users__.
@@ -244,7 +244,7 @@ This will end the User`'s session and disconnect him from IKAN ALM.
 As a result, the User has to log on again if he or she wants to continue his or her activity in IKAN ALM.
 
 [[_globadm_usersgroups_userhistory]]
-==== Viewing the User History 
+=== Viewing the User History 
 (((Users ,History))) 
 
 . In the Global Administration context, select __Users & Groups > Overview Users__.
@@ -277,7 +277,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_usersgroups_groups]]
-=== User Groups 
+== User Groups 
 (((Global Administration ,User Groups)))  (((User Groups))) 
 
 IKAN ALM uses the JAAS interface to base its User ID/Password authentication on existing Security Systems in your organization.
@@ -309,7 +309,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_UsersGroups.adoc#_globadm_usergroupsoverview,The User Groups Overview Screen>>
 
 [[_globadm_usergroupcreate]]
-==== Creating a User Group 
+=== Creating a User Group 
 (((User Groups ,Creating))) 
 
 [NOTE]
@@ -354,7 +354,7 @@ The newly created User Group is added to the__ User
 Groups Overview__ panel at the bottom of the screen.
 
 [[_globadm_usergroupsoverview]]
-==== The User Groups Overview Screen 
+=== The User Groups Overview Screen 
 (((User Groups ,Overview Screen))) 
 
 . In the Global Administration context, select__ Users & Groups > Overview User Groups__.
@@ -424,7 +424,7 @@ Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted al
 ====
 
 [[_globadm_usersgroups_editusergroup]]
-==== Editing a User Group 
+=== Editing a User Group 
 (((User Groups ,Editing))) 
 
 . In the Global Administration context, select__ Users & Groups > Overview User Groups__.
@@ -486,7 +486,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_usersgroups_editusergroupmembers]]
-==== Editing the User Group Members
+=== Editing the User Group Members
 
 . On the __User Group Members __panel underneath the _Edit User Group_ panel (See <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Editing a User Group>>), click the image:icons/edit.gif[,15,15] _Edit User Group Members_ link to change the selected User Group definition. 
 +
@@ -523,7 +523,7 @@ You can also click:
 * _Cancel_ to return to the previous screen without saving the changes.
 
 [[_globadm_usersgroups_deleteusergroup]]
-==== Deleting a User Group 
+=== Deleting a User Group 
 (((User Groups ,Deleting))) 
 
 . In the Global Administration context, select__ Users & Groups > Overview User Groups__.
@@ -545,7 +545,7 @@ You will need to cancel the displayed connections, before you can delete the Use
 ====
 
 [[_globadm_usersgroups_usergrouphistory]]
-==== Viewing the User Group History 
+=== Viewing the User Group History 
 (((User Groups ,History))) 
 
 . In the Global Administration context, select__ Users & Groups > Overview User Groups__.

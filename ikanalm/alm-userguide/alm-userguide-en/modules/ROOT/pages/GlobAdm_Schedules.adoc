@@ -1,6 +1,6 @@
 [[_globadm_schedulesoverview]]
 [[_globadm_schedules]]
-== Schedules 
+= Schedules 
 (((Global Administration ,Schedules)))  (((Schedules))) 
 
 A Schedule definition enables to automate the creation of Level Request for a particular Build Level.
@@ -21,7 +21,7 @@ Refer to the following sections for detailed information:
 
 
 [[_globadm_schedulecreate]]
-=== Creating a Schedule 
+== Creating a Schedule 
 (((Schedules ,Creating))) 
 
 [NOTE]
@@ -135,7 +135,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_schedulesoverview]]
-=== The Schedules Overview Screen 
+== The Schedules Overview Screen 
 (((Schedules ,Overview Screen))) 
 
 [[_pschedulesoverview]]
@@ -188,7 +188,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_schedules_edit]]
-==== Editing a Schedule Definition 
+=== Editing a Schedule Definition 
 (((Schedules ,Editing))) 
 
 . In the Global Administration context, select _Schedules > Overview_.
@@ -217,7 +217,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_schedules_delete]]
-==== Deleting a Schedule Definition 
+=== Deleting a Schedule Definition 
 (((Schedules ,Deleting))) 
 
 . In the Global Administration context, select _Schedules > Overview_.
@@ -239,7 +239,7 @@ image::GlobAdm-Schedules-Delete-Error.png[,800,498]
 You must remove the Schedule from the listed Levels before you can delete it.
 
 [[_globadm_schedules_history]]
-==== Viewing the Schedule History 
+=== Viewing the Schedule History 
 (((Schedules ,History))) 
 
 . In the Global Administration context, select _Schedules > Overview_.

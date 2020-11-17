@@ -1,6 +1,6 @@
 [[_globadm_vcr_svn]]
 [[_globadm_vcr]]
-== Version Control Repositories 
+= Version Control Repositories 
 (((Global Administration ,Version Control Repositories)))  (((Version Control Repositories))) 
 
 IKAN ALM currently supports different types of Version Control Repositories (VCR):
@@ -22,7 +22,7 @@ You must always install a VCR client on the IKAN ALM Server in order to interact
 ====
 
 [[_globaadm_vcr_create]]
-=== Creating a Repository 
+== Creating a Repository 
 (((VCR ,Creating))) 
 
 [NOTE]
@@ -55,7 +55,7 @@ For more information on those details, refer to the appropriate sections:
 
 
 [[_globadm_vcr_overview]]
-=== The Repository Overview Screen 
+== The Repository Overview Screen 
 (((VCR ,Overview Screen))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -111,7 +111,8 @@ For more information, refer to the appropriate sections:
 
 
 [[_globadm_vcr_svn]]
-=== Subversion Repositories (((Version Control Repositories ,Subversion))) 
+== Subversion Repositories 
+(((Version Control Repositories ,Subversion))) 
 
 Refer to the following sections for detailed information:
 
@@ -122,7 +123,8 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_svn_history,Viewing the Subversion Repository History>>
 
 [[_pcreatesvnrepository]]
-==== Creating a Subversion Repository (((Subversion ,Creating))) 
+=== Creating a Subversion Repository 
+(((Subversion ,Creating))) 
 
 [NOTE]
 ====
@@ -252,7 +254,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_pworkwithsvnoverview]]
-==== The Subversion Repositories Overview Screen 
+=== The Subversion Repositories Overview Screen 
 (((Subversion ,Overview Screen))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -306,7 +308,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_vcr_svn_edit]]
-==== Editing a Subversion Repository 
+=== Editing a Subversion Repository 
 (((Subversion ,Editing))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -340,7 +342,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_vcr_svn_delete]]
-==== Deleting a Subversion Repository 
+=== Deleting a Subversion Repository 
 (((Subversion ,Deleting))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -366,7 +368,7 @@ image::GlobAdm-VCR-Subversion-Delete-Error.png[,696,691]
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
 [[_globadm_vcr_svn_history]]
-==== Viewing the Subversion Repository History 
+=== Viewing the Subversion Repository History 
 (((Subversion ,History))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -383,7 +385,7 @@ View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging
 
 
 [[_globadm_vcr_git]]
-=== Git Repositories 
+== Git Repositories 
 (((Version Control Repositories ,Git))) 
 
 Refer to the following sections for detailed information:
@@ -395,7 +397,8 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_git_history,Viewing the Git Repository History>>
 
 [[_globadm_vcr_git_create]]
-==== Creating a Git Repository (((Git ,Creating))) 
+=== Creating a Git Repository 
+(((Git ,Creating))) 
 
 [NOTE]
 ====
@@ -529,7 +532,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_vcr_git_overview]]
-==== The Git Repositories Overview Screen 
+=== The Git Repositories Overview Screen 
 (((Git ,Overview Screen))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -583,7 +586,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_vcr_git_edit]]
-==== Editing a Git Repository 
+=== Editing a Git Repository 
 (((Git ,Editing))) 
 
 . In the Global Administration context, select __Version Control Repositories > Overview__ on the Submenu.
@@ -617,7 +620,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_vcr_git_delete]]
-==== Deleting a Git Repository 
+=== Deleting a Git Repository 
 (((Git ,Deleting))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -643,7 +646,7 @@ image::GlobAdm-VCR-Git-Delete-Error.png[,624,480]
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
 [[_globadm_vcr_git_history]]
-==== Viewing the Git Repository History 
+=== Viewing the Git Repository History 
 (((Git ,History))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -660,7 +663,7 @@ View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging
 
 
 [[_globadm_vcr_cvs]]
-=== CVS Repositories 
+== CVS Repositories 
 (((CVS)))  ((( Version Control Repositories ,CVS))) 
 
 Refer to the following sections for detailed information:
@@ -672,7 +675,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_cvs_history,Viewing the CVS Repository History>>
 
 [[_pcreatecvsrepository]]
-==== Creating a CVS Repository 
+=== Creating a CVS Repository 
 (((CVS ,Creating))) 
 
 [NOTE]
@@ -806,7 +809,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_pworkwithcvsoverview]]
-==== The CVS Repositories Overview Screen 
+=== The CVS Repositories Overview Screen 
 (((CVS ,Overview Screen))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -860,7 +863,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_vcr_cvs_edit]]
-==== Editing a CVS Repository  
+=== Editing a CVS Repository  
 (((CVS ,Editing))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -894,7 +897,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_vcr_cvs_delete]]
-==== Deleting a CVS Repository  
+=== Deleting a CVS Repository  
 (((CVS ,Deleting))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -921,7 +924,7 @@ image::GlobAdm-VCR-CVS-Delete-Error.png[,480,499]
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
 [[_globadm_vcr_cvs_history]]
-==== Viewing the CVS Repository History 
+=== Viewing the CVS Repository History 
 (((CVS ,History))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -938,7 +941,7 @@ View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging
 
 
 [[_globadm_vcr_vss]]
-=== Visual SourceSafe (VSS) Repositories 
+== Visual SourceSafe (VSS) Repositories 
 (((Version Control Repositories ,VSS (Visual Source Safe))))  (((VSS))) 
 
 Refer to the following sections for detailed information:
@@ -950,7 +953,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_vss_history,Viewing the VSS Repository History>>
 
 [[_pcreatevssrepository]]
-==== Creating a VSS Version Control Repository 
+=== Creating a VSS Version Control Repository 
 (((VSS ,Creating))) 
 
 [NOTE]
@@ -1071,7 +1074,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_pworkwithvssoverview]]
-==== The VSS Repositories Overview Screen 
+=== The VSS Repositories Overview Screen 
 (((VSS ,Overview Screen))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1125,7 +1128,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_vcr_vss_edit]]
-==== Editing a VSS Repository 
+=== Editing a VSS Repository 
 (((VSS ,Editing))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1159,7 +1162,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_vcr_vss_delete]]
-==== Deleting a VSS Repository 
+=== Deleting a VSS Repository 
 (((VSS ,Deleting))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1185,7 +1188,7 @@ image::GlobAdm-VCR-VSS-Delete-Error.png[,553,483]
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
 [[_globadm_vcr_vss_history]]
-==== Viewing the VSS Repository History 
+=== Viewing the VSS Repository History 
 (((VSS ,History))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1202,7 +1205,7 @@ View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging
 
 
 [[_globadm_vcr_clearcase]]
-=== ClearCase Repositories 
+== ClearCase Repositories 
 (((Version Control Repositories ,ClearCase)))  (((ClearCase))) 
 
 Refer to the following sections for detailed information:
@@ -1214,7 +1217,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_history,Viewing the ClearCase Repository History>>
 
 [[_pcreateclearcasebaserepository]]
-==== Creating a ClearCase Repository 
+=== Creating a ClearCase Repository 
 (((ClearCase ,Creating))) 
 
 [NOTE]
@@ -1349,7 +1352,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_pworkwithclearcasebaseoverview]]
-==== The ClearCase Repositories Overview Screen 
+=== The ClearCase Repositories Overview Screen 
 (((ClearCase ,Overview Screen))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1403,7 +1406,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_vcr_clearcase_edit]]
-==== Editing a ClearCase Repository 
+=== Editing a ClearCase Repository 
 (((ClearCase ,Editing))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1437,7 +1440,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_vcr_clearcase_delete]]
-==== Deleting a ClearCase Repository 
+=== Deleting a ClearCase Repository 
 (((ClearCase ,Deleting))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1463,7 +1466,7 @@ image::GlobAdm-VCR-ClearCase-Delete-Error.png[,649,547]
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
 [[_globadm_vcr_clearcase_history]]
-==== Viewing the ClearCase Repository History 
+=== Viewing the ClearCase Repository History 
 (((ClearCase ,History))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1480,7 +1483,7 @@ View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging
 
 
 [[_globadm_vcr_pvcs]]
-=== PVCS Repositories 
+== PVCS Repositories 
 (((PVCS)))  (((Version Control Repositories ,PVCS))) 
 
 Refer to the following sections for detailed information:
@@ -1492,7 +1495,8 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_history,Viewing the PVCS Repository History>>
 
 [[_pcreatepvcsrepository]]
-==== Creating a PVCS Repository (((PVCS ,Creating))) 
+=== Creating a PVCS Repository 
+(((PVCS ,Creating))) 
 
 [NOTE]
 ====
@@ -1626,7 +1630,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_pworkwithpvcsoverview]]
-==== The PVCS Repositories Overview Screen 
+=== The PVCS Repositories Overview Screen 
 (((PVCS ,Overview Screen))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1680,7 +1684,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_vcr_pvcs_edit]]
-==== Editing a PVCS Repository 
+=== Editing a PVCS Repository 
 (((PVCS ,Editing))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1714,7 +1718,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_vcr_pvcs_delete]]
-==== Deleting a PVCS Repository  
+=== Deleting a PVCS Repository  
 (((PVCS ,Deleting))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1740,7 +1744,7 @@ image::GlobAdm-VCR-PVCS-Delete-Error.png[,573,525]
 Before deleting the VCR, you must connect the reported Projects to a different VCR.
 
 [[_globadm_vcr_pvcs_history]]
-==== Viewing the PVCS Repository History 
+=== Viewing the PVCS Repository History 
 (((PVCS ,History))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1757,7 +1761,7 @@ View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging
 
 
 [[_globadm_vcr_tfvc]]
-=== TFVC Version Control Repositories 
+== TFVC Version Control Repositories 
 (((Version Control Repositories ,TFVC))) 
 
 Refer to the following sections for detailed information:
@@ -1769,7 +1773,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_history,Viewing the TFVC Repository History>>
 
 [[_globadm_vcr_tfvc_create]]
-==== Creating a TFVC Repository 
+=== Creating a TFVC Repository 
 (((Git ,Creating))) 
 
 [NOTE]
@@ -1882,7 +1886,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_vcr_tfvc_overview]]
-==== The TFVC Repositories Overview Screen 
+=== The TFVC Repositories Overview Screen 
 (((Git ,Overview Screen))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1936,7 +1940,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_vcr_tfvc_edit]]
-==== Editing a TFVC Repository 
+=== Editing a TFVC Repository 
 (((Git ,Editing))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1970,7 +1974,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_vcr_tfvc_delete]]
-==== Deleting a TFVC Repository 
+=== Deleting a TFVC Repository 
 (((Git ,Deleting))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.
@@ -1996,7 +2000,7 @@ image::GlobAdm-VCR-TFVC-Delete-Error.png[,648,433]
 Before deleting the VCR, you must connect the reported Projects to another VCR.
 
 [[_globadm_vcr_tfvc_history]]
-==== Viewing the TFVC Repository History 
+=== Viewing the TFVC Repository History 
 (((Git ,History))) 
 
 . In the Global Administration context, select__ Version Control Repositories > Overview__.

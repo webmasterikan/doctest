@@ -1,6 +1,6 @@
 
 [[_globadm_historylog]]
-== History Log 
+= History Log 
 (((History Log)))  (((Global Administration ,History Log))) 
 
 

@@ -1,5 +1,5 @@
 [[_globadm_scriptingtools]]
-== Scripting Tools 
+= Scripting Tools 
 (((Global Administration ,Scripting Tools)))  (((Scripting Tools))) 
 
 IKAN ALM supports the following Scripting Tools:
@@ -18,7 +18,7 @@ You must always install the defined Scripting Tool on the IKAN ALM Agent in orde
 ====
 
 [[_sglobadm_scriptingtools_create]]
-=== Creating a Scripting Tool 
+== Creating a Scripting Tool 
 (((Scripting Tools ,Creating))) 
 
 [NOTE]
@@ -47,7 +47,7 @@ For more information on those details, refer to the appropriate sections:
 * <<GlobAdm_ScriptingTools.adoc#_pcreatemaven2scriptingtool,Creating a Maven2 Scripting Tool>>
 
 [[_sglobadm_scriptingtools_overview]]
-=== The Scripting Tools Overview Screen 
+== The Scripting Tools Overview Screen 
 (((Scripting Tools ,Overview Screen))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -100,7 +100,7 @@ Refer to the following sections for detailed information:
 
 
 [[_sglobadm_scriptingtool_ant]]
-=== ANT Scripting Tools 
+== ANT Scripting Tools 
 (((Scripting Tools ,ANT))) 
 
 Apache Ant is a Java-based build tool.
@@ -117,7 +117,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_ant_history,Viewing the ANT Scripting Tool History>>
 
 [[_pcreateantscriptingtool]]
-==== Creating an ANT Scripting Tool 
+=== Creating an ANT Scripting Tool 
 (((ANT Scripting Tools ,Creating))) 
 
 [NOTE]
@@ -293,7 +293,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_scriptingtool_ant_overview]]
-==== The ANT Scripting Tools Overview Screen 
+=== The ANT Scripting Tools Overview Screen 
 (((Ant ,Overview Screen))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -342,7 +342,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_scriptingtool_ant_edit]]
-==== Editing an ANT Scripting Tool Definition 
+=== Editing an ANT Scripting Tool Definition 
 (((ANT Scripting Tools ,Editing))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -375,7 +375,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_scriptingtool_ant_delete]]
-==== Deleting an ANT Scripting Tool Definition 
+=== Deleting an ANT Scripting Tool Definition 
 (((ANT Scripting Tools ,Deleting))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -401,7 +401,7 @@ image::GlobAdm-ScriptingTools-ANT-Delete-Error.png[,831,518]
 You need to assign another Scripting Tool to these Environments, before deleting this ANT Scripting Tool.
 
 [[_globadm_scriptingtool_ant_history]]
-==== Viewing the ANT Scripting Tool History 
+=== Viewing the ANT Scripting Tool History 
 (((ANT Scripting Tools ,History))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -431,7 +431,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_sglobadm_scriptingtool_gradle]]
-=== Gradle Scripting Tools 
+== Gradle Scripting Tools 
 (((Scripting Tools ,Gradle))) 
 
 Gradle is an open source build automation system that builds upon the concepts of Apache Ant and Apache Maven and introduces a Groovy-based domain-specific language (DSL) instead of the XML form used by Apache Maven for declaring the project configuration.
@@ -447,7 +447,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_ScriptingTools.adoc#_phistorygradlescriptingtool,Viewing the Gradle Scripting Tool History>>
 
 [[_pcreategradlescriptingtool]]
-==== Creating a Gradle Scripting Tool 
+=== Creating a Gradle Scripting Tool 
 (((Gradle Scripting Tools ,Creating))) 
 
 [NOTE]
@@ -618,7 +618,7 @@ The newly created Gradle Scripting Tool is added to the__ Gradle
 Scripting Tools Overview__ at the bottom of the screen.
 
 [[_poverviewgradlescriptingtool]]
-==== The Gradle Scripting Tools Overview Screen 
+=== The Gradle Scripting Tools Overview Screen 
 (((Gradle ,Overview Screen))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -679,7 +679,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_peditgradlescriptingtool]]
-==== Editing a Gradle Scripting Tool Definition 
+=== Editing a Gradle Scripting Tool Definition 
 (((Gradle Scripting Tools ,Editing))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -711,7 +711,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_pdeletegradlescriptingtool]]
-==== Deleting a Gradle Scripting Tool Definition 
+=== Deleting a Gradle Scripting Tool Definition 
 (((Gradle Scripting Tools ,Deleting))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -738,7 +738,7 @@ image::GlobAdm-ScriptingTools-Gradle-Delete-Eror.png[,1002,572]
 You need to assign another Scripting Tool to these Environments, before deleting this Gradle Scripting Tool.
 
 [[_phistorygradlescriptingtool]]
-==== Viewing the Gradle Scripting Tool History 
+=== Viewing the Gradle Scripting Tool History 
 (((Gradle Scripting Tools ,History))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -768,7 +768,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_sglobadm_scriptingtool_nant]]
-=== NANT Scripting Tools 
+== NANT Scripting Tools 
 (((Scripting Tools ,NANT)))  (((NANT Scripting Tools))) 
 
 NANT is a free .NET build tool.
@@ -788,7 +788,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_history,Viewing the NANT Scripting Tool History>>
 
 [[_pcreatenantscriptingtool]]
-==== Creating a NANT Scripting Tool 
+=== Creating a NANT Scripting Tool 
 (((NANT Scripting Tools ,Creating))) 
 
 [NOTE]
@@ -912,7 +912,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_scriptingtool_nant_overview]]
-==== The NANT Scripting Tools Overview Screen 
+=== The NANT Scripting Tools Overview Screen 
 (((NANT ,Overview Screen))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -961,7 +961,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_scriptingtool_nant_edit]]
-==== Editing a NANT Scripting Tool Definition 
+=== Editing a NANT Scripting Tool Definition 
 (((NANT Scripting Tools ,Editing))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -994,7 +994,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_scriptingtool_nant_delete]]
-==== Deleting a NANT Scripting Tool Definition 
+=== Deleting a NANT Scripting Tool Definition 
 (((NANT Scripting Tools ,Deleting))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -1021,7 +1021,7 @@ image::GlobAdm-ScriptingTools-NANT-Delete-Error.png[,800,528]
 You need to assign another Scripting Tool to these Environments, before deleting this NANT Scripting Tool.
 
 [[_globadm_scriptingtool_nant_history]]
-==== Viewing the NANT Scripting Tool History 
+=== Viewing the NANT Scripting Tool History 
 (((NANT Scripting Tools ,History))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -1051,7 +1051,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_sglobad_scriptingtool_maven2]]
-=== Maven2 Scripting Tools 
+== Maven2 Scripting Tools 
 (((Scripting Tools ,Maven2)))  (((Maven2 Scripting Tools))) 
 
 Maven2 is a scripting tool that can be used for building and managing any Java-based project.
@@ -1070,7 +1070,7 @@ Refer to the following sections for detailed information:
 
 
 [[_pcreatemaven2scriptingtool]]
-==== Creating a Maven2 Scripting Tool 
+=== Creating a Maven2 Scripting Tool 
 (((Maven2 Scripting Tools ,Creating))) 
 
 [NOTE]
@@ -1243,7 +1243,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_scriptingtool_maven2_overview]]
-==== The Maven2 Scripting Tools Overview Screen 
+=== The Maven2 Scripting Tools Overview Screen 
 (((Gradle ,Overview Screen))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -1291,7 +1291,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_scriptingtool_maven2_edit]]
-==== Editing a Maven2 Scripting Tool Definition 
+=== Editing a Maven2 Scripting Tool Definition 
 (((Maven2 Scripting Tools ,Editing))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -1325,7 +1325,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_scriptingtool_maven2_delete]]
-==== Deleting a Maven2 Scripting Tool Definition 
+=== Deleting a Maven2 Scripting Tool Definition 
 (((Maven2 Scripting Tools ,Deleting))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.
@@ -1351,7 +1351,7 @@ image::GlobAdm-ScriptingTools-Maven2-Delete-Error.png[,790,510]
 You need to assign another Scripting Tool to these Environments, before deleting this Maven2 Scripting Tool.
 
 [[_globadm_scriptingtool_maven2_history]]
-==== Viewing the Maven2 Scripting Tool History 
+=== Viewing the Maven2 Scripting Tool History 
 (((Maven2 Scripting Tools ,History))) 
 
 . In the Global Administration context, select _Scripting Tools > Overview_.

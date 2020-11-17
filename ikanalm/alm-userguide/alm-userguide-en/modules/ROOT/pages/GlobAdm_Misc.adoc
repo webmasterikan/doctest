@@ -1,6 +1,6 @@
 
 [[_globadm_miscellaneous]]
-== Miscellaneous 
+= Miscellaneous 
 (((Global Administration ,Miscellaneous)))  (((Miscellaneous)))  (((Miscellaneous ,Notifying IKAN ALM Users))) 
 
 [NOTE]
@@ -14,7 +14,7 @@ The Miscellaneous menu options are explained in the following procedures:
 
 
 [[_globadm_notifyusers]]
-=== Notifying IKAN ALM Users 
+== Notifying IKAN ALM Users 
 (((Notifying IKAN ALM Users))) 
 
 [[_pnotifyusers]]

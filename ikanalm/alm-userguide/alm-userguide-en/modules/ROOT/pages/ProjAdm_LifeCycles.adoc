@@ -1,5 +1,5 @@
 [[_projadm_lifecycles]]
-== Lifecycles 
+= Lifecycles 
 (((Project Administration ,Lifecycles)))  (((Project Management Options ,Lifecycles)))  (((Lifecycles))) 
 
 Each Project Stream has a Lifecycle connected to it.
@@ -52,7 +52,7 @@ the advantage of creating them at this stage, via the _Edit
 Lifecycle_ screen, is that the Level will automatically be connected to the Lifecycle.
 ====
 [[_plifecyclemgt_createlifecycle]]
-=== Creating a Lifecycle
+== Creating a Lifecycle
 (((Lifecycles ,Creating))) 
 
 . In the __Project Administration context__, select__ Lifecycles > Create__.
@@ -104,7 +104,7 @@ For more information, refer to the section <<ProjAdm_LifeCycles.adoc#_plifecycle
 
 
 [[_lifecyclemgt_screen]]
-=== Lifecycles Overview Screen
+== Lifecycles Overview Screen
 
 The _Lifecycles Overview_ screen lets you verify and change the information concerning Lifecycles and their related Levels.
 The following actions are possible:
@@ -115,7 +115,7 @@ The following actions are possible:
 ** <<ProjAdm_LifeCycles.adoc#_lifecyclemgt_historyview,Viewing the Lifecycle History>>
 
 [[_plifecyclemgt_screen]]
-==== The Lifecycles Overview Screen 
+=== The Lifecycles Overview Screen 
 (((Lifecycles ,Overview Screen))) 
 
 . In the __Project Administration context__, select__ Lifecycles > Overview__.
@@ -172,7 +172,7 @@ For more information, refer to the section <<ProjAdm_LifeCycles.adoc#_plifecycle
 
 
 [[_plifecyclemgt_editlifecycle]]
-==== Editing a Lifecycle 
+=== Editing a Lifecycle 
 (((Lifecycles ,Editing)))  (((Levels ,Optional Levels)))  (((Levels ,Required Levels)))  (((Lifecycles ,Levels ,Optional Levels)))  (((Lifecycles ,Levels ,Required Levels)))  (((Levels ,Inserting)))  (((Lifecycles ,Levels ,Inserting)))  (((Levels ,Changing the order)))  (((Lifecycles ,Levels ,Changing the order))) 
 
 . Switch to the _Lifecycles Overview_ screen.
@@ -218,7 +218,7 @@ For more information, refer to the sections:
 
 
 [[_lifecycles_definedlevels]]
-===== Defined Levels Panel
+==== Defined Levels Panel
 
 On the Defined Levels panel, the following information is available for each of the defined Levels:
 
@@ -292,7 +292,7 @@ The Pre-Notify, Pre-Approve, Post-Approve and Post-Notify fields do not apply fo
 ====
 
 [[_lifecycles_creatingadditionallevels]]
-===== Creating Additional Levels
+==== Creating Additional Levels
 
 Underneath the __Defined Levels __panel, the following links may be available:
 
@@ -311,7 +311,7 @@ For a description of the fields, refer to the section <<ProjAdm_Levels.adoc#_ple
 
 
 [[_lifecycles_insertingexistinglevel]]
-===== Inserting an Existing Level
+==== Inserting an Existing Level
 
 [NOTE]
 ====
@@ -360,7 +360,7 @@ For more information on auditing a Project, refer to <<ProjAdm_AuditProjects.ado
 
 
 [[_lifecycles_changingorderlevels]]
-===== Changing the order of the Levels
+==== Changing the order of the Levels
 
 On the Defined Levels panel, use the image:icons/up.gif[,15,15] __Up __and image:images/icons/down.gif[,15,15] _Down_ links in front of the Level to change the position of the selected Level in the sequence of defined Levels.
 
@@ -371,7 +371,7 @@ Test Levels may not be placed after Production Levels.
 ====
 
 [[_lifecycles_makingoptional]]
-===== Making a Level optional or required
+==== Making a Level optional or required
 
 Making a Level Optional means that it can be skipped in the Lifecycle.
 
@@ -393,7 +393,7 @@ __Note: __The icon in front of the Level has changed to image:icons/required.gif
 You can use this _Set Required_ link to make the Level required again.
 
 [[_lifecyclemgt_enableoptionaldeploys]]
-===== Enabling or Disabling Optional Deploys
+==== Enabling or Disabling Optional Deploys
 
 If you enable the __Optional Deploys __functionality on a Level, you will be able to skip Deploys to specific Deploy Environments at the moment you create a Level Request (The Action Type may be (Re)Deliver Build or Rollback Build). See also <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating Level Requests>>.
 
@@ -421,7 +421,7 @@ You can use this _Disable Optional Deploys_ link to make all Deploys of the Leve
 ====
 
 [[_plifecyclemgt_deletelifecycle]]
-==== Deleting a Lifecycle 
+=== Deleting a Lifecycle 
 (((Lifecycles ,Deleting))) 
 
 . Switch to the _Lifecycles Overview_ screen.
@@ -449,7 +449,7 @@ image::ProjAdmin-LifeCycles-Delete-Error.png[,467,355]
 Remove the Lifecycle from the Project Stream before deleting it. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Editing Project Stream Settings>>
 
 [[_lifecyclemgt_historyview]] 
-==== Viewing the Lifecycle History 
+=== Viewing the Lifecycle History 
 (((Lifecycles ,History))) 
 
 . Switch to the _Lifecycles Overview_ screen.
@@ -466,7 +466,7 @@ View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging
 Click __Back __to return to the previous screen.
 
 [[_plifecyclemgt_editlevelsettings]]
-==== Editing a Level 
+=== Editing a Level 
 (((Levels ,Editing)))  (((Lifecycles ,Levels ,Editing))) 
 
 . Switch to the _Lifecycles Overview_ screen.
@@ -502,7 +502,7 @@ For more information, refer to the sections:
 * <<ProjAdm_Levels.adoc#_plevelenvmgt_changedeploysequence,Editing the Deploy Sequence>>
 
 [[_plifecyclemgt_removelevel]]
-==== Removing a Level 
+=== Removing a Level 
 (((Lifecycles ,Levels ,Removing))) 
 
 [NOTE]

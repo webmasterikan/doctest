@@ -1,6 +1,6 @@
 [[_globadm_projectcreate]]
 [[_globadm_project]]
-== Projects 
+= Projects 
 (((Global Administration ,Projects)))  (((Projects))) 
 
 [NOTE]
@@ -15,7 +15,7 @@ The Project menu options are explained in the following procedures:
 
 
 [[_globadm_projectcreate]]
-=== Creating a Project 
+== Creating a Project 
 (((Creating an IKAN ALM Project)))  (((Creating an IKAN ALM Project ,Release-based)))  (((Creating an IKAN ALM Project ,Package-based)))  (((Projects ,Release-based)))  (((Projects ,Package-based)))  (((Creating an IKAN ALM Project))) 
 
 There are 2 types of Projects:
@@ -304,7 +304,7 @@ a|_RELATED TOPICS_
 
 
 [[_globadm_projectclone]]
-=== Cloning an Existing Project 
+== Cloning an Existing Project 
 (((Projects ,Cloning an Existing Project)))  (((Cloning an Existing Project))) 
 
 [[_pcloneproject]]

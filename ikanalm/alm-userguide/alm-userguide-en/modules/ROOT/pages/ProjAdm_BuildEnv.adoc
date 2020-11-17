@@ -1,6 +1,6 @@
 
 [[_projadm_buildenvironments]]
-== Build Environments 
+= Build Environments 
 (((Project Administration ,Build Environments)))  (((Project Management Options ,Build Environments)))  (((Build Environments))) 
 
 Build Environments are locations where code retrieved from the VCR is built.
@@ -34,7 +34,7 @@ The _Parameters Overview_ screen lets you create, edit, delete and copy Build Pa
 For more information, refer to the chapter <<ProjAdm_EnvParams.adoc#_projadm_environmentparameters,Environment Parameters>>.
 
 [[_pcreatebuildenvironment]]
-=== Creating a Build Environment
+== Creating a Build Environment
 (((Build Environments ,Creating))) 
  
 . In the __Project Administration context__, select __Build Environments > Create__.
@@ -141,7 +141,7 @@ You can also click the _Reset_ button to clear the fields and restore the initia
 
 
 [[_buildenvironmentsoverview]]
-=== The Build Environments Overview Screen 
+== The Build Environments Overview Screen 
 (((Build Environments ,Overview Screen))) 
 
 [[_pworkwithbuildenvironmentsoverview]]
@@ -219,7 +219,7 @@ This option allows viewing the Build Environment History.
 |===
 
 [[_projadm_buildenv_edit]]
-==== Editing a Build Environment 
+=== Editing a Build Environment 
 (((Build Environments ,Editing))) 
 
 . Switch to the _Build Environments Overview_ screen.
@@ -245,7 +245,7 @@ For a detailed description of the fields, refer to <<ProjAdm_BuildEnv.adoc#_pcre
 You can also click __Refresh __to retrieve the settings from the database or __Cancel __to return to the __Edit Build Environment__ screen without saving your changes.
 
 [[_projadm_buildenv_delete]]
-==== Deleting a Build Environment 
+=== Deleting a Build Environment 
 (((Build Environments ,Deleting))) 
 
 . Switch to the _Build Environments Overview_ screen.
@@ -268,7 +268,7 @@ Deleting a Build Environment may also delete connected Deploy Environments and H
 ====
 
 [[_projadm_buildenv_clone]]
-==== Cloning a Build Environment 
+=== Cloning a Build Environment 
 (((Build Environments ,Cloning))) 
 
 When cloning an Environment, all settings, including the Phases and Parameters, will be cloned.
@@ -292,7 +292,7 @@ You can also click __Back__ to return to the previous screen without cloning the
 
 
 [[_projadm_buildenv_phases]]
-==== Build Environment Phases 
+=== Build Environment Phases 
 (((Build Environments ,Phases)))  (((Phases ,Build Environment))) 
 
 When creating a Build Environment IKAN ALM will automatically link the default flow of Build Environment Phases to it. 
@@ -321,7 +321,7 @@ Refer to the following procedures for more information:
 * <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phasedelete,Deleting a Build Environment Phase>>
 
 [[_projadm_buildenv_buildenvphasesoverview]]
-===== The Build Environment Phases Overview Screen 
+==== The Build Environment Phases Overview Screen 
 (((Build Environments ,Phases ,Overview))) 
 
 . Switch to the _Build Environments Overview_ screen.
@@ -365,7 +365,7 @@ Select the _Insert Phase_ link underneath the _Phases Overview_ panel.
 . When done, click _Back_ to return to the _Build Environments Overview_ screen.
 
 [[_projadm_buildenv_insertphase]]
-===== Inserting a Build Environment Phase 
+==== Inserting a Build Environment Phase 
 (((Build Environments ,Phases ,Inserting))) 
 
 . Switch to the _Build Environments Overview_ screen.
@@ -414,7 +414,7 @@ In case you use the same Phase several times, adding a label is useful to provid
 You can also click _Cancel_ to return to the previous screen without saving the changes.
 
 [[_projadm_buildenv_editphase]]
-===== Editing a Build Environment Phase 
+==== Editing a Build Environment Phase 
 (((Build Environments ,Phases ,Editing))) 
 
 . Switch to the _Build Environments Overview_ screen.
@@ -436,7 +436,7 @@ For a description of the fields, refer to the section <<ProjAdm_BuildEnv.adoc#_p
 You can also click __Refresh __to retrieve the settings from the database or__ Cancel__ to return to the previous screen without saving your changes.
 
 [[_projadm_buildenv_modifyorderphases]]
-===== Changing the Order of the Build Environment Phases 
+==== Changing the Order of the Build Environment Phases 
 (((Build Environments ,Phases ,Changing the order))) 
 
 . Switch to the _Build Environments Overview_ screen.
@@ -453,7 +453,7 @@ Avoid changing a Phase`'s position in such a way that its _Next Phase on Error_ 
 --
 
 [[_projadm_buildenv_viewbuildenvphaseparams]]
-===== Viewing the Build Environment Phase Parameters 
+==== Viewing the Build Environment Phase Parameters 
 (((Build Environments ,Phases ,Viewing the Build Environment Phase Parameters)))  (((Parameters ,Build Environment Phase))) 
 
 . Switch to the _Build Environments Overview_ screen.
@@ -573,7 +573,8 @@ Parameters_ panel.
 
 
 [[_projadm_buildenv_phasedelete]]
-===== Deleting a Build Environment Phase (((Build Environments ,Phases ,Deleting))) 
+==== Deleting a Build Environment Phase 
+(((Build Environments ,Phases ,Deleting))) 
 
 . Switch to the _Build Environments Overview_ screen.
 +
@@ -590,7 +591,7 @@ image::ProjAdmin-BuildEnv-DeletePhase.png[,377,128]
 You can also click _No_ to return to the previous screen without deleting the Build Environment Phase.
 
 [[_projadm_buildenv_viewparameters]]
-==== Viewing the Build Environment Parameters 
+=== Viewing the Build Environment Parameters 
 (((Build Environments ,View Parameters)))  (((Parameters ,Build Environment))) 
 
 . Switch to the _Build Environments Overview_ screen.
@@ -606,7 +607,8 @@ For a more detailed description of this screen, refer to the section <<ProjAdm_E
 
 
 [[_projadm_buildenv_historyview]]
-==== Viewing the Build Environment History (((Build Environments ,History))) 
+=== Viewing the Build Environment History 
+(((Build Environments ,History))) 
 
 . Switch to the Build Environments Overview.
 +

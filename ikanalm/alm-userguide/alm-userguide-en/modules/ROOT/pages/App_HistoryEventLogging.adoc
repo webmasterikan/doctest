@@ -1,6 +1,6 @@
 
 [[_historyeventlogging]]
-== History and Event Logging 
+= History and Event Logging 
 (((History)))  (((Event Logging))) 
 
 All create, update and delete operations of Project and Global Administration objects and components are logged in the IKAN ALM Database.
@@ -216,14 +216,14 @@ The Version Comparison panel is not displayed for User Group - User Associations
 See the example screens below.
 ====
 
-=== Example 1 - User Group - User Association
+== Example 1 - User Group - User Association
 
 The panel is replaced with the _User Group -
 User Association_ panel.
 
 image::History_Differences-UserGroupUserAssociation.png[,959,641] 
 
-=== Example 2 - Modified Files (Packages)
+== Example 2 - Modified Files (Packages)
 
 The panel is replaced with the _Modified Files_ panel, displaying which files have been added (green), modified (black) or deleted (red).
 

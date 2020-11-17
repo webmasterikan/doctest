@@ -1,5 +1,6 @@
 [[_globadm_transporters]]
-== Transporters (((Global Administration ,Transporters)))  (((Transporters))) 
+= Transporters 
+(((Global Administration ,Transporters)))  (((Transporters))) 
 
 Every Build or Deploy action handled by an IKAN ALM Agent involves sources, a script or a build result that must be transported between the IKAN ALM Agent and the IKAN ALM server.
 
@@ -64,7 +65,7 @@ Refer to the following sections for detailed information:
 
 
 [[_sglobadm_transporter_create]]
-=== Creating a Transporter Protocol 
+== Creating a Transporter Protocol 
 (((Transporters ,Creating))) 
 
 [NOTE]
@@ -91,7 +92,7 @@ For more information on those details, refer to the appropriate sections:
 * <<GlobAdm_Transporters.adoc#_globadm_secureshellcreate,Creating a Secure Shell Transporter>>
 
 [[_sglobadm_transporters_overview]]
-=== The Transporter Protocols Overview Screen 
+== The Transporter Protocols Overview Screen 
 (((Transporters ,Overview Screen))) 
 
 . In the Global Administration context, select __Transporters > Overview__.
@@ -143,7 +144,7 @@ Refer to the following sections for detailed information:
 
 
 [[_globadm_transporter_filecopy]]
-=== FileCopy Transporters 
+== FileCopy Transporters 
 (((Transporters ,FileCopy)))  (((FileCopy Transporters))) 
 
 A FileCopy Transporter makes it possible to use "`file copy`" for transporting Custom Phases, files and directories between the IKAN ALM server and a local or remote Agent handling the Build or Deploy processes (see the introduction on <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>).
@@ -176,7 +177,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy_history,Viewing the File Copy Transporter History>>
 
 [[_globadm_filecopycreate]]
-==== Creating a FileCopy Transporter 
+=== Creating a FileCopy Transporter 
 (((FileCopy Transporters ,Creating))) 
 
 [NOTE]
@@ -272,7 +273,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_filecopyoverview]]
-==== The FileCopy Transporters Overview Screen 
+=== The FileCopy Transporters Overview Screen 
 (((FileCopy Transporters ,Overview Screen))) 
 
 . In the Global Administration context, select__ Transporters> Overview__.
@@ -326,7 +327,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_transporter_filecopy_edit]]
-==== Editing a File Copy Transporter Definition 
+=== Editing a File Copy Transporter Definition 
 (((FileCopy Transporters ,Editing))) 
 
 . In the Global Administration context, select __Transporters > Overview__.
@@ -357,7 +358,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_transporter_filecopy_delete]]
-==== Deleting a File Copy Transporter Definition 
+=== Deleting a File Copy Transporter Definition 
 (((FileCopy Transporters ,Deleting))) 
 
 . In the Global Administration context, select__ Transporters > Overview__.
@@ -383,7 +384,7 @@ image::GlobAdm-Transporters-FileCopy-Delete-Error.png[,603,410]
 You must change the definition of the listed Machines, before you can delete the FileCopy Transporter.
 
 [[_globadm_transporter_filecopy_history]]
-==== Viewing the File Copy Transporter History 
+=== Viewing the File Copy Transporter History 
 (((FileCopy Transporters ,History))) 
 
 . In the Global Administration context, select__ Transporters > Overview__.
@@ -412,7 +413,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_transporter_ftp]]
-=== FTP Transporters 
+== FTP Transporters 
 (((Transporters ,FTP)))  (((FTP Transporters))) 
 
 The built-in FTP Transporter Client makes it possible to use FTP as a protocol for transporting Custom Phase, build results, scripts or sources between the IKAN ALM server and one or more Agents.
@@ -433,7 +434,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_Transporters.adoc#_globadm_transporter_ftp_history,Viewing the FTP Transporter History>>
 
 [[_globadm_ftpcreate]]
-==== Creating an FTP Transporter 
+=== Creating an FTP Transporter 
 (((FTP Transporters ,Creating))) 
 
 [NOTE]
@@ -555,7 +556,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_ftpoverview]]
-==== The FTP Transporters Overview Screen 
+=== The FTP Transporters Overview Screen 
 (((FTP Transporters ,Overview Screen))) 
 
 . In the Global Administration context, select__ Transporters> Overview__.
@@ -609,7 +610,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_transporter_ftp_edit]]
-==== Editing an FTP Transporter Definition 
+=== Editing an FTP Transporter Definition 
 (((FTP Transporters ,Editing))) 
 
 . In the Global Administration context, select__ Transporters > Overview__.
@@ -640,7 +641,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_transporter_ftp_delete]]
-==== Deleting an FTP Transporter Definition 
+=== Deleting an FTP Transporter Definition 
 (((FTP Transporters ,Deleting))) 
 
 . In the Global Administration context, select__ Transporters > Overview__.
@@ -665,7 +666,7 @@ image::GlobAdm-Transporters-FTP-Delete-Error.png[,610,536]
 You must change the definition of the listed Machines, before you can delete the FTP Transporter.
 
 [[_globadm_transporter_ftp_history]]
-==== Viewing the FTP Transporter History 
+=== Viewing the FTP Transporter History 
 (((FTP Transporters ,History))) 
 
 . In the Global Administration context, select __Transporters > Overview__.
@@ -694,7 +695,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_transporter_secureshell]]
-=== Secure Shell Transporters 
+== Secure Shell Transporters 
 (((Transporters ,Secure Shell)))  (((Secure Shell Transporters))) 
 
 Secure Shell Transporters allow you to securely transport Custom Phases, sources, scripts and build results between the IKAN ALM Server and an IKAN ALM Agent.
@@ -717,7 +718,7 @@ Refer to the following sections for detailed information:
 * <<GlobAdm_Transporters.adoc#_globadm_transporter_secureshell_history,Viewing the Secure Shell Transporter History>>
 
 [[_globadm_secureshellcreate]]
-==== Creating a Secure Shell Transporter 
+=== Creating a Secure Shell Transporter 
 (((Secure Shell Transporters ,Creating))) 
 
 [NOTE]
@@ -851,7 +852,7 @@ a|_RELATED TOPICS_
 |===
 
 [[_globadm_secureshelloverview]]
-==== The Secure Shell Transporters Overview Screen 
+=== The Secure Shell Transporters Overview Screen 
 (((Secure Shell Transporters ,Overview Screen))) 
 
 . In the Global Administration context, select__ Transporters> Overview__.
@@ -905,7 +906,7 @@ It allows displaying the History of all create, update and delete operations per
 |===
 
 [[_globadm_transporter_secureshell_edit]]
-==== Editing a Secure Shell Transporter Definition 
+=== Editing a Secure Shell Transporter Definition 
 (((Secure Shell Transporters ,Editing))) 
 
 . In the Global Administration context, select__ Transporters > Overview__.
@@ -936,7 +937,7 @@ You can also click:
 * _Back_ to return to the previous screen without saving the changes
 
 [[_globadm_transporter_secureshell_delete]]
-==== Deleting a Secure Shell Transporter Definition 
+=== Deleting a Secure Shell Transporter Definition 
 (((Secure Shell Transporters ,Deleting))) 
 
 . In the Global Administration context, select __Transporters > Overview__.
@@ -961,7 +962,7 @@ image::GlobAdm-Transporters-SecureShell-Delete-Error.png[,626,573]
 You must change the definition of the listed Machines, before you can delete the Secure Shell Transporter.
 
 [[_globadm_transporter_secureshell_history]]
-==== Viewing the Secure Shell Transporter History 
+=== Viewing the Secure Shell Transporter History 
 (((Secure Shell Transporters ,History))) 
 
 . In the Global Administration context, select __Transporters > Overview__.

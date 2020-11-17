@@ -1,6 +1,6 @@
 [[_desktop_personalsettings_edit]] 
 [[_desktop_personalsettings_hoofdstuk]]
-== Personal Settings
+= Personal Settings
 
 The Personal Settings section focuses on settings directly related to your account, such as your name, e-mail address, phone number, ... 
 
@@ -14,7 +14,8 @@ Refer to the following procedures for more information:
 
 [[_desktop_personalsettings_edit]] 
 [[_desktop_personalsettings]]
-=== Editing Your Personal Settings (((Desktop ,Personal Settings)))  (((Personal Settings))) 
+== Editing Your Personal Settings 
+(((Desktop ,Personal Settings)))  (((Personal Settings))) 
 
 This option allows you to edit your personal settings.
 These are the settings you (or the Global Administrator using your User ID) defined when you logged on to IKAN ALM for the first time.
@@ -75,7 +76,7 @@ You may also click _Refresh_ to retrieve the settings from the database.
 
 
 [[_desktop_searchfilters]]
-=== Defining Search Filters 
+== Defining Search Filters 
 (((Desktop ,Search Filters)))  
 (((Search Filters)))  
 (((Search Filters ,Defining))) 
