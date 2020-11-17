@@ -1,3 +1,6 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
 [[_projadm_lifecycles]]
 = Cycles de vie 
 (((Options relatives à l'administration des projets ,Cycles de vie)))  (((Administration des projets ,Cycles de vie)))  (((Cycles de vie))) 

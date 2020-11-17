@@ -1,3 +1,6 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
 [[_desktop_levelrequests]]
 = Requêtes de niveau 
 (((Bureau ,Requêtes de niveau)))  (((Requêtes de niveau))) 

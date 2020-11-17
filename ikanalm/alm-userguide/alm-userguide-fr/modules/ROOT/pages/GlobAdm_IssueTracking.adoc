@@ -1,3 +1,6 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
 [[_globadm_issuetrackingcreate]]
 [[_globadm_issuetracking]]
 = Suivi des Incidents 

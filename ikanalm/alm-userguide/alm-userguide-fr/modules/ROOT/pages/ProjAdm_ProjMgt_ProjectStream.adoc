@@ -1,3 +1,6 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
 [[_projadm_projectstreams]]
 = Branches 
 (((Administration des projets ,Branches)))  (((Branches)))  (((Options relatives à l’administration des projets ,Branches))) 

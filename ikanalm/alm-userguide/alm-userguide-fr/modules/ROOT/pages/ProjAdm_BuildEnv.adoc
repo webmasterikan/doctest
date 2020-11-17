@@ -1,3 +1,6 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
 [[_projadm_buildenvironments]]
 = Environnements de construction  
 (((Options relatives à l'administration des projets ,Environnements de Construction)))  (((Administration des projets ,Environnements de Construction)))  (((Environnements de Construction))) 

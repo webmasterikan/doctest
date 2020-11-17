@@ -1,3 +1,5 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
 
 = Predefined Build Parameters 
 (((Predefined Parameters)))  (((Predefined Parameters ,Build)))  (((Build Parameters ,Predefined Build Parameters))) 

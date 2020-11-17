@@ -1,3 +1,6 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
 [[_projadmin_projectsoverview_viewing]]
 = [Dénomination du Projet] 
 (((Administration des projets ,Dénomination du Projet)))  (((Options relatives à l’administration des projets ,Dénomination du Projet)))  (((Dénomination du Projet))) 
