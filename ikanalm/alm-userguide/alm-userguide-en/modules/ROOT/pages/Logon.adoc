@@ -1,6 +1,6 @@
 
 [[_desktop_logon]]
-== Logging in and out
+= Logging in and out
 
 IKAN ALM uses the JAAS interface to base its User ID/Password authentication on an existing Security System in your organization.
 As a result, these User IDs and User Groups will most likely be maintained in such an external security system outside IKAN ALM, although the Global Administrator can also set up User IDs and User Groups in a configuration file (e.g., for small organizations or demo purposes). Consequently, end users will probably log in to IKAN ALM using a User ID and Password of an external Security System like Active Directory or LDAP.
@@ -25,7 +25,7 @@ This chapter provides more information on:
 
 
 [[_desktop_loggingon]]
-=== Logging in 
+== Logging in 
 (((IKAN ALM ,Logging on)))  
 (((Logging on))) 
 
@@ -63,7 +63,7 @@ For more information, refer to the section <<Desktop_PersonalSettings.adoc#_desk
 
 
 [[_desktop_loogingoff]]
-=== Logging out 
+== Logging out 
 (((IKAN ALM ,Logging out)))  
 (((Logging out))) 
 
@@ -86,7 +86,7 @@ If not, your session will remain active after you closed your browser and will c
 
 
 [[_desktop_installinglicense]]
-=== Installing a New License 
+== Installing a New License 
 (((IKAN ALM ,Installing a New License)))  
 (((License ,Install))) 
 
@@ -124,7 +124,7 @@ Contact your IKAN ALM Administrator or your IKAN ALM vendor to obtain a new Lice
 
 
 [[_desktop_errormessages]]
-=== Error Messages
+== Error Messages
 
 In case of a problem when trying to log in to IKAN ALM, one of the following error messages could be displayed.
 Please refer to the table underneath for the corresponding solution. 
@@ -169,7 +169,7 @@ Contact your IKAN ALM vendor.
 |===
 
 [[_desktop_warningmessages]]
-=== Warning Messages
+== Warning Messages
 
 The following warning message could be displayed when logging in to IKAN ALM.
 Please refer to the table underneath for the corresponding solution.

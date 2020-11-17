@@ -4,10 +4,8 @@
 :revnumber: v5.8
 :revdate: 01.01.2018
 
-= IKAN ALM User Guide (English)
-
 [[_desktop_introduction]]
-== Introduction  
+= IKAN ALM User Guide: Introduction  
 (((IKAN ALM ,Introduction))) 
 
 IKAN ALM offers a uniquely integrated web-based _Application
@@ -30,7 +28,7 @@ IKAN ALM offers your organization one versatile process and one secure pipeline 
 IKAN ALM continues where versioning systems stop, improving the entire software engineering process, and saving time and money on radical migration efforts.
 
 [[_usethisguide]]
-=== How to Use This Guide
+== How to Use This Guide
 
 The way you use IKAN ALM is determined by the User Category you belong to.
 The table below lists the three IKAN ALM User Categories. 

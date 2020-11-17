@@ -1,5 +1,5 @@
 [[_userinterfaceoverview]]
-== User Interface Overview 
+= User Interface Overview 
 (((User Interface))) 
 
 Refer to the following sections for detailed information about:
@@ -10,10 +10,10 @@ Refer to the following sections for detailed information about:
 
 
 [[_navigationikanalm]]
-=== Navigating Through IKAN ALM  
+== Navigating Through IKAN ALM  
 (((User Interface ,Navigation))) 
 
-==== Main Menu 
+=== Main Menu 
 The IKAN ALM user interface contains 3 main sections: the Desktop, the Project Administration section and the Global Administration section.
 Those sections can be accessed from the __Main
 Menu__, the blue toolbar on top of the screen.
@@ -22,7 +22,7 @@ At the right, it contains the User Settings of the current user as well as the c
 
 image::UserInterface_MainMenu_Sections.png[,1041,332] 
 
-==== Submenus
+=== Submenus
 When you select the Global or Project Administration option from the Main Menu, the dependent Submenu is displayed in the gray banner below the Main Menu.
 
 Submenu options followed by a small triangle contain a drop-down menu with extra selection options.
@@ -34,7 +34,7 @@ image::UserInterface_MainMenu_Navigating.png[,1054,378]
 
 
 [[_regularikanalmscreens]]
-=== The IKAN ALM Screen 
+== The IKAN ALM Screen 
 (((User Interface ,Screens))) 
 
 An IKAN ALM screen contains the following main items.
@@ -42,7 +42,7 @@ An IKAN ALM screen contains the following main items.
 
 image::UserInterface-Screens.png[,1015,434] 
 
-==== Selected Menu Indication
+=== Selected Menu Indication
 The __Selected Menu Indication __below the Submenu shows how the user switched to the displayed IKAN ALM Screen.
 The following format is used: _Main Menu Option > Submenu
 Option_
@@ -51,7 +51,7 @@ Option_
 image::UserInterface-SearchPanel.png[,965,156] 
 
 [[_babcjedaj8]]
-==== Search Panels
+=== Search Panels
 _Search_ panels allow specifying search criteria, which restrict the list of items displayed in the _Overview_ panel.
 While defining those search criteria in comboboxes and text fields, you may use the standard * and ? wild card characters.
 The asterisk can represent 0, 1 or more characters.
@@ -67,7 +67,7 @@ If a filter already exists, you can select it from the drop-down menu.
 For more info on using filters, refer to the section <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
 
 
-==== Create Panels
+=== Create Panels
 image::UserInterface-CreatePanel.png[,490,266] 
 _Create_ panels allow defining new IKAN ALM Objects.
 Mandatory fields are marked with a red asterisk.
@@ -75,7 +75,7 @@ Mandatory fields are marked with a red asterisk.
 Clicking the _Create_ button will create the object.
 The _Reset_ button will, depending on the object you are creating, clear the fields and/or restore the initial values.
 
-==== Overview Panels
+=== Overview Panels
 _Overview_ panels are displayed below the _Search_ or _Create_ panel.
 If no search criteria have been defined, the overview lists all IKAN ALM Objects of the selected type.
 If search criteria have been defined, only IKAN ALM Objects matching those search criteria are displayed.
@@ -172,7 +172,7 @@ Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted al
 ====
 
 [[_desktop_autorefresh]]
-=== Auto Refresh
+== Auto Refresh
 
 If your IKAN ALM Global Manager has defined an _Automatic Refresh Rate_ on the _Miscellaneous_ panel in the <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>, the _Auto Refresh_ option will be available on the Desktop, and on the Level Requests and Builds and Deploys overviews.
 
