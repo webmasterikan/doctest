@@ -300,8 +300,8 @@ image::Picture_17.png[,932,90]
 
 Before we can actually run the Phase, we need to make sure that we provide a) the _update.sql_ script and b) the jdbc driver, otherwise our Phase will fail.
 The _update.sql_ script is preferably checked into the versioning system connected to your project.
-Since we set its default location to ``${source}/update.sql``, it will be provided for a Build Environment if you commit it in the root folder of the branch or trunk you are working with in the project.
-If you want it to be available on the Deploy Environment (which is our case since we inserted the _Update DB_ Phase in a Deploy Environment), make sure that you copy it from ${source} to ${target} while creating the Build result that will be deployed.
+Since we set its default location to ``$\{source}/update.sql``, it will be provided for a Build Environment if you commit it in the root folder of the branch or trunk you are working with in the project.
+If you want it to be available on the Deploy Environment (which is our case since we inserted the _Update DB_ Phase in a Deploy Environment), make sure that you copy it from $\{source} to $\{target} while creating the Build result that will be deployed.
 
 Notice that you can also opt to set the value of the sql.script Parameter, by creating it as an editable Environment Parameter on the Deploy Environment.
 That way, you can always change its value when creating the Level Request.

@@ -176,7 +176,7 @@ Le script _UpdateDB.xml_ exécute 3 cibles dans la séquence suivante:
 
 . init
 +
-Définit le chemin du script SQL qui mettra à jour la base de données à `${source}/update.sql` (plus tard suivront plus d'explications à ce sujet).
+Définit le chemin du script SQL qui mettra à jour la base de données à `$\{source}/update.sql` (plus tard suivront plus d'explications à ce sujet).
 . validateRdbmsParams
 +
 Vérifie la Base de données choisie (MS SQL Server, MySQL, Oracle ou DB2).
@@ -314,8 +314,8 @@ image::Picture_17.png[,787,77]
 
 Avant de pouvoir exécuter la Phase, vous devez vous assurer de fournir a) le script _update.sql_ et b) le driver jdbc, sinon la Phase échouera.
 De préférence, le script _update.sql_ est chargé dans le Système de Contrôle de Versions connecté à votre projet.
-Parce que nous avons établi son emplacement par défaut à ``${source}/update.sql``, celui-ci sera fourni pour un Environnement de construction si vous l'enregistrez (commit) dans le répertoire Racine de la branche ou du "trunk" que vous utilisez dans le projet.
-Si vous voulez qu'il soit disponible dans l'Environnement de déploiement (ce qui est notre cas vu que nous avons inséré la Phase _Mise à jour Base de données_ dans un Environnement de déploiement), assurez-vous que vous le copiez à partir de ${source} vers ${target} lors de la création de la Construction qui sera déployée.
+Parce que nous avons établi son emplacement par défaut à ``$\{source}/update.sql``, celui-ci sera fourni pour un Environnement de construction si vous l'enregistrez (commit) dans le répertoire Racine de la branche ou du "trunk" que vous utilisez dans le projet.
+Si vous voulez qu'il soit disponible dans l'Environnement de déploiement (ce qui est notre cas vu que nous avons inséré la Phase _Mise à jour Base de données_ dans un Environnement de déploiement), assurez-vous que vous le copiez à partir de $\{source} vers $\{target} lors de la création de la Construction qui sera déployée.
 
 Notez que vous pouvez également optez pour établir la valeur du paramètre sql.script, en le créant comme un paramètre d'environnement éditable sur l'Environnement de déploiement.
 Ainsi, vous pouvez toujours modifier sa valeur lors de la création de la Requête de niveau.
