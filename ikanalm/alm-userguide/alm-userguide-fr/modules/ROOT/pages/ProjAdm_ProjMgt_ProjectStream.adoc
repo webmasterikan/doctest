@@ -185,16 +185,16 @@ Les _constantes_ suivantes sont permises:
 * quelques autres caractères (comme , ; $ @) peuvent être illégaux, en fonction du Type de RCV.
 
 Les _variables_ suivantes sont disponibles.
-Elles ont toutes le format _${name}:_
+Elles ont toutes le format _$\{name}:_
 
-* ${prefix}: Cette variable donne le préfixe de construction défini pour la Branche.
-* ${suffix}: Cette variable donne le suffixe de construction défini pour la Branche. (Si cette variable est incluse dans un modèle pour la Branche Principale, elle est ignorée)
-* ${streamType}: Cette variable donne l`'indication du Type de Branche: _H (Head)_ pour une Branche Principale ou _B (Branch)_ pour une Branche Secondaire.
-* ${buildNumber}: Cette variable donne le numéro de la Construction afin d`'associer la Construction à sa Balise.
-* ${projectName}: Cette variable donne la dénomination du Projet IKAN ALM.
-* ${vcrProjectName}: Cette variable donne la dénomination RCV du Projet.
-* ${dateTime(dateformat)}: Cette variable donne le timestamp de l`'action de construction dans le format indiqué. _yyyy-MM-dd_ est un format valide. Pour d`'autres formats valides, se référer à http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html[http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html]
-* ${packageName}: Cette variable donne la dénomination du Paquet pour la Branche d`'un Projet de type "`Paquets`".
+* $\{prefix}: Cette variable donne le préfixe de construction défini pour la Branche.
+* $\{suffix}: Cette variable donne le suffixe de construction défini pour la Branche. (Si cette variable est incluse dans un modèle pour la Branche Principale, elle est ignorée)
+* $\{streamType}: Cette variable donne l`'indication du Type de Branche: _H (Head)_ pour une Branche Principale ou _B (Branch)_ pour une Branche Secondaire.
+* $\{buildNumber}: Cette variable donne le numéro de la Construction afin d`'associer la Construction à sa Balise.
+* $\{projectName}: Cette variable donne la dénomination du Projet IKAN ALM.
+* $\{vcrProjectName}: Cette variable donne la dénomination RCV du Projet.
+* $\{dateTime(dateformat)}: Cette variable donne le timestamp de l`'action de construction dans le format indiqué. _yyyy-MM-dd_ est un format valide. Pour d`'autres formats valides, se référer à http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html[http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html]
+* $\{packageName}: Cette variable donne la dénomination du Paquet pour la Branche d`'un Projet de type "`Paquets`".
 
 |Cycle de vie
 |Sélectionnez le Cycle de Vie associé à ce Projet.

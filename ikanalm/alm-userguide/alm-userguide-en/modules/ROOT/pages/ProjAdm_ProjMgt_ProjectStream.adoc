@@ -193,16 +193,16 @@ The following _constants_ are allowed:
 * Some other characters (such as , ; $ @) may be illegal, depending on the VCR type.
 
 The following _variables_ are available.
-They all have the format ${name}:
+They all have the format $\{name}:
 
-* ${prefix}: This variable returns the Build Prefix defined for the Project Stream.
-* ${suffix}: This variable returns the Build Suffix defined for the Branch Stream. (If this variable is included in a Template for a Head Stream, it is ignored.)
-* ${streamType}: This variable returns the Type indication for a Stream: _H_ for Head Stream or _B_ for Branch Stream.
-* ${buildNumber}: This variable returns the number of the Build, so that the Build can be matched with its Tag.
-* ${projectName}: This variable returns the name of the IKAN ALM Project.
-* ${vcrProjectName}: This variable returns the VCR name of the Project.
-* ${dateTime(dateformat)}: This variable returns the timestamp of the Building action in the indicated format. __yyyy-MM-dd__ is a valid format. For other valid formats, refer to http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html[ http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html]
-* ${packageName}: This variable returns the name of the package in a Package-based Project Stream.
+* $\{prefix}: This variable returns the Build Prefix defined for the Project Stream.
+* $\{suffix}: This variable returns the Build Suffix defined for the Branch Stream. (If this variable is included in a Template for a Head Stream, it is ignored.)
+* $\{streamType}: This variable returns the Type indication for a Stream: _H_ for Head Stream or _B_ for Branch Stream.
+* $\{buildNumber}: This variable returns the number of the Build, so that the Build can be matched with its Tag.
+* $\{projectName}: This variable returns the name of the IKAN ALM Project.
+* $\{vcrProjectName}: This variable returns the VCR name of the Project.
+* $\{dateTime(dateformat)}: This variable returns the timestamp of the Building action in the indicated format. __yyyy-MM-dd__ is a valid format. For other valid formats, refer to http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html[ http://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html]
+* $\{packageName}: This variable returns the name of the package in a Package-based Project Stream.
 
 
 |Lifecycle
