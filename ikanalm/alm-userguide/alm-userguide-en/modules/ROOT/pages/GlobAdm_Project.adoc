@@ -230,7 +230,7 @@ The following table contains some examples of Tag Templates and the resulting ta
 | Tag Template
 | Resulting VCR Tag
 
-|${streamType}_$\{prefix}_$\{suffix}_b$\{buildNumber}
+|$\{streamType}_$\{prefix}_$\{suffix}_b$\{buildNumber}
 a|_H_1.0_b5_
 
 where:
