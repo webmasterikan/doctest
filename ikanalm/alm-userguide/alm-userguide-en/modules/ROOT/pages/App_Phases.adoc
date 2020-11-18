@@ -427,8 +427,8 @@ This action is performed, so that the Deploy Scripts are included in the compres
 This Phase is only relevant for Package Builds.
 
 If the Package is part of a Package Build Group, it will retrieve the latest Build Results of some (or all, dependent on the configuration of the Package Build Group) of the Packages in the Package Build Group.
-It will use the Transporter defined for the Agent to transport the Results from the IKAN ALM Build Archive on the IKAN ALM Server to the ${sourceRoot}/packages directory on the Build Environment.
-The Phase also creates a _PackageBuildGroup.xml_ file in the ${sourceRoot}/packages directory on the Build Environment that can be used as input in later Phases, e.g., for the Mainframe Compilation workflow, to transfer these Build Results and build up the correct PDS structure on the Mainframe. 
+It will use the Transporter defined for the Agent to transport the Results from the IKAN ALM Build Archive on the IKAN ALM Server to the \${sourceRoot}/packages directory on the Build Environment.
+The Phase also creates a _PackageBuildGroup.xml_ file in the \${sourceRoot}/packages directory on the Build Environment that can be used as input in later Phases, e.g., for the Mainframe Compilation workflow, to transfer these Build Results and build up the correct PDS structure on the Mainframe. 
 
 The _Retrieve All Build Results_ attribute of the Package Build Group, and the setting of the Dependency Level of the Packages in the Package Build Group determine which Build Results will be retrieved: the latest build results of all Packages in the Package Build Group in case _Retrieve All Build Results_ has been set to __true__, or only the latest Build Results of Packages with a lower Dependency Level in case _Retrieve
 All Build Results_ has been set to __false__.
