@@ -428,7 +428,7 @@ de la construction__.
 Cette Phase n'est utile que pour les Constructions de Paquet,
 
 si le Paquet fait partie d'un Groupe de Paquets de Construction, les derniers résultats de construction de certains Paquets dans le Groupe de Paquets de Construction (ou de tous les Paquets, en fonction de la configuration du Groupe de Paquets de Construction). Elle utilisera le Transporteur associé à l`'Agent pour transférer les Résultats à partir des Archives de construction IKAN ALM sur le Serveur IKAN ALM vers le répertoire $/packages suivi du numéro de Paquet (OID) dans l'Environnement de Construction.
-Cette Phase crée également un fichier _PackageBuildGroup.xml_ dans le répertoire ${sourceRoot}/packages dans l'Environnement de Construction que l'on peut utiliser comme données dans les Phases ultérieures, par exemple, pour le flux de travail "compilation pour le Mainframe", pour transférer ces résultats de construction et construire la structure PDS requise sur le Mainframe. 
+Cette Phase crée également un fichier _PackageBuildGroup.xml_ dans le répertoire $\{sourceRoot}/packages dans l'Environnement de Construction que l'on peut utiliser comme données dans les Phases ultérieures, par exemple, pour le flux de travail "compilation pour le Mainframe", pour transférer ces résultats de construction et construire la structure PDS requise sur le Mainframe. 
 
 L'attribut _Récupération de tous les Résultats
 de Construction_ pour le Groupe de Paquets de Construction et la définition du Niveau de dépendance des Paquets dans le Groupe de Paquets de Construction détermine quels résultats de construction seront récupérés: les derniers résultats de construction de tous les Paquets dans le Groupe de Paquets de Construction si le paramètre _Récupération

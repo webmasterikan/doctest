@@ -204,7 +204,7 @@ The following _constants_ are allowed:
 * Some other characters (such as , ; $ @) may be illegal, depending on the VCR type.
 
 The following _variables_ are available.
-They all have the format __${name}__:
+They all have the format __$\{name}__:
 
 * __${prefix}__: This variable returns the Build Prefix defined for the Project Stream.
 * __${suffix}__: This variable returns the Build Suffix defined for the Branch Stream. (If this variable is included in a Template for a Head Stream, it is ignored.)

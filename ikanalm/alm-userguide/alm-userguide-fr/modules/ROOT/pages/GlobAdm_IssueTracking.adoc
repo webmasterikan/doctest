@@ -109,21 +109,21 @@ Les Incidents sont synchronisés avec le Système de Suivi des Incidents externe
 |Saisissez le modèle URL utilisé pour passer d`'un Incident dans IKAN ALM vers le Système de Suivi des Incidents externe.
 
 Il est manifeste que le Système de Suivi des Incidents doit offrir une interface Web qui vous guidera (peut-être après avoir fourni les paramètres de connexion nécessaires) vers la description détaillée d`'un Incident.
-Dans cet URL, la variable du numéro de l`'Incident doit être fourni sous forme de ``"${issueId}"``.
+Dans cet URL, la variable du numéro de l`'Incident doit être fourni sous forme de ``"$\{issueId}"``.
 
 Quelques exemples:
 
-Pour JIRA: `http(s)://host:port/browse/PROJECTKEY-${issueId}`
+Pour JIRA: `http(s)://host:port/browse/PROJECTKEY-$\{issueId}`
 
-Pour HP Quality Center: `testdirector:host:port/qcbin,domainname,projectname,[AnyUser];2:${issueId}`
+Pour HP Quality Center: `testdirector:host:port/qcbin,domainname,projectname,[AnyUser];2:$\{issueId}`
 
-Pour TeamForge: `http(s)://host:port/sf/go/${issueId}`
+Pour TeamForge: `http(s)://host:port/sf/go/$\{issueId}`
 
-Pour Trac: `http(s)://host/ticket/${issueId}`
+Pour Trac: `http(s)://host/ticket/$\{issueId}`
 
-Pour Bugzilla: `http(s)/host/bugs/show_bug.cgi?id=${issueId}`
+Pour Bugzilla: `http(s)/host/bugs/show_bug.cgi?id=$\{issueId}`
 
-Pour Team Foundation: `http(s)://host[:port/tfs]/DefaultCollection/PROJECT_NAME/_workitems#_a=edit&id=${issueId}`
+Pour Team Foundation: `http(s)://host[:port/tfs]/DefaultCollection/PROJECT_NAME/_workitems#_a=edit&id=$\{issueId}`
 
 *Note:* Les utilisateurs IKAN ALM qui utiliseront le lien vers HP Quality Center avec la commande « testdirector » devront avoir installé les "`Add-ins "` HP nécessaires.
 Se référer à la documentation HP pour plus de détails.

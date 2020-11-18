@@ -110,21 +110,21 @@ Issues are synchronized with the external Issue Tracking System at each Level Re
 |Enter the template URL used to click through from an issue in IKAN ALM to the issue in the external Issue Tracking System.
 
 Obviously, the Issue Tracking System must have a web interface that will guide you (perhaps after having provided the necessary login parameters) to the detailed description of an Issue.
-In the URL, the issue number variable must be provided as "${issueId}". 
+In the URL, the issue number variable must be provided as "$\{issueId}". 
 
 Some examples:
 
-For JIRA: `http(s)://host:port/browse/PROJECTKEY-${issueId}`
+For JIRA: `http(s)://host:port/browse/PROJECTKEY-$\{issueId}`
 
-For HP Quality Center: `testdirector:host:port/qcbin,domainname,projectname,[AnyUser];2:${issueId}`
+For HP Quality Center: `testdirector:host:port/qcbin,domainname,projectname,[AnyUser];2:$\{issueId}`
 
-For TeamForge: `http(s)://host:port/sf/go/${issueId}`
+For TeamForge: `http(s)://host:port/sf/go/$\{issueId}`
 
-For Trac: `http(s)://host/ticket/${issueId}`
+For Trac: `http(s)://host/ticket/$\{issueId}`
 
-For Bugzilla: `http(s)/host/bugs/show_bug.cgi?id=${issueId}`
+For Bugzilla: `http(s)/host/bugs/show_bug.cgi?id=$\{issueId}`
 
-For Team Foundation: `http(s)://host[:port/tfs]/DefaultCollection/PROJECT_NAME/_workitems#_a=edit&id=${issueId}`
+For Team Foundation: `http(s)://host[:port/tfs]/DefaultCollection/PROJECT_NAME/_workitems#_a=edit&id=$\{issueId}`
 
 _Note:_ IKAN ALM Users who will use the "`testdirector`" command to establish the link with HP Quality Center must install the necessary HP "`Add-ins`". Refer to the HP documentation for more detailed information.
 
