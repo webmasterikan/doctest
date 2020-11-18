@@ -166,7 +166,7 @@ The _UpdateDB.xml_ script executes 3 targets in the following order:
 
 . init
 +
-Sets the path of the SQL script that will update the database to `${source}/update.sql` (later more on this).
+Sets the path of the SQL script that will update the database to `$\{source}/update.sql` (later more on this).
 . validateRdbmsParams
 +
 Verifies the chosen database (MS SQL Server, MySQL, Oracle or DB2).
