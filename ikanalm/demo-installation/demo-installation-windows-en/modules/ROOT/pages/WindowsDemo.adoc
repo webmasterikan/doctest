@@ -805,7 +805,7 @@ As you can see on the _Connected Levels and Environments_ panel, our Tomcat Depl
 
 
 For an example of a more advanced usage of Parameters, look at the "`contextPath`" Phase Parameter.
-Its default value is set to ``/${applicationName}``, and it has this value set in both the testdeploy and proddeploy Environments (you can see them by clicking the _Edit _image:icons/edit.gif[,15,15]  icon in front of the _contextPath_ Parameter). Still, the Customers application is deployed to 2 different contexts, namely "`customers_test`" and "`customers`". 
+Its default value is set to ``/$\{applicationName}``, and it has this value set in both the testdeploy and proddeploy Environments (you can see them by clicking the _Edit _image:icons/edit.gif[,15,15]  icon in front of the _contextPath_ Parameter). Still, the Customers application is deployed to 2 different contexts, namely "`customers_test`" and "`customers`". 
 
 How does this work?
 
@@ -818,7 +818,7 @@ Next, in the menu, select __Deploy Environments > Deploy Parameters__:
 
 image::fig6.5_3.png[,763,447] 
 
-As you can see, for the testdeploy environment, the value of the "`applicationName`" parameter is "`customers_test`", while for the proddeploy environment, the specified value is "`customers`". When the Tomcat Deploy Phase is being executed, the property ${applicationName} will be replaced with the value of the Deploy Parameter, which yields the desired behavior.
+As you can see, for the testdeploy environment, the value of the "`applicationName`" parameter is "`customers_test`", while for the proddeploy environment, the specified value is "`customers`". When the Tomcat Deploy Phase is being executed, the property $\{applicationName} will be replaced with the value of the Deploy Parameter, which yields the desired behavior.
 
 For more information on Custom Phases and on how you can create them yourself, please refer to the _IKAN ALM User
 Guide_ (chapter _Global Administration, Phases_ and appendix __Phases: General Information__), and to the document __Using and Developing Custom Phases__.

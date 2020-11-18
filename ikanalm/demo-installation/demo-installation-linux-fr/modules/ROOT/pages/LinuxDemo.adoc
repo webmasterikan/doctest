@@ -803,7 +803,7 @@ et Environnements connectés__, notre Phase de Déploiement Tomcat est actuellem
 * Dans l'Environnement de Déploiement _proddeploy_ du Niveau PRODUCTION, où il déploie l'application "Customers" dans le contexte de production.
 
 
-Comme un exemple d'une utilisation plus avancée des Paramètres, prenons le Paramètre de phase "contextPath". Sa valeur par défaut est établie à `/${applicationName}` et cette valeur est spécifiée tant pour l'Environnement "testdeploy" que pour l'Environnement "proddeploy" (cliquez sur l'icône _Modifier_ image:icons/edit.gif[,15,15]  devant le Paramètre __contextPath__). Toutefois, l'application "Customers" est déployée dans deux contextes différents: "customers_test" et "customers". 
+Comme un exemple d'une utilisation plus avancée des Paramètres, prenons le Paramètre de phase "contextPath". Sa valeur par défaut est établie à `/$\{applicationName}` et cette valeur est spécifiée tant pour l'Environnement "testdeploy" que pour l'Environnement "proddeploy" (cliquez sur l'icône _Modifier_ image:icons/edit.gif[,15,15]  devant le Paramètre __contextPath__). Toutefois, l'application "Customers" est déployée dans deux contextes différents: "customers_test" et "customers". 
 
 Comment cela est réalisé?
 
@@ -816,7 +816,7 @@ des projets_ et modifiez le projet "Customers". Dans le menu, sélectionnez ensu
 
 image::ch6_24.png[,947,452] 
 
-Vous constaterez que pour l'Environnement "testdeploy" la valeur du Paramètre "applicationName" est "customers_test", tandis que pour l'Environnement "proddeploy" la valeur est établie à "customers". Au moment de l'exécution de la Phase de Déploiement Tomcat, la propriété ${applicationName} sera remplacée par la valeur du Paramètre de déploiement qui donnera le résultat désiré.
+Vous constaterez que pour l'Environnement "testdeploy" la valeur du Paramètre "applicationName" est "customers_test", tandis que pour l'Environnement "proddeploy" la valeur est établie à "customers". Au moment de l'exécution de la Phase de Déploiement Tomcat, la propriété $\{applicationName} sera remplacée par la valeur du Paramètre de déploiement qui donnera le résultat désiré.
 
 Pour plus d'informations concernant les Phases personnalisées et la procédure pour les créer vous-mêmes, se référer au _Guide
 de l'Utilisateur IKAN ALM_ (le chapitre __Administration
