@@ -159,7 +159,7 @@ To enforce the usage of a Machine or Environment Parameter, you have to use the 
 How to proceed to make sure that instead of the value of the original Environment Phase Parameter the value of the Machine or Environment Parameter will be used?
 
 To do so, you will need to replace the value of the Environment Phase Parameter with a reference to the value of the Machine or Environment Parameter value.
-The syntax to be used is: ``${ReplacingParameter}``.
+The syntax to be used is: ``$\{ReplacingParameter}``.
 
 For more information, refer to the section <<_chddggjfj3>>.
 
@@ -543,7 +543,7 @@ image::Edit_EnvPhaseParameter.png[,271,149]
 +
 . Replace the value of the parameter with a reference to the Machine Parameter and click __Save__.
 +
-The syntax of the parameter is: ${replacingParameter}. 
+The syntax of the parameter is: $\{replacingParameter}. 
 +
 In our example, the reference would be `${ikanalmdemo004v.rdbms.type}`.
 +
@@ -671,7 +671,7 @@ image::Edit_EnvPhaseParameter.png[,271,149]
 +
 . Replace the value of the parameter with a reference to the Environment Parameter and click __Save__.
 +
-The syntax of the parameter is: `${replacingParameter}`.
+The syntax of the parameter is: `$\{replacingParameter}`.
 +
 In our example, the reference would be ``${testdeploy.rdbms.type}``.
 +
