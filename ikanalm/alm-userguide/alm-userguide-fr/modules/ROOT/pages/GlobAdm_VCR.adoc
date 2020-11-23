@@ -1,0 +1,2107 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_vcr_git]]
+[[_globadm_vcr]]
+= Référentiels de contrôle de version 
+(((Administration globale ,Référentiels de contrôle de version)))  (((Référentiels de contrôle de version))) 
+
+Actuellement, IKAN ALM supporte différents types de Référentiels de Contrôle de Version (RCV):
+
+* <<GlobAdm_VCR.adoc#_sglobadmin_vcr_svn,Référentiels de contrôle de version Subversion>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git,Référentiels de contrôle de version Référentiels de contrôle de version Git>>
+* <<GlobAdm_VCR.adoc#_sglobadmin_vcr_cvs,Référentiels de contrôle de version CVS>>
+* <<GlobAdm_VCR.adoc#_sglobadmin_vcr_vss,Référentiels de contrôle de version Visual Source Safe (VSS)>>
+* <<GlobAdm_VCR.adoc#_sglobadmin_vcr_clearcasebase,Référentiels de contrôle de version ClearCase>>
+* <<GlobAdm_VCR.adoc#_sglobadmin_vcr_pvcs,Référentiels de contrôle de version PVCS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc,Référentiels de contrôle de version TFVC>>
+
+
+L`'administration de ces types de RCV est expliquée dans les sections suivantes.
+
+[NOTE]
+====
+Vous devez d`'abord installer un client RCV sur le Serveur IKAN ALM pour pouvoir interagir avec le Référentiel de contrôle de version.
+====
+
+[[_globaadm_vcr_create]]
+== Créer un Référentiel 
+(((Référentiel ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez _Référentiels de contrôle de version > Créer_.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-Create.png[,590,258] 
+. Sélectionnez le _Type_ de Référentiel que vous voulez créer.
++
+Le panneau _Détail de connexion_ pour le type de Référentiel sélectionné s'affichera en-dessous.
+. Saisissez le _Nom_ du Référentiel et ajoutez une __Description__.
+. Saisissez les détails de connexion spécifiques au Référentiel. 
++
+Pour plus d'informations concernant ces détails, se référer aux sections appropriées:
+
+* <<GlobAdm_VCR.adoc#_pcreatesvnrepository,Créer un Référentiel Subversion>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_create,Créer un Référentiel Git>>
+* <<GlobAdm_VCR.adoc#_pcreatecvsrepository,Créer un Référentiel CVS>>
+* <<GlobAdm_VCR.adoc#_pcreatevssrepository,Créer un Référentiel VSS>>
+* <<GlobAdm_VCR.adoc#_pcreateclearcasebaserepository,Créer un Référentiel ClearCase>>
+* <<GlobAdm_VCR.adoc#_pcreatepvcsrepository,Créer un Référentiel PVCS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_create,Créer un Référentiel TFVC>>
+
+
+[[_globadm_vcr_overview]]
+== Écran de l`'aperçu des Référentiels 
+(((Référentiel ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+image::GlobAdm-VCR-Overview.png[,981,590] 
+. Définissez les critères de recherche requis dans le panneau de recherche.
++
+La liste des éléments dans l'aperçu est synchronisée automatiquement en fonction des critères sélectionnés.
++
+Vous pouvez également:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* cliquer sur le lien _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* cliquer sur le lien _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans le panneau __Aperçu des Référentiels__.
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles dans le panneau __Aperçu des Référentiels Subversion__:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] __
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un Référentiel.
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer 
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer la définition d`'un Référentiel.
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique de toutes les opérations de création, de modification ou de suppression relatives à un Référentiel.
+|===
++
+Pour plus d`'informations, se référer aux sections appropriées:
+
+* <<GlobAdm_VCR.adoc#_sglobadmin_vcr_svn,Référentiels de contrôle de version Subversion>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git,Référentiels de contrôle de version Référentiels de contrôle de version Git>>
+* <<GlobAdm_VCR.adoc#_sglobadmin_vcr_cvs,Référentiels de contrôle de version CVS>>
+* <<GlobAdm_VCR.adoc#_sglobadmin_vcr_vss,Référentiels de contrôle de version Visual Source Safe (VSS)>>
+* <<GlobAdm_VCR.adoc#_sglobadmin_vcr_clearcasebase,Référentiels de contrôle de version ClearCase>>
+* <<GlobAdm_VCR.adoc#_sglobadmin_vcr_pvcs,Référentiels de contrôle de version PVCS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc,Référentiels de contrôle de version TFVC>>
+
+
+[[_sglobadmin_vcr_svn]]
+== Référentiels de contrôle de version Subversion 
+(((Référentiels de contrôle de version ,Subversion))) 
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<GlobAdm_VCR.adoc#_pcreatesvnrepository,Créer un Référentiel Subversion>>
+* <<GlobAdm_VCR.adoc#_pworkwithsvnoverview,Aperçu des Référentiels Subversion>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn_edit,Modifier un référentiel Subversion>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn_delete,Supprimer un Référentiel Subversion>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_svn_history,Afficher l`'historique d`'un Référentiel Subversion>>
+
+[[_pcreatesvnrepository]]
+=== Créer un Référentiel Subversion 
+(((Subversion ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+
+Vous devez d`'abord installer un client Subversion sur le Serveur IKAN ALM pour pouvoir créer un Référentiel de contrôle de version Subversion sur le Serveur IKAN ALM.
+====
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Créer__.
+
+. Sélectionnez _Subversion_ à partir de la liste déroulante dans le champ __Type__.
++
+L`'écran suivant s`'affiche: 
++
+image::GlobAdm-VCR-Create-Subversion.png[,597,768] 
+
+. Saisissez les champs dans le panneau __Créer un Référentiel Subversion__. 
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+|Sélectionnez le type de Référentiel de Contrôle de Version que vous voulez définir.
+Ce champ est obligatoire.
+
+Après avoir sélectionné le type de RCV, le panneau des _Détails
+de connexion_ approprié s'affichera en-dessous.
+
+|Nom RCV
+|Saisissez dans ce champ la dénomination du nouveau Référentiel Subversion.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Référentiel Subversion.
+|===
+
+. Saisissez les champs dans le panneau __Détails de connexion Subversion__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Chemin de commande
+|Saisissez dans ce champ le chemin vers l`'emplacement où la commande du Client de Subversion est localisée (__svn.exe _ou __svn_). Ce champ est obligatoire.
+
+|Utilisateur
+|Saisissez l`'Identifiant Utilisateur que IKAN ALM utilisera pour accéder au Référentiel Subversion.
+Ce champ est optionnel.
+
+|Mot de passe
+|Saisissez le Mot de passe que IKAN ALM utilisera pour accéder au Référentiel Subversion.
+Ce champ est optionnel.
+
+Les caractères seront remplacés par des astérisques.
+
+|Répétez le Mot de passe
+|Répétez le Mot de passe que IKAN ALM utilisera pour accéder au Référentiel Subversion.
+
+|URL du Référentiel Subversion
+|Saisissez l`'URL de la Machine hébergeant le Référentiel Subversion.
+Ce champ est obligatoire.
+
+Pour plus d`'informations concernant un URL de Référentiel Subversion correct, se référer à l`'appendice <<App_Subversion.adoc#_subversiongeneralinformation,Subversion - informations générales>>.
+
+|Répertoire des versions (tags)
+|Saisissez le répertoire des versions "`tags`" pour le Référentiel Subversion ou acceptez la valeur par défaut.
+
+|Répertoire de projets (trunk)
+|Saisissez le répertoire "`trunk`" pour le Référentiel Subversion ou acceptez la valeur par défaut.
+
+|Structure du Référentiel
+a|Sélectionnez, à partir du menu déroulant, la structure du Référentiel requise.
+
+Les structures suivantes sont disponibles:
+
+* Orienté projet
+* Orienté référentiel
+* Orienté projet unique
+
+La sélection d`'une structure de référentiel est obligatoire.
+
+Pour plus d`'informations concernant les différentes structures de référentiel, se référer à l`'appendice <<App_Subversion.adoc#_subversiongeneralinformation,Subversion - informations générales>>.
+
+|Délai d`'expiration (sec.)
+|Saisissez la valeur de délai d`'expiration, exprimée en secondes.
+
+Si IKAN ALM ne parvient pas à établir la connexion avec le Référentiel Subversion dans la période définie, IKAN ALM considérera le Référentiel comme étant inaccessible.
+
+La définition de la valeur du délai d`'expiration est obligatoire.
+
+|Collecte des métapropriétés
+|Sélectionnez l`'option _Oui_ si voulez automatiquement collecter les métapropriétés définies dans les fichiers Source du Référentiel Subversion lors de la phase de __Extraction
+du code__.
+
+Ces métapropriétés peuvent être utilisées par l`'Outil de Script de construction ou de déploiement.
+
+Pour plus d`'informations concernant la collecte des métapropriétés, se référer à l`'appendice <<App_Subversion.adoc#_subversiongeneralinformation,Subversion - informations générales>>.
+|===
+
+. Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM est capable d`'établir une connexion avec le Référentiel Subversion. 
+
+* Si les contrôles se terminent correctement, le message suivant s`'affiche:
++
+__Info: Connexion au référentiel correctement
+établie.__
+* Si le test échoue, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-Subversion-Create-Connection-Error.png[,741,507] 
++
+Corrigez les erreurs spécifiées dans la trace de pile et refaites le test. 
+
+. Si les contrôles se terminent correctement, cliquez sur le bouton __Créer__.
++
+Le nouveau Référentiel Subversion sera ajouté à l`'__Aperçu
+des Référentiels Subversion__ dans la partie inférieure de l`'écran.
++
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Référentiels de contrôle de version>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projet Créer un projet dans IKAN ALM>>
+
+|===
+
+[[_pworkwithsvnoverview]]
+=== Aperçu des Référentiels Subversion 
+(((Subversion))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche. 
+
+. Spécifiez _Subversion_ dans le champ _Type_ du panneau __Rechercher des Référentiels de contrôle de version__.
++
+Utilisez les autres critères de recherche pour n'afficher que les Référentiels Subversion qui vous intéressent.
++
+image::GlobAdm-VCR-Overview-Subversion.png[,1050,402] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Référentiels Subversion__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_VCR.adoc#_pcreatesvnrepository,Créer un Référentiel Subversion>>.
+
+. En fonction de vos droits d`'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un Référentiel Subversion. <<GlobAdm_VCR.adoc#_globadm_vcr_svn_edit,Modifier un référentiel Subversion>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition d`'un Référentiel Subversion.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_svn_delete,Supprimer un Référentiel Subversion>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique d`'un Référentiel Subversion.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_svn_history,Afficher l`'historique d`'un Référentiel Subversion>>
+|===
+
+[[_globadm_vcr_svn_edit]]
+=== Modifier un référentiel Subversion 
+(((Subversion ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels Subversion qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier le Référentiel Subversion sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-Subversion-Edit.png[,624,546] 
+
+. Si nécessaire, modifiez les champs dans le panneau __Modifier un Référentiel Subversion__.
++
+Pour plus d`'informations, se référer à la section <<GlobAdm_VCR.adoc#_pcreatesvnrepository,Créer un Référentiel Subversion>>.
++
+
+[NOTE]
+====
+Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM est capable d`'établir une connexion avec le Référentiel Subversion.
+
+Le panneau _Projets connectés_ affiche les Projets reliés au Référentiel sélectionné.
+====
+
+. Après avoir fait les modifications nécessaires, cliquez sur le bouton __Enregistrer__.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_vcr_svn_delete]]
+=== Supprimer un Référentiel Subversion 
+(((Subversion ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels Subversion qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer le Référentiel Subversion sélectionné.
++
+Si le Référentiel Subversion n`'est pas associé à un Projet, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-Subversion-Delete.png[,517,376] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression du Référentiel Subversion.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer le Référentiel Subversion.
++
+__Note: __Si le Référentiel Subversion est associé à un ou plusieurs Projet(s), l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-Subversion-Delete-Error.png[,710,694] 
++
+Avant de supprimer le Référentiel, vous devez assigner le(s) Projet(s) listés à un autre Référentiel de Contrôle de Version.
+
+[[_globadm_vcr_svn_history]]
+=== Afficher l`'historique d`'un Référentiel Subversion 
+(((Subversion ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels Subversion qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique du Référentiel Subversion__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
+
+
+[[_globadm_vcr_git]]
+== Référentiels de contrôle de version Git 
+(((Référentiels de contrôle de version ,Git))) 
+
+Se référer aux sections suivantes pour des informations plus détaillées:
+
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_create,Créer un Référentiel Git>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_overview,Écran de l'Aperçu des Référentiels Git>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_edit,Modifier un Référentiel Git>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_delete,Supprimer un Référentiel Git>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_git_history,Afficher l'Historique d`'un Référentiel Git>>
+
+[[_globadm_vcr_git_create]]
+=== Créer un Référentiel Git 
+(((Git ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+Avant de pouvoir créer le Référentiel de Contrôle de Version Git dans IKAN ALM, vous devez installer un client Git sur le Serveur IKAN ALM.
+====
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Créer__.
+
+. Sélectionnez _Git_ à partir de la liste déroulante dans le champ __Type__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-VCR-Create-Git.png[,605,656] 
+
+. Saisissez les champs dans le panneau __Créer un Référentiel Git__. Les champs marqués d`'un astérisque rouge doivent être complétés obligatoirement. 
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+|Sélectionnez le type de Référentiel de Contrôle de Version que vous voulez définir.
+Ce champ est obligatoire.
+
+Après avoir sélectionné le type de RCV, le panneau des _Détails
+de connexion_ approprié s'affichera en-dessous.
+
+|Nom
+|Saisissez dans ce champ la dénomination du nouveau Référentiel Git.
+Ce champ est obligatoire.
+
+|Description
+|Dans ce champ, saisissez une description pour le nouveau Référentiel Git.
+Ce champ est optionnel.
+|===
+
+. Saisissez les champs dans le panneau __Détails de connexion Git__. Les champs marqués d`'un astérisque rouge doivent être complétés obligatoirement. 
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Chemin de commande
+|Saisissez le chemin vers l'Emplacement où se trouve la commande pour lancer le Client Git (git ou git.exe). Ce champ est obligatoire.
+
+|Emplacement cache
+|Saisissez le chemin vers l'Emplacement cache de ce Référentiel Git.
+Ce répertoire sur le Serveur IKAN ALM est utilisé pour cloner et mettre en cache le Référentiel Git pour le Serveur IKAN ALM et l'application Web pour accélérer les processus du Référentiel.
+Assurez-vous que les droits d'accès pour cet Emplacement soient configurés correctement pour le processus Git.
+
+L'Emplacement pourrait être semblable à ALM_HOME/system/gitcache, par exemple, ``c:/ALM/system/gitcache``.
+Il est possible de partager l'Emplacement cache entre plusieurs Référentiels Git.
+
+|URL du Référentiel
+a|Saisissez l'URL complet du Référentiel Git.
+Ce champ est obligatoire.
+
+Les URLs valides ont le format suivant:
+
+* /path/to/repo.git
+* \file:///path/to/repo.git 
+* ssh://[user @]host.xz[:port]/path/to/repo.git
+* [user@]host.xz:path/to/repo.git
+* git://host.xz[:port]/path/to/repo.git
+* http[s]://host.xz[:port]/path/to/repo.git
+
+_Avertissement:_ Si vous saisissez un Utilisateur et, optionnellement, un mot de passe dans les champs dédicacés ci-dessous, vous ne devez pas les ajouter à l'URL du Référentiel (Push) avant d'exécuter une commande du Référentiel.
+
+|URL Push du Référentiel
+|Si vous voulez utiliser les différents protocoles pour les actions read et push, vous pouvez spécifier un URL différent (en général un protocole qui demande une authentification ssh://,https:// or scp style URL) dans ce champ pour les actions push.
+
+Se référer à la description du champ _URL du
+Référentiel_ pour les formats URL valides.
+
+Ce champ est optionnel.
+
+|Utilisateur
+|Saisissez l'ID Utilisateur qu'IKAN ALM utilisera pour accéder au Référentiel Git.
+Ce champ est optionnel.
+
+IKAN ALM insérera la valeur de l'ID Utilisateur dans l'URL final (Push) avant d'exécuter une commande de Référentiel.
+
+|Mot de Passe
+|Saisissez le mot de passe qu'IKAN ALM utilisera pour accéder au Référentiel Git.
+Ce champ est optionnel.
+
+Les caractères saisis seront remplacés par des astérisques.
+IKAN ALM insérera la valeur du Mot de Passe dans l'URL final (Push) avant d'exécuter une Commande de Référentiel.
+Ceci est uniquement le cas pour les URLshttp(s). Les URLs SSH et scp doivent fonctionner sans mot de passe.
+
+|Répétez le Mot de Passe
+|Re-saisissez le mot de passe qu'IKAN ALM utilisera pour accéder au Référentiel Git.
+
+|Délai d'expiration (sec.)
+|Saisissez le Délai d`'expiration en secondes.
+Si IKAN ALM ne parvient pas à établir une connexion au Référentiel Git dans la période définie, le Référentiel sera considéré comme inaccessible.
+
+La spécification du Délai d`'expiration est obligatoire.
+|===
+
+. Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM parvient à établir la connexion vers le Référentiel Git. Si le test réussit, le message suivant s`'affiche:
++
+__Information: Connexion au Référentiel correctement
+établie.__
++
+Si le test échoue, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-Git-Create-Connection-Error.png[,737,509] 
++
+Corrigez les erreurs spécifiés dans la trace de pile et refaites le test.
+
+. Une fois le test réussi, cliquez sur le bouton __Créer__.
++
+Le nouveau Référentiel Git sera ajouté à l`'__Aperçu
+des Référentiels Git__ dans la partie inférieure de l`'écran.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Référentiels de contrôle de version>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projet Créer un projet dans IKAN ALM>>
+
+|===
+
+[[_globadm_vcr_git_overview]]
+=== Écran de l'Aperçu des Référentiels Git 
+(((Git ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Créer__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
+
+. Spécifiez _Git_ dans le champ _Type_ du panneau __Rechercher des Référentiels de contrôle de version__.
++
+Utilisez les autres critères de recherche pour n'afficher que les Référentiels Git qui vous intéressent.
++
+image::GlobAdm-VCR-Overview-Git.png[,1048,277] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans le panneau __Aperçu des Référentiels Git__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_VCR.adoc#_pcreatesvnrepository,Créer un Référentiel Subversion>>.
+
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles dans le panneau __Aperçu des Référentiels Git__:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer la définition d`'un Référentiel Git.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_git_edit,Modifier un Référentiel Git>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer 
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer la définition d`'un Référentiel Git.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_git_delete,Supprimer un Référentiel Git>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique de toutes les opérations de création, de modification ou de suppression relatives à un Référentiel Git.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_git_history,Afficher l'Historique d`'un Référentiel Git>>
+|===
+
+[[_globadm_vcr_git_edit]]
+=== Modifier un Référentiel Git 
+(((Git ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche _Référentiels de contrôle
+de Version_ pour n'afficher que les Référentiels Git qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier le Référentiel Git sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-Git-Edit.png[,579,508] 
+
+. Si nécessaire, modifiez les champs.
++
+Pour la description des champs, se référer à la section <<GlobAdm_VCR.adoc#_globadm_vcr_git_create,Créer un Référentiel Git>>.
++
+
+[NOTE]
+====
+Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM parvient à établir la connexion vers le Référentiel Git. 
+
+Le panneau _Projets connectés_ affiche les Projets reliés au Référentiel sélectionné. 
+====
+
+ . Cliquez sur le bouton _Sauvegarder_ pour sauvegarder vos modifications.
++
+Les boutons suivants sont également disponibles:
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_vcr_git_delete]]
+=== Supprimer un Référentiel Git 
+(((Git ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels Git qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer le Référentiel Git sélectionné.
++
+Si le Référentiel Git n'est pas connecté à un Projet, l'écran suivant s'affiche: 
++
+image::GlobAdm-VCR-Git-Delete.png[,439,330] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer l'entrée.
++
+__Note:__ Si le Référentiel Git est connecté à un ou plusieurs Projets, l'écran suivant s'affiche: 
++
+image::GlobAdm-VCR-Git-Delete-Error.png[,624,480] 
++
+Avant de supprimer les RCVs, vous devez connecter les Projets signalés à un autre RCV.
+
+[[_globadm_vcr_git_history]]
+=== Afficher l'Historique d`'un Référentiel Git 
+(((Git ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels Git qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l'écran __Aperçu de l'Historique du Référentiel Git__.
++
+Pour une description plus détaillée de l`'__Aperçu
+de l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l'écran __Aperçu des Référentiels Git__.
+
+
+[[_sglobadmin_vcr_cvs]]
+== Référentiels de contrôle de version CVS 
+(((Référentiels de contrôle de version ,CVS))) 
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<GlobAdm_VCR.adoc#_pcreatecvsrepository,Créer un Référentiel CVS>>
+* <<GlobAdm_VCR.adoc#_pworkwithcvsoverview,Aperçu des Référentiels CVS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_cvs_edit,Modifier un Référentiel CVS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_cvs_delete,Supprimer un Référentiel CVS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_cvs_history,Afficher l`'historique d`'un Référentiel CVS>>
+
+[[_pcreatecvsrepository]]
+=== Créer un Référentiel CVS 
+(((CVS ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+
+Avant de pouvoir créer le Référentiel de Contrôle de Version CVS dans IKAN ALM, vous devez installer un client CVS sur le Serveur IKAN ALM.
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Créer__.
+
+. Sélectionnez _CVS_ à partir de la liste déroulante dans le champ __Type__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-VCR-Create-CVS.png[,600,668] 
+
+. Saisissez les champs dans le panneau __Créer un Référentiel CVS__. 
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+|Sélectionnez le type de Référentiel de Contrôle de Version que vous voulez définir.
+Ce champ est obligatoire.
+
+Après avoir sélectionné le type de RCV, le panneau des _Détails
+de connexion_ approprié s'affichera en-dessous.
+
+|Nom RCV
+|Saisissez dans ce champ la dénomination du nouveau Référentiel CVS.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Référentiel CVS.
+|===
+
+. Saisissez les champs dans le panneau __Détails de connexion CVS__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Chemin de commande
+|Saisissez dans ce champ le chemin vers l`'emplacement où se trouve la commande du Client CVS (__cvs.exe _ou __cvs_) sur le Serveur IKAN ALM.
+
+|Protocole
+a|Sélectionnez, à partir du menu déroulant, le protocole requis.
+Il s`'agit du protocole utilisé lors de la connexion avec le Référentiel CVS.
+
+Les protocoles suivants sont disponibles:
+
+* local
+* pserver
+* rhosts
+* ntserver
+* gserver
+* sspi
+* server
+* ssh
+* ext
+
+Ce champ est obligatoire.
+
+|Utilisateur
+|Saisissez l`'Identifiant Utilisateur que IKAN ALM utilisera pour accéder au Référentiel CVS.
+
+Si l`'accès au Référentiel CVS est protégé par une authentification, ce champ est obligatoire.
+
+|Mot de passe
+|Saisissez le Mot de passe que IKAN ALM utilisera pour accéder au Référentiel CVS.
+
+Si l`'accès au Référentiel CVS est protégé par une authentification, ce champ est obligatoire.
+
+Les caractères seront remplacés par des astérisques.
+
+|Répétez le Mot de passe
+|Répétez le Mot de passe que IKAN ALM utilisera pour accéder au Référentiel CVS.
+
+|Machine hôte
+|Saisissez la dénomination de la Machine hébergeant le Référentiel CVS. 
+
+Ce champ est obligatoire, sauf si le protocole _local_ est utilisé.
+
+|Port
+|Saisissez le numéro de port utilisé pour accéder au Référentiel CVS. 
+
+Si le protocole _local_ est utilisé ou si le numéro de port par défaut 2401 est utilisé, ce champ peut rester vide.
+
+|Chemin de racine
+|Saisissez le Référentiel CVS racine utilisé pour se connecter à CVS. 
+
+Il s`'agit de l`'emplacement contenant le répertoire CVSROOT.
+Par exemple, si CVSROOT est localisé à _E:/cvs/repository/CVSROOT__, le chemin de racine sera __E:/cvs/repository_.
+
+Ce champ est obligatoire.
+
+|Délai d`'expiration (sec.)
+|Saisissez la valeur de délai d`'expiration, exprimée en secondes.
+
+Si IKAN ALM ne parvient pas à établir la connexion avec le Référentiel CVS dans la période définie, IKAN ALM considérera le Référentiel comme étant inaccessible.
+
+La définition de la valeur du délai d`'expiration est obligatoire.
+|===
+
+. Cliquez sur _Vérifier la connexion_ pour vérifier si IKAN ALM est capable d`'établir une connexion avec le Référentiel CVS. 
+* Si les contrôles se terminent correctement, le message suivant s`'affiche:
++
+__Info: Connexion au référentiel correctement
+établie.__
+* Si le test échoue, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-CVS-Create-Connection-Error.png[,741,507] 
++
+Corrigez les erreurs spécifiées dans la trace de pile et refaites le test. 
+
+. Si les contrôles se terminent correctement, cliquez sur le bouton __Créer__.
++
+Le nouveau Référentiel CVS sera ajouté à l`'__Aperçu
+des Référentiels CVS__ dans la partie inférieure de l`'écran.
++
+Vous pouvez également utiliser le bouton _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Référentiels de contrôle de version>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projet Créer un projet dans IKAN ALM>>
+
+|===
+
+[[_pworkwithcvsoverview]]
+=== Aperçu des Référentiels CVS 
+(((CVS ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche. 
+
+. Spécifiez _CVS_ dans le champ _Type_ du panneau __Rechercher des Référentiels de contrôle de version__.
++
+Utilisez les autres critères de recherche pour n'afficher que les Référentiels CVS qui vous intéressent.
++
+image::GlobAdm-VCR-Overview-CVS.png[,910,252] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Référentiels CVS__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_VCR.adoc#_pcreatecvsrepository,Créer un Référentiel CVS>>.
+
+. En fonction de vos droits d`'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un Référentiel CVS.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_cvs_edit,Modifier un Référentiel CVS>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition d`'un Référentiel CVS.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_cvs_delete,Supprimer un Référentiel CVS>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique d`'un Référentiel CVS.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_cvs_history,Afficher l`'historique d`'un Référentiel CVS>>
+|===
+
+[[_globadm_vcr_cvs_edit]]
+=== Modifier un Référentiel CVS 
+(((CVS ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels CVS qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier le Référentiel CVS sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-CVS-Edit.png[,587,526] 
+
+. Si nécessaire, modifiez les champs dans le panneau __Modifier un Référentiel CVS__.
++
+Pour plus d`'informations, se référer à la section <<GlobAdm_VCR.adoc#_pcreatecvsrepository,Créer un Référentiel CVS>>.
++
+
+[NOTE]
+====
+Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM est capable d`'établir une connexion avec le Référentiel CVS.
+
+Le panneau _Projets connectés_ affiche les Projets reliés au Référentiel sélectionné.
+====
+
+. Après avoir fait les modifications nécessaires, cliquez sur le bouton __Enregistrer__.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_vcr_cvs_delete]]
+=== Supprimer un Référentiel CVS 
+(((CVS ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels CVS qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer le Référentiel CVS sélectionné.
++
+Si le Référentiel CVS n`'est pas associé à un Projet, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-CVS-Delete.png[,435,362] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression du Référentiel CVS.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer le Référentiel CVS.
++
+__Note: __Si le Référentiel CVS est associé à un ou plusieurs Projet(s), l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-CVS-Delete-Error.png[,496,500] 
++
+Avant de supprimer le Référentiel, vous devez assigner le(s) Projet(s) listés à un autre Référentiel de Contrôle de Version.
+
+[[_globadm_vcr_cvs_history]]
+=== Afficher l`'historique d`'un Référentiel CVS 
+(((CVS ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels CVS qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique du Référentiel CVS__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
+
+
+[[_sglobadmin_vcr_vss]]
+== Référentiels de contrôle de version Visual Source Safe (VSS) 
+(((Référentiels de contrôle de version ,VSS))) 
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<GlobAdm_VCR.adoc#_pcreatevssrepository,Créer un Référentiel VSS>>
+* <<GlobAdm_VCR.adoc#_pworkwithvssoverview,Aperçu des Référentiels VSS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_vss_edit,Modifier un Référentiel VSS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_vss_delete,Supprimer un Référentiel VSS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_vss_history,Afficher l`'historique d`'un Référentiel VSS>>
+
+[[_pcreatevssrepository]]
+=== Créer un Référentiel VSS 
+(((VSS ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+
+Vous devez d`'abord installer un client VSS sur le Serveur IKAN ALM pour pouvoir créer un Référentiel de contrôle de version VSS sur le Serveur IKAN ALM.
+====
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Créer__.
+
+. Sélectionnez _VSS_ à partir de la liste déroulante dans le champ __Type__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-VCR-Create-VSS.png[,621,692] 
+
+. Saisissez les champs dans le panneau __Créer un Référentiel VSS__. 
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+|Sélectionnez le type de Référentiel de Contrôle de Version que vous voulez définir.
+Ce champ est obligatoire.
+
+Après avoir sélectionné le type de RCV, le panneau des _Détails
+de connexion_ approprié s'affichera en-dessous.
+
+|Nom RCV
+|Saisissez dans ce champ la dénomination du nouveau Référentiel VSS.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Référentiel VSS.
+|===
+
+. Saisissez les champs dans le Contrôle panneau __Détails de connexion VSS__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Chemin de commande
+|Saisissez dans ce champ le chemin de commande du Client VSS (le chemin absolu vers le fichier __ss.exe__).
+
+|Chemin INI
+|Saisissez dans ce champ la racine VSS pour se connecter à VSS, ou la variable d`'environnement _ssdir_ (le chemin absolu vers le fichier __srcsafe.ini__).
+
+|Utilisateur
+|Saisissez l`'Identifiant Utilisateur que IKAN ALM utilisera pour accéder au Référentiel VSS.
+
+|Mot de passe
+|Saisissez le Mot de passe que IKAN ALM utilisera pour accéder au Référentiel VSS.
+
+Les caractères seront remplacés par des astérisques.
+
+|Répétez le Mot de passe
+|Répétez le Mot de passe que IKAN ALM utilisera pour accéder au Référentiel VSS.
+
+|Format date
+a|Saisissez le format de date utilisé sur le Système sur lequel le Client VSS est installé.
+
+Exemples:
+
+* _MM/dd/yyyy_
+* _dd/MM/yy_
+
+|Format heure
+|Saisissez le format heure utilisé sur le Système sur lequel le Client VSS est installé.
+
+Exemple:
+
+_HH:mm_
+
+|Délai d`'expiration (sec.)
+|Saisissez la valeur de délai d`'expiration, exprimée en secondes.
+
+Si IKAN ALM ne parvient pas à établir la connexion avec le Référentiel VSS dans la période définie, IKAN ALM considérera le Référentiel comme étant inaccessible.
+
+La définition de la valeur du délai d`'expiration est obligatoire.
+|===
+
+. Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM est capable d`'établir une connexion avec le Référentiel VSS. 
+
+* Si les contrôles se terminent correctement, le message suivant s`'affiche:
++
+__Info: Connexion au référentiel correctement
+établie.__
+* Si le test échoue, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-VSS-Create-Connection-Error.png[,738,506] 
++
+Corrigez les erreurs spécifiées dans la trace de pile et refaites le test. 
+
+. Si les contrôles se terminent correctement, cliquez sur le bouton __Créer__.
++
+Le nouveau Référentiel VSS sera ajouté à l`'__Aperçu
+des Référentiels VSS__ dans la partie inférieure de l`'écran.
++
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Référentiels de contrôle de version>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projet Créer un projet dans IKAN ALM>>
+
+|===
+
+[[_pworkwithvssoverview]]
+=== Aperçu des Référentiels VSS 
+(((VSS ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche. 
+
+. Spécifiez _VSS_ dans le champ _Type_ du panneau __Rechercher des Référentiels de contrôle de version__.
++
+Utilisez les autres critères de recherche pour n'afficher que les Référentiels VSS qui vous intéressent.
++
+image::GlobAdm-VCR-Overview-VSS.png[,1022,379] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Référentiels VSS__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_VCR.adoc#_pcreatevssrepository,Créer un Référentiel VSS>>.
+
+. En fonction de vos droits d`'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un Référentiel VSS.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_vss_edit,Modifier un Référentiel VSS>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition d`'un Référentiel VSS.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_vss_delete,Supprimer un Référentiel VSS>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique d`'un Référentiel VSS.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_svn_history,Afficher l`'historique d`'un Référentiel Subversion>>
+|===
+
+[[_globadm_vcr_vss_edit]]
+=== Modifier un Référentiel VSS 
+(((VSS ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels VSS qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier le Référentiel VSS sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-VSS-Edit.png[,580,511] 
+
+. Si nécessaire, modifiez les champs dans le panneau __Modifier un Référentiel VSS__.
++
+Pour plus d`'informations, se référer à la section <<GlobAdm_VCR.adoc#_pcreatevssrepository,Créer un Référentiel VSS>>.
++
+
+[NOTE]
+====
+Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM est capable d`'établir une connexion avec le Référentiel VSS.
+
+Le panneau _Projets connectés_ affiche les Projets reliés au Référentiel sélectionné.
+====
+
+. Après avoir fait les modifications nécessaires, cliquez sur le bouton __Enregistrer__.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_vcr_vss_delete]]
+=== Supprimer un Référentiel VSS 
+(((VSS ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels VSS qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer le Référentiel VSS sélectionné.
++
+Si le Référentiel VSS n`'est pas associé à un Projet, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-VSS-Delete.png[,432,361] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression du Référentiel VSS.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer le Référentiel VSS.
++
+__Note: __Si le Référentiel VSS est associé à un ou plusieurs Projet(s), l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-VSS-Delete-Error.png[,561,506] 
++
+Avant de supprimer le Référentiel, vous devez assigner le(s) Projet(s) à un autre Référentiel de Contrôle de Version.
+
+[[_globadm_vcr_vss_history]]
+=== Afficher l`'historique d`'un Référentiel VSS 
+(((VSS ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels VSS qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique du Référentiel VSS__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
+
+
+[[_sglobadmin_vcr_clearcasebase]]
+== Référentiels de contrôle de version ClearCase 
+(((Référentiels de contrôle de version ,ClearCase))) 
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<GlobAdm_VCR.adoc#_pcreateclearcasebaserepository,Créer un Référentiel ClearCase>>
+* <<GlobAdm_VCR.adoc#_pworkwithclearcasebaseoverview,Aperçu des Référentiels ClearCase>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_edit,Modifier un Référentiel ClearCase>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_delete,Supprimer un Référentiel ClearCase>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_history,Afficher l`'historique d`'un Référentiel ClearCase>>
+
+[[_pcreateclearcasebaserepository]]
+=== Créer un Référentiel ClearCase 
+((( ClearCase ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+
+Vous devez d`'abord installer un client ClearCase sur le Serveur IKAN ALM pour pouvoir créer un Référentiel de contrôle de version ClearCase sur le Serveur IKAN ALM.
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Créer__.
+
+. Sélectionnez _ClearCase_ à partir de la liste déroulante dans le champ __Type__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-VCR-Create-ClearCase.png[,595,660] 
+
+. Saisissez les champs dans le panneau __Créer un Référentiel ClearCase__. 
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+|Sélectionnez le type de Référentiel de Contrôle de Version que vous voulez définir.
+Ce champ est obligatoire.
+
+Après avoir sélectionné le type de RCV, le panneau des _Détails
+de connexion_ approprié s'affichera en-dessous.
+
+|Nom RCV
+|Saisissez dans ce champ la dénomination du nouveau Référentiel ClearCase.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Référentiel ClearCase.
+|===
+
+. Saisissez les champs dans le Contrôle panneau __Détails de connexion ClearCase__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Nom RCV
+|Saisissez dans ce champ la dénomination du nouveau Référentiel ClearCase.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Référentiel ClearCase.
+
+|Chemin de commande
+|Saisissez dans ce champ le chemin de commande pour le nouveau Référentiel ClearCase.
+Il s`'agit du répertoire contenant la commande Client ClearCase (cleartool) pour établir la connexion avec le Référentiel ClearCase.
+
+|Emplacement cache
+|Dans ce champ, saisissez l`'emplacement cache pour le Référentiel ClearCase.
+Il s`'agit du répertoire utilisé par l`'Outil de Planification pour vérifier s`'il y a des modifications dans ClearCase VOB (Versioned Objects Base). Un "`ClearCase View`", contenant la VOB, sera créé dans ce répertoire.
+
+Sous Windows, ce chemin DOIT être un chemin de type UNC (\\server\share). Si non, certaines opérations IKAN ALM ne fonctionneront pas correctement.
+
+|Emplacement ConfigSpec
+a|Saisissez dans ce champ le chemin absolu vers les fichiers de spécification adaptés pour la Configuration de ClearCase.
+
+A cet emplacement, IKAN ALM cherchera des fichiers ConfigSpec dont les noms seront structurés selon le format suivant:
+
+* ConfigSpec_ProjectName_BranchID.vm
+* ConfigSpec_ProjectName.vm
+* ConfigSpec.vm
+
+IKAN ALM recherchera d`'abord la correspondance la plus spécifique (incluant l`'Identifiant de la Branche dans la dénomination).
+
+Si aucune correspondance n`'est trouvée, IKAN ALM cherchera la correspondance de second ordre (incluant le Nom du Projet).
+
+Si à nouveau aucune correspondance n`'est trouvée, IKAN ALM cherchera le fichier ConfigSpec.vm général.
+
+Si aucun fichier ConfigSpec n`'est disponible à l`'emplacement indiqué, le fichier ConfigSpec.vm par défaut disponible dans le chemin de classe d`'IKAN ALM sera utilisé.
+
+|Délai d`'expiration (sec.)
+|Saisissez la valeur de délai d`'expiration, exprimée en secondes.
+
+Si IKAN ALM ne parvient pas à établir la connexion avec le Référentiel ClearCase dans la période définie, IKAN ALM considérera le Référentiel comme étant inaccessible.
+
+La définition de la valeur du délai d`'expiration est obligatoire.
+
+|UCM-VOB de projet
+|Ce champ s`'applique uniquement pour établir une connexion à un Référentiel ClearCase UCM.
+
+Saisissez le nom du Projet VOB dans lequel l`'UCM a été créé.
+
+|UCM - Baliser les Baselines comme "`recommandé par défaut`"
+a|Ce champ s`'applique uniquement pour établir une connexion à un Référentiel ClearCase UCM.
+
+* Sélectionnez l`'option _Oui_ si vous voulez baliser chaque Construction de référence (Baseline) générée par IKAN ALM comme "`recommandée par défaut`".
++
+__Note: _Si vous spécifiez la réglementation des flux à __ POLICY_CHSTREAM_UNRESTRICTED_, la vérification des permissions est contournée.
++
+Vous ne pouvez utiliser cette option que si le compte supportant le Serveur Web, dans lequel IKAN ALM est exécuté, a un des statuts suivants: Project VOB Owner, Stream Owner, Root (Unix), Membre du Groupe d`'Administrateurs ClearCase (ClearCase sous Windows uniquement), Administrateur Local du serveur hôte de ClearCase LT (ClearCase LT sous Windows uniquement).
++
+Pour plus d`'informations, se référer à la page de référence pour mkstream dans la documentation de ClearCase.
+* Sélectionnez l`'option _Non_ si vous ne voulez pas baliser chaque Construction de référence (Baseline) générée par IKAN ALM comme "`recommandée par défaut`".
++
+Dans ce cas, ce processus sera un processus manuel exécuté en dehors d`'IKAN ALM.
+
+|===
+
+. Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM est capable d`'établir une connexion avec le Référentiel ClearCase. 
+
+* Si les contrôles se terminent correctement, le message suivant s`'affiche:
++
+__Info: Connexion au référentiel correctement
+établie.__
+* Si le test échoue, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-ClearCase-Create-Connection-Error.png[,744,505] 
++
+Corrigez les erreurs spécifiées dans la trace de pile et refaites le test. 
+
+. Si les contrôles se terminent correctement, cliquez sur le bouton __Créer__.
++
+Le nouveau Référentiel ClearCase sera ajouté à l`'__Aperçu
+des Référentiels ClearCase__ dans la partie inférieure de l`'écran.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Référentiels de contrôle de version>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projet Créer un projet dans IKAN ALM>>
+
+|===
+
+[[_pworkwithclearcasebaseoverview]]
+=== Aperçu des Référentiels ClearCase 
+(((ClearCase ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche. 
+
+. Spécifiez _ClearCase_ dans le champ _Type_ du panneau __Rechercher des Référentiels de contrôle de version__.
++
+Utilisez les autres critères de recherche pour n'afficher que les Référentiels ClearCase qui vous intéressent.
++
+image::GlobAdm-VCR-Overview-ClearCase.png[,984,257] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Référentiels ClearCase__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_VCR.adoc#_pcreateclearcasebaserepository,Créer un Référentiel ClearCase>>.
+
+. En fonction de vos droits d`'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un Référentiel ClearCase. <<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_edit,Modifier un Référentiel ClearCase>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition d`'un Référentiel ClearCase.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_delete,Supprimer un Référentiel ClearCase>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique d`'un Référentiel ClearCase.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_clearcase_history,Afficher l`'historique d`'un Référentiel ClearCase>>
+|===
+
+[[_globadm_vcr_clearcase_edit]]
+=== Modifier un Référentiel ClearCase 
+((( ClearCase ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels ClearCase qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier le Référentiel ClearCase sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-Clearcase-Edit.png[,790,487] 
+
+. Si nécessaire, modifiez les champs dans le panneau __Modifier un Référentiel ClearCase__.
++
+Pour plus d`'informations, se référer à la section <<GlobAdm_VCR.adoc#_pcreateclearcasebaserepository,Créer un Référentiel ClearCase>>.
++
+
+[NOTE]
+====
+Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM est capable d`'établir une connexion avec le Référentiel ClearCase.
+
+Le panneau _Projets connectés_ affiche les Projets reliés au Référentiel sélectionné.
+====
+
+. Après avoir fait les modifications nécessaires, cliquez sur le bouton __Enregistrer__.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_vcr_clearcase_delete]]
+=== Supprimer un Référentiel ClearCase 
+((( ClearCase ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels ClearCase qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer le Référentiel ClearCase sélectionné.
++
+Si le Référentiel ClearCase n`'est pas associé à un Projet, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-Clearcase-Delete.png[,459,452] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression du Référentiel ClearCase.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer le Référentiel ClearCase.
++
+__Note: __Si le Référentiel ClearCase est associé à un ou plusieurs Projet(s), l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-ClearCase-Delete-Error.png[,535,470] 
++
+Avant de supprimer le Référentiel, vous devez assigner le(s) Projet(s) listés à un autre Référentiel de Contrôle de Version.
+
+[[_globadm_vcr_clearcase_history]]
+=== Afficher l`'historique d`'un Référentiel ClearCase 
+((( ClearCase ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels ClearCase qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique du Référentiel ClearCase__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
+
+
+[[_sglobadmin_vcr_pvcs]]
+== Référentiels de contrôle de version PVCS 
+((( Référentiels de contrôle de version ,PVCS))) 
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<GlobAdm_VCR.adoc#_pcreatepvcsrepository,Créer un Référentiel PVCS>>
+* <<GlobAdm_VCR.adoc#_pworkwithpvcsoverview,Aperçu des Référentiels PVCS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_edit,Modifier un Référentiel PVCS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_delete,Supprimer un Référentiel PVCS>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_history,Afficher l`'historique d`'un Référentiel PVCS>>
+
+[[_pcreatepvcsrepository]]
+=== Créer un Référentiel PVCS 
+(((PVCS ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+
+Vous devez d`'abord installer un client PVCS sur le Serveur IKAN ALM pour pouvoir créer un Référentiel de contrôle de version PVCS sur le Serveur IKAN ALM.
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Créer__.
+
+. Sélectionnez _PVCS_ à partir de la liste déroulante dans le champ __Type__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-VCR-Create-PVCS.png[,613,742] 
+
+. Saisissez les champs dans le panneau __Créer un Référentiel PVCS__. 
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+|Sélectionnez le type de Référentiel de Contrôle de Version que vous voulez définir.
+Ce champ est obligatoire.
+
+Après avoir sélectionné le type de RCV, le panneau des _Détails
+de connexion_ approprié s'affichera en-dessous.
+
+|Nom RCV
+|Saisissez dans ce champ la dénomination du nouveau Référentiel PVCS.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Référentiel PVCS.
+|===
+
+. Saisissez les champs dans le panneau __Détails de connexion PVCS__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Chemin de commande
+|Saisissez le chemin vers l`'exécutable PCLI.
+Ce champ est obligatoire.
+
+|Base de données du Projet
+|Saisissez l`'emplacement de la base de données du projet.
+Ce champ est obligatoire.
+
+|Utilisateur
+|Saisissez l`'Identifiant Utilisateur que IKAN ALM utilisera pour accéder au Référentiel PVCS.
+
+Ce champ est optionnel.
+
+|Mot de passe
+|Saisissez le Mot de passe que IKAN ALM utilisera pour accéder au Référentiel PVCS.
+
+Ce champ est optionnel.
+
+Les caractères seront remplacés par des astérisques.
+
+|Répétez le Mot de passe
+|Répétez le Mot de passe que IKAN ALM utilisera pour accéder au Référentiel PVCS.
+
+|Espace de travail
+|Saisissez le chemin vers l`'espace de travail à utiliser.
+
+Ce champ est optionnel.
+Si rien n`'est spécifié, IKAN ALM utilisera l`'espace de travail racine ("/RootWorkspace").
+
+|Format de date du Journal
+|Saisissez le format de date pour les dates des modifications reprises par la commande "pcli vlog", par exemple: pour le format par défaut (MMM dd yyyy HH:mm:ss): `Oct 11 2014 11:53:04`
+
+|Code langage de date du Journal
+|Saisissez le code langage de date du Journal pour les dates des modifications reprises par la commande "pcli vlog", par exemple: pour le format par défaut (MMM dd yyyy HH:mm:ss):
+
+Code langage = "en" : `Oct
+11 2014 11:53:04`
+
+Code langage = "nl" : `Okt
+11 2014 11:53:04`
+
+Ce champ est obligatoire.
+La valeur par défaut est "`en`".
+
+|Suffixe des Archives
+|Saisissez le suffixe pour les fichiers des Archives PVCS.
+
+Ce champ est obligatoire.
+La valeur par défaut est "`-arc`".
+
+|Délai d`'expiration (sec.)
+|Saisissez la valeur de délai d`'expiration, exprimée en secondes.
+
+Si IKAN ALM ne parvient pas à établir la connexion avec le Référentiel PVCS dans la période définie, IKAN ALM considérera le Référentiel comme étant inaccessible.
+
+La définition de la valeur du délai d`'expiration est obligatoire.
+|===
+
+. Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM est capable d`'établir une connexion avec le Référentiel PVCS. 
+
+* Si les contrôles se terminent correctement, le message suivant s`'affiche:
++
+__Info: Connexion au référentiel correctement
+établie.__
+* Si le test échoue, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-PVCS-Create-Connection-Error.png[,740,509] 
++
+Corrigez les erreurs spécifiées dans la trace de pile et refaites le test. 
+
+. Si les contrôles se terminent correctement, cliquez sur le bouton __Créer__.
++
+Le nouveau Référentiel PVCS sera ajouté à l`'__Aperçu
+des Référentiels PVCS__ dans la partie inférieure de l`'écran.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Référentiels de contrôle de version>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projet Créer un projet dans IKAN ALM>>
+
+|===
+
+[[_pworkwithpvcsoverview]]
+=== Aperçu des Référentiels PVCS 
+(((PVCS ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche. 
+
+. Spécifiez _PVCS_ dans le champ _Type_ du panneau __Rechercher des Référentiels de contrôle de version__. 
++
+Utilisez les autres critères de recherche pour n'afficher que les Référentiels PVCS qui vous intéressent.
++
+image::GlobAdm-VCR-Overview-PVCS.png[,740,256] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Référentiels PVCS__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_VCR.adoc#_pcreatepvcsrepository,Créer un Référentiel PVCS>>.
+
+ . En fonction de vos droits d`'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un Référentiel PVCS.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_edit,Modifier un Référentiel PVCS>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition d`'un Référentiel PVCS.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_delete,Supprimer un Référentiel PVCS>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique d`'un Référentiel PVCS.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_pvcs_history,Afficher l`'historique d`'un Référentiel PVCS>>
+|===
+
+[[_globadm_vcr_pvcs_edit]]
+=== Modifier un Référentiel PVCS 
+(((PVCS ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels PVCS qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier le Référentiel PVCS sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-PVCS-Edit.png[,641,555] 
+
+. Si nécessaire, modifiez les champs dans le panneau __Modifier un Référentiel PVCS__.
++
+Pour plus d`'informations, se référer à la section <<GlobAdm_VCR.adoc#_pcreatepvcsrepository,Créer un Référentiel PVCS>>.
++
+
+[NOTE]
+====
+Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM est capable d`'établir une connexion avec le Référentiel PVCS.
+
+Le panneau _Projets connectés_ affiche les Projets reliés au Référentiel sélectionné.
+====
+
+. Après avoir fait les modifications nécessaires, cliquez sur le bouton __Enregistrer__.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_vcr_pvcs_delete]]
+=== Supprimer un Référentiel PVCS 
+(((PVCS ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels PVCS qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer le Référentiel PVCS sélectionné.
++
+Si le Référentiel PVCS n`'est pas associé à un Projet, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-PVCS-Delete.png[,469,383] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression du Référentiel PVCS.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer le Référentiel PVCS.
++
+__Note: __Si le Référentiel PVCS est associé à un ou plusieurs Projet(s), l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-PVCS-Delete-Error.png[,587,527] 
++
+Avant de supprimer le Référentiel, vous devez assigner le(s) Projet(s) listés à un autre Référentiel de Contrôle de Version.
+
+[[_globadm_vcr_pvcs_history]]
+=== Afficher l`'historique d`'un Référentiel PVCS 
+(((PVCS ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels PVCS qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique du Référentiel PVCS__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
+
+
+[[_globadm_vcr_tfvc]]
+== Référentiels de contrôle de version TFVC 
+(((Référentiels de contrôle de version ,TFVC))) 
+
+Se référer aux sections suivantes pour des informations plus détaillées:
+
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_create,Créer un Référentiel TFVC>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_overview,Écran de l'Aperçu des Référentiels TFVC>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_edit,Modifier un Référentiel TFVC>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_delete,Supprimer un Référentiel TFVC>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_history,Afficher l'Historique d`'un Référentiel TFVC>>
+
+[[_globadm_vcr_tfvc_create]]
+=== Créer un Référentiel TFVC 
+(((Git ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+Avant de pouvoir créer le Référentiel de Contrôle de Version TFVC dans IKAN ALM, vous devez installer un Client TFVC (Team Explorer pour MS Visual Studio ou Team Explorer Everywhere pour Team Foundation Server) sur le Serveur IKAN ALM.
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Créer__.
+
+. Sélectionnez _TFVC_ à partir de la liste déroulante dans le champ __Type__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-VCR-Create-TFVC.png[,608,614] 
+
+. Saisissez les champs dans le panneau __Créer un Référentiel TFVC__. Les champs marqués d`'un astérisque rouge doivent être complétés obligatoirement.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+|Sélectionnez le type de Référentiel de Contrôle de Version que vous voulez définir.
+Ce champ est obligatoire.
+
+Après avoir sélectionné le type de RCV, le panneau des _Détails
+de connexion_ approprié s'affichera en-dessous.
+
+|Nom
+|Saisissez dans ce champ la dénomination du nouveau Référentiel TFVC.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Référentiel TFVC.
+Ce champ est optionnel.
+|===
+
+. Saisissez les champs dans le panneau __Détails de connexion TFVC__. Les champs marqués d`'un astérisque rouge doivent être complétés obligatoirement. 
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Exécutable
+|Saisissez l'emplacement de l'exécutable de Team Foundation.
+Cela peut être la commande _tf.cmd_ du client TEE ou la commande _tf.exe_ du client de ligne de commande TFVC.
+
+Ce champ est obligatoire.
+
+|URL de collection Team Project
+a|Saisissez l'URL vers votre Team Project Collection dans le format suivant: ``http[s]://ServerName[:port]/path/to/collection``.
+
+Voici quelques exemples d'URLs pour la connexion avec une installation 'on premises' et avec Visual Studio Online:
+
+* \http://ikan_tfs:8080/tfs/DefaultCollection
+* \https://ikan.visualstudio.com/DefaultCollection
+
+Ce champ est obligatoire.
+
+|Utilisateur
+|Saisissez l'ID Utilisateur qu'IKAN ALM utilisera pour accéder au Référentiel TFVC.
+Référentiel.
+
+Ce champ est optionnel.
+
+|Mot de Passe
+|Saisissez le mot de passe qu'IKAN ALM utilisera pour accéder au Référentiel TFVC.
+Ce champ est optionnel.
+
+Les caractères sont remplacés par des astérisques.
+
+|Répétez le Mot de Passe
+|Re-saisissez le mot de passe qu'IKAN ALM utilisera pour accéder au Référentiel TFVC.
+
+|Délai d'expiration (sec.)
+|Saisissez le Délai d`'expiration en secondes.
+Si IKAN ALM ne parvient pas à établir une connexion au Référentiel TFVC dans la période définie, le Référentiel sera considéré comme inaccessible.
+
+La spécification du Délai d`'expiration est obligatoire.
+|===
+
+. Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM parvient à établir la connexion vers le Référentiel TFVC. Si le test réussit, le message suivant s`'affiche:
++
+__Information: Connexion au Référentiel correctement
+établie.__
++
+Si le test échoue, l`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-TFVC-Create-Connection-Error.png[,749,508] 
++
+Corrigez les erreurs spécifiés dans la trace de pile et refaites le test.
+
+. Une fois le test réussi, cliquez sur le bouton __Créer__.
++
+Le nouveau Référentiel TFVC sera ajouté à l`'__Aperçu
+des Référentiels TFVC__ dans la partie inférieure de l`'écran.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Référentiels de contrôle de version>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projet Créer un projet dans IKAN ALM>>
+
+|===
+
+[[_globadm_vcr_tfvc_overview]]
+=== Écran de l'Aperçu des Référentiels TFVC 
+(((TFVC ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
+
+. Spécifiez _TFVC_ dans le champ _Type_ du panneau __Rechercher des Référentiels de contrôle de version__.
++
+Utilisez les autres critères de recherche pour n'afficher que les Référentiels TFVC qui vous intéressent.
++
+image::GlobAdm-VCR-Overview-TFVC.png[,876,288] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans le panneau __Aperçu des Référentiels TFVC__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_create,Créer un Référentiel TFVC>>.
+
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles dans le panneau __Aperçu des Référentiels TFVC__:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer la définition d`'un Référentiel TFVC.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_edit,Modifier un Référentiel TFVC>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer 
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer la définition d`'un Référentiel TFVC.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_delete,Supprimer un Référentiel TFVC>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique de toutes les opérations de création, de modification ou de suppression relatives à un Référentiel TFVC.
+
+<<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_history,Afficher l'Historique d`'un Référentiel TFVC>>
+|===
+
+[[_globadm_vcr_tfvc_edit]]
+=== Modifier un Référentiel TFVC 
+(((Git ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels TFVC qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier le Référentiel TFVC sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-VCR-TFVC-Edit.png[,648,462] 
+
+. Si nécessaire, modifiez les champs.
++
+Pour la description des champs, se référer à la section <<GlobAdm_VCR.adoc#_globadm_vcr_tfvc_create,Créer un Référentiel TFVC>>.
++
+
+[NOTE]
+====
+Cliquez sur le bouton _Vérifier la connexion_ pour vérifier si IKAN ALM parvient à établir la connexion vers le Référentiel TFVC. 
+
+Le panneau _Projets connectés_ affiche les Projets reliés au Référentiel sélectionné. 
+====
+
+. Cliquez sur le bouton _Sauvegarder_ pour sauvegarder vos modifications.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_vcr_tfvc_delete]]
+=== Supprimer un Référentiel TFVC 
+(((Git ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels TFVC qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer le Référentiel TFVC sélectionné.
++
+Si le Référentiel TFVC n'est pas connecté à un Projet, l'écran suivant s'affiche:
++
+image::GlobAdm-VCR-TFVC-Delete.png[,570,281] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer la Machine.
++
+__Note:__ Si le Référentiel TFVC est connecté à un ou plusieurs Projets, l'écran suivant s'affiche:
++
+image::GlobAdm-VCR-TFVC-Delete-Error.png[,661,426] 
++
+Avant de supprimer les RCVs, vous devez connecter les Projets signalés à un autre RCV.
+
+[[_globadm_vcr_tfvc_history]]
+=== Afficher l'Historique d`'un Référentiel TFVC 
+(((Git ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Référentiels de Contrôle de Version > Aperçu__.
++
+L'aperçu de tous les Référentiels de contrôle de version s'affiche.
++
+Utilisez les critères de recherche dans le panneau _Rechercher
+des Référentiels de Contrôle de Version_ pour n'afficher que les Référentiels TFVC qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l'écran __Aperçu de l'Historique du Référentiel TFVC__.
++
+Pour une description plus détaillée de l`'__Aperçu
+de l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l'écran __Aperçu des Référentiels TFVC__.

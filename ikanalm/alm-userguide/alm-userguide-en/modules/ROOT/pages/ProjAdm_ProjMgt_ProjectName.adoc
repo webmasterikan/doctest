@@ -1,0 +1,13 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_projadm_projects]]
+= [Project Name] 
+(((Project Administration ,Project Name)))  (((Project Management Options ,Project Name)))  (((Project Name))) 
+
+The first option on the Project Administration submenu refers to the name of the selected Project or to the Project to which the selected Project Stream belongs.
+
+Select this option to return to the _Project
+Info_ screen. 
+
+For more information, refer to the section <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_viewing,Viewing Project Settings>>.

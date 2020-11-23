@@ -1,0 +1,6 @@
+name: demo-installation-linux-fr
+title: Demo Installation Guide (Linux) (FR)
+version: '5.8'
+start_page: ROOT:LinuxDemo.adoc
+nav:
+- modules/ROOT/nav.adoc  

@@ -1,0 +1,99 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_projadm_projmgtoptions]]
+= Options relatives à l`'administration des projets  
+(((Administration des projets ,Options)))  (((Options relatives à l'administration des projets))) 
+
+Une fois le Projet sélectionné dans l'Aperçu des Projets, les options de l'Aperçu deviennent disponibles.
+Les options disponibles dépendent de vos droits d'accès.
+
+Pour chacune des options de l'Administration des projets (sauf pour _Historique_ et __Auditer
+le Projet__), les options suivantes sont disponibles dans le sous-menu: _Créer_ et __Aperçu__.
+
+Pour éviter de répéter la même information à plusieurs endroits, toutes les procédures de création, de modification et de suppression d'éléments sont chaque fois décrites en détail pour l'option __Créer__.
+Pour les autres options de sous-menu, vous trouverez une référence à cette description.
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Option du sous-menu
+| Description
+
+|[Nom Projet]
+|La première option du sous-menu de l'Administration des projets indique le nom du Projet sélectionné.
+
+Sélectionnez cette option pour retourner à l`'écran __Infos
+Projet:__. 
+
+|Suivi de l`'Historique
+|Sélectionnez cette option pour afficher l`'historique de Projet sélectionné. <<ProjAdm_HistoryLog.adoc#_projadm_historylog,Suivi de l`'Historique>>
+
+|Branches
+a|Ce menu déroulant contient deux options:
+
+* _Créer une Branche secondaire_
++
+Sélectionnez cette option pour créer une nouvelle Branche pour ce Projet. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Créer une branche secondaire>>
+* _Aperçu_
++
+Sélectionnez cette option pour accéder à l`'__Aperçu
+des Branches__ du Projet sélectionné. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstreams,Branches>>
+
+|Cycles de vie
+a|Ce menu déroulant contient les options suivantes:
+
+* _Créer_
++
+Sélectionnez cette option pour créer un nouveau Cycle de Vie. <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_createlifecycle,Créer un cycle de vie>>
+* _Aperçu_
++
+Sélectionnez cette option pour créer __Aperçu
+des Cycles de vie et des Niveaux associés__. <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_accessing,Écran des cycles de vie et des niveaux associés>>
+
+|Niveaux
+a|Ce menu déroulant contient les options suivantes:
+
+* _Créer un Niveau de Construction_
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_createlevel,Créer un niveau de construction>>
+* _Créer un Niveau de Test_
++
+<<ProjAdm_Levels.adoc#_beifijci,Créer un niveau de test ou de production>>
+* _Créer un Niveau de Production_
++
+<<ProjAdm_Levels.adoc#_beifijci,Créer un niveau de test ou de production>>
+* _Aperçu_
++
+<<ProjAdm_Levels.adoc#_levelenvmgt_overview,Aperçu des niveaux>>
+
+|Environnements de construction
+a|Ce menu déroulant contient les options suivantes:
+
+* _Créer_
++
+Sélectionnez cette option pour créer un nouvel Environnement de Construction pour le Projet sélectionné. <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Créer un environnement de construction>>
+* _Aperçu_
++
+Sélectionnez cette option pour accéder à l`'__Aperçu
+des environnements de construction__ pour le Projet sélectionné. <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,Aperçu des environnements de construction>>
+* _Gérer les Paramètres de Construction_
++
+Sélectionnez cette option pour gérer les Paramètres de Construction pour le Projet sélectionné. <<ProjAdm_EnvParams.adoc#_projadm_environmentparameters,Paramètres d`'environnement>>
+
+|Environnements de déploiement
+a|Ce menu déroulant contient les options suivantes:
+
+* _Créer_
++
+Sélectionnez cette option pour créer un nouvel Environnement de Déploiement pour le Projet sélectionné. <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Créer un environnement de déploiement>>
+* _Aperçu_
++
+Sélectionnez cette option pour accéder à l`'__Aperçu
+des environnements de déploiement__ pour le Projet sélectionné. <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,Aperçu des environnements de déploiement>>
+* _Gérer les Paramètres de Déploiement_
++
+Sélectionnez cette option pour gérer les Paramètres de Déploiement pour le Projet sélectionné. <<ProjAdm_EnvParams.adoc#_projadm_environmentparameters,Paramètres d`'environnement>>
+
+|Auditer le projet
+|Sélectionnez cette option pour auditer le Projet sélectionné. <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,Auditer un projet>>
+|===

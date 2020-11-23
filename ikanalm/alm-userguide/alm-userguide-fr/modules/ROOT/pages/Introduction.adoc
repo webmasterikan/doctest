@@ -1,0 +1,77 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+:description: IKAN ALM User Guide (French) 
+:revnumber: v5.8
+:revdate: 01.04.2018
+
+
+[[_projadm_introduction]]
+= Guide de l’Utilisateur: Introduction 
+(((IKAN ALM ,Introduction))) 
+
+IKAN ALM offre une plateforme unique d`'__Application
+Lifecycle Management (ALM)__ intégrée et basée sur un interface Web pour des équipes de développement Agile ou traditionnelles.
+Il combine Intégration continue et Gestion des Cycles de Vie en offrant un seul point de contrôle et supportant de manière manuelle ou automatique les processus de Construction et de Déploiement, les processus d`'approbation, la gestion des versions et les cycles de vie des logiciels.
+
+Plusieurs Systèmes de gestion de versions existant sur le marché offrent un contrôle complet des versions, mais ils n`'englobent pas une solution intégrée pour la réalisation des Constructions ou des Déploiements automatisés, pour la gestion des librairies et les autres tâches importantes d`'un système ALM.
+Un grand nombre de leurs utilisateurs voudrait évoluer vers un niveau de pratique ALM plus avancé sans devoir abandonner leur outil de gestion de versions favori.
+IKAN ALM s`'intègre étroitement avec les solutions tierces de gestion des versions existantes (par exemple, Subversion, Git, Microsoft Team Version Control, IBM(R) Rational(R) ClearCase(R), Microsoft(R) Visual SourceSafe(R), Serena(R) PVCS Version Manager, CVS), avec les outils de construction et de déploiement (Make, Ant, Gradle, NAnt, Maven 2) ainsi qu`'avec les logiciels de suivi des incidents (Atlassian(R) JIRA(R), HP Quality Center, CollabNet TeamForge, Trac, Bugzilla, 
+ .). IKAN ALM doit donc être vu comme une solution ALM unique ouverte à d`'autres outils.
+
+Actuellement, les cycles de développements courts Agile ou même des développements traditionnels, exigent l`'application de techniques telles que des constructions nocturnes, les tests unitaires, de régression, d`'intégration et de performance continus pour garantir la qualité et la stabilité du code délivré.
+En automatisant ces routines, IKAN ALM permet une fréquence de rafraîchissement accrue qui peut être incorporée dans les tâches journalières de développement en éliminant les goulots d`'étranglement dans les tâches routinières de contrôle.
+Un processus de cycle de vie sur mesure qui inclut le développement, les procédures de test, de qualité et la production peut être facilement défini, implémenté et imposé offrant un cadre global sur toutes les plateformes principales telles que Windows, UNIX, Linux et IBM mainframe.
+IKAN ALM supporte aussi des modèles de projet basés sur des flux permettant aux chefs de projet d`'ajouter des cycles de vie pour chaque version d`'un projet pour faciliter la distinction entre maintenance, correction urgente, maintenance évolutive dans les processus de constructions et de déploiements.
+
+IKAN ALM facilite la conformité aux législations telles que Sarbanes-Oxley Act, DO-178B et plusieurs réglementations spécifiques à certains Etats, et augmente la capacité de l`'organisation pour se conformer aux standards tels que CMM, ITIL, Six SigmaT.
+IKAN ALM peut jouer un rôle important dans l`'obtention de ces niveaux de conformité par l`'automatisation des processus métier, incluant tous les processus du logiciel, et fournissant les traces d`'audit et les fonctionnalités de rapportage requises.
+IKAN ALM offre à votre organisation un seul processus polyvalent et un seul cadre par lesquels les applications sont mises en production de manière sécurisée et efficace, en gagnant du temps par l`'élimination d`'erreurs tout en respectant les standards et en assurant une gestion de qualité.
+IKAN ALM continue là où les autres Systèmes de gestion de versions s`'arrêtent, améliore le processus de développement de logiciel dans son ensemble et réduit de manière radicale le temps et les budgets nécessaires lors des efforts de développement.
+
+[[_susethisguide]]
+== Comment utiliser ce manuel?
+
+La façon dont vous utilisez IKAN ALM est déterminée par la catégorie d`'utilisateurs à laquelle vous appartenez.
+Le tableau ci-dessus liste les trois catégories d`'utilisateurs d`'IKAN ALM.
+
+Nous conseillons de vous concentrer sur les actions réservées à votre catégorie d`'utilisateurs.
+Cliquez sur un des liens pour accéder à une description plus détaillée d`'une action.
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Catégorie d`'utilisateur
+| Actions permises
+
+|Utilisateur normal
+a|L`'Utilisateur normal peut exécuter les actions suivantes (en fonction des paramètres de sécurité définis pour son Nom Utilisateur):
+
+* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Administrer son bureau>>
+* Vérifier l`'<<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Écran de l'Historique de Construction>>
+* Approuver ou rejeter des <<Desktop_Approvals.adoc#_desktop_outstandingapprovals,Approbations>>
+* Créer ou modifier des <<Desktop_LevelRequests.adoc#_desktop_levelrequests,Requêtes de niveau>>
+* Créer ou modifier des <<Desktop_Packages.adoc#_desktop_packages,Paquets>> et des <<Desktop_PackageGroups.adoc#_desktop_packagegroups,Groupes de Paquets de Construction>>.
+
+|Administrateur de projet
+a|L`'Utilisateur ayant des droits d`'accès d`'Administrateur de Projet peut exécuter les actions suivantes:
+
+* Créer ou modifier des <<ProjAdm_Projects.adoc#_projadm_projects,Projets>>
+* Créer ou modifier des <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstreams,Branches>>
+* Créer ou modifier des <<ProjAdm_LifeCycles.adoc#_projadm_lifecycles,Cycles de vie>>
+* Créer ou modifier des <<ProjAdm_Levels.adoc#_projadm_levels,Niveaux>>
+* Créer ou modifier des <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>> ou des <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+Pour une description détaillée des actions relatives à l`'administration des projets, se référer à la section <<Introduction.adoc#_projadm_introduction,Administration des projets>>.
+
+|Administrateur global
+a|L`'Utilisateur ayant des droits d`'accès d`'Administrateur global peut exécuter les actions suivantes:
+
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projet Créer un projet dans IKAN ALM>>
+* <<GlobAdm_Project.adoc#_globadm_projectclone,Cloner un projet existant>>
+* Définir les <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+* Créer ou modifier des <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>
+* Créer ou modifier des <<GlobAdm_VCR.adoc#_globadm_vcr,Référentiels de contrôle de version>>
+* Créer ou modifier des<<GlobAdm_Transporters.adoc#_globadm_transporters,Transporteurs>>
+* Créer ou modifier des <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Outils de script>>
+
+Pour une description détaillée des actions relatives à l`'administration globale, se référer à la section <<GlobAdm_Introduction.adoc#_globadm_introduction,Administration globale>>.
+|===

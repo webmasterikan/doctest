@@ -1,0 +1,86 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_drssfeedurldetails]]
+= RSS URL Details 
+(((RSS URL Details))) 
+
+The IKAN ALM URL has the following structure: 
+
+_protocol://almhost:almhostport/alm/displayRss.actionrequestparams_
+
+This is equal to the System Settings of the IKAN ALM URL (Global Administration > System Settings): 
+
+* "`protocol`" = http or https
+* "`almhost:almhostport`" = the IKAN ALM server domain,e.g., localhost:8080
+* "`requestparams`" = 
+
+
+The list of (optional) criteria will be added, separated with an "`&`" sign.
+The following table gives you an overview of the optional criteria. 
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Optional Criteria
+| Description
+
+|Title=value
+|This is the title that will be shown in the RSS Feed.
+
+If it is not provided, it will be set automatically when the RSS feed is constructed.
+This way it is possible to place more than one IKAN ALM RSS Feed in the RSS reader (e.g., for different projects).
+
+_Note:_ white spaces in the request will be provided via a "`+`" sign.
+
+|projectName=value
+|The Project Name. 
+
+For example: projectName=DEMOCVS, or projectName=D*
+
+|status=value
+|The Level Request status.
+Multiple statuses may be provided.
+
+For example: statuses=1&statuses=1
+
+Valid statuses are 0-10, with 0=unknown, 1=awaiting requested Date/time, 2=awaiting Approval, 3=rejected, 4=run, 5=fail, 6=success, 7=warning, 8=cancelled, 9=aborting, 10=aborted
+
+|projectStreamBuildPrefix=value
+|The Project Stream Build Prefix as defined in a Project Stream.
+
+For example: ProjectStreamBuildPrefix=1
+
+|projectStreamBuildSuffix=value
+|The Project Stream Build Suffix as defined in a Project Stream.
+
+For example: ProjectStreamBuildSuffix=1
+
+|levelName
+|The level name.
+
+For example:levelName=contbuild
+
+|levelType=value
+|The level type.
+
+For example: levelType=0
+
+Valid values are 0-2, with 0=Build, 1=Test, 2=Production
+
+|lang=value
+|Valid locale indicating the user`'s language (default = none = en).
+
+For example: lang=en, lang=de, lang=fr (the three currently supported languages in IKAN ALM)
+|===
+
+
+Valid sample URLs:
+
+\http://localhost:8080/alm/displayRss.action
+
+\http://localhost:8080/alm/displayRss.action?lang=de
+
+\https://pe4600:8080/alm/displayRss.action?projectName=DEMOCVS&projectStreamBuildPrefix=1&projectStreamBuildSuffix=1&levelType=0&lang=fr
+
+\https://pe4600:8080/alm/displayRss.action?projectName=DEMOCVS&projectStreamBuildPrefix=1&projectStreamBuildSuffix=1&levelType=0&title=IKAN ALM+builds+in+project+DEMOCVS
+

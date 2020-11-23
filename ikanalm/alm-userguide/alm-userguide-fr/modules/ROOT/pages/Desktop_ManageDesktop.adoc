@@ -1,0 +1,417 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_desktop_managedesktop]]
+= Administrer son bureau 
+(((Bureau ,Administrer votre bureau)))  (((Administrer votre bureau))) 
+
+Chaque Utilisateur IKAN ALM dispose de son Bureau personnel composé d`'onglets de Bureau administrables, chacun contenant l`'information actuelle des Branches de projet, des Niveaux et des Paquets qui l`'intéressent.
+Vous pouvez personnaliser jusqu`'à 10 onglets de Bureau et chaque onglet peut contenir jusqu`'à 20 types d'éléments.
+
+En plus, le Bureau personnel offre un raccourci vers les options de création et de consultation des Requêtes de Niveau.
+
+Les actions suivantes sont possibles:
+
+* Gérer les onglets de Bureau
+** <<Desktop_ManageDesktop.adoc#_managedesktop_desktopoverview,Aperçu du bureau>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_addingtabs,Ajouter un onglet de bureau>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_modifyingtabinformation,Modifier le nom d`'un onglet de bureau>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_removingtabpage,Supprimer un onglet de Bureau>>
+* Gérer le contenu du Bureau
+** <<Desktop_ManageDesktop.adoc#_managedesktop_addingelements,Ajouter un élément à un onglet de bureau>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_arrangingelements,Déplacer un élément dans un bureau>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_removingelements,Supprimer un élément de bureau>>
+
+[[_managedesktop_desktopoverview]]
+== Aperçu du bureau
+(((Bureau ,Aperçu))) 
+
+. Sélectionnez _Bureau_ dans le Menu Principal.
++
+Votre Bureau personnel s`'affiche.
++
+image::Desktop-DesktopOverview.png[,938,583] 
++
+
+[NOTE]
+====
+Si votre aperçu de Bureau est vide, vous pouvez ajouter des éléments en utilisant le bouton __Ajouter au Bureau__. <<Desktop_ManageDesktop.adoc#_managedesktop_addingelements,Ajouter un élément à un onglet de bureau>>
+====
+. Vérifiez les éléments présentés sur votre Bureau.
++
+Sur chaque onglet de Bureau, les champs suivants sont disponibles pour chaque type d`'élément.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Type d`'élément
+a|Ce champ iandique le type d`'élément assigné au Bureau.
+
+Il y a trois possibilités:
+
+* Branche
+* Niveau
+* Paquet
+
+_Note:_ Cliquez sur l`'icône image:icons/ExpandProjectStream.gif[,10,10]  pour développer les Branches ou Paquets assignés et afficher les niveaux leur appartenant.
+
+|Branche [Paquet]
+a|Il y a trois possibilités:
+
+* S`'il s`'agit d`'une Branche de projet assignée, ce champ contient l`'identification de cette Branche. Exemple: `Webpad H_3-0`
+* S`'il s`'agit d`'un niveau individuel assigné, ce champ contient l`'identification de la Branche de projet à laquelle appartient le niveau. Exemple: `Webpad B_3-1`
+* S`'il s`'agit d`'un Paquet de projet assigné, ce champ contient l`'identification de la Branche et le nom du dernier Paquet en cours sur le niveau. Exemple: `DemoMVS H_1-0 Pack1`
+
+L`'identification de la Branche est composée comme suit:
+
+* Nom du Projet
+* Type de la Branche: H (Head) pour une Branche principale ou B (Branch) pour une Branche secondaire
+* Préfixe de la Branche, optionnellement suivi du Suffixe dans le cas d`'une Branche secondaire
+
+|Niveau
+|Pour les niveaux individuels, ce champ contient la dénomination de ce niveau.
+
+Pour les Branches de projet non-déployés, ce champ contient le nom de niveau le plus élevé appartenant à cette Branche de projet.
+Logiquement, il s`'agit alors du Niveau de Production.
+
+Dans le cas d`'un Niveau optionnel, l`'icône image:icons/optional.gif[,15,15] _Optionnel_ sera affiché devant la dénomination du Niveau.
+
+|Début prochaine Requête prévue le
+a|Pour les Niveaux de Construction auxquels un Plan horaire est associé, ce champ affiche le moment probable de l`'exécution de la prochaine Requête de Niveau.
+
+La Requête de Niveau ne sera pas exécutée, si:
+
+* le code n`'a pas été modifié,
+* le Planificateur est désactivé.
+
+Pour les autres niveaux, ce champ reste vide.
+
+|Dernière Requête de niveau
+a|Ce champ contient l`'information suivante concernant la dernière requête du niveau affiché:
+
+* Les icônes indiquant le statut de la dernière requête de ce niveau:
+** image:icons/succes.gif[,15,15]  Réussie
+** image:icons/warning.gif[,15,15]  Avertissement
+** image:icons/run.gif[,15,15]  (Exécution)
+** image:icons/fail.gif[,15,15]  Échouée
+** image:icons/waiting_approval.gif[,15,15]  En attente de Pré-approbation ou de Post-approbation
+** image:icons/waiting_datetime.gif[,15,15]  En attente de l`'heure d`'exécution
+** image:icons/reject.gif[,15,15]  Rejetée
+** image:icons/cancelled.gif[,15,15]  Annulée
+** image:icons/aborted.gif[,15,15]  Interrompue
+
+* La Balise RCV (correspondant au modèle de balise) et le moment, date et heure, pour les requêtes ayant reçu le statut __Réussie__, _Échouée_ ou __Avertissement__.
++
+Ces indications sont présentées comme des liens.
+Cliquez sur un lien pour afficher l`'aperçu détaillé de la Requête de Niveau sélectionnée. 
+
+* Le lien (image:icons/desktop_link.gif[,22,11] ) vers l`'écran __Aperçu des requêtes de niveau__. Si vous utilisez ce lien, le nom du Projet et le nom du Niveau seront déjà pré-saisis dans le panneau des critères de recherche. 
+
+|Dernière Requête réussie
+|Ce champ contient la Balise RCV (correspondant au modèle de balise) et le moment, date et heure, de la dernière requête réussie pour le niveau sélectionné.
+
+Ces indications sont présentées comme des liens.
+Cliquez sur un lien pour afficher l`'aperçu détaillé de la Requête de Niveau sélectionnée. 
+
+|Action
+a|Ce champ contient les icônes d`'action disponibles pour ce niveau:
+
+* image:icons/request.gif[,15,15] : S`'il s`'agit d`'un Niveau de Construction, cette icône permet de créer une Requête de Niveau qui lancera une Construction. Si un horaire est défini pour le Niveau de Construction, il s`'agit d`'une Construction __forcée__. Si aucun horaire n`'est défini pour le Niveau de Construction, il s`'agit d`'une Construction __demandée__. 
++
+S`'il s`'agit d`'un Niveau de Test ou de Production, cette icône permet la création d`'une Requête de Niveau. 
+
+* image:icons/requestPlus.gif[,15,15] : Cette icône (uniquement disponible pour les Niveaux de Construction) permet la création d`'une Requête de Niveau qui lancera une nouvelle Construction. L`'écran de création d`'une Requête de Niveau affichera de l`'information supplémentaire concernant les modifications depuis la dernière Requête de Niveau. Si un horaire est défini pour le Niveau de Construction, il s`'agit d`'une Construction __forcée+__. Si aucun horaire n`'est défini pour le Niveau de Construction, il s`'agit d`'une Construction __demandée+__. 
++
+* image:icons/rollback.gif[,15,15] : Cette icône (uniquement disponible pour les niveaux de Test et de Production) permet la création d`'une Requête de Niveau qui lancera la restauration d`'une construction précédente pour ce niveau. 
+
+|Message
+a|S`'il s`'avère impossible de définir une requête sur un niveau spécifique, la raison sera affichée dans ce champ.
+Pour l`'explication des messages d`'erreur, se référer au tableau détaillé ci-dessous.
+
+* _Requête de niveau en attente pour ce niveau et cette branche_
++
+Ce message est affiché lorsqu`'une Requête de Niveau s`'exécute ou lorsqu`'elle est en attente d`'approbation.
++
+Il faut attendre l`'achèvement de la Requête de Niveau en cours avant de pouvoir définir une nouvelle Requête de Niveau pour ce niveau.
+* _Le niveau est verrouillé_
++
+Il est impossible de définir des Requêtes de Niveau pour des niveaux verrouillés.
++
+Vous (ou votre Chef de projet) devez auditer le projet afin de déverrouiller le niveau avant que vous ne puissiez définir des requêtes pour ce niveau. 
+* _Vous ne pouvez pas définir de requêtes de niveau_
++
+Si votre code Utilisateur ne dispose pas des droits d`'accès appropriés, vous ne pourrez pas définir des Requêtes de Niveau.
++
+Vous devez soit vous connecter avec un Identifiant Utilisateur ayant le droit de lancer des Requêtes de Niveau, soit demander à un Administrateur global d`'accorder ce droit à votre Identifiant Utilisateur. 
+* _Le projet est verrouillé_
++
+Il est impossible de définir des Requêtes de Niveau pour des Projets verrouillés.
++
+Vous (ou votre Chef de projet) devez d`'abord déverrouiller le Projet en cliquant sur le lien _Déverrouiller_ sur l`'écran _Aperçu des Projets_ ou __Modifier
+le projet__. 
+* _La branche est verrouillée_
++
+Il est impossible de définir des Requêtes de Niveau pour des Branches verrouillées.
++
+Vous (ou votre Chef de projet) devez d`'abord déverrouiller la Branche en sélectionnant _Déverrouiller_ dans l`'écran _Modifier la branche principale ou secondaire_ ou dans l`'écran __Aperçu des Branches__. 
+* _La branche est figée_
++
+Il est impossible de définir des Requêtes de Niveau de construction pour des Branches figées.
++
+Vous (ou votre Chef de projet) devez d`'abord défiger la Branche en sélectionnant un autre statut du menu déroulant _Statut_ sur l`'écran __Modifier la branche principale ou secondaire__. 
+
+|image:icons/delete.gif[,15,15]  (Retirer)
+|Cliquez sur ce lien pour retirer l`'élément sélectionné de votre onglet de Bureau.
+|===
+
+. Cliquez sur le bouton _Actualiser_ si vous voulez vérifier le statut changeant de l`'information sur votre Bureau.
++
+L`'écran sera actualisé chaque fois que vous cliquez sur le bouton _Actualiser_.
++
+
+[NOTE]
+====
+Si l`'option__ Actualisation
+automatique __est activée, le Bureau sera actualisé en fonction du délai de rafraîchissement défini dans les Paramètres Système. <<UserInterface.adoc#_desktop_autorefresh,Actualisation automatique>>
+====
+. Cliquez sur le bouton _Ajouter au Bureau_ pour ouvrir la fenêtre _Ajouter au Bureau_ permettant d'ajouter d'autres éléments à votre Bureau.
++
+<<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Administrer son bureau>>
+
+[[_managedesktop_addingtabs]]
+== Ajouter un onglet de bureau 
+(((Bureau ,Ajouter un onglet de bureau))) 
+
+. Sélectionnez _Bureau_ dans le Menu Principal.
+. Cliquez sur l`'onglet image:icons/icon_NewDesktop.gif[,16,16]  _Nouveau Bureau_.
++
+
+[NOTE]
+====
+Vous pouvez également cliquer avec le bouton droit la dénomination de n`'importe lequel Onglet de bureau existant et sélectionner _Nouveau Bureau_ sur le menu.
+====
++
+L`'écran suivant s`'affiche:
++
+image::Desktop-ManageDesktop-NewTabPage.png[,441,150] 
++
+. Complétez les champs pour le nouvel onglet.
++
+Les champs suivants sont disponibles:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Nom
+|Saisissez le nom du nouvel onglet.
+
+Par défaut, il est renseigné avec le numéro de l`'onglet de Bureau à suivre.
+
+|Description
+|Saisissez une description pour le nouvel onglet.
+Cette description s`'affichera dès que le pointeur de la souris est positionné sur le nom de l`'onglet de Bureau.
+|===
+
+. Cliquez sur le bouton _Créer_ pour confirmer la création de l`'Onglet.
++
+Vous pouvez également utiliser le bouton _Annuler_ pour retourner à l`'__Aperçu du bureau__ sans faire de modifications.
+
+[[_managedesktop_modifyingtabinformation]]
+== Modifier le nom d`'un onglet de bureau 
+(((Bureau ,Modifier le nom d’un onglet de bureau))) 
+
+. Sélectionnez _Bureau_ dans le Menu Principal.
+
+. Cliquez deux fois sur la dénomination de l`'onglet de Bureau que vous voulez modifier.
++
+
+[NOTE]
+====
+Vous pouvez également cliquez avec le bouton droit la dénomination de l`'onglet et sélectionner _Modifier
+le Bureau_ sur le menu.
+====
++
+La fenêtre suivante s`'affiche:
++
+image::Desktop-ManageDesktop-EditTabPageLabel.png[,454,167] 
+
+. Modifiez les champs de l`'onglet.
++
+Pour une description détaillée des champs disponibles, se référer à la section <<Desktop_ManageDesktop.adoc#_managedesktop_addingtabs,Ajouter un onglet de bureau>>
+
+. Cliquez sur le bouton _Sauvegarder_ pour sauvegarder vos modifications.
++
+Vous pouvez également utiliser le bouton _Annuler_ pour retourner à l`'__Aperçu du bureau__ sans faire de modifications.
+
+
+[[_managedesktop_removingtabpage]]
+== Supprimer un onglet de Bureau 
+(((Bureau ,Supprimer un onglet de bureau))) 
+
+Cliquez sur le bouton image:icons/icon_removeDesktop.gif[,15,14] __ Supprimer
+le Bureau__, pour supprimer un Onglet de bureau.
+
+[NOTE]
+====
+Vous pouvez également cliquez avec le bouton droit la dénomination de l`'Onglet et sélectionner _Supprimer
+le Bureau_ sur le menu.
+====
+
+L`'écran suivant s`'affiche:
+
+image::Desktop-ManageDesktop-RemoveTabPage.png[,454,147] 
+
+Confirmez ou annulez la suppression de l`'onglet.
+
+[[_managedesktop_addingelements]]
+== Ajouter un élément à un onglet de bureau 
+(((Bureau ,Ajouter un élément à un onglet de bureau))) 
+
+. Sélectionnez _Bureau_ dans le Menu Principal.
+
+. Sélectionnez l`'onglet auquel vous voulez ajouter des éléments.
++
+L`'aperçu de bureau pour l`'onglet sélectionné s`'affiche.
++
+
+[NOTE]
+====
+Si vous voulez ajouter des éléments à un nouvel onglet, vous devez d`'abord créer cet onglet. <<Desktop_ManageDesktop.adoc#_managedesktop_addingtabs,Ajouter un onglet de bureau>>
+====
+
+. Accédez à l`'écran __Ajouter au Bureau__.
++
+Cliquez sur le bouton _Ajouter au Bureau_ en-dessous du panneau __Aperçu du Bureau__, ou cliquez dans l`'aperçu avec le bouton droit et sélectionnez _Ajouter
+au Bureau_ sur le menu.
++
+L`'écran suivant s`'affiche:
++
+image::Desktop-ManageDesktop.png[,905,456] 
++
+. Définissez les critères de recherche dans le panneau __Rechercher des Branches__.
++
+Si vous ne trouvez pas immédiatement les éléments que vous voulez ajouter, vous pouvez utiliser le panneau de recherche dans la partie gauche de la fenêtre.
++
+Les critères de recherche suivants sont disponibles:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Critères de recherche
+| Description
+
+|Nom de Projet
+|Sélectionnez le nom du Projet pour lequel vous voulez afficher les Branches.
+
+|Référentiel
+|Sélectionnez le nom du Référentiel de Contrôle de Version.
+
+|Type de Projet
+|Sélectionnez le type de Projet: Édition versions ou Paquets.
+
+|Type de Branche
+|Indiquez le type de Branche: Branche Principale ou Branche secondaire.
+
+|Situation
+a|Sélectionnez le statut de la Branche:
+
+* En construction
+* Planifié
+* En développement
+* En test
+* Stable
+* Généralement disponible
+* Figé
+* Fermé
+
+|Verrouillée
+|Indiquez si vous voulez afficher les Branches verrouillées ou non.
+
+|Montrer les Branches cachées
+|Indiquez si vous voulez afficher les Branches cachées ou non.
+
+|Montrer les Paquets cachés
+|Indiquez si vous voulez afficher les Paquets cachés ou non.
+|===
++
+La liste des éléments affichée dans la structure arborescente à droite se limitera aux Branches correspondant aux critères de recherche définis.
++
+Cliquez sur le bouton _Réinitialiser_ pour nettoyer les champs de recherche
+
+. Sélectionnez les éléments que vous voulez ajouter.
++
+Sélectionnez, dans la structure arborescente à droite, la Branche, le Niveau ou le Paquet que vous voulez ajouter et cliquez sur le bouton __Ajouter au Bureau__.
++
+
+.. Ajouter une Branche de projet complète
++
+Ouvrez l`'arborescence du projet correspondant en cliquant sur l`'icône image:icons/ExpandProjectStream.gif[,10,10]  ou sur la ligne du projet pour développer et afficher les Branches lui appartenant.
+Cochez la branche que vous souhaitez ajouter et cliquez sur le bouton __Ajouter
+au Bureau__.
++
+Si vous ajoutez une Branche de projet à votre Bureau, tous les niveaux appartenant à cette Branche seront également disponibles.
+
+.. Ajouter un niveau individuel
++
+Ouvrez l`'arborescence de la Branche du projet correspondante en cliquant sur l`'icône image:icons/ExpandProjectStream.gif[,10,10]  ou sur la ligne du projet pour développer et afficher les Niveaux (et les Paquets) lui appartenant.
+Cochez le(s) Niveau(x) que vous souhaitez ajouter et cliquez sur le bouton __Ajouter au Bureau__.
+
+.. Ajouter un Paquet
++
+Ouvrez l`'arborescence de la Branche du projet correspondante en cliquant sur l`'icône image:icons/ExpandProjectStream.gif[,10,10]  ou sur la ligne du projet pour développer et afficher les Paquets (et les Niveaux) lui appartenant.
+Cochez le(s) Paquet(s) que vous souhaitez ajouter et cliquez sur le bouton __Ajouter au Bureau__.
++
+Si vous ajoutez un Paquet à votre Bureau, tous les niveaux appartenant à la Branche de ce Paquet seront également disponibles.
++
+Exemple de la sélection d`'un Paquet et d`'une Branche:
++
+image::Desktop-ManageDesktop-Example1.png[,907,463] 
++
+Par ces actions, l`'affichage de l`'onglet du Bureau sous-jacent est actualisé avec les nouveaux éléments. 
++
+
+[NOTE]
+====
+Vous pouvez sélectionnez plusieurs Branches, Niveaux et Paquets à la fois.
+
+Vous pouvez ajouter jusqu`'à 20 éléments à chacun de vos onglets de Bureau.
+
+Si vous ajoutez une Branche ou un Paquet contenant plusieurs Niveaux, cette Branche ou ce Paquet est considéré comme étant un seul élément.
+====
+
+. Cliquez sur le bouton _Fermer_ pour retourner à l`'__Aperçu du Bureau__.
+
+
+[[_managedesktop_arrangingelements]]
+== Déplacer un élément dans un bureau 
+(((Bureau ,Déplacer un élément dans un bureau))) 
+
+Pour modifier l`'ordre des éléments, il faut sélectionner l`'élément avec la souris et, en gardant le bouton de la souris enfoncé, le déplacer à l`'endroit de votre choix entre les autres éléments de l`'onglet.
+Vous pouvez sélectionner plusieurs éléments à la fois en utilisant les touches _SHIFT_ et __CTRL__.
+
+[NOTE]
+====
+La ligne orange indique la position cible des éléments sélectionnés.
+Pendant le déplacement d`'un élément, un bandeau vert indique un positionnement compatible, un bandeau rouge indique un positionnement incompatible.
+====
+
+Exemple d`'un déplacement en cours:
+
+
+image::Desktop-ManageDesktop-Rearranging.png[,899,314] 
+
+
+[[_managedesktop_removingelements]]
+== Supprimer un élément de bureau 
+(((Bureau ,Supprimer un élément de bureau))) 
+
+Pour retirer une Branche, un Niveau ou un Paquet, cliquez le bouton image:icons/remove.gif[,15,15] _Retirer_ à droite de l`'élément.
+
+L`'élément sera immédiatement retiré de l`'__Aperçu
+du Bureau__.

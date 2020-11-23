@@ -1,0 +1,1357 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_scriptingtools]]
+= Outils de script 
+(((Administration globale ,Outils de script)))  (((Outils de script))) 
+
+IKAN ALM supporte les Outils de script suivants:
+
+* <<GlobAdm_ScriptingTools.adoc#_sglobadmin_scriptingtool_ant,Outils de script ANT>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_gradle,Outils de script Gradle>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadmin_scriptingtool_nant,Outils de script NANT>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadmin_scriptingtool_maven2,Outils de script Maven2>>
+
+
+Les sections suivantes expliquent comment définir et gérer un Outil de script de manière à ce que l`'Agent IKAN ALM puisse l`'utiliser pour des actions de Construction et de Déploiement.
+
+[NOTE]
+====
+Vous devez toujours installer l`'Outil de Script défini sur l`'Agent IKAN ALM avant de pouvoir exécuter les Scripts de Construction et de Déploiement.
+====
+
+[[_sglobadm_scriptingtools_create]]
+== Créer un outil de script 
+(((Outils de script ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.12
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Créer__.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-Create.png[,599,270] 
+. Sélectionnez le _Type_ d'Outil de script que vous voulez créer.
++
+Le panneau _Détails_ pour le type d'Outil de script sélectionné s'affichera en-dessous.
+. Saisissez le _Nom_ de l'Outil de script et ajoutez une _Description_ optionnelle.
+. Saisissez les détails spécifiques de l'Outil de script. 
++
+Pour plus d'informations concernant ces détails, se référer aux sections appropriées:
+
+* <<GlobAdm_ScriptingTools.adoc#_pcreateantscriptingtool,Créer un outil de script ANT>>
+* <<GlobAdm_ScriptingTools.adoc#_pcreategradlescriptingtool,Créer un outil de script Gradle>>
+* <<GlobAdm_ScriptingTools.adoc#_pcreatenantscriptingtool,Créer un outil de script NANT>>
+* <<GlobAdm_ScriptingTools.adoc#_pcreatemaven2scriptingtool,Créer un outil de script Maven2>>
+
+[[_sglobadm_scriptingtools_overview]]
+== L'aperçu des Outils de script 
+(((Outils de script , Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-ScriptingTools-Overview.png[,980,573] 
+. Définissez les critères de recherche requis dans le panneau de recherche.
++
+La liste des éléments dans l'aperçu est synchronisée automatiquement en fonction des critères sélectionnés.
++
+Vous pouvez également:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* cliquer sur le lien _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* cliquer sur le lien _Réinitialiser la recherche_ pour nettoyer les champs.
+. Vérifiez les informations dans l`'__Aperçu des Outils de script__.
+. En fonction de vos droits d`'accès, les liens suivants peuvent être disponibles dans le panneau __Aperçu des Outils de script__:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un outil de script.
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition d`'un outil de script.
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique de toutes les opérations de création, de modification ou de suppression relatives à un Outil de script.
+|===
++
+Se référer aux sections suivantes pour des informations plus détaillées:
+
+* <<GlobAdm_ScriptingTools.adoc#_sglobadmin_scriptingtool_ant,Outils de script ANT>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_gradle,Outils de script Gradle>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadmin_scriptingtool_nant,Outils de script NANT>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadmin_scriptingtool_maven2,Outils de script Maven2>>
+
+
+[[_sglobadmin_scriptingtool_ant]]
+== Outils de script ANT 
+(((Outils de script ,ANT))) 
+
+Apache ANT est un outil basé sur Java.
+En théorie, l`'outil ressemble à __make__, sans les défauts de __make__.
+Si ANT est installé sur une Machine associée à vos Environnements de Construction/Déploiement, IKAN ALM pourra interagir avec lui.
+Pour cela, vous devez définir l`'Outil de script ANT dans l`'application IKAN ALM et, au moment de créer l`'Environnement de Construction ou de Déploiement, vous devez spécifier quel outil devra être utilisé comme Outil de script de Construction ou de Déploiement.
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<GlobAdm_ScriptingTools.adoc#_pcreateantscriptingtool,Créer un outil de script ANT>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_ant_overview,Aperçu des Outils de script ANT>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_ant_edit,Modifier la définition d`'un outil de script ANT>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_ant_delete,Supprimer une définition d`'outil de script ANT>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_ant_history,Afficher l`'historique d`'un outil de script ANT>>
+
+[[_pcreateantscriptingtool]]
+=== Créer un outil de script ANT 
+(((ANT ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+====
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Créer__.
+
+. Dans le panneau de recherche, sélectionnez _ANT_ à partir de la liste déroulante dans le champ __Type__.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-ANT-Create.png[,891,481] 
+
+. Complétez les champs dans le panneau __Créer un Outil de script ANT__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+|Sélectionnez le Type d'Outil de script que vous voulez définir.
+Ce champ est obligatoire.
+
+Après avoir sélectionné le type, le panneau des _Détails_ approprié s'affichera en-dessous.
+
+|Nom
+|Saisissez dans ce champ le nom du nouvel Outil de Script ANT.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouvel Outil de Script ANT.
+Ce champ est optionnel.
+|===
+
+. Complétez les champs dans le panneau __Créer un Outil de script ANT__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Chemin Java
+|Saisissez dans ce champ le chemin de Java (__JAVA_HOME__) pour lancer ANT. 
+
+Si vous ne saisissez pas de valeur dans ce champ, le chemin de Java par défaut défini au niveau du Système sera utilisé pour lancer ANT.
+Dans ce cas, le chemin de Java (__JAVA_HOME__)____ doit être défini comme une variable d`'environnement sur la Machine.
+
+|Options de Java VM
+|Saisissez dans ce champ les options de Java VM (Machine Virtuelle Java) utilisées pour lancer ANT.
+
+Exemple:
+
+__-Xmx128M__: spécifie la taille maximale du pool d`'allocation de mémoire.
+
+Les options JVM pour Java 8 par exemple sont décrites ici:
+
+https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html[https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html]
+
+|Chemin de classe ANT
+a|Saisissez dans ce champ le chemin de classe Java ANT.
+Ce champ est obligatoire.
+
+Comme IKAN ALM lance ANT via Java, vérifiez que tous les fichiers jar requis sont disponibles.
+Dans ce champ, certaines valeurs peuvent être spécifiées, mais vous pouvez également utiliser les "Chemins de classe" (voir ci-dessous).
+
+En fonction de la version de ANT utilisée, le chemin de classe (CLASSPATH) doit inclure au moins:
+
+*Pour ANT 1.5.x:*
+
+* ant.jar
+* jars/classes pour votre analyseur syntaxique XML
+* jars/zip fichiers pour le JDK (Kit de Développement Java)
+
+*Pour ANT 1.6.x:*
+
+* ant.jar
+* ant-launcher.jar
+* jars/classes pour votre analyseur syntaxique XML
+* jars/zip fichiers pour le JDK (Kit de Développement Java)
+
+*Si vous lancez ANT via le Lanceur ANT, le chemin de classe doit inclure:*
+
+* ant-launcher.jar
+* les dépendances externes requises (telles que tools.jar)
+
+__Note: __Si vous utilisez le Lanceur ANT, n`'incluez pas _ant.jar_ dans le chemin de classe Java, sinon les dépendances ne seront pas trouvées et le script se terminera en erreur.
+
+Pour plus d`'informations, se référer à la section _Exécuter
+ANT via Java_ dans le manuel __Apache ANT__.
+
+|Utiliser Ant Launcher
+|Sélectionnez _Oui_ si vous voulez utiliser le Lanceur Ant (valeur par défaut).
+
+Sélectionnez __Non__, si vous n`'utilisez pas le Lanceur ANT, mais Java pour lancer ANT.
+
+|Chemins de classes
+|Si vous utilisez le Lanceur ANT, vous pouvez saisir le chemin vers un ou plusieurs répertoires contenant les fichiers jar additionnels requis (option -lib).
+
+|Options de Commande
+|Dans ce champ, saisissiez les options de ligne de commande.
+Ce champ est optionnel.
+
+Les options de ligne de commande prévues par défaut par IKAN ALM, telles que -buildfile, -logfiles, -verbose, -debug, ... ne seront pas acceptées.
+
+Exemples d`'options: -keep-going, -noinput
+
+|Construction
+|Indiquez dans ce champ si l`'Outil de Script peut être associé ou non à un Environnement de Construction et par conséquent si l`'Outil de Script peut être utilisé pour construire du code ou non.
+
+|Déploiement
+|Indiquez dans ce champ si l`'Outil de Script peut être associé ou non à un Environnement de Déploiement et si par conséquent l`'Outil de Script peut être utilisé pour déployer des Constructions ou non.
+
+|Format du Journal
+a|Sélectionnez le format du fichier journal généré par cet Outil de script ANT.
+Les options suivantes sont disponibles:
+
+* TXT: le fichier journal sera un simple fichier de texte
+* XML: le fichier journal sera un fichier XML
+
+Les fichiers txt seront plus petits et leur contenu peut être affiché pendant l'exécution de l'outil.
+
+L'affichage des fichiers journaux XML peut être personnalisé en fournissant des modèles XSL personnalisés.
+Cependant, les fichiers journaux XML sont plus grands et ne peuvent être affichés qu'après que l'Outil soit exécuté.
+
+|Arrière-plan
+|Indiquez si l`'option _Arrière-plan_ doit être activée ou non pour le nouvel Outil de Script ANT.
+
+Si l`'option est activée, ANT imprimera moins d`'informations que d`'habitude pendant les actions de Construction et de Déploiement.
+
+|Messages détaillés
+|Indiquez si l`'option _Messages
+détaillés_ doit être activée ou non pour le nouvel Outil de Script ANT.
+
+Si l`'option est activée, ANT imprimera des informations détaillées de débogage pendant les actions de Construction et de Déploiement.
+
+|Option débogage
+|Indiquez si l`'option de _Débogage_ doit être activée ou non pour le nouvel Outil de Script ANT.
+
+Si l`'option est activée, ANT imprimera des informations de débogage additionnelles pendant les actions de Construction et de Déploiement.
+
+|Délai d`'expiration (sec.)
+|Saisissez dans ce champ la valeur de délai d`'expiration, exprimée en secondes.
+
+Si une valeur est saisie, les processus de Construction ou de Déploiement ANT en cours, seront interrompus après ce délai.
+De cette façon des processus de Construction ou de Déploiement qui "`bouclent sans fin`" sont interrompus.
+
+Si aucune valeur n`'est saisie dans ce champ, les processus de Construction ou de Déploiement ANT en cours ne seront jamais interrompus.
+|===
+
+. Après avoir complété les champs, cliquez sur le bouton __Créer__.
++
+Le nouvel Outil de Script ANT est ajouté à l`'__Aperçu
+des Outils de script ANT__ dans la partie inférieure de l`'écran.
++
+
+[NOTE]
+====
+Utilisez le bouton _Réinitialiser_ pour nettoyer les champs du panneau de création.
+====
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Outils de script>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===
+
+[[_globadm_scriptingtool_ant_overview]]
+=== Aperçu des Outils de script ANT 
+(((ANT ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu de tous les Outils de script définis sera affiché.
+
+. Spécifiez _ANT_ dans le champ _Type_ dans le panneau de recherche.
++
+image::GlobAdm-ScriptingTools-Overview-Ant.png[,1063,510] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+ . Vérifiez les informations dans l`'__Aperçu des Outils de script__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_ScriptingTools.adoc#_pcreateantscriptingtool,Créer un outil de script ANT>>
+
+. En fonction de vos droits d`'accès, les liens suivants peuvent être disponibles dans le panneau __Aperçu des Outils de script__: 
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15]
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un outil de script.
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition d`'un outil de script.
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique de toutes les opérations de création, de modification ou de suppression relatives à un Outil de script.
+|===
+
+[[_globadm_scriptingtool_ant_edit]]
+=== Modifier la définition d`'un outil de script ANT 
+(((ANT ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script ANT qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier l`'Outil de Script ANT sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-ANT-Edit.png[,993,670] 
+
+. Si nécessaire, modifier les champs dans le panneau __Modifier un Outil de Script ANT__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_ScriptingTools.adoc#_pcreateantscriptingtool,Créer un outil de script ANT>>.
++
+
+[NOTE]
+====
+Le panneau _Environnements connectés_ affiche les Environnements reliés à l`'Outil de Script sélectionné.
+====
+
+. Cliquez sur le bouton _Enregistrer_ pour sauvegarder vos modifications.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_scriptingtool_ant_delete]]
+=== Supprimer une définition d`'outil de script ANT 
+(((ANT ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script ANT qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer l`'Outil de Script ANT sélectionné.
++
+Si l`'Outil de Script n`'est pas associé à un Environnement de Construction ou de Déploiement, l`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-ANT-Delete.png[,895,290] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression de l`'Outil de Script ANT.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer l`'Outil de Script ANT.
++
+__Note: __Si l`'Outil de Script ANT est associé à un ou plusieurs Environnement(s) de construction ou de déploiement, l`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-ANT-Delete-Error.png[,905,571] 
++
+Avant de supprimer l`'Outil de Script ANT, vous devez assigner un autre Outil de Script à ce(s) Environnement(s).
+
+[[_globadm_scriptingtool_ant_history]]
+=== Afficher l`'historique d`'un outil de script ANT 
+(((ANT ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script ANT qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique de l`'Outil de script ANT__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Outils de script__.
+
+
+[[_sglobadm_scriptingtool_gradle]]
+== Outils de script Gradle 
+(((Outils de script ,Gradle))) 
+
+Gradle est un système d'automatisation source ouvert qui, en prenant comme point de départ les concepts Apache Ant et Apache Maven, introduit un langage dédié (DSL - Domain Specific Language) au lieu du format XML utilisé par Apache Maven pour déclarer la configuration du Projet.
+Si Gradle est installé sur une Machine associée à vos Environnements de Construction/Déploiement, IKAN ALM pourra interagir avec lui.
+À cet effet, vous devez définir l`'Outil de Script Gradle dans l`'application IKAN ALM et spécifier, lors de la création de l`'Environnement de Construction/Déploiement, quel outil Gradle doit être utilisé comme Outil de Script de Construction ou de Déploiement.
+
+Se référer aux sections suivantes pour des informations plus détaillées:
+
+* <<GlobAdm_ScriptingTools.adoc#_pcreategradlescriptingtool,Créer un outil de script Gradle>>
+* <<GlobAdm_ScriptingTools.adoc#_poverviewgradlescriptingtool,Aperçu des Outils de script Gradle>>
+* <<GlobAdm_ScriptingTools.adoc#_peditgradlescriptingtool,Modifier la définition d`'un outil de script Gradle>>
+* <<GlobAdm_ScriptingTools.adoc#_pdeletegradlescriptingtool,Supprimer une définition d`'outil de script Gradle>>
+* <<GlobAdm_ScriptingTools.adoc#_phistorygradlescriptingtool,Afficher l`'historique d`'un Outil de script Gradle>>
+
+[[_pcreategradlescriptingtool]]
+=== Créer un outil de script Gradle 
+(((Outils de script Gradle ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+====
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Créer__.
+
+. Dans le panneau de recherche, sélectionnez _Gradle_ à partir de la liste déroulante dans le champ __Type__.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-Gradle-Create.png[,855,410] 
+
+. Complétez les champs dans le panneau __Créer un Outil de script Gradle__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+|Sélectionnez le Type d'Outil de script que vous voulez définir.
+Ce champ est obligatoire. 
+
+Après avoir sélectionné le type, le panneau des _Détails_ approprié s'affichera en-dessous.
+
+|Nom
+|Saisissez dans ce champ le nom du nouvel Outil de Script Gradle.
+Ce champ est obligatoire. 
+
+|Description
+|Saisissez dans ce champ une description pour le nouvel Outil de Script Gradle.
+Ce champ est optionnel.
+|===
+
+. Saisissez les champs dans le panneau __Détails de l'outil de script Gradle__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Chemin de Gradle
+|Ce champ est obligatoire.
+
+Saisissez le chemin du fichier bat (gradle.bat-Windows) ou shell (par exemple, gradle - linux).
+
+Exemple d`'un déplacement en cours:
+
+``d:/javatools/gradle2.10/bin ``ou `/opt/javatools/gradle2.10/bin`
+
+|Java Home
+|Saisissez dans ce champ le chemin de Java (__JAVA_HOME__) pour lancer Gradle.
+Si vous ne saisissez pas de valeur dans ce champ, le _JAVA_HOME_ par défaut défini au niveau du Système sera utilisé pour lancer ANT. 
+
+Dans ce cas, le chemin de Java (__JAVA_HOME__) doit être défini comme une variable d`'environnement sur la Machine.
+
+|Options de Java VM
+|Saisissez dans ce champ les options de Java VM (Machine Virtuelle Java) utilisées pour lancer Gradle.
+Ce champ est optionnel.
+
+Exemple d`'un déplacement en cours:
+
+__-Xmx128M__: spécifie la taille maximale du pool d`'allocation de mémoire.
+
+Les options JVM pour Java 8 par exemple sont décrites ici:
+
+https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html[https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html]
+
+|Emplacement de l'Utilisateur Gradle 
+|Ce champ est optionnel.
+
+Saisissez le chemin vers l'emplacement de l'Utilisateur Gradle.
+Il s'agit de l'emplacement où (entre autres) le "dependency cache" de Gradle sera sauvegardé.
+
+Si vous ne saisissez pas de valeur dans ce champ, le _User
+Home_ par défaut sera utilisé.
+Ceci est particulièrement utile sous Linux où l'Utilisateur exécutant l'Agent n'a pas d'emplacement de l'Utilisateur.
+
+Exemple d`'un déplacement en cours:
+
+`/opt/gradle_user_home`
+
+_Note:_ Cette valeur sera spécifiée comme une option de ligne de commande (--gradle-user-home).
+
+|Options de ligne de commande
+|Dans ce champ, saisissiez les options de ligne de commande.
+Ce champ est optionnel.
+
+Les options de ligne de commande qui pourraient être fournies par défaut par IKAN ALM ne seront pas acceptées: .-g, --gradle-user-home, -q, --quiet, -i, --info,-d, --debug, -s, --stacktrace, -S, --full-stacktrace, -b, --build-file
+
+Exemples d'option (acceptées): -keep-going, or -noinput.
+
+|Construction
+|Indiquez dans ce champ si l`'Outil de Script peut être associé ou non à un Environnement de Construction et par conséquent si l`'Outil de Script peut être utilisé pour construire du code ou non.
+
+|Déploiement
+|Indiquez dans ce champ si l`'Outil de Script peut être associé ou non à un Environnement de Déploiement et si par conséquent l`'Outil de Script peut être utilisé pour déployer des constructions ou non.
+
+|Format du Journal
+|Par défaut, le fichier journal généré sera un fichier de texte.
+Ce format ne peut pas être modifié.
+
+|Niveau de suivi 
+a|Se référer à la section https://docs.gradle.org/current/userguide/logging.html[https://docs.gradle.org/current/userguide/logging.html] dans le Guide Utilisateur Gradle pour plus d'informations concernant le niveau de suivi et la trace de pile.
+
+Sélectionnez les options de suivi requises à partir du menu déroulant.
+Les options suivantes sont disponibles:
+
+* Aucun
++
+Aucune option de ligne de commande spécifique ne sera spécifiée pour le Niveau de suivi, résultant en un Niveau de suivi par défaut (normal) du Cycle de vie.
+Gradle affichera les messages d'information relatifs à la progression.
+* Arrière-plan
++
+Gradle n'affichera que les messages d'information importants pendant les actions de Construction et de Déploiement, c'est-à-dire un nombre de messages d'information inférieur au nombre par défaut.
++
+-q sera ajouté comme option de ligne de commande
+* Info
++
+Gradle affichera des messages d'information lors des actions de Construction et de Déploiement, c'est-à-dire un nombre de messages d'information supérieur au nombre par défaut.
++
+-i sera ajouté comme option de ligne de commande
+* Débogage
++
+Gradle affichera des messages d'information additionnels lors des actions de Construction et de Déploiement.
++
+-d sera ajouté comme option de ligne de commande
+
+|Option de Trace de pile
+a|Sélectionnez l'option de Trace de pile requise à partir du menu déroulant.
+Les options suivantes sont disponibles:
+
+* Aucune
++
+Aucune pile de trace ne sera affichée dans la console dans le cas d'une erreur de construction (par exemple, une erreur de compilation) Les piles de trace ne seront affichées qu'en cas d'exceptions internes.
+Si l'option "Débogage" est sélectionné dans le champ "Niveau de suivi", les piles de trace tronquées seront toujours affichées.
+* Tronquée
++
+Les piles de trace tronquées seront affichées.
+Nous recommandons cette option, plutôt que l'option "Complète". Les piles de trace complètes Groovy sont extrêmement détaillées (à cause des mécanismes d'invocation dynamiques sous-jacents). Pourtant, en général, elles ne contiennent pas d'informations pertinentes pour retrouver le problème rencontré dans votre code. 
++
+-s sera ajouté comme option de ligne de commande
+* Complète
++
+Les piles de trace complètes seront affichées.
++
+-S sera ajouté comme option de ligne de commande
+
+|Délai d'expiration (sec.)
+|Saisissez dans ce champ la valeur de délai d`'expiration, exprimée en secondes.
+
+Si une valeur est saisie, les processus de Construction ou de Déploiement Gradle en cours, seront interrompus après ce délai.
+De cette façon des processus de Construction ou de Déploiement qui "`bouclent sans fin`" sont interrompus.
+
+Si aucune valeur n`'est saisie dans ce champ, les processus de Construction ou de Déploiement Gradle en cours ne seront jamais interrompus.
+|===
+
+. Après avoir complété les champs, cliquez sur le bouton __Créer__.
++
+Le nouvel Outil de Script Gradle est ajouté à l`'__Aperçu
+des Outils de script Gradle__ dans la partie inférieure de l`'écran.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Outils de script>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===
+
+[[_poverviewgradlescriptingtool]]
+=== Aperçu des Outils de script Gradle 
+(((Gradle ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
+
+. Spécifiez _Gradle_ dans le champ _Type_ dans le panneau de recherche.
++
+image::GlobAdm-ScriptingTools-Overview-Gradle.png[,1073,315] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Outils de script__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_ScriptingTools.adoc#_poverviewgradlescriptingtool,Aperçu des Outils de script Gradle>>
+
+. En fonction de vos droits d`'accès, les liens suivants peuvent être disponibles dans le panneau __Aperçu des Outils de script Gradle__:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] __
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un outil de script.
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition d`'un outil de script.
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique de toutes les opérations de création, de modification ou de suppression relatives à un Outil de script.
+|===
+
+[[_peditgradlescriptingtool]]
+=== Modifier la définition d`'un outil de script Gradle 
+(((Outils de script Gradle ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script Gradle qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier l`'Outil de Script Gradle sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-Gradle-Edit.png[,835,511] 
+
+. Si nécessaire, modifiez les champs.
++
+Pour la description des champs, se référer à la section <<GlobAdm_ScriptingTools.adoc#_pcreategradlescriptingtool,Créer un outil de script Gradle>>.
++
+
+[NOTE]
+====
+Le panneau _Environnements connectés_ affiche les Environnements reliés à l`'Outil de Script sélectionné. 
+====
+
+. Cliquez sur le bouton _Sauvegarder_ pour sauvegarder vos modifications.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer vos modifications.
+
+[[_pdeletegradlescriptingtool]]
+=== Supprimer une définition d`'outil de script Gradle 
+(((Outils de script Gradle ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script Gradle qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer l`'Outil de script Gradle sélectionné. 
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-Gradle-Delete.png[,880,309] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression de l`'Outil de script.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer l`'Outil de script.
++
+__Note:__ Si l`'Outil de script Gradle est associé à un ou plusieurs Environnement(s) de construction ou de déploiement, l`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-Gradle-Delete-Error.png[,1049,577] 
++
+Avant de supprimer l`'Outil de script Gradle, vous devez assigner un autre Outil de script à ce(s) Environnement(s).
+
+[[_phistorygradlescriptingtool]]
+=== Afficher l`'historique d`'un Outil de script Gradle 
+(((Outils de script Gradle ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script Gradle qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique de l`'Outil de script Gradle__.
++
+Pour une description plus détaillée de l`'__Aperçu
+de l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Outils de script__.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Outils de script>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===
+
+[[_sglobadmin_scriptingtool_nant]]
+== Outils de script NANT 
+(((Outils de script ,NANT))) 
+
+NANT est un outil de construction .NET gratuit.
+En théorie, l`'outil ressemble à __make__, sans les défauts de __make__.
+Dans la pratique, il ressemble beaucoup à ANT.
+
+Si NANT est installé sur une Machine associée à vos Environnements de Construction/Déploiement, IKAN ALM pourra interagir avec lui.
+Pour cela, vous devez définir l`'Outil de script NANT dans l`'application IKAN ALM et, au moment de créer l`'Environnement de Construction ou de Déploiement, vous devez spécifier quel outil devra être utilisé comme Outil de script de Construction ou de Déploiement.
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<GlobAdm_ScriptingTools.adoc#_pcreatenantscriptingtool,Créer un outil de script NANT>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_overview,Aperçu des Outils de script NANT>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_edit,Modifier la définition d`'un outil de script NANT>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_delete,Supprimer une définition d`'outil de script NANT>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_history,Afficher l`'historique d`'un outil de script NANT>>
+
+[[_pcreatenantscriptingtool]]
+=== Créer un outil de script NANT 
+(((NANT ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+====
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Créer__.
+
+. Dans le panneau de recherche, sélectionnez _NANT_ à partir de la liste déroulante dans le champ __Type__.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-NANT-Create.png[,861,417] 
+
+. Complétez les champs dans le panneau __Créer un Outil de script NANT__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+|Sélectionnez le Type d'Outil de script que vous voulez définir.
+Ce champ est obligatoire.
+
+Après avoir sélectionné le type, le panneau des _Détails_ approprié s'affichera en-dessous.
+
+|Nom
+|Saisissez dans ce champ le nom du nouvel Outil de Script NANT.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouvel Outil de Script NANT.
+Ce champ est optionnel.
+|===
+
+. Saisissez les champs dans le panneau _Détails_ de l'outil de script NANT.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Chemin de NANT
+|Saisissez dans ce champ le chemin de l`'exécutable NANT (__NAnt.exe__). Ce champ est obligatoire.
+
+|Options de Commande
+|Dans ce champ, saisissiez les options de ligne de commande.
+Ce champ est optionnel.
+
+Les options de ligne de commande prévues par défaut par IKAN ALM, telles que -buildfile, -logfiles, -verbose, -debug, ... ne seront pas acceptées.
+
+Exemples d`'options: -keep-going ou -noinput.
+
+|Construction
+|Indiquez dans ce champ si l`'Outil de Script peut être associé ou non à un Environnement de Construction et par conséquent si l`'Outil de Script peut être utilisé pour construire du code ou non.
+
+|Déploiement
+|Indiquez dans ce champ si l`'Outil de Script peut être associé ou non à un Environnement de Déploiement et si par conséquent l`'Outil de Script peut être utilisé pour déployer des constructions ou non.
+
+|Format du Journal
+a|Sélectionnez le format du fichier journal généré par cet Outil de script NANT.
+Les options suivantes sont disponibles:
+
+* TXT: le fichier journal sera un simple fichier de texte
+* XML: le fichier journal sera un fichier XML
+
+Les fichiers txt seront plus petits et leur contenu peut être affiché pendant l'exécution de l'outil.
+
+L'affichage des fichiers journaux XML peut être personnalisé en fournissant des modèles XSL personnalisés.
+Cependant, les fichiers journaux XML sont plus grands et ne peuvent être affichés qu'après que l'Outil soit exécuté.
+
+|Arrière-plan
+|Indiquez si l`'option _Arrière-plan_ doit être activée ou non pour le nouvel Outil de Script NANT.
+
+Si l`'option est activée, NANT imprimera moins d`'informations que d`'habitude pendant les actions de Construction et de Déploiement.
+
+|Messages détaillés
+|Indiquez si l`'option _Messages
+détaillés_ doit être activée ou non pour le nouvel Outil de Script NANT.
+
+Si l`'option est activée, NANT imprimera des informations détaillées de débogage pendant les actions de Construction et de Déploiement.
+
+|Option débogage
+|Indiquez si l`'option de _Débogage_ doit être activée ou non pour le nouvel Outil de Script NANT.
+
+Si l`'option est activée, NANT imprimera des informations de débogage additionnelles pendant les actions de Construction et de Déploiement.
+
+|Délai d`'expiration (sec.)
+|Saisissez dans ce champ la valeur de délai d`'expiration, exprimée en secondes.
+
+Si une valeur est saisie, les processus de Construction ou de Déploiement NANT en cours, seront interrompus après ce délai.
+De cette façon des processus de Construction ou de Déploiement qui "`bouclent sans fin`" sont interrompus.
+
+Si aucune valeur n`'est saisie dans ce champ, les processus de Construction ou de Déploiement NANT en cours ne seront jamais interrompus.
+|===
+
+. Après avoir complété les champs, cliquez sur le bouton __Créer__.
++
+Le nouvel Outil de Script NANT est ajouté à l`'__Aperçu
+des Outils de script NANT__ dans la partie inférieure de l`'écran.
++
+
+[NOTE]
+====
+Utilisez le bouton _Réinitialiser_ pour nettoyer les champs du panneau de création.
+====
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Outils de script>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===
+
+[[_globadm_scriptingtool_nant_overview]]
+=== Aperçu des Outils de script NANT 
+(((NANT ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
+
+. Spécifiez _NANT_ dans le champ _Type_ dans le panneau de recherche.
++
+image::GlobAdm-ScriptingTools-Overview-Nant.png[,765,267] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Outils de script__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_overview,Aperçu des Outils de script NANT>>
+
+. En fonction de vos droits d`'accès, les liens suivants peuvent être disponibles dans le panneau _Aperçu des Outils de script NANT_
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un outil de script.
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition d`'un outil de script.
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique de toutes les opérations de création, de modification ou de suppression relatives à un Outil de script.
+|===
+
+[[_globadm_scriptingtool_nant_edit]]
+=== Modifier la définition d`'un outil de script NANT 
+(((NANT ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script NANT qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier l`'Outil de Script NANT sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-NANT-Edit.png[,947,546] 
+
+. Si nécessaire, modifier les champs dans le panneau __Modifier un Outil de Script NANT__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_ScriptingTools.adoc#_pcreatenantscriptingtool,Créer un outil de script NANT>>.
++
+
+[NOTE]
+====
+Le panneau _Environnements connectés_ affiche les Environnements reliés à l`'Outil de Script sélectionné.
+====
+
+. Cliquez sur le bouton _Enregistrer_ pour sauvegarder vos modifications.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_scriptingtool_nant_delete]]
+=== Supprimer une définition d`'outil de script NANT 
+(((NANT ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script NANT qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer l`'Outil de Script NANT sélectionné.
++
+Si l`'Outil de Script NANT n`'est pas associé à un Environnement de Construction ou de Déploiement, l`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-NANT-Delete.png[,630,311] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression de l`'outil de script.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer l`'Outil de Script NANT.
++
+__Note: __Si l`'Outil de Script NANT est associé à un ou plusieurs Environnement(s) de construction ou de déploiement, l`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-NANT-Delete-Error.png[,864,688] 
++
+Avant de supprimer l`'Outil de Script NANT, vous devez assigner un autre Outil de Script à ce(s) Environnement(s).
+
+[[_globadm_scriptingtool_nant_history]]
+=== Afficher l`'historique d`'un outil de script NANT 
+(((NANT ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script NANT qui vous intéressent.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique de l`'Outil de script NANT__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Outils de script__.
+
+
+[[_sglobadmin_scriptingtool_maven2]]
+== Outils de script Maven2 
+(((Outils de script ,Maven2))) 
+
+Maven2 est un Outil de Script utilisé pour construire et gérer des Projets basés sur Java.
+Son but principal est de permettre au développeur d`'englober complètement l`'effort de développement dans les délais les plus brefs.
+Si Maven2 est installé sur une Machine associée aux Environnements de Construction/Déploiement, IKAN ALM pourra interagir avec lui.
+
+A cet effet, vous devez définir l`'Outil de Script Maven2 dans l`'application IKAN ALM et spécifier, lors de la création de l`'Environnement de Construction/Déploiement, quel outil Maven2 doit être utilisé comme Outil de Script de Construction ou de Déploiement.
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<GlobAdm_ScriptingTools.adoc#_pcreatemaven2scriptingtool,Créer un outil de script Maven2>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_overview,Aperçu des Outils de script Maven2>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_edit,Modifier la définition d`'un outil de script Maven2>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_delete,Supprimer une définition d`'outil de script Maven2>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_history,Afficher l`'historique d`'un outil de script Maven2>>
+
+[[_pcreatemaven2scriptingtool]]
+=== Créer un outil de script Maven2 
+(((Maven2 ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+====
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Créer__.
+
+. Dans le panneau de recherche, sélectionnez _Maven2_ à partir de la liste déroulante dans le champ __Type__.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-Maven2-Create.png[,858,385] 
+
+. Complétez les champs dans le panneau __Créer un Outil de script Maven2__.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+|Sélectionnez le Type d'Outil de script que vous voulez définir.
+Ce champ est obligatoire.
+
+Après avoir sélectionné le type, le panneau des _Détails_ approprié s'affichera en-dessous.
+
+|Nom
+|Saisissez dans ce champ le nom du nouvel Outil de Script Maven2.
+Ce champ est obligatoire.
+
+|Description
+|Saisissez dans ce champ une description pour le nouvel Outil de Script Maven2.
+Ce champ est optionnel.
+|===
+
+. Saisissez les champs dans le panneau _Détails_ de l'outil de script Maven2.
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Chemin de script Maven
+|Saisissez dans ce champ le chemin du script de démarrage Maven2 sur la Machine Cible associée à l`'Environnement de Construction/Déploiement (script shell mvn ou fichier mvn2.bat). Ce champ est obligatoire.
+
+|Goals (phases)
+|Saisissez dans ce champ les objectifs et/ou phases par défaut de Maven2.
+Ce champ est obligatoire.
+
+Les objectifs et/ou phases doivent être séparés par un _espace_ et doivent être structurés selon le format suivant: ``[<goal(s)] [<phase(s)]``. 
+
+Par exemple, `clean
+dependency:copydependencies test`
+
+Les objectifs et/ou phases définis dans ce champ seront utilisés par défaut.
+Si nécessaire, ils peuvent être écrasés pour les Environnements de Construction ou de Déploiement différents.
+A cet effet, ajoutez un Paramètre de Construction ou de Déploiement "`alm.mvn2.goals`" ayant la valeur nécessaire.
+
+Se référer à <<ProjAdm_EnvParams.adoc#_environmentparams__create,Créer un Paramètre d`'Environnement>>.
+
+|Fichier paramètres
+|Saisissez dans ce champ le chemin alternatif vers le fichier contenant les Paramètres des utilisateurs de Maven2.
+Cette valeur correspond à l`'option de ligne de commande -s ou --settings.
+Ce champ est optionnel.
+
+Si le chemin n`'est pas saisi, le fichier Paramètres par défaut localisé à home-directory/.m2/settings.xml sera utilisé.
+
+Si nécessaire, ce fichier peut être écrasé pour les Environnements de Construction ou de Déploiement différents.
+A cet effet, ajoutez un Paramètre de Construction ou de Déploiement "`alm.mvn2.setting`" ayant la valeur nécessaire.
+
+Se référer à <<ProjAdm_EnvParams.adoc#_environmentparams__create,Créer un Paramètre d`'Environnement>>.
+
+|Profils activés
+|Saisissez la liste des Profils Activés.
+Il s`'agit d`'une liste de profils séparés par des virgules qui peuvent être activés.
+Cette liste correspond à l`'option de ligne de commande -P ou --activate-profiles de Maven2.
+Ce champ est optionnel.
+
+Les Profils Activés définis ici seront utilisés par défaut.
+Si nécessaire, ils pourront être écrasés pour les Environnements de Construction ou de Déploiement différents.
+A cet effet, ajoutez un Paramètre de Construction ou de Déploiement "`alm.mvn2.activate-profiles`" ayant la valeur nécessaire.
+
+Se référer à <<ProjAdm_EnvParams.adoc#_environmentparams__create,Créer un Paramètre d`'Environnement>>.
+
+|Options de ligne de commande
+|Saisissez les options de ligne de commande, séparées par un espace.
+Par exemple: l`'option "`-e`" affichera des informations plus détaillées sur les messages d`'erreur.
+Ce champ est optionnel.
+
+Notez que vous ne pouvez pas utiliser les options suivantes car elles sont déjà utilisées par IKAN ALM: "`-X`" ou "`--debug`" (Debug), "`-s`" ou "`--settings`" (Fichier Paramètres), "`-P`" ou "`--activate-profiles`" (Profils activés) et "`-B`" ou "`--batch-mode`".
+
+Les options de ligne de commande définies ici seront utilisées par défaut.
+Si nécessaire, elles pourront être écrasées pour les Environnements de Construction ou de Déploiement différents.
+À cet effet, ajoutez un Paramètre de Construction ou de Déploiement "`alm.mvn2.options`" ayant la valeur nécessaire.
+
+Se référer à <<ProjAdm_EnvParams.adoc#_environmentparams__create,Créer un Paramètre d`'Environnement>>.
+
+|Construction
+|Indiquez dans ce champ si l`'Outil de Script peut être associé ou non à un Environnement de Construction et par conséquent si l`'Outil de Script peut être utilisé pour construire du code ou non.
+
+|Déploiement
+|Indiquez dans ce champ si l`'Outil de Script peut être associé ou non à un Environnement de Déploiement et si par conséquent l`'Outil de Script peut être utilisé pour déployer des Constructions ou non.
+
+|Format du Journal
+a|Sélectionnez le format du fichier journal généré par cet Outil de script Maven2.
+Les options suivantes sont disponibles:
+
+* TXT: le fichier journal sera un simple fichier de texte
+* XML: le fichier journal sera un fichier XML
+
+Les fichiers txt seront plus petits et leur contenu peut être affiché pendant l'exécution de l'outil.
+
+L'affichage des fichiers journaux XML peut être personnalisé en fournissant des modèles XSL personnalisés.
+Cependant, les fichiers journaux XML sont plus grands et ne peuvent être affichés qu'après que l'Outil soit exécuté.
+
+|Débogage
+|Indiquez si l`'option de _Débogage_ doit être activée ou non pour le nouvel Outil de Script Maven2.
+Cette valeur correspond à l`'option de ligne de commande -X ou --debug de Maven2.
+
+Si l`'option est activée, Maven2 imprimera des informations de débogage additionnelles pendant les actions de Construction et de Déploiement.
+
+|Délai d`'expiration (sec.)
+|Saisissez dans ce champ la valeur de délai d`'expiration, exprimée en secondes.
+
+Si une valeur est saisie, les processus de Construction ou de Déploiement Maven2 en cours, seront interrompus après ce délai.
+De cette façon des processus de Construction ou de Déploiement qui "`bouclent sans fin`" sont interrompus.
+
+Si aucune valeur n`'est saisie dans ce champ, les processus de Construction ou de Déploiement Maven2 en cours ne seront jamais interrompus.
+|===
+
+. Après avoir complété les champs, cliquez sur le bouton __Créer__.
++
+Le nouvel Outil de Script Maven2 est ajouté à l`'__Aperçu
+des Outils de script Maven2__ dans la partie inférieure de l`'écran.
++
+
+[NOTE]
+====
+Utilisez le bouton _Réinitialiser_ pour nettoyer les champs du panneau de création.
+====
+
+. Écrasez les Paramètres par défaut défini dans l`'Outil de Script Maven2
++
+Vous pouvez écraser les Paramètres par défaut définis dans l`'Outil de Script Maven2.
++
+Si un paramètre "`alm.mvn2.goals`" est spécifié pour un Environnement spécifique, il sera utilisé à la place des goals par défaut initialement définis dans l`'Outil de Script Maven2.
++
+Le même mécanisme s`'applique pour les Paramètres suivants: Fichier Paramètres (alm.mvn2.setting), Profils activés (alm.mvn2.activate-profiles) et Options de ligne de commande (alm.mvn2.options).
++
+Lors de la création d`'un Paramètre de Construction ou de Déploiement, vous pouvez également positionner la valeur de l`'option "`Modifiable`" à __Oui__.
+Dans ce cas, vous pourrez modifier la valeur des Paramètres au moment de la création de la Requête de Niveau.
+Voir la section <<ProjAdm_EnvParams.adoc#_environmentparams_edit,Modifier un Paramètre d`'environnement>>.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Outils de script>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Environnements de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Environnements de déploiement>>
+
+|===
+
+[[_globadm_scriptingtool_maven2_overview]]
+=== Aperçu des Outils de script Maven2 
+(((Gradle ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
+
+. Spécifiez _Maven2_ dans le champ _Type_ dans le panneau de recherche.
++
+image::GlobAdm-ScriptingTools-Overview-maven2.png[,962,258] 
++
+Si nécessaire, utilisez les autres critères de recherche pour limiter le nombre d'objets affichés dans l'aperçu.
++
+Les options suivantes sont disponibles:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans le panneau __Aperçu des Paramètres__.
++
+Pour une description détaillée, se référer à la section <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_overview,Aperçu des Outils de script Maven2>>.
+
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles dans le panneau _Aperçu des Outils de script Maven2_:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d'Administrateur global.
+Elle permet de modifier la définition d'un outil de script.
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d'Administrateur global.
+Elle permet de supprimer la définition d'un outil de script.
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'Historique de toutes les opérations de création, de mise à jour ou de suppression relatives à un Outil de script.
+|===
+
+[[_globadm_scriptingtool_maven2_edit]]
+=== Modifier la définition d`'un outil de script Maven2 
+(((Maven2 ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script Maven2 qui vous intéressent.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier l`'Outil de Script Maven2 sélectionné.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-Maven2-Edit.png[,988,592] 
+
+. Si nécessaire, modifier les champs dans le panneau __Modifier un Outil de Script Maven2__.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_ScriptingTools.adoc#_pcreatemaven2scriptingtool,Créer un outil de script Maven2>>.
++
+
+[NOTE]
+====
+Le panneau _Environnements connectés_ affiche les Environnements reliés à l`'Outil de Script sélectionné.
+====
+
+. Cliquez sur le bouton _Enregistrer_ pour sauvegarder vos modifications.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_scriptingtool_maven2_delete]]
+=== Supprimer une définition d`'outil de script Maven2 
+(((Maven2 ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script Maven2 qui vous intéressent.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer l`'Outil de Script Maven2 sélectionné.
++
+Si l`'Outil de Script Maven2 n`'est pas associé à un Environnement de Construction ou de Déploiement, l`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-Maven2-Delete.png[,714,284] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression de l`'outil de script.
++
+Vous pouvez également cliquer sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer l`'Outil de Script.
++
+__Note: __Si l`'Outil de Script Maven2 est associé à un ou plusieurs Environnement(s) de construction ou de déploiement, l`'écran suivant s`'affiche:
++
+image::GlobAdm-ScriptingTools-Maven2-Delete-Error.png[,850,499] 
++
+Avant de supprimer l`'Outil de Script Maven2, vous devez assigner un autre Outil de Script à ce(s) Environnement(s).
+
+[[_globadm_scriptingtool_maven2_history]]
+=== Afficher l`'historique d`'un outil de script Maven2 
+(((Maven2 ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Outils de script > Aperçu__.
++
+L'aperçu des tous les Outils de script définis s'affiche.
++
+Utilisez les critères de recherche dans le panneau de recherche pour afficher les Outils de script Maven2 qui vous intéressent.
+
+. Cliquez sur l'icône image:icons/history.gif[,15,15] _Historique_ pour afficher l`'__Aperçu de l`'Historique de l`'Outil de script Maven2__.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Outils de script__.

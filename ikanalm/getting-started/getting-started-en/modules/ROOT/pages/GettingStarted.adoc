@@ -1,0 +1,708 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+:description: Getting Started Guide (English)
+:revnumber: v5.8
+:revdate: 01.01.2018
+
+= Getting Started Guide
+
+== Purpose
+
+This _Getting Started Guide_ explains how to set up a very basic Project, called __Docgen__, in IKAN ALM, using Build and Deploy tasks.
+It contains an introduction to the most important IKAN ALM concepts.
+The target audience are ALM engineers who want to know how to configure the IKAN ALM Global Administration and how to create and manage a Project that builds sources and deploys them to a Test or Production server.
+
+We assume that you have some basic DevOps or Application Lifecycle Management knowledge, including working with a versioning system and creating (build or deploy) scripts.
+We also assume that you already had a look at the IKAN ALM demo installation (note that it is possible to configure the _Docgen_ Project starting from the Demo installation) and have grasped the basic stuff, such as logging on and navigating through the Global Administration, Project Administration and Desktop sections within IKAN ALM.
+
+During the Build process, the sample _Docgen_ Project will convert a standardized XML document into a PDF and an HTML file and, next, deploy them to a web server. 
+
+We will use the http://ant.apache.org/[
+ Apache ANT] scripting tool and the http://tomcat.apache.org/[
+ Apache Tomcat] web server, but no prior knowledge of either tool is necessary since the samples are kept very basic.
+
+The source XML file is very simple and follows the http://docbook.org/[
+ docbook] format.
+You will find it in the _GettingStarted.zip_ file under ``/init_svn/sources/docbook.xml``.
+
+
+image::docbookxml.png[,682,630] 
+
+
+== Prerequisites
+
+=== IKAN ALM Installation
+
+* A correctly installed IKAN ALM Server 5.8, with the web application preferably being deployed to Apache Tomcat. The Demo project contains a Test level, whereby results will be deployed to the Tomcat web server running the IKAN ALM web application.
+* A correctly installed IKAN ALM Agent 5.8, with access to an http://ant.apache.org/[ Apache ANT] scripting tool (minimum version 1.8.2). The recommended way is to install that IKAN ALM Agent on the same Machine as the IKAN ALM Server since it has an integrated and configured ANT definition (<<_subversion_and_project>>). If that Agent on the Server machine does not fit into your ALM architecture, you may always disable it later on by removing the service (Windows) or daemon process (Linux/Unix).
+* Tomcat version 7 or higher is required.
+
+
+[NOTE]
+====
+
+The IKAN ALM Demo installation will also fulfill the following requirements: the IKAN ALM Server and Agent will be installed and the Ant scripting tool and Subversion repository will be installed and configured.
+On Windows, it also includes the Subversion server; on Linux, you have to install Subversion separately.
+====
+
+=== Subversion Versioning System
+
+This _Getting Started Guide_ includes the creation of a Subversion repository.
+In order to connect to this repository, you need Subversion version 1.6 or higher installed on the IKAN ALM Server.
+The http://subversion.apache.org/packages.html[
+ Apache Subversion website] provides links for downloading a binary subversion package for your system.
+
+For example, on a Windows operating system you can easily install the Win32Svn package.
+If you download the current (November 2017) https://sourceforge.net/projects/win32svn/files/1.8.16/apache22/svn-win32-1.8.16.zip/download[
+ svn-win32-1.8.16.zip] archive, the installation is as easy as an unzip action.
+
+The installation on Linux is mostly done through a Package manager.
+For example, on Suse Linux, you can do this using zypper:
+
+[source]
+----
+$ zypper install subversion$zypper install subversion-server
+----
+
+For more information on how to work with Subversion, refer to the _Subversion Quick Start Guide_ at http://svnbook.red-bean.com/en/1.7/svn.intro.html[
+ http://svnbook.red-bean.com/en/1.7/svn.intro.html].
+
+=== IKAN ALM Installation Information
+
+The following additional information is needed to complete the procedures explained in this __Getting Started Guide__:
+
+* _ALM_HOME_
++
+This is the installation folder of the IKAN ALM Server.
+You can derive this location from the Local File Copy Locations under __Global Administration > System Settings__.
++
+For example: if the Work Copy Location is set to ``E:/ALM/system/workCopy``, ALM_HOME = ``E:/ALM``.
+* _ANT_HOME_
++
+Normally Ant is installed in the ALM_HOME folder.
+If not, the exact location can be found in the field _Java ANT
+Classpath_ under __Global Administration > Scripting
+Tools > Overview ANT Scripting Tools__.
++
+For example: if the Java ANT Classpath is set to E:/ALM/ant/lib/ant-launcher.jar; ..., ANT_HOME=E:/ALM/ant.
+* _JAVA_HOME_
++
+Location of the Java Runtime on the IKAN ALM Server.
++
+For example: the location provided during the installation procedure or the JAVA_HOME location of the ANT tool as mentioned above.
+* _TOMCAT_HOME_
++
+Root location of the Apache Tomcat web server that is hosting the IKAN ALM web application.
++
+If you are using the Demo version, the root location will be ``ALM_HOME/appServer``.
++
+For example: the location provided during the installation of IKAN ALM.
+* ALM URL Elements
++
+__tomcathost__ and __tomcatport__: the ALM webapplication is accessible through a URL which consists of serveral elements: ``http://tomcathost:tomcatport/alm.``You can retrieve the elements from the IKAN ALM URL which you can find on the _Mail_ tab under __Global Administration
+> System Settings__.
++
+For example `http://localhost:9080/alm` with tomcathost=localhost and tomcatport=8080. 
++
+__Note:__ 9080 is the standard port defined for the Demo installation, 8080 is the standard __tomcatport__.
+* For the deployment of our application to the web server, we need some information about the Tomcat setup, so that we can stop and start it. Check the documentation on the http://tomcat.apache.org/tomcat-8.5-doc/index.html[ Tomcat website], for more information on how to do that.
+
+
+[NOTE]
+====
+
+If you did not install IKAN ALM yourself, you should ask your system manager to provide you with the correct installation paths and variables.
+====
+[[_subversion_and_project]]
+== Global Administration: Defining Subversion and Creating a Project
+
+So far, so good.
+Now, let's dive into IKAN ALM.
+
+First, we will:
+
+* verify what is already preconfigured in the Global Administration section,
+* initialize and connect to the Subversion repository,
+* and create our first project.
+
+
+=== Global Administration: Initial Overview
+
+Let's start with verifying what is already set up in the IKAN ALM Global Administration after a clean installation.
+We will describe it shortly without going into detail as, after all, we are eager to create our own project.
+If however, you want to know more about a specific topic, have a look at the respective chapters in the _Global Administration_ part of the __IKAN
+ALM User Guide__.
+
+Log on to IKAN ALM with user _global_ and password __global__, and select _Global
+Administration_ from the Main Menu.
+Via this starting place (or via one of the submenus) you can verify the following settings:
+
+. Under __System > System Settings, __you will see the _Build Archive Location_ on the IKAN ALM Server, where all the Build Artifacts (e.g., PDFs, deployable archives, ...) will be stored after a successful build, so that they can be deployed later in the lifecycle. It is a local path on the server, something like ``C:/ALM/system/buildArchive``, or ``/opt/alm/system/buildArchive``.
+. Under __Machines > Overview, __you will find the definition of the IKAN ALM Server. You should also have an Agent installed on this Machine, and both Agent and Server processes should be running.
++
+Verify this by clicking the image:icons/installed_phases.gif[,15,15] _ Installed
+Phases_ link on the overview: you will be forwarded to the _Installed Phases Overview_ which displays a column for the __Current Server Activity __and one for the __Current Agent Activity, __which both should have a green image:icons/status_green.gif[,15,15]  icon as status.
+If the icon is red image:icons/status_red.gif[,15,15] , verify the topic on how to _Start the IKAN ALM Agent/Server_ in the respective _Agent_ or __Server
+Installation Guide__.
+. Under _Scripting Tools > Overview ANT Scripting Tools,_ an _ANT 1.9.3_ scripting tool is defined pointing to the installed Ant version on the IKAN ALM server. We will use that Ant scripting tool to generate a PDF and an HTML file from the docbook XML, and to deploy those results to a web server.
+
+
+After having verified those Global Administration settings, we are now almost ready to create a Project and start a Build.
+Almost ... as we of course need some sources to build.
+We will retrieve them from a Subversion repository that we will create and define in the next section.
+
+=== Subversion Setup and Definition
+
+The archive delivered with this _Getting Started
+Guide_ contains scripts and sources to create a Subversion repository to which we will connect using the file protocol.
+As specified in the requirements, we assume you have Subversion installed on the IKAN ALM server.
+Extract the _GettingStarted.zip_ in a temporary directory in the IKAN ALM installation folder.
+
+Adapt the JAVA_HOME and ANT_HOME in the file _init_svn/init_svn_repo.cmd_ (Windows)__ or
+init_svn/init_svn_repo.cmd/sh__ (Linux). Point the JAVA_HOME to the one used for IKAN ALM, and use ANT that is installed with the IKAN ALM Server under ALM_HOME/ant.
+
+Sample file:
+
+[source]
+----
+@attrib *.* -R /S /DREM script that calls the ANT script init_svn_repo.xml :REM 	- deletes and re-creates a Subversion repositoryREM 	- imports the sources of the Web Test Projects into the
+Subversion repositoryset JAVA_HOME=D:\java\jdk1.8set ANT_HOME=E:\ALM\ant@echo JAVA_HOME = %JAVA_HOME%@SET CLASSPATH=%ANT_HOME%/lib/ant-launcher.jar@SET ANTCMD=%JAVA_HOME%/bin/java -Dant.home=%ANT_HOME% -Xmx256m
+-cp %CLASSPATH% org.apache.tools.ant.launch.Launcher%ANTCMD% -f init_svn_repo.xml
+----
+
+Adapt the repository location (path and svn url, make sure that you have write access) and the svn bin path in the __init_svn/init_svn_repo.properties __file.
+
+Sample properties file:
+
+[source]
+----
+# properties file used by init_svn_repo.xml# if true, the repository is on the local machine and will
+be deleted and re-createdisLocalRepository=true# path to the Subversion binariessvn.bin.path=D:/vcrs/server/svn/1.8.5/bin# local path to the Subversion repositorysvn.repo.local.path=E:/ALM/GettingStarted/Docgen/repository# remote URL of the Subversion repositorysvn.repo.remote.URL=file:///E:/ALM/GettingStarted/Docgen/repository
+----
+
+[NOTE]
+====
+Do not use backward slashes.
+====
+
+Remember the __svn.bin.path __and__ svn.repo.remote.URL__ properties as we will need them when defining the Subversion repository in IKAN ALM. 
+
+Run _init_svn_repo.cmd_ (Windows) _or
+init_svn_repo.sh_ (Linux):
+
+
+image::RunCmd_Result.png[,698,725] 
+
+Now that the repository has been created, we need to define it in IKAN ALM.
+In the _Global Administration_ context, select __Version Control Repositories > Create Repository__.
+
+The following screen is displayed:
+
+
+image::Subversion_CreateRepository_01.png[,624,279] 
+
+Select _Subversion_ from the drop-down list in the _Type_ field.
+The _Connection
+Details_ panel will be displayed.
+
+Set the C__ommand Path__ and _Repository
+URL_ to what was set in the properties file (svn.bin.path and svn.repo.remote.url). The _User ID_ and _Password_ are not needed since we connect using a file URL.
+Set the _Repository
+Layout_ to __Project-oriented__, and the _Time-Out_ to _30_ seconds.
+
+
+image::Subversion_CreateRepository_02.png[,579,634] 
+
+
+[NOTE]
+====
+You can first click the _Test Connection_ button before you _Create_ the repository.
+====
+
+=== Creating the Docgen Project
+
+Now we can start with the actual creation of our Release-based Project.
+
+In the _Global Administration_ context, select _Project > Create Project_ and fill out the fields as required.
+
+Set the Project Type to Release-based.
+Specify the SVN repository containing the _Docgen_ project and its project name in the VCR (Docgen). Choose _ANT_ for the Build and Deploy Tool Type.
+Together with the Project, a Head Project Stream is created that points to the trunk in the _Docgen_ project in Subversion.
+Provide a Build Prefix, make sure to set the Build Type to _Full Build_ and to set Accept Forced Build to __Yes__.
+
+[NOTE]
+====
+The name of the project in the SVN repository is case-sensitive!
+====
+
+
+image::CreateProject_Docgen.png[,1038,597] 
+
+
+[NOTE]
+====
+You can first use the C__heck Project Name
+in the VCR__ button before you _Create_ the Project.
+====
+
+== Setting up the Build Level: Generating HTML and PDF
+
+Let's do some work in our new Project, so that we can "`build`" the documentation!
+
+=== Creating the Build Level
+
+Under _Lifecycles > Overview_ you will notice that the BASE Lifecycle has been created which is linked to the HEAD Project Stream.
+Select the _Edit_ link next to this Lifecycle.
+
+To be able to build, we first have to create a first step (Level) in the Lifecycle by selecting the _Create
+Build Level_ link underneath the empty table of _Defined
+Levels._
+
+
+image::CreateLevel_BUILD.png[,473,445] 
+
+Most fields speak for themselves (let's neglect the Notification, Schedule and Requester fields for now). Activating the _Debug_ option makes it easier to track stuff in the beginning, especially when a Build fails.
+Once everything runs smoothly, set it to __No__.
+Together with the Level, the Phases linked to the Level are created.
+Those Phases will be executed when a Request will be executed on the IKAN ALM Server (see later).
+
+You can check those Phases by selecting the image:icons/edit_phases.gif[,15,15] _ Edit
+Phases_ link underneath the Build Level under _Levels
+> Overview._
+
+=== Creating the Build Environment
+
+A Level is a conceptual step in the Lifecycle.
+As we need a concrete Machine to execute our Build on, we need to link a Build Environment to the Level.
+
+Select _Create_ on the _Build
+Environments_ submenu.
+
+
+image::CreateEnvironment_build.png[,1030,268] 
+
+The Build will be executed by the IKAN ALM Agent on the _Machine_ that we will select, and more precisely by the selected (1.9.3) __Ant
+S__cripting Tool.
+The defined _build.xml_ is an Ant script that you can inspect in the sources under `/init_svn/source` and that is imported in the Subversion trunk of the _Docgen_ project.
+The script is not very complex: it will execute four Ant targets: (1) generate an HTML file and (2) generate a PDF file based on the docbook.xml, (3) copy the resulting files to the target location so that they will end up in the build result and finally (4) generate a deployable web archive in the target that we can deploy (see later).
+
+The sources will be transferred to a subdirectory of the __Source
+Location__.
+The result must be placed in the __Target Location__.
+Note that, normally, those locations will be cleaned up after the Build, unless you activate the _Debug_ option, what we do for the same reason as explained for the Build Level.
+
+[NOTE]
+====
+The source and target location are preferably located in the ALM_HOME installation folder.
+You are free to specify the location of those folders.
+The structure will be automatically created.
+
+In our example we use ``E:/ALM/env/docgen/BUILD/build/source``.
+
+`E:/ALM` is the ALM_HOME installation directory followed by the `env` directory containing our projects, `docgen` (the project directory), `BUILD` (the level), `build` (the environment) and finally the `source` or `target` directory.
+
+In order to distinguish Levels from Environments, we use uppercase for the level and lowercase for the environment directories. 
+====
+
+Set _Downloadable Build_ to __Yes__, so that we can download and check the build result.
+
+Just as for the Level, the Phases linked to the Environment are created together with the Build Environment.
+They will be executed when the Build of a Level Request will be executed on the IKAN ALM Agent (see later). You can check those Phases by selecting the image:icons/edit_phases.gif[,15,15] _ Edit
+Phases_ link next to the Build Environment under __Build
+Environments > Overview__.
+
+=== Auditing the Project
+
+Everything is ready to start a Build, except that the Level was locked when we created it: first we need to verify if our definitions are consistent.
+Do so by selecting _Audit Project_ on the Main Menu.
+
+On the overview, you will see most of the different objects we created.
+
+The information screen for the _Docgen_ Project displays the Build Archive of the Head Project Stream (where our future Builds will be stored) and the Build Level containing one Build Environment on the IKAN ALM Agent, where the build.xml script will be executed by an Ant scripting tool.
+
+Click the _Unlock_ link, and we are ready to build!
+
+=== Creating the Build Level Request
+
+First we will add the Head Project Stream of the _Docgen_ Project to our Desktop.
+Go to your Desktop and click the _Add
+to Desktop_ button at the bottom of the screen.
+In the pop-up window, find the Head Project Stream (1) of the _Docgen_ project, select it and click __Add to Desktop__. 
+
+
+image::Desktop.png[,1013,158] 
+
+Click the image:icons/requestPlus.gif[,15,15] _ Request
+icon_ in the _Action_ column of our Project Stream.
+
+
+image::Create_BuildLevelRequest.png[,648,843] 
+
+Click the _Show Additional
+Info_ link. 
+
+Notice that the Build Environment is linked to the Level.
+Provide a meaningful description, do not modify the Indicative VCR Tag that will be created in Subversion when the Build is successful, click the _Show Modifications_ link and have a look at all the sources we have imported in `Docgen/trunk` (our docbook.xml, the build and deploy script, ...) when creating the Subversion repository.
+
+Finally, select the _Create_ button.
+
+=== Verifying the Build Level Request
+
+You are forwarded to the _Desktop_ on which the Request you created is displayed.
+Click through on its _link_ (``H_1_b1`` if you started on a clean installation) to see what has happened during the Build.
+
+==== Level Request Detail
+
+The header of the _Level Request Detail_ screen displays information on the status of the Level Request.
+The different tab pages underneath the header display additional information such as the status of each of the Phases (on the _Phase Logs_ tab). 
+
+This is how it should look when the Request is finished:
+
+
+image::LevelRequestDetailedOverview.png[,970,593] 
+
+Select the _Results_ tab page.
+This page shows the result of the Build executed by the IKAN ALM Agent on the Build Environment.
+
+
+image::LevelRequestDetailedOverview_Results.png[,929,519] 
+
+Click the _Download Build Result_ link to download and check the Build Result.
+
+
+image::Docgen_BUILD_zip.png[,1043,752] 
+
+Open _docbook.pdf/index.html_ to check if the conversion to PDF/HTML was successful.
+Also, have a look at the docgen.war that was created.
+That web archive will be used later on.
+
+==== Build Phases Log
+
+The different Build Phases form the workflow of a build.
+They are automatically created together with the Build environment.
+
+Select the _Phase Logs_ tab page.
+The grey lines on the overview represent the different Phases, the white lines represent the Build or Deploy actions.
+
+
+image::LevelRequestDetailedOverview_PhaseLogs_01.png[,945,454] 
+
+Click the Build name (in our example: __Build
+1 on machine ikan028__) to expand the information panel displaying the Phase details.
+
+
+image::LevelRequestDetailedOverview_ShowDetails.png[,904,336] 
+
+Next, you can click one of the Phases to immediately jump to its __Phase Log__.
+
+The _Execute Script_ Phase Log shows the result of the build.xml script executed by the Ant scripting tool.
+
+
+image::Log_ExecuteScript.png[,1051,646] 
+
+
+== Setting up the Test Level: Deploy to the Web Server
+
+In the previous step, we have created the web archive __docgen.war__.
+Now, we want to deploy that to the web server which is running IKAN ALM, so that testers may have a look at it.
+Therefore we need an extra step in our lifecycle, namely a Test Level.
+
+=== Creating the Test Level
+
+In the Project Administration section, edit the _Docgen_ Project.
+
+Go to __Lifecycles > Overview__, edit the BASE Lifecycle and select the _Create Test Level_ link at the bottom.
+
+
+image::CreateLevel_TEST.png[,514,503] 
+
+Creating a Test Level is pretty much the same as creating a Build Level.
+There are some extra fields for notification which we will neglect for the time being.
+The new Level will automatically be positioned after the Build level.
+
+=== Creating the Deploy Environment
+
+Just as for the Build Level, the Test Level is not more than a conceptual step in the Lifecycle.
+As we require a concrete Machine to deploy our Build result to, we need to link a Deploy Environment to the Level.
+
+Select _Create_ on the Deploy__ Environments__ submenu.
+
+
+image::CreateEnvironment_deploy.png[,1057,267] 
+
+This is also very similar to creating a Build Environment.
+
+The deploy will be executed by the IKAN ALM Agent on the selected Machine, and more precisely by the selected (1.9.3) ANT scripting Tool.
+
+We indicate that we deploy the result of our Build Environment by linking it to our Deploy Environment.
+The defined deploy.xml is an Ant script that you can inspect in the sources under `/init_svn/source` and that is also imported in the Subversion trunk of the _Docgen_ project. 
+
+The script is not very complex: there's a special target for a rollback which we neglect for now; the real action is in the deploy target where the web archive docgen.war will be copied to an appropriate directory (webapps) under the Tomcat target, and we will use the http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html[
+Tomcat manager app] to "`reload`" our web archive. 
+
+In the source location the Build result previously created will be extracted.
+The target location must point to our Tomcat web server (TOMCAT_HOME). That's where the deploy.xml script will transfer the build result (docgen.war) to.
+
+[NOTE]
+====
+If you installed the IKAN ALM Demo, this location will be similar to ``ALMDemoHOME/appServer``.
+====
+
+Don't bother with the details on this, it just puts the generated HTML and PDF files on the web server so that we can browse to them!
+
+Together with the Deploy Environment, Phases are also linked to it.
+They will be executed when the Deploy of a Level Request will be executed on the IKAN ALM Agent.
+You can check those Phases by selecting the image:icons/edit_phases.gif[,15,15] _ Edit
+Phases_ icon next to the Deploy Environment in the _Deploy
+Environments >Overview._
+
+=== Creating the Deploy Parameters for Authenticationon the Web Server Manager Application
+
+If you already checked the deploy script, you perhaps noticed that some parameters need to be provided to the reload task applied to the Tomcat manager application: a URL, and a user and password for authentication.
+
+The Tomcat manager application needs to be correctly configured so that authentication by a user with manager-rights is possible.
+Basically, this comes down to configuring _TOMCAT_HOME/conf/tomcat-users.xml_ as follows:
+
+[source]
+----
+  <role rolename="manager-script"/>  <user name="tomcat" password="tomcat" roles="tomcat,admin,manager-script"
+/>  <user name="role1"  password="tomcat" roles="role1,admin,manager-script"
+ />  <user name="both"   password="tomcat" roles="tomcat,role1,admin,manager-script" />
+----
+
+We need to restart Tomcat to have those settings applied.
+This can be done by running the shutdown and startup scripts (when Tomcat runs in a prompt/shell) or by stopping and starting the Tomcat service/daemon (when Tomcat runs as a Windows Service/Unix daemon). Check the http://tomcat.apache.org/tomcat-8.5-doc/setup.html[
+Tomcat documentation] for more information.
+
+In order to provide the parameters to the script when it is executed, we will define them on our Deploy Environment.
+
+Select __Deploy Environments > Deploy Parameters__.
+
+On the __Parameters Overview__, click the image:icons/icon_createparameter.png[,15,15] _ Create
+Parameter_ icon in front of the _TST_Tomcat_ Deploy Environment.
+
+
+image::CreateDeployParameter.png[,807,586] 
+
+We will first create its URL in the tomcat.manager.url Parameter as a mandatory parameter.
+It is using the same machine and port as the URL for the IKAN ALM web application (e.g., http://localhost:9080) followed by ``/manager/text``.
+
+Next, create the mandatory Parameters tomcat.manager.username (value __tomcat__) and tomcat.manager.password (value __tomcat__), and make the password a secure parameter (note that you have to enter the password twice).
+
+
+image::CreateDeployParameter_Overview.png[,1048,253] 
+
+
+=== Auditing the Project
+
+Just as for the Build Level, we need to unlock the TST_Tomcat Level.
+
+Select _Audit Project_ from the menu and click the _Unlock_ button after you verified the modified Project setup which now contains the Test Level with the TST_Tomcat Deploy Environment.
+
+=== Creating the Deliver Level Request
+
+Just like when we created the Build Level Request, we create the Deploy Level Request via the Desktop.
+
+
+image::Desktop_Deliver.png[,1012,224] 
+
+Select the image:icons/icon_deliverBuild.png[,15,15] _ Deliver_ icon in the _Action_ Column of the Test Level to create the Deliver Level Request.
+
+
+image::Create_DeliverLevelRequest.png[,977,726] 
+
+Provide a meaningful description, select the Build that was created earlier on our Build Level, and verify the Tomcat manager Parameters that we created on our Deploy Environment.
+If everything is OK, click the _Create_ button.
+
+=== Verifying the Deliver Level Request
+
+==== Level Request Detail
+
+The Detailed Overview for the Deploy Level Request is similar to the one for the Build Level Request.
+The differences are to be found in the Phases.
+If you expand the information panels for the Retrieve Code, Build and Tag Code Phases, you will notice that nothing happened since there is no Build Environment linked to it.
+
+Note that the Deploy ended in warning.
+That is due to the fact that the _Debug_ option is still set for the Level.
+
+
+image::Deliver_LevelRequestDetailedOverview.png[,1053,631] 
+
+
+==== Deploy Phases log
+
+The different Deploy Phases form the workflow of a Deploy.
+They are automatically created together with the Deploy environment.
+
+Select the _Phase Logs_ tab page.
+The grey lines on the overview represent the different Phases, the white lines represent the Build or Deploy actions.
+
+
+image::Deliver_LevelRequestDetailedOverview_Phaselogs_01.png[,918,446] 
+
+Click the Deploy name (in our example: __Deploy
+1 on machine ikan028__) to expand the information panel displaying the Phase details.
+
+
+image::Deliver_LevelRequestDetailedOverview_Phaselogs_02.png[,913,266] 
+
+The most important Phase is the _Execute Script_ Phase log where we can find the result of the deploy.xml script executed by Ant.
+
+Click the _Execute Script_ Phase to jump to its __Phase Log__.
+
+
+image::Deliver_LevelRequestDetailedOverview_ShowDetails.png[,1055,603] 
+
+Check the final result on http://__tomcat_host:tomcatport__/docgen, e.g., ``http://localhost:8080/docgen``.
+
+
+image::Result_HTML.png[,1005,668] 
+
+Also, _http://tomcat_host:tomcatport/docgen/docbook.pdf_ should open the PDF file we verified earlier in the downloaded Build result.
+
+== Phases
+
+The work on Levels and Environments is done using Phases. 
+
+Phases represent specific tasks or actions that must be performed by the system.
+IKAN ALM comes with a set of "`Core`" Phases, but you can also create your own Custom Phases, which is even more interesting.
+
+The main advantage of using Phases is that they allow you to customize your project's workflow with reusable building blocks.
+On top of that, they can be shared and distributed onto local and remote machines.
+
+=== Global Administration: Importing Phases
+
+For our example, we created two Phases that take over the work done by the build.xml script: _Generate Doc_ based on the docbook.xml and __Generate a simple war__.
+You can find them in the extracted _Getting Started.zip_ under ``/phases``.
+
+Let's first import the Phases via __Global Administration
+> Phases > Import__.
+
+Click the _Select File_ button and pick the file associated with the _Generate Doc_ phase (com.ikanalm.generate.doc-1.0.0.jar).
+
+
+image::Phases_01_ImportPhase.png[,897,445] 
+
+
+
+image::Phases_02_ImportPhaseParametersOverview.png[,1006,417] 
+
+After the import, you will see all the information concerning the phase, the files contained in it (the generatedoc.xml, which is an Ant script, and the depending ant4docbook library), and the parameters, where sourcefile, targetfile.name and targetfile.type are specific for the Generate Doc phase.
+
+Repeat the process for the _Generate Simple War_ Phase.
+
+=== Build Environment: Inserting and Configuring Phases
+
+In the _Docgen_ Project Administration section, select __Build Environments > Overview__.
+
+Next, select the image:icons/edit_phases.gif[,15,15] _ Edit
+Phases_ icon, next to the "`build`" Build Environment.
+
+Since the Phases will replace our script, you may remove the _Verify Build Script_ and _Execute
+Script_ Phases, by clicking the image:icons/remove.gif[,15,15] _ Remove_ icon on the __Phases Overview__.
+
+Now we can insert the required Phases.
+Click the _Insert
+Phase_ link underneath the __Phases Overview__.
+
+The _Generate Doc_ Phase will generate the HTML:
+
+
+image::Phases_03_InsertGenerateDocPhase.png[,1047,705] 
+
+Select it from the Available Phases, set Fail on Error to _Yes_ and insert it after _Transport
+Source_ Phase (on position 2). When an error happens, we go immediately to the cleanup, by selecting the _Cleanup
+Source_ Phase in the Next Phase on Error.
+As we will use the Generate Doc Phase twice, first to generate the HTLM file and next to generate the PDF file, we can add a label (in our example: __Generate
+Doc (HTML)__) to distinguish the two.
+
+[NOTE]
+====
+On the __Phases Overview__, the label is displayed as a tooltip when moving the mouse pointer over the eye icon in the last column.
+====
+
+Repeat the steps to insert the Generate Doc Phase once again.
+Insert it after the previous: this will generate the PDF file.
+Use the same settings for Fail on Error (Yes) and Next Phase on Error (Cleanup Source) and add a label (for example: __Generate
+Doc (PDF)__).
+
+Insert the Generate Simple War Phase after the second Generate Doc Phase.
+
+Again, use the same settings for Fail on Error (Yes) and Next Phase on Error (Cleanup Source). As we only use this Phase once, adding a Label is not really necessary.
+
+This will be the result in the __Phases Overview__:
+
+
+image::Phases_04_Result_PhasesOverview.png[,774,357] 
+
+For the Phases to work correctly, we have to adapt some of the specific parameters.
+
+Click the image:icons/icon_viewparameters.png[,15,15] _ View
+Parameters_ icon in front of the Inserted Phases.
+
+First we will adapt the parameters for the _Generate
+Doc_ Phase (the first one for generating the HTML file): click the image:icons/edit.gif[,15,15] _ Edit_ link next to targetfile.name and set its value to index.
+The target.type is defaulted to _html_ and must not be changed.
+With those settings, the Phase will convert the source docbook.xml into an index.html file.
+
+
+image::Phases_05_Result_PhasesParameters_generatedoc1.png[,790,237] 
+
+Adapt the second _Generate Doc_ phase for generating the PDF file: targetfile.name = docbook, targetfile.type=pdf, which will result in the generation of a _docbook.pdf_ file.
+
+
+image::Phases_06_Result_PhasesParameters_generatedoc2.png[,792,237] 
+
+Now, adapt the _Generate Simple War_ Phase: most of the parameters are fine, just set the appname parameter to __docgen__.
+With those settings a docgen.war will be generated, containing all files in the source css directory, and the HTML and PDF file that will be generated by the previous phases.
+
+
+image::Phases_07_Result_PhasesParameters_generatesimplewar.png[,768,231] 
+
+Our Phases are now inserted in the workflow of the Build Environment with the correct Parameter settings.
+Let's see whether we get the same Build result.
+
+=== Creating and verifying the Build Level Request
+
+Go to your _Desktop_ and create a Build Level Request.
+
+Set the Level Request description to something like: "`Test imported Phases`".
+
+Verify the Build Level Request by clicking its link on the _Desktop_ (see earlier): check the Level Request details, the Build File content and the Build Phases Log.
+
+
+image::Phases_08_VerifyBuildLevelRequest.png[,906,383] 
+
+Generate Doc (HTML): click the _Phase Parameters_ link to display the used parameters.
+
+
+image::Phases_09_Log_PhaseParameters_generatedochtml.png[,901,486] 
+
+Generate Simple War:
+
+
+image::Phases_10_Log_PhaseParameters_generatesimplewar.png[,896,406] 
+
+
+== Additional Information
+
+In this _Getting Started Guide_ you learned how to
+
+* define a Subversion repository,
+* create a Project,
+* set up the different Build and Test Levels,
+* execute requests to build and deploy the Project
+* and, last but not least, simplify your workflow by adding and customizing IKAN ALM Phases.
+
+
+For more in-depth information, refer to the following types of documentation:
+
+* _IKAN ALM User Guide_
+* _How to Guide - Using and Developing Custom Phases in IKAN ALM_
+* _IKAN ALM Installation Guides_
+
+
+You can find those documents on our website http://www.ikanalm.com/infocenter/[
+ www.ikanalm.com].
+
+If you still did not find all the answers to your questions, do not hesitate to contact us at ``info@ikanalm.com``.

@@ -1,0 +1,6 @@
+name: getting-started-en
+title: Getting Started Guide
+version: '5.8'
+start_page: ROOT:GettingStarted.adoc
+nav:
+- modules/ROOT/nav.adoc  

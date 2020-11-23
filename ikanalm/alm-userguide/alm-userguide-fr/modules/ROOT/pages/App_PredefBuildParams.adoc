@@ -1,0 +1,170 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_predefinedbuildparameters]]
+= Paramètres de construction prédéfinis 
+(((Paramètres prédéfinis)))  (((Paramètres prédéfinis ,Construction)))  (((Paramètres de construction ,Paramètres de construction prédéfinis))) 
+
+Le tableau suivant offre un aperçu des Paramètres de construction prédéfinis:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Paramètre
+| Description
+
+|alm.build.environmentName
+|Ce Paramètre donne le nom de l'Environnement de construction sur lequel sera exécuté le script de construction.
+
+|alm.build.filename
+|Ce Paramètre donne le nom du fichier de construction qui sera sauvegardé dans les Archives de construction. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+|alm.build.machineName
+|Ce Paramètre donne le nom de la Machine sur laquelle sera exécuté le script de construction.
+
+|alm.build.number
+|Ce Paramètre donne le numéro de construction unique.
+Il s`'agit d`'un numéro séquentiel incrémenté par IKAN ALM lors de la création d`'une Requête de Niveau de construction.
+
+|alm.build.oid
+|Ce Paramètre donne l`'Identifiant Unique de la Construction en cours.
+Cet Identifiant sera utilisé pour enregistrer l`'information de construction dans la base de données.
+
+|alm.build.startDateTime
+a|Ce Paramètre donne la date et l`'heure d`'exécution de la Construction (c`'est-à-dire le moment où le script de construction sera exécuté).
+
+Le format utilisé est date.heure.
+Le format de la date est celui utilisé par le serveur hébergeant IKAN ALM:
+
+* _AAAA/MM/JJ_ pour l`'Europe
+* _MM/JJ/AAAA_ pour les Etats-Unis
+
+|alm.levelRequest.actionType
+a|Ce Paramètre donne le Type d`'action de Requête de Niveau.
+Les Types d`'action possibles sont:
+
+* Scheduled Build (Construction planifiée)
+* Forced Build (Construction forcée)
+* Requested Build (Construction demandée)
+* Deliver Build (Construction délivrée)
+* Rollback Build (Construction restaurée)
+* Dependency Build (Dépendance de construction)
+
+|alm.levelRequest.buildType
+a|Ce Paramètre donne le Type de Construction pour ce Type de Requête de Niveau.
+Les types possibles sont:
+
+* Full Build (Construction complète)
+* Partial Build (Construction partielle)
+* Production-based Partial Build (Construction partielle basée sur production)
+* Tag-based Build (Construction partielle basée sur version balisée)
+
+|alm.levelRequest.levelName
+|Ce Paramètre donne le nom du Niveau sur lequel la Construction est exécutée.
+
+|alm.levelRequest.oid
+|Ce Paramètre donne l`'Identifiant Unique de la Requête de Niveau en cours.
+
+|alm.levelRequest.requester
+|Uniquement disponible s'il y a un Utilisateur Demandeur.
+
+Ce paramètre donne le nom du Demandeur.
+
+|alm.levelRequest.startDateTime
+a|Ce Paramètre donne la date et l`'heure d`'exécution (START) de la Requête de Niveau en cours. 
+
+Le format utilisé est date.heure.
+Le format de la date est celui utilisé par le serveur hébergeant IKAN ALM:
+
+* _AAAA/MM/JJ_ pour l`'Europe
+* _MM/JJ/AAAA_ pour les Etats-Unis
+
+|alm.levelRequest.vcrTag
+|Ce Paramètre donne la Balise utilisée lors de la Construction en cours pour baliser les Sources dans le RCV.
+
+|alm.package.oid
+|Uniquement disponible dans le cas d'un Paquet.
+
+Ce Paramètre donne l`'Identifiant Unique du Paquet.
+
+|alm.previous.build.filename
+|Ce Paramètre donne le nom du dernier fichier de construction correctement compressé, c`'est-à-dire le résultat de la Construction précédente.
+
+Par exemple: _DEMOCVS_B_b_1_test_b2_CONTBUILD.zip_
+
+Il s`'agit ici du dernier fichier de construction pour le Projet DEMOCVS.
+
+|alm.previous.build.number
+|Ce Paramètre donne le numéro de construction de la précédente Construction correctement achevée sur ce Niveau.
+
+|alm.previous.levelRequest.vcrTag
+|Ce Paramètre donne la Balise RCV de la Requête de Niveau précédente sur ce Niveau.
+
+|alm.project.buildToolTypeName
+a|Ce Paramètre donne le Type d`'Outil de Déploiement.
+Les valeurs possibles sont:
+
+* ANT
+* GRADLE
+* NANT
+* MAVEN2
+
+|alm.project.deployToolTypeName
+a|Ce Paramètre donne le Type d`'Outil de Déploiement.
+Les valeurs possibles sont:
+
+* ANT
+* GRADLE
+* NANT
+* MAVEN2
+
+|alm.project.description
+|Ce Paramètre donne la description du Projet IKAN ALM.
+
+|alm.project.name
+|Ce Paramètre donne la dénomination du Projet IKAN ALM.
+Cette dénomination peut être différente de la dénomination du Projet dans le RCV.
+
+|alm.package.name
+|Ce Paramètre n`'est disponible que pour les Projets de type "`Paquets`". Il donne le nom du Paquet associé à la Requête de Niveau.
+
+|alm.project.vcrName
+|Ce Paramètre donne la dénomination du RCV (telle qu`'elle a été définie dans la partie Administration Globale) auquel le Projet est associé.
+
+|alm.project.vcrProjectName
+|Ce Paramètre donne la dénomination du Projet telle qu`'elle a été définie dans le RCV.
+Cette dénomination peut être différente de la dénomination du Projet en IKAN ALM.
+
+|alm.projectStream.buildPrefix
+|Ce Paramètre donne le préfixe de construction tel qu`'il a été défini pour la Branche.
+
+|alm.projectStream.buildSuffix
+|Ce Paramètre donne le suffixe de construction tel qu`'il a été défini pour la Branche (pas d`'entrée pour la Branche Principale).
+
+|alm.projectStream.description
+|Ce Paramètre donne la description définie pour la Branche.
+
+|alm.projectStream.type
+a|Ce Paramètre donne le Type de Branche:
+
+* H=Branche Principale
+* B=Branche Secondaire
+
+|alm.projectStream.vcrBranchId
+|Ce Paramètre donne l`'Identifiant de la Branche dans le RCV, définie dans la Branche IKAN ALM dans le cas d`'une Branche Secondaire.
+
+|Source
+|Ce Paramètre donne la dénomination de l`'emplacement Source telle que définie pour l`'Environnement de Construction actuel.
+A cette dénomination seront ajoutés le numéro _alm.build.oid_ et la dénomination du Projet dans le RCV (__alm.project.vcrProjectName__).
+
+|Sourceroot
+|Ce Paramètre donne la dénomination de l`'emplacement Source telle que définie pour l`'Environnement de Construction actuel.
+A cette dénomination sera ajouté le numéro _alm.build.oid._
+
+Cette propriété ne sera établie que si le Projet en cours dépend d`'un autre projet.
+Le répertoire mentionné dans cette propriété contiendra toutes les Sources du projet-parent.
+
+|target
+|Ce Paramètre donne la dénomination de l`'emplacement Cible telle que définie pour l`'Environnement de Construction actuel.
+A cette dénomination sera ajouté le numéro __alm.build.oid____$$.$$__
+|===
+

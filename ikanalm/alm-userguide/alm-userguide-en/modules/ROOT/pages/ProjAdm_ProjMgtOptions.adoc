@@ -1,0 +1,97 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_projadm_projmgtoptions]]
+= Project Administration Options 
+(((Project Administration ,Project Management Options)))  (((Project Management Options))) 
+
+Once you have selected a Project from the Projects Overview, the Project Administration options become available.
+The available options depend on your access rights.
+
+For each of the Project Administration options (except for _History Log_ and __Audit
+Project__), the following submenu options are available: _Create_ and __Overview__.
+
+To avoid repeating the same information in several places, all procedures for creating, editing and deleting elements will be described in detail for each _Create_ submenu option.
+References will be made to this description for the other submenu options.
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Submenu option
+| Description
+
+|_[Project Name]_
+|The first option on the Project Administration submenu refers to the name of the selected Project or to the Project to which the selected Project Stream belongs.
+
+Select this option to return to the _Project
+Info_ screen.
+
+|History Log
+|Select this option to view the History Log of the selected Project. <<ProjAdm_HistoryLog.adoc#_projadm_historylog,History Log>>
+
+|Project Stream
+a|This drop-down menu contains two options:
+
+* _Create Branch_
++
+Select this option to create a new Branch for this Project. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Creating a Branch Project Stream>>
+* _Overview_
++
+Select this option to switch to the _Project
+Streams_ screen. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstreams,Project Streams>>
+
+|Lifecycles
+a|This drop-down menu contains the following options:
+
+* _Create_
++
+Select this option to create a new Lifecycle. <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_createlifecycle,Creating a Lifecycle>>
+* Overview
++
+Select this option to switch to the _Lifecycles
+Overview_ screen. <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_screen,The Lifecycles Overview Screen>>
+
+|Levels
+a|This drop-down menu contains the following options:
+
+* _Create Build Level_
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>>
+* _Create Test Level_
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>>
+* _Create Production Level_
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>>
+* _Overview_
++
+<<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
+
+|Build Environments
+a|This drop-down menu contains the following options:
+
+* _Create_
++
+Select this option to create a new Build Environment for the selected Project. <<ProjAdm_BuildEnv.adoc#_pcreatebuildenvironment,Creating a Build Environment>>
+* _Overview_
++
+Select this option to switch to the Build Environment Overview for the selected Project. <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
+* _Build Parameters_
++
+Select this option to manage Build parameters for the selected Project. <<ProjAdm_EnvParams.adoc#_projadm_environmentparameters,Environment Parameters>>
+
+|Deploy Environments
+a|This drop-down menu contains the following options:
+
+* _Create_
++
+Select this option to create a new Deploy Environment for the selected Project. <<ProjAdm_DeployEnv.adoc#_pcreatedeployenvironment,Creating a Deploy Environment>>
+* _Overview_
++
+Select this option to switch to the Deploy Environment Overview for the selected Project. <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironmentsoverview,The Deploy Environments Overview Screen>>
+* _Deploy Parameters_
++
+Select this option to manage Deploy parameters for the selected Project. <<ProjAdm_EnvParams.adoc#_projadm_environmentparameters,Environment Parameters>>
+
+|Audit Project
+|Select this option to switch to audit the selected Project. <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,Auditing Projects>>
+|===

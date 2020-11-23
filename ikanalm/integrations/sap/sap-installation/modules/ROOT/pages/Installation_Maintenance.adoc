@@ -1,0 +1,203 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+:description: SAP Intergration Installation Guide
+:revnumber: v1.0
+:revdate: 01.05.2012
+
+= SAP Integration Installation and Maintenance Guide
+
+== JAVA Part
+
+[[_java_prerequisites]]
+=== Prerequisites
+
+* Place all JAR (Java ARchive) files listed in the section <<_java_jars>> in a folder located on the same machine as where IKAN ALM is installed.
+* Install Java JRE 1.5 (or newer).
+* Install SVN Server.
+* Install Ant.
+* Install _IKAN_Alm_Webservices.war_ on the same web application server as where IKAN ALM is installed.
+
+
+[[_java_jars]]
+=== Necessary JARs
+
+[source]
+----
+almAbapTasks.jar
+ant-contrib-1.0b3.jar
+com.sap.exception.facade.jar
+logging.jar
+SAPEclipsePlugins.jar
+sapj2eenginedeploy.jar
+sapjco3.jar
+sapxmltoolkit.jar
+tc~di~build~antfacade_api.jar
+c~di~build~buildwrapper_api.jar
+tc~di~build~dcmanager_api.jar
+tc~di~build~dcmanager_core.jar
+tc~di~build~pluginhandler_api.jar
+tc~di~build~pluginhandler_core.jar
+tc~di~build~utility_api.jar
+tc~di~complib_api.jar
+tc~di~complib_core.jar
+----
+
+[[_java_ant]]
+=== Apache Ant
+
+_Ant Library_ allows you to use and execute Ant scripts.
+This is necessary to build and deploy objects to SAP. 
+
+We recommend you to use the latest version.
+To extend Ant`'s functionality, we also use __ant-contrib-1.0__. 
+
+[[_java_jco]]
+=== SAP JCo
+
+SAP Java Connector (SAP JCo) is a middleware component that enables the development of SAP-compatible components and applications in Java.
+SAP JCo supports communication with the SAP Server in both directions: inbound calls (Java calls ABAP) and outbound calls (ABAP calls Java). Sap JCo library (sapjco3.dll) must be placed in a location where it can be found by Java VM, which will run the Ant task. 
+
+[NOTE]
+====
+You must add a VM parameter to point to the dll file "`-Djava.library.path=<path to native libraries>`".
+====
+
+[[_java_webservices]]
+=== WEB services
+
+The web services project _IKAN_Alm_Webservices.war_ contains services needed by ABAP to communicate with SVN.
+It must be installed on a Web Application Server. 
+
+The main requirement is that the SVN trunk can be reached from the machine on which the Web Application Server is installed.
+
+== ABAP Part 
+
+This document describes how to install the IKAN ALM ABAP Add-on.
+
+* <<_baaeibca>>
+* <<_baahihec>>
+
+
+[[_baaeibca]]
+=== Prerequisites
+
+* Working SAP system (SAP Solution manager, SAP ERP, SAP CRM, SAP IDES, etc.)
+* SAP Basis 700
+* The minimum SPAM (SAP Patch Manager) Level must be 0039
+* IKAN ALM Add-on latest release: 127_700
+* A valid maintenance certificate
+* SAP recommends that you log on in either English or German, when using the SAP Add-On Installation Tool.
+
+
+[[_baahihec]]
+=== Installation Procedure
+
+[NOTE]
+====
+Once the SAP Add-on is installed, it cannot be removed from the system.
+It can only be upgraded!
+
+If you have any problems, refer to the SAP Note: 822380 for "`Known Problems with Add-On Install/Upgr`".
+====
+
+
+. Log on to the SAP system with client "`000`"
+. In the transaction field, enter the transaction ``SAINT``.
+. Navigate to _Installation Package -> Load Packages -> From Application Server_
++
+A screen similar to this one will be displayed:
++
+image::image001.png[,556,483] 
++
+. Navigate to the folder indicated (in this example: ``\\SOLMAN\sapmnt\trans\EPS\in``) and copy the SAP IKAN ALM Add-on installation file to this location.
++
+
+[NOTE]
+====
+The latest version of the file is __SMI0020616703_0000035.PAT__.
+====
++
+image::image002.png[,555,419] 
++
+. Next, click the _Start_ button.
++
+The following screen is displayed:
++
+image::image003.png[,617,500] 
++
+The _IKANALM_ Add-on release 127_700 should be displayed in the list.
+. Select the IKANALM add-on and click the _Continue_ button.
+. Click the _Continue_ button once again.
+. Click the _Execute_ button.
++
+The installation will start.
++
+image::image004.png[,593,364] 
+. When the import is completed successfully, the file is displayed in green.
++
+image::image005.png[,602,489] 
++
+. If you want to run the program with IKAN ALM, and not only with the SVN repository, you must add the value "`X`" in /IKANALM/CUST in "`tcode`" sm30.
++
+image::image006.jpg[,518,264] 
++
+. Run the program `/IKANALM/GLO_USER` and add the path to the IKAN ALM Web server (e.g., "`http://YourServer:8080/alm/`").
++
+
+[NOTE]
+====
+Do not forget to add the necessary credentials for logging on to the ALM system.
+====
++
+image::image007.jpg[,470,218] 
++
+. Finally, create a "`logical port`". 
++
+
+.. Call transaction ``LPCONFIG``.
++
+Enter the name of the proxy class and the logical port.
++
+If applicable, select the _Default Logical Port_ checkbox.
+If another port is already defined as the default for this proxy class, this setting will be overwritten and the new port is set as default.
++
+Use the following settings to configure both ports:
+
+* For the SVN Session Commands:
++
+``Proxy Class : /IKANALM/CO_WS_SVNSESSION_COMM``
++
+``Logical Port : /IKANALM/CO_WS_SVNSESSION_COMM``
+* For the SVN Session Manager:
++
+``Proxy Class : /IKANALM/CO_WS_SVNSESSION_MANA``
++
+``Logical Port : /IKANALM/CO_WS_SVNSESSION_MANA``
+.. On the _Call Parameters_ tab, add the URL for the IKAN ALM web services.
++
+In the first case (when creating a logical port for "`SVN Session Commands`"), the URL must be as follows:
++
+``http://<servername>:<serverport>/IKAN_Alm_WebServices/services/SVNSessionCommands?wsdl``
++
+where you need to replace `<server name>` with your server name, and `<server port>` with the port you have configured the server to work on.
++
+In the second case (when creating a logical port for the "`SVN Session Manager`"), the URL string must be as follows: 
++
+``http://<servername>:<serverport>/IKAN_Alm_WebServices/services/SVNSessionManager?wsdl``
++
+The URL is case-sensitive.
+You can copy it as  is and replace `<server
+name>` and ``<server port>``.
++
+image::image008.jpg[,611,359] 
++
+
+[NOTE]
+====
+When you go through these steps, please login with client "`001`" or something different from "`000`"
+
+Next, go to transaction `se80` and search for package ``/IKANALM/IAAF``.
+If you find it, everything is fine and you are ready to go.
+
+Go to transaction `/n/IKANALM/COMMIT` and start using our ALM solution. 
+====

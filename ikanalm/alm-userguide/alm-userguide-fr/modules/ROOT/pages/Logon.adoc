@@ -1,0 +1,186 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+= Procédures de connexion et de déconnexion
+
+IKAN ALM utilise l`'interface JAAS pour l`'authentification du Nom Utilisateur/Mot de passe via le Système de Sécurité installé dans votre entreprise.
+Les Utilisateurs et les Groupes d`'utilisateurs sont ainsi gérés dans un Système de Sécurité externe à IKAN ALM, bien que l`'administrateur global puisse également définir des Utilisateurs et des Groupes d`'utilisateurs dans un fichier de configuration (par exemple, pour des petites entreprises ou pour démonstrations). Il en résulte que les Utilisateurs se connecteront à IKAN ALM via un Nom Utilisateur et Mot de Passe issus du Système de Sécurité externe tel que: Active Directory ou LDAP.
+
+Chaque fois qu`'un Utilisateur essaie de se connecter, les Groupes d`'utilisateurs associés à cet Utilisateur sont synchronisés.
+Il y a deux types de Groupes d`'utilisateurs: Externes et Internes.
+Lors de la connexion, les Groupes d`'utilisateurs externes sont synchronisés automatiquement tandis que les Groupes d`'utilisateurs internes restent intacts.
+Pour plus d`'informations, se référer à la section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,Groupes d`'utilisateurs>>.
+
+Un Utilisateur pourra se connecter avec succès que s`'il ne dépasse pas les restrictions imposées par la licence IKAN ALM.
+
+* Si un Utilisateur est défini comme __Utilisateur réservé__, il pourra toujours se connecter. Pour plus d`'informations concernant la définition d`'un Utilisateur réservé, se référer à la section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Utilisateurs et Groupes d`'utilisateurs Utilisateurs>>.
+* Si un Utilisateur n`'est pas défini comme un __Utilisateur réservé__, il est considéré comme étant un __Utilisateur flottant __et il ne pourra se connecter que si le nombre actuel d`'Utilisateurs flottants connectés est inférieur au nombre d`'Utilisateurs flottants défini dans la licence IKAN ALM.
+
+
+Se référer aux sections suivantes pour une description plus détaillée:
+
+* <<Logon.adoc#_ploggingin,Connexion à IKAN ALM>>
+* <<Logon.adoc#_ploggingout,Déconnexion d`'IKAN ALM>>
+* <<Logon.adoc#_desktop_errormessages,Messages d`'erreur>>
+* <<Logon.adoc#_desktop_warningmessages,Messages d`'avertissement>>
+
+[[_ploggingin]]
+== Connexion à IKAN ALM
+(((IKAN ALM ,Connexion à IKAN ALM)))  (((Connexion à IKAN ALM))) 
+
+. Ouvrez une session de votre navigateur et introduisez l`'URL de connexion pour IKAN ALM.
++
+Votre Administrateur IKAN ALM pourra vous donner l`'URL exacte.
++
+Cet URL est spécifié dans la section _Courrier_ dans l'écran _Paramètres système_. <<GlobAdm_System.adoc#_ssystemsettings_tabmail,Courrier>>
++
+La fenêtre de _Connexion_ s`'affiche:
++
+image::Logon.png[,478,257] 
++
+
+[NOTE]
+====
+Il est utile de sauvegarder un lien vers cet URL dans le répertoire des Favoris ou des marque-pages.
+====
+. Introduisez votre code Utilisateur IKAN ALM et votre Mot de passe qui vous ont été fournis par votre Administrateur IKAN ALM. Ensuite cliquez sur le bouton __Se connecter__.
++
+Votre Bureau personnel s`'affiche:
++
+image::Desktop-DesktopOverview.png[,859,384] 
++
+Pour une description détaillée de la gestion des éléments affichés dans le Bureau, se référer à la section <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Administrer son bureau>>.
++
+
+[NOTE]
+====
+Si vous vous connectez à IKAN ALM pour la première fois, vous devez saisir vos Paramètres personnels.
+Les champs _Nom
+utilisateur_ et _Adresse de Courrier_ doivent être obligatoirement remplis.
+Pour plus d`'informations, se référer à la section <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Paramètres personnels>>.
+====
+
+[[_ploggingout]]
+== Déconnexion d`'IKAN ALM 
+(((IKAN ALM ,Déconnexion de SCM4ALL)))  (((Déconnexion de SCM4ALL))) 
+
+. Dans le Menu Principal, à droite, sélectionnez _Déconnexion_ à partir du menu déroulant des Paramètres Utilisateur.
++
+image::Logout.png[,901,115] 
++
+La fenêtre suivante s`'affiche:
++
+image::Logon-Logout.png[,536,333] 
++
+. Vous pouvez maintenant établir une nouvelle connexion à IKAN ALM ou fermer votre fenêtre de navigateur.
++
+
+[NOTE]
+====
+Les Utilisateurs ayant des droits d'Administration globale trouveront cette option d'installation sur l'écran __À propos de__.
+Pour accéder à cette option, sélectionnez _À propos de_ à partir du menu déroulant _Aide_ à droite dans le Menu Principal.
+====
+
+
+[[_cjhbjaja]]
+== Installer une Nouvelle Licence 
+(((Licence ,Installer)))  (((IKAN ALM ,Installer une nouvelle licence))) 
+
+Si, lors de la connexion à IKAN ALM, aucune licence valide n`'est trouvée, un erreur de message s`'affiche et le lien _Installer
+une nouvelle licence_ sera disponible.
+
+[NOTE]
+====
+Cette option d`'installation est également disponible sur l`'écran __À propos de__.
+====
+. Cliquez sur le lien __Installer une nouvelle licence__.
++
+La fenêtre suivante s`'affiche:
++
+image::Desktop-InstallLicense.png[,477,246] 
++
+. Sélectionnez le fichier de licence (alm_license.lic) en utilisant le bouton __Parcourir__.
++
+Votre Administrateur IKAN ALM pourra vous donner le nom exact du fichier et l`'endroit où il se trouve.
+. Cliquez sur le bouton __Submit__.
++
+Si la licence est acceptée, la fenêtre suivante s`'affiche:
++
+image::Desktop-LicenseSubmitted-Success.png[,475,256] 
++
+Si la licence n`'est pas acceptée, le message d`'erreur suivant s`'affiche:
++
+image::Desktop-LicenseNotAccepted.png[,477,261] 
++
+Il s`'agira probablement d`'un fichier de licence corrompu (ou d`'un fichier qui ne contient pas de licence IKAN ALM) ou d`'un fichier de licence contenant une licence expirée.
+Contactez votre Administrateur IKAN ALM ou votre vendeur IKAN ALM pour obtenir un nouveau fichier de licence.
++
+. Maintenant vous pouvez vous connecter à IKAN ALM.
++
+<<Logon.adoc#_ploggingin,Connexion à IKAN ALM>>
+
+
+[[_desktop_errormessages]]
+== Messages d`'erreur
+
+Si une erreur se produit lors de la connexion à IKAN ALM, un des messages d`'erreur suivants peut s`'afficher.
+Référez-vous au tableau ci-dessous pour trouver la solution adéquate:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Message d`'erreur
+| Solution
+
+|`Votre licence n`'est pas valide`
+|Aucune licence IKAN ALM n`'est installée.
+Installez une licence suivant les instructions décrites dans la section <<Logon.adoc#_cjhbjaja,Installer une Nouvelle Licence>>.
+
+|`Votre licence a expiré`
+|La licence IKAN ALM a expiré.
+
+Contactez votre vendeur IKAN ALM pour obtenir une nouvelle licence.
+
+|``Le nombre maximum d`'Utilisateurs flottants
+connectés (x) est atteint``.
+
+x= le nombre d`'Utilisateurs flottants spécifié dans votre licence
+a|* Attendez et ré-essayez jusqu`'au moment où un des Utilisateurs flottants connectés se sera déconnecté d`'IKAN ALM
++
+ou
+* Contactez votre vendeur IKAN ALM pour étendre le nombre total d`'Utilisateurs flottants spécifié dans la licence.
+
+|``Il y a plus d`'Utilisateurs réservés actifs
+(x) dans la base de données que dans la licence (y)``.
+
+x = le nombre d`'Utilisateurs réservés spécifié dans IKAN ALM
+
+y= le nombre d`'Utilisateurs réservés spécifié dans la licence
+|Le nombre d`'Utilisateurs réservés définis dans IKAN ALM dépasse le nombre d`'Utilisateurs réservés permis dans la licence.
+Contactez votre vendeur IKAN ALM.
+
+|``Il y a plus de machines définies (x) dans
+la base de données que dans la licence (y)``.
+
+x = le nombre de machines définies dans IKAN ALM
+
+y= le nombre de machines nommées définies dans la licence
+|Le nombre de machines définies dans IKAN ALM dépasse le nombre de machines nommées permis dans la licence.
+Contactez votre vendeur IKAN ALM.
+|===
+
+[[_desktop_warningmessages]]
+== Messages d`'avertissement
+
+Lors de la connexion à IKAN ALM, un des messages d`'avertissement suivants peut s`'afficher.
+Référez-vous au tableau ci-dessous pour trouver la solution adéquate:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Message d`'avertissement
+| Solution
+
+|``Votre licence expirera dans (x) jour(s)``.
+x= entre 14 et 0 jours
+|Votre licence IKAN ALM expirera bientôt.
+Contactez votre vendeur IKAN ALM.
+|===

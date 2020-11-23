@@ -1,0 +1,985 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+:description: Demo Installation Guide for Linux (French)
+:revnumber: v5.8
+:revdate: 01.10.2016
+
+= Guide d'installation du demo (Linux)
+
+== Introduction
+
+Beaucoup d'organisations IT utilisent des outils pour gérer le développement de leurs applications.
+Les outils utilisés dépendent de la taille de l'équipe de développement ou de la complexité des applications à développer.
+La plupart d'entre eux offre une certaine forme de contrôle de version, peut-être même une certaine forme de suivi des incidents et probablement une certaine forme de gestion des changements pour assurer le contrôle du processus de développement du code Source.
+Mais que se passe-t-il au moment où le code Source est prêt et quitte le(s) équipe(s) de développement? Dans quelle mesure votre processus de (re)construction pour passer à l'étape QA et Production est-il automatisé? Quel est le degré d'efficacité de vos capacités de déploiement?
+
+IKAN étend le contrôle au-delà des équipes de développement.
+L'approche (r)évolutionnaire d'IKAN combine les outils de développement existants avec la gestion automatisée des constructions et des déploiements et avec le support du cycle de vie pour les organisations de toute taille.
+Ne manquez pas cette (r)évolution!
+
+Ce document décrit la procédure pour installer l'application IKAN ALM Démo 5.8.
+Même si cette version Démo offre la plupart des fonctionnalités de la version complète, elle est limitée de la façon suivante:
+
+* Limitée dans le temps: La licence expire 30 jours après l'installation.
+* Utilisation limitée 2 machines définies, 2 utilisateurs flottants, 2 utilisateurs réservés
+* Base de données limitée: La Base de données HSQLDB légère est utilisée. La version complète supporte MySQL, Oracle, DB2, MS SQL Server et (sur demande) toute autre Base de données compatible JDBC.
+* Les processus du Serveur et de l'Agent seront exécutés dans le même conteneur JVM ou OSGi. Dans la version complète, ils peuvent être installés comme des tâches exécutées indépendamment sur des systèmes locaux ou distants.
+
+
+Ce document vous guidera dans le processus d'installation de l'application IKAN ALM Démo 5.8.
+Cependant, si vous avez besoin de plus d'informations, n'hésitez pas à contacter nos services de support par courrier électronique à __support@ikanalm.com__.
+
+== Prérequis
+
+Avant de démarrer l'installation, vérifiez et, le cas échéant, mettez à jour la configuration de votre système d'installation cible. 
+
+[NOTE]
+====
+Nous vous recommandons de désinstaller les installations IKAN ALM Démo précédentes avant de procéder à une réinstallation (<<_linuxdemo_uninstalling>>) 
+====
+
+=== Système d`'exploitation Linux
+
+L'installation IKAN ALM Démo 5.8 Linux a été testée sous les versions actuelles de:
+
+* Redhat Fedora
+* SUSE Linux Enterprise
+* OpenSUSE
+* Ubuntu
+* Debian
+* Mandriva
+* CentOS
+
+
+Cependant, l'application IKAN ALM Démo devrait fonctionner sous d'autres variantes de Linux.
+
+[[_bcgggiah]]
+=== Kit de développement Java SE
+
+Le kit de développement Java SE (JDK) V1.7.x ou 1.8 est requis.
+
+Tous les composants IKAN ALM nécessitent au moins un Kit de développement Java (JDK) ou un Serveur Java Runtime (Serveur JRE). IKAN ALM a été testé pour fonctionner avec Oracle Java ainsi qu'avec OpenJDK.
+Le Java SE Server Runtime Environment (Serveur JRE) et le Kit de développement logiciel (SDK) peuvent être obtenus gratuitement via le site Web d'Oracle.
+Les version 32 bits et 64 bits sont toutes les deux supportées. 
+
+La dernière version de Java SE peut être téléchargée sur http://www.oracle.com/technetwork/java/javase/downloads/index.htm[
+http://www.oracle.com/technetwork/java/javase/downloads/index.html].
+
+Elle peut être installée en tant que super-utilisateur (root) ou en tant qu'utilisateur normal (par exemple, dans le répertoire de Base de l'utilisateur) et plusieurs versions peuvent coexister sur votre système.
+Vous pouvez également l'installer via le gestionnaire des paquets de votre distribution Linux.
+Notez que la plupart des distributions incluent par défaut OpenJDK et que les référentiels Oracle doivent être explicitement activés, par exemple, dans le cas d'Ubuntu vous devez activer le référentiel "partenaire" Canonical.
+
+[[_bcgdbegh]]
+=== Serveur Subversion (OPTIONNEL)
+
+[NOTE]
+====
+IKAN ALM peut être installé sans Subversion.
+Voilà pourquoi ce prérequis est optionnel.
+Cependant, si vous voulez exécuter le projet Démo inclus, la version 1.8 ou supérieure de Subversion doit être installée.
+====
+
+IKAN ALM s'intègre avec des outils de Contrôle de Version tels que Subversion (SVN), Git, Microsoft Team Foundation Version Control (TFVC), Concurrent Versions Systems (CVS), ... Pour exécuter des Constructions ou pour déployer les résultats de construction, vous devez établir la connexion avec un Référentiel de Contrôle de Version (RCV) existant.
+
+Ce Référentiel peut être installé sur le même système que la Démo IKAN ALM ou sur une Machine distante.
+Dans ces deux cas, vous devez spécifier les paramètres pour se connecter au Référentiel.
+Cela peut être fait après l'installation d'IKAN ALM.
+
+Cette installation Démo inclut la création d'un Référentiel Subversion.
+Pour se connecter à ce référentiel, la version 1.8 (ou ultérieure) de Subversion doit être installée sur le système Démo IKAN ALM.
+Vous pouvez télécharger Subversion à partir du site Web http://subversion.apache.org/[
+http://subversion.apache.org]. 
+
+Vous pouvez également installer Subversion en utilisant le gestionnaire des paquets de votre installation Linux.
+Par exemple: sous Suse Linux, avec YAST:
+
+
+image::subversion_yast.png[,945,416] 
+
+
+== Étapes d'installation
+
+[NOTE]
+====
+Les captures d'écran utilisées dans ce document supposent que la langue de votre interface IKAN ALM est mise en français.
+Pour les autres langues, les écrans seront similaires.
+
+La mise en page des captures d'écran peut varier en fonction de la variante de Linux utilisée.
+====
+
+=== Étape 1: Démarrer l'installation
+
+L'application IKAN ALM Démo 5.8 sera distribuée comme un fichier .tar.gz nommé ``ikanalm_trial.tar.gz``.
+Après extraction, vous trouverez un fichier exécutable .jar, ce Guide d'installation et un fichier de licence.
+
+Exécutez le fichier .jar en utilisant la commande suivante dans un terminal: ``java -jar alm_demo_5-8.jar``.
+
+La fenêtre suivante s'affichera:
+
+
+image::Screenshot_58linuxdemo1.png[,237,197] 
+
+Sélectionnez votre langue d'installation préférée et cliquez sur __OK__.
+
+La fenêtre de bienvenue suivante s'affiche:
+
+
+image::Screenshot_58linuxdemo2.png[,809,486] 
+
+Cliquez sur le bouton _Suivant_ pour continuer.
+
+
+image::Screenshot_58linuxdemo3.png[,827,501] 
+
+Lisez attentivement l'information "Lisez-moi" (uniquement disponible en anglais). Pour continuer, cliquez sur le bouton __Suivant__.
+
+[[_chbeacae]]
+=== Étape 2: Accord de licence 
+
+
+image::Screenshot_58linuxdemo4.png[,817,494] 
+
+Lisez attentivement l'accord de licence (uniquement disponible en anglais), sélectionnez l'option _J'accepte les termes
+de cet accord de licence_ et cliquez sur le bouton __Suivant__.
+
+=== Étape 3: Chemin d'installation
+
+
+image::Screenshot_58linuxdemo5.png[,811,492] 
+
+Dans votre système de fichiers, sélectionnez le répertoire de Base pour l'installation Démo d'IKAN ALM 5.7.
+Vous pouvez modifier cet emplacement en utilisant le bouton __Parcourir__.
+
+Dans la suite de ce document, cet emplacement s'appellera __ALM_HOME__.
+
+Cliquez sur le bouton _Suivant_ pour continuer.
+
+Si le répertoire existe déjà, un message d`'avertissement s'affichera.
+
+
+image::Screenshot_58linuxdemo6.png[,602,156] 
+
+Dans la version Démo, tous les paquetages doivent être installés.
+
+
+image::Screenshot_58linuxdemo7.png[,810,491] 
+
+Cliquez sur le bouton _Suivant_ pour continuer avec la sélection d'un Kit de développement Java (JDK).
+
+=== Étape 4: Sélectionner un Kit de développement Java
+
+
+image::Screenshot_58linuxdemo8.png[,816,492] 
+
+Comme indiqué dans la section <<_bcgggiah>>, la version 1.7 ou 1.8 du Kit de développement Java (JDK) est requise.
+
+[NOTE]
+====
+Un Java Runtime Environnement (JRE) ne sera pas suffisant!
+====
+
+Si le répertoire sélectionné ne contient pas de JDK approprié, le message d'erreur suivant s'affichera:
+
+
+image::Screenshot_58linuxdemo9.png[,495,148] 
+
+
+[[_chbecfhj]]
+=== Étape 5: Paramètres de configuration
+
+
+image::Screenshot_58linuxdemo10.png[,816,492] 
+
+Configurez les ports réseau utilisés par IKAN ALM.
+En principe, les valeurs proposées par défaut devraient être correctes.
+Il faut néanmoins s'assurer que ces numéros de port ne soient pas utilisés par d'autres processus.
+
+Vous pouvez vérifier les ports utilisés avec la commande netstat: ouvrez un terminal et saisissez `netstat -ltun` pour afficher les ports TCP / UDP à l'écoute.
+
+Dans le reste du présent guide, le port du Serveur d'application s`'appellera désormais __ALM_APPSERVER_PORT__.
+
+Cliquez sur le bouton _Suivant_ pour afficher le résumé de l'installation.
+
+
+image::Screenshot_58linuxdemo11.png[,817,498] 
+
+Cliquez sur le bouton _Suivant_ pour démarrer l'installation utilisant les paramètres spécifiés:
+
+
+image::Screenshot_58linuxdemo13.png[,815,491] 
+
+Une fois l'installation terminée, cliquez sur le bouton _Suivant_ pour continuer avec la spécification du menu de démarrage.
+
+=== Étape 6: Raccourcis de menu de démarrage 
+
+
+image::Screenshot_58linuxdemo14.png[,819,498] 
+
+Sélectionnez le Groupe Programme et le Nom du raccourci pour le menu de démarrage.
+Par défaut, _IKAN ALM
+Demo 5.8_ est utilisé pour le groupe et le nom.
+Vous pouvez modifier ces noms. 
+
+Cliquez sur le bouton _Suivant_ pour terminer l'installation.
+
+
+image::Screenshot_58linuxdemo15.png[,846,514] 
+
+
+== Configuration après l'installation
+
+=== Installer la licence IKAN ALM
+
+Avec le présent Guide d'installation et le fichier d'installation __alm_demo_5-8.jar__, vous avez reçu un fichier de licence appelé __alm_license.lic__.
+
+Cette licence démo expirera après 30 jours.
+(<<_chbeacae>>). Contactez les services de support d'IKAN ALM si vous n'avez pas reçu de fichier de licence, ou si vous voulez étendre la période de licence.
+
+Démarrez le Serveur IKAN ALM Démo
+
+* Par le menu: 
++
+__Applications > IKAN ALM
+Demo 5.8 > Start IKAN ALM Demo server__
+* Ou via un terminal:
++
+En utilisant le script _startDemo.sh_ dans le répertoire __ALM_HOME__.
+
+
+Ouvrez l'application Web IKAN ALM via un navigateur Web:
+
+Saisissez l'URL suivant: _\http://MACHINE_NAME:ALM_APPSERVER_PORT/alm_ (Par exemple, \http://ikan009:9080/alm)
+
+S`'il s'agit de votre première installation, aucune licence ne sera trouvée et une fenêtre s'affichera vous demandant d'en fournir une.
+
+
+image::start_01.png[,518,291] 
+
+Saisissez ou sélectionnez l'emplacement du fichier _alm_license.lic_ que vous avez reçu en utilisant le bouton "Browse" et cliquez sur le bouton __Submit__.
+
+Dès que la licence est installée, la fenêtre de _Connexion_ s'affiche.
+Saisissez le code Utilisateur _global_ et le Mot de passe _global_ pour continuer.
+
+
+image::start_02.png[,520,322] 
+
+
+== Utiliser l'application IKAN ALM Démo 5.8
+
+=== Démarrer et arrêter le Serveur IKAN ALM
+
+Le Serveur IKAN ALM Démo doit être en cours avant de pouvoir utiliser IKAN ALM.
+
+Démarrez le Serveur IKAN ALM Démo
+
+* Par le menu
++
+__Applications > IKAN ALM
+Demo 5.8 > Start IKAN ALM Demo server__
+* Ou via un terminal:
++
+En utilisant le script _startDemo.sh_ dans le répertoire __ALM_HOME__.
+
+
+Arrêter le Serveur IKAN ALM Démo
+
+* Par le menu
++
+__Applications > IKAN ALM
+Demo 5.8 > Stop IKAN ALM Demo server__
+* Ou via un terminal:
++
+Par le script _stopDemo.sh_ dans le répertoire __ALM_HOME__.
+
+
+=== Ouvrir l'application Web IKAN ALM
+
+. Démarrez un navig
++
+ateur internet
+. Saisissez l'URL suivant: _\http://MACHINE_NAME: ALM_APPSERVER_PORT/alm_
+
+
+[NOTE]
+====
+
+Remplacez MACHINE_NAME par le nom ou l'adresse IP (par exemple, 127.0.0.1, localhost, IKAN001, ... ) de la Machine sur laquelle vous avez installé l'application IKAN ALM Démo.__ALM_APPSERVER_PORT__ comme configuré dans la section <<_chbecfhj>> (port par défaut: 9080).
+
+Par exemple: un URL de départ IKAN ALM pourrait ressembler à _\http://ikan009:9080/alm_
+====
+
+Une session de navigateur Web s'ouvrira affichant la fenêtre de _Connexion_ d'IKAN ALM.
+
+[[_chbdajaa]]
+=== Se connecter à l'application Web IKAN ALM
+
+Vous êtes prêts à utiliser l'interface Web IKAN ALM.
+
+
+image::start_03.png[,528,311] 
+
+Il est utile d'ajouter ce lien aux favoris de votre navigateur Web.
+
+Utilisez une des combinaisons Utilisateur-Mot de passe prédéfinies pour vous connecter à IKAN ALM.
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| Utilisateur
+| Mot de passe.
+| Droits d'accès
+
+
+|
+
+user
+|
+
+user
+|
+
+Utilisateur
+
+|
+
+project
+|
+
+project
+|
+
+Administration des projets
+
+|
+
+global
+|
+
+global
+|
+
+Administration globale
+|===
+
+
+Nous vous conseillons de démarrer avec l'Utilisateur _global_ (Mot de passe: __global__) puisque cet Utilisateur à des droits d'accès complets à tous les composants de l'application IKAN ALM Démo.
+
+Saisissez l'Utilisateur et le Mot de Passe et cliquez sur le bouton __Se connecter__.
+La page d`'accueil d'IKAN ALM s'affiche et vous pouvez commencer à travailler dans IKAN ALM.
+
+=== Projets IKAN ALM Démo
+
+L'installation Démo IKAN ALM comprend deux projets démo complètement configurés avec un Système de Contrôle de Version (Subversion), des Outils de script, des scripts et des fichiers Source.
+Les sections Administration globale et Administration des projets sont complètement configurées et les Projets sont prêts pour les activités de Construction et de Déploiement.
+
+==== Le projet "Customers"
+
+Le projet _Customers_ est une application Web, développée en Java, pour gérer une Base de données de clients simple.
+Son Cycle de Vie comprend trois paliers: les niveaux CONTBUILD, TEST et PRODUCTION. 
+
+* Le Niveau CONTBUILD exécutera automatiquement une Construction si les Sources sont modifiées, assurant ainsi une Intégration Continue.
+* Le Niveau TEST téléchargera les données de test générées dans la Base de données de test et déploiera l'application vers le Serveur Web IKAN ALM (Apache Tomcat) dans un contexte de test.
+* Le Niveau PRODUCTION déploiera l'application vers le Serveur Web IKAN ALM (Apache Tomcat) dans un contexte de production.
+
+
+Les scripts sont exécutés avec Apache Ant.
+
+Pour une description détaillée de ce projet, se référer au chapitre <<_webpadproject>>.
+
+==== Le projet "Monocalendar"
+
+Le projet _Monocalendar_ est une application de calendrier autonome écrite en C Sharp.
+Son Cycle de vie dans la Branche Principale comprend également trois Niveaux:
+
+* CONTBUILD pour l'Intégration continue
+* TEST pour la reconstruction ou la création d'un installateur NSIS
+* PRODUCTION pour installer/désinstaller l'application.
+
+
+[NOTE]
+====
+
+Les scripts sont exécutés avec NAnt et le Microsoft .NET Framework version 2.0 ou supérieure est requis pour la compilation.
+Puisque cela n'est pas toujours installé sous un système d'exploitation Linux, nous ne décrirons pas ce projet dans ce document.
+Installez l'application IKAN ALM Démo Windows si vous voulez utiliser le projet "Monocalendar".
+====
+
+=== Documentation
+
+Le _Guide de l`'Utilisateur IKAN ALM_ est disponible dans les formats suivants:
+
+* en format PDF sous _ALM_HOME/doc/ALMUserGuide.pdf_
+* en format HTLM dans l'application Web ALM:
++
+Sélectionnez _Aide_ dans le menu principal.
+Une nouvelle fenêtre de votre navigateur Web s'ouvrira, affichant la "Table des matières" de l'aide en ligne d'IKAN ALM.
+* sous forme d'aide contextuelle disponible sur chaque fenêtre de l'Interface Utilisateur d'IKAN ALM.
++
+Pour y accéder, cliquez sur l'icône image:icons/help.gif[,16,16]  à droite du fil d'Ariane de la fenêtre sélectionnée.
+
+[[_webpadproject]]
+== Exemple de projet Java (Customers)
+
+Le projet "Customers" est une application Web, développée en Java, pour gérer une Base de données de clients simple.
+Son Cycle de Vie comprend trois paliers (Niveaux):
+
+. Le Niveau CONTBUILD
++
+Ce Niveau exécutera automatiquement une Construction si les Sources sont modifiées, assurant ainsi une Intégration Continue
+. Le Niveau TEST
++
+Ce Niveau téléchargera des données de test générées dans la Base de données de test et déploiera l'application vers le Serveur Web IKAN ALM (Apache Tomcat) dans un contexte de test.
+. Le Niveau PRODUCTION
++
+Ce Niveau déploiera l'application vers le Serveur Web IKAN ALM (Apache Tomcat) dans un contexte de production.
+
+
+Les scripts utilisés par ce Projet sont exécutés avec Apache Ant.
+
+Les sections suivantes décrivent les étapes différentes:
+
+* <<_bcgdchbh>>
+* <<_webpad_managedesktop>>
+* <<_webpad_unlockproject>>
+* <<_webpad_builddeliver>>
+* <<_cegheagc>>
+
+
+[[_bcgdchbh]]
+=== Se connecter au Référentiel Subversion
+
+Pendant l'installation de la version Démo, un Référentiel Subversion a été créé, lequel contient les sources et les scripts du projet "Customers". Pour se connecter à ce référentiel, vous avez besoin d`'un Serveur Subversion en exécution, comme mentionné dans cette section.
+Pour pouvoir travailler dans le projet "Customers", vous devez vous assurer qu'IKAN ALM peut se connecter au Référentiel Subversion.
+
+Vérifiez si le Serveur IKAN ALM est en cours d'exécution et connectez-vous comme Utilisateur _global_ (Mot de passe: __global__). Sélectionnez _Administration
+globale > Référentiels de contrôle de version > Aperçu_ et spécifiez _Subversion_ dans le champ _Type_ du panneau __Rechercher des Référentiels de contrôle de version__.
+
+
+image::subversion_screen_01.png[,971,312] 
+
+La définition du Référentiel Subversion a été créée lors de l'installation et il y a eu une tentative pour détecter si un Serveur Subversion est installé localement.
+La plupart des paramètres est en ordre pour la connexion avec le Référentiel Subversion créé dans le répertoire __ALM_HOME/vcr/subversion/repository__.
+Cependant, il faudra peut-être modifier le Chemin de commande s'il n'est pas détecté lors de l'installation.
+Par défaut, le Référentiel ne requiert pas d'Utilisateur ni de Mot de passe.
+
+Cliquez sur l'icône image:icons/edit.gif[,15,15] __ Modifier__.
+
+
+image::subversion_screen_02.png[,814,727] 
+
+Modifiez le _Chemin de commande_ de sorte qu'il pointe vers l'emplacement de la commande du Client Subversion (svn), par exemple, /usr/bin). Notez qu'il ne faut spécifier que le chemin de l'emplacement.
+N'incluez pas la commande elle-même!
+
+Cliquez sur le bouton _Vérifier la connexion_ pour vérifier la définition de Subversion.
+Un message informatif indiquera si la définition est correcte.
+Sinon, un message d'erreur indiquera le problème rencontré.
+
+N'oubliez pas de cliquer sur le bouton _Sauvegarder_ pour confirmer vos modifications.
+
+[[_webpad_managedesktop]]
+=== Gérer votre Bureau
+
+Le Bureau vous permet de suivre les actions (Constructions, Déploiements) exécutées dans un projet.
+Si vous vous connectez pour la première fois, votre Bureau sera vide.
+
+Dans cette section, nous créerons un élément de bureau pour le projet "Customers".
+
+Dans la fenêtre du Bureau, cliquez sur le bouton __Ajouter
+au Bureau__.
+
+
+image::ch6_01.png[,835,215] 
+
+La fenêtre _Ajouter au Bureau_ s'affiche.
+
+
+image::ch6_02.png[,673,359] 
+
+Un Projet peut avoir plusieurs Cycles de Vie.
+Dans IKAN ALM, ces Cycles de vie sont organisés dans des Branches.
+Pour pouvoir suivre l'activité dans une Branche, vous pouvez créer un élément de bureau pour la Branche.
+
+Sélectionnez la Branche "1-0" du projet "Customers" et cliquez sur le bouton __Ajouter au Bureau__.
+
+Si l'élément est ajouté correctement au Bureau, un message de confirmation s'affichera.
+Cliquez sur le bouton _Fermer_ pour fermer la fenêtre __Ajouter au Bureau__.
+
+[NOTE]
+====
+À partir de l'arborescence, vous pouvez sélectionner des Niveaux individuels et les ajouter à votre Bureau.
+====
+
+Développez les Niveaux de la Branche en cliquant sur l'icône image:icons/ExpandProjectStream.gif[,10,10]  devant l'élément de bureau de la Branche __Customers 1-0__.
+Les Niveaux suivants s'affichent:
+
+
+image::ch6_03.png[,841,310] 
+
+Comme vous pouvez le constater, il n'y a pas encore beaucoup d'activité dans le projet "Customers" puisque le projet est verrouillé.
+Dans l'étape suivante nous déverrouillerons le projet.
+
+[[_webpad_unlockproject]]
+=== Déverrouiller un Projet
+
+Pour pouvoir construire le projet "Customers", il faudra déverrouiller le projet, ainsi que les Niveaux correspondants, dans la section Administration des projets.
+Cette action est réservée aux Utilisateurs ayant des droits d'Administration de projets, tels que les Utilisateurs "global" ou "projet" (voir <<_chbdajaa>>).
+
+Pour commencer la procédure de déverrouillage, sélectionnez image:icons/icon_ProjectAdmin_13x13.png[,13,13] _Administration
+des projets_ dans le menu principal. 
+
+
+image::ch6_04.png[,836,305] 
+
+Cliquez sur l'icône _Modifier _image:icons/edit.gif[,15,15]  devant le projet "Customers".
+
+[NOTE]
+====
+Vous verrez également l'icône _Déverrouiller _image:icons/unlock.gif[,15,15]  devant chaque Projet dans cette liste.
+Cette icône déverrouillera uniquement le Projet, tout en maintenant les Niveaux verrouillés.
+====
+
+La fenêtre _Informations sur le Projet_ s'affiche dans le contexte de l'Administration du projet "Customers". Nous n'allons pas modifier les Paramètres du Projet, mais vous pouvez vérifier l'existence du Projet dans le Référentiel Subversion en cliquant sur le bouton __Vérifier le nom du Projet dans le RCV__.
+
+Dans le sous-menu, sélectionnez _Auditer le projet_ pour vérifier la cohérence du Projet.
+
+
+image::ch6_05.png[,850,86] 
+
+Avant que la fenêtre _Auditer le Projet_ ne soit affichée, plusieurs contrôles sont effectués pour vérifier la configuration du Projet.
+Vous pouvez utiliser le bouton image:icons/help.gif[,16,16]  pour afficher l'aide en ligne concernant cette fonction.
+Pour plus d'informations, se référer au chapitre _Auditer un projet_ dans le __Guide de l'Utilisateur IKAN ALM__. 
+
+Si le projet est cohérent (branches secondaires, niveaux, environnements, phases et paramètres sont valides), le lien _Déverrouiller_ apparaîtra dans le panneau __Actions__.
+Cliquez sur ce lien pour déverrouiller le Projet et ses Niveaux.
+
+
+image::ch6_06.png[,844,482] 
+
+Suite à cela, l'icône _Verrouillé_ devant les Niveaux disparaîtra.
+Le projet n'est plus verrouillé.
+Dans le menu principal, sélectionnez image:icons/icon_ProjectAdmin_13x13.png[,13,13] __Administration
+des Projets__ pour vérifier, dans __l`'Aperçu des Projets__, qu'il n'y a plus de bouton _Verrouillé_ devant le Projet.Dès que le Projet et ses Niveaux sont déverrouillés, quelques actions seront automatiquement exécutées dans le Projet.
+Passez à la section suivante pour comprendre ce qui se passe.
+
+[[_webpad_builddeliver]]
+=== Construire/Délivrer dans le Cycle de vie d'un Projet
+
+[[_firstbuild]]
+==== Construction automatique sur un Niveau de construction
+
+Une fois le Projet déverrouillé, il sera construit automatiquement.
+
+Comme un Plan horaire de Construction continue est associé au Niveau de construction du Projet (CONTBUILD), le Planificateur IKAN ALM vérifiera au moment du démarrage (et ensuite, après chaque minute) s'il y a eu des modifications dans le "trunk" du Référentiel Subversion lié au Projet. 
+
+S'il y a eu des modifications, ou si aucune Construction n'a encore été exécutée (ce qui est le cas dans notre exemple), une Requête de niveau de Construction sera créée.
+
+Pour vérifier le résultat de cette Requête de niveau de Construction, sélectionnez _Requêtes
+de niveau > Aperçu des Requêtes de niveau_ dans le menu principal.
+
+L'aperçu suivant s'affichera:
+
+
+image::ch6_07.png[,836,417] 
+
+Sélectionnez l'__OID__ (1) de la Requête de Niveau pour afficher la fenêtre des _Informations détaillées_ sur laquelle vous pouvez vérifier ce qui s'est passé pendant la Requête de niveau de Construction.
+
+Dans IKAN ALM, les étapes du processus de Construction sont appelées des Phases.
+Sélectionnez l'onglet _Journaux
+de Phase_ pour vérifier ce qui s'est passé pendant l'exécution de la Requête de Niveau.
+
+
+image::ch6_08.png[,940,487] 
+
+Cet onglet affiche les Journaux des Phases de Niveau, les actions de Construction et de Déploiement, et leurs Phases de construction et de déploiement exécutées lors de l'exécution de la Requête de niveau.
+Il fournit également des informations plus détaillées concernant les Paramètres utilisés.
+Puisqu'un Environnement de Construction est associé au Niveau CONTBUILD, une action de Construction utilisant des Phases de construction sera effectuée.
+Il n'y aura pas d'actions de Déploiement.
+Cliquez sur un des noms de Phase: cela développera la Phase en affichant ses détails.
+
+Le journal le plus intéressant est celui de la Phase "Exécution script". Il devrait afficher un processus de compilation réussi, la création d'un fichier .war et quelques tâches associées.
+Pour l'afficher, développez l'action de Construction (nommé Construction 1 sur la machine XXX). Les Phases de construction exécutées lors de la Construction sont affichées.
+Ensuite, développez la Phase "Exécution du script". Cela affichera le journal d'exécution dans lequel vous trouverez le résultat du script de construction Ant exécuté.
+
+
+image::ch6_09.png[,881,557] 
+
+
+[[_delivertotest]]
+==== Délivrer la Construction vers le Niveau TEST
+
+À ce stade, une Construction réussie est disponible dans le premier Niveau de la Branche Principale.
+Maintenant nous allons délivrer la Construction vers les Niveaux suivants (TEST et PRODUCTION) dans le Cycle de vie.
+
+Sélectionnez _Bureau_ dans le Menu Principal.
+
+
+image::ch6_10.png[,946,265] 
+
+Cliquez sur l'icône _Délivrer_ image:icons/icon_deliverBuild.png[,15,15] à droite du Niveau __Customers H_1-0 TEST__.
+
+
+image::ch6_11.png[,940,628] 
+
+Dans l'écran __Créer une Requête de niveau__, saisissez une description et sélectionnez la Construction (1) en cliquant sur la rangée contenant la Construction concernée.
+
+[NOTE]
+====
+Si vous ne remplissez pas le champ __Exécution
+demandée__, la Requête de niveau pour délivrer la Construction sera exécutée immédiatement.
+====
+
+Cliquez sur le bouton __Créer__.
+L'écran _Bureau_ s'affichera.
+Sélectionnez la _Dernière Requête de niveau_ du Niveau de Test pour afficher les _Informations détaillées_ de la Requête de Niveau.
+Une Requête de niveau pour délivrer la Construction est créée pour le Niveau TEST de votre Projet.
+
+Le statut de la Requête de niveau est établi à _En attente de l`'heure d`'exécution_ (image:icons/waiting_datetime.gif[,15,15] ) jusqu'à ce qu'elle ne soit traitée par le Serveur IKAN ALM.
+Ensuite, le statut sera modifié en _Exécution_ (image:icons/run.gif[,15,15] ). 
+
+Dans l`'__Aperçu du Bureau__, cliquez sur le lien _Dernière Requête de niveau_ pour le Niveau de Test.
+
+
+image::ch6_12.png[,933,306] 
+
+L`'écran __Informations détaillées __s`'affiche.
+
+Cliquez sur le lien _Actualiser_ ou activez la fonction _Actualisation automatique_ dans le sous-menu.
+Finalement, la Requête de niveau devrait se terminer avec le statut _Réussie_ (image:icons/succes.gif[,15,15] ).
+
+
+image::ch6_13.png[,941,423] 
+
+
+===== Quel est le résultat de cette action de déploiementvers le Niveau TEST?
+
+Le Niveau TEST du projet "Customers" contient une action de Déploiement.
+Pendant l'étape de Déploiement, l'application Web "Customers" a été déployée vers le Serveur Tomcat sur lequel est exécutée l'application ALM Démo.
+L'application est déployée avec un contexte de test ("/customers_test"). Avant le déploiement de l'application, une Base de données contenant des données de test (une HSLDB, également exécutée dans Tomcat) a été téléchargée.
+
+Pour afficher l'application déployée, ouvrez une session de navigateur et saisissez l'URL suivant: `http://MACHINE_NAME:ALM_APPSERVER_PORT/customers_test` (par exemple: http://ikan009:9080/customers_test).
+
+
+image::ch6_14.png[,664,243] 
+
+
+[NOTE]
+====
+La couleur générale de l'application est verte.
+Cela sert à indiquer qu'il s'agit de la version test de l'application.
+La couleur générale de la version de production sera rouge.
+
+Remarquez également que la version des Sources (la balise RCV) utilisés pour construire cette version de l'application, est affichée dans le panneau de bienvenue.
+Dans cet exemple, la Balise RCV est H_1-0_b1.
+====
+
+Cliquez sur le lien _List all Customers_ pour afficher la liste de tous les clients définis dans la Base de données de test.
+
+
+image::ch6_15.png[,657,257] 
+
+
+[[_delivertoproduction]]
+==== Délivrer la Construction vers le Niveau PRODUCTION
+
+Pour voir ce qui se passe ensuite dans le Cycle de vie, nous allons délivrer la Construction vers le Niveau PRODUCTION.
+Vous pouvez faire cela via le Bureau, de la même manière que celle expliquée pour le Niveau TEST.
+Une autre méthode consiste à sélectionner _Requêtes
+de niveau > Créer une Requête de niveau_ dans le sous-menu.
+
+
+image::ch6_16.png[,936,421] 
+
+Cliquez sur l'icône _Délivrer_ image:icons/icon_deliverBuild.png[,15,15] à droite du Niveau Customers H_1-0 PRODUCTION.
+
+Saisissez une description, comme vous l'avez fait pour la création de la Requête de niveau pour le Niveau TEST, et sélectionnez le Numéro de construction __1__.
+Si vous laissez le champ _Exécution demandée_ vide, la Requête de niveau pour délivrer la Construction sera exécutée immédiatement.
+
+Cliquez sur le bouton __Créer__.
+
+L'écran _Informations détaillées_ s'affichera.
+
+
+image::ch6_17.png[,938,465] 
+
+Une nouvelle Requête de niveau sera créée, avec le statut _En
+attente de pré-approbation_ (image:icons/waiting_approval.gif[,15,15] ). Comme une Pré-approbation est associée au Niveau PRODUCTION, un message de notification sera envoyé à tous les membres du Groupe d`'utilisateurs __ALM
+User__.
+
+Le statut de la nouvelle Requête de niveau restera établie à _En attente de pré-approbation_ tant que l'approbation ne sera pas accordée.
+Comme l'Utilisateur "global" fait partie du Groupe d`'utilisateurs __ALM User__, sélectionnez _Approbations > Approbations en attente_ dans le sous-menu et cliquez sur le bouton image:icons/approve.gif[,15,15] __Approuver__.
+
+
+image::ch6_18.png[,940,474] 
+
+Saisissez une description pour l'Approbation et cliquez sur le bouton _Approuver_
+
+Maintenant, la Requête de niveau sera traitée par le Serveur IKAN ALM.
+Le statut de la _Dernière
+Requête de niveau_ sera établi à _Exécution_ (image:icons/run.gif[,15,15] ). Cliquez sur le lien _Actualiser_ ou activez la fonction _Actualisation
+automatique_ dans le sous-menu.
+Finalement, la Requête de niveau devrait se terminer avec le statut _Réussie_ (image:icons/succes.gif[,15,15] ).
+
+Dans l`'__Aperçu du Bureau__, vous pouvez également cliquer sur le lien _Dernière Requête
+de niveau_ pour afficher le suivi des différentes Phases.
+
+
+image::ch6_19.png[,940,261] 
+
+
+===== Quel est le résultat de cette action de déploiementvers le Niveau PRODUCTION?
+
+Le Niveau PRODUCTION du projet "Customers" contient une action de Déploiement.
+Pendant l'étape de Déploiement, l'application Web "Customers" a été déployée vers le Serveur Tomcat sur lequel est exécutée l'application ALM Démo.
+L'application est déployée dans le contexte "/customers". Contrairement à ce qui s'est passé dans le Niveau TEST, aucune donnée n'est chargée dans la Base de données de test.
+En revanche, l'application déployée utilise une Base de données de clients pré-remplie avec des données réalistes. 
+
+
+image::ch6_20.png[,665,228] 
+
+
+[NOTE]
+====
+Pour afficher l'application déployée, ouvrez un navigateur Web et saisissez l'URL`` suivant: \http://MACHINE_NAME:ALM_APPSERVER_PORT/customers`` (Par exemple: \http://ikan009:9080/customers). 
+
+La couleur générale de l'application est rouge.
+Cela sert à indiquer qu'il s'agit de la version production de l'application.
+Remarquez également que la version des Sources (la balise RCV) utilisés pour construire cette version de l'application, est affichée dans le panneau de bienvenue.
+Dans cet exemple-ci, la balise RCV est H_1-0_b1.
+====
+
+Cliquez sur le lien _List all Customers_ pour afficher la liste de tous les clients définis dans la Base de données de production.
+
+
+image::ch6_21.png[,659,419] 
+
+
+[[_cegheagc]]
+=== Déclencher une Construction planifiée par l'enregistrementd'un Source
+
+Vous pouvez vérifier le code Source des projets Démo et enregistrer les modifications.
+
+Installez un client Subversion et récupérez le code Source.
+
+L'URL du Référentiel pour le projet "Customers" est __\file:///ALM_HOME/vcr/subversion/repository/customers/trunk__.
+
+Modifier un fichier Source et enregistrez-le.
+Le Planificateur remarquera les modifications et démarrera la construction du Projet.
+
+=== Informations supplémentaires concernant les Phases personnalisées
+
+Au lieu d'utiliser un seul script Ant très large exécutant toutes les tâches, le déploiement de l'application "Customers" utilise plusieurs petits scripts chacun d'entre eux exécutant une tâche spécifique.
+Les tâches réutilisables ont été regroupées dans une Phase personnalisée dans IKAN ALM.
+
+Plus spécifiquement, le déploiement vers le Niveau TEST exécute trois tâches:
+
+* Modifier le fichier .war (spécifier les paramètres de connexion de la Base de données dans certains fichiers config)
+* Alimenter une Base de données avec des données de test
+* Déployer l'application vers Tomcat
+
+
+La première tâche n'est pas assez générale pour pouvoir être réutilisée, mais pour les deux autres des Phases personnalisées ont été créées: les Phases "Update DB" et "Tomcat Deploy".
+
+Pour vérifier la définition de ces Phases, sélectionnez image:icons/icon_GlobalAdmin_13x13.png[,13,13] __Administration
+globale > Phases > Aperçu__.
+
+
+image::ch6_22.png[,944,537] 
+
+Cliquez sur l'icône _Modifier_ image:icons/edit.gif[,15,15]  devant la Phase __com.ikanalm.phases.ant.scripting.tomcatDeploy Phase__.
+
+
+image::ch6_23.png[,949,724] 
+
+Cette fenêtre affiche les informations générales sur la Phase, les Paramètres de phase qui peuvent être spécifiés pour configurer l'exécution de la Phase et les _Niveaux et Environnements
+connectés_ où la Phase est utilisée.
+
+Un des paramètres à spécifier est le paramètre "`tomcat.server.url`". Il établit l'URL de base du Serveur Tomcat de l'emplacement où les applications doivent être déployées.
+Si une Phase est ajoutée à un Environnement (de Niveau, de Construction ou de Déploiement), ces paramètres peuvent avoir une valeur différente pour chaque environnement.
+Cela signifie que la même Phase peut être réutilisée dans beaucoup d'environnements différents, exécutant chaque fois une tâche différente, ce qui offre une grande flexibilité.
+
+Comme vous pouvez le constater dans le panneau __Niveaux
+et Environnements connectés__, notre Phase de Déploiement Tomcat est actuellement utilisée à deux endroits différents:
+
+* Dans l'Environnement de Déploiement _testdeploy_ du Niveau TEST, où il déploie l'application "Customers" dans le contexte de test.
+* Dans l'Environnement de Déploiement _proddeploy_ du Niveau PRODUCTION, où il déploie l'application "Customers" dans le contexte de production.
+
+
+Comme un exemple d'une utilisation plus avancée des Paramètres, prenons le Paramètre de phase "contextPath". Sa valeur par défaut est établie à `/$\{applicationName}` et cette valeur est spécifiée tant pour l'Environnement "testdeploy" que pour l'Environnement "proddeploy" (cliquez sur l'icône _Modifier_ image:icons/edit.gif[,15,15]  devant le Paramètre __contextPath__). Toutefois, l'application "Customers" est déployée dans deux contextes différents: "customers_test" et "customers". 
+
+Comment cela est réalisé?
+
+La réponse se trouve dans le Paramètre de déploiement (nommé "applicationName") qui est spécifié pour les deux Environnements de déploiement .
+
+Accédez à la section image:icons/icon_ProjectAdmin_13x13.png[,13,13] _Administration
+des projets_ et modifiez le projet "Customers". Dans le menu, sélectionnez ensuite __Environnements de déploiement
+> Paramètres de Déploiement__: 
+
+
+image::ch6_24.png[,947,452] 
+
+Vous constaterez que pour l'Environnement "testdeploy" la valeur du Paramètre "applicationName" est "customers_test", tandis que pour l'Environnement "proddeploy" la valeur est établie à "customers". Au moment de l'exécution de la Phase de Déploiement Tomcat, la propriété $\{applicationName} sera remplacée par la valeur du Paramètre de déploiement qui donnera le résultat désiré.
+
+Pour plus d'informations concernant les Phases personnalisées et la procédure pour les créer vous-mêmes, se référer au _Guide
+de l'Utilisateur IKAN ALM_ (le chapitre __Administration
+globale, Phases__) et l'appendice __Phases: Informations
+générales__), et le document __Utiliser et développer
+des Phases personnalisées dans IKAN ALM__.
+[[_linuxdemo_uninstalling]]
+== Désinstaller l'application IKAN ALM Démo
+
+Pour désinstaller l'application Démo, suivez la procédure suivante:
+
+. Arrêter le Serveur IKAN ALM Démo, s'il est en cours d'exécution.
+. Exécutez le désinstalleur: 
++
+__Applications > IKAN ALM
+Demo 5.8 > Uninstall IKAN ALM Demo__
++
+OU
++
+Ouvrez un terminal et exécutez: 
++
+`java –jar "ALM_HOME/Uninstaller/uninstaller.jar`
+. Sélectionnez l'option _Forcer la suppression de ..._ pour supprimer tous les fichiers associés à l'application Démo. Sinon, les fichiers modifiés depuis l'installation seront sauvegardés.
++
+image::fig8_1.png[,383,174] 
++
+. Pendant la désinstallation, la fenêtre suivante s'affichera vous demandant si vous voulez désinstaller la clé de licence.
++
+image::fig8_2.png[,419,191] 
++
+Attendez la fin de la désinstallation et, ensuite, cliquez sur le bouton _Quitter_ pour arrêter le désinstalleur:
++
+image::fig8_3.png[,370,175] 
+
+
+:sectnums!:
+
+[appendix]
+== Appendice Configuration JAAS
+
+Pour l'authentification et l'autorisation des Utilisateurs, IKAN ALM utilise le service d'authentification et d'autorisation Java (JAAS) (voir http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html[
+http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html]).
+
+L'application IKAN ALM Démo préconfigure JAAS automatiquement.
+Cet appendice n'est utile que pour la résolution de problèmes ou si vous voulez modifier l'authentification.
+
+L'authentification JAAS est réalisée de manière enfichable.
+Ainsi les applications peuvent rester indépendantes des technologies d'authentification sous-jacentes.
+Les nouvelles technologies d'authentification ou les mises à jour peuvent être enfichées dans IKAN ALM sans nécessiter des modifications à l'application même.
+
+=== Configuration JAAS de l'application IKAN ALM Démo
+
+L'installation IKAN ALM Démo utilise son propre fichier jaas.config qui se trouve dans __ALM_HOME /system/security__.
+
+Par défaut, le fichier _passwd.config_ est utilisé comme un fichier de sécurité plat.
+
+[NOTE]
+====
+Pour rendre les modifications visibles, vous devez redémarrer IKAN ALM si vous ajoutez/modifiez un enregistrement dans le fichier de sécurité.
+====
+
+=== Implémentation JAAS: Sécurité à fichier plat
+
+L'application IKAN ALM Démo utilise cette implémentation JAAS simple par laquelle les Groupes d`'utilisateurs et les Utilisateurs sont configurés dans un fichier plat.
+Dans le fichier de configuration JAAS, cela est spécifié comme suit (par exemple, ALM_HOME="home/ikan/ALMDemo"):
+
+[source]
+----
+/** ALM Login **/ALM{ com.tagish.auth.FileLogin pwdFile="/home/ikan/ALMDemo/system/security/passwd.config";};
+----
+
+[NOTE]
+====
+Les mots de passe dans le fichier _passwd.config_ doivent être sauvegardés dans le format encrypté MD5.
+====
+
+=== Sécurité à fichier plat: Contenu
+
+Lorsque l'on utilise la sécurité à fichier plat, le contenu du fichier _passwd.config_ est assez simple et intuitif:
+
+[source]
+----
+userid:encrypted password:groupname:groupname:groupnameuser:ee11cbb19052e40b07aac0ca060c23ee:ALM Userproject:46f86faa6bbf9ac94a7e459509a20ed0:ALM User:ALM Projectglobal:9c70933aff6b2a6d08c687a6cbb6b765:ALM User:ALM Administrator
+----
+
+Vous pouvez générer le mot de passe encrypté en format de cryptage MD5 en utilisant un outil tel que HashCalc (http://www.slavasoft.com/hashcalc/overview.htm[
+http://www.slavasoft.com/hashcalc/overview.htm]) (sous Windows) ou GtkHash (sous Linux).
+
+Ajouter un Utilisateur avec comme identifiant Utilisateur "testuser" et comme Mot de passe "testuser" qui appartient au Groupes d'utilisateurs _ALM User_ et _ALM
+Project_
+
+
+image::hashcalc.png[,458,267] 
+
+
+. Ajoutez l'entrée suivante au fichier passwd.config:
++
+
+[source]
+----
+testuser:5d9c68c6c50ed3d02a2fcf54f63993b6:ALM
+User:ALM Project
+----
+. Arrêter et redémarrer Apache Tomcat
+. Connectez-vous à IKAN ALM avec l'Identifiant Utilisateur "testuser" et le Mot de passe "testuser".
+
+
+:sectnums:
+
+:sectnums!:
+
+[appendix]
+== Résolution des problèmes
+
+=== L'installateur de l'application IKAN ALM Démo estdéjà en cours d'exécution
+
+
+image::demo_already_running.png[,630,210] 
+
+Cette erreur peut se produire si l'installation de la version Démo est interrompue.
+Si vous essayez de ré-exécuter l'installation, le message ci-dessous s'affichera.
+La cause est un fichier de verrouillage dans le répertoire __temp__:
+
+
+image::izpack_lockfile.png[,721,320] 
+
+Recherchez le fichier nommé _iz-ALMDemo.tmp_ et supprimez-le.
+
+=== Incorrect alm_license.lic file
+
+Cette erreur peut se produire lors de l'installation de la licence.
+
+
+image::incorrect_license.png[,468,269] 
+
+Assurez-vous que le fichier de licence n'a pas été modifié.
+
+Assurez-vous que le fichier de licence a été correctement transféré depuis la machine de l'installation, (par exemple, la taille du fichier doit être > 500 octets).
+
+=== Le navigateur Web ne peut pas afficher la page
+
+
+image::ie_cannotdisplay.png[,461,72] 
+
+
+
+image::pagenotdisplayed.png[,326,50] 
+
+
+
+image::failedtoconnect.png[,630,359] 
+
+Cause: Le Serveur IKAN ALM Démo n'est pas en cours d'exécution.
+
+Solution:
+
+. Démarrez le Serveur IKAN ALM Démo: _Applications > IKAN ALM Demo 5.8 > Start IKAN ALM Demo server_
+. Actualisez la page _Connexion_ dans votre navigateur Web.
+
+
+=== Votre licence a expiré
+
+La période d'essai de 30 jours s'est terminée.
+Si vous voulez étendre la période d'essai, vous devez demander une nouvelle licence en envoyant un courrier électronique à __support@ikanalm.com__.
+
+:sectnums:

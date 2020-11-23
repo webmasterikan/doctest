@@ -1,0 +1,406 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_desktop_managedesktop]]
+= Managing the Desktop 
+(((Desktop ,Managing Your Desktop)))  (((Managing Your Desktop))) 
+
+Each IKAN ALM User has access to a personal Desktop made up of adjustable Tab Pages, each of them containing current information about the Project Streams, Levels and Packages he or she is interested in.
+You can personalize up to 10 Tab Pages on your Desktop and each Tab Page can contain up to 20 Element Types.
+
+Furthermore the personal Desktop provides a shortcut to the Level Request creation and view options.
+
+The following actions are possible:
+
+* Managing the Desktop Tab Pages
+** <<Desktop_ManageDesktop.adoc#_managedesktop_desktopoverview,The Desktop Overview Screen>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_addingtabs,Adding a Desktop Tab Page>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_modifyingtabinformation,Editing the Desktop Tab Page Label>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_removingtabpage,Removing a Desktop Tab Page>>
+* Managing the Desktop content
+** <<Desktop_ManageDesktop.adoc#_managedesktop_addingelements,Adding Elements to a Desktop Tab Page>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_arrangingelements,Rearranging Desktop Elements>>
+** <<Desktop_ManageDesktop.adoc#_managedesktop_removingelements,Removing Desktop Elements>>
+
+[[_managedesktop_desktopoverview]]
+== The Desktop Overview Screen
+(((Desktop ,Overview))) 
+
+. Select _Desktop_ on the Main Menu.
++
+Your personal _Desktop Overview_ will be displayed.
++
+image::Desktop-DesktopOverview.png[,1010,498] 
++
+
+[NOTE]
+====
+If your Desktop Overview is empty, you can add content to it using the _Add to Desktop_ button. <<Desktop_ManageDesktop.adoc#_managedesktop_addingelements,Adding Elements to a Desktop Tab Page>>
+====
+. Verify the elements on your Desktop.
++
+Per Tab Page, the following fields are available for each desktop element type.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Description
+
+|Desktop Type
+a|This field contains an indication of the Element type assigned to the Desktop.
+
+There are three possibilities:
+
+* Project Stream
+* Level
+* Package
+
+_Note:_ Click the image:icons/ExpandProjectStream.gif[,10,10] icon to expand assigned Project Streams or Packages and to display the Levels that belong to it.
+
+|Project Stream [Package] 
+a|There are three possibilities:
+
+* For assigned Project Streams, this field contains the identification of that Project Stream. Example: `Webpad H_3-0`
+* For assigned individual Levels, this field contains the identification of the Project Stream this Level belongs to. Example: `Webpad B_3-1`
+* For assigned Packages, this field contains the identification of the Project Stream and the name of the Package-based Project. Example: `DemoMVS H_1-0 DemoMVS_Pack1`
+
+The Project Stream identification is composed of:
+
+* Project Name
+* Project Stream Type: H (Head) or B (Branch)
+* Project Stream Prefix, optionally followed by the Suffix in case of a Branch Project Stream
+
+|Level
+|For individual Levels, this field contains the name of that Level.
+
+For non-expanded Project Streams, this field contains the name of the highest Level belonging to the Project Stream.
+This is logically the Production Level.
+
+In case a Level is optional, the image:icons/optional.gif[,15,15] _Optional_ icon will be displayed in front of the Level Name.
+
+|Next Scheduled Request
+a|For Build Levels with active Schedule, this field displays the timestamp that the next Level Request is expected to run.
+
+The Level Request will not run, if:
+
+* the code was not changed,
+* the Scheduler is deactivated.
+
+For other Levels, this field remains empty.
+
+|Latest Level Request
+a|This field contains the following information for the latest Request on the displayed Level:
+
+* Request status icon indicating the status of the latest Request on this Level:
+** image:icons/succes.gif[,15,15] : Success
+** image:icons/warning.gif[,15,15] : Warning
+** image:icons/run.gif[,15,15] : Running
+** image:icons/fail.gif[,15,15] : Fail
+** image:icons/waiting_approval.gif[,15,15] : Awaiting Pre-Approval or Awaiting Post-Approval
+** image:icons/waiting_datetime.gif[,15,15] : Awaiting Run Time
+** image:icons/reject.gif[,15,15] : Rejected
+** image:icons/aborted.gif[,15,15] : Aborted
+** image:icons/cancelled.gif[,15,15] : Canceled
+
+* The VCR Tag (matching the defined template) and timestamp for Requests with status __Success__, _Failed_ and __Warning__.
++
+These indications are displayed as a link.
+Click the link to access the <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Detailed Overview>> for the selected Level Request.
+* Link (image:icons/desktop_link.gif[,22,11] ) to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>> with Project name and Level name already filled in as Search Criteria.
+
+
+|Latest Successful Level Request
+|This field contains the VCR Tag (matching the defined template) and timestamp for the latest successful Request on the displayed Level.
+
+These indications are displayed as a link.
+Click the link to access the <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>> selected Level Request.
+
+|Action
+a|This field contains the action icons which are available for the Level:
+
+* image:icons/request.gif[,15,15] : For a Build Level, this icon allows creating a Level Request that will generate a new Build. For Build Levels with an active Scheduler, this matches a Forced Build. For Build Levels without active Scheduler, this matches a Requested Build. <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_build,Creating a Build Level Request>>
++
+For Test and Production Levels, this icon allows creating a Level Request for <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_deliver,Creating a Deliver Build Level Request>>.
+* image:icons/requestPlus.gif[,15,15] : This icon (only available for Build Levels) allows creating a Level Request that will generate a new Build. The Create Level Request dialog will contain additional information about the modifications since the last Level Request. For Levels with an active Scheduler, this matches a Force+ Build. For Build Levels without active Scheduler, this matches a Request+ Build. <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_build,Creating a Build Level Request>>
+* image:icons/rollback.gif[,15,15] : This icon (only available for Production Levels) allows creating a Level Request that will restore a previous Build on that Level. Refer to <<Desktop_LevelRequests.adoc#_desktop_lr_createlevelrequest_rollback,Creating a Rollback Build Level Request>>.
+
+
+|Message
+a|If it is not possible to define a Request for a specific Level, the messages in this field may indicate the reason.
+
+* _A Level Request is pending for this Level of this Project Stream_
++
+This message is displayed, if a Level Request is being executed or waiting for approval.
+You will need to wait until the current Level Request is completed, before you can define a new Level Request for this Level.
+* _The Level is locked_
++
+It is not possible to define Level Requests for Locked Levels.
+You (or the Project Manager) must <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects,Auditing Projects>>, before you can define Level Requests for this Level.
+* _No Request Rights_
++
+It is not possible to define Level Requests, if the User ID you are logged in with does not have the required access rights.
+You must connect with a User ID having the right to run Requests or ask the Global Administrator to give this right to your User ID.
+* _The Project is locked_
++
+It is not possible to define Level Requests for locked Projects.
++
+Unlock the Project first by clicking the _Unlock_ button on the __Projects Overview__. <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* _The Project Stream is locked_
++
+It is not possible to define Level Requests for locked Project Streams.
+You (or the Project Manager) can unlock the Project Stream first by clicking the _Unlock_ button on the __Edit Project Stream screen__. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Editing Project Stream Settings>>
+* _The Project Stream is frozen_
++
+It is not possible to define Build Level Requests for frozen Project Streams.
+You (or the Project Manager) can unfreeze the Project Stream first by selecting another status from the _Status_ drop-down menu on the __Edit Project Stream screen__. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,Editing Project Stream Settings>>
+
+
+|image:icons/remove.gif[,15,15] 
+|Click this link to remove the selected element from the Desktop Overview.
+|===
+
+. Click the _Refresh_ button if you want to verify the changing status of the information on your Desktop.
++
+The screen will be refreshed each time you click the __Refresh__ button.
++
+
+[NOTE]
+====
+If the __Auto Refresh__ option is activated, the Desktop will be refreshed each time the defined rate is expired. <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
+====
+. Click the _Add to Desktop_ button to open the _Add to Desktop_ pop-up window allowing you to add other elements to your desktop.
++
+<<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
+
+[[_managedesktop_addingtabs]]
+== Adding a Desktop Tab Page 
+(((Desktop ,Adding a Desktop Tab Page))) 
+
+. Select _Desktop_ on the Main Menu.
+. Click the image:icons/icon_NewDesktop.gif[,16,16] _New Desktop_ button.
++
+
+[NOTE]
+====
+You can also right-click the Tab Page label of any existing Tab Page and select _New Desktop_ from the menu.
+====
++
+The following screen is displayed:
++
+image::Desktop-ManageDesktop-NewTabPage.png[,445,154] 
++
+. Fill out the fields for the new Tab Page. 
++
+The following fields are available:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Name
+|Enter the name of the new Tab Page.
+
+By default, the number of the Tab Page is filled in.
+
+|Description
+|Enter a description for the new Tab Page.
+This description is shown when you point your mouse cursor to the name of the Tab Page.
+|===
+
+. Click _Create_ to confirm the creation of the new Tab Page.
++
+You can also click _Cancel_ to return to _Desktop Overview_ screen without making any changes.
++
+
+[NOTE]
+====
+It is possible to create up to 10 tab pages.
+====
+
+[[_managedesktop_modifyingtabinformation]]
+== Editing the Desktop Tab Page Label 
+(((Desktop ,Editing the Desktop Tab Page Label))) 
+
+. Select _Desktop_ on the Main Menu.
+
+. Double-click the Tab Page label you want to edit.
++
+
+[NOTE]
+====
+You can also right-click the Tab Page label and select _Edit
+Desktop_ from the menu.
+====
++
+The following screen is displayed:
++
+image::Desktop-ManageDesktop-EditTabPageLabel.png[,447,155] 
++
+. Edit the fields for the Tab Page. 
++
+For a detailed description of the fields, refer to <<Desktop_ManageDesktop.adoc#_managedesktop_addingtabs,Adding a Desktop Tab Page>>.
+. Click __Save__, once you have finished your changes.
++
+You can also click _Cancel_ to return to _Desktop Overview_ screen without making any changes.
+
+
+[[_managedesktop_removingtabpage]]
+== Removing a Desktop Tab Page 
+(((Desktop ,Removing a Desktop Tab Page))) 
+
+To remove a Desktop Tab Page, click the image:icons/icon_removeDesktop.gif[,15,14] _Remove Desktop_ button.
+
+[NOTE]
+====
+You can also right-click the Tab Page label and select _Remove
+Desktop_ from the menu.
+====
+
+The following screen is displayed:
+
+image::Desktop-ManageDesktop-RemoveTabPage.png[,450,141] 
+
+Confirm or cancel the deletion of the Tab Page.
+
+[[_managedesktop_addingelements]]
+== Adding Elements to a Desktop Tab Page 
+(((Desktop ,Adding Elements to a Desktop Tab Page))) 
+
+. Select _Desktop_ on the Main Menu.
+. Select the Tab Page you want to add elements to.
++
+The _Desktop Overview_ screen for the selected Tab Page is displayed.
++
+
+[NOTE]
+====
+If you want to add elements to a new Tab Page, you should create the Tab Page first. <<Desktop_ManageDesktop.adoc#_managedesktop_addingtabs,Adding a Desktop Tab Page>>
+====
+
+. Switch to the _Add to Desktop_ screen.
++
+Click the _Add to Desktop_ button underneath the _Desktop Overview_ screen, or right-click the overview and select __Add to Desktop__.
++
+The following screen is displayed.
++
+image::Desktop-ManageDesktop.png[,793,470] 
++
+. Define search criteria on the Search Project Stream panel.
++
+If you do not immediately find the element you want to add, you can use the search panel on the left.
++
+The following search criteria are available:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Search Criteria
+| Meaning
+
+|Project Name
+|Enter the name of the Project for which you want to display the Project Streams.
+
+|VCR
+|Enter the VCR name.
+
+|Project Type
+|Enter the type of the Project: Release-based of Package-based.
+
+|Project Stream Type
+|Enter the type of the Project Stream: Head or Branch.
+
+|Status
+a|Enter the status of the Project Stream:
+
+* Under construction
+* Planning
+* Development
+* Testing
+* Stable
+* General available
+* Frozen
+* Closed
+
+
+|Locked
+|Indicate whether or not you want to display locked Project Streams.
+
+|Show Hidden Project Streams
+|Indicate whether or not you want to display hidden Project Streams.
+
+|Show Hidden Packages
+|Indicate whether or not you want to display hidden Packages.
+|===
++
+The list of elements displayed in the tree at the right, will be limited to the Project Streams matching these search criteria.
++
+Click the _Reset_ button to clear the Search fields.
+
+. Select the element(s) you want to add.
++
+In the tree at the right, select the Project Stream, Level or Package you want to add and click the _Add to Desktop_ button.
++
+
+.. Adding a complete Project Stream
++
+Expand the tree for the corresponding Project using the image:icons/ExpandProjectStream.gif[,10,10]  icon to display its Project Streams.
+Select the Project Stream you want to add and click the _Add to Desktop_ button.
++
+If you add a Project Stream to your Desktop, all Levels belonging to that Project Stream will also be available on your Desktop.
+.. Adding an individual Level
++
+Expand the tree for the corresponding Project Stream using the image:icons/ExpandProjectStream.gif[,10,10]  icon to display its Levels (and Packages). Select the Level(s) you want to add and click the _Add to Desktop_ button.
+.. Adding a Package
++
+Expand the tree for the corresponding Project Stream using the image:icons/ExpandProjectStream.gif[,10,10]  icon to display its Packages (and Levels). Select the Package(s) you want to add and click the _Add to Desktop_ button.
++
+If you add a Package to your Desktop, all Levels belonging to the Project Stream of the Package will also be available on your Desktop.
++
+Example of the selection of a Package and a Project Stream:
++
+image::Desktop-ManageDesktop-Example1.png[,790,471] 
++
+When adding an element to the Desktop, the underlying _Desktop
+Overview_ is immediately updated.
++
+
+[NOTE]
+====
+You can select several Project Streams, Levels and Packages at once.
+
+You can add maximum 20 elements to each of your Desktop Tab Pages.
+
+If you add a Project Stream or Package containing multiple Levels, this Project Stream or Package is considered to be only one element.
+====
+. Click the _Close_ button to return to the _Desktop Overview_ screen.
+
+
+[[_managedesktop_arrangingelements]]
+== Rearranging Desktop Elements 
+(((Desktop ,Rearranging Desktop Elements))) 
+
+To modify the order of the elements, select the element(s) using the _SHIFT_ or _CTRL_ keys, and, while holding down the left-hand mouse button, drag the element(s) to the required position on the Overview.
+
+[NOTE]
+====
+The orange line indicates the target position of the selected elements.
+Valid positions are indicated with a green bar above the selected elements, invalid positions with a red bar.
+====
+
+Example:
+
+
+image::Desktop-ManageDesktop-Rearranging.png[,947,362] 
+
+
+[[_managedesktop_removingelements]]
+== Removing Desktop Elements 
+(((Desktop ,Removing Desktop Elements))) 
+
+To remove a Project Stream, Level or Package, click the image:icons/remove.gif[,15,15] __Remove__ button at the right of the element row.
+
+The Desktop element is immediately removed from the _Desktop
+Overview_ screen.

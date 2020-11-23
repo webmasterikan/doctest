@@ -1,0 +1,154 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_projadm_auditingprojects_errorswarnings]]
+[[_projadm_auditingprojects]]
+= Auditing Projects 
+(((Project Administration ,Auditing Projects)))  (((Project Management Options ,Auditing Projects))) 
+
+When the user requests the audit of a Project, IKAN ALM performs the following checks:
+
+* The physical Build Archive locations must exist for all Project Streams.
+** For the Head Stream, this location matches the following path: __SystemSettingsBuildArchive/ProjectName/StreamBuildPrefix__.
+** For the Branch Streams, this location matches the following path: __SystemSettingsBuildArchive/ProjectName/StreamBuildPrefix.StreamBuildSuffix__.
+
++
+IKAN ALM blocks the Project Streams for which this test fails.
+* There is exactly one Build Level defined for each Lifecycle. IKAN ALM blocks the Project Streams for which this test fails.
+* There is exactly one Build Environment defined for the Build Level. IKAN ALM blocks the Levels for which this test fails.
+* If no Build Script is defined in the Project, every Build Environment must have a Build Script defined. IKAN ALM blocks the Levels for which this test fails.
+* If no Deploy Script is defined in the Project, every Deploy Environment must have a Deploy Script defined. IKAN ALM blocks the Levels for which this test fails.
+* If a Custom Phase is inserted in a Level, IKAN ALM verifies if a value is specified for the mandatory parameter 'alm.phase.builder' of the Custom Phase. IKAN ALM blocks the Levels for which this test fails.
+
+
+The following tests will return a warning:
+
+* There is at least one Build or Deploy Environment defined for each Test Level. Since version 5.0, IKAN ALM allows Test levels without Build or Deploy Environment, which can be seen as a sort of "`Milestone`" Test Levels.
+* There is at least one Deploy Environment defined for each Production Level. Since version 5.0, IKAN ALM allows Production levels without Build or Deploy Environment, which can be seen as a sort of "`Milestone`" Production Levels.
+
+[[_projadm_auditingprojects_auditproject]]
+== Auditing a Project
+(((Auditing)))  (((Auditing ,Projects))) 
+
+. In the __Project Administration context__, select__ Audit Project__.
++
+If the Project configuration is consistent, the following screen is displayed:
++
+image::ProjAdmin-Audit-Success.png[,964,610] 
++
+If there are errors in the Project configuration, the following screen is displayed:
++
+image::ProjAdmin-Audit-Error.png[,1037,573] 
++
+Locked Project Streams and Levels have a image:icons/locked.gif[,15,15] _Locked_ icon in the _Locked_ field.
+In the sample screen above, this is the case for the _TestPartialBuild_ Level.
+Error or warning messages are displayed in red in the _Message_ field.
++
+For the list of possible error and warning messages, refer to the section <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects_errorswarnings,Error and Warning Messages>>.
+. Verify if all Project Streams and Levels are properly defined and accessible for IKAN ALM, and correct the errors if required.
+. If the Project Configuration is consistent, click the _Unlock_ button in the _Actions_ panel to unlock all locked Project Streams and Levels of the Project.
+
+
+[[_projadm_auditingprojects_errorswarnings]]
+== Error and Warning Messages (((Auditing ,Error and Warning Messages))) 
+
+The following sections list the possible error and warning messages when auditing a Project.
+
+** <<ProjAdm_AuditProjects.adoc#_babgjghf,Error Messages>>
+** <<ProjAdm_AuditProjects.adoc#_babcfbhf,Warning Messages>>
+
+
+[[_babgjghf]]
+=== Error Messages
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Error Message
+| Solution
+
+|`No Lifecycle linked`
+|Error message on a Project Stream: a Project Stream must be linked to a Lifecycle.
+
+|`No Build Level linked to the Lifecycle
+of the Project Stream`
+|Error message on a Project Stream: its Lifecycle must have one Build Level.
+
+|`Build Archive Location not found`
+|Error message on a Project Stream: there is no Build Archive location under the indicated path and IKAN ALM cannot create it. 
+
+During the audit, IKAN ALM verifies if there is a Build Archive location for the Project Stream under the System Settings Build Archive Location.
+If it is absent, it tries to create a Build Archive location for the Project Stream, but this process did not succeed, e.g., caused by security problems.
+
+Contact the IKAN ALM administrator, who can verify the log messages to find the cause of this problem.
+
+|`No Build Environment found`
+|Error message on Build Level: a Build Level must be linked to exactly one Build Environment.
+
+|`More than one Build Environment found`
+|Error message on a Build Level: a Build Level must be linked to exactly one Build Environment.
+
+|`Please Specify a unique Build Suffix for
+each Build Environment`
+|Error message on a Test or Production Level with more than one Build Environment.
+In such a case, each Build Environment must have a unique Build Suffix in order to not overwrite Build result files in the Build Archive.
+
+|`No Build Script specified`
+|Error on a Build Environment: there is no Build script specified for the Build Environment.
+A Build script may be specified in the Project definition, or be overwritten in the Build Environment definition.
+
+|`Build tool is inconsistent with project
+build tool type`
+|Error message on a Build Environment.
+The Build Tool connected to the Build Environment is not of the Build Tool type that was specified in the Project Definition.
+
+For example: a Project definition with Ant as Build Tool type has a Build Environment that is linked to a Maven2 Scripting Tool definition.
+
+|`Connected Build Environment is not linked
+to a Level in the Lifecycle`
+|Error message on a Deploy Environment: the Build Environment that is linked to the Deploy Environment is not in the Lifecycle of the Level containing the Deploy Environment.
+The reason is that the Level that contains the Build Environment is not connected to this Lifecycle.
+
+|`Connected Build Environment is linked
+to a Level higher in the Lifecycle`
+|Error message on a Deploy Environment: its connected Build Environment is part of a Level that, in the Lifecycle, comes after the Level containing the Deploy Environment.
+This makes Deploys impossible, since the Build Result must have been created earlier or at the same point in the Lifecycle.
+
+|`Connected Build Environment is linked
+to an optional Level lower in the Lifecycle`
+|Error message on a Deploy Environment: the linked Build Environment may not be part of an optional Level.
+Otherwise, it would be possible to skip the optional Level and deploy a Build Result that was not created.
+
+|`Deploy tool is inconsistent with project
+deploy tool type`
+|Error message on a Deploy Environment.
+The Deploy Tool connected to the Deploy Environment is not of the Deploy Tool type that was specified on the Project Definition.
+For example: a Project definition with NAnt as Deploy Tool Type has a Deploy Environment that is linked to an Ant Scripting Tool definition.
+
+|`Empty mandatory parameter 'alm.phase.builder'
+in Phase 'Phase Display Name'`
+|Error message on a Level.
+A Custom Phase with the given Display Name is inserted in the Level, but the value of the (automatically) created alm.phase.builder Parameter of this Phase is empty.
+Navigate to the _Level
+Phases Overview_ of the Level, and click the __View
+Parameters __link next to the indicated Phase.
+Here you may set a value for the alm.phase.builder parameter by clicking the _Edit_ link (<<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,The Phase Parameters Overview Screen>>).
+|===
+
+[[_babcfbhf]]
+=== Warning Messages
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Warning Message
+| Solution
+
+|`No Build or Deploy Environment found`
+|Warning message on a Test Level.
+As from the release of IKAN ALM 5.0, it is allowed for Test Levels to have no Build nor Deploy Environment connected.
+Such a "`no operation`" Test Level can be considered as a sort of a milestone acquired in the Lifecycle.
+
+|`No Deploy Environment found`
+|Warning message on a Production Level.
+Since IKAN ALM 5.0 it is allowed for Production Levels to have no Deploy Environment connected.
+Such a "`no operation`" Level can be considered as a sort of a milestone acquired in the Lifecycle.
+|===

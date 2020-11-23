@@ -1,0 +1,123 @@
+
+:sectnums!:
+
+[[_jaasconfiguration]]
+== Appendice Configuration JAAS
+
+Pour plus d'informations concernant l'authentification et l'autorisation des Utilisateurs, IKAN ALM utilise le service d'authentification et d'autorisation Java (JAAS) (se référer à http://download.oracle.com/javase/6/docs/technotes/guides/security/jaas/JAASRefGuide.html). 
+
+L'installation du Serveur IKAN ALM préconfigure JAAS automatiquement.
+Cet appendice est utile pour la résolution de problèmes ou si vous voulez modifier l`'authentification, par exemple, pour l'utiliser l'Authentification de domaine de Windows.
+
+L'authentification JAAS est réalisée de manière enfichable.
+Ainsi les applications peuvent rester indépendantes des technologies d'authentification sous-jacentes.
+Les nouvelles technologies d'authentification ou les mises à jour peuvent être enfichées dans IKAN ALM sans nécessiter des modifications à l'application même. 
+
+=== Configuration JAAS du Serveur IKAN ALM
+
+L'installation du Serveur IKAN ALM modifie le fichier de propriétés de sécurité Java, nommé "java.security" qui se trouve dans le répertoire "JVM_HOME/jre/lib/security" du J2SE SDK.
+Notez que Tomcat _doit_ être démarré avec la Machine Virtuelle Java dans le répertoire JVM_HOME, sinon des erreurs d'authentification se produiront.
+
+L'emplacement de ce fichier de configuration de connexion est établi de manière statique en spécifiant l'URL dans la propriété login.config.url.n (dans le paragraphe "Default login configuration file), par exemple, 
+
+[source]
+----
+#
+# Default login configuration file
+#
+#login.config.url.1=file:${user.home}/.java.login.config 
+login.config.url.1=file:/opt/alm/system/security/jaas.config
+----
+
+dans lequel "/opt/alm" est l'ALM_HOME sélectionné.
+
+Si plusieurs fichiers de configuration ont été spécifiés (if n >= 2), ils seront tous lus et combinés dans un seul fichier de configuration: 
+
+[source]
+----
+#
+# Default login configuration file
+#
+#login.config.url.1=file:${user.home}/.java.login.config 
+login.config.url.1=file:c:/Documents et Settings/Administrator/.java.login.config
+login.config.url.2=file:c:/alm/system/security/jaas.config
+----
+
+=== L'option JVM ou la configuration JAAS user.home
+
+Vous pouvez configurer JAAS de deux façons:
+
+La première utilise une propriété système spécifiée à partir de la Ligne de Commande: l'option `-Djava.security.auth.login.config`
+
+Si vous exécutez Tomcat via un terminal, modifiez la commande de terminal et spécifiez une option JVM supplémentaire (par exemple, dans le fichier __TOMCAT_HOME/bin/Catalina.sh ou le fichier
+Catalina.bat__):
+
+`exportez JAVA_OPTS=-Djava.security.auth.login.config=/opt/alm/system/security/jaas.config`
+
+La deuxième option utilise le fichier de configuration par défaut qui est chargé à partir du répertoire d'accueil de l'Utilisateur:
+
+`file:${user.home}/.java.login.config`
+
+=== Implémentation JAAS: Sécurité à fichier plat
+
+Le Serveur IKAN ALM utilise cette implémentation JAAS simple dans laquelle les Groupes d`'utilisateurs et les Utilisateurs sont configurés dans un fichier plat.
+Dans le fichier de configuration JAAS, cela est spécifié comme suit (si ALM_HOME=`"/opt/alm`"):
+
+[source]
+----
+/** 
+* ALM flat file security configuration 
+* Attention : the passwords in the passwd.config file must
+be stored in MD5 encryption format **/
+**/
+ALM
+{
+ com.tagish.auth.FileLogin required pwdFile=”/opt/alm/system/security/passwd.config";
+};
+----
+
+=== Sécurité à fichier plat: Contenu
+
+Lorsque l'on utilise la sécurité à fichier plat, le contenu du fichier passwd.config est assez simple et intuitif:
+
+[source]
+----
+userid:encrypted password:groupname:groupname:groupname
+user:ee11cbb19052e40b07aac0ca060c23ee:ALM User
+project:46f86faa6bbf9ac94a7e459509a20ed0:ALM User:ALM Project
+global:9c70933aff6b2a6d08c687a6cbb6b765:ALM User:ALM Administrator
+----
+
+Le mot de passe crypté est dans le format de cryptage MD5.
+Il existe de nombreux outils gratuitement téléchargeables pouvant générer une somme de contrôle MD5 pour une chaîne de caractères donnée.
+Il y a même une implémentation JavaScript que vous pouvez utiliser en ligne pour calculer les sommes de contrôle: http://pajhome.org.uk/crypt/md5/index.html[
+ http://pajhome.org.uk/crypt/md5/index.html]
+
+Par exemple: pour ajouter un Utilisateur avec comme identifiant Utilisateur "testuser" et comme Mot de passe "testuser", appartenant aux Groupes d`'utilisateurs "ALM User" et "ALM Project", procédez comme suit:
+
+. Ajoutez l'entrée suivante au fichier passwd.config:
++
+``testuser:5d9c68c6c50ed3d02a2fcf54f63993b6:ALM
+User:ALM Project``
+. Arrêtez et redémarrez Apache Tomcat.
+. Connectez-vous à IKAN ALM avec l'identifiant Utilisateur "testuser" et le Mot de passe "testuser".
+
+
+:sectnums:
+
+:sectnums!:
+
+[[_db2_configuration]]
+== Appendice Configuration DB2
+
+Si vous utilisez DB2 comme Base de données IKAN ALM, assurez-vous que la taille de page de l'espace de table et le "buffer pool" y associé ne soit pas inférieure à 8 ko.
+Sinon, au moment de créer la nouvelle base de données en DB2, la taille de page par défaut sera de 4 ko, ce qui pourrait entraîner des erreurs SQL lors de l'exécution du script d'initialisation de la base de données.
+
+
+image::AppB_DB2config.png[,792,570] 
+
+La taille de page de l'espace de table en DB2 est déterminée par le "buffer pool" y associé, mais vous ne pouvez pas modifier la taille de page d'un "buffer pool". Si vous voulez utiliser une base de données DB2 existante pour laquelle la taille de page est déjà établie à 4 ko, vous pourriez contourner ce cas en créant un nouveau "buffer pool" avec une taille de page de 8 ko et en créant ensuite un nouvel espace de table (par exemple, USERSPACE2) avec une taille de page de 8 ko et l'associer au nouveau "buffer pool".
+
+En plus, vous devez également créer un nouvel espace de table système temporaire (par exemple, TEMPSPACE2) et l'associer avec un "buffer pool" dont la taille de page est établie à au moins 8 ko.
+
+:sectnums:

@@ -1,0 +1,40 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_projadm_introduction]]
+= Project Administration  
+(((Project Administration))) 
+
+The following IKAN ALM elements are typically used by a Project Administrator:
+
+* <<ProjAdm_Projects.adoc#_projadm_projects,Projects>>
+* <<ProjAdm_ProjMgtOptions.adoc#_projadm_projmgtoptions,Project Administration Options>>
+
+
+== Accessing the Projects Overview
+
+On the Main Menu, click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon.
+
+The overview of all projects will be displayed.
+
+== Accessing the Project Administration Options
+
+From the __Projects Overview__, you can access the Project Administration Options.
+
+In the remainder of this document, we will refer to this section of the interface as the "`Project Administration context`". 
+
+
+. On the __Projects Overview__, click the image:icons/edit.gif[,15,15] _Edit_ link in front of the Project you want to edit.
++
+
+[NOTE]
+====
+If you have User Access Rights, you can access this Overview using the _View_ link (the available options will be limited).
+====
+. Now you are in the so-called "`Project Administration context`".
++
+On the submenu, the different Project Administration options have become available.
++
+
+
+image::ProjAdmin-ProjMgt-SubmenuOptions.png[,1023,80] 

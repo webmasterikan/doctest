@@ -1,0 +1,182 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+= Aperçu de l`'interface utilisateur 
+(((Interface Utilisateur)))  (((Administration des projets ,Interface utilisateur))) 
+
+Se référer aux sections suivantes pour des informations plus détaillées concernant:
+
+* <<UserInterface.adoc#_navigationikanalm,Naviguer dans IKAN ALM>>
+* <<UserInterface.adoc#_regularikanalmscreens,L'écran IKAN ALM>>
+* <<UserInterface.adoc#_desktop_autorefresh,Actualisation automatique>>
+
+
+[[_navigationikanalm]]
+== Naviguer dans IKAN ALM  
+(((Interface Utilisateur ,Navigation))) 
+
+=== Menu Principal
+L'Interface Utilisateur d'IKAN ALM est composée de 3 sections principales: le Bureau, la section Administration des projets et la section Administration globale.
+Ces sections sont accessibles à partir du __Menu Principal__, la barre d'outils bleue en haut de l'écran.
+À droite, elle contient les Paramètres Utilisateur de l'Utilisateur actuel ainsi que l'aide contextuelle.
+
+
+image::UserInterface_MainMenu_Sections.png[,936,299] 
+
+=== Sous-menus
+Si vous sélectionnez l'option "Administration des projets" ou "Administration globale" à partir du Menu Principal, le sous-menu dépendant s'affiche dans la barre grise en-dessous du Menu Principal.
+
+Les options de sous-menu suivi d'un petit triangle disposent d'un menu déroulant contenant des options de sélection supplémentaires.
+
+Dans les écrans IKAN ALM, les _Liens_ sont disponibles dans ou en-dessous des panneaux d'Aperçu.
+Si vous cliquez un de ces liens, un autre écran IKAN ALM s'affichera.
+
+
+image::UserInterface_MainMenu_Navigating.png[,937,392] 
+
+
+[[_regularikanalmscreens]]
+== L'écran IKAN ALM 
+(((Interface Utilisateur ,Écrans))) 
+
+Un écran IKAN ALM contient les éléments principaux suivants:
+
+
+image::UserInterface-Screens.png[,948,551] 
+
+=== Le fil d'Ariane
+Le _Fil d'Ariane_ en-dessous du sous-menu montre comment l'utilisateur a accédé l'écran IKAN ALM affiché.
+Le format suivant est utilisé: _Option du Menu Principal
+> option du sous-menu_
+
+[[_babcjedaj8]]
+=== Les panneaux de recherche
+image::UserInterface-SearchPanel.png[,965,156] 
+
+Les panneaux de _Recherche_ permettent de spécifier les critères de recherche qui limiteront la liste des éléments dans le panneau __Aperçu__.
+Pour spécifier ces critères de recherche via les listes déroulantes ou les champs de texte, vous pouvez utiliser les caractères génériques '*' and '?'. L'astérisque peut représenter 0, 1 ou plusieurs caractères.
+Le point d'interrogation représente seulement 1 caractère.
+
+Par défaut, seuls les critères de recherche les plus communs sont affichés dans le panneau de recherche.
+Vous pouvez afficher tous les critères de recherche disponibles en cliquant sur le lien __Montrer
+les options avancées__.
+
+En utilisant le lien __Réinitialiser la recherche__, vous pouvez nettoyer tous les critères de recherche et afficher la liste complète des éléments dans l'Aperçu.
+
+Dans certains des panneaux de recherche plus complexes, vous pouvez sauvegarder les critères de recherche sous forme d'un Filtre pour pouvoir les réutiliser plus tard.
+Les Filtres existants peuvent être sélectionnés à partir du menu déroulant.
+Pour plus d`'informations concernant l'utilisation des Filtres, se référer à la section <<Desktop_PersonalSettings.adoc#_cihjfebab8,Gérer les définitions des Filtres>>.
+
+=== Les panneaux de création
+image::UserInterface-CreatePanel.png[,488,259] 
+
+Les panneaux de _Création_ permettent de définir de nouveaux objets IKAN ALM.
+Les champs obligatoires sont marqués d'un astérisque rouge.
+
+Cliquez sur le bouton _Créer_ pour créer l'objet.
+En fonction de l'objet que vous créez, le bouton _Réinitialiser_ nettoiera les champs et/ou restaurera les valeurs initiales.
+
+=== Les panneaux d'Aperçu
+Les panneaux d'__Aperçu _sont affichés en-dessous du panneau de _Recherche_ ou de __Création_.
+Si aucun critère de recherche n'est spécifié, l'aperçu liste tous les objets IKAN ALM du type sélectionné.
+Si des critères de recherche sont spécifiés, seuls les objets IKAN ALM correspondant aux critères de recherche sont affichés.
+
+[NOTE]
+====
+Tous les critères de recherche appliqués sont indiqués en bas de la liste des résultats.
+====
+
+Le panneau d'__Aperçu__ peut afficher un ou plusieurs liens à gauche des objets IKAN ALM listés.
+Les options diffèrent en fonction des objets IKAN ALM affichés et des droits d'accès de l'Utilisateur.
+
+Si vous disposez des droits d'accès d'Utilisateur, les liens suivants sont disponibles:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Option
+| Description
+
+|image:icons/view.gif[,15,15]  Afficher 
+|Si vous sélectionnez l'option __Afficher__, un panneau d'__Aperçu__ sera affiché en-dessous du __fil d'Ariane__.
+
+Vous ne pourrez pas modifier les valeurs.
+
+|image:icons/history.gif[,15,15]  Historique
+|Cette option est disponible pour les écrans d'aperçu dans le contexte de l'Administration globale et de l'Administration des projets.
+Elle est également disponible dans certains écrans détaillés de l'Administration globale et de l'Administration des projets, par exemple dans l'écran des Paramètres système ou l'écran "Modifier un Projet".
+
+Toutes les opérations exécutées sur des objets et des composants associés à ces sections sont enregistrés dans la Base de données IKAN ALM.
+Le lien _Historique_ permet d'afficher l'Historique des événements.
+
+|image:icons/status.gif[,15,15]  Statut
+|Cette option est disponible dans l'écran __Aperçu des Machines__.
+
+Utilisez ce lien pour afficher le statut d'activité de la Machine et les dernières lignes de sortie du processus "démon" de l'Agent fonctionnant sur cette Machine.
+|===
+
+
+Si vous disposez de droits d'accès d'Administrateur de Projet ou d'Administrateur global, les options additionnelles suivantes peuvent être disponibles:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Option
+| Description
+
+|image:icons/edit.gif[,15,15]  Modifier
+|Si vous sélectionnez l'option _Modifier__, un panneau de _Modification_ sera affiché en-dessous du __fil d'Ariane_.
+
+Vous aurez la possibilité de modifier les valeurs requises et de sauvegarder les modifications.
+
+|image:icons/delete.gif[,15,15]  Supprimer
+|Si vous sélectionnez l'option _Supprimer_, un panneau de _Confirmation
+de la suppression_ sera affiché en-dessous du __fil
+d'Ariane__.
+
+Vous pourrez confirmer ou annuler la suppression.
+
+|image:icons/lock.gif[,15,15]  Verrouiller
+image:icons/unlock.gif[,15,15]  Déverrouiller
+|Cette option est spécifique pour les panneaux _Aperçu des Projets_ et __Aperçu
+des Branches__.
+
+|image:icons/hide.gif[,15,15]  Cacher
+image:icons/show.gif[,15,15]  Montrer
+|Ces options sont spécifiques pour les panneaux _Aperçu des Projets_ et __Aperçu
+des Branches__.
+
+elles vous permettent de cacher des Projets ou des Branches spécifiques dans l'aperçu des résultats de recherche.
+
+|image:icons/optional.gif[,15,15]  Mettre optionnel
+image:icons/required.gif[,15,15]  Mettre obligatoire
+|Ces options sont spécifiques pour l'__Aperçu des Cycles de vie__.
+
+Elles vous permettent rendre un Niveau optionnel. 
+
+|image:icons/icon_editProperties.png[,15,15]  Modifier les propriétés
+|Cette option est spécifique pour l'écran __Aperçu des Systèmes de Suivi des Incidents__.
+
+Elle vous permet de modifier la valeur d'une Propriété pour garantir l'utilisation correcte du Système de Suivi des Incidents.
+
+|image:icons/icon_disconnectUser.png[,15,15]  Déconnecter un Utilisateur
+|Cette option est spécifique pour l'écran __Aperçu des Utilisateurs__.
+
+Elle vous permet de déconnecter des Utilisateurs avant que leur session n'expire.
+|===
+
+[NOTE]
+====
+
+Les colonnes marquées de l'icône image:icons/sort.gif[,18,19]  peuvent être rangées par ordre alphabétique (ascendant ou descendant).
+====
+
+[[_desktop_autorefresh]]
+== Actualisation automatique
+
+Si votre Administrateur global IKAN ALM a spécifié un _Intervalle d'actualisation automatique_ dans le panneau _Autres activités_ dans l'écran <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>, l'option __Actualiser automatiquement__ sera disponible dans le Bureau et dans les aperçus des Requêtes de niveau et des Constructions et Déploiements.
+
+Si l'option _Actualisation automatique_ est activée, l'écran sera réinitialisé suivant l'intervalle spécifié dans le champ "Intervalle d'actualisation automatique" dans les Paramètres système.
+
+Sélectionnez cette option pour l'activer ou la désactiver.
+
+
+image::Desktop-AutoRefresh-SubmenuOption.png[,937,228] 

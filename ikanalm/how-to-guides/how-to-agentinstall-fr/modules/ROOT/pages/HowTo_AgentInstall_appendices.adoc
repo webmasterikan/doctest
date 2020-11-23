@@ -1,0 +1,123 @@
+
+:sectnums!:
+
+[appendix]
+== Installation manuelle de l'Agent comme un service Windows
+
+Après l'installation de l'Agent, il est toujours possible d'enregistrer ou de supprimer l'Agent comme service Windows.
+
+* Pour supprimer le service:
++
+Exécutez ALM_HOME/daemons/agent/karaf/bin/karaf-service.bat avec l'argument __remove__.
+* Pour enregistrer le service:
++
+Exécutez ALM_HOME/daemons/agent/karaf/bin/karaf-service.bat avec l'argument __install__.
+
+
+Si vous voulez reconfigurer le service, modifiez le fichier "__ALM_HOME/daemons/agent/karaf/etc/karaf-wrapper.conf__.
+
+Par exemple, vous pouvez modifier la quantité de mémoire que l'Agent VM peut utiliser (en __MB__) en modifiant: `wrapper.java.maxmemory = 512`
+
+[NOTE]
+====
+En général il est déconseillé de modifier une des autres propriétés dans le fichier __karaf-wrapper.conf__, car cela peut provoquer l'arrêt de l'Agent ALM.
+
+Pour plus d`'informations concernant le fichier de configuration, se référer à la page Web: 
+
+http://yajsw.sourceforge.net/YAJSW%20Configuration%20Parameters.html
+
+http://karaf.apache.org/manual/latest-2.x/users-guide/wrapper.html
+====
+
+:sectnums:
+
+:sectnums!:
+
+[appendix]
+== Installation manuelle de l'Agent comme un processus démon sur dessystèmes Linux/Unix
+
+L'installateur d'IKAN ALM n'installe pas automatiquement l'Agent IKAN ALM comme un processus démon Linux/Unix.
+Les étapes suivantes doivent être exécutées après l'installation.
+
+Comme l'Agent IKAN ALM utilise Apache Karaf comme environnement d'exécution OSGi, il revient à utiliser la fonctionnalité Apache Karaf Wrapper (se référer au manuel Karaf: https://karaf.apache.org/manual/latest/#_service_wrapper) (uniquement disponible en anglais).
+
+Pour illustrer cela avec un exemple, nous décrirons cette procédure pour installer et supprimer l'Agent IKAN ALM comme service sur une machine CentOS Linux. 
+
+
+. Si l'Agent IKAN ALM est actuellement en cours d'exécution, arrêtez-le en utilisant la commande ``ALM_HOME/daemons/agent/stopAgent.sh``.
+. Lancez l'Agent Karaf IKAN ALM en exécutant ``ALM_HOME/daemons/agent/karaf/bin/karaf_agent.sh``.
++
+Cette commande lancera l'Agent IKAN ALM et activera en même temps la console Karaf dont nous aurons besoin pour pouvoir utiliser la fonctionnalité "Karaf Wrapper".
+. Une fois l'affichage des messages de démarrage terminé, cliquez sur _<entrée>_ . La fenêtre de la console Karaf s'affichera: ``"karaf@root>"``.
+. Exécutez `"feature:install wrapper"` dans la fenêtre de la console Karaf.
++
+Cette commande installera la fonctionnalité "Karaf Wrapper".
++
+Vous pouvez vérifier si l'installation a réussi en exécutant ``"feature:list
+| grep wrapper"``.
++
+Le résultat devrait être: `[installed ] [4.0.7 ] wrapper karaf-4.0.7`
+. Maintenant nous devons appeler "wrapper:install", ce qui générera les fichiers nécessaires pour installer l'Agent ALM comme démon Linux. 
++
+Dans la fenêtre de la console Karaf, exécutez la commande ``'wrapper:install
+-s DEMAND_START -n almagent58 -d "IKAN ALM 5.8 Agent" -D "IKAN ALM
+5.8 Agent Daemon"'``. 
++
+Si cette commande réussit, les commandes à exécuter dans les étapes suivantes seront indiquées, ce qui est très pratique.
+. Arrêtez l'Agent Karaf IKAN ALM.
++
+exécutez la commande `"shutdown
+-f"` dans la fenêtre de console Karaf".
+. Modifiez le fichier _ALM_HOME/daemons/agent/karaf/etc/almagent58-wrapper.conf_ qui a été créé, en ajoutant les options suivantes:
+** Juste avant le paramètre KARAF_HOME, dans la section des propriétés "wrapper" générales, établissez le chemin vers le Java Runtime que vous avez sélectionné lors de l'installation de l'Agent IKAN ALM: `set.default.JAVA_HOME=/opt/java/jdk1.7.0_67`
+
+** modifiez le chemin vers l'exécutable Java: 
++
+``wrapper.java.command=/opt/java/jdk1.7.0_67/bin/java``
+
+** Dans la section des paramètres JVM, ajoutez les paramètres suivants:
++
+``wrapper.java.additional.10=-XX:+UnlockDiagnosticVMOptions``
++
+``wrapper.java.additional.11=-XX:+UnsyncloadClass``
+. À ce stade tout est configuré pour installer, supprimer, arrêter et démarrer le démon Linux de l'Agent IKAN ALM.
++
+
+[NOTE]
+====
+Pour toutes ces commandes, vous avez besoin de droits d'accès d'Administrateur.
+Vous devez donc les exécuter avec "sudo".
+====
+** Pour installer le service:
++
+``ln
+-s /home/ikan/ALM/daemons/agent/karaf/bin/almagent58-service /etc/init.d/``
++
+``chkconfig
+almagent58-service –add``
+** Pour démarrer le service une fois la machine redémarrée:
++
+``chkconfig
+almagent58-service on``
+** Pour arrêter le démarrage du service une fois la machine redémarrée:
++
+``chkconfig
+almagent58-service off``
+** Pour démarrer le service:
++
+``service
+almagent58-service start``
+** Pour arrêter le service:
++
+``service
+almagent58-service stop``
+** Pour désinstaller le service:
++
+``chkconfig
+almagent58-service --del``
++
+``rm
+/etc/init.d/almagent58-service``
+
+
+:sectnums:

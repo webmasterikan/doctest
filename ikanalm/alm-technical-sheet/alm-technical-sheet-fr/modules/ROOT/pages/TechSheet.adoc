@@ -1,0 +1,313 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+:description: IKAN ALM Technical Sheet (French)
+:revnumber: v5.8
+:revdate: 01.01.2018
+
+= IKAN ALM Fiche Technique
+
+== Aperçu
+
+Aujourd'hui, IKAN ALM est la solution leader dans le domaine de la gestion des changements d'une application, offrant une plateforme ALM (gestion du cycle de vie d'une application) basée sur une interface Web intégrée, unique.
+IKAN ALM combine l'intégration continue et la gestion du cycle de vie, offrant un seul point de contrôle et supportant tous les processus de gestion associés aux constructions, aux déploiements, aux versions et aux cycles de vie d'une application.
+En intégrant des technologies de premier ordre existantes (telles que Subversion, Git, TeamFoundation, TeamForge and ClearCase) pour étendre l'environnement de développement, IKAN ALM continue là où le rôle de ces autres applications se termine.
+
+Grâce à IKAN ALM:
+
+* les développeurs sont tenus au courant des Constructions réussies,
+* les chefs d'équipe sont informés des dernières Constructions dans les environnements réels,
+* les responsables de la configuration peuvent surveiller le statut de l'environnement et vérifier ce qui sera modifié ou ce qui a été modifié à un moment donné,
+* les membres du projet peuvent approuver ou rejeter les modifications planifiées ou peuvent être notifiés des modifications qui auront lieu.
+
+
+IKAN ALM offre un cadre ouvert pour réaliser l'implémentation des meilleures pratiques informatiques en vigueur dans le domaine de la gestion des modifications logicielles en conjonction avec des Outils de Contrôle de Version, de Construction et de Déploiement existants et sans entraîner des efforts de migration lourds et coûteux.
+
+N'hésitez-pas à nous contacter si vous nécessitez plus d'informations sur notre solution IKAN ALM pour la gestion du cycle de vie d`'une application.
+
+== Fonctionnalités techniques
+
+=== Fonctionnalités de Construction
+
+* Support de projets multiples
+* Intégration continue: planification temporelle des Constructions du projet
+* Possibilité d'initialiser une Construction manuellement
+* Construire/reconstruire toute version de projet
+* Construire/reconstruire sur des environnements multiples
+* Flux de travail de Construction personnalisé: possibilité d'adapter le flux des sous-processus (les Phases) devant être exécutés pour une Construction
+* Paramètres de Construction dynamiques et sécurisés pouvant être modifiés juste avant l'exécution de la Construction
+* Balisage RCV configurable: balisage basé sur des modèles de balise définis pour chaque Branche (utilisant des variables tels que le nom du projet, le numéro de construction, la date et l'heure, le préfixe de la Branche Secondaire, le suffixe, ...) Le balisage (basé sur des modèles) par défaut peut être révisé au moment de la création de la construction, par exemple, pour permettre l'utilisation de libellés tels que "RC1" ou "BaseLine4.0".
+* Dépendances de projets:
+** inclure le dernier résultat, un résultat spécifique ou le résultat de construction de production d'un projet dépendant
+** inclure et construire le dernier Source ou une version spécifique d'un Source de production d'un projet dépendant 
+* Constructions incrémentielles:
+** uniquement construire les Sources modifiés par rapport à la Construction précédente
+** uniquement construire les Sources modifiés par rapport à la Construction en production
+** uniquement construire les Sources modifiés par rapport à une balise RCV spécifique
+* Constructions basées sur une version balisée: Constructions basées sur une balise spécifique au lieu de sur le dernier code.
+
+
+=== Fonctionnalités de déploiement
+
+* Déploiement des Constructions réussies
+* Planification temporelle des Déploiements du projet
+* Possibilité d'initialiser un Déploiement manuellement
+* Déploiement de toute version de projet
+* Déploiement sur des environnements multiples en séquence ou en parallèle
+* Flux de travail de Déploiement personnalisé possibilité d'adapter le flux des sous-processus (les Phases) devant être exécutés pour un Déploiement
+* Paramètres de Déploiement dynamiques et sécurisés pouvant être modifiés juste avant l'exécution du Déploiement
+* Déploiement partiel: uniquement déployer les fichiers résultants modifiés par rapport au résultat de déploiement précédent
+
+
+=== Support de la Gestion de Cycles de Vie
+
+* reconstruire des Constructions précédentes sur d'autres plateformes Cibles
+* Déployer des Constructions exécutées précédemment sur d'autres Serveurs Cibles
+* Définir le flux du processus, c'est-à-dire, la migration des Constructions depuis l'environnement BUILD vers l'environnement TEST jusqu'en PRODUCTION (ces environnements sont appelés des Niveaux en langage IKAN ALM)
+* Personnaliser les étapes de Construction et de Déploiement pour le déploiement vers un Niveau
+* Possibilité de définir un processus d'approbation hiérarchique après et/ou avant le déploiement vers un Niveau
+* Possibilité de définir les notifications requises après et/ou avant le déploiement vers un Niveau
+* Fonctionnalités pour délivrer, re-délivrer et restaurer le logiciel construit/déployé
+* Fonctionnalité de "gel" pour bloquer le processus de construction continue ou toute autre nouvelle construction sur un Niveau de Construction
+* Niveaux optionnels: possibilité d'ignorer un Niveau dans un Cycle de Vie permettant de déployer dans les niveaux suivants
+* Niveaux "importants ou logiques": des Niveaux non rattachés à des Environnements pour supporter un processus d'approbation et de notification avancé
+* Définir un ou plusieurs environnements physiques ((Windows, Linux, Mainframe, ...) pour chaque Niveau
+
+
+=== Interface Utilisateur
+
+* L'Interface Utilisateur Web permet de configurer le système complet (il ne faut plus modifier les fichiers de configuration manuellement)
+* Suivi de l`'Historique de toutes les modifications administratives assurant une traçabilité maximale
+* Liste pratique de tous les projets et les résultats de leurs dernières Constructions codés à l'aide de couleurs (réussies/échouées)
+* Aperçus incluant des possibilités de recherche avancées pour rapidement vérifier le statut et l'historique du Cycle de vie d'un Projet.
+* Bureau personnalisé fournissant un aperçu clair des projets des Utilisateurs
+* Aperçu bidirectionnel des Dépendances de construction.
+* Interface pratique pour approuver, rejeter et rechercher les approbations.
+* Projet intranet utilisant Javadoc, des résultats de test JUnit, des statistiques et des artefacts téléchargeables
+* Interface pour rapidement identifier et supprimer les artefacts de construction obsolètes
+* Internationalisation: la langue de l'interface peut être modifiée via la définition de l'Utilisateur
+* Aide contextuelle disponible en format HTML
+* Interface pratique pour facilement pouvoir réutiliser les paramètres de Construction ou de Déploiement définis en clonant les paramètres et les environnements, ou en définissant des paramètres de Machine qui seront hérités par les environnements
+
+
+=== Systèmes de Contrôle de version supportés
+
+* Subversion
+* Git
+* Microsoft Team Foundation Version Control (TFVC)
+* CVS
+* IBM Rational ClearCase (UCM et Base)
+* Microsoft Visual SourceSafe
+* Serena PVCS Version Manager 
+* Support de tout Système de Contrôle de version disponible via l'interface API
+
+
+=== Interaction avec des Systèmes de Contrôle de version
+
+* Récupérer ou synchroniser les sources du Projet
+* Appliquer un libellé basé sur le numéro de version actuel du Projet
+* Lister les différences avec le logiciel construit ou déployé précédemment
+* Montrer les Sources (avec info sur la version) associés à une Construction ou un Déploiement
+* Possibilité de sélectionner et déplacer des fichiers ou des composants individuels à travers le Cycle de vie (Subversion, TFVC et ClearCase)
+* Les méta-propriétés Subversion sont automatiquement récupérées pendant la Phase "Récupération des Sources" et peuvent être utilisées par l'Outil de script de Construction ou de Déploiement
+
+
+=== Ant/Gradle/NAnt/Maven 2 Builder/Deployer
+
+* Possibilité d'exécuter tout script Ant/Gradle/NAnt/Maven 2 pour construire ou déployer le Projet
+* Aucune intrusion dans le script de Construction/Déploiement
+* Possibilité de fournir des propriétés Ant/NAnt/Maven 2 supplémentaires et de les modifier juste avant la Construction ou le Déploiement
+* Ajouter un script Ant/Gradle/NAnt/Maven 2 à une Phase personnalisée avec des propriétés spécifiques. Ainsi vous pouvez facilement le distribuer et le réutiliser dans différents Projets ou installations IKAN ALM
+* Possibilité de spécifier des options JVM telles que -Xms et -Xmx
+* Support de plusieurs versions de Ant/Gradle/NAnt/Maven 2
+* Chemin de classe Ant/Maven 2 configurable
+* Possibilité d'exécuter Ant via le "Lanceur Ant"
+* Support de plusieurs JDK ou .NET Frameworks
+
+
+=== Protocoles de transfert supportés
+
+* FileCopy en utilisant des "Windows shares" et "Linux mounts"
+* Transfert de fichier sécurisé en utilisant Secure Copy (SSH)
+* FTP
+
+
+=== Suivi des Incidents
+
+* Associer des Constructions à des Incidents (manuellement ou automatiquement)
+* Possibilité de manuellement associer des Incidents à des Constructions
+* Synchroniser des propriétés d'Incidents (statut, description, etc.) avec un Système de Suivi des Incidents externe
+* Ajouter automatiquement des Commentaires aux Incidents chaque fois qu'une Construction avance dans le Cycle de vie
+* Afficher les détails des Incidents dans l'interface graphique d'IKAN ALM
+* Intégration spécialisée avec JIRA, Team Foundation Server, HP Quality Center et CollabNet TeamForge
+* Intégration avec tout Système de Suivi des Incidents tiers via API
+
+
+=== Construction et Déploiement de type Paquets
+
+* Possibilité de sélectionner et déplacer des fichiers ou des composants individuels à travers le Cycle de vie (Subversion, TFVC et ClearCase). Support de développement Mainframe
+* Sélection de révisions/versions spécifiques de fichiers individuels
+* Génération d'un journal de l`'Historique, permettant d'auditer les modifications dans le contenu d'un Paquet (fichiers ajoutés/supprimés/modifiés)
+* L`'entité "Groupe de Paquets de Construction" gère les dépendances entre les Paquets.
+
+
+=== Notification de Constructions/Déploiements
+
+* Sont supportés:
+** SMTP
+** NetSend
+** Lotus Notes
+** RSS
+* Modèles personnalisés et internationalisés pour des courriels en texte brut ou en format HTML
+* Envoyer des courriels informant les parties concernées des résultats de construction/déploiement
+* Recevoir des courriels d'information concernant toutes les Constructions et tous les Déploiements, uniquement concernant les Constructions et les Déploiements échoués ou uniquement concernant les Constructions et les Déploiements réussis
+* Notification quand une Construction ou un Déploiement est demandé(e), approuvé(e) ou rejeté(e).
+* Notification quand l'approbation est demandée/approuvée/rejetée.
+* Les courriels contiennent un lien automatique vers les informations détaillées dans l'Interface utilisateur
+* Flux RSS affichant les données des dix dernie(è)r(e)s Constructions/Déploiements qui répondent aux critères spécifiés
+
+
+=== Piste d'audit
+
+* Toutes les modifications administratives sont enregistrées avec leur version dans un journal
+* Journaux de Construction/Déploiement pour chaque Construction/Déploiement de chaque projet
+* Aperçu de statut indiquant quelle Construction se trouve sur quelle Machine ou sur quel Niveau
+* Historique du logiciel construit ou déployé au cours du cycle de vie d'un projet
+* Relation "source-objet": aperçu des Sources utilisés pour obtenir le résultat de construction, et des fichiers binaires déployés
+
+
+=== Architecture modulaire
+
+* Une architecture Agent/Serveur permettant les Constructions et/ou les Déploiements distribué(e)s
+* Possibilité de définir plusieurs Serveurs de construction
+* Possibilité de définir plusieurs Agents de déploiement
+* Interface de ligne de commande permettant l'exécution de Constructions et/ou de Déploiements basée sur des déclencheurs externes
+
+
+=== Installation
+
+* Installateur graphique ou textuel pour le produit complet
+
+
+=== Sécurité - Intégration avec JAAS 
+
+* Intégration avec un Système de sécurité opérationnel
+* Authentification des Utilisateurs
+* mots de passe et phrases de passe pour tous les paramètres IKAN ALM (paramètres du système, définitions RCV, Secure Shell, ...) lecture impossible pour tout Utilisateur IKAN ALM
+* Toutes les valeurs sécurisées sont cryptées avant d'être sauvegardées dans la Base de données pour garantir une sécurité maximale
+* Possibilité de crypter toute communication entre les composants IKAN ALM
+* Autorisation des Utilisateurs
+** pour demander des Constructions
+** pour demander des déploiements vers les Niveaux
+** pour approuver ou rejeter des Constructions et/ou des Déploiements
+** pour gérer les projets
+** pour gérer IKAN ALM
+
+
+=== Interface de ligne de commande
+
+* Exécuter une Construction ou un Déploiement à partir d'une fenêtre de commande
+* Permettre de planifier des Constructions et des Déploiements en utilisant un Planificateur externe (Task Scheduler, Cron, Planificateurs,...)
+* Générer un rapport à partir d'une fenêtre de commande
+* Créer/modifier un Paquet à partir d'une fenêtre de commande
+
+
+=== Rapports personnalisés
+
+* L'aperçu des constructions et des déploiements est disponible sous forme d'un rapport personnalisé en plusieurs formats (pdf, csv, xls, rtf). Ces rapports peuvent être générés à partir de l'Interface utilisateur ou via l'Interface de ligne de commande. Le rapportage via la ligne de commande permet l'intégration avec d'autres outils (par exemple, pour la planification) ou la génération de rapports en mode batch.
+* L`'outil ALM_Reports permet d`'obtenir plusieurs autres rapports d`'administration ou de suivi de l`'activité avec de nombreux critères de sélection.
+
+
+== Besoins techniques
+
+=== Besoins système minimum
+
+==== Environnement Java requis
+
+* Un Serveur Java Runtime (JRE) ou SDK version 1.7 ou 1.8. 
+* Oracle JCM et OpenJDK JVM sont supportés.
+
+
+==== Serveurs d'application supportés
+
+* Tomcat 7.0 ou supérieur, recommandé 7.0.82, 8.5.23 ou supérieur
+
+
+==== Bases de données de production supportées
+
+* MySQL
+* Base de données Oracle
+* Microsoft SQL Server
+* IBM DB2 for Linux, Unix et Windows
+
+
+==== Systèmes d'exploitation supportés
+
+* Windows XP Professional/2003 Serveur
+* Windows Vista/2008 Serveur
+* Windows 7/2008 R2 Serveur
+* Windows 8/2012 R2 Serveur
+* Windows 10/2016 Serveur
+* Linux: testé sous Redhat Fedora, CentOS, Suse Linux Enterprise, OpenSUSE, Debian, Ubuntu, Mandriva et zLinux. L'application devrait également fonctionner sous d'autres distributions Linux récentes.
+* Variantes de Unix: HP Unix, Solaris, IBM AIX etc. 
+
+
+==== Navigateurs Web (JavaScript doit être activé)
+
+* Internet Explorer 10.x, 11.x, Microsoft Edge
+* Mozilla Firefox
+* Google Chrome
+
+
+==== Systèmes de Contrôle de version supportés
+
+* Subversion 1.4.x, recommandé 1.6 et supérieure
+* Git 1.8 et supérieure
+* Microsoft Team Foundation Version Control (TFVC) 2013
+* CVS 1.x, recommandé 1.12 et supérieure
+* CVSNT 2.x, recommandé 2.5.x et supérieure
+* IBM Rational ClearCase (Base et UCM) 7.1 et supérieure
+* Microsoft VisualSource Safe 6.x, 2005
+* Serena PVCS Version Manager
+
+
+==== Intégrations avec des Outils de construction supportés
+
+* Ant 1.4.x, recommandé 1.7.x et supérieure
+* NAnt 0.85, recommandé 0.90 et supérieure
+* Maven 2.0.x, 2.1.x
+
+
+==== Intégrations avec des Outils de Déploiement supportés
+
+* Ant 1.4.x, recommandé 1.7.x et supérieure
+* NAnt 0.85, recommandé 0.90 et supérieure
+* Maven 2.0.x, 2.1.x
+
+
+==== Intégrations de courriel supportées
+
+* SMTP
+* Lotus Notes 6.x
+
+
+=== Exigences de matériel minimum
+
+==== Serveur IKAN ALM
+
+* RAM: minimum 512 Mo (mégaoctets), recommandé 2 Go (gigaoctets) ou plus
+* Espace de stockage disque minimum 10 Mo (mégaoctets), recommandé 40 Go (gigaoctets) ou plus
+
+
+Il n'existe pas de règle absolue concernant l'espace de stockage disque requis.
+L'espace de stockage nécessaire dépendra du nombre et de la taille des projets gérés dans IKAN ALM et de la taille des résultats de construction sauvegardés dans les Archives de construction.
+Plus il y a de projets et de résultats de construction, et plus ceux-ci sont larges, plus vous aurez besoin d'espace de stockage disque.
+
+==== Agent IKAN ALM
+
+* RAM: minimum 512 Mo (mégaoctets), recommandé 2 Go (gigaoctets) ou plus
+* Espace de stockage disque: minimum 1 Go (gigaoctets)
+
+
+Tout comme pour le Serveur IKAN ALM, il s'agit de valeurs indicatives.
+Pour une approche plus mathématique, se référer à l'article "`Capacity Planning for Software Build Management Servers`" sur le site de "`CM Crossroads`": http://www.cmcrossroads.com/cm-journal-articles/6671-capacity-planning-for-software-build-management-servers[
+http://www.cmcrossroads.com/cm-journal-articles/6671-capacity-planning-for-software-build-management-servers].

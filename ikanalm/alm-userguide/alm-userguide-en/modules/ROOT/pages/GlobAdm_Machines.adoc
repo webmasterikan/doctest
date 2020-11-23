@@ -1,0 +1,700 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_machinesoverview]]
+[[_globadm_machines]]
+= Machines 
+(((Global Administration ,Machines)))  (((Machines))) 
+
+All Machines hosting Build and/or Deploy Environments that are used by IKAN ALM Projects, must be defined in IKAN ALM.
+This is the task of the IKAN ALM Global Administrator.
+Other IKAN ALM Users can verify, if all Machines used for a new Project are available.
+If not, they can request the IKAN ALM Global Administrator to add the Machine definitions to IKAN ALM.
+Build and Deploy Actions can only be handled on a Machine on which an IKAN ALM Agent is correctly installed and running.
+
+Refer to the following sections for detailed information:
+
+* <<GlobAdm_Machines.adoc#_globadm_machinecreate,Creating a Machine Definition>>. This menu option is only visible for Users with Global Admin Access rights.
+* <<GlobAdm_Machines.adoc#_globadm_machinesoverview,Machines The Machines Overview Screen>>
+* <<GlobAdm_Machines.adoc#_globadm_machinesoverview_edit,Editing a Machine Definition>>
+* <<GlobAdm_Machines.adoc#_globadm_machinesoverview_delete,Deleting a Machine Definition>>
+* <<GlobAdm_Machines.adoc#_globadm_machinesoverview_status,Viewing the Machine Status>>
+* <<GlobAdm_Machines.adoc#_globadm_machines_installedphases,The Installed Phases Overview Screen>>
+* <<GlobAdm_Machines.adoc#_globadm_machinesoverview_history,Viewing the Machine History>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters,Machine Parameters>>
+
+[[_globadm_machinecreate]]
+== Creating a Machine Definition 
+(((Machines ,Creating))) 
+
+[NOTE]
+====
+This option is only available if you have Global Administrator Access Rights in IKAN ALM.
+====
+
+. In the Global Administration context, select__ Machines > Create__.
++
+The following screen is displayed:
++
+image::GlobAdmin-Machines-Create.png[,597,506] 
++
+. Fill out the fields in the __Create Machine__ panel at the top of the screen. Fields marked with a red asterisk are mandatory:
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Field
+| Meaning
+
+|Name
+|Enter the name of the new Machine in this field.
+This field is mandatory.
+
+|Description
+|Enter a description for the new Machine in this field.
+This field is optional.
+
+|Operating System
+|Select the required Operating System from the drop-down list.
+The Select ion of an Operating System is mandatory.
+
+|DHCP Enabled
+|Indicate whether or not the Machine is DHCP-enabled.
+
+|DHCP Name
+|Enter the Machine's DHCP Name.
+Required field when the DHCP Enabled status is set to __Yes__.
+The IKAN ALM Server will try to set up a connection with this DHCP Name (using XML-RPC).
+
+|IP Address
+|Enter the Machine's IP Address.
+Required field when the DHCP Enabled status is set to __No__.
+The IKAN ALM Server will try to set up a connection with this IP Address (using XML-RPC).
+
+|Agent Port
+|In this field, you can enter the Port number (between 0 and 65536) on which the IKAN ALM Agent on this Machine will listen for communication with the IKAN ALM Server (using XML-RPC).
+
+If you leave this field empty, the default value of 20020 will be used.
+
+If you define a value different from the default value, be sure to define the same value when running the Agent install wizard on this Machine.
+
+|Server Port
+|In this field, enter the Port number (between 0 and 65536) on which the IKAN ALM Server will listen for communication with the IKAN ALM Agents (using XML-RPC). This port number was defined during the initial installation of the IKAN ALM Server.
+
+If the IKAN ALM Server uses the default value of 20021, you can also leave this field empty.
+
+|Transporter Protocol
+|Select the required Transporter Protocol from the drop-down list.
+The list contains the names of all Transporters defined in IKAN ALM (FTP, FileCopy and SSH).
+
+This Protocol defines how sources and build results will be transported between the IKAN ALM Server locations (Build Archive, Work Copy, Deploy Script location) and this Machine.
+
+The Select ion of a Transporter Protocol is mandatory.
+
+For more information on configuring Transporters, refer to the section <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>.
+
+|Locked
+|Select whether or not the Machine must be locked for future use.
+
+|Concurrent Deploy Limit
+a|Enter the maximum number of Deploys that may be run at the same time. 
+
+* If no number is set to 0 (the default), there is no limit for running Deploys concurrently. 
+* If the number is set to ``1``, all deploys will run sequentially.
+* If a specific number is specified, only that number of Deploys can be run concurrently on the agent connected with the machine. If a next one is requested, it will go in the waiting queue and it will only be started if one of the running Deploys is finished (following the FIFO-principle based on the Deploy OIDs). 
+
+|===
+
+. Once you have filled out the fields, click __Create__.
++
+The newly created Machine definition is added to the__ Machines
+Overview__ at the bottom of the screen.
++
+Your IKAN ALM User License may contain a limit on the number of Machines you can add.
+If this limit is exceeded, the new Machine definition is not added, and the following error message is displayed:
++
+image::GlobAdmin-Machines-Create-Error.png[,593,512] 
++
+Contact your IKAN ALM Vendor if you need to purchase a license that allows for more Machine Definitions.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>
+
+|===
+[[_globadm_machinesoverview]]
+== The Machines Overview Screen 
+(((Machines ,Overview Screen))) 
+
+. In the Global Administration context, select__ Machines > Overview__.
++
+The following screen is displayed:
++
+image::GlobAdmin-Machines-Overview.png[,937,324] 
++
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields.
+
+. Verify the information on the __Machines Overview__ panel.
++
+For a detailed description of the fields, refer to <<GlobAdm_Machines.adoc#_globadm_machinecreate,Creating a Machine Definition>>.
+. Depending on your access rights, the following links may be available on the _Machines Overview_ panel:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows editing a Machine definition.
+
+<<GlobAdm_Machines.adoc#_globadm_machinesoverview_edit,Editing a Machine Definition>>
+
+|image:icons/icon_viewparameters.png[,15,15] 
+|View Parameters
+
+This option is available to all IKAN ALM Users.
+It allows viewing and editing the Parameters of a Machine.
+
+<<GlobAdm_Machines.adoc#_globadm_machineparameters_overview,The Machine Parameters Overview Screen>>
+
+|image:icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows deleting a Machine definition.
+
+<<GlobAdm_Machines.adoc#_globadm_machinesoverview_delete,Deleting a Machine Definition>>
+
+|image:icons/status.gif[,15,15] 
+|Status
+
+This option is available to all IKAN ALM Users.
+It allows checking the status of a Machine.
+
+<<GlobAdm_Machines.adoc#_globadm_machinesoverview_status,Viewing the Machine Status>>
+
+|image:icons/installed_phases.gif[,15,15] 
+|Installed Phases
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows viewing and uninstalling the phases that are currently installed on the Machine.
+
+<<GlobAdm_Machines.adoc#_globadm_machines_installedphases,The Installed Phases Overview Screen>>
+
+|image:icons/history.gif[,15,15] 
+|History
+
+This option is available to all IKAN ALM Users.
+It allows displaying the History of all create, update and delete operations performed on a Machine.
+
+<<GlobAdm_Machines.adoc#_globadm_machinesoverview_history,Viewing the Machine History>>
+|===
++
+
+[NOTE]
+====
+
+Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+====
+
+[[_globadm_machinesoverview_edit]]
+== Editing a Machine Definition 
+(((Machines ,Editing))) 
+
+. In the Global Administration context, select__ Machines > Overview__.
+. Click the image:icons/edit.gif[,15,15] __Edit__ link on the _Machines Overview_ panel.
++
+The following screen is displayed: 
++
+image::GlobAdmin-Machines-Edit.png[,790,522] 
++
+. Edit the fields as required.
++
+For a description of the fields, refer to <<GlobAdm_Machines.adoc#_globadm_machinecreate,Creating a Machine Definition>>.
++
+
+[NOTE]
+====
+The _Connected Environments_ panel displays the Environments the Machine is linked to. 
+====
+. Click __Save__ to save your changes.
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Back_ to return to the previous screen without saving the changes
+
+[[_globadm_machinesoverview_viewparameters]]
+== Viewing the Machine Parameters
+
+. In the Global Administration context, select__ Machines > Overview__.
+. Click the image:icons/icon_viewparameters.png[,15,15] __View Parameters__ link on the _Machines Overview_ panel.
++
+The following screen is displayed: 
++
+image::GlobAdmin-Machines-MachineParameters-Overview.png[,960,536] 
++
+
+[NOTE]
+====
+You can also access the Machine Parameters Overview via the Main Menu by selecting image:icons/icon_GlobalAdmin_13x13.png[,13,13] _(Global
+Administration) > Machines > Machine Parameters._
+====
+. The _Machine Parameters Overview_ screen lets you create, edit, delete and copy Machine Parameters and allows checking their history.
++
+For detailed information, refer to the following sections:
+
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters_create,Creating Machine Parameters>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters__edit,Editing Machine Parameters>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters_delete,Deleting Machine Parameters>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters_copy,Copying Machine Parameters>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters_history,Viewing the Machine Parameter History>>
+
+[[_globadm_machinesoverview_delete]]
+== Deleting a Machine Definition 
+(((Machines ,Deleting))) 
+
+. In the Global Administration context, select__ Machines > Overview__.
+. Click the image:icons/delete.gif[,15,15] __Delete link __on the _Machines Overview_ panel.
++
+The following screen is displayed:
++
+image::GlobAdmin-Machines-Delete.png[,432,388] 
++
+. Click __Delete__ to confirm the deletion.
++
+You can also click __Back __to return to the previous screen without deleting the entry.
++
+__Note:__ If you try to delete a Machine connected to a Build or Deploy Environment, the following message is displayed:
++
+image::GlobAdmin-Machines-Delete-Error.png[,450,444] 
++
+You must link the Environments to a different Machine, or delete them from IKAN ALM, before you can delete the Machine definition.
+
+[[_globadm_machinesoverview_status]]
+== Viewing the Machine Status 
+(((Machines ,Status))) 
+
+. In the Global Administration context, select __Machines > Overview__.
+. Click the image:icons/status.gif[,15,15] _Status_ link on the _Machines Overview_ panel.
++
+The following screen is displayed:
++
+image::GlobAdmin-Machines-Status.png[,869,457] 
++
+The _Machine Detailed Status_ screen displays the status of the Agent Daemon running on the Machine.
++
+At the top of the screen, the _Machine Info_ panel is displayed.
+For a detailed description of the fields, refer to <<GlobAdm_Machines.adoc#_globadm_machinecreate,Creating a Machine Definition>>.
+. Verify the Status of the Machine.
++
+The possible statuses are:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Status
+| Description
+
+|image:icons/status_green.gif[,15,15] _Idle_
+|Could successfully connect to the Agent/Server Daemon.
+The Agent/Server is currently not executing any Level Requests, Builds or Deploys.
+
+|image:icons/status_green.gif[,15,15] _Running
+Builds_
+|Could successfully connect to the Agent Daemon.
+The Agent is currently executing Builds.
+
+|image:icons/status_green.gif[,15,15] _Running
+Deploys_
+|Could successfully connect to the Agent Daemon.
+The Agent is currently executing Deploys.
+
+|image:icons/status_green.gif[,15,15] _Running
+Builds and Deploys_
+|Could successfully connect to the Agent Daemon.
+The Agent is currently executing Builds and Deploys.
+
+|image:icons/status_green.gif[,15,15] _Running
+Level Requests_
+|Could successfully connect to the Server Daemon.
+The Server is currently executing Level Requests.
+
+|image:icons/status_green.gif[,15,15] _Shutting
+Down_
+|Could successfully connect to the Agent/Server Daemon.
+The Agent/Server is shutting down.
+
+|image:icons/status_red.gif[,15,15] _Could
+not connect to Agent_
+|The connection to the Agent Daemon failed, either because the Agent Daemon is currently not running on the Machine, or due to networking issues that prevent connecting to the Agent Daemon.
+Contact your IKAN ALM Administrator.
+
+|image:icons/status_red.gif[,15,15] _Could
+not connect to Server_
+|The connection to the Server Daemon failed, either because the Server Daemon is currently not running on the Machine, or due to networking issues that prevent connecting to the Server Daemon.
+Contact your IKAN ALM Administrator.
+|===
+
+. Verify the __Machine Log__.
++
+The _Machine Log_ panel displays the last 150 lines of output of the Agent Daemon process running on this Machine.
+. Click __Back __to return to the __Machines Overview__ screen.
+
+[[_globadm_machines_installedphases]]
+== The Installed Phases Overview Screen 
+(((Installed Phases Overview))) 
+
+. In the Global Administration context, select__ Machines > Overview__.
+. Click the image:icons/installed_phases.gif[,15,15] _Installed Phases_ link on the __Machines Overview __panel.
++
+The following screen is displayed.
++
+image::GlobAdmin-Machines-InstalledPhasesOverview.png[,1058,659] 
++
+The _Installed Phases Overview_ screen displays the status of the Server and/or Agent daemons running on the Machine.
+It also shows the phases that are installed on the Server and Agent, and provides controls to search, sort and uninstall those phases.
++
+At the top of the screen, the _Machine Info_ panel is displayed.
+For a detailed description of the fields, refer to <<GlobAdm_Machines.adoc#_globadm_machinecreate,Creating a Machine Definition>>.
++
+
+[NOTE]
+====
+The Activity and the installed phases on the Server daemon are only displayed if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+====
+. Verify the _Current Server and/or Agent Activity_ on the Machine.
++
+For more information on the possible statuses, refer to <<GlobAdm_Machines.adoc#_globadm_machinesoverview_status,Viewing the Machine Status>>.
+. Select whether to show the Core Phases or not.
++
+The possible options are:
+
+* __Yes__: show only the Core Phases
+* __No__: show only non-Core Phases
+* __All__: show Core and non-Core Phases
+. Verify the information on the _Installed Server Phases_ and _Install Agent Phases_ panels.
+* The _Installed Server Phases_ panel shows all phases that are installed on the Server daemon of the Machine. This panel is only shown if the Machine has been set as the "IKAN ALM Server" machine in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
+* The _Installed Agent Phases_ panel shows all phases that are installed on the Agent daemon of the Machine.
+
++
+For each of the installed phases, the following information is available:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Information
+| Description
+
+|Name
+|The name of the Phase.
+
+|Version
+|The version of the Phase.
+
+|Core Phase
+|Core Phase or not?
+|===
+
+. Uninstalling Phases from the Server or Agent Daemons.
++
+To uninstall a Phase, click the image:icons/delete.gif[,15,15] _Delete_ icon at the right of the Phase or Select the _Uninstall All_ link to uninstall ALL non-Core phases of the Server or Agent daemon.
++
+__Note:__ When a Phase is uninstalled, it is removed from the Server or Agent daemon.
+This does not mean that the Phase is removed from the Phase Catalog or from any connected Environments in Projects.
+When a Phase of a Level Request is executed on a certain Agent or Server and that Phase is not installed on that Agent or Server Daemon, IKAN ALM will automatically try to install the Phase on the Agent or Server daemon before executing it.
+. Click _Back_ to return to the __Machines Overview __screen.
+
+[[_globadm_machinesoverview_history]]
+== Viewing the Machine History 
+(((Machines ,History))) 
+
+. In the Global Administration context, select__ Machines > Overview__.
+. Click the image:icons/history.gif[,15,15] _History_ link on the _Machines Overview_ panel.
++
+The _Machine History View_ is displayed.
++
+For more detailed information concerning this __History
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
+. Click __Back __to return to the __Machines Overview__ screen.
+
+
+[[_globadm_machineparameters]]
+== Machine Parameters 
+(((Machine Parameters)))  (((Machines ,Parameters)))  (((Parameters ,Machine))) 
+
+Unlike Build and Deploy Parameters, Machine Parameters are (obviously) defined for a Machine and not for a specific Environment.
+Parameters defined for a specific Machine, will automatically be available for all Environments using that Machine.
+This avoids having to (re)define Build and/or Deploy Parameters for each Environment linked to the Machine. 
+
+[NOTE]
+====
+If an Environment Parameter and a Machine Parameter have the same name, the Environment Parameter takes precedence.
+====
+
+Depending on the Scripting Tool linked to the environment, the defined parameters will be:
+
+* added to the command which executes the Script (in the case of NAnt and Maven2)
+* written to a specific file named _alm_ant.properties_ (in the case of Ant) or _gradle.properties_ (in the case of Gradel) which is automatic loaded with the `–propertyfile ANT` option. This property file is created on the fly in the source location of the Environment in the directory containing the Script (this may be a subdirectory of the source location of the Environment in case the location of the Script was defined using a relative path). Once the Build/Deploy process has terminated, this file is automatically deleted, unless the Debug option for the Environment linked to the Level has been activated.
+
+
+The _Machine Parameters Overview_ screen lets you create, edit, delete and copy Machine Parameters and allows checking their history.
+The following actions are possible:
+
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters_create,Creating Machine Parameters>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters__edit,Editing Machine Parameters>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters_delete,Deleting Machine Parameters>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters_copy,Copying Machine Parameters>>
+* <<GlobAdm_Machines.adoc#_globadm_machineparameters_history,Viewing the Machine Parameter History>>
+
+[[_globadm_machineparameters_overview]]
+=== The Machine Parameters Overview Screen 
+(((Machine Parameters ,Overview Screen))) 
+
+. In the Global Administration context, select__ Machines > Machine Parameters__.
++
+The following screen is displayed:
++
+image::GlobAdmin-Machines-MachineParameters-Overview.png[,975,544] 
++
+
+[NOTE]
+====
+You can also access the Machine Parameters Overview via the Machines Overview by selecting image:icons/icon_GlobalAdmin_13x13.png[,13,13] _(Global
+Administration) > Machines > Overview_ and, next, clicking the image:icons/icon_viewparameters.png[,15,15] _View
+Parameters_ link for the required Machine.
+====
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields,
+. Verify the information on the _Machine Parameters Overview_ panel.
++
+The _Machine Parameters Overview_ panel displays the defined Machine Parameters for each Machine.
++
+For a description of the fields, see <<GlobAdm_Machines.adoc#_globadm_machineparameters_create,Creating Machine Parameters>>.
++
+
+[NOTE]
+====
+Columns marked with the image:icons/icon_sort.png[,15,15] icon can be sorted alphabetically (ascending or descending).
+====
+. Depending on your access rights, the following links may be available on the _Machine Parameters Overview_ panel:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Link
+| Description
+
+|image:icons/icon_createparameter.png[,15,15] 
+|Create
+
+This option is available to all Users with Global Administrator Access Rights.
+It allows creating a Machine Parameter.
+
+<<GlobAdm_Machines.adoc#_globadm_machineparameters_create,Creating Machine Parameters>>
+
+|image:icons/history.gif[,15,15] 
+|History
+
+This option is available to all Users with Global Administrator Access Rights.
+It allows displaying the History of the selected Machine Parameter definition.
+
+<<GlobAdm_Machines.adoc#_globadm_machineparameters_history,Viewing the Machine Parameter History>>
+
+|image:icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to all Users with Global Administrator Access Rights.
+It allows editing the selected Machine Parameter definition.
+
+<<GlobAdm_Machines.adoc#_globadm_machineparameters__edit,Editing Machine Parameters>>
+
+|image:icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to all Users with Global Administrator Access Rights.
+It allows deleting the selected Machine Parameter definition and (optionally) deleting Machine Parameters with the same key linked to other Machines.
+
+<<GlobAdm_Machines.adoc#_globadm_machineparameters_delete,Deleting Machine Parameters>>
+
+|image:icons/copy_parameter.gif[,15,15] 
+|Copy Parameter
+
+This option is available to all Users with Global Administrator Access Rights.
+It allows copying the selected Machine Parameter definition.
+
+<<GlobAdm_Machines.adoc#_globadm_machineparameters_copy,Copying Machine Parameters>>
+|===
+
+[[_globadm_machineparameters_create]]
+=== Creating Machine Parameters 
+(((Machine Parameters ,Creating))) 
+
+. In the Global Administration context, select__ Machines > Parameters Overview__.
+. Click the image:icons/icon_createparameter.png[,15,15] _Create Parameter_ link next to the Machine to display the _Create Machine Parameter_ window.
++
+image::GlobAdmin-Machines-MachineParameters-Create.png[,388,350] 
++
+. Fill out the fields for the new Machine Parameter.
++
+The following fields are available.
+The _Key_ field is mandatory:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Machine
+|This field displays the current Machine.
+
+|Secure
+|This field indicates whether the Parameter is secured or not.
+
+|Key
+|In this field, enter the Key (Name) for the Machine Parameter.
+
+|Value
+a|In this field, enter the value(s) for the new Machine Parameter.
+
+The following possibilities apply:
+
+* Enter the fixed value, if you are creating a non-editable Machine Parameter.
+* Enter the default value, if you are creating an editable Machine Parameter.
+* Enter the list of possible preset values, separated by a semicolon (;), if you are creating a dynamic Machine Parameter (for example: ``yes;no``). Subsequently, these values can be selected from a drop-down list when creating a Level Request
+
+
+|Repeat Value
+|Required field for secured Machine Parameters: repeat the secured value.
+
+|Description
+|In this field, enter a description for the Parameter.
+
+|Mandatory
+|Select the _Yes_ option button, if the new Machine Parameter must be defined as mandatory.
+When you create a Level Request, mandatory Parameters will always be provided to the Build/Deploy Script.
+
+Select the _No_ option button, if the new Machine Parameter should not be defined as mandatory.
+When you create a Level Request, you can decide whether you want to provide the non-mandatory Parameter to the Build/Deploy Script.
+
+|Editable
+|Select the __Yes__ option button, if the new Machine Parameter must be defined as editable.
+When you create a Level Request, you can accept the default value (the one you enter in the Value field during creation) or specify the value of your choice for the Parameter.
+
+Select the _No_ option button, if the new Machine Parameter should not be defined as editable.
+When you create a Level Request, only the preset value (the one you entered in the Value field during creation) for this Parameter can be offered to the Build/Deploy Script.
+
+This field is not provided for secured Machine Parameters.
+
+|Dynamic
+|Select the __Yes__ option button, if the new Machine Parameter must be defined as dynamic.
+When you create a Level Request, you can Select one of the predefined values from the drop-down list.
+These are the values you enter in the Value field during creation and which you separate by a semicolon (;). The selected value will be offered to the Build/Deploy Script.
+
+Select the _No_ option button, if the new Machine Parameter should not be defined as dynamic.
+
+This field is not provided for secured Machine Parameters.
+|===
+
+. Click __Create__ to confirm the creation of the Machine Parameter.
++
+You can also click:
+
+* _Reset_ to clear the fields and restore the initial values.
+* _Cancel_ to return to the previous screen without saving the changes.
+
+[[_globadm_machineparameters__edit]]
+=== Editing Machine Parameters 
+(((Machine Parameters ,Editing))) 
+
+. In the Global Administration context, select__ Machines > Parameters Overview__.
+. In the _Actions_ column, click the image:icons/edit.gif[,15,15] __Edit__ link in front of the Machine Parameter to be edited.
++
+The following window is displayed:
++
+image::GlobAdmin-Machines-MachineParameters-Edit.png[,391,385] 
++
+. Edit the fields as required.
++
+For a description of the fields, refer to <<GlobAdm_Machines.adoc#_globadm_machineparameters_create,Creating Machine Parameters>>.
+. Click __Save__ to save your changes.
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Cancel_ to return to the previous screen without saving the changes
+
+[[_globadm_machineparameters_delete]]
+=== Deleting Machine Parameters 
+(((Machine Parameters ,Deleting))) 
+
+. In the Global Administration context, select__ Machines > Parameters Overview__.
+. In the _Actions_ column, click the image:icons/delete.gif[,15,15] __Delete__ link in front of the Machine Parameter to be deleted.
++
+The following confirmation window is displayed:
++
+image::GlobAdmin-Machines-MachineParameters-Delete.png[,384,313] 
++
+. Optionally, Select additional Machines. This allows for deleting parameters with the same key name on the selected Machines.
+. Click _Delete_ to delete the Machine Parameter.
++
+You can also click _Cancel_ to return to the previous screen without deleting the Parameter.
+
+[[_globadm_machineparameters_copy]] 
+=== Copying Machine Parameters 
+(((Machine Parameters ,Copying))) 
+
+This functionality allows copying a complete Machine Parameter definition from one source Machine to one or more target Machines.
+
+. In the Global Administration context, select__ Machines > Parameters Overview__.
+. In the _Actions_ column, click the image:icons/copy_parameter.gif[,15,15] __Copy__ link in front of the Machine Parameter to be copied.
++
+The following window displays the values of the parameter you are about to copy.
++
+image::GlobAdmin-Machines-MachineParameters-Copy.png[,325,477] 
++
+. Indicate whether you want to replace the parameter in case it already exists in the target Machine definition(s).
+. Select the Target Machine(s)
+. Click _Copy_ to confirm copying the Machine Parameter.
++
+You can also click:
+
+* _Reset_ to clear the fields and restore the initial values.
+* _Cancel_ to return to the previous screen without saving the changes.
+
+[[_globadm_machineparameters_history]]
+=== Viewing the Machine Parameter History 
+(((Machine Parameters ,History))) 
+
+. In the Global Administration context, select__ Machines > Parameters Overview__.
+. Click the image:icons/history.gif[,15,15] _History_ link on the _Parameters Overview_ panel to display the __Machine History View__.
++
+For more detailed information concerning this __History
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
++
+Click __Back __to return to the previous screen.

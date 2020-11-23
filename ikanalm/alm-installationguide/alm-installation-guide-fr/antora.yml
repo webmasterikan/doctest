@@ -1,0 +1,6 @@
+name: alm-installation-guide-fr
+title: IKAN ALM Installation Guide (FR)
+version: '5.8'
+start_page: ROOT:InstallationGuide.adoc
+nav:
+- modules/ROOT/nav.adoc  

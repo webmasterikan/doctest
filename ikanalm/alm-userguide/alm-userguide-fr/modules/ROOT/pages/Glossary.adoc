@@ -1,0 +1,312 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+:sectnums!:
+
+[appendix]
+= Glossaire
+
+[cols="1,1", frame="topbot"]
+|===
+
+|_Agent de construction IKAN ALM_
+|Un sous-processus (démon) de l`'Agent IKAN ALM qui exécutera les Constructions d`'une Requête de Niveau dans un Environnement de Construction sur une Machine Agent.
+
+|_Agent de déploiement IKAN ALM_
+|Un sous-processus (démon) de l`'Agent IKAN ALM qui exécutera les Déploiements d`'une Requête de Niveau dans un Environnement de Déploiement sur une Machine Agent.
+
+|_Agent IKAN ALM_
+|Un processus (démon) se trouvant sur une Machine ayant des sous-processus pour l`'exécution des Constructions ou des Déploiements.
+Si l`'Agent est sur la même Machine que le Serveur IKAN ALM on parle d`'un Agent "local", s`'il est sur une autre Machine, on parle d`'un Agent "distant". Pendant le processus de Construction ou de Déploiement, l`'Agent IKAN ALM interagit à distance avec le processus Moniteur IKAN ALM et localement avec un Transporteur et un Outil de script qui doivent être correctement configurés sur la Machine.
+
+|_Approbation_
+|Une Pré-Approbation consiste en une vérification avant de délivrer une Requête de Niveau sur un Niveau de Test ou de Production.
+Elle ajoute une condition supplémentaire à son exécution: non seulement la date et l`'heure requis doivent être atteintes, mais aussi la Pré-Approbation doit être accordée par un Utilisateur IKAN ALM.
+Tant que ces deux conditions ne sont pas remplies, la Requête de Niveau ne sera pas démarrée.
+Si une Pré-Approbation est rejetée, la Requête de Niveau ne sera jamais démarrée. 
+
+Une Post-Approbation consiste en une vérification après l`'exécution de la Requête de Niveau sur un Niveau de Test ou de Production.
+Elle ajoute une condition supplémentaire à la décision sur le statut final d`'une Requête de Niveau: non seulement les Constructions ou les Déploiements doivent avoir réussi, mais la Post-Approbation doit également avoir été accordée par un Utilisateur IKAN ALM.
+Tant que la Post-Approbation n`'est pas traitée, le statut de la Requête de Niveau ne sera pas établi à _Avertissement_ ou __Réussie__.
+Si une Post-Approbation est rejetée, la Requête de Niveau ne pourra jamais être délivrée sur le Niveau suivant dans le Cycle de Vie.
+
+|_Archives de Construction_
+|L`'Emplacement physique (chemin) sur le Serveur IKAN ALM où les résultats de construction sont sauvegardés dans un format compressé et archivé (``\*.zip`` or ``\*.tar.gz``). Les résultats de construction sont organisés par Projet et par Branche.
+
+|_Auditer un Projet_
+|Après sa création, un nouveau Projet est verrouillé.
+Le processus d`'audit du Projet procédera à un certain nombre de vérifications.
+Si toutes les vérifications réussissent, le Projet sera déverrouillé et prêt à l`'usage.
+
+|_Balise RCV_
+|Quand une Requête de Niveau sur un Niveau de Construction a réussi, le processus Moniteur IKAN ALM attribue une Balise dans le Référentiel de Contrôle de Version (RCV). Cette Balise RCV associe une Construction [Requête de niveau] avec ses codes Source dans le RCV.
+En principe, le format de la Balise RCV correspond au modèle de balise défini au niveau de la Branche.
+
+|_Branche_ 
+|Le concept d`'une Branche permet de contrôler les différents Cycles de Vie actifs dans un Projet IKAN ALM.
+En général, tous les Projets disposent d`'une Branche principale appelée '`Head`" dans laquelle se réalise le développement de la prochaine réalisation.
+Probablement il y aura une ou plusieurs Branches secondaires additionnelles.
+Une Branche secondaire peut être utilisée pour la maintenance de réalisations d`'un Projet actuellement en production pour pouvoir déployer des corrections de manière automatique, ou pour pouvoir déployer des corrections urgentes via un Cycle de Vie plus court (et plus vite). Une Branche secondaire peut également être utilisée pour permettre un développement en parallèle ou pour tester des Environnements de Test ou de Production futurs avec d`'autres paramètres (nouveau système d`'exploitation, nouveau compilateur ou nouvelle version de la base de données, ...).
+
+|_Branche dépendante_
+|Une Branche dont les codes Source ou le résultat de construction sont utilisés pour créer des Constructions dans une (ou plusieurs) Branches maîtres.
+Un lien de dépendance connectera la Branche maître aux codes Source ou au résultat de construction de la Branche dépendante.
+
+Par exemple: une Branche dépendante peut contenir une librairie commune utilisée par plusieurs Branches maîtres.
+
+|_Branche maître_
+|La Branche maître est une Branche de projet à laquelle est ajouté une Dépendance (une Branche dépendante). Les Constructions dans une Branche maître peuvent utiliser les codes Source ou le résultat de construction d`'une Branche dépendante (par exemple, une librairie commune).
+
+|_Branche principale_
+|Une Branche de Projet associée à la ligne de développement principal du VCR (appelé également "`main`", "`head`" ou "`trunk`"). Typiquement, une Branche principale est utilisée pour le développement en cours de la prochaine Réalisation.
+Tout comme une Branche secondaire, la Branche principale doit être associée à un Cycle de Vie pour devenir active (Constructions et Déploiements).
+
+|_Branche secondaire_
+|Une Branche secondaire est une Branche de développement dans le Projet autre que la Branche principale (également appelée "`main`" ou "`trunk`"). Elle est associée aux codes Source contrôlés dans une Branche du RCV.
+Typiquement, une Branche secondaire est utilisée pour des réalisations, des développements en parallèle, des modules de correction ou d`'autres pratiques de Gestion du Cycle de Vie d`'une Application (ALM) pour supporter un développement en dehors de la ligne de développement principale.
+De même que la Branche principale, la Branche secondaire doit être liée à un Cycle de Vie avant de devenir active (Constructions et Déploiements).
+
+|_Bureau_
+|Le Bureau affiche l`'information actuelle des Branches de projet et Niveaux sélectionnées.
+L`'Utilisateur peut personnaliser son Bureau en ajoutant les éléments qui l`'intéressent.
+De plus, le Bureau personnel offre des liens pour créer des Requêtes de Niveau.
+
+|_Catalogue des Phases_
+|L'emplacement physique (le chemin) sur le Serveur IKAN ALM où les Phases personnalisées (créées à partir de zéro ou importées) sont sauvegardées dans un format d'archivage (Phase.name-Phase.version.jar, par exemple, com.ikanalm.echoproperties-1.0.0.jar). Si un Serveur ou un Agent IKAN ALM doit installer une Phase personnalisée manquante, elle sera récupérée à partir de cet emplacement.
+Cela sera fait en utilisant le Transporteur associé à la Machine de l'Agent ou du Serveur.
+
+|_Construction_
+|Une Construction est une action sur l'Environnement de construction qui comprend plusieurs sous-processus, appelés des Phases de Construction.
+Elle fait toujours partie d'une Requête de niveau, qui peut également contenir d'autres Constructions ou Déploiements.
+
+[Une Construction est exécutée par l`'Agent de construction IKAN ALM.] La Construction se base sur des codes Source récupérés à partir du RCV vers l`'Environnement de Construction.
+Un Outil de script exécute un script de construction sur ces codes Source et en obtient un résultat de construction qui sera transféré vers les Archives de construction.
+
+|_Construction basée sur une version balisée_
+|Une Construction basée sur une version balisée sera exécutée sur des codes Source ayant une Balise prédéfinie (manuellement par l`'Utilisateur) dans le RCV, tandis qu`'une Construction qui n`'est pas basée sur une version balisée (également appelé "`tip`") sera exécutée sur base des codes Source les plus récents d`'une Branche secondaire ou principale (trunk/main) du RCV.
+
+|_Construction demandée [Requête de Niveau]_
+|Une Requête de Niveau créée manuellement (via l`'Interface Web ou via la ligne de commande) sur un Niveau de Construction sans Plan horaire associé.
+La Requête de Niveau doit avoir au moins une Construction et peut contenir un ou plusieurs Déploiements.
+
+|_Construction forcée [Requête de Niveau]_
+|Si un processus de construction continue a été défini pour le Niveau de Construction à l`'aide d`'un Plan horaire et si ce Plan horaire est outrepassé par la génération manuelle d`'une Construction [Requête de Niveau] via l`'Interface Web ou via la ligne de commande, cette action est appelée une "`Construction [Requête de Niveau] forcée`". La Requête de Niveau doit contenir au moins une Construction et peut contenir un ou plusieurs Déploiements.
+
+|_Copies de travail_
+|L`'Emplacement physique (chemin) sur le Serveur IKAN ALM vers lequel le processus Moniteur récupère les codes Source à partir du RCV ou les résultats de construction à partir des Archives de Construction.
+
+|_Cycle de Vie_
+|Un Cycle de Vie est une séquence de Niveaux associés à une Branche.
+Il permet de définir chaque étape dans le processus de promotion des codes Source et des résultats de construction incluant le développement, les procédures de test, de qualité et la production.
+Un seul Projet peut avoir plusieurs Cycles de Vie, par exemple pour la prochaine réalisation, pour la maintenance et les corrections urgentes sur la version actuelle, pour les développements en parallèle, ... Un Cycle de Vie peut être réutilisé dans plusieurs Branches du Projet.
+
+|_Délivrer [Requête de Niveau]_
+|Une Requête de Niveau créée manuellement (via l`'Interface Web ou via la ligne de commande) pour délivrer les codes Source ou le résultat de construction sur le Niveau de Test ou de Production suivant dans le Cycle de Vie d`'une Branche.
+La Requête de Niveau peut contenir une ou plusieurs Constructions et/ou un ou plusieurs Déploiements. 
+
+|_Dépendance_
+|Les Dépendances sont définies sur des Branches.
+Cette fonctionnalité permet la réutilisation de librairies communes ou de composants communs de Branches dépendantes.
+Le Projet qui réutilise la librairie commune est la __Branche
+maître__.
+Des Projets peuvent être réutilisés de deux façons: en tant que composants Sources récupérés à partir du Système de Contrôle de Versions ou en tant qu`'un résultat de construction récupéré des Archives de Construction.
+
+|_Déploiement_
+|Un Déploiement est une action sur l'Environnement de déploiement qui comprend plusieurs sous-processus, appelés des Phases de déploiement.
+
+Elle fait toujours partie d`'une Requête de Niveau, qui peut également contenir une (ou plusieurs) autre(s) Construction(s) ou un (ou plusieurs) autres Déploiement(s). [Un Déploiement est exécuté par l`'Agent de déploiement IKAN ALM.] Le Déploiement se base sur un résultat de construction récupéré à partir des Archives de Construction.
+Un Outil de script exécute un script de déploiement sur ce résultat de construction.
+
+|_Environnement de Construction_
+|Un Environnement physique sur une Machine où les codes Source récupérés à partir du RCV peuvent être transformés par un script de construction exécuté par un Outil de script.
+Un Environnement de Construction fait toujours partie d`'un Niveau.
+
+|_Environnement de Déploiement_
+|Un Environnement physique sur une Machine où un résultat de construction récupéré à partir des Archives de Construction sur le Serveur IKAN ALM peut être déployé par un script de déploiement exécuté par un Outil de script.
+Un Environnement de Déploiement fait toujours partie d`'un Niveau.
+
+|_Groupe d`'utilisateurs_
+|Une entité regroupant les Utilisateurs ayant les même "`droits d`'accès`". Les actions dans IKAN ALM (administration globale ou administration des projets, création d`'une Requête de Niveau, vérification des Projets, ...) sont protégées par un Groupe d`'utilisateurs.
+Les Groupes d`'utilisateurs doivent être définis dans IKAN ALM.
+Il y a deux types de Groupes d`'utilisateurs: Externes et Internes.
+L`'appartenance des Utilisateurs à un Groupe d`'utilisateurs externe est définie dans un système de sécurité externe.
+Chaque fois que l`'Utilisateur se connecte à IKAN ALM, l`'appartenance aux différents Groupes d`'utilisateurs sera synchronisée avec ce système de sécurité externe.
+Par contre, les Groupes d`'utilisateurs internes ne sont pas synchronisés avec le système de sécurité externe: ils servent à des fins de notification et d`'approbation et ils sont gérés manuellement via l`'interface d`'IKAN ALM.
+
+|_Historique des Constructions_
+|L`'Historique des Constructions offre un aperçu historique des Requêtes de Niveau de construction pour un Cycle de Vie ou une Branche spécifique.
+Elle permet de vérifier le flux d`'une certaine Construction dans le Cycle de Vie: a-t-elle été délivrée vers un Niveau plus haut dans le Cycle de Vie que le premier Niveau de construction.
+Si la réponse est affirmative, a-t-elle atteint le Niveau le plus haut (par exemple, Production)?
+
+|_ID d`'une Branche RCV_
+|L`'identifiant unique de la Branche dans le Référentiel de Contrôle de Version (RCV) externe.
+
+|_Machine_
+|Une représentation d`'un Serveur concret.
+Les Constructions et les Déploiements peuvent s`'exécuter sur une Machine à condition qu`'elle soit associée respectivement à un Environnement de Construction ou de Déploiement.
+De plus, l`'Agent IKAN ALM doit être installé correctement sur la Machine et un Outil de script doit être installé sur la Machine.
+Le Serveur IKAN ALM est une Machine spéciale sur laquelle sont installés l`'application Web et les processus Moniteur et Planificateur d`'IKAN ALM.
+
+|_Moniteur IKAN ALM_
+|Un processus (démon) sur le Serveur IKAN ALM qui exécute les Requêtes de Niveau.
+Durant l`'exécution d`'une Requête de Niveau, le Moniteur interagit avec le client RCV installé sur le Serveur IKAN ALM et avec un Agent IKAN ALM local ou distant.
+
+|_Niveau_
+|Un Niveau est un stade dans un Cycle de Vie, une étape conceptuelle dans le processus de la promotion des codes Source et des résultats de construction de l`'état de développement à l`'état de la mise en production.
+Un Niveau doit avoir au moins un Environnement (physique) de Construction et/ou de Déploiement pour être actif.
+Il peut avoir plus d`'un Environnement de Construction et/ou de Déploiement pour permettre des Constructions ou des Déploiements en parallèle sur plusieurs Machines.
+
+|_Niveau de Construction continue_
+|Un Niveau de Construction auquel est associé un Plan horaire qui vérifie les codes Source les plus récents dans le RCV chaque fois que l`'intervalle expire (par exemple toutes les 5 ou 10 minutes). Si les codes Source ont changés dans le RCV, le Planificateur notifiera les changements après l`'intervalle spécifié et une Requête de Niveau sera générée automatiquement.
+
+|_Notification_
+|Un message expédié via mail ou netsend à un Utilisateur défini dans IKAN ALM.
+Les Notifications peuvent être envoyées quand une Requête de Niveau échoue ou réussit, quand une Approbation doit être accordée pour une Requête de Niveau, quand une Approbation est refusée pour un Niveau, quand une Requête de Niveau est délivrée vers ou à partir d`'un certain Niveau, quand l`'Administrateur IKAN ALM veut notifier certains Utilisateurs.
+
+|_Numéro de Construction_
+|Chaque Construction sur un Niveau de Construction dans une Branche a un numéro de construction unique.
+Il s`'agit d`'un numéro séquentiel qui est incrémenté par IKAN ALM quand une Requête de Niveau de construction est créée.
+Le numéro de construction le plus élevé est sauvegardé sur la Branche.
+
+|_OID (OID Requête de Niveau / OID Construction / OID Déploiement/ OID
+Approbation de Niveau)_
+|Identifiant de l`'Objet.
+Il s`'agit du numéro unique utilisé pour faciliter l`'identification d`'une Requête de Niveau, d`'une Construction, d`'un Déploiement ou d`'une Approbation de Niveau.
+
+|_Outil de construction_
+|Un Outil de script installé dans un Environnement de Construction.
+
+|_Outil de déploiement_
+|Un Outil de script installé dans un Environnement de Déploiement.
+
+|_Outil de script_
+|Un système externe à IKAN ALM installé sur une Machine et capable d`'exécuter des scripts créés par l`'Utilisateur.
+IKAN ALM s`'intègre avec ANT, Gradle, NAnt et Maven2.
+Si l`'Outil de script est associé à un Environnement de Construction (de Déploiement) il est appelé Outil de Construction (de Déploiement). Le script pour l`'exécution d`'une Construction ou d`'un Déploiement doit être sauvegardé dans le RCV (ensemble avec les codes Source) ou dans l`'Emplacement des Scripts sur le Serveur IKAN ALM. 
+
+|_Paquet_
+|Un Paquet permet de faire évoluer un ou plusieurs fichiers individuels sélectionnés manuellement d`'une Branche du RCV (branche principale ou secondaire) à travers le Cycle de Vie IKAN ALM.
+Vous pouvez créer un seul ou plusieurs Paquets dans chaque Branche d`'un Projet de type "`Paquets`". Cette approche est différente de la manière de travailler originale dans les Branches de Projets de type "`Édition Versions`" pour lesquelles un processus configurable et automatisé définit quelles Révisions des Fichiers seront extraites de la branche principale (trunk) ou de la branche secondaire du RCV pour ensuite être utilisées dans le Cycle de Vie.
+
+|_Paramètre de construction_
+|Les Paramètres de construction sont des paramètres utilisés lors de l`'exécution du script de construction.
+Ils sont définis au niveau de l`'Environnement de Construction.
+Leur valeur peut être prédéfinie ou modifiable lors de la création d`'une Requête de Niveau.
+
+|_Paramètre de déploiement_
+|Les Paramètres de déploiement sont des paramètres utilisés lors de l`'exécution du script de déploiement.
+Ils sont définis au niveau de l`'Environnement de Déploiement.
+Leur valeur peut être prédéfinie ou modifiable lors de la création d`'une Requête de Niveau.
+
+|_Paramètre de machine_
+|Les Paramètres de machine sont rattachés à une Machine plutôt qu`'à un Environnement spécifique.
+Les paramètres rattachés à une Machine spécifique seront automatiquement disponibles pour tous les Environnements qui utilisent cette Machine.
+Cela évite de devoir (re)définir les Paramètres de construction ou de déploiement pour chaque environnement lié à cette Machine.
+
+Dans le cas où un Paramètre d`'environnement et un Paramètre de machine auront le même nom, le Paramètre d`'environnement sera prioritaire.
+
+|_Paramètre d'Environnement_
+|Les Paramètres d`'environnement sont des paramètres qui peuvent être utilisés pendant la Phase _Exécution script_ qui exécute un Script de construction/déploiement.
+Ils peuvent également être utilisés lors de l'exécution d'une Phase personnalisée.
+
+|_Paramètre de phase d'environnement_
+|Les Phases peuvent avoir leur propre jeu de Paramètres de phase.
+Une fois la Phase associée à un Environnement, des valeurs spécifiques peuvent être définies pour ces Paramètres de phase.
+Ces paramètres-là sont appelés des Paramètres de phase d'environnement. 
+
+|_Phase de construction_
+|Une Phase de construction est un sous-processus qui doit être exécuté pour compléter l'Action de construction.
+Les différentes Phases de construction constituent le flux de travail d'une Construction et elles sont insérées dans un Environnement de construction.
+Elles sont exécutées par le "IKAN ALM Builder Thread" de l'Agent IKAN ALM.
+Une Phase de construction peut être une Phase de noyau (par exemple, la Phase __Vérification
+du script de construction__) ou une Phase de construction personnalisée créée ou importée par l'Utilisateur dans le Catalogue des Phases.
+
+|_Phase de déploiement_
+|Une Phase de déploiement est un sous-processus qui doit être exécuté pour compléter l'Action de déploiement.
+Les différentes Phases de déploiement constituent le flux de travail d'un Déploiement et elles sont insérées dans un Environnement de déploiement.
+Elles sont exécutées par le "IKAN ALM Deployer Thread" de l'Agent IKAN ALM.
+Une Phase de déploiement peut être une Phase de noyau (par exemple, la Phase _Transfert
+du fichier de construction archivée_ ou une Phase de déploiement personnalisée créée ou importée par l'Utilisateur dans le Catalogue des Phases.
+
+|_Phase de niveau_
+|Une Phase de niveau est un sous-processus qui doit être exécuté pour compléter une Requête de niveau.
+L'exécution d'une Requête de niveau est subdivisée en Phases de Niveau qui seront exécutées de manière séquentielle.
+Les différentes Phases de niveau constituent le flux de travail d'une Requête de niveau et elles sont insérées dans un Niveau.
+Elles sont exécutées par le "IKAN ALM Monitor Thread" du Serveur IKAN ALM.
+Une Phase de niveau peut être une Phase de noyau (par exemple, la Phase _Récupération
+des Sources_ ou une Phase de niveau personnalisée créée ou importée par l'Utilisateur dans le Catalogue des Phases.
+
+|_Phase de noyau_
+|Les Phases de noyau constituent la fonctionnalité "de noyau" d'IKAN ALM.
+Elles peuvent uniquement être affichées, et ne peuvent pas être modifiées ni supprimées.
+Vous devez les considérer comme faisant partie intégrante d'IKAN ALM.
+Quand un nouveau Niveau, un nouvel Environnement de construction ou de déploiement est créé, son flux de travail par défaut sera créé et consistera entièrement d'une séquence de Phases de noyau.
+Ce flux de travail par défaut peut être modifié en supprimant des Phases de noyau, en modifiant la séquence des Phases ou en ajoutant des Phases personnalisées.
+
+|_Phase personnalisée_
+|Une Phase ajoutée par l'Utilisateur est également appelée une Phase "personnalisée". Elle peut être créée à partir de zéro dans l'Administration globale sur la base d'un ou plusieurs scripts ou ressources existants, ou elle peut être importée en utilisant la fonctionnalité "Importer une Phase". Une fois définie dans l'Administration globale, une Phase personnalisée peut être insérée dans le flux de travail par défaut d'un Niveau ou d'un Environnement de construction ou de déploiement (et, par conséquent, modifier ce flux de travail). Toutes les Phases personnalisées sont sauvegardées dans le Catalogue des Phases sur le Serveur IKAN ALM.
+Elles seront automatiquement transportées vers le Serveur IKAN ALM (Phase de niveau) ou l'Agent IKAN ALM (Phase de construction ou de déploiement) au moment de leur exécution.
+
+|_Planificateur IKAN ALM_
+|Un processus (démon) sur le Serveur IKAN ALM.
+Dans le cas où un Plan horaire (un intervalle prédéfini, par exemple toutes les 5 ou 10 minutes, chaque nuit, chaque semaine, ...) est associé à un Niveau de Construction, le processus Planificateur IKAN ALM vérifie dans le RCV si des modifications ont été faites aux codes Source dans le RCV chaque fois que l`'intervalle expire.
+Cela permet une Intégration Continue ou des Constructions nocturnes.
+
+|_Préfixe/Suffixe de construction_
+|Une série de numéros ou un enchaînement de caractères unique pour distinguer une Branche dans un Projet, appelé également "`Numéro de réalisation`". Exemples: 4.2, ou Principal, ou 1-0.
+Une Branche principale est uniquement identifiée par un Préfixe de construction.
+Une Branche secondaire combinera le Préfixe et le Suffixe de construction pour générer son numéro de réalisation.
+
+|_Projet_
+a|Un Projet IKAN ALM est associé à un Projet ou à un Sous-projet dans un Système de Contrôle de Versions (RCV) qui rassemble les codes Sources reliés.
+Un Projet IKAN ALM est une structure pour une ou plusieurs Branches pour lesquelles des actions réelles, telles que des Requêtes de Niveau, des Constructions ou des Déploiements, sont exécutées.
+Il est possible de définir des dépendances entres différents Projets, et à travers des Branches.
+
+Il existe deux types de projets:
+
+* Projets de type "`Édition Versions`": IKAN ALM utilisera la structure existante dans le RCV pour que les objets à extraire soient récupérés automatiquement au moment de la Construction.
+* Projets de type "`Paquets`": ce concept permet de travailler avec des fichiers isolés du système RCV. Les objets doivent être ajoutés manuellement dans une structure de paquet créée dans IKAN ALM avant le lancement du processus de Construction.
+
+|_Référentiel de contrôle de version (RCV)_
+|Un Système de Contrôle des Versions contenant les différentes versions des codes Source.
+Les codes Source reliés sont regroupés dans un Projet ou un Sous-projet (parfois également appelé un Module). Un Projet RCV peut contenir différents flux de développement, appelé "`head`" (= main ou trunk), ou Branches.
+IKAN ALM s`'intègre avec les RCVs suivants: CVS, Subversion, Microsoft Visual SourceSafe, IBM ClearCase et Serena PVCS.
+Pour pouvoir se connecter au RCV, le client RCV doit être correctement installé sur le Serveur IKAN ALM.
+Le processus Moniteur IKAN ALM interagit avec le RCV en récupérant ou en balisant les codes Source.
+L`'Interface Web interagit avec le RCV pour afficher les numéros de révision, les codes Source modifiés, ... d`'une Requête de Niveau.
+
+|_Requête de Niveau_
+|Une Requête de niveau est une action sur un Niveau qui comprend plusieurs sous-processus, appelés des Phases de niveau.
+
+Dans la plupart des cas, une Requête de Niveau contiendra au moins une action de Construction ou de Déploiement qui sera exécutée sur des Machines locales ou distantes.
+Une Requête de Niveau peut être créée manuellement par l`'Utilisateur, via l`'Interface Web ou via la ligne de commande, ou automatiquement par le processus Planificateur du Serveur IKAN ALM.
+Une Requête de Niveau est traitée par le processus Moniteur du Serveur IKAN ALM.
+
+|_Restaurer [Requête de Niveau]_
+|Une Requête de Niveau créée manuellement (via l`'Interface Web ou via la ligne de commande) qui sert à restaurer des codes Source ou des résultats de constructions délivrés avant sur un Niveau de Test ou de Production dans le Cycle de Vie d`'une Branche.
+La Requête de Niveau peut contenir une ou plusieurs Constructions et/ou une ou plusieurs Déploiements.
+
+|_Serveur IKAN ALM_
+|La Machine hébergeant l`'application Web d`'IKAN ALM, ainsi que les processus Moniteur et Planificateur IKAN ALM.
+
+|_Suivi des Incidents_
+|Un système externe à IKAN ALM dans lesquels sont identifiés des Incidents (défauts, améliorations, tâches, ...) pour un Projet.
+Quelques exemples sont: Atlassian JIRA, HP Quality Center, Collabnet TeamForge, Bugzilla ou Trac.
+IKAN ALM peut être relié à un tel système et faire le suivi des Incidents concernant une Requête de Niveau.
+
+L`'intégration avec JIRA et HP Quality Center est plus avancée: les Incidents sont automatiquement synchronisés à travers le Cycle de Vie et il est possible d`'ajouter un lien vers la Requête de Niveau à l`'Incident JIRA, au Defect HP Quality Center ou à l`'Artefact TeamForge.
+
+|_Transporteur_
+|Un Transporteur est utilisé pour le transfert de fichiers et de répertoires entre le Serveur IKAN ALM et un Agent local ou distant qui exécute les processus de Construction ou de Déploiement.
+Par conséquent, un Transporteur doit être défini pour une Machine spécifique associée à un Environnement de Construction ou de Déploiement.
+IKAN ALM supporte les Transporteurs FileCopy, remote FileCopy, SecureCopy et FTP.
+
+Un Transporteur peut transporter les Sources extraites à partir du Système de Contrôle de Versions et le Résultat de construction à partir des Archives de construction, mais il peut également extraire les Phases personnalisées à partir du Catalogue des Phases.
+
+|_Utilisateur_
+|Une personne ayant les droits de se connecter à IKAN ALM.
+L`'appartenance à des Groupes d`'utilisateurs détermine les droits d`'accès d`'un Utilisateur, c`'est-à-dire les actions (administration globale ou administration des projets, création d`'une Requête de Niveau, vérification des Projets, ...) qu`'il peut entreprendre dans IKAN ALM.
+Les Utilisateurs ne sont pas créés manuellement dans IKAN ALM, mais dans un système de sécurité externe (tel que LDAP ou Active Directory). Si l`'Utilisateur appartient au Groupe d`'utilisateurs approprié dans ce système de sécurité, il pourra se connecter à IKAN ALM et sera créé automatiquement.
+|===
+
+:sectnums:

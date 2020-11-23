@@ -1,0 +1,81 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_projadm_historylog]]
+= History Log 
+(((History Log)))  (((Project Administration ,History Log))) 
+
+. In the __Project Administration context__, select__ History Log__.
++
+The _Project History View_ screen is displayed:
++
+image::ProjAdm-HistoryLog-Screen.png[,1043,546] 
++
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+** click the _Search_ link to refresh the list based on the current search criteria,
+** click the _Reset search_ link to clear the search fields.
+. Verify the information on the _Project Admin Object Versions_ panel.
++
+
+[NOTE]
+====
+Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+====
++
+The following information fields are available:
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Field
+| Meaning
+
+|Object Type
+|The type of object that was modified.
+
+|Object OID
+|The OID number of the object.
+
+_Note:_ Clicking this number will display all modifications for that object.
+
+|Name
+|The name of the object.
+
+|Version
+|The version the object had at the moment the modification was saved.
+
+|Modification Date
+|The date and time at which the modification took place.
+
+|Modification Type
+a|The modification type can be one of the following:
+
+** _Create_
++
+The object was created
+** _Update_
++
+The object was updated
+** _Delete_
++
+The object was deleted
+
+|Modifying User
+|The User ID of the User who performed the modification.
+|===
+
+. Click a specific version on the _Project Admin Object Versions_ panel to show the differences between that version and the current version of the object.
++
+A _Comparison_ panel is added to the right of the _Versions_ panel.
++
+image::ProjAdm-HistoryLog-Comparison.png[,964,637] 
++
+The _Version Comparison_ panel displays the differences between the latest version of the object (shown in the "Latest" column) and the selected version of the object (shown in the "Selected" column). If the Object was deleted, the latest version will be equal to the status of the Object before it was deleted.
+
+* The upper part of the _Comparison_ panel displays the Version, Modification Date, Modification Type and User ID of the two versions that are being compared.
+* The lower part displays the object-specific values of the two versions that are being compared, high-lighting the fields where there are differences.

@@ -1,0 +1,188 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_desktop_logon]]
+= Logging in and out
+
+IKAN ALM uses the JAAS interface to base its User ID/Password authentication on an existing Security System in your organization.
+As a result, these User IDs and User Groups will most likely be maintained in such an external security system outside IKAN ALM, although the Global Administrator can also set up User IDs and User Groups in a configuration file (e.g., for small organizations or demo purposes). Consequently, end users will probably log in to IKAN ALM using a User ID and Password of an external Security System like Active Directory or LDAP.
+
+Each time a User attempts a login, synchronization of the User Groups for this User takes place.
+There are two types of User Groups: external and internal.
+During login, the external User Groups are automatically synchronized with an external security system, whereas the internal User Groups are kept intact.
+For more information on this issue, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>.
+
+A user can only successfully log in if doing so does not violate the restrictions imposed by the IKAN ALM License.
+
+* If a User is defined as a __Reserved User__, he/she can always log in. For more information on defining a User as Reserved, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users and Groups Users>>.
+* If a User is not defined as a __Reserved User__, the User is considered being a __Floating User__, and he/she can only log in if the current number of connected Floating Users is less than the number of Floating Users defined by the IKAN ALM License.
+
+
+This chapter provides more information on: 
+
+* <<Logon.adoc#_desktop_loggingon,Logging in>>
+* <<Logon.adoc#_desktop_loogingoff,Logging out>>
+* <<Logon.adoc#_desktop_errormessages,Error Messages>>
+* <<Logon.adoc#_desktop_warningmessages,Warning Messages>>
+
+
+[[_desktop_loggingon]]
+== Logging in 
+(((IKAN ALM ,Logging on)))  
+(((Logging on))) 
+
+[[_ploggingon]]
+. Open a browser window and enter the IKAN ALM Login URL.
++
+Your IKAN ALM Administrator will provide the exact URL.
++
+This URL is specified on the _Mail_ subpanel on the _System Settings_ screen. See <<GlobAdm_System.adoc#_globadm_system,System>>.
++
+The _IKAN ALM Log in_ screen is displayed:
++
+image::Logon.png[,446,262] 
++
+[NOTE]
+====
+Once you know the correct URL, it is useful to save the link in your _Favorites_ or _Bookmarks_ folder.
+====
+. Enter your IKAN ALM User ID and Password as provided to you by your IKAN ALM Administrator. Then click __Log in__.
++
+Your personal Desktop will be displayed:
++
+image::Desktop-DesktopOverview.png[,1014,517] 
++
+For more information on managing the items displayed on the Desktop, refer to the section <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>.
++
+
+[NOTE]
+====
+If you log in to IKAN ALM for the first time, you will be asked to complete your Personal Settings.
+The _Name_ and _E-mail
+Address_ fields are mandatory.
+For more information, refer to the section <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Editing Your Personal Settings>>.
+====
+
+
+[[_desktop_loogingoff]]
+== Logging out 
+(((IKAN ALM ,Logging out)))  
+(((Logging out))) 
+
+[[_ploggingoff]]
+. On the Main Menu, at the right, select _Log out_ from the User Settings drop-down menu.
++
+image::Logout.png[,1006,128] 
++
+The following screen is displayed:
++
+image::Logon-Logout.png[,431,240] 
+. You can now reconnect to IKAN ALM or close your browser window.
++
+
+[NOTE]
+====
+If your User is defined as a Floating User (not Reserved User), it is very important that you explicitly log out of IKAN ALM when you have finished using it.
+If not, your session will remain active after you closed your browser and will continue to count as a connected Floating User, possibly preventing other Users to log in to IKAN ALM.
+====
+
+
+[[_desktop_installinglicense]]
+== Installing a New License 
+(((IKAN ALM ,Installing a New License)))  
+(((License ,Install))) 
+
+If no valid license is found when you try to log in to IKAN ALM, an error message will be displayed and the link _Install
+new license_ will be displayed on the login page.
+
+[NOTE]
+====
+For users with Global Administration rights, this installation option is also available on the _About_ screen.
+To access this option, select _About_ from the _Help_ drop-down menu, on the Main Menu, at the right.
+====
+
+. Click the _Install New License_ link.
++
+The following screen is displayed:
++
+image::Desktop-InstallLicense.png[,432,183] 
+. Select the license file (alm_license.lic) using the _Browse_ button.
++
+Your IKAN ALM Administrator will provide the exact file name and location.
+. Click the _Submit_ button.
++
+When the License file is accepted, the following screen is displayed:
++
+image::Desktop-LicenseSubmitted-Success.png[,441,261] 
++
+If the License file is not accepted, the following error message is displayed:
++
+image::Desktop-LicenseNotAccepted.png[,445,237] 
++
+Most likely the problem is either a corrupted License file (or a file that doesn`'t contain an IKAN ALM License), or an expired License in the file.
+Contact your IKAN ALM Administrator or your IKAN ALM vendor to obtain a new License file.
+. You can now log in to IKAN ALM. See: <<Logon.adoc#_desktop_loggingon,Logging in>>
++
+
+
+[[_desktop_errormessages]]
+== Error Messages
+
+In case of a problem when trying to log in to IKAN ALM, one of the following error messages could be displayed.
+Please refer to the table underneath for the corresponding solution. 
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Error Message
+| Solution
+
+
+|`No valid License found`
+|No IKAN ALM License was installed.
+Install a License as explained in the section <<Logon.adoc#_desktop_installinglicense,Installing a New License>>.
+
+|`License has expired`.
+|The IKAN ALM License has expired.
+Contact your IKAN ALM vendor to obtain a new License.
+
+|`Maximum number of connected floating Users (x) reached.`
+
+x= number of Floating Users as defined by the license
+a|* Wait and retry until one of the connected Floating Users has logged out from IKAN ALM.
++
+or
+* Contact your IKAN ALM vendor to upgrade to a License that allows more Floating Users.
+
+|`There are more reserved active Users (x) found in the database than allowed in the license (y)`
+
+x = number of Reserved Users defined in IKAN ALM
+
+y= number of Reserved Users as defined by the license
+|The number of Reserved Users defined in IKAN ALM exceeds the number of allowed Reserved Users in the License. Contact your IKAN ALM vendor.
+
+|`There are more machines definitions (x) found
+in the database than allowed in the license (y)`
+
+x = number of Machines defined in IKAN ALM
+
+y= number of Named Machines as defined by the license
+|The number of Machines defined in IKAN ALM exceeds the number of allowed Named Machines in the License.
+Contact your IKAN ALM vendor.
+|===
+
+[[_desktop_warningmessages]]
+== Warning Messages
+
+The following warning message could be displayed when logging in to IKAN ALM.
+Please refer to the table underneath for the corresponding solution.
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Warning
+| Solution
+
+|`License will expire within x day(s)`.
+
+x= between 14 and 0 days
+|The IKAN ALM License will expire soon, contact your IKAN ALM vendor.
+|===

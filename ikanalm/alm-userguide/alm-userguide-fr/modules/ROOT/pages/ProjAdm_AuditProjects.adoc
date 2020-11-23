@@ -1,0 +1,151 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_projadm_auditingprojects]]
+= Auditer un projet 
+(((Administration des projets ,Auditer un projet)))  (((Options relatives à l'administration des projets ,Auditer un projet)))  (((Auditer))) 
+
+Lorsqu`'un Utilisateur demande un audit d`'un Projet, IKAN ALM vérifie que:
+
+* L`'Emplacement des Archives de construction existe pour toutes les Branches du projet. 
+** Pour la Branche Principale, cet emplacement correspond au chemin suivant __EmplacementArchiveConstructionParamètresSystème/NomProjet/PréfixeBrancheConstruction__. 
+** Pour la Branche Secondaire, cet emplacement correspond au chemin suivant: __EmplacementArchiveConstructionParamètresSystème/NomProjet/PréfixeBrancheConstruction.SuffixeBrancheConstruction__.
+
++
+IKAN ALM bloque les Branches pour lesquelles ce test échoue.
+* Il y a uniquement un Niveau de Construction défini pour chaque Cycle de Vie. IKAN ALM bloque les Branches pour lesquelles ce test échoue.
+* Il y a uniquement un Environnement de Construction défini pour le niveau de Construction. IKAN ALM bloque les Niveaux pour lesquels ce test échoue.
+* Si aucun Script de construction n`'est défini pour le Projet, un Script de construction doit être défini pour chaque Environnement de construction. IKAN ALM bloque les Niveaux pour lesquels ce test échoue.
+* Si aucun Script de déploiement n`'est défini pour le Projet, un Script de déploiement doit être défini pour chaque Environnement de déploiement. IKAN ALM bloque les Niveaux pour lesquels ce test échoue.
+* Si une Phase personnalisée est insérée dans un Niveau, IKAN ALM vérifie si une valeur a été spécifiée pour le Paramètre obligatoire 'alm.phase.builder' de la Phase personnalisée. IKAN ALM bloque les Niveaux pour lesquels ce test échoue.
+
+
+Les conditions suivantes peuvent engendrer un message d`'avertissement:
+
+* Au moins un Environnement de construction ou de déploiement doit être défini pour chaque Niveau de Test. Depuis la version 5.0, IKAN ALM permet la création de Niveaux de Test non liés à un Environnement de construction ou de déploiement, ce qui peut être considéré comme un Niveau de Test de type "`Jalon`".
+* Au moins un Environnement de déploiement doit être défini pour chaque Niveau de Production. Depuis la version 5.0, IKAN ALM permet la création de Niveaux de Production non liés à un Environnement de construction ou de déploiement, ce qui peut être considéré comme un Niveau de Production de type "`Jalon`". 
+
+
+== Auditer un Projet
+(((Auditer ,Projet))) 
+
+. Dans le contexte de l'__Administration des projets__, sélectionnez __Auditer le Projet__.
++
+Si la configuration du Projet est cohérente, l`'écran suivant s`'affiche.
++
+image::ProjAdmin-Audit-Success.png[,1044,614] 
++
+S`'il y a des erreurs dans la configuration du Projet, l`'écran suivant s`'affiche.
++
+image::ProjAdmin-Audit-Error.png[,943,469] 
++
+Pour les Branches et les Niveaux verrouillés, l`'icône image:icons/locked.gif[,15,15]  est reprise dans le champ __Verrouillé__.
+Dans l`'exemple ci-dessus, c`'est le cas pour le Niveau __TEST__.
+Les messages d`'erreur ou d`'avertissement sont affichés en rouge dans le champ __Message__.
++
+Pour la liste des messages d`'erreur ou d`'avertissement, référez-vous à la section <<ProjAdm_AuditProjects.adoc#_projadm_auditingprojects_errorswarnings,Messages d`'erreur et d`'avertissement>>
+. Vérifiez si toutes les Branches et tous les Niveaux sont correctement définis et accessibles pour IKAN ALM, et corrigez les erreurs éventuelles.
+. Si la configuration du Projet est cohérente, cliquez sur le bouton _Déverrouiller_ dans le panneau _Actions_ pour déverrouiller toutes les Branches et tous les Niveaux verrouillés du Projet.
+
+
+[[_projadm_auditingprojects_errorswarnings]]
+== Messages d`'erreur et d`'avertissement 
+(((Auditer ,Messages d’erreur et d’avertissement))) 
+
+L`'aperçu suivant liste les messages d`'erreur et d`'avertissement possibles lors de l`'Audit d`'un Projet.
+
+* <<ProjAdm_AuditProjects.adoc#_babibjdjf2,Messages d`'erreur>>
+* <<ProjAdm_AuditProjects.adoc#_babeffaid5,Messages d`'avertissement>>
+
+
+[[_babibjdjf2]]
+=== Messages d`'erreur
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Message d`'erreur
+| Solution
+
+|`Aucun Cycle de vie associé`
+|Message d`'erreur par rapport à une Branche: une Branche doit être rattachée à un Cycle de Vie.
+
+|`Aucun Niveau de construction trouvé`
+|Message d`'erreur par rapport à une Branche: un Niveau de Construction doit être défini dans son Cycle de Vie.
+
+|Impossible de trouver l'Emplacement des Archives des constructions
+|Message d`'erreur par rapport à une Branche: aucun Emplacement des Archives de constructions n`'existe sous le chemin saisi et IKAN ALM ne peut pas le créer.
+
+Lors de l`'audit, IKAN ALM vérifie l`'existence de l`'Emplacement des Archives des constructions tel qu`'il a été spécifié dans les paramètres système pour la Branche.
+S`'il n`'existe pas, IKAN ALM a essayé de le créer, mais ce processus a échoué, par exemple à cause d`'un problème de sécurité.
+
+Contactez votre Administrateur IKAN ALM, qui pourra vérifier les messages dans les Logs afin de trouver la cause de ce problème.
+
+|`Aucun Environnement de construction trouvé`
+|Message d`'erreur par rapport à un Niveau de Construction: un Niveau de Construction doit être rattaché à un seul Environnement de construction.
+
+|`Plusieurs Environnements de construction trouvés`
+|Message d`'erreur par rapport à un Niveau de Construction: un Niveau de Construction doit être rattaché à un seul Environnement de construction.
+
+|SVP! Ne spécifiez qu'un seul suffixe de construction pour chaque Environnement de construction
+|Message d`'erreur par rapport à un Niveau de Test ou de Production rattaché à plus d`'un Environnement de construction.
+Dans ce cas, chaque Environnement de construction doit avoir un suffixe de construction unique pour ne pas écraser les résultats de construction dans les Archives des constructions.
+
+|`Aucun Script de construction spécifié`
+|Message d`'erreur par rapport à un Environnement de construction: aucun script de construction n`'a été spécifié pour l`'Environnement de construction.
+Un script de construction peut être spécifié dans la définition du Projet, ou peut être écrasé dans la définition de l`'Environnement de construction.
+
+|L'Outil de construction est incompatible avec le type d'outil de construction du Projet!
+|Message d`'erreur par rapport à un Environnement de construction.
+Le type de l`'Outil de construction rattaché à l`'Environnement de construction ne correspond pas au type spécifié dans la définition du Projet.
+
+Par exemple, une définition de Projet spécifiant ANT comme type d`'outil de script utilise un Environnement de construction rattaché à un outil de script Maven2.
+
+|L'Environnement de construction connecté n'est pas lié à un Niveau dans le Cycle de vie
+|Message d`'erreur par rapport à un Environnement de déploiement: l`'Environnement de construction qui est rattaché à l`'Environnement de déploiement n`'est pas spécifié dans le Cycle de Vie du Niveau contenant l`'Environnement de déploiement.
+La raison du problème repose dans le fait que le Niveau contenant l`'Environnement de construction n`'est pas rattaché à ce Cycle de Vie. 
+
+|`L'Environnement de construction connecté
+est lié à un Niveau supérieur dans le Cycle de vie`
+|Message d`'erreur par rapport à un Environnement de déploiement: l`'Environnement de construction auquel il est rattaché fait partie d`'un Niveau qui, dans le Cycle de Vie, se trouve après le Niveau contenant l`'Environnement de déploiement.
+Par conséquent, l`'exécution de déploiements est impossible car le résultat de construction doit être créé avant dans le Cycle de Vie.
+
+|`L'Environnement de construction connecté
+est lié à un Niveau inférieur optionnel dans le Cycle de vie`
+|Message d`'erreur par rapport à un Environnement de déploiement: l`'Environnement de construction rattaché ne peut pas faire partie d`'un Niveau optionnel.
+Sinon, il serait possible d`'omettre le Niveau optionnel et de tenter de déployer un résultat de construction non créé.
+
+|`L'Outil de déploiement est incompatible
+avec le type d'outil de déploiement du Projet!`
+|Message d`'erreur par rapport à un Environnement de déploiement: le type d`'Outil de déploiement rattaché à l`'Environnement de déploiement ne correspond pas au type spécifié dans la définition du Projet.
+
+Par exemple, une définition de Projet spécifiant NANT comme type d`'outil de script de déploiement utilise un Environnement de déploiement rattaché à un outil de script ANT.
+
+|`Paramètre obligatoire non spécifié 'alm.phase.builder' dans
+la Phase 'Nom d'affichage de la Phase'`
+|Message d`'erreur par rapport à un Niveau.
+Une Phase personnalisée avec le nom d'affichage donné est insérée dans le Niveau, mais la valeur du Paramètre alm.phase.builder (automatiquement créé) de cette Phase est vide.
+Accédez à l'__Aperçu des
+Phases de niveau__ du Niveau et cliquez sur le lien _Voir
+les Paramètres_ à côté de la Phase indiquée.
+Ici vous pouvez spécifier une valeur pour le Paramètre alm.phase.builder en cliquant sur le lien _Modifier_ (<<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,Aperçu des paramètres de Phase>>).
+|===
+
+[[_babeffaid5]]
+=== Messages d`'avertissement
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Message d`'avertissement
+| Solution
+
+|`Aucun Environnement de construction ou
+de déploiement trouvé`
+|Erreur d`'avertissement par rapport à un Niveau de Test.
+Depuis la version 5.0, IKAN ALM permet de créer des Niveaux de Test qui ne sont liés ni à un Environnement de construction ni à un Environnement de déploiement.
+Un tel Niveau de Test "`non opérationnel`" peut être considéré comme une étape (Jalon) atteinte dans le Cycle de Vie.
+
+|`Aucun Environnement de déploiement trouvé`
+|Message d`'avertissement par rapport à un Niveau de Production.
+Depuis la version 5.0, IKAN ALM permet de créer des Niveaux de Production qui ne sont pas liés à un Environnement de déploiement.
+Un tel Niveau "`non opérationnel`" peut être considéré comme une étape (Jalon) atteinte dans le Cycle de Vie.
+|===

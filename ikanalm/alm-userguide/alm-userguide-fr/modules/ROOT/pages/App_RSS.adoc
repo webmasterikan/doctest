@@ -1,0 +1,88 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_rssfeedurldetails]]
+= Détails de l`'URL du flux RSS 
+(((URL du flux RSS (Détails)))) 
+
+L`'URL pour IKAN ALM a la structure suivante:
+
+_protocole://almhost:almhostport/alm/displayRss.action?[requestparams]_
+
+Cette structure est identique aux Paramètres du Système de l`'URL d`'IKAN ALM (voir Administration Globale > Paramètres Système).
+
+* "`protocole`" =http ouhttps
+* "`almhost:almhostport`" = le domaine du Serveur IKAN ALM
++
+Par exemple: localhost:8080
+* "`requestparams`" = 
+
+
+La liste des critères (optionnels), séparés par le signe "&", est ajoutée.
+Le tableau ci-dessous affiche les critères optionnels possibles: 
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Critère optionnel
+| Description
+
+|title=valeur
+|Il s`'agit du titre affiché dans les flux RSS.
+
+Si cette valeur reste vide, elle sera définie automatiquement lors de la Construction des flux RSS.
+Ainsi, il est possible d`'avoir plus d`'un flux RSS pour IKAN ALM dans votre lecteur RSS (par exemple, pour des projets différents).
+
+_Note:_ les espaces seront remplacés par le signe "`+`".
+
+|projectName=valeur
+|La dénomination du Projet. 
+
+Par exemple: projectName=DEMOCVS, ou projectName=D*
+
+|statuses=valeur
+|Le statut de la Requête de Niveau.
+Plusieurs statuts peuvent être attribués.
+
+Par exemple: statuses=1&statuses=1
+
+Les valeurs de statut valides sont de 0 à 10, soit 0=Inconnu, 1=En attente de l`'heure d`'exécution, 2=En attente d`'approbation, 3=Rejetée, 4=Exécution, 5=Erreur, 6=OK, 7=Avertissement, 8=Annulée, 9=Interruption, 10=Interrompue.
+
+|projectStreamBuildPrefix=valeur
+|Le préfixe de construction défini pour la Branche.
+
+Par exemple: ProjectStreamBuildPrefix=1
+
+|projectStreamBuildSuffix=valeur
+|Le suffixe de construction défini pour la Branche.
+
+Par exemple: ProjectStreamBuildSuffix=1
+
+|levelName=valeur
+|La dénomination du Niveau.
+
+Par exemple: levelName=contbuild
+
+|levelTypes=valeur
+|Le Type de Niveau.
+
+Par exemple: levelTypes=0
+
+Les valeurs valides sont de 0-2, soit 0=Construction, 1=Test, 2=Production.
+
+|lang=valeur
+|"`Code langage`" valide indiquant la langue de l`'Utilisateur (la valeur par défaut = none = en).
+
+Par exemple: lang=en, lang=de, lang=fr (les trois langues actuellement supportées par IKAN ALM)
+|===
+
+
+Quelques exemples d`'URLs valides:
+
+\http://localhost:8080/alm/displayRss.action
+
+\http://localhost:8080/alm/displayRss.action?lang=de
+
+\https://pe4600:8080/alm/displayRss.action?projectName=DEMOCVS&projectStreamBuildPrefix=1&projectStreamBuildSuffix=1&levelTypes=0&lang=fr
+
+\https://pe4600:8080/alm/ displayRss.action?projectName=DEMOCVS&projectStreamBuildPrefix=1&projectStreamBuildSuffix=1&levelTypes=0&title=IKAN ALM+builds+in+project+DEMOCVS
+

@@ -1,0 +1,577 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_usersgroups_users]]
+[[_globadm_usersgroups]]
+= Users and Groups
+
+Refer to the following sections for more information on:
+
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
+
+
+[[_globadm_usersgroups_users]]
+== Users 
+(((Global Administration ,Users)))  (((Users)))  (((Users ,Creating))) 
+
+IKAN ALM uses the JAAS interface to base its User ID/Password authentication on existing Security Systems in your organization.
+This means that User IDs and external User Groups are maintained outside IKAN ALM. 
+
+As a result, Users may not be created in IKAN ALM via a menu entry: a User must first be created in the external security system.
+If a User has the appropriate rights, he or she may log on to IKAN ALM.
+Based on this first successful logon, the User will be automatically created in IKAN ALM.
+
+A User ID can only be used to <<Logon.adoc#_desktop_loggingon,log on to IKAN ALM>> and to <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,define  Personal Settings>>, if it exists in this external Security System.
+
+If your IKAN ALM license allows no floating users and is fully based on reserved users it will not be possible to log on with another User ID once the maximum number of reserved active users is reached.
+If additional users need to log on to IKAN ALM, there are two possibilities:
+
+* expand the IKAN ALM license (by adding reserved or floating users)
+* archive one or more active users that are no longer required
+
+[WARNING]
+--
+Archived users can no longer log on to IKAN ALM.
+They are maintained in the system solely for historical purposes, in other words to display what actions they have performed__ in the past__.
+Re-activating an archived user is only possible if this action does not exceed the user limit imposed by your IKAN ALM license.
+--
+
+
+If your IKAN ALM license allows floating users, new users can always log in, on condition that 
+
+* not all floating licenses are occupied by other User IDs
+* the User is created in the external security system and has access rights to log on to IKAN ALM
+
+
+Access Rights in IKAN ALM are based on the adherence of User IDs to User Groups.
+There are two types of User Groups: external and internal.
+External User Groups must exist in the external Security System, before they can be defined and used in IKAN ALM.
+There is no automatic mechanism for importing external User Groups from the external Security System into IKAN ALM, as a lot of these User Groups may not be required in IKAN ALM.
+
+It is possible to add a User ID to an external User Group or to delete a User ID from such a User Group __within__ IKAN ALM, but these actions have only a __temporary__ effect.
+As soon as the IKAN ALM session is terminated and a new session is opened, IKAN ALM reads the settings from the external Security System and synchronizes the external IKAN ALM User Groups with the definitions available in this external security system.
+In other words, if the adherence of a User ID to an external User Group changes permanently, this change must be configured in the external Security System, not in IKAN ALM.
+
+On the other hand, a lot of User Groups can be defined that are only used for notifications and approvals.
+Managing these groups in an external security system may be impractical, since the User Groups are used by IKAN ALM only.
+For that reason, there exist internal User Groups which can be managed in IKAN ALM only and (as a consequence) are not synchronized with an external authorization system.
+
+When adding/editing the User Groups, one should keep in mind the fact that, unlike the external User Groups, those internal groups are not automatically synchronized when the User logs in.
+To avoid situations where no User with System Admin rights can login anymore, IKAN ALM does not allow to set an internal User Group as the User Group with the Admin Access Rights.
+
+The Users Overview option allows:
+
+* defining additional information fields for User IDs that have been used to log in to IKAN ALM
+* archiving active User IDs that are no longer required, or re-activating archived User IDs
+* setting active User IDs as reserved, provided that this action does not exceed the maximum number of active reserved Users.
+* displaying a list of Users connected to IKAN ALM, with the possibility to disconnect them, if needed, before their session has timed out.
+
+[[_globadm_usersgroups_usersoverview]]
+=== The Users Overview Screen
+(((Users ,Overview Screen))) 
+
+. In the Global Administration context, select__ Users & Groups > Overview Users__.
++
+The following screen is displayed:
++
+image::GlobAdm-Users.png[,865,291] 
++
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields.
+. Verify the information on the __Users Overview__ panel.
++
+The following information is available for each displayed User ID:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|User ID
+|This field contains the User ID.
+
+|Name
+|This field contains the Name associated with the User ID.
+
+|Description
+|This field contains the defined description associated with the User ID.
+
+|Host Name
+|This field contains the name of the Machine the User used to connect to IKAN ALM.
+If the IP address of the Machines is displayed, this means that the host name could not be resolved.
+
+This field is only visible when the option _Connected
+Users_ is selected in the _Search User_ panel.
+
+|IP Address
+|This field contains the IP address of the Machine the User used to connect to IKAN ALM.
+
+This field is only visible when the option _Connected
+Users_ is selected in the _Search User_ panel.
+
+|Login Time
+|This field contains the date and time the User connect to IKAN ALM.
+
+This field is only visible when the option _Connected
+Users_ is selected in the _Search User_ panel.
+
+|E-mail Address
+|This field contains the E-mail Address associated with the User ID.
+
+|Location
+|This field contains the Location associated with the User ID.
+
+This field is not displayed on the Connected Users Overview.
+
+|Phone Number
+|This field contains the Phone Number associated with the User ID.
+
+This field is not displayed on the Connected Users Overview.
+
+|Mobile Number
+|This field contains the Mobile Number associated with the User ID.
+
+This field is not displayed on the Connected Users Overview.
+
+|Language
+a|This field contains the Language setting associated with the User ID.
+
+There are three possibilities:
+
+* English
+* French
+* German
+
+This field is not displayed on the Connected Users Overview.
+
+|Archived
+|This field contains a check mark if the User ID has been archived.
+
+This field is empty for active names.
+
+|Reserved
+|This field contains a check mark if the User ID is a Reserved User ID.
+A Reserved non archived User ID may always log on to IKAN ALM, without occupying a Floating license.
+It is typically assigned to IKAN ALM Users with Global Admin Access Rights.
+|===
+
+. Depending on your access rights, the following links may be available:
++
+
+[cols="1,1", frame="none"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows editing a User definition. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_edituser,Editing User Settings>>
+
+|image:icons/icon_disconnectUser.png[,15,15] 
+|Disconnect
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows disconnecting Users before their session has timed out. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_disconnectingusers,Disconnecting Users>>
+
+|image:icons/history.gif[,15,15] 
+|History
+
+This option is available to all IKAN ALM Users.
+It allows viewing the User History. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_userhistory,Viewing the User History>>
+|===
+
+[[_globadm_usersgroups_edituser]]
+=== Editing User Settings 
+(((Users ,Editing))) 
+
+. In the Global Administration context, select__ Users & Groups > Overview Users__.
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected User ID definition.
++
+The following screen is displayed:
++
+image::GlobAdm-Users-Edit.png[,572,620] 
++
+*Description:*
+
+* At the top of the screen, the __Edit User__ panel is displayed. Edit the fields as required.
++
+You may also reactivate an archived User by clicking the _No_ option button next to the archived field.
++
+You may also mark a non reserved User as reserved, by clicking the Yes option button next to the reserved field.
+A reserved non archived user may always log in to IKAN ALM, without occupying a floating license.
+If the number is exceeded, the following message is displayed:
++
+__Error: Maximum number of reserved active Users
+(X) reached__, where X is the maximum allowed number of reserved active users.
+You will have to expand your IKAN ALM license or archive other (obsolete) reserved User IDs, or mark other active reserved User IDs as non reserved, before you can reactive this User ID.
+
+* At the bottom of the screen, the __Related User Groups Overview__ panel is displayed. The overview contains the definitions of the User Groups to which the selected User ID belongs. See: <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
+
++
+[NOTE]
+====
+Users can edit their personal settings. See: <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Personal Settings>>
+====
+
+. Edit the fields as required.
++
+For a description of the fields, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_usersoverview,The Users Overview Screen>>.
+. Click __Save__ to save your changes.
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Back_ to return to the previous screen without saving the changes
+
+[[_globadm_usersgroups_disconnectingusers]]
+=== Disconnecting Users 
+(((Users ,Disconnecting))) 
+
+. In the Global Administration context, select__ Users & Groups > Overview Users__.
+. Set the option _Connected Users_ to _Yes_ to display the list of Users currently connected.
++
+image::GlobAdm-Users-Disconnect.png[,809,264] 
++
+. Click the image:icons/icon_disconnectUser.png[,15,15] _Disconnect_ link on the _Users Overview_ panel to immediately disconnect the User.
++
+This will end the User`'s session and disconnect him from IKAN ALM.
+As a result, the User has to log on again if he or she wants to continue his or her activity in IKAN ALM.
+
+[[_globadm_usersgroups_userhistory]]
+=== Viewing the User History 
+(((Users ,History))) 
+
+. In the Global Administration context, select __Users & Groups > Overview Users__.
+. Click the image:icons/history.gif[,15,15] _History_ link on the _User Overview_ panel to display the __User History View__.
++
+
+[NOTE]
+====
+On the _Edit User_ screen you also have access to the _User Group History View_ screen by clicking the _History_ link on the _User
+Groups Overview_ panel.
+====
++
+For more detailed information concerning this __History
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
++
+Click __Back __to return to the _Users
+Overview_ screen.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
+* <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Personal Settings>>
+* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovals,Approvals>>
+
+|===
+
+[[_globadm_usersgroups_groups]]
+== User Groups 
+(((Global Administration ,User Groups)))  (((User Groups))) 
+
+IKAN ALM uses the JAAS interface to base its User ID/Password authentication on existing Security Systems in your organization.
+This means that User IDs and their adherence to User Groups are maintained outside IKAN ALM.
+A User ID can only be used to <<Logon.adoc#_desktop_loggingon,log on to IKAN ALM>> and to <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,define Your Personal Settings>>, if it exists in this external Security System.
+
+Access Rights in IKAN ALM are based on the adherence of User IDs to User Groups.
+There are two types of User Groups: external and internal.
+The external User Groups must exist in the external Security System, before they can be defined and used in IKAN ALM.
+There is no automatic mechanism for importing external User Groups from the external Security System into IKAN ALM, as a lot of these User Groups may not be required in IKAN ALM.
+
+Deleting an external User Group in IKAN ALM means that it is not known to IKAN ALM anymore.
+It is however not deleted in the external Security System.
+
+It is possible to add a User ID to a User Group or to delete a User ID from an external User Group __within__ IKAN ALM, but these actions have only a _temporary_ effect.
+As soon as the IKAN ALM session is terminated and a new session is opened, IKAN ALM reads the settings from the external Security System and synchronizes the external IKAN ALM User Groups with the definitions available in this external security system.
+In other words, if the adherence of a User ID to an external User Group changes permanently, this change must be configured in the external Security System, not in IKAN ALM.
+
+On the other hand, a lot of User Groups can be defined that are only used for notifications and approvals.
+Managing these groups in an external security system is impractical, since the User Groups are used by IKAN ALM only.
+For that reason, there exist internal User Groups which can be managed in IKAN ALM only and which are not synchronized with an external authorization system.
+
+When adding/editing the User Groups, one should keep in mind the fact that, unlike the external User Groups, those internal are not automatically synchronized when the user logs in.
+To avoid situations where no User with System Admin rights may login anymore, IKAN ALM does not allow to set an internal User Group as the User Group with the Admin Access Rights.
+
+Refer to the following sections for detailed information:
+
+* <<GlobAdm_UsersGroups.adoc#_globadm_usergroupcreate,Creating a User Group>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usergroupsoverview,The User Groups Overview Screen>>
+
+[[_globadm_usergroupcreate]]
+=== Creating a User Group 
+(((User Groups ,Creating))) 
+
+[NOTE]
+====
+This option is only available if you have Global Administrator Access Rights in IKAN ALM.
+====
+
+. In the Global Administration context, select__ Users & Groups > Create User Group__.
++
+The following screen is displayed:
++
+image::GlobAdm-UserGroup-Create.png[,589,303] 
++
+. Fill out the fields in the _Create User Group_ panel at the top of the screen. Fields marked with a red asterisk are mandatory:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Name
+|Enter the name of the new User Group in this field.
+
+|Description
+|Enter a description for the new User Group in this field.
+
+|Type
+|In this field, select the User Group type from the drop-down list.
+
+The possible values are:
+
+* External: the User Group membership is synchronized with the external security system. This is done for each User individually at login.
+* Internal: the User Group membership is managed in IKAN ALM 
+
+For more information, refer to the section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Editing a User Group>>.
+|===
+
+. Once you have filled out the fields, click__ Create__.
++
+The newly created User Group is added to the__ User
+Groups Overview__ panel at the bottom of the screen.
+
+[[_globadm_usergroupsoverview]]
+=== The User Groups Overview Screen 
+(((User Groups ,Overview Screen))) 
+
+. In the Global Administration context, select__ Users & Groups > Overview User Groups__.
++
+The following screen is displayed:
++
+image::GlobAdm-UserGroup-Overview.png[,968,425] 
++
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields.
+. Verify the information on the _User Groups Overview_ panel.
++
+The following information is available for each displayed User Group:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Name
+|This field contains the defined User Group name.
+
+|Description
+|This field contains the defined description associated with the User Group.
+
+|Type
+|This field contains the User Group type which may be external or internal.
+|===
+
+. Depending on your access rights, the following links may be available:
++
+
+[cols="1,1", frame="none"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows editing a User Group definition. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Editing a User Group>>
+
+|image:icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows deleting a User Group definition. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_deleteusergroup,Deleting a User Group>>
+
+|image:icons/history.gif[,15,15] ______
+|History
+
+This option is available to all IKAN ALM Users.
+It allows viewing the User Group History. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_usergrouphistory,Viewing the User Group History>>
+|===
++
+
+[NOTE]
+====
+
+Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+====
+
+[[_globadm_usersgroups_editusergroup]]
+=== Editing a User Group 
+(((User Groups ,Editing))) 
+
+. In the Global Administration context, select__ Users & Groups > Overview User Groups__.
++
+The following screen is displayed:
++
+image::GlobAdm-UserGroup-Edit.png[,977,428] 
++
+. Click the image:icons/edit.gif[,15,15] _Edit_ link in front of the User Group for which you want to modify the members.
++
+image::GlobAdm-UserGroup-EditUserGroup.png[,581,535] 
++
+. In the _Edit User Group_ panel, edit the fields as required.
+. Underneath the _Edit User Group_ panel, click the image:icons/edit.gif[,15,15] _Edit User Group Members_ link to change the selected User Group definition.
++
+The following screen is displayed:
++
+image::GlobAdm-UserGroup-EditUserGroupMembers.png[,575,292] 
++
+.. Edit the fields in the __Edit User Group Members__ panel as required.
++
+Determine the allocation of User IDs to this User Group:
+
+* To add a User ID to this User Group, select the User ID in the _Non Group Members_ list and click the _<<_ button.
+* To remove a User ID from this User Group, select the User ID in the _Group Members_ list and click the __>> __button.
++
+By default, archived Users are filtered out of the _Non Group Members_ list.
+To display all the Users, including the archived ones, select the _Show
+Archived Users_ check box. 
+.. Click __Save__ to save your changes.
++
+
+[NOTE]
+====
+For external User Groups, changing the Group Members has only a temporary effect.
+As soon as a User`'s IKAN ALM session is terminated and a new session is opened, IKAN ALM reads the settings from the external Security System and synchronizes the external IKAN ALM User Groups with the definitions available in this external security system.
+As a result a User added here will be deleted from the list, or vice versa.
+
+However, the membership of internal User Groups may only be managed through this interface.
+====
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Cancel_ to return to the previous screen without saving the changes.
+
+.. The _User Group Usage_ panel displays the System Settings Access Rights and Levels and Projects the User Groups are connected to.
++
+image::GlobAdm-UserGroup-UserGroupsUsage.png[,622,396] 
+
+. Click _Save_ to confirm your changes.
++
+This will bring you back to the _User
+Groups Overview_ screen.
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Back_ to return to the previous screen without saving the changes
+
+[[_globadm_usersgroups_editusergroupmembers]]
+=== Editing the User Group Members
+
+. On the __User Group Members__ panel underneath the _Edit User Group_ panel (See <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Editing a User Group>>), click the image:icons/edit.gif[,15,15] _Edit User Group Members_ link to change the selected User Group definition. 
++
+The following screen is displayed:
++
+image::GlobAdm-UserGroup-EditUserGroupMembers.png[,575,292] 
++
+Edit the fields in the __Edit User Group Members__ panel as required.
++
+Determine the allocation of User IDs to this User Group:
+
+* To add a User ID to this User Group, select the User ID in the _Non Group Members_ list and click the _<<_ button.
+* To remove a User ID from this User Group, select the User ID in the _Group Members_ list and click the __>> __button.
++
+By default, archived Users are filtered out of the _Non Group Members_ list.
+To display all the Users, including the archived ones, select the _Show
+Archived Users_ check box. 
+. Click __Save__ to save your changes.
++
+
+[NOTE]
+====
+For external User Groups, changing the Group Members has only a temporary effect.
+As soon as a User`'s IKAN ALM session is terminated and a new session is opened, IKAN ALM reads the settings from the external Security System and synchronizes the external IKAN ALM User Groups with the definitions available in this external security system.
+As a result a User added here will be deleted from the list, or vice versa.
+
+However, the membership of internal User Groups may only be managed through this interface.
+====
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Cancel_ to return to the previous screen without saving the changes.
+
+[[_globadm_usersgroups_deleteusergroup]]
+=== Deleting a User Group 
+(((User Groups ,Deleting))) 
+
+. In the Global Administration context, select__ Users & Groups > Overview User Groups__.
+. Click the image:icons/delete.gif[,15,15] _Delete_ link to delete the selected User Group definition.
+
+* If the User Group is not connected to any other IKAN ALM Object, the following screen is displayed:
++
+image::GlobAdm-UserGroup-Delete.png[,429,176] 
++
+Click __Delete __to confirm the deletion or __Back__ to return to the previous screen without deleting the entry.
+* If the User Group is still connected to IKAN ALM Objects on the System Project or Level Settings, the following dialog is displayed:
++
+image::GlobAdm-UserGroup-Delete-Error.png[,658,639] 
++
+
+[NOTE]
+====
+You will need to cancel the displayed connections, before you can delete the User Group.
+====
+
+[[_globadm_usersgroups_usergrouphistory]]
+=== Viewing the User Group History 
+(((User Groups ,History))) 
+
+. In the Global Administration context, select__ Users & Groups > Overview User Groups__.
+. Click the image:icons/history.gif[,15,15] _History_ link to display the__ User Group History View__.
++
+For more detailed information concerning this __History
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
++
+Click __Back __to return to the _User
+Groups Overview_ screen.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users and Groups Users>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+* <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notifying IKAN ALM Users>>
+* <<GlobAdm_Project.adoc#_globadm_project,Projects>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createtestorproductionlevel,Creating a Test or Production Level>>
+* <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlevelsettings,Editing a Level>>
+
+|===

@@ -1,0 +1,803 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_system_settings]]
+[[_globadm_system]]
+= System
+
+The _System_ menu provides an entry to view or edit the IKAN ALM Server configuration settings and to perform Housekeeping Actions in the IKAN ALM Build Archive. 
+
+Users which have Global Admin Access rights will have access to the following Submenus:
+
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+* <<GlobAdm_System.adoc#_globadm_system_housekeeping,Housekeeping>>
+* <<GlobAdm_System.adoc#_globadm_system_housekeepinghistory,Housekeeping History>>
+* <<GlobAdm_System.adoc#_globadm_system_synchronizebuildarchive,Synchronize Build Archive>>
+
+
+Users who do not have Global Admin Access rights will only have access to the following Submenus:
+
+* <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+* <<GlobAdm_System.adoc#_globadm_system_housekeepinghistory,Housekeeping History>>
+
+
+[[_globadm_system_settings]]
+== System Settings 
+(((System Settings)))  (((Global Administration ,System Settings))) 
+
+On the _System Settings_ screen, the global IKAN ALM Server settings are defined, such as the different locations (build archive, script, work copy and phase catalog) and the mail and security settings.
+Some of these fields are filled in automatically during the installation process.
+
+[NOTE]
+====
+Changing some of these settings requires preparatory actions on the IKAN ALM server.
+====
+
+
+. In the Global Administration context, select __System > System Settings__.
++
+The following screen is displayed.
++
+image::GlobAdmin-SystemSettings.png[,614,915] 
++
+
+[NOTE]
+====
+If you do not have Global Administrator access rights in IKAN ALM, you will not be able to edit the fields.
+====
++
+The following subpanels are available:
+
+* <<GlobAdm_System.adoc#_globadm_systemsettings_localenvironment,Local Environment>>
+* <<GlobAdm_System.adoc#_globadm_systemsettings_security,Security>>
+* <<GlobAdm_System.adoc#_globadm_systemsettings_mail,Mail>>
+* <<GlobAdm_System.adoc#_globadm_systemsettings_miscellaneous,Miscellaneous>>
+
++
+Underneath the _Edit System Settings_ panel, you will find the image:icons/history.gif[,15,15] _History_ link.
+Click this link to display the _System Settings History
+View_ screen.
+For more detailed information concerning this __History View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
+
+
+[[_globadm_systemsettings_localenvironment]]
+=== Local Environment
+
+
+image::GlobAdmin-SystemSettings_LocalEnvironment.png[,704,408] 
+
+The following fields are available on the __Local Environment __subpanel:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Description
+
+|IKAN ALM Server
+|This field contains the name of the Machine currently hosting the IKAN ALM Server.
+
+Select another Machine Name from the drop-down list, if required.
+
+Changing this field requires preliminary actions, like installing the IKAN ALM Server on the new target Machine, migrating Local File Copy Locations and setting up the necessary VCR clients.
+
+|_Local
+File Copy Locations_
+|These fields are used for Build and Deploy actions.
+
+These locations are automatically synchronized with the built-in Local FileCopy transporter. <<GlobAdm_Transporters.adoc#_globadm_transporter_filecopy,FileCopy Transporters>>
+
+|Work Copy Location
+|This field contains the path to the Work Copy Location.
+
+In preparation of the Build process, the IKAN ALM Monitor places the sources (checked out sources from a VCR and sometimes also dependent build results) in a subdirectory of this location.
+The tagging of the VCR after a successful Build is done from this location as well.
+
+You can edit the location if required.
+
+|Build Archive Location
+|This field contains the path to the location of the Build Archive on the IKAN ALM Server.
+
+Build Results will be stored in or retrieved from this location.
+They will be placed in a subdirectory per Project Stream and per Project.
+
+If required, you can edit the location.
+
+|Script Location
+|This location can be used to store build and deploy scripts.
+
+When the build or deploy script is not available in the sources or build result, it will be retrieved from this location.
+
+You can edit the location if required.
+
+This field allows that the Scripts are stored outside the Version Control Repository and managed on a (secured) central location.
+
+|Phase Catalog Location
+|This field contains the path to the location of the Phase Catalog on the IKAN ALM Server.
+
+Newly created Phases and Phases that have been imported will be stored in this location.
+
+|*Relative Locations (Remote Transporters)*
+|
+
+These locations are used for all remote transport actions (SSH, FTP and FileCopy).
+
+These locations are relative.
+The complete path will be assembled as follows: the prefix path (as specified in the SSH, FTP or FileCopy Transporter definition) concatenated with the relative location defined on this _Local Environment_ tab.
+
+Remote Transporters are activated by defining them as the Transporter Protocol when specifying the settings for a Machine. 
+
+For more information, refer to the sections <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>and <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>.
+
+|Work Copy Location
+|This field contains the location of the Work Copy displayed as a remote location.
+
+This is the location where the VCR interface places the checked out sources or dependent build results on the IKAN ALM Server, so that they are accessible for a remote IKAN ALM Agent handling a build process.
+
+You can edit the location if required.
+
+|Build Archive Location
+|This field contains the location of the Build Archive displayed as remote location.
+
+This is the location where the Builds are stored in or retrieved from by a remote IKAN ALM Agent handling a build or deploy process.
+
+You can edit the location if required.
+
+|Script Location
+|This field contains the location of the Build or Deploy Script displayed as a remote location.
+
+Scripts will be retrieved from this location if they are not stored in the Version Control Repository.
+
+You can edit the location if required.
+
+This field allows that the Scripts are stored outside the Version Control Repository and managed on a (secured) central location.
+
+|Phase Catalog Location
+|This field contains the location of the Phase Catalog displayed as remote location.
+
+Newly created Phases and Phases that have been imported will be stored in this location.
+A remote IKAN ALM Agent that needs to install a Phase will use this location to retrieve it.
+
+|*Transporter Protocol Settings*
+|
+
+The Transporter Protocol defines how Sources and Build Results will be transported.
+
+|SSH Port
+|Specify the SSH Port Number.
+This is only necessary if the SSH Server on the IKAN ALM Server uses an SSH Port other than the default port number __22__.
+An SSH Server daemon must be installed on the IKAN ALM server in order to use SSH as a Transporter Protocol.
+
+__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<GlobAdm_Transporters.adoc#_globadm_secureshellcreate,Creating a Secure Shell Transporter>>
+
+|FTP Port
+|Specify the FTP Port Number.
+This is only necessary if the FTP Server on the IKAN ALM Server uses a TCP Port other than the default port number __21__.
+An FTP server must be installed on the IKAN ALM Server in order to use FTP as a Transporter protocol.
+
+__Note: __This port number may be overwritten by the port number defined in the _Transporter_ definition. <<GlobAdm_Transporters.adoc#_globadm_ftpcreate,Creating an FTP Transporter>>
+|===
+
+[[_globadm_systemsettings_security]]
+=== Security
+
+
+image::GlobAdmin-SystemSettings_Security.png[,701,106] 
+
+The following fields are available on the _Security_ subpanel.
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Description
+
+|User Group with User Access Rights
+|This field contains the name of the User Group to which all Users requiring access to IKAN ALM must belong.
+
+You may select another User Group from the drop-down list, if required.
+
+You may also leave this field empty.
+In this case, all authenticated users will have User access rights to IKAN ALM.
+
+|User Group with Admin Access Rights
+|This field contains the name of the User Group to which all Users requiring Administrator Rights must belong.
+Note that this must be an _external_ User Group.
+
+Only users belonging to this User Group may create, edit and delete Global Administration definitions in IKAN ALM.
+
+You may select another _external_ User Group from the drop-down list, if required.
+
+You may also leave this field empty.
+In this case, all authenticated users will have Administrator access rights to IKAN ALM.
+|===
+
+[[_globadm_systemsettings_mail]]
+=== Mail
+
+IKAN ALM can send mails automatically or on demand to notify on failed or successful Builds and Deploys, to request an approval before delivering to a Test or Production Level, or just to notify connected users on changed settings. 
+
+Settings for connecting to an external mail system can also be defined on the Mail tab.
+
+[NOTE]
+====
+Theses Mail settings can be tested via the _Notify
+IKAN ALM Users_ submenu option. <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notifying IKAN ALM Users>>
+====
+
+
+image::GlobAdmin-SystemSettings_Mail.png[,702,310] 
+
+The following fields are available on the _Mail_ subpanel.
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Option
+| Meaning
+
+|IKAN ALM URL
+|In this field, enter the base IKAN ALM URL.
+This URL is used for creating hyperlinks in mails sent by IKAN ALM (Approvals, Pre-Notifications, Post-Notifications, Level Request Success/Fail Notifications) and for constructing the RSS feed link.
+
+|Content Type
+|Indicates which templates will be used to compose notification and approval mail messages.
+
+There are two options:
+* _HTML:_ the templates containing HTML tags will be used.
+* __Plain Text__: the templates without HTML tags will be used.
+
+|Template Location
+a|By default, the mail templates are located in the following directory:
+
+_TOMCAT_HOME/webapps/alm/WEB-INF/classes/templates_
+
+If you want to customize these templates, we advise you to change this location to a local directory on the IKAN ALM Server.
+
+The locale directories match the language settings of the user:
+
+* _en_ for English
+* _fr_ for French
+* _de_ for German
+
+If no match is found, the templates in the __default__ directory will be used.
+
+For the HTML formatted templates, a ___html__ suffix is added before the _$$.$$vm_ extension.
+
+For plain text templates, there is no such suffix.
+
+|SMTP Server
+|Select the Machine name of the SMTP Mail Server.
+
+|Port
+|This field contains the SMTP Port number used by IKAN ALM to connect to the Mail Server.
+
+This field is optional, by default port 25 is used.
+
+|From User
+|This field contains the _From:_ E-Mail Address used in IKAN ALM notification e-mails.
+
+This field is mandatory if SMTP was chosen as mail Protocol.
+
+|Authentication Type
+a|Select which Authentication Type is required:
+
+* __Anonymous__: select this option, if the SMTP Server can be used without authentication.
+* __Authentication__: select this option, if the SMTP Server requires authentication.
+
+|User
+|This field contains the User name used to authenticate on the SMTP Server.
+
+This field is mandatory if _Authentication_ was chosen as Authentication Type.
+
+|Password
+|This field contains the masked Password used to authenticate on the SMTP Server.
+
+This field is mandatory if _Authentication_ was chosen as Authentication Type.
+
+The characters you enter are displayed as asterisks.
+
+|Repeat Password
+|In this field, re-enter the password used to authenticate on the SMTP Server.
+|===
+
+[[_globadm_systemsettings_miscellaneous]]
+=== Miscellaneous
+
+
+image::GlobAdmin-SystemSettings_Misc.png[,697,151] 
+
+The following fields are available on the _Miscellanous_ subpanel:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Auto Refresh Rate
+|In this field, you can enter the number of seconds for the automatic refresh function on the <<Desktop_ManageDesktop.adoc#_managedesktop_desktopoverview,The Desktop Overview Screen>>, <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen,Level Requests Overview>> and <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build History Screen>>.
+
+As a result, these overview screens will be refreshed each time the interval expires (if the user has activated the <<Desktop_AutoRefresh.adoc#_desktop_autorefresh,Auto Refresh function on his or her Desktop submenu>>).
+
+If you do not want to allow the use of the Auto Refresh option, enter __0 __(zero) in this field.
+
+|RSS Feed Enabled
+|In this field you can enable the RSS functionality.
+
+As a result an RSS button will become available on the user`'s _Level Requests Overview_ panel. 
+
+By default the RSS Feeds are enabled.
+
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_rssfeeds,The IKAN ALM RSS Functionality>>.
+
+|RESTful Web Services Enabled
+|This feature is currently only functional for the integration with the SAP lifecycle. 
+
+These services allow for querying (HEAD and GET requests) Users, User Groups, Subversion repositories and Issue Tracking Systems in Global Administration, and Projects, Project Streams and Lifecycles in Project Administration.
+
+By default, this feature is disabled for security reasons.
+
+|Build/Deploy Parameter Prefix
+|This option determines the value of the IKAN ALM Build/Deploy parameters prefix (by default alm) and the name of the ANT property file that is generated for Execute Build and Execute Deploy phases (by default alm_ant.properties).
+
+In case you are upgrading from a version prior to IKAN ALM 5.0, this feature allows you to keep on working with the old scm4all parameter prefix and the old scm4all_ant.properties file, and not having to modify your Build and/or Deploy scripts.
+
+_Note:_ This is a compatibility solution.
+At a certain point in time, you will have to modify your scripts and use the new _alm_ prefix. 
+|===
+
+. Make the necessary changes on the different panels.
+. Click _Save_ at the bottom of the screen.
++
+You may also click _Refresh_ to retrieve the settings from the database.
+
+
+[[_globadm_system_housekeeping]]
+== Housekeeping 
+(((Housekeeping)))  (((Global Administration ,Housekeeping))) 
+
+The Housekeeping functionality allows you to manage the Build Archive.
+A search can be performed locating Build Files that may no longer be needed.
+These Build Files can be selected and marked for removal.
+The system will then physically remove them from the Build Archive and set the Archive Status of the related Builds to "deleted", hereby avoiding these Builds to be used in further Deploys.
+
+The _Housekeeping_ screen also shows information about the Build Archive, like the total number of build files in the Archive, the size of the Archive and the remaining free space on the hard drive where the Archive is located.
+
+. In the Global Administration context, select__ System > Housekeeping__.
++
+The __Housekeeping__ screen is displayed:
++
+image::GlobAdm-Housekeeping-Screen.png[,920,526] 
++
+On top of the screen, the _Build Archive Info_ panel displays the following information.
++
+
+[NOTE]
+====
+The _Build Archive Info_ is based on hardware data obtained from the Build Archive location on the IKAN ALM Server.
+This Build Archive location is defined in the _Local Environment_ tab of the System Settings. <<GlobAdm_System.adoc#_globadm_systemsettings_localenvironment,Local Environment>>
+====
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Field
+| Description
+
+|Total Number of Build Files
+|This field contains the total number of Build Files in the Build Archive.
+
+|Total Archive Size
+|This field indicates the total size (in a multiple of bytes) of the Build Archive.
+
+|Free Space on Archive Disk
+|This field indicates the remaining free space (in a multiple of bytes) on the hard drive where the Archive is located.
+|===
+
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields.
++
+
+You can enter or select several search criteria to narrow your search.
+
++
+[cols="1,1", frame="none", options="header"]
+|===
+| Criterion
+| Description
+
+|Project Name
+|Enter or select the name of the Project for which you want to display the Build Files.
+
+|Project Stream Build Prefix
+|Enter or select the Project Stream Build Prefix.
+
+|Project Stream Build Suffix
+|Enter or select the Project Stream Build Suffix.
+
+|Build End Date
+a|Specify the minimum age of the Build Files.
+
+The possible values are:
+
+* _None Specified_
++
+No age specified, and the Build End Date/Time From and To fields will be ignored
+* _Older than 3 years_
++
+Only Build files older than 3 years will be displayed
+* _Older than 1 year_
++
+Only Build files older than 1 year will be displayed
+* _Older than 3 months_
++
+Only Build files older than 3 months will be displayed
+
+|Build End Date/Time From
+|If you want to specify a range of dates, enter in this field the first _Build End
+Date/Time_ of the range.
+
+You can also click the image:icons/calendar.gif[,18,19]  icon to select the Build End Date/Time.
+
+Click the required date to copy it into the field.
+
+The time will be set to the current time.
+However you can still change the time manually.
+
+This field will be ignored when a _Build
+End Date_ field has been selected.
+
+|Build End Date/Time To
+|If you want to specify a range of dates, enter in this field the last _Build End
+Date/Time_ of the range.
+
+You can also click the image:icons/calendar.gif[,18,19]  icon to select the Build End Date/Time.
+
+Click the required date to copy it into the field.
+
+The time will be set to the current time.
+However you can still change the time manually.
+
+This field will be ignored when a _Build
+End Date_ field has been selected.
+
+|Size > (in Mb)
+|Use this field to specify the minimum size of the Build Files to be displayed on the __Build
+Files Overview__.
+
+|Size < (in Mb)
+|Use this field to specify the maximum size of the Build Files to be displayed on the __Build
+Files Overview__.
+
+|Deployed
+|Select _Yes_ to display only the Build Files that have been deployed.
+
+Select _No_ to display only the Build Files that have not been deployed.
+
+If the option _All_ is selected, both the deployed and undeployed Build Files will be displayed.
+
+|Level Request Status
+a|Specify the status of the Level Request that created the Build Files.
+Only Build Files that were created by a Level Request that currently has this status are displayed.
+
+The possible values are:
+
+* Success
+* Warning
+* Fail
+* Run
+* Awaiting Post-approval
+* Rejected
+* Aborted
+* Aborting
+
+|Level Name
+|Enter or select the name of the Level for which you want to display the Build Files.
+
+|Level Type
+|Enter the Level Type (Build, Test or Production).
+
+|Build Environment Name
+|Enter or select the name of the Build Environment for which you want to display the Build Files.
+
+|Show Hidden Project Streams
+a|Indicate whether you want to display the hidden Project Streams or not.
+
+* _Yes_
++
+Hidden Project Streams will be displayed.
+* _No_
++
+Hidden Project Streams will not be displayed.
+* _All_ (= default)
++
+All Project Streams, hidden and unhidden, will be displayed.
+
+|===
+
+. Verify the search result on the __Build Files Overview__.
++
+The _Build Files Overview_ panel lists the following information for each displayed Build File. 
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Description
+
+|View Content
+|Click the image:icons/view.gif[,15,15] _View_ link to view the content of the Build File. <<Desktop_LevelRequests.adoc#_desktop_lr_results,Results>>
+
+|File Name
+|The name of the Build File.
+
+|Build Size
+|The size of the Build File.
+
+|Build End Date
+|The date and time at which the Build execution ended.
+
+|Project Stream
+|The name of the Project Stream.
+
+|Hidden
+|Indication whether the Project Stream is hidden or not.
+
+|Level Name
+|The name of the Level.
+
+|Build Environment Name
+|The name of the Build Environment.
+
+|Level Request OID
+|This field displays the Level Request OID of the Build.
+Click the link to display the details for this Level Request.
+
+<<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>
+
+|Level Request Status
+|This field contains the Level Request Status. <<Desktop_LevelRequests.adoc#_desktop_lr_overviewscreen,See Level Requests Overview screen>>
+
+|Deployed
+|This field indicates whether or not the Build has been used by a Deploy.
+|===
+
+. Select the Build Files to be deleted and click the _Delete_ button underneath the overview.
++
+Select the check box in the table heading in order to select all the displayed Build Files.
+. The _Confirm Build Files Deletion_ popup window is displayed.
++
+image::GlobAdm-Housekeeping-Delete.png[,258,90] 
++
+. Click __Delete __to confirm the deletion or __Back__ to return to the previous screen without deleting the Build Files.
++
+When the delete is confirmed, the removal is executed.
+The action is logged in the _Housekeeping History_ and the User is redirected to the _View Housekeeping Details_ screen where the result of the action is displayed.
++
+image::GlobAdm-Housekeeping-Delete-Success.png[,1032,319] 
+
+
+[[_globadm_system_housekeepinghistory]]
+== Housekeeping History 
+(((Housekeeping History)))  (((Global Administration ,Housekeeping History))) 
+
+This functionality allows you to search for previously performed delete actions.
+
+The _Housekeeping History_ screen displays the history of Housekeeping Actions that have been performed. 
+
+It provides a _Search_ panel where the User can enter search criteria to restrict the list of displayed History Actions.
+
+. In the Global Administration context, select__ System > Housekeeping History__.
++
+The __Housekeeping History__ screen is displayed:
++
+image::GlobAdm-HousekeepingHistory-Screen.png[,668,375] 
++
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields.
++
+You can enter or select several search criteria to narrow your search.
+
++
+[cols="1,1", frame="none", options="header"]
+|===
+| Criterion
+| Description
+
+|User ID
+|Enter or select the ID of the User whose Housekeeping Actions you want to display.
+
+|Delete Status
+|This field indicates the Delete status
+
+|Start From
+|If you want to specify a range of dates, enter in this field the start _Date/Time_ of the range.
+
+You can also click the image:icons/calendar.gif[,18,19]  icon to select the Date/Time. 
+
+Click the required date to copy it into the field.
+
+The time will be set to _0:0_ (midnight). However you can still change the time manually.
+
+|Start To 
+|If you want to specify a range of dates, enter in this field the end _Date/Time_ of the range.
+
+You can also click the image:icons/calendar.gif[,18,19]  icon to select the Date/Time. 
+
+Click the required date to copy it into the field.
+
+The time will be set to _0:0_ (midnight). However you can still change the execution time manually.
+|===
+
+. Verify the search result on the __Housekeeping Actions Overview__.
++
+The _Housekeeping Actions Overview_ panel lists the following information for each displayed Housekeeping Action.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Description
+
+|Action Type
+|This field contains the type of the Housekeeping Action.
+
+|Start Date/Time
+|This field indicates the date and time when the Housekeeping Action started.
+
+|User ID
+|This field displays the ID of the User who performed the Housekeeping Action.
+
+|Delete Status
+a|This field indicates the Delete status.
+
+Possible statuses are:
+
+* Success
+* Warning
+* Error
+
+|===
+
+. You can click the image:icons/view.gif[,15,15] _View_ link to display the _View Housekeeping Details_ screen.
++
+image::GlobAdm-HousekeepingHistory-Details_success.png[,1032,371] 
++
+image::GlobAdm-HousekeepingHistory-Details_error.png[,1030,336] 
+
+
+[[_globadm_system_synchronizebuildarchive]]
+== Synchronize Build Archive 
+(((Synchronize Build Archive)))  (((Global Administration ,Synchronize Build Archive))) 
+
+The _Synchronize Build Archive_ screen allows an IKAN ALM Administrator to synchronize the physical representation of the Build Archive on the file system with the logical representation of the Build Archive in the IKAN ALM database.
+
+For example, a Build File that was manually deleted on the file system (using the OS delete command) will still have its Archive Status set to "`Present`" in the IKAN ALM database.
+During synchronization the status will be set to "`Non existing`".
+
+. In the Global Administration context, select__ System > Synchronize Build Archive__.
++
+The __Synchronize Build Archive__ screen is displayed:
++
+image::GlobAdm-SynchBuildArchive-screen.png[,864,481] 
++
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields.
+
++
+You can enter or select several search criteria to narrow your search. 
+
++
+[cols="1,1", frame="none", options="header"]
+|===
+| Criterion
+| Description
+
+|Name
+|Specify the name of the Project.
+
+|VCR Project Name
+|Specify the VCR Project Name.
+
+|Show Hidden Projects
+a|Indicate whether you want to display the hidden Projects or not.
+
+* _Yes_
++
+Hidden Projects will be displayed.
+* _No_ (= default)
++
+Hidden Projects will not be displayed.
+* _All_
++
+All Projects, hidden and unhidden, will be displayed.
+
+|Description
+|Specify the description of the Project.
+
+|VCR
+|Select the VCR from the drop-down list.
+
+|Locked
+|Specify whether the Project is locked or not.
+|===
+
+. Verify the search result on the __Projects Overview__.
++
+The _Projects Overview_ panel lists the following information for each displayed Build File.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Description
+
+|Name
+|This field contains the Project Name.
+
+|Description
+|This field contains the Project Description.
+
+|VCR
+|This field contains the VCR used for the Project.
+
+|VCR Project Name
+|This field contains the VCR Project Name.
+
+|Locked
+a|This field indicates whether or not the Project is locked:
+
+* If it is locked, this field contains the locked icon (image:icons/locked.gif[,15,15] ). 
+* If it is not locked, this field remains empty.
+
+|Hidden
+|This field indicates whether the Project is hidden or not.
+
+|User Access
+|This field contains the name of the User Group whose members have regular access rights to this Project.
+
+|Admin Access
+|This field contains the name of the User Group whose members have administrative access rights to this Project.
+|===
+
+. Select the Projects to be synchronized and click the _Synchronize_ button underneath the overview.
++
+Select the check box in the column header to select all Projects for synchronization.
++
+
+[NOTE]
+====
+In order to not overburden the IKAN ALM Server, it is best to limit the number of selected Projects and split up the Build Archive Synchronization in several steps.
+====
+
+. The _Synchronize Build Archive Log_ screen is displayed.
++
+image::GlobAdm-SynchBuildArchive-synchronize.png[,1009,240] 
++
+The extra field _Synchronizing Status_ is displayed for each Project on the _Project Synchronization_ panel.
++
+It can have the following values:
+
+* __Done__: The Project has been synchronized successfully.
+* __Synchronizing... __: The Project is currently being synchronized.
+* __Waiting__: The synchronization of this Project has not yet started.
+* __Error__: There was a problem synchronizing the Project.
+
+. Click __Refresh__ to update the Synchronization statuses.

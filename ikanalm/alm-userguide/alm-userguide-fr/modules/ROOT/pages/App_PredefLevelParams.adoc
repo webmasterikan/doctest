@@ -1,0 +1,133 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_cpredefinedbuildparameters]]
+= Paramètres de niveau prédéfinis 
+(((Paramètres prédéfinis ,Niveau)))  (((Paramètres de niveau ,Paramètres de niveau prédéfinis))) 
+
+Le tableau suivant offre un aperçu des Paramètres des Environnements de niveau prédéfinis:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Paramètre
+| Description
+
+|alm.levelRequest.actionType
+a|Ce Paramètre donne le Type d`'action de Requête de Niveau.
+
+Les types suivants sont possibles: 
+
+* Scheduled Build (Construction planifiée)
+* Forced Build (Construction forcée)
+* Requested Build (Construction demandée)
+* Deliver Build (Construction délivrée)
+* Rollback Build (Construction restaurée)
+* Dependency Build (Dépendance de construction) 
+
+|alm.levelRequest.buildNumber
+|Ce Paramètre donne le numéro de construction.
+
+|alm.levelRequest.buildType
+a|Ce Paramètre donne le Type de Construction de la Requête de Niveau.
+
+Les types suivants sont possibles: 
+
+* Full Build (Construction complète)
+* Partial Build (Construction partielle)
+* Production-based Partial Build (Construction partielle basée sur production)
+* Tag-based Build (Construction partielle basée sur version balisée)
+
+|alm.levelRequest.levelName
+|Ce Paramètre donne le nom du Niveau sur lequel la Requête de Niveau est exécutée.
+
+|alm.levelRequest.oid
+|Ce Paramètre donne l`'Identifiant Unique de la Requête de Niveau.
+
+|alm.levelRequest.requester
+|Uniquement disponible s'il y a un Utilisateur Demandeur.
+
+Ce paramètre donne le nom du Demandeur.
+
+|alm.levelRequest.rootLocation
+|Un répertoire dans l'Emplacement des Copies de travail sur le Serveur IKAN ALM où la Phase "Récupération Code" place les codes Source récupérés.
+
+L'Emplacement des Copies de travail est étendu avec le OID Requête de niveau ((Par exemple, ``E:\Ikan\alm\system\system\workCopy\1170``)
+
+|alm.levelRequest.startDateTime
+a|Ce Paramètre donne la date et l`'heure d`'exécution de la Requête de Niveau actuelle. 
+
+Le format utilisé est ``date.heure``. 
+
+Le format de la date est celui utilisé par le serveur hébergeant IKAN ALM:
+
+* `AAAA/MM/JJ` pour l`'Europe
+* `MM/JJ/AAAA` pour les Etats-Unis
+
+|alm.levelRequest.vcrTag
+|Ce Paramètre donne le tag de la Requête de Niveau.
+Le tag est défini comme `projectstream_prefix_b+buildoid_suffix` où: 
+
+`projectstream` est remplacé par `H` pour la Branche Principale et `B` pour une Branche Secondaire.
+
+|alm.package.oid
+|Uniquement disponible dans le cas d'un Paquet.
+
+Ce Paramètre donne l`'Identifiant Unique du Paquet.
+
+|alm.project.buildToolTypeName
+a|Ce Paramètre donne le Type d`'Outil de Déploiement utilisé:
+
+* ANT
+* GRADLE
+* NANT
+* MAVEN2
+
+|alm.project.deployToolTypeName
+a|Ce Paramètre donne le Type d`'Outil de Déploiement utilisé:
+
+* ANT
+* GRADLE
+* NANT
+* MAVEN2
+
+|alm.project.description
+|Ce Paramètre donne la description du Projet dans IKAN ALM.
+
+|alm.project.name
+|Ce Paramètre donne la dénomination du Projet dans IKAN ALM.
+Cette dénomination peut être différente de la dénomination du Projet dans le Référentiel de Contrôle de Version (RCV) utilisé (voir alm.project.vcrProjectName).
+
+|alm.package.name
+|Ce Paramètre n`'est disponible que pour les Projets de type "Paquets". Il donne le nom du Paquet associé à la Requête de Niveau.
+
+|alm.project.vcrName
+|Ce Paramètre donne la dénomination du RCV (telle que définie dans la section Administration Globale) auquel le Projet est relié.
+
+|alm.project.vcrProjectName
+|Ce Paramètre donne la dénomination du Projet dans le RCV.
+Cette dénomination peut être différente de la dénomination du Projet dans IKAN ALM (voir alm.project.name).
+
+|alm.projectStream.buildPrefix
+|Ce Paramètre donne le préfixe de Construction défini pour la Branche.
+
+|alm.projectStream.buildSuffix
+|Ce Paramètre donne le suffixe de Construction défini pour la Branche.
+
+|alm.projectStream.description
+|Ce Paramètre donne la description de la Branche.
+
+|alm.projectStream.type
+a|Ce Paramètre donne le Type de Branche:
+
+* H = Branche Principale
+* B = Branche Secondaire
+
+|alm.projectStream.vcrBranchId
+|Ce Paramètre donne l`'Identifiant Unique de la Branche dans le RCV défini dans la Branche dans IKAN ALM (uniquement pour les Branches Secondaires).
+
+|Source
+|Ce Paramètre donne l'Emplacement Source qui est dérivé de l'Emplacement des Copies de travail dans les Paramètres Système.
+Cet Emplacement peut être étendu avec l`'OID Requête de niveau, "workcopy", le Nom du projet et le Nom RCV du projet.
+(Par exemple, ``E:\Ikan\alm\system\system\workCopy\1170\workcopy\Webpad\webpad``)
+|===
+

@@ -1,0 +1,26 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_desktop_introduction]]
+= Bureau 
+ (((Bureau))) 
+
+Le Bureau constitue l`'environnement de travail de l`'utilisateur régulier d`'IKAN ALM.
+
+Il donne accès aux fonctions couramment utilisées telles que:
+
+* la création et la vérification d`'une Construction (par un développeur)
+* la vérification du statut d`'un Projet (par un Chef de projet)
+* la livraison d`'une Construction dans le niveau d`'environnement Cible (par une personne habilitée)
+* l`'Approbation d`'un Déploiement sur un Environnement (par un responsable des versions)
+* ...
+
+
+Dans cette section vous trouvez la description détaillée des tâches suivantes:
+
+* <<Desktop_LevelRequests.adoc#_desktop_levelrequests,Requêtes de niveau>>
+* <<Desktop_Packages.adoc#_desktop_packages,Paquets>> et <<Desktop_PackageGroups.adoc#_desktop_packagegroups,Groupes de Paquets de Construction>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovals,Approbations>>
+* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Administrer son bureau>>
+* <<UserInterface.adoc#_desktop_autorefresh,Actualisation automatique>>
+* <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Paramètres personnels>>

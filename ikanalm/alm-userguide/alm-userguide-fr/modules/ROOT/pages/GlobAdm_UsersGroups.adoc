@@ -1,0 +1,564 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_usersgroups_users]]
+[[_globadm_usersgroups]]
+= Utilisateurs et Groupes d`'utilisateurs
+
+Se référer aux sections suivantes pour une description plus détaillée:
+
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Utilisateurs>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,Groupes d`'utilisateurs>>
+
+
+[[_globadm_usersgroups_users]]
+== Utilisateurs 
+(((Administration globale ,Utilisateurs)))  (((Utilisateurs)))  (((Utilisateurs ,Créer))) 
+
+Comme IKAN ALM se sert de l`'interface JAAS pour enregistrer l`'authentification des Identifiants Utilisateur/Mots de Passe à partir des Systèmes de sécurité existants dans votre organisation, les Identifiants Utilisateur et les Groupes d`'Utilisateurs externes sont maintenus en dehors d`'IKAN ALM.
+
+Dès lors, les Utilisateurs ne peuvent pas être créés via un menu dans IKAN ALM: un Utilisateur doit d`'abord être créé dans le système de sécurité externe.
+Si l`'Utilisateur possède les droits d`'accès appropriés, il pourra se connecter à IKAN ALM.
+Sur la base de cette première connexion réussie, l`'Utilisateur sera créé automatiquement dans IKAN ALM.
+
+Un Identifiant Utilisateur doit exister dans ce Système de sécurité externe avant de pouvoir se connecter à IKAN ALM () et de pouvoir définir ses Paramètres personnels ().
+
+Si votre licence IKAN ALM ne permet pas d`'Utilisateurs flottants, il sera impossible de se connecter avec un autre Identifiant Utilisateur une fois le nombre maximal d`'Utilisateurs réservés actifs atteint.
+Si des Utilisateurs additionnels nécessitent de se connecter à IKAN ALM, vous avez deux possibilités:
+
+* étendre la licence d`'IKAN ALM (ajoutant des Utilisateurs réservés ou flottants),
+* archiver un ou plusieurs Utilisateurs actifs qui ne sont plus requis.
+
+[WARNING]
+--
+Les Utilisateurs archivés ne peuvent plus se connecter à IKAN ALM.
+Ils ne sont maintenus dans le Système que pour des raisons historiques, c`'est-à-dire pour afficher les actions qu`'ils ont initié __dans le passé__.
+Réactiver un Utilisateur archivé est uniquement possible si cette action ne crée pas de dépassement du nombre maximal d`'Utilisateurs imposé par votre licence IKAN ALM.
+--
+
+Si votre licence IKAN ALM permet des Utilisateurs flottants, des Utilisateurs nouveaux pourront toujours se connecter à condition que:
+
+* toutes les licences flottantes ne soient pas utilisées par d`'autres Identifiants Utilisateur,
+* l`'Utilisateur soit créé dans le système de sécurité externe et qu`'il ait des droits d`'accès pour se connecter à IKAN ALM.
+
+
+Les droits d`'accès dans IKAN ALM sont basés sur l`'appartenance des Identifiants Utilisateur à des Groupes d`'Utilisateurs.
+Il ya deux types de Groupes d`'utilisateurs: Externes et Internes.
+Les Groupes d`'Utilisateurs externes doivent exister dans le Système de sécurité externe, avant qu`'ils ne puissent être définis dans IKAN ALM.
+Il n`'existe pas de mécanisme automatique pour importer les Groupes d`'Utilisateurs externes à partir du Système de sécurité externe vers IKAN ALM, car un grand nombre ces Groupes d`'Utilisateurs définis ne seront pas utiles dans IKAN ALM.
+
+Par contre, il peut y avoir beaucoup de définitions de Groupes d`'Utilisateurs qui ne sont utilisés qu`'à des fins de notification ou d`'approbation.
+Gérer ces groupes dans un Système de sécurité externe peut s`'avérer peu utile si ces Groupes ne sont utilisés que par IKAN ALM.
+A cet effet, il gère des Groupes d`'Utilisateurs internes qui ne sont pas synchronisés avec le système d`'autorisation externe.
+
+Si vous définissez ou modifiez ces Groupes d`'Utilisateurs, n`'oubliez pas que, contrairement aux Groupes d`'Utilisateurs externes, ces Groupes internes ne sont pas automatiquement synchronisés au moment de la connexion de l`'Utilisateur.
+Pour éviter une situation dans laquelle aucun Utilisateur ayant des droits d`'Administrateur ne puisse plus se connecter, IKAN ALM ne permet pas de spécifier un Groupe d`'Utilisateurs interne comme Groupe d`'Utilisateurs ayant des droits d`'accès d`'Administrateur.
+
+Il est possible d`'ajouter un Identifiant Utilisateur à un Groupe d`'Utilisateurs externe ou d`'en supprimer un _au sein
+de_ IKAN ALM, mais ces actions n`'ont qu`'un effet __temporaire__.
+Dès que la session IKAN ALM est terminée et qu`'une nouvelle session est ouverte, IKAN ALM relit les Paramètres du Système de sécurité externe et synchronise les Groupes d`'Utilisateurs externes d`'IKAN ALM avec les définitions disponibles dans le Système de sécurité externe.
+Si l`'attribution d`'un Identifiant Utilisateur à un Groupe d`'Utilisateurs externe doit être permanente, ce changement doit être configuré dans le Système de sécurité externe et pas au sein d`'IKAN ALM.
+
+L`'__Aperçu des noms d`'Utilisateurs__ permet les actions suivantes:
+
+* la définition d`'informations additionnelles pour les Identifiants Utilisateur utilisés pour se connecter à IKAN ALM,
+* l`'archivage d`'Identifiants Utilisateur actifs qui ne sont plus requis, ou la réactivation d`'Identifiants Utilisateur archivés,
+* la définition d`'Identifiants Utilisateur réservés pourvu que cette action ne fasse pas dépasser le nombre maximal d`'Utilisateurs réservés actifs.
+* l`'affichage des Utilisateurs connectés à IKAN ALM avec la possibilité de les déconnecter, si nécessaire, avant la fin de leur session.
+
+[[_globadm_usersgroups_usersoverview]]
+=== Écran de l`'aperçu des utilisateurs
+(((Utilisateurs ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Utilisateurs_.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-Users.png[,799,301] 
+. Définissez les critères de recherche requis dans le panneau de recherche.
++
+La liste des éléments dans l'aperçu est synchronisée automatiquement en fonction des critères sélectionnés.
++
+Vous pouvez également:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* cliquer sur le lien _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* cliquer sur le lien _Réinitialiser la recherche_ pour nettoyer les champs.
+. Vérifiez les informations dans l`'__Aperçu des Utilisateurs__.
++
+Les informations suivantes sont disponibles pour chaque Identifiant Utilisateur affiché:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Utilisateur
+|Ce champ contient l`'Identifiant Utilisateur.
+
+|Nom utilisateur
+|Ce champ contient la dénomination de l`'Utilisateur.
+
+|Description
+|Ce champ contient la description de l`'Utilisateur.
+
+|Adresse de courrier
+|Ce champ contient l`'adresse de courrier électronique de l`'Utilisateur.
+
+|Emplacement
+|Ce champ contient l`'emplacement de l`'Utilisateur.
+
+Ce champ n`'est pas affiché sur l`'aperçu des Utilisateurs connectés.
+
+|Téléphone
+|Ce champ contient le numéro de téléphone de l`'Utilisateur.
+
+Ce champ n`'est pas affiché sur l`'aperçu des Utilisateurs connectés.
+
+|Mobile
+|Ce champ contient le numéro de téléphone mobile de l`'Utilisateur.
+
+Ce champ n`'est pas affiché sur l`'aperçu des Utilisateurs connectés.
+
+|Langue
+a|Ce champ contient la langue utilisée par l`'Utilisateur.
+
+Il y a trois possibilités:
+
+* Anglais
+* Français
+* Allemand
+
+Ce champ n`'est pas affiché sur l`'aperçu des Utilisateurs connectés.
+
+|Archivé
+|Ce champ contient une coche si l`'Identifiant Utilisateur est archivé.
+
+Ce champ reste vide pour les Identifiants actifs.
+
+|Réservé
+|Ce champ contient une coche si l`'Identifiant Utilisateur est un Utilisateur réservé.
+Un Utilisateur réservé non archivé pourra toujours se connecter à IKAN ALM sans qu`'il n`'occupe une licence flottante.
+Typiquement, les Utilisateurs ayant de droits d`'accès d`'Administrateur global sont définis comme des Utilisateurs réservés.
+|===
+
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="none"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un Utilisateur.
+
+<<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_edituser,Modifier les paramètres d`'un utilisateur>>
+
+|image:icons/icon_disconnectUser.png[,15,15] 
+|Déconnecter
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de terminer la session d`'un Utilisateur et de le déconnecter d`'IKAN ALM.
+
+<<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_disconnectingusers,Déconnecter un utilisateur>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique d`'un Utilisateur.
+
+<<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_userhistory,Afficher l`'historique d`'un utilisateur>>
+|===
+
+[[_globadm_usersgroups_edituser]]
+=== Modifier les paramètres d`'un utilisateur 
+(((Utilisateurs ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Utilisateurs_.
+. Dans l`'aperçu, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ le Nom d`'Utilisateur dont vous voulez modifier la définition.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-Users-Edit.png[,589,625] 
++
+*Description:*
+
+* En haut de l`'écran, le panneau _Modifier un Utilisateur_ s`'affiche. Modifiez les champs si nécessaire.
++
+Vous pouvez également réactiver un Utilisateur archivé en sélectionnant l`'option _Non_ à côté du champ __Archivé__.
++
+En plus, vous pouvez définir un Utilisateur non-réservé comme réservé en sélectionnant l`'option _Oui_ à côté du champ __Réservé__.
+Un Utilisateur réservé non archivé pourra toujours se connecter à IKAN ALM sans occuper une licence flottante.
+Si le nombre maximal est dépassé, le message suivant s`'affiche:
++
+__Erreur: Le nombre maximum d`'Utilisateurs réservés
+actifs (X) est atteint__, X étant le nombre d`'Utilisateurs réservés actifs maximum permis.
+Vous devez étendre votre licence IKAN ALM, archiver d`'autres Identifiants Utilisateur (obsolètes) ou définir d`'autres Identifiants Utilisateur réservés actifs comme non-réservés, avant de pouvoir réactiver cet Identifiant Utilisateur. 
+* En bas de l'écran, le panneau _Aperçu des Groupes d'utilisateurs relatifs_ s'affiche. L'aperçu contient les définitions des Groupes d`'utilisateurs auxquels appartient l'Utilisateur sélectionné. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,Groupes d`'utilisateurs>>
+
++
+
+[NOTE]
+====
+Les Utilisateurs peuvent modifier leurs Paramètres personnels. 
+====
+
+. Faites les modifications requises.
++
+Pour la description des champs, se référer à la section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_usersoverview,Écran de l`'aperçu des utilisateurs>>
+. Cliquez sur le bouton _Enregistrer_ pour enregistrer vos modifications.
++
+Vous pouvez également utiliser le bouton _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données ou le bouton _Précédent_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+
+[[_globadm_usersgroups_disconnectingusers]]
+=== Déconnecter un utilisateur 
+(((Utilisateurs ,Déconnecter))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Utilisateurs_.
+
+. Établissez l'option _Utilisateurs connectés_ à _Oui_ pour afficher la liste des Utilisateurs actuellement connectés.
++
+image::GlobAdm-Users-Connected.png[,837,242] 
+
+. Cliquez sur le lien image:icons/icon_disconnectUser.png[,15,15]  Déconnecter dans le panneau _Aperçu des Utilisateurs_ pour déconnecter immédiatement l`'utilisateur qui est ensuite retiré de l`'écran.
++
+Cette action terminera la session de l`'Utilisateur et le déconnectera d`'IKAN ALM.
+Par conséquent, l`'Utilisateur devra se reconnecter s`'il veut continuer ses activités dans IKAN ALM.
+
+[[_globadm_usersgroups_userhistory]]
+=== Afficher l`'historique d`'un utilisateur 
+(((Utilisateurs ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Utilisateurs_.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ dans le panneau _Aperçu des Utilisateurs_ pour afficher l`'écran __Aperçu de l`'Historique de l`'Utilisateur__. 
++
+
+[NOTE]
+====
+Dans l`'écran _Modifier un Utilisateur_ vous pouvez accéder à l`'écran _Aperçu de l`'Historique du Groupe
+d`'utilisateurs_ en cliquant sur le lien _Historique_ dans le panneau __Aperçu des Groupes d`'utilisateurs__.
+====
++
+Pour plus d`'informations concernant cet Aperçu de l`'Historique, se référer à la section .
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups,Utilisateurs et Groupes d`'utilisateurs>>
+* <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Paramètres personnels>>
+* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Administrer son bureau>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovals,Approbations>>
+
+|===
+
+[[_globadm_usersgroups_groups]]
+== Groupes d`'utilisateurs 
+(((Administration globale ,Groupes d’utilisateurs)))  (((Groupes d’utilisateurs))) 
+
+Comme IKAN ALM se sert de l`'interface JAAS pour enregistrer l`'authentification des Identifiants Utilisateur/Mots de Passe à partir des Systèmes de sécurité existants dans votre organisation, les Identifiants Utilisateur et leur appartenance à des Groupes d`'Utilisateurs sont gérés en dehors d`'IKAN ALM.
+Dès lors, un Identifiant Utilisateur ne peut être utilisé pour se connecter à IKAN ALM () ou pour définir ses Paramètres personnels () que s`'il existe dans ce Système de sécurité externe.
+
+Les droits d`'accès dans IKAN ALM sont basés sur l`'appartenance des Identifiants Utilisateur à des Groupes d`'Utilisateurs.
+Il y a deux types de Groupes d`'utilisateurs: Externes et Internes.
+Les Groupes d`'Utilisateurs externes doivent exister dans le Système de sécurité externe, avant qu`'ils ne puissent être définis dans IKAN ALM.
+Il n`'existe pas de mécanisme automatique pour importer les Groupes d`'Utilisateurs externes à partir du Système de sécurité externe vers IKAN ALM, car un grand nombre de ces Groupes d`'Utilisateurs définis ne seront pas utiles dans IKAN ALM.
+
+Si vous supprimer un Groupe d`'Utilisateurs dans IKAN ALM, il ne sera plus connu au sein d`'IKAN ALM.
+Néanmoins, il ne sera pas supprimé du Système de sécurité externe. 
+
+Il est possible d`'ajouter un Identifiant Utilisateur à un Groupe d`'Utilisateurs externe ou d`'en supprimer un _au sein
+de_ IKAN ALM, mais ces actions n`'ont qu`'un effet __temporaire__.
+Dès que la session IKAN ALM est terminée et qu`'une nouvelle session est ouverte, IKAN ALM relit les Paramètres du Système de sécurité externe et synchronise les Groupes d`'Utilisateurs externes d`'IKAN ALM avec les définitions disponibles dans le Système de sécurité externe.
+Cela signifie que si l`'appartenance d`'un Identifiant Utilisateur à un Groupe d`'Utilisateurs externe devient permanente, ce changement doit être configuré dans le Système de sécurité externe et pas au sein d`'IKAN ALM.
+
+Par contre, il peut y avoir beaucoup de définitions de Groupes d`'Utilisateurs qui ne sont utilisés qu`'à des fins de notification ou d`'approbation.
+Gérer ces groupes dans un Système de sécurité externe peut s`'avérer peu utile si ces Groupes ne sont utilisés que par IKAN ALM.
+A cet effet, il gère des Groupes d`'Utilisateurs internes qui (par conséquence) ne sont pas synchronisés avec le système d`'autorisation externe.
+
+Si vous définissez ou modifiez ces Groupes d`'Utilisateurs, n`'oubliez pas que, contrairement aux Groupes d`'Utilisateurs externes, ces Groupes internes ne sont pas automatiquement synchronisés au moment de la connexion de l`'Utilisateur.
+Pour éviter une situation dans laquelle aucun Utilisateur ayant des droits d`'Administrateur ne puisse plus se connecter, IKAN ALM ne permet pas de spécifier un Groupe d`'Utilisateurs interne comme Groupe d`'Utilisateurs ayant des droits d`'accès d`'Administrateur.
+
+Se référer aux sections suivantes pour des informations plus détaillées:
+
+* <<GlobAdm_UsersGroups.adoc#_globadm_usergroupcreate,Créer un groupe d`'utilisateurs>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usergroupsoverview,Aperçu des groupes d`'utilisateurs>>
+
+[[_globadm_usergroupcreate]]
+=== Créer un groupe d`'utilisateurs 
+(((Groupes d’utilisateurs ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+====
+. Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Créer un Groupe Utilisateurs_.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-UserGroup-Create.png[,500,269] 
+
+. Complétez les champs dans le panneau __Créer un Groupe d`'utilisateurs__. 
++
+Les champs marqués d`'un astérisque rouge doivent être obligatoirement remplis.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Nom groupe
+|Saisissez dans ce champ la dénomination du nouveau Groupe d`'Utilisateurs.
+
+|Description
+|Saisissez dans ce champ une description pour le nouveau Groupe d`'Utilisateurs.
+
+|Type
+a|Saisissez dans ce champ, le type de Groupe d`'utilisateurs à partir de la liste déroulante.
+
+Les valeurs possibles sont:
+
+* Externe : l`'appartenance au Groupe d`'utilisateurs est synchronisée avec le Système de sécurité externe. Cela se fait sur base individuelle lors de la connexion de chaque Utilisateur.
+* Interne : l`'appartenance au Groupe d`'utilisateurs est gérée dans IKAN ALM
+
+Pour plus d`'informations, se référer à la section <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Modifier un groupe d`'utilisateurs>>.
+|===
+
+. Après avoir complété les champs, cliquez sur le bouton __Créer__.
++
+Le nouveau Groupe d`'Utilisateurs sera ajouté à l`'__Aperçu
+des Groupes d`'utilisateurs__ dans la partie inférieure de l`'écran.
+
+[[_globadm_usergroupsoverview]]
+=== Aperçu des groupes d`'utilisateurs 
+(((Groupes d’utilisateurs ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Groupes Utilisateurs_.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-UserGroup-Overview.png[,975,456] 
+
+. Définissez les critères de recherche requis dans le panneau de recherche.
++
+La liste des éléments dans l'aperçu est synchronisée automatiquement en fonction des critères sélectionnés.
++
+Vous pouvez également:
+
+* cliquer sur le lien _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* cliquer sur le lien _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Groupes d`'utilisateurs__.
++
+Les informations suivantes sont disponibles pour chaque Groupe d`'Utilisateurs affiché:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Nom groupe
+|Ce champ contient la dénomination du Groupe d`'Utilisateurs.
+
+|Description
+|Ce champ contient la description associée au Groupe d`'Utilisateurs.
+
+|Type
+|Ce champ contient le type de Groupe d`'Utilisateurs qui peut être externe ou interne.
+|===
+
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="none"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition d`'un Groupe d`'Utilisateurs. <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Modifier un groupe d`'utilisateurs>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une définition d`'un Groupe d`'Utilisateurs.
+
+<<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_deleteusergroup,Supprimer un groupe d`'utilisateurs>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique d`'un Groupe d`'Utilisateurs.
+
+<<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_usergrouphistory,Afficher l`'historique d`'un groupe d`'utilisateurs>>
+|===
++
+
+[NOTE]
+====
+
+Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent être rangées par ordre alphabétique (ascendant ou descendant). 
+====
+
+[[_globadm_usersgroups_editusergroup]]
+=== Modifier un groupe d`'utilisateurs 
+(((Groupes d’utilisateurs ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Groupes Utilisateurs_.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-UserGroup-Overview.png[,975,456] 
+
+. Ensuite, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant le Groupe d'utilisateurs pour lequel vous voulez modifier les membres.
++
+image::GlobAdm-UserGroup-Edit.png[,634,654] 
+
+. Dans le panneau __Modifier un Groupe d'utilisateurs__, modifiez les champs si requis.
+
+. En-dessous du panneau __Modifier un Groupe d'utilisateurs__, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier les membres d'un Groupe d`'utilisateurs_ pour modifier la définition du Groupe d`'utilisateurs sélectionné.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-UserGroup-EditUserGroupMembers.png[,696,272] 
++
+.. Si requis, modifiez les champs dans le panneau _Modifier les membres d'un Groupe d`'utilisateurs_.
++
+Allouez les IDs Utilisateur à ce Groupe d'utilisateurs.
+
+* Pour ajouter un Utilisateur à ce Groupe d'utilisateurs, sélectionnez l'ID de l'Utilisateur dans la liste _Autres Utilisateurs_ et cliquez sur le bouton __<<__.
+* Pour retirer un Utilisateur de ce Groupe d'utilisateurs, sélectionnez l'ID de l'Utilisateur dans la liste _Utilisateurs du Groupe_ et cliquez sur le bouton >>____.
++
+Par défaut, les Utilisateurs archivés sont filtrés hors de la liste __Autres Utilisateurs__.
+Pour afficher tous les Utilisateurs, y compris les Utilisateurs archivés, sélectionnez la case __Afficher les Utilisateurs archivés__. 
+
+.. Cliquez sur le bouton _Enregistrer_ pour sauvegarder vos modifications.
++
+
+[NOTE]
+====
+Pour les Groupes d'utilisateurs externes, la modification des membres du Groupe ne sera que temporaire.
+Dès que la session IKAN ALM d'un Utilisateur est terminée et une nouvelle session est ouverte, IKAN ALM lit les paramètres du Système de Sécurité externe et synchronise les Groupes d`'utilisateurs IKAN ALM externes avec les définitions disponibles dans le Système de Sécurité externe.
+Par conséquent, un Utilisateur ajouté ici sera retiré de la liste et vice versa.
+
+Cependant, l'appartenance à un Groupe d'utilisateurs interne ne peut être gérée que via cette interface.
+====
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Annuler_ pour retourner à l`'écran précédent sans enregistrer vos modifications.
+
+.. Le panneau _Usage du Groupes d`'Utilisateurs_ affiche les droits d'accès définis dans les Paramètres système, ainsi que les Niveaux et les Projets auxquels est connecté le Groupe d'utilisateurs.
++
+image::GlobAdm-UserGroup-UserGroupsUsage.png[,632,556] 
+
+. Cliquez sur le bouton _Sauvegarder_ pour confirmer vos modifications.
++
+Vous retournez à l'écran __Aperçu
+des Groupes d'utilisateurs__.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Précédent_ pour retourner à l`'écran précédent sans enregistrer vos modifications
+
+[[_globadm_usersgroups_editusergroupmembers]]
+=== Modifier les membres du Groupe d'utilisateurs
+
+. Dans le panneau _Membres du Groupe d`'utilisateurs_ en-dessous du panneau _Modifier un Groupe d'utilisateurs_ (voir <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Modifier un groupe d`'utilisateurs>>), cliquez sur le lien image:icons/edit.gif[,15,15] __Modifier les membres d'un Groupe d`'utilisateurs__ pour modifier la définition du Groupe d`'utilisateurs sélectionné. 
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-UserGroup-EditUserGroupMembers.png[,696,272] 
++
+Si requis, modifiez les champs dans le panneau _Modifier les membres d'un Groupe d`'utilisateurs_.
++
+Allouez les IDs Utilisateur à ce Groupe d'utilisateurs.
+
+* Pour ajouter un Utilisateur à ce Groupe d'utilisateurs, sélectionnez l'ID de l'Utilisateur dans la liste _Autres Utilisateurs_ et cliquez sur le bouton <<.
+* Pour retirer un Utilisateur de ce Groupe d'utilisateurs, sélectionnez l'ID de l'Utilisateur dans la liste _Utilisateurs du Groupe_ et cliquez sur le bouton >>.
++
+Par défaut, les Utilisateurs archivés sont filtrés hors de la liste __Autres Utilisateurs__.
+Pour afficher tous les Utilisateurs, y compris les Utilisateurs archivés, sélectionnez la case __Afficher les Utilisateurs
+archivés__. 
+
+. Cliquez sur le bouton _Enregistrer_ pour sauvegarder vos modifications.
++
+
+[NOTE]
+====
+Pour les Groupes d'utilisateurs externes, la modification des membres du Groupe ne sera que temporaire.
+Dès que la session IKAN ALM d'un Utilisateur est terminée et une nouvelle session est ouverte, IKAN ALM lit les paramètres du Système de Sécurité externe et synchronise les Groupes d`'utilisateurs IKAN ALM externes avec les définitions disponibles dans le Système de Sécurité externe.
+Par conséquent, un Utilisateur ajouté ici sera retiré de la liste et vice versa.
+
+Cependant, l'appartenance à un Groupe d'utilisateurs interne ne peut être gérée que via cette interface.
+====
++
+Les boutons suivants sont également disponibles:
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Annuler_ pour retourner à l`'écran précédent sans enregistrer vos modifications.
+
+[[_globadm_usersgroups_deleteusergroup]]
+=== Supprimer un groupe d`'utilisateurs 
+(((Groupes d’utilisateurs ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Groupes Utilisateurs_.
+
+. Cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer la définition du Groupe d`'Utilisateurs sélectionné.
+* Si le Groupe d`'Utilisateurs n`'est pas lié à un autre composant d`'IKAN ALM, l`'écran suivant s`'affiche: 
++
+image::GlobAdm-UserGroup-Delete.png[,441,193] 
++
+Cliquez sur le bouton _Supprimer_ pour confirmer la suppression ou sur le bouton _Précédent_ pour retourner à l`'écran précédent sans supprimer le Groupe d`'Utilisateurs.
+* Si le Groupe d`'Utilisateurs est toujours relié à des objets IKAN ALM dans les Paramètres Système, de Projets ou de Niveaux, le panneau suivant est affiché:
++
+image::GlobAdm-UserGroup-Delete-Error.png[,630,801] 
++
+
+[NOTE]
+====
+Vous aurez à annuler les connexions affichées avant de pouvoir supprimer le Groupe d'utilisateurs.
+====
+
+[[_globadm_usersgroups_usergrouphistory]]
+=== Afficher l`'historique d`'un groupe d`'utilisateurs 
+(((Groupes d’utilisateurs ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez _Utilisateurs & Groupes > Aperçu des Groupes Utilisateurs_.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ pour afficher l`'écran __Aperçu de l`'Historique du Groupe d`'Utilisateurs__. 
++
+Pour plus d`'informations concernant cet __Aperçu
+de l`'Historique__, se référer à la section .
++
+Cliquez sur le bouton _Précédent_ pour retourner à l`'écran précédent.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Utilisateurs>>
+* <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+* <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notification des utilisateurs>>
+* <<GlobAdm_Project.adoc#_globadm_project,Projet>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Modifier les paramètres d`'un projet>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createlevel,Créer un niveau de construction>>
+* <<ProjAdm_Levels.adoc#_beifijci,Créer un niveau de test ou de production>>
+* <<ProjAdm_LifeCycles.adoc#_plifecyclemgt_editlevelsettings,Modifier un niveau>>
+
+|===

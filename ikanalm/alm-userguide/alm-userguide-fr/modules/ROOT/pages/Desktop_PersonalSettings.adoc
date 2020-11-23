@@ -1,0 +1,204 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_desktop_personalsettings_edit]]
+[[_desktop_personalsettings]]
+= Paramètres personnels
+
+La section "Paramètres personnels" est centrée sur les paramètres directement liés à votre compte, tels que votre nom, votre adresse de courrier, votre numéro de téléphone, ... 
+
+C'est aussi l'endroit où vous pouvez gérer vos Filtres de recherche personnels que vous utilisez pour spécifier les objets à afficher sur les différentes listes.
+
+Se référer aux procédures suivantes pour plus d`'information:
+
+* <<Desktop_PersonalSettings.adoc#_desktop_personalsettings_edit,Modifier vos Paramètres personnels>>
+* <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Définir des Filtres de recherche>>
+
+
+[[_desktop_personalsettings_edit]]
+[[_pdefinepersonalsettings]]
+== Modifier vos Paramètres personnels 
+(((Bureau ,Paramètres personnels)))  (((Paramètres personnels))) 
+
+. Sélectionnez __Bureau > Paramètres personnels__.
++
+L`'écran _Paramètres personnels_ s`'affiche.
++
+image::Desktop-PersonalSettings-Edit.png[,393,326] 
++
+. Modifiez les champs.
++
+Le tableau suivant décrit les champs disponibles.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Utilisateur
+|Ce champ accessible en lecture seulement contient votre Identifiant Utilisateur IKAN ALM.
+Comme ces Identifiants sont gérés hors de l`'application IKAN ALM, vous ne pouvez pas les modifier.
+
+|Nom utilisateur
+|Dans ce champ vous pouvez modifier votre nom d`'utilisateur.
+
+Ce champ doit être obligatoirement rempli.
+
+|Description
+|Dans ce champ vous pouvez saisir une description libre.
+
+|Adresse de Courrier
+|Dans ce champ vous pouvez saisir votre adresse de courrier électronique.
+
+Les Notifications générées par IKAN ALM (par exemple, en cas d`'une Requête de Niveau échouée ou réussie, ou d`'une Approbation en attente) seront envoyées à l`'adresse ci-spécifiée.
+
+Ce champ doit être obligatoirement rempli.
+
+|Emplacement
+|Dans ce champ vous pouvez saisir la description de votre emplacement de travail.
+
+|Téléphone
+|Dans ce champ vous pouvez saisir votre numéro de téléphone.
+
+|Mobile
+|Dans ce champ vous pouvez saisir votre numéro de téléphone mobile.
+
+|Langue
+|A partir de la liste déroulante vous pouvez choisir la langue dans laquelle vous voulez afficher l`'interface Utilisateur d`'IKAN ALM.
+
+Les langues disponibles sont: Anglais, Français et Allemand.
+|===
+. Cliquez sur le bouton __Sauvegarder__.
++
+Cliquez le bouton _Actualiser_ si vous voulez récupérer les Paramètres enregistrés dans la base de données.
+
+
+[[_desktop_searchfilters]]
+== Définir des Filtres de recherche 
+(((Bureau ,Filtres de recherche)))  (((Filtres de recherche)))  (((Filtres de recherche ,Définir))) 
+
+Dans les écrans d'aperçu, les options de recherche améliorées permettent de spécifier les objets à afficher sur la liste d'aperçu.
+
+Dans certains de ces écrans d'aperçu, après avoir spécifié les critères de recherche, vous pouvez sauvegarder ces spécifications via le lien __Sauvegarder le Filtre__.
+Ainsi, vous pouvez réutiliser les mêmes critères pour des actions de recherche ultérieures.
+
+Se référer aux procédures suivantes pour plus d`'information:
+
+* <<Desktop_PersonalSettings.adoc#_ciheecjhf2,Créer un Filtre de recherche>>
+* <<Desktop_PersonalSettings.adoc#_cihidaeja2,Sélectionner un Filtre de recherche>>
+* <<Desktop_PersonalSettings.adoc#_cihjfebab8,Gérer les définitions des Filtres>>
+* <<Desktop_PersonalSettings.adoc#_cihhjjjej8,Modifier les critères de recherche d'un Filtre>>
+
+[[_ciheecjhf2]]
+=== Créer un Filtre de recherche 
+(((Filtres de recherche ,Créer))) 
+
+. Spécifiez les critères de recherche (avancés) requis.
++
+image::Search_DefineCriteria.png[,939,555] 
+. Cliquez sur le lien __Sauvegarder le Filtre__.
++
+La fenêtre suivante s'affiche.
++
+image::Search_SaveFilter.png[,484,239] 
++
+. Saisissez le nom et la description du nouveau Filtre et cliquez sur le bouton __Sauvegarder__.
++
+Le filtre est dorénavant disponible dans le menu déroulant des filtres.
+. Dans cet écran, vous pouvez également gérer les définitions des filtres.
++
+Pour plus d`'informations, se référer à la section <<Desktop_PersonalSettings.adoc#_cihjfebab8,Gérer les définitions des Filtres>>.
+
+
+[NOTE]
+====
+Dans l'écran __Paramètres personnels__, vous pouvez modifier le nom et la description du filtre (<<Desktop_PersonalSettings.adoc#_cihjfebab8,Gérer les définitions des Filtres>>).
+====
+
+[[_cihidaeja2]]
+=== Sélectionner un Filtre de recherche 
+(((Filtres de recherche ,Sélectionner))) 
+
+Dans les écrans d'aperçu, vous pouvez sélectionner un Filtre de recherche existant au lieu de saisir manuellement les critères de recherche
+
+. Pour afficher la liste des Filtres existants, cliquez sur la flèche vers le bas du champ __Aucun Filtre sélectionné__.
++
+image::Search_SelectFilter.png[,938,272] 
++
+. Sélectionnez votre Filtre à partir de cette liste.
++
+Les critères de recherche seront remplis automatiquement et le résultat filtré s'affichera dans l'aperçu.
+
+[[_cihjfebab8]]
+=== Gérer les définitions des Filtres 
+(((Filtres de recherche ,Gérer)))  (((Filtres de recherche ,Modifier))) 
+
+Le panneau "Rechercher les Filtres" dans l'écran des Paramètres personnels vous permet d'afficher les définitions des filtres existants, de modifier leur nom et leur description ou de supprimer un Filtre
+
+. Sélectionnez Bureau > Paramètres personnels.
++
+Le panneau _Rechercher les Filtres_ affiche la liste de tous les Filtres définis par l'Utilisateur actuel.
++
+Si nécessaire, vous pouvez limiter la liste des Filtres affichés en sélectionnant la Page requise dans le champ déroulant _Rechercher
+la Page_ (Aperçu des Paquets, Aperçu des Projets, Aperçu des Requêtes de niveau ou Aperçu des Constructions et Déploiements)
++
+image::Search_ManageFilters.png[,993,639] 
++
+. Pour modifier les critères, cliquez sur l'icône image:icons/view.gif[,15,15] _Afficher_ devant le Filtre pour afficher les critères de recherche spécifiés.
++
+Vous serez renvoyés à l'Aperçu approprié et les critères de recherche seront automatiquement appliqués.
++
+
+[NOTE]
+====
+Si nécessaire, vous pouvez maintenant modifier les critères de recherche et les sauvegarder dans la définition du Filtre.
+Voir également la section <<Desktop_PersonalSettings.adoc#_cihhjjjej8,Modifier les critères de recherche d'un Filtre>>.
+====
+
+. Pour le modifier, cliquez sur l'icône image:icons/edit.gif[,15,15] _Modifier_ devant le Filtre pour modifier son nom ou sa description.
++
+image::Search_EditFilter.png[,512,239] 
++
+Confirmez la modification en cliquant sur le bouton __Sauvegarder__.
++
+
+[NOTE]
+====
+La modification des critères de recherche n'est possible que sur les écrans d'aperçu eux-mêmes. <<Desktop_PersonalSettings.adoc#_cihhjjjej8,Modifier les critères de recherche d'un Filtre>>
+====
+
+. Pour le supprimer, cliquez sur l'icône image:icons/delete.gif[,15,15] _Supprimer_ devant le Filtre pour supprimer un Filtre spécifique.
++
+image::Search_DeleteFilter.png[,509,151] 
++
+Cliquez sur le bouton _Supprimer_ pour confirmer la suppression du Filtre.
+
+[[_cihhjjjej8]]
+=== Modifier les critères de recherche d'un Filtre 
+(((Filtres de recherche ,Modifier les critères de recherche))) 
+
+La modification des critères de recherche d'un Filtre n'est possible que sur les écrans d'aperçu eux-mêmes
+
+. Sélectionnez le Filtre que vous voulez modifier.
++
+Vous avez deux possibilités:
+
+* en utilisant l'icône image:icons/view.gif[,15,15] _Afficher_ dans le panneau "Rechercher les Filtres" dans l'écran des Paramètres personnels (<<Desktop_PersonalSettings.adoc#_cihjfebab8,Gérer les définitions des Filtres>>), ou
+* directement dans l'aperçu concerné, en sélectionnant le Filtre à partir de liste déroulante.
+
+. Adaptez les critères de recherche.
+
+. Cliquez sur l'option __Sauvegarder le Filtre__.
++
+L'écran _Sauvegarder le Filtre_ s'affiche.
++
+image::Search_SaveFilter.png[,486,239] 
++
+. Si nécessaire, vous pouvez en même temps modifier le _Nom_ et la __Description__.
+
+. Cliquez sur le bouton __Sauvegarder__.
+
+. Si le Filtre existe déjà, vous devez confirmer la mise à jour du Filtre existant en cliquant une deuxième fois sur __Enregistrer__.
++
+image::Search_ConfirmUpdate.png[,368,115] 

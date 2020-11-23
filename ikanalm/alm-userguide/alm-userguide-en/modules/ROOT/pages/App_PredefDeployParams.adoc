@@ -1,0 +1,171 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_cpredefineddeployparameters]]
+= Predefined Deploy Parameters 
+(((Predefined Parameters ,Deploy)))  (((Build Parameters ,Predefined Deploy Parameters))) 
+
+The following table provides an overview of the predefined Deploy Parameters:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Parameter
+| Description
+
+|alm.build.environmentName
+|This parameter provides the name of the Build Environment where the Build Result that is deployed, was built on.
+
+|alm.build.filename
+|This parameter provides the name of the Build file that will be unpacked in the Source Location and deployed. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
+
+|alm.build.machineName
+|This parameter provides the name of the Machine where the Build Result was built on.
+
+|alm.build.number
+|This parameter provides the number of the Build that will be deployed.
+
+The Build Number is a sequential number that is incremented by IKAN ALM when a Build Level Request is created.
+
+|alm.build.oid
+|This parameter provides the unique ID of the Build that will be deployed.
+
+|alm.build.startDateTime
+a|This parameter provides the start date and time for the Build, that will be deployed.
+This is the timestamp indicating the start of the Build Script.
+The format is __date.time__.
+The date is in the format of the server where the IKAN ALM runs:
+
+* _YYYY/MM/DD_ for Europe
+* _MM/DD/YYYY_ for the USA
+
+|alm.deploy.environmentName
+|This parameter provides the name of the Deploy Environment where this Deploy will be executed.
+
+|alm.deploy.machineName
+|This parameter provides the name of the Machine where the Deploy will be executed.
+
+|alm.deploy.oid
+|This parameter provides the unique OID of the Deploy.
+
+|alm.deploy.startDateTime
+a|This parameter provides start date and time for the Deploy (i.e., when the Deploy Script started).
+
+Format is __date.time__.
+The date is in the format of the server where IKAN ALM runs:
+
+* _YYYY/MM/DD_ for Europe
+* _MM/DD/YYYY_ for the USA
+
+|alm.levelRequest.actionType
+a|This parameter provides the type of the Level Request:
+
+* Scheduled Build
+* Forced Build
+* Requested Build
+* Deliver Build
+* Rollback Build
+* Dependency Build
+
+|alm.levelRequest.levelName
+|This parameter provides the name of the Level where the Level Request is executed.
+
+|alm.levelRequest.oid
+|This parameter provides the unique number of this Level Request.
+
+|alm.levelRequest.requester
+|Only available if there is a Requester User.
+
+This parameter provides the name of the Requester.
+
+|alm.levelRequest.startDateTime
+a|This parameter provides the start date and time of the current Level Request.
+
+Format is _date.time_.
+
+The date is in the format used on the server where IKAN ALM runs:
+
+* _YYYY/MM/DD_ for Europe
+* _MM/DD/YYYY_ for the USA
+
+|alm.levelRequest.vcrTag
+|This Parameter provides the tag of the Level Request.
+The tag is defined as __projectstream_prefix_b+buildoid_suffix __where:
+
+_projectstream_ is replaced by _H_ for the Head stream and _B_ for a Branch stream.
+
+|alm.package.oid
+|Only available in case of a Package.
+
+This parameter provides the unique number of the Package.
+
+|alm.previous.build.filename
+|This parameter provides the name of the previous Build Result that was deployed on this Level.
+
+Example: DEMOCVS_B_b_1_test_b2_CONTBUILD.zip
+
+|alm.previous.build.number
+|This parameter provides the number of the Previous Build Result that was deployed on this Level.
+
+|alm.previous.levelRequest.vcrTag
+|This parameter provides the Tag of the previous successful Level Request on this Level.
+
+|alm.project.buildToolTypeName
+a|This parameter provides the Build Tool type used:
+
+* ANT
+* GRADLE
+* NANT
+* MAVEN2
+
+|alm.project.deployToolTypeName
+a|This parameter provides the Deploy Tool type used:
+
+* ANT
+* GRADLE
+* NANT
+* MAVEN2
+
+|alm.project.description
+|This parameter provides the description of the IKAN ALM Project.
+
+|alm.project.name
+|This Parameter provides the IKAN ALM Project name.
+This name can be different from the Project name as known within the used VCR (see alm.project.vcrProjectName)
+
+|alm.package.name
+|This parameter is only available in Package-based Projects.
+It provides the name of the Package associated with the Level Request.
+
+|alm.project.vcrName
+|This parameter provides the name of the VCR (as defined in the Global Administration) to which this Project is linked.
+
+|alm.project.vcrProjectName
+|This parameter provides the name of the Project as known within the VCR.
+This name can be different from the IKAN ALM Project name (see alm.project.name).
+
+|alm.projectStream.buildPrefix
+|This parameter provides the Build Prefix defined for the Project Stream.
+
+|alm.projectStream.buildSuffix
+|This parameter provides the Build Suffix defined for the Project Stream.
+
+|alm.projectStream.description
+|This parameter provides the Description of the Project Stream.
+
+|alm.projectStream.type
+a|This parameter provides the Project Stream Type:
+
+* H = Head
+* B = Branch
+
+|alm.projectStream.vcrBranchId
+|This Parameter provides the Branch ID in the VCR defined in the IKAN ALM Project Stream (only for Branches).
+
+|source
+|This parameter provides the Source Location as defined in the current Deploy Environment definition.
+The name will be expanded with the number of the alm.deploy.oid to create the complete working directory.
+
+|target
+|This parameter provides the name of the Target location as defined in the current Deploy Environment definition, the target of the deploy action.
+|===
+

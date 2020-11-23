@@ -1,0 +1,267 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_schedulesoverview]]
+[[_globadm_schedules]]
+= Schedules 
+(((Global Administration ,Schedules)))  (((Schedules))) 
+
+A Schedule definition enables to automate the creation of Level Request for a particular Build Level.
+
+When a Schedule is linked to a Build Level, the IKAN ALM Scheduler Daemon will verify if there are changes in the Version Control Repository of the Project Stream the Level is linked to each time the Schedule interval expires.
+
+If changes are found, a Level Request will automatically be created for the Build Level.
+
+In other words, Schedules enable features like Build Automation or Continuous Integration.
+
+Refer to the following sections for detailed information:
+
+* <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,Creating a Schedule>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedulesoverview,Schedules The Schedules Overview Screen>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedules_edit,Editing a Schedule Definition>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedules_delete,Deleting a Schedule Definition>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedules_history,Viewing the Schedule History>>
+
+
+[[_globadm_schedulecreate]]
+== Creating a Schedule 
+(((Schedules ,Creating))) 
+
+[NOTE]
+====
+This option is only available if you have Global Administrator Access Rights in IKAN ALM.
+====
+
+. In the Global Administration context, select _Schedules > Create_.
++
+The following screen is displayed:
++
+image::GlobAdm-Schedules-Create.png[,595,395] 
++
+. Fill out the fields in the _Create Schedule_ panel at the top of the screen. Fields marked with a red asterisk are mandatory: 
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Name
+|Enter the name of the new Schedule in this field.
+This field is mandatory.
+
+|Description
+|Enter a description for the new Schedule in this field.
+This field is optional.
+
+|Interval Number
+|Enter the number of interval units by which the Schedule must verify outstanding tasks.
+
+For instance, if the Interval Unit is set to MINUTES and the Interval Number to 10, the Schedule will check for changes in the Version Control Repository every 10 minutes.
+
+|Interval Unit
+a|Select the required Interval Unit from the drop-down list.
+The following options are available:
+
+* minutes
+* hours
+* days
+
+|Start Time
+|Enter the time when the Schedule must start.
+
+This field is used once each time the Scheduler is restarted and when the Schedule is set to _Active_.
+
+|Quiet Period (Sec.)
+|Enter a Quiet Period value (between 0 and 3600 seconds) for the new Schedule.
+
+The Quiet Period avoids that a Build is performed while people are checking in files.
+When a Level Request is due to be started by the Scheduler, the system will check first if any source code activity took place during the defined number of seconds.
+
+Only if there was no source code activity, it will be assumed safe to update from the source control system and execute the Level Request.
+
+|Active
+|Select whether the Schedule is active or not.
+|===
++
+
+[NOTE]
+====
+
+Avoid using a too "aggressive" Schedule that, for instance, will check for changes every 1 minute.
+This might stress the VCR, particularly when the schedule is attached to multiple Build Levels.
+Instead, use a "hook script" in the VCR that launches an IKAN ALM Level Request from the IKAN ALM Commandline Interface when a source has been committed.
+Please consult the documentation of your VCR for more information concerning hook scripts.
+====
++
+
+[NOTE]
+====
+A schedule that is attached to a Level of a tag-based Project Stream will not check for changes in the VCR and, hence, will have no effect, since it has no way of checking what has changed in the VCR since the last Level Request.
+Continuous Integration on a tag-based Project Stream is only possible by setting up VCR hook scripts that launch an IKAN ALM Level Request from the IKAN ALM Commandline Interface when a new tag has been created.
+Please consult the documentation of your VCR for more information concerning hook scripts.
+====
+. Once you filled out the fields as required, click _Create_.
++
+The newly created Schedule is added to the__ Schedules
+Overview__ at the bottom of the screen.
++
+Samples:
++
+In the samples the question _"`Build Available?`" __means:_ "`Is
+there a Build Level Request for the Level linked to the Schedule?`"__
++
+The question _"`Code changed since last build?`"__ means:_ "`Have
+the resources in the VCR been changed since the last Build Level
+Request for the Level linked to the Schedule?__
++
+image::GlobAdm-Schedules-Sample1.png[,977,484] 
++
+image::GlobAdm-Schedules-Sample2.png[,974,577] 
++
+image::GlobAdm-Schedules-Sample3.png[,972,472] 
++
+image::GlobAdm-Schedules-Sample4.png[,972,492] 
++
+image::GlobAdm-Schedules-Sample5.png[,972,493] 
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_Schedules.adoc#_globadm_schedules,Schedules>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating Level Requests>>
+
+|===
+
+[[_globadm_schedulesoverview]]
+== The Schedules Overview Screen 
+(((Schedules ,Overview Screen))) 
+
+[[_pschedulesoverview]]
+. In the Global Administration context, select _Schedules > Overview_.
++
+The following screen is displayed:
++
+image::GlobAdm-Schedules-Overview.png[,974,372] 
++
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields.
+. Verify the information on the _Schedules Overview_ panel.
++
+For a detailed description of the fields, refer to <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,Creating a Schedule>>.
+. Depending on your access rights, the following links may be available on the _Schedules Overview_ panel:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows editing a Schedule definition.
+
+<<GlobAdm_Schedules.adoc#_globadm_schedules_edit,Editing a Schedule Definition>>
+
+|image:icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows deleting a Schedule definition.
+
+<<GlobAdm_Schedules.adoc#_globadm_schedules_delete,Deleting a Schedule Definition>>
+
+|image:icons/history.gif[,15,15] 
+|History
+
+This option is available to all IKAN ALM Users.
+It allows displaying the History of all create, update and delete operations performed on a Schedule
+
+<<GlobAdm_Schedules.adoc#_globadm_schedules_history,Viewing the Schedule History>>
+|===
+
+[[_globadm_schedules_edit]]
+=== Editing a Schedule Definition 
+(((Schedules ,Editing))) 
+
+. In the Global Administration context, select _Schedules > Overview_.
+
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected Schedule.
++
+The following screen is displayed:
++
+image::GlobAdm-Schedules-Edit.png[,569,537] 
++
+. Edit the fields as required.
++
+For a description of the fields, refer to <<GlobAdm_Schedules.adoc#_globadm_schedulecreate,Creating a Schedule>>.
++
+
+[NOTE]
+====
+The _Connected Levels_ panel displays the Levels the Schedule is linked to. 
+====
+
+ . Click _Save_ to save your changes.
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Back_ to return to the previous screen without saving the changes
+
+[[_globadm_schedules_delete]]
+=== Deleting a Schedule Definition 
+(((Schedules ,Deleting))) 
+
+. In the Global Administration context, select _Schedules > Overview_.
+
+. Click the image:icons/delete.gif[,15,15]  _Delete_ link to delete the selected Schedule.
++
+If the Schedule is not linked to any Level, the following screen is displayed:
++
+image::GlobAdm-Schedules-Delete.png[,455,305] 
++
+. Click _Delete_ to confirm the deletion.
++
+You can also click _Back_ to return to the previous screen without deleting the entry.
++
+__Note:__ If the Schedule is linked to one or more Levels, the following screen is displayed:
++
+image::GlobAdm-Schedules-Delete-Error.png[,800,498] 
++
+You must remove the Schedule from the listed Levels before you can delete it.
+
+[[_globadm_schedules_history]]
+=== Viewing the Schedule History 
+(((Schedules ,History))) 
+
+. In the Global Administration context, select _Schedules > Overview_.
+
+. Click the image:icons/history.gif[,15,15] _History_ link to display the _Schedule History View_.
++
+For more detailed information concerning this __History
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
+
+. Click __Back __to return to the _Schedules Overview_ screen.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_Schedules.adoc#_globadm_schedules,Schedules>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_createbuildlevel,Creating a Build Level>>
+* <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Creating Level Requests>>
+
+|===

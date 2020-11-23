@@ -1,0 +1,142 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_historylog]]
+= Suivi de l`'Historique 
+(((Suivi de l’historique)))  (((Administration globale ,Suivi de l’historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Historique__.
++
+L`'écran suivant s`'affiche: 
++
+image::GlobAdm-HistoryLog-Screen.png[,745,600] 
+. Définissez les critères de recherche requis dans le panneau de recherche.
++
+La liste des éléments dans l'aperçu est synchronisée automatiquement en fonction des critères sélectionnés.
++
+Vous pouvez également:
+
+* cliquer sur le lien _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* cliquer sur le lien _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Définissez des critères de recherche dans le panneau _Rechercher un Historique de l`'Administration Globale_ et cliquez sur le bouton __Rechercher__.
++
+Les critères de recherche suivants sont disponibles:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Critère
+| Description
+
+|Type d`'Objet
+|Le type d`'objet qui a été modifié.
+
+|Type d`'Action
+a|Les types d`'action possibles sont:
+
+* _Créé_
++
+L`'objet a été créé.
+* _Modifié_
++
+L`'objet a été modifié.
+* _Supprimé_
++
+L`'objet a été supprimé.
+* _Ajouté_ (pour un type d`'association)
++
+L`'association a été ajoutée.
+* _Retiré_ (pour un type d`'association)
++
+L`'association a été retiré.
+
+|OID Objet
+|L`'Identifiant de l`'Objet.
+
+|Date de modification depuis
+|La date et l'heure auxquelles la modification a eu lieu (depuis)
+
+|Date de modification jusqu`'à
+|La date et l'heure auxquelles la modification a eu lieu (jusqu`'à)
+
+|Demandeur
+|Le nom de l`'Utilisateur responsable de la modification.
+|===
++
+
+[NOTE]
+====
+
+Vous pouvez sélectionner plusieurs statuts ou actions à partir des listes de choix en utilisant les touches _SHIFT_ ou __CTRL__.
+====
++
+Vous pouvez également cliquer sur le bouton _Réinitialiser_ pour nettoyer les champs de recherche.
+. Vérifiez les informations dans le panneau __Versions d`'objets de l`'Administration Globale__.
++
+Les champs d`'information suivants sont disponibles:
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Type d`'Objet
+|Le type d`'objet qui a été modifié.
+
+|OID objet
+|L`'Identifiant de l`'objet.
+
+_Note:_ Si vous cliquez sur un numéro spécifique, la liste de toutes les modifications pour cet objet sera affichée.
+
+|Nom
+|Le nom de l`'Objet.
+
+|Version
+|La version de l`'objet au moment où la modification a été sauvée.
+
+|Date de Modification
+|La date et l`'heure auxquelles la modification a été faite.
+
+|Type d`'action
+a|Les types d`'action suivant sont possibles:
+
+* _Créé_
++
+L`'objet a été créé.
+* _Modifié_
++
+L`'objet a été modifié.
+* _Supprimé_
++
+L`'objet a été supprimé.
+* _Ajouté_ (pour un type d`'association)
++
+L`'association a été ajoutée.
+* _Retiré_ (pour un type d`'association)
++
+L`'association a été retiré.
+
+|Demandeur
+|Le nom de l`'Utilisateur responsable de la modification.
+|===
+
+. Cliquez sur une version spécifique dans le panneau _Versions d`'objets de l`'Administration Globale_ pour afficher les différences entre cette version et la version actuelle de l`'objet.
++
+Le panneau __Comparaison des Versions __est ajouté à droite du panneau __Versions__.
++
+image::GlobAdm-HistoryLog-Comparison.png[,1056,489] 
++
+Le panneau _Comparaison des Versions_ affiche les différences entre la version actuelle de l`'objet (affichée dans la colonne "`Dernière version`") et la version sélectionnée de l`'objet (affichée dans la colonne "`Version sélectionnée`"). Si l`'objet a été supprimé, le statut de la dernière version sera égal au statut de l`'objet avant qu`'il ne soit supprimé.
+
+* La partie supérieure du panneau _Comparaison des Versions_ affiche la version, la date de modification, le type d`'action et le demandeur des deux versions comparées.
+* La partie inférieure affiche les valeurs spécifiques à l`'objet des deux versions comparées, mettant l`'accent sur les champs présentant des différences.
++
+
+[NOTE]
+====
+La partie inférieure sera différente s`'il s`'agit d`'une association pour un type d`'action d`'ajout ou de retrait comme par exemple pour l`'association Groupe d`'Utilisateur - Utilisateur montré ci-dessous.
+====
++
+image::GlobAdm-HistoryLog-Comparison2.png[,1021,329] 

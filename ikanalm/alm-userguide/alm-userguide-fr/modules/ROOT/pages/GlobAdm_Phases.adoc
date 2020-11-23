@@ -1,0 +1,1121 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_phases_creating]]
+[[_globadm_phases]]
+= Phases 
+(((Administration globale ,Phases)))  (((Phases))) 
+
+Quand IKAN ALM exécute des Requêtes de Niveau, des Constructions et des Déploiements, toutes les actions sont effectuées en exécutant une séquence de Phases.
+Ces Phases sont définies dans la base de données d'IKAN ALM et peuvent être consultées et modifiées dans la section _Phases_ dans le contexte de l'__Administration
+globale__.
+Une fois définies dans l'__Administration
+globale__, les Phases peuvent être associées à des Niveaux ou à des Environnements de construction ou de déploiement dans le contexte de l'__Administration des projets__.
+
+La fonctionnalité de base d'IKAN ALM est exécutée par les Phases dites "de noyau". Ces Phases de noyau peuvent uniquement être affichées, et ne peuvent pas être modifiées ni supprimées.
+Vous devez les considérer comme faisant partie intégrante d'IKAN ALM.
+
+Vous pouvez étendre cette fonctionnalité de base en créant vos propres Phases.
+Il y a deux options:
+
+. Créer une Phase à partir de zéro en utilisant la fonctionnalité "Créer une Phase". Dans ce cas, vous spécifiez d'abord le nom et la version de la Phase et, ensuite, vous sélectionnez le(s) script(s) à exécuter par la Phase.
+. Importer une Phase existante via la fonctionnalité __Importer une Phase__.
+
+
+Se référer aux sections suivantes pour des informations plus détaillées:
+
+* <<GlobAdm_Phases.adoc#_globadm_phases_creating,Créer une définition de Phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phases_overview,Écran de l`'aperçu des Phases>>
+* <<GlobAdm_Phases.adoc#_globadm_phases_editing,Modifier la définition d`'une Phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,Aperçu des paramètres de Phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Créer des Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Modifier les Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Supprimer les Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Modifier en masse les Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massreplacing,Remplacer des Phases en masse>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massdeleting,Supprimer des Phases en masse>>
+* <<GlobAdm_Phases.adoc#_globadm_phases_deleting,Supprimer une définition de Phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phases_exporting,Exporter la définition d`'une Phase.>>
+* <<GlobAdm_Phases.adoc#_globadm_phases_copying,Copier la définition d`'une Phase.>>
+* <<GlobAdm_Phases.adoc#_globadm_phases_history,Afficher l`'historique d`'une Phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phases_importing,Importer une définition de Phase>>
+
+
+Pour une explication complète du concept des Phases, se référer à la section <<App_Phases.adoc#_phases_generalinformation,Phases - Informations générales>>.
+
+== Créer une définition de Phase
+(((Phases ,Créer))) 
+
+[NOTE]
+====
+Cette option n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+====
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Créer__.
++
+L`'écran suivant s`'affiche.
+. En haut de l'écran, complétez les champs dans le panneau __Créer une Phase__. Les champs marqués d`'un astérisque rouge doivent être complétés obligatoirement.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Nom
+a|Le nom de la Phase.
+
+Ce nom doit être unique donc choisissez-le avec précaution.
+Il est conseillé d'utiliser une notation "DNS inversé" comme par exemple: "com.mycompany.phases.ant.deployToTomcat". 
+
+Le nom peut contenir les caractères suivants: 
+
+* lettres
+* chiffres
+* ._-
+
+Tous les autres caractères (y-compris les blancs) sont illégaux et engendrent une erreur de validation.
+
+Ce champ est obligatoire et ne peut plus être modifié après la création de la Phase.
+
+|Version
+a|La version de la Phase.
+
+Combiné avec le nom de la Phase, ce champ constitue l'identifiant unique de la Phase.
+Par conséquent, une seule Phase peut être définie avec un nom et une version spécifique.
+
+La version doit se conformer au format suivant: `[0-9]+(\.[0-9]+(\.[0-9]+(\.[0-9A-Za-z_-]+)?)?)?`
+
+Les versions suivantes, par exemple, sont légales:
+
+* 1.0
+* 1.0.0
+* 1.0.0.0
+* 1.0.0.0-beta2
+
+Les versions suivantes NE sont PAS légales:
+
+* 1.
+* beta2
+* 1.0.0-beta2
+
+|Nom d'affichage par défaut
+|Le nom de la Phase tel qu'il sera affiché dans l'Interface Utilisateur d'IKAN ALM, par exemple, dans les panneaux _Informations détaillées_ ou __Aperçu des
+Phases d'Environnement de construction__.
+
+Ce nom par défaut sera utilisé si aucun nom d'affichage spécifique pour la langue de l'interface de l'Utilisateur n'est fourni.
+Ce champ est obligatoire.
+
+|Nom d'affichage [anglais]
+|Le nom anglais de la Phase tel qu'il sera affiché dans l'Interface Utilisateur d'IKAN ALM pour un Utilisateur pour lequel la langue spécifiée dans ses__ Paramètres
+personnels__ est l'anglais. <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Paramètres personnels>>
+
+Ce champ est optionnel.
+
+|Nom d'affichage [français]
+|Le nom français de la Phase tel qu'il sera affiché dans l'Interface Utilisateur d'IKAN ALM pour un Utilisateur pour lequel la langue spécifiée dans ses__ Paramètres
+personnels__ est le français. <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Paramètres personnels>>
+
+Ce champ est optionnel.
+
+|Nom d'affichage [allemand]
+|Le nom allemand de la Phase tel qu'il sera affiché dans l'Interface Utilisateur d'IKAN ALM pour un Utilisateur pour lequel la langue spécifiée dans ses__ Paramètres
+personnels__ est l'allemand. <<Desktop_PersonalSettings.adoc#_desktop_personalsettings,Paramètres personnels>>
+
+Ce champ est optionnel.
+
+|Description
+|La description de la Phase.
+
+Ce champ est optionnel.
+
+|Auteur
+|L'auteur de la Phase.
+
+Par exemple, le nom de l'Utilisateur créant la Phase ou la société pour laquelle il travaille.
+
+Ce champ peut être utile pour rechercher des Phases.
+
+Ce champ est optionnel.
+
+|Type d'exécution
+a|Sélectionnez le type d'Outil de script qui sera utilisé pour l'exécution des scripts contenus dans cette Phase.
+
+Les valeurs possibles sont:
+
+* ANT
+* GRADLE
+* NANT
+* MAVEN2
+
+Ce champ est obligatoire et ne peut plus être modifié après la création de la Phase.
+|===
+
+. Une fois tous les champs mentionnés ci-dessus saisis, vous devez charger le(s) fichier(s) de script.
++
+Cliquez sur le bouton __Charger__.
++
+Une fenêtre de sélection de fichier s'affichera.
+. Sélectionnez les scripts qui seront utilisés pour l'exécution de la Phase.
++
+__Note: __Vous ne pouvez sélectionner qu'un seul fichier.
+
+* S'il n'y a qu'un seul fichier de script à charger, vous n'avez qu'à sélectionner ce fichier de script.
+* Si la Phase nécessite plusieurs fichiers pour son exécution, vous devez d'abord archiver ces fichiers dans un fichier .zip ou .tar.gz, et ensuite sélectionner ce fichier d`'archive. IKAN ALM extraira le fichier d'archive et affichera son contenu dans le champ __Fichiers téléchargés__.
++
+Si le chargement a réussi, le message suivant s'affiche:
++
+image::GlobAdm-Phases-Create-UploadSuccess.png[,804,56] 
+. Sélectionnez le script "principal".
++
+Comme suggère le message, vous devez maintenant sélectionner le script "principal" dans la liste des fichiers téléchargés.
+Il s'agit du script qui sera appelé au moment de l'exécution de la Phase.
++
+Si le chargement a réussi et le script principal est sélectionné, les boutons _Créer_ et _Réinitialiser_ deviendront disponibles.
+. Indiquez où la Phase peut être utilisée.
++
+Sélectionnez la(les) option(s) appropriée(s).
++
+Il y a trois possibilités:
+
+* Sur les Niveaux
+* Sur les Environnements de construction
+* Sur les Environnements de déploiement
+. Cliquez sur le bouton _Créer_ pour créer la Phase.
++
+Si vous cliquez sur le bouton __Créer__, la Phase est créée dans le Catalogue des Phases et ajoutée à l'__Aperçu
+des Phases__.
++
+
+[NOTE]
+====
+L'emplacement du Catalogue des Phases est spécifié dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+====
++
+Vous pouvez également cliquer sur le bouton _Réinitialiser_ pour nettoyer les champs et restaurer les valeurs initiales.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Phases de niveau>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Insérer une Phase de niveau>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phases,Phases d`'environnement de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deplanv_phases,Phases d`'environnement de déploiement>>
+* Les paramètres du Catalogue des Phases. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+|===
+
+[[_globadm_phases_overview]]
+== Écran de l`'aperçu des Phases 
+(((Phases ,Aperçu))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
++
+L'écran suivant s'affiche:
++
+image::GlobAdm-Phases-Overview.png[,1047,523] 
+. Définissez les critères de recherche requis dans le panneau de recherche.
++
+La liste des éléments dans l'aperçu est synchronisée automatiquement en fonction des critères sélectionnés.
++
+Vous pouvez également:
+
+* cliquer sur le lien _Montrer/Cacher les options avancées_ pour afficher ou masquer tous les critères de recherche disponibles,
+* cliquer sur le lien _Rechercher_ pour synchroniser la liste en fonction des critères de recherche actuels,
+* cliquer sur le lien _Réinitialiser la recherche_ pour nettoyer les champs.
+
+. Vérifiez les informations dans l`'__Aperçu des Phases__.
++
+Pour une description détaillée des champs, se référer aux sections <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>> et <<GlobAdm_Phases.adoc#_globadm_phases_editing,Modifier la définition d`'une Phase>>.
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles dans le panneau __Aperçu des Phases__:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier une Phase.
+
+<<GlobAdm_Phases.adoc#_globadm_phases_editing,Modifier la définition d`'une Phase>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer une Phase.
+
+<<GlobAdm_Phases.adoc#_globadm_phases_deleting,Supprimer une définition de Phase>>
+
+|image:icons/Phase_Export.png[,15,15] 
+|Exporter
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet d'exporter une Phase.
+
+<<GlobAdm_Phases.adoc#_globadm_phases_exporting,Exporter la définition d`'une Phase.>>
+
+|image:icons/Phase_Copy.gif[,15,15] 
+|Copier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de copier une Phase.
+
+<<GlobAdm_Phases.adoc#_globadm_phases_copying,Copier la définition d`'une Phase.>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique de toutes les opérations de création, de modification ou de suppression relatives à une Phase.
+
+<<GlobAdm_Phases.adoc#_globadm_phases_history,Afficher l`'historique d`'une Phase>>
+|===
++
+
+[NOTE]
+====
+Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent être rangées par ordre alphabétique (ascendant ou descendant).
+====
+
+[[_globadm_phases_editing]]
+== Modifier la définition d`'une Phase  
+(((Phases ,Modifier))) 
+
+Le panneau _Informations de la Phase_ vous permet de modifier la définition d'une Phase.
+
+En-dessous de ce panneau, le panneau _Paramètres
+de phase_ s'affiche, vous permettant de créer, modifier, supprimer et modifier en masse les Paramètres de phase.
+
+Pour des informations plus détaillées concernant les Paramètres de phase, se référer aux sections suivantes:
+
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,Aperçu des paramètres de Phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Créer des Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Modifier les Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Supprimer les Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Modifier en masse les Paramètres de phase>>
+
+//
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
+
+. Dans le panneau __Aperçu des Phases__, cliquez sur le lien image:icons/edit.gif[,15,15] __ _Modifier_ devant la Phase que vous voulez modifier.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdm-Phases-Edit.png[,905,873] 
+
+. Cliquez sur le bouton _Modifier_ pour modifier la Phase.
++
+La fenêtre _Modifier une Phase_ s`'affiche.
++
+image::GlobAdm-Phases-Edit-popup.png[,560,660] 
++
+Pour la description des champs, se référer à la section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Créer une définition de Phase>>.
++
+Les champs additionnels suivants sont affichés:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Phase de noyau
+|Ce champ indique s'il s'agit d'une Phase de noyau ou pas.
+
+Une Phase de noyau est une Phase IKAN ALM interne qui exécute certaines fonctionnalités de noyau (par exemple, la Phase __Récupération
+Code__).
+
+Elle ne peut être ni modifiée ni supprimée.
+
+Pour plus d`'informations, se référer à la section <<App_Phases.adoc#_phases_generalinformation,Phases - Informations générales>>.
+
+|Certifiée
+|Ce champ indique s'il s'agit d'une Phase certifiée ou pas.
+
+Une Phase certifiée est une Phase qui a été testée et approuvée par IKAN.
+
+Elle ne peut pas être modifiée et ses paramètres ne peuvent pas être supprimés. 
+
+Pour plus d`'informations, se référer à la section <<App_Phases.adoc#_phases_generalinformation,Phases - Informations générales>>.
+
+|Publiée
+|Ce champ indique si une Phase est publiée ou non.
+
+Une Phase non publiée est considérée comme étant en cours de développement, c'est-à-dire son (ses) script(s) et les autres fichiers qu`'elle contient peuvent être modifiés.
+
+Pour faciliter le développement d'une Phase, IKAN ALM réinstallera une Phase non-publiée automatiquement juste avant son exécution.
+Une fois qu`'une Phase a été publiée, son contenu (les scripts et fichiers) ne peut plus être modifié.
+Par conséquent, le bouton _Charger_ ne sera plus disponible.
+
+Pour plus d`'informations, se référer à la section <<App_Phases.adoc#_phases_generalinformation,Phases - Informations générales>>.
+|===
++
+
+[NOTE]
+====
+
+Les champs Nom et Version ne peuvent pas être modifiés.
+Si vous voulez renommer une Phase ou modifier sa version, vous devez d'abord la copier et ensuite supprimer la Phase originale.
+
+Pour plus d`'informations, se référer à la section <<GlobAdm_Phases.adoc#_globadm_phases_copying,Copier la définition d`'une Phase.>>.
+====
+
+. Vérifiez les fichiers chargés.
++
+Le champ _Fichiers téléchargés_ liste le contenu actuel de la Phase.
++
+Si vous voulez modifier le contenu, cliquez sur le bouton _Charger_ et sélectionnez un fichier de script ou un fichier d'archive.
+Les fichiers nouvellement téléchargés seront affichés dans le champ __Fichiers
+téléchargés__.
++
+
+[NOTE]
+====
+Les fichiers nouvellement téléchargés *REMPLACERONT* les anciens fichiers; ils ne seront pas ajoutés au contenu actuel de la Phase!
+
+Les fichiers nouvellement téléchargés ne seront retenus que si vous cliquez sur le bouton __Enregistrer__.
+Pour réafficher les fichiers téléchargés précédemment, cliquez sur le bouton __Actualiser__.
+====
++
+Pour plus d`'informations concernant le chargement de fichiers, se référer à la section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Créer une définition
+de Phase>>.
+
+. Vérifiez les paramètres de Phases.
++
+Le panneau _Paramètres de phase_ affiche tous les Paramètres définis pour la Phase.
++
+image::GlobAdm-Phases-PhaseParameters.png[,894,251] 
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Créer des Paramètres de phase>>.
++
+Les liens suivants sont disponibles dans le panneau __Paramètres
+de phase__:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15]
+|Modifier
+
+Cette option permet d'modifier un Paramètre de phase.
+
+<<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Modifier les Paramètres de phase>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option permet de supprimer un Paramètre de phase.
+
+<<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Supprimer les Paramètres de phase>>
+
+|image:icons/Phase_MassEdit.png[,15,15] 
+|Modifier en masse
+
+Cette option permet d'modifier les valeurs d'un Paramètre dans ses Environnements connectés.
+
+<<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Modifier en masse les Paramètres de phase>>
+|===
++
+Vous pouvez également créer un nouveau Paramètre en cliquant sur le lien _Créer un Paramètre_ en dessous du panneau __Paramètres de la phase__.
+Pour plus d`'informations, se référer à la section <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Créer des Paramètres de phase>>
+
+. Vérifiez les Environnements connectés.
++
+Le panneau _Niveaux et Environnements connectés_ affiche les Niveaux et les Environnements de construction ou de déploiement dans lesquels cette Phase a été ajoutée.
++
+image::GlobAdm-Phases-ConnectedEnvironments.png[,390,207] 
++
+
+[NOTE]
+====
+Si le champ _Environnement_ est vide, cela signifie que la Phase a été ajoutée au Niveau.
+====
++
+Pour plus d'informations concernant le remplacement ou la suppression en masse de Phases, se référer aux sections <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massreplacing,Remplacer des Phases en masse>> et <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massdeleting,Supprimer des Phases en masse>>.
+
+. Dans le panneau __Modifier une Phase__, cliquez sur le bouton _Enregistrer_ pour enregistrer vos changements.
++
+Si vous cliquez sur le bouton __Enregistrer__, les données de la Phase sont retenues et l'écran _Aperçu
+des Phases_ s'affiche.
++
+Entretemps, IKAN ALM réenregistre l`'archive avec les fichiers téléchargés dans un fichier .jar remplaçant le fichier existant dans l'Emplacement du Catalogue des Phases (tel que défini dans les Paramètres système (<<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>). Depuis cet emplacement, il sera prêt à être utilisé par le processus Daemon du Serveur ou de l'Agent IKAN ALM si la Phase doit être (ré) installée sur le Serveur ou l'Agent IKAN ALM.
++
+Les boutons suivants sont également disponibles:
+
+* _Actualiser_ pour récupérer les Paramètres tels qu`'ils sont enregistrés dans la base de données.
+* _Aperçu_ pour retourner à l`'écran précédent sans enregistrer les modifications.
+* _Publier_ pour publier la Phase.
++
+Si vous cliquez sur le bouton __Publier__, une fenêtre de confirmation s'affiche.
++
+image::GlobAdm-Phases-Release_confirmation.png[,367,130] 
++
+Cliquez sur _Oui_ pour confirmer la publication de la Phase.
++
+Ensuite, le statut de la Phase sera établi à "Publiée". Une fois qu`'une Phase a été publiée, son contenu ne peut plus être modifié.
+Par conséquent, le bouton _Charger_ ne sera plus disponible.
+Le comportement de la Phase est considéré comme étant "gelé". Par contre, les Paramètres de phase d'une Phase publiée, peuvent toujours être créés, modifiés et supprimés.
++
+
+[WARNING]
+--
+La publication d'une Phase ne peut pas être annulée.
+
+Si vous devez télécharger des nouveaux scripts pour une Phase après sa publication, vous devez d'abord copier la Phase et donner un nom et/ou une version différent(e) à la copie et, ensuite, charger les nouveaux scripts pour cette nouvelle Phase.
+Pour plus d`'informations, se référer à la section <<GlobAdm_Phases.adoc#_globadm_phases_copying,Copier la définition d`'une Phase.>>
+--
+
+* _Exporter_ pour exporter la Phase. <<GlobAdm_Phases.adoc#_globadm_phases_exporting,Exporter la définition d`'une Phase.>>
+* _Copier_ pour copier la Phase. <<GlobAdm_Phases.adoc#_globadm_phases_copying,Copier la définition d`'une Phase.>>
+* _Historique_ pour afficher l'historique de toutes les opérations de création, de modification ou de suppression relatives à une Phase. <<GlobAdm_Phases.adoc#_globadm_phases_history,Afficher l`'historique d`'une Phase>>
+
+[[_globadm_phaseparameters_overview]]
+== Aperçu des paramètres de Phase 
+(((Phases ,Paramètres de phase)))  (((Paramètres de phase)))  (((Paramètres de phase ,Aperçu)))  (((Phases ,Paramètres de phase ,Aperçu)))  (((Paramètres ,Phase))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
++
+L`'écran suivant s`'affiche.
++
+image::GlobAdm-Phases-Overview.png[,1027,454] 
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant la Phase requise dans l'__Aperçu des Phases__.
++
+L`'écran _Modifier une Phase_ s`'affiche.
++
+En-dessous du panneau __Informations de la Phase__, le panneau _Paramètres de phase_ affiche tous les paramètres définis.
++
+image::GlobAdm-Phases-PhaseParameters.png[,895,252] 
+
+. Vérifiez l`'information dans le panneau des _Paramètres de Phase_.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Créer des Paramètres de phase>>.
++
+Les liens suivants sont disponibles:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Lien
+| Description
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier la définition du Paramètre de phase sélectionné.
+
+<<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Modifier les Paramètres de phase>>
+
+|image:icons/delete.gif[,15,15] 
+|Supprimer
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de supprimer la définition du Paramètre de phase sélectionné.
+
+<<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Supprimer les Paramètres de phase>>
+
+|image:icons/Phase_MassEdit.png[,15,15] 
+|Modifier en masse
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur global.
+Elle permet de modifier en masse la définition du Paramètre de phase sélectionné.
+
+<<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Modifier en masse les Paramètres de phase>>
+|===
++
+
+[NOTE]
+====
+
+Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent être rangées par ordre alphabétique (ascendant ou descendant).
+====
++
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Créer des Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Modifier les Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Supprimer les Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Modifier en masse les Paramètres de phase>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Afficher les Paramètres de Phase de niveau>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_modifyorderphases,Modifier la séquence des Phases d'Environnement de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_viewbuildenvphaseparams,Afficher les Paramètres de phase d'Environnement de déploiement>>
+
+|===
+
+[[_globadm_phaseparameters_creating]]
+== Créer des Paramètres de phase 
+(((Phases ,Paramètres de phase ,Créer)))  (((Paramètres de phase ,Créer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant la Phase requise dans l'__Aperçu des Phases__.
++
+L`'écran _Modifier une Phase_ s`'affiche.
+
+. Cliquez sur le lien _Créer un Paramètre_ en bas du panneau __Paramètres de phase__.
++
+La fenêtre suivante s'affiche:
++
+image::GlobAdm-Phases-CreatePhaseParameter.png[,516,385] 
+
+. Complétez les champs dans la fenêtre __Créer un Paramètre de phase__.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Champ
+| Description
+
+|Phase
+|Le nom et la version de la Phase pour laquelle le Paramètre a été créé.
+
+Il s'agit d'un champ accessible en lecture seulement, affiché pour des raisons d'information.
+
+|Sécurisé
+|Ce champ indique si le Paramètre est sécurisé ou non.
+
+Ce champ est obligatoire et ne peut plus être modifié après la création du Paramètre.
+
+|Nom
+|Le nom du Paramètre.
+
+Ce champ est obligatoire.
+
+|Type d'intégration
+a|Ce champ indique si la valeur du Paramètre est une simple valeur texte, ou si elle représente un lien (une intégration) vers un objet IKAN ALM.
+
+Les valeurs possibles sont:
+
+* Aucun: la valeur se compose de texte simple
+* Transporteur: un lien vers un Transporteur
+* Référentiel: un lien vers un Référentiel de Contrôle de Version
+* Suivi des incidents: un lien vers un Système de Suivi des Incidents
+* Outil de script: un lien vers un Outil de script
+* ANT: un lien vers un Outil de script Ant
+* GRADLE: un lien vers un Outil de script Gradle
+* NANT: un lien vers un Outil de script NAnt
+* MAVEN2: un lien vers un Outil de script Maven2
+
+Si vous sélectionnez un autre type qu`'__Aucun__, le champ _Valeur par défaut_ change en une liste déroulante à partir de laquelle vous pouvez sélectionner un objet IKAN ALM spécifique de ce type.
+Par exemple, si _ANT_ est sélectionné comme Type d'intégration, la liste déroulante _Valeur
+par défaut_ contiendra tous les Outils de script ANT.
+
+Ce champ n'est utile que pour les Paramètres non-sécurisés.
+Si le Paramètre est établi à __Sécurisé__, ce champ est retiré et le Type d'intégration _Aucun_ est déduit.
+
+|Valeur par défaut
+|Il s'agit de la valeur par défaut attribuée au Paramètre quand la Phase est ajoutée à un Environnement et qu'aucune valeur n'est saisie explicitement.
+
+Ce champ est optionnel.
+
+|Répéter la Valeur par défaut
+|Champ obligatoire pour les Paramètres sécurisés: répétez la valeur par défaut sécurisée.
+
+|Description
+|Saisissez dans ce champ la description du Paramètre.
+
+|Obligatoire
+|Ce champ indique si le Paramètre sera toujours créé au moment de l'ajout de la Phase à un Niveau ou un Environnement. 
+
+Si un Paramètre obligatoire est créé, il sera automatiquement créé dans les Environnements auxquels cette Phase a été ajoutée.
+
+Si un Paramètre non-obligatoire est positionné à obligatoire, il sera également créé automatiquement dans les Environnements auxquels cette Phase a été ajoutée.
+|===
+
+. Cliquez sur le bouton _Créer_ pour créer le Paramètre de phase.
++
+Si vous cliquez sur le bouton __Créer__, le Paramètre de phase est créé et la fenêtre est fermée.
+Le nouveau Paramètre est ajouté dans le panneau __Paramètres de phase__.
++
+Les boutons suivants sont également disponibles:
+
+* _Réinitialiser_ pour nettoyer les champs et restaurer les valeurs initiales.
+* _Annuler_ pour fermer la fenêtre sans créer le Paramètre de phase.
++
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Créer des Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Modifier les Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Supprimer les Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Modifier en masse les Paramètres de phase>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Afficher les Paramètres de Phase de niveau>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_modifyorderphases,Modifier la séquence des Phases d'Environnement de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_viewbuildenvphaseparams,Afficher les Paramètres de phase d'Environnement de déploiement>>
+
+|===
+
+[[_globadm_phaseparameters_editing]]
+== Modifier les Paramètres de phase 
+(((Phases ,Paramètres de phase ,Modifier)))  (((Paramètres de phase ,Modifier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant la Phase requise dans l'__Aperçu des Phases__.
++
+L`'écran _Modifier une Phase_ s`'affiche.
+
+. Dans le panneau __Paramètres de phase__, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier un Paramètre_ devant le Paramètre que vous voulez modifier.
++
+La fenêtre suivante s'affiche:
++
+image::GlobAdm-PhaseParameter-Edit.png[,504,474] 
+
+. Si nécessaire, modifiez les champs. 
++
+Pour la description des champs, se référer à la section <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Créer des Paramètres de phase>>.
+
+. Vérifiez les Paramètres d'environnement connectés.
++
+Le panneau _Paramètres d'environnement connectés_ affiche les Environnements auxquels le Paramètre de phase a été ajouté, et les valeurs de ce Paramètre dans ces Environnements.
++
+
+[NOTE]
+====
+Un Environnement est identifié par son Projet, son Niveau et, optionnellement, son nom d'Environnement.
+Si le champ _Environnement_ est vide, cela signifie que la Phase a été ajoutée au Niveau.
+====
+
+. Cliquez sur le lien image:icons/Phase_EditEnvPhaseParameter.png[,15,15] _Modifier un Paramètre de phase d'environnement_ à côté d'un Paramètre d'environnement.
++
+L'Utilisateur sera renvoyé vers l'écran _Aperçu
+des Paramètres de la phase_ (dans le contexte de l'Administration de Projet) et l'écran _Modifier la valeur du Paramètre_ s'affichera.
++
+image::GlobAdm-PhaseParameter-Edit-ParameterValue.png[,794,673] 
+
+. Spécifiez la valeur du Paramètre d'Environnement et cliquez sur le bouton _Sauvegarder_ pour enregistrer la valeur.
++
+Les boutons suivants sont également disponibles:
+
+* _Réinitialiser_ pour nettoyer les champs.
+* _Annuler_ pour retourner à l'écran _Aperçu des Paramètres de la phase_ sans enregistrer la valeur. <<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,Aperçu des paramètres de Phase>>
++
+Pour retourner à l'écran _Modifier un Paramètre
+de phase_ (dans le contexte de l'Administration globale), cliquez sur un des liens image:icons/Phase_EditEnvPhaseParameter.png[,15,15] __ Modifier
+un Paramètre de phase global.__.
++
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,Aperçu des paramètres de Phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Créer des Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_deleting,Supprimer les Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Modifier en masse les Paramètres de phase>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Afficher les Paramètres de Phase de niveau>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_modifyorderphases,Modifier la séquence des Phases d'Environnement de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_viewbuildenvphaseparams,Afficher les Paramètres de phase d'Environnement de déploiement>>
+
+|===
+
+[[_globadm_phaseparameters_deleting]]
+== Supprimer les Paramètres de phase 
+(((Phases ,Paramètres de phase ,Supprimer)))  (((Paramètres de phase ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant la Phase requise dans l'__Aperçu des Phases__.
++
+L`'écran _Modifier une Phase_ s`'affiche.
+
+. Dans le panneau __Paramètre de phase__, cliquez sur le bouton image:icons/delete.gif[,15,15] _Supprimer_ devant le Paramètre que vous voulez supprimer. 
++
+La fenêtre suivante s'affiche:
++
+image::GlobAdm-PhaseParameter-Delete.png[,386,172] 
++
+
+[WARNING]
+--
+Si le Paramètre a été créé dans un ou plusieurs environnements, le message d'avertissement suivant s'affiche:
+
+
+image::GlobAdm-PhaseParameter-Delete-Warning.png[,455,92] 
+--
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression.
++
+Le paramètre sera supprimé de tous les Environnements connectés et de la Phase.
++
+Vous pouvez également cliquer sur le bouton _Annuler_ pour fermer la fenêtre sans supprimer le Paramètre.
++
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,Aperçu des paramètres de Phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Créer des Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Modifier les Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Modifier en masse les Paramètres de phase>>
+
+|===
+
+[[_globadm_phaseparameters_massediting]]
+== Modifier en masse les Paramètres de phase 
+(((Phases ,Paramètres de phase ,Modifier en masse)))  ((( Paramètres de phase ,Modifier en masse))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant la Phase requise dans l'__Aperçu des Phases__.
++
+L`'écran _Modifier une Phase_ s`'affiche.
+
+. Dans le panneau __Paramètres de phase__, cliquez sur le lien image:icons/Phase_MassEdit.png[,15,15] _Modifier en masse_ devant le Paramètre que vous voulez modifier.
++
+L'écran suivant s'affiche, listant les différents Paramètres de phase d'environnement connectés ainsi que le Projet et le Niveau ou l'Environnement de construction/déploiement et la valeur du Paramètre.
++
+
+[NOTE]
+====
+Si un libellé a été spécifié pour une Phase spécifique, vous pouvez l'afficher en déplaçant le pointeur de la souris au-dessus de l'icône image:icons/view.gif[,15,15]  dans la colonne de droite.
+
+Pour plus d`'informations concernant l'usage des libellés, se référer à la section <<ProjAdm_Levels.adoc#_plevelenvmgt_insertphase,Insérer une Phase de niveau>>. 
+====
++
+image::GlobAdm-PhaseParameter-MassEdit.png[,705,524] 
+
+. Sélectionnez un ou plusieurs éléments dans la liste __Paramètres d'environnement connectés__.
+
+. Dans le champ __Spécifier la valeur pour la sélection__, sélectionnez ou saisissez la nouvelle valeur pour les Paramètres sélectionnés et cliquez sur le bouton __Spécifier__.
++
+Après confirmation, les valeurs des Paramètres de phase d'environnement seront établies à la valeur spécifiée. 
++
+Si le Paramètre est sécurisé, la valeur doit être répétée dans le champ __Répéter la Valeur__.
+
+. Cliquez sur le bouton __Réinitialiser__.
++
+Après confirmation, les valeurs des Paramètres de phase d'environnement seront établies à la valeur par défaut du Paramètre de phase.
+
+. Cliquez sur le bouton __Supprimer__.
++
+Après confirmation, les Paramètres de phase d'environnement seront supprimés de leurs Environnements.
++
+L'action _Supprimer_ n'est disponible que pour les Paramètres non-obligatoires.
+
+. Cliquez sur le bouton _Annuler_ pour fermer la fenêtre. 
++
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_overview,Aperçu des paramètres de Phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_creating,Créer des Paramètres de phase>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_editing,Modifier les Paramètres de phase>>
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Afficher les Paramètres de Phase de niveau>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_modifyorderphases,Modifier la séquence des Phases d'Environnement de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_viewbuildenvphaseparams,Afficher les Paramètres de phase d'Environnement de déploiement>>
+
+|===
+
+[[_globadm_phaseparameters_massreplacing]]
+== Remplacer des Phases en masse 
+(((Phases ,Remplacer des Phases en masse)))  (((Remplacer des Phases en masse))) 
+
+L'option _Remplacer des Phases en masse_ vous permet de remplacer une Phase dans plusieurs Environnements de plusieurs Projets différents à la fois, ce qui peut être utile lors de l'installation d'une nouvelle version d'une Phase dans plusieurs Projets.
+Ce processus est beaucoup plus facile que de devoir supprimer la Phase et d'insérer la Phase de remplacement dans chaque aperçu de Phases du Niveau et de l'Environnement de Construction/Déploiement.
+
+[NOTE]
+====
+Vous devez disposer de droits d'accès d'Administrateur global pour pouvoir __Remplacer des Phases en masse__.
+====
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
+
+. Dans le panneau __Aperçu des Phases__, cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant le Phase requise.
++
+L`'écran _Modifier une Phase_ s`'affiche.
+
+. Dans le panneau __Phases d`'Environnement de construction__, cliquez sur le lien image:icons/link_MassReplacePhase.png[,16,17]  _Remplacer des Phases en masse_.
++
+L'assistant pour remplacer des Phases en masse s'affiche.
+Cet assistant vous guidera dans les quatre étapes du processus de remplacement.
++
+.. ÉTAPE 1 - Sélectionnez une Phase de remplacement
++
+image::GlobAdm-Phase-MassReplace_Step1.png[,698,563] 
++
+Sélectionnez la Phase qui remplacera la Phase originale à partir du tableau _Remplacer par la Phase_ et cliquez sur le bouton __Suivant__.
+
+.. ÉTAPE 2 - Sélectionnez les Niveaux et les Environnements connectés
++
+image::GlobAdm-Phase-MassReplace_Step2.png[,696,567] 
++
+À partir du tableau __Niveaux et Environnements
+connectés__, choisissez les Niveaux et les Environnements pour lesquels la Phase originale sera remplacée par la Phase sélectionnée dans l'étape 1.
++
+Si vous activez la case de sélection, tous les Niveaux et Environnements seront sélectionnés.
++
+
+[NOTE]
+====
+Si pour un Environnement spécifique un libellé a été spécifié pour une Phase, vous pouvez l'afficher en déplaçant le pointeur de la souris au-dessus de l'icône image:icons/view.gif[,15,15] .
+====
+
+.. ÉTAPE 3 - Assembler les Paramètres
++
+image::GlobAdm-Phase-MassReplace_Step3.png[,702,572] 
++
+Dans cette étape vous devez assembler les paramètres de la Phase originale avec ceux de la Phase de remplacement.
++
+IKAN ALM essaiera d'assembler les Paramètres qui ont un nom et un type identiques.
+Si nécessaire, vous pouvez toujours corriger ces assemblages automatiques, ou assembler des Phases non-assemblées en sélectionnant le paramètre approprié à partir de la liste déroulante.
++
+Les paramètres assemblés recevront la valeur du paramètre d'environnement original.
++
+Les paramètres non-assemblés pour lesquels une valeur par défaut a été spécifiée, seront initialisés en utilisant cette valeur.
+Si aucune valeur par défaut n'est spécifiée, vous pouvez la spécifier plus tard. <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massediting,Modifier en masse les Paramètres de phase>>
++
+Si vous n'activez pas l'option __Activer l'assemblage
+de Paramètres__, les paramètres d'environnement recevront la valeur par défaut (si elle a été spécifiée) ou resteront vides.
++
+Sélectionnez _Suivant_ si l'assemblage des Paramètres est en ordre.
+
+.. ÉTAPE 4 - Confirmer
++
+image::GlobAdm-Phase-MassReplace_Step4.png[,704,560] 
++
+La fenêtre de confirmation vous permet de vérifier vos choix avant de poursuivre avec le remplacement de la Phase:
+
+* la Phase qui remplacera la Phase originale (sélectionnée dans l'étape 1)
+* pour combien de Niveaux, Environnements de construction et de déploiement elle sera remplacée (sélectionné dans l'étape 2)
+* combien de paramètres seront assemblés (sélectionnés dans l'étape 3)
++
+Cliquez sur le bouton _Confirmer_ pour remplacer la Phase.
+Ensuite, la Phase sera remplacée dans les Environnements différents.
++
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Afficher les Paramètres de Phase de niveau>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_modifyorderphases,Modifier la séquence des Phases d'Environnement de construction>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenv_viewbuildenvphaseparams,Afficher les Paramètres de phase d'Environnement de déploiement>>
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massdeleting,Supprimer des Phases en masse>>
+
+|===
+
+[[_globadm_phaseparameters_massdeleting]]
+== Supprimer des Phases en masse 
+(((Phases ,Supprimer des Phases en masse)))  (((Supprimer des Phases en masse))) 
+
+L'option _Supprimer des Phases en masse_ vous permet de supprimer une Phase dans plusieurs Environnements de Projets différents à la fois.
+Ce processus est beaucoup plus facile que de devoir supprimer la Phase dans chaque aperçu des Phases du Niveau et de l'Environnement de Construction/Déploiement.
+
+[NOTE]
+====
+Vous devez disposer de droits d'accès d'Administrateur global pour pouvoir __Supprimer des Phases en masse__.
+====
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
+
+. Cliquez sur le lien image:icons/edit.gif[,15,15] _Modifier_ devant la Phase requise dans l'__Aperçu des Phases__.
++
+L`'écran _Modifier une Phase_ s`'affiche.
+
+. Dans le panneau __Niveaux et Environnements connectés__, cliquez sur le lien image:icons/link_MassDeletePhase.png[,16,16]  _Supprimer des Phases en masse_.
++
+La fenêtre suivante s'affiche.
++
+image::GlobAdm-Phase-MassDelete_01.png[,698,499] 
+
+. Sélectionnez les Niveaux et/ou les Environnements dans lesquels vous voulez supprimer la Phase.
++
+Si vous activez la case de sélection, tous les Niveaux et Environnements seront sélectionnés.
++
+
+[NOTE]
+====
+Si pour un Environnement spécifique un libellé a été spécifié pour une Phase, vous pouvez l'afficher en déplaçant le pointeur de la souris au-dessus de l'icône image:icons/view.gif[,15,15] .
+====
+
+ . Cliquez sur le bouton __Supprimer__.
++
+Après confirmation, la(les) Phase(s) sélectionnée(s) sera(ont) supprimée(s) de leurs Niveaux et/ou Environnements.
++
+Vous pouvez également cliquer sur le bouton _Annuler_ pour retourner à l'écran __Modifier une Phase__.
++
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_Phases.adoc#_globadm_phaseparameters_massreplacing,Remplacer des Phases en masse>>
+
+|===
+
+[[_globadm_phases_deleting]]
+== Supprimer une définition de Phase 
+(((Phases ,Supprimer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
+
+. Dans le panneau __Aperçu des Phases__, cliquez sur le lien image:icons/delete.gif[,15,15] _Supprimer_ devant la Phase que vous voulez supprimer.
++
+Le panneau _Confirmer la suppression d'une Phase_ s'affiche.
++
+image::GlobAdm-Phases-Delete-Confirm.png[,655,442] 
+
+. Cliquez sur le bouton _Supprimer_ pour confirmer la suppression.
++
+Vous pouvez également cliquer sur le bouton _Aperçu_ pour retourner à l`'écran précédent sans supprimer la Phase.
++
+__Note:__ Si vous désirez supprimer une Phase reliée à au moins un Environnement, le message suivant s`'affiche:
++
+image::GlobAdm-Phases-Delete-StillConnected.png[,815,63] 
++
+Avant de pouvoir la supprimer, vous devez retirer la Phase de tous les Environnements auxquels elle est connectée.
++
+
+[WARNING]
+--
+En supprimant une définition de Phase, vous supprimerez également le fichier .jar correspondant de l'Emplacement du Catalogue des Phases.
+--
+
+
+[[_globadm_phases_exporting]]
+== Exporter la définition d`'une Phase. 
+(((Phases ,Paramètres de phase ,Exporter)))  (((Paramètres de phase ,Exporter))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
+
+. Dans le panneau __Aperçu des Phases__, cliquez sur le lien image:icons/Phase_Export.png[,15,15] _Exporter_ devant la Phase que vous voulez exporter.
++
+
+[NOTE]
+====
+Vous pouvez également faire cette action en cliquant sure le bouton _Exporter_ dans le panneau __Modifier une Phase__.
+Voir <<GlobAdm_Phases.adoc#_globadm_phases_editing,Modifier la définition d`'une Phase>>.
+====
++
+IKAN ALM enregistre les métadonnées de la Phase et tous les fichiers de script dans un fichier .jar.
+Une fenêtre sera affichée vous demandant où vous voulez sauvegarder ce fichier .jar.
+Le fichier .jar exporté peut être utilisé pour réimporter la Phase plus tard, éventuellement dans une autre installation IKAN ALM. <<GlobAdm_Phases.adoc#_globadm_phases_importing,Importer une définition de Phase>>
++
+
+[NOTE]
+====
+La combinaison des actions _Exporter_ puis _Importer_ une Phase ne permet pas la copie de la Phase, car le Nom et la Version restent inchangés.
+====
+
+[[_globadm_phases_copying]]
+== Copier la définition d`'une Phase. 
+(((Phases ,Copier))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
+
+. Dans le panneau __Aperçu des Phases__, cliquez sur le lien image:icons/Phase_Copy.gif[,15,15] _Copier_ devant la Phase que vous voulez copier.
++
+
+[NOTE]
+====
+Vous pouvez également accéder cet écran en cliquant sur le bouton _Copier_ dans le panneau _Modifier
+une Phase_ (<<GlobAdm_Phases.adoc#_globadm_phases_editing,Modifier la définition d`'une Phase>>).
+====
++
+L`'écran _Copier une Phase_ s`'affiche.
++
+image::GlobAdm-Phases-Copy.png[,1005,886] 
+
+. Si nécessaire, modifiez les champs.
++
+Pour une description détaillée des champs, se référer à la section <<GlobAdm_Phases.adoc#_globadm_phases_creating,Phases>>. 
++
+
+[NOTE]
+====
+La combinaison Nom - Version doit être unique.
+Par conséquent, au moins un de ces champs doit être modifié pour pouvoir enregistrer la copie de la Phase.
+Si vous mettez à jour la Phase, vous voudriez (probablement) incrémenter la valeur de la __Version__.
+====
+
+. Vérifiez les fichiers téléchargés.
++
+Le champ _Fichiers téléchargés_ liste le contenu actuel de la Phase.
+Vous ne pouvez pas charger de nouveaux fichiers sur cet écran.
+Vous devez d'abord terminer la copie et ensuite modifier la Phase. <<GlobAdm_Phases.adoc#_globadm_phases_editing,Modifier la définition d`'une Phase>>
+
+. Vérifiez les paramètres de Phases.
++
+Le panneau _Copier les Paramètres de phase_ affiche tous les Paramètres de la Phase qui sera copiée.
+Tous les Paramètres seront copiés vers la nouvelle Phase.
+
+. Cliquez sur le bouton _Copier_ pour copier la Phase. 
++
+Si vous cliquez sur le bouton __Copier__, une nouvelle Phase sera créée avec les propriétés spécifiées: tous les Paramètres de phase affichés seront créés et l'Utilisateur est ramené à l'__Aperçu des Phases__.
++
+Vous pouvez également utiliser le bouton _Aperçu_ pour retourner à l`'__Aperçu des Phases__ sans enregistrer les modifications.
+
+[[_globadm_phases_history]]
+== Afficher l`'historique d`'une Phase 
+(((Phases ,Historique))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Aperçu__.
+
+. Dans le panneau __Aperçu des Phases__, cliquez sur le lien image:icons/history.gif[,15,15] _Historique_ devant la Phase de laquelle vous voulez afficher l'historique.
++
+L'écran _Aperçu de l'Historique de la Phase_ s'affiche.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>. 
+
+. Cliquez sur le bouton _Précédent_ pour retourner à l`'__Aperçu des Phases__.
+
+[[_globadm_phases_importing]]
+== Importer une définition de Phase 
+(((Phases ,Importer))) 
+
+. Dans le contexte de l'Administration globale, sélectionnez __Phases > Importer__.
++
+L`'écran _Importer une Phase_ s`'affiche.
++
+image::GlobAdm-Phases-Import.png[,718,588] 
+
+. Cliquez sur le bouton _Sélectionner le Fichier_ pour choisir la Phase à importer.
++
+Une fenêtre dans laquelle vous pouvez choisir un fichier .jar contenant une Phase préalablement exportée s'affiche. 
++
+Une fois que vous aurez sélectionné un fichier, il sera chargé et l'information contenu dans la Phase sera lue et, ensuite, affichée:
++
+image::GlobAdm-Phases-Import-Success.png[,1008,773] 
+
+. Vérifiez les propriétés de la Phase à importer.
++
+Toutes les propriétés de la Phase seront affichées dans les champs.
+Pour une description détaillée des champs, se référer aux sections <<GlobAdm_Phases.adoc#_globadm_phases_creating,Créer une définition de Phase>> et <<GlobAdm_Phases.adoc#_globadm_phases_editing,Modifier la définition d`'une Phase>>.
++
+Les scripts et les autres fichiers contenus dans la Phase sont affichés dans le champ __Fichiers téléchargés__.
++
+Vérifiez le script "`principal`" dans la liste des fichiers téléchargés.
+Il s`'agit du script qui sera appelé au moment de l`'exécution de la Phase.
++
+Le panneau _Paramètres de la phase importée_ affiche les paramètres définis de la Phase qui sera importée.
+
+. Cliquez sur le bouton _Importer_ pour importer la Phase.
++
+Si vous cliquez sur le bouton __Importer__, la Phase et ses Paramètres sont créés dans la base de données d'IKAN ALM.
+Les scripts et les autres fichiers contenus dans la Phase sont enregistrés dans un fichier .jar et copiés vers l'Emplacement du Catalogue des Phases (tel que défini dans les <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>).
++
+Vous pouvez également utiliser le bouton _Aperçu_ pour retourner à l`'__Aperçu des Phases__ sans importer la Phase.

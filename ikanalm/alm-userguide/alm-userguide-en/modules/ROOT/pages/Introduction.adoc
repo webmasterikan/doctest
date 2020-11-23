@@ -1,0 +1,79 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+:description: IKAN ALM User Guide (English)   
+:revnumber: v5.8
+:revdate: 01.01.2018
+
+[[_desktop_introduction]]
+= IKAN ALM User Guide: Introduction  
+(((IKAN ALM ,Introduction))) 
+
+IKAN ALM offers a uniquely integrated web-based _Application
+Lifecycle Management (ALM)_ platform for both Agile and traditional software development teams.
+It combines Continuous Integration and Lifecycle Management, offering a single point of control and delivering support for build and deploy processes (manually generated or automated), approval processes, release management and software lifecycles.
+
+There are many excellent versioning systems on the market today offering complete versioning control, but lacking an integrated solution for automated builds or deploys, library management and other important ALM tasks.
+Many of their users would like to evolve to a higher level of ALM practices without having to abandon their favorite versioning tool.
+IKAN ALM tightly integrates with leading existing third-party versioning solutions (e.g., Subversion, Git, Microsoft Team Version Control, IBM(R) Rational(R) ClearCase(R), Microsoft(R) Visual SourceSafe(R), Serena(R) PVCS Version Manager, CVS), build and deploy tools (Make, Ant, Gradle, NAnt, Maven2) and issue tracking software (Atlassian(R) JIRA(R), HP Quality Center, CollabNet TeamForge, Trac, Bugzilla,...) and as a consequence offers a unique cross-platform ALM solution. 
+
+Today's short release cycles of both Agile and Traditional software development require the application of techniques like nightly builds, Continuous Integration and unit, regression, performance, ... testing in order to assure the quality and stability of the delivered code.
+By automating these back-end activities, IKAN ALM provides an incrementing refresh frequency which can be incorporated into daily development tasks, eliminating bottlenecks in feedback cycles.
+A tailored lifecycle process including development, testing, quality assurance and production can be easily defined, implemented and enforced, offering a comprehensive framework across all major platforms including Windows, UNIX, Linux and IBM mainframe systems.
+IKAN ALM also supports a stream-based project model allowing project managers to easily add lifecycles to each version of a project, which makes it easy to differentiate between maintenance, "urgency fix" or release build and deploy processes.
+
+IKAN ALM facilitates compliance with legislation like the Sarbanes-Oxley Act, DO-178B and numerous similar state-specific acts, and enhances an organization's ability to conform to popular process standards such as the CMM, ITIL, Six SigmaT.
+It can play an integral part in achieving compliance through automation of the business process, including all software development processes, and by providing full audit trails and reporting capability.
+
+IKAN ALM offers your organization one versatile process and one secure pipeline through which applications are delivered safely and efficiently into production, saving time by eliminating errors while meeting corporate standards, and ensuring Quality Management.
+IKAN ALM continues where versioning systems stop, improving the entire software engineering process, and saving time and money on radical migration efforts.
+
+[[_usethisguide]]
+== How to Use This Guide
+
+The way you use IKAN ALM is determined by the User Category you belong to.
+The table below lists the three IKAN ALM User Categories. 
+
+It is advised to concentrate on the actions matching your IKAN ALM User Category.
+Click a link to switch to the detailed description.
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| User Category
+| Allowed Actions
+
+
+|Regular User
+a|A Regular User can perform the following tasks (depending on his or her ID`'s security settings):
+
+* <<Desktop_ManageDesktop.adoc#_desktop_managedesktop,Managing the Desktop>>
+* Checking the <<Desktop_LevelRequests.adoc#_desktop_lr_buildhistory,Build History Screen>>
+* Approving or rejecting <<Desktop_Approvals.adoc#_desktop_outstandingapprovals,Approvals>>
+* Creating or updating <<Desktop_LevelRequests.adoc#_desktop_levelrequests,Level Requests>>
+* Creating or updating <<Desktop_Packages.adoc#_desktop_packages,Packages>> and <<Desktop_PackageGroups.adoc#_desktop_packagegroups,Package Build Groups>>
+
+|Project Administrator
+a|A User with Project Administrator access rights will typically perform the following tasks:
+
+* Updating <<ProjAdm_Projects.adoc#_projadm_projects,Projects [Project Name]>>
+* Creating or updating <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstreams,Project Streams>>
+* Creating or updating <<ProjAdm_LifeCycles.adoc#_projadm_lifecycles,Lifecycles>>
+* Creating or updating <<ProjAdm_Levels.adoc#_projadm_levels,Levels>>
+* Creating or updating <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>or <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>
+
+For a complete overview of the Project Administration activities, refer to the section <<ProjAdm_Intro.adoc#_projadm_introduction,Project Administration>>.
+
+|Global Administrator
+a|A User with Global Administrator access rights will typically perform the following tasks:
+
+* <<GlobAdm_Project.adoc#_globadm_projectcreate,Projects Creating a Project>>
+* <<GlobAdm_Project.adoc#_globadm_projectclone,Cloning an Existing Project>>
+* Edit <<GlobAdm_System.adoc#_globadm_system_settings,System System Settings>>
+* Creating or updating <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>
+* Creating or updating <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
+* Creating or updating <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* Creating or updating <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
+* Creating or importing <<GlobAdm_Phases.adoc#_globadm_phases,Phases>>
+* Creating or updating <<GlobAdm_Schedules.adoc#_globadm_schedules,Schedules>>
+
+For a complete overview of the Global Administration activities, refer to the section <<GlobAdm_Introduction.adoc#_globadm_introduction,Global Administration>>.
+|===

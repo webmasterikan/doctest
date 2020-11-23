@@ -1,0 +1,857 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_ccommandlineinterface]]
+= Command Line Interface (Optional) 
+(((Command Line Interface))) 
+
+IKAN ALM can be extended with an optional Command Line interface, allowing the creation of Level Requests and the generation of Reports by means of a shell interface instead of the IKAN ALM web application.
+
+Possible uses:
+
+* Manual creation of Level Requests (CLR Command): <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>
+* Manual generation of Reports (Report Command): <<CommandLine.adoc#_pcommandline_report_optionsparameters,Generating Reports by Specifying Options and Parameters>>
+* Creation of Level Requests in an external IDE. This guide describes the integration procedure for <<CommandLine.adoc#_pintegrateikanalminjdeveloper,JDeveloper>> and <<CommandLine.adoc#_pintegrateikanalmineclipse,Eclipse>>. Refer to the indicated sections.
+* Automated creation of Level Requests using a Scripting Tool. A scripting tool is used to define the triggers (e.g., server backup) for Level Request creation. This guide describes the use of an <<CommandLine.adoc#_sautomatecreatinglevelrequestswithant,ANT script>>. Refer to the indicated section.
+
+
+The IKAN ALM Command Line interface can be installed on each client machine requiring its functionality.
+It requires a connection (TCP/IP) to the central IKAN ALM server.
+The connection with the IKAN ALM server is established using XML-RPC.
+
+[[_smanualusagecommandlineinterface]]
+== Manual Usage of the Command Line interface
+
+Refer to the following procedures for detailed information:
+
+* <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>
+* <<CommandLine.adoc#_pcommandline_clr_propertiesfiles,Creating Level Requests Using a Properties File>>
+* <<CommandLine.adoc#_pcommandline_report_optionsparameters,Generating Reports by Specifying Options and Parameters>>
+* <<CommandLine.adoc#_pcommandline_reports_propertiesfile,Generating Reports Using a Properties File>>
+
+[[_pcommandline_clr_optionsparameters]]
+=== Creating Level Requests by Specifying Options and Parameters
+(((Command Line Interface ,Parameters))) 
+
+. Prepare the Level Request creation.
++
+On a Windows platform:
+
+* Open a Command prompt.
+* Browse to the IKAN ALM Command Line working folder. After a standard installation, this is: _C:\alm\commandline_
++
+You may add this location to the PATH Environment variable, so that it becomes accessible through other working directories.
+
++
+On a Unix platform:
+
+* Open a terminal console.
+* Browse to the IKAN ALM Command Line working directory.
++
+After a standard installation, this is: _/opt/ikan/alm/commandline_
++
+You may create a symbolic link to the `alm.sh` script so that it becomes accessible through other working directories.
+. Enter the required Level Request creation instruction.
++
+Format:
++
+__alm -serverhost:$HOSTNAME [-serverport:$PORTNUMBER]
+-user:$USERID -password:$PASSWORD [-secured=true|false] clr parameters__
++
+The following elements are available:
++
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| Element
+| Description
+| Mandatory
+
+|alm
+|This element calls the _alm.cmd_ (Windows) or _alm.sh_ (Linux) file.
+|Yes
+
+|serverhost
+|This element allows defining the DHCP name or IP address of the host running the IKAN ALM Server.
+|Yes
+
+|serverport
+|This element allows defining the port number used to establish the connection to the IKAN ALM Server via XML-RPC.
+
+If this element is not provided, the default port number (20021) will be used.
+|No
+
+|user
+|This element allows defining a User ID with IKAN ALM access rights.
+|Yes
+
+|password
+|This element allows defining the password associated with the User ID used to access IKAN ALM.
+|Yes
+
+|secured
+|This element allows determining whether an encrypted connection must be used or not.
+
+If the IKAN ALM Server is using an encrypted connection, set the _secured_ element to __true__:
+
+_-secured=true_
+
+If the IKAN ALM Server is not using an encrypted connection, set the _secured_ element to _false_ or omit the _secured_ parameter out.
+|No
+
+|clr
+|This command stands for _Create Level Request_.
+|Yes
+
+|parameters
+|The Level Request creation parameters are explained in the following step.
+|Yes
+|===
+. Define the Level Request creation parameters.
++
+Format:
++
+__clr -project:[project name] [-projectstream:[build
+prefix[-build suffix]]] [-package:[package name]] -level:[level name]
+[-description:[description]] [-buildnumber:[buildnumber]] [-tag:[vcr
+tag]] [-redeliver=true|false] [-startdate:[startdate]] [-paramfile:[parameter
+file]]__
++
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| Parameter
+| Description
+| Mandatory
+
+|project
+|This parameter allows defining the Project for which you create a Level Request.
+
+Use the Project name as defined in IKAN ALM.
+|Yes
+
+|projectstream
+|This parameter allows defining the Project Stream for which you create a Level Request.
+
+Use the Build Prefix (and Build Suffix) as defined in IKAN ALM to identify the Project Stream to create a Level Request for.
+
+If this parameter is not provided, the Level Request will be created for the Head Project Stream.
+|No
+
+|package
+|This parameter allows defining the name of the Package for which a Level Request must be created.
+|Yes (only for Package-based projects)
+
+|level
+|This parameter allows defining the Level name for which you create a Level Request.
+
+Use the Level Name as defined in IKAN ALM.
+|Yes
+
+|description
+|This parameter allows defining the description of the Level Request.
+|No
+
+|tag
+|This parameter allows defining the Tag with which the Build will be tagged in the VCR.
+Only has effect on Level Requests of a Build Level If omitted, a tag name will be generated using the Tag Template of the Project Stream.
+|No
+
+|redeliver
+|This parameter allows redelivering previously delivered Build Results on Test and Production Levels.
+
+By default, this parameter is set to __false__: if no Level Request is available on the previous Level in the Lifecycle with a higher build number, the current active Level Request will NOT be redelivered via the commandline.
+
+In case you want to allow a redeliver, you must explicitly set the _redeliver_ parameter to __true__.
+|No
+
+|startdate
+|This parameter allows defining the requested starting date and time of the Level Request.
+The accepted format is __dd/MM/yyyy HH:mm__.
+Only has effect on Level Requests of a Test or Production Level.
+If omitted, the Level Request will run as soon as possible.
+|No
+
+|paramfile
+|This parameter allows defining the name of the property file containing Build and Deploy Parameters in key=value format.
+|No
+|===
++
+Note that you do not need to define the Level Request Type.
+The Level Request Type is determined automatically:
+
+** For Build Levels with a Schedule, a Force Build Level Request will be created.
+** For Build Levels without a Schedule, a Request Build Level Request will be created.
+** For Test and Production Levels, a Deliver Level Request will be created, which will deliver the latest successful Level Request on the previous Level in the Lifecycle (whereas in the web application, you can select the Build to be delivered).
+. Once you have entered the complete command, press _Return_.
++
+Result:
+
+* If the Level Request is created successfully, the following screen is displayed:
++
+image::CommandLine-LRCreatedSuccessfully.jpg[,539,274] 
++
+
+[WARNING]
+--
+These messages only indicate that the Level Request was _created_ successfully.
+Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>>in the web application to verify if the Level Request was _executed_ successfully as well.
+--
+
+* If the Level Request cannot be created, because there is no connection with the IKAN ALM Server, the following screen is displayed:
++
+image::CommandLine-ServerConnectionProblem.jpg[,539,282] 
++
+* If the user entered an unknown command, the following screen is displayed:
++
+image::CommandLine-UnknownCommand.jpg[,540,190] 
++
+* If the user entered unknown or incorrect command options, the screen similar to the following is displayed: 
++
+image::CommandLine-UnknownCommandOption.jpg[,541,275] 
++
+Similar error messages are provided for unknown Project or Package names and incorrect User ID/Password combinations.
+* If the Level Request cannot be created because of pending Level Requests for the Level, the following screen is displayed:
++
+image::CommandLine-PendingRequests.jpg[,539,274] 
++
+Similar error messages are shown if there is no suitable Build result to be delivered, the Level is locked, the Project Stream is locked or if there is an authorization error.
+
+[[_pcommandline_clr_propertiesfiles]]
+=== Creating Level Requests Using a Properties File
+
+It is possible to save frequently used settings in a Properties file, so that you do not have to enter the complete Level Request creation parameters.
+After a standard installation, one such properties file, called _clr.properties_ is available in the Command Line installation folder.
+
+Open the file in a text editor to display its content:
+
+
+image::CommandLine-CLRPropertiesfile.jpg[,578,606] 
+
+You can edit this standard file so that the settings match your requirements.
+Refer to the <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>for a description of the options and parameters.
+You can also create any number of specific properties files by copying the standard file, editing the copies and saving them under logical names for later usage
+
+. Prepare the Level Request creation.
++
+On a Windows platform:
+
+* Open a Command prompt.
+* Browse to the IKAN ALM Command Line working folder. After a standard installation, this is: _C:\alm\commandline_
++
+You may add this location to the PATH Environment variable, so that it becomes accessible through other working directories.
+
++
+On a Unix platform:
+
+* Open a terminal console.
+* Browse to the IKAN ALM Command Line working directory. After a standard installation, this is: _/opt/ikan/alm/commandline_
++
+You may create a symbolic link to the `alm.sh` script so that it becomes accessible through other working directories.
+
+. Make sure that the properties file to be used is available and that the settings match the requirements.
++
+If not, create the properties file and/or edit the settings with a text editor.
+. Create the Level Request by entering a command in the following format:
++
+__alm clr -propertyfile:$PROPERTYFILENAME [-options]
+[-parameters]__
++
+The following elements are available:
++
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| Element
+| Description
+| Mandatory
+
+|alm
+|This element calls the __alm.cmd__ (Windows) or __alm.sh__ (Linux) file.
+|Yes
+
+|clr
+|This element indicates that you want to create a Level Request.
+|Yes
+
+|propertyfile
+|This element allows selecting the properties file that must be used to create the Level Request.
+|Yes
+
+|options or parameters
+|Any option or parameter defined after the properties file _overrides_ the setting in the selected properties file.
+|No
+|===
+. Once you have entered the complete command, press _Return_.
++
+Result:
+
+* If the Level Request is created successfully, the following screen is displayed:
++
+image::CommandLine-LRCreatedSuccessfully.jpg[,541,274] 
++
+
+[WARNING]
+--
+These messages only indicate that the Level Request was _created_ successfully.
+Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>>in the web application to verify if the Level Request was _executed_ successfully as well.
+--
+
+
+* If the Level Request cannot be created, because there is no connection with the IKAN ALM Server, the following screen is displayed:
++
+image::CommandLine-ServerConnectionProblem.jpg[,540,285] 
++
+* If the user entered an unknown command, the following screen is displayed:
++
+image::CommandLine-UnknownCommand.jpg[,540,190] 
++
+* If the user entered unknown or incorrect command options, the screen similar to the following is displayed: 
++
+image::CommandLine-UnknownCommandOption.jpg[,540,274] 
++
+Similar error messages are provided for unknown Project names and incorrect User ID/Password combinations.
+* If the Level Request cannot be created because of pending Level Requests for the Level, the following screen is displayed:
++
+image::CommandLine-PendingRequests.jpg[,540,274] 
++
+Similar error messages are shown if there is no suitable Build result to be delivered, the Level is locked, the Project Stream is locked or if there is an authorization error.
+
+[[_pcommandline_report_optionsparameters]]
+=== Generating Reports by Specifying Options and Parameters
+ 
+. Prepare the Report generation.
++
+On a Windows platform:
+
+* Open a Command prompt.
+* Browse to the IKAN ALM Command Line working folder.
++
+After a standard installation, this is: _C:\alm\commandline_
++
+You may add this location to the PATH Environment variable, so that it becomes accessible through other working directories.
+
++
+On a Unix platform:
+
+* Open a terminal console.
+* Browse to the IKAN ALM Command Line working directory.
++
+After a standard installation, this is: _/opt/ikan/alm/commandline_
++
+You may create a symbolic link to the `alm.sh` script so that it becomes accessible through other working directories.
+
+. Enter the required Report generation instruction.
++
+Format:
++
+__alm -serverhost:$HOSTNAME [-serverport:$PORTNUMBER]
+-user:$USERID -password:$PASSWORD [-secured=true|false] report PARAMETERS__
++
+The following elements are available:
++
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| Element
+| Description
+| Mandatory
+
+|alm
+|This element calls the _alm.cmd __(Windows) or__ alm.sh_ (Linux) file.
+|Yes
+
+|serverhost
+|This element allows defining the DHCP name or IP address of the host running the IKAN ALM Server.
+|Yes
+
+|serverport
+|This element allows defining the port number used to establish the connection to the IKAN ALM Server via XML-RPC.
+
+If this element is not provided, the default port number (20021) will be used.
+|No
+
+|user
+|This element allows defining a User ID with IKAN ALM access rights.
+|Yes
+
+|password
+|This element allows defining the password associated with the User ID used to access IKAN ALM.
+|Yes
+
+|secured
+|This element allows determining whether an encrypted connection must be used or not.
+
+If the IKAN ALM Server is using an encrypted connection, set the _secured __element to__ true_:
+
+_-secured=true_
+
+If the IKAN ALM Server is not using an encrypted connection, set the _secured_ element to _false_ or omit the _secured_ parameter.
+|No
+
+|report
+|This command allows generating Reports.
+|Yes
+
+|PARAMETERS
+|The Report generation parameters are explained in the following step.
+|Yes
+|===
+
+. Define the Report generation parameters.
++
+Format:
++
+__report -design:$REPORTDESIGNFILE [-dest:$DESTINATIONFILE]
+-format:$FORMAT [-lang:$LANGUAGE] [-max:MAXRESULT] [-filter:$SEARCHCRITERIAFILE]
+[-group:[$GROUPINGVALUE]] [-order:[$ORDERINGVALUE]]__
++
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| Parameter
+| Description
+| Mandatory
+
+|design
+|This parameter allows selecting the required Jasper Reports design file (file extension is __$$.$$jrxml__). After a standard installation, the files are located in the directory __IKAN ALM_HOME/commandline/classes/reports/design__.
+|Yes
+
+|dest
+|This parameter allows defining the destination file name for the Report.
+
+Do not provide the extension, as IKAN ALM will append the format indication as extension.
+
+If this destination name is not provided, the Report will get a default name (__levelrequestoverview_[format].[format]__) and it will be saved at the default location (__IKAN ALM_HOME/commandline/classes/reports/generated_reports__).
+|No
+
+|format
+a|This parameter allows defining the Report format.
+The following formats are allowed:
+
+* pdf
+* htm
+* xml
+* csv
+* rtf
+* txt
+* xls
+
+|Yes
+
+|lang
+a|This parameter allows defining the Report language.
+The following values are allowed:
+
+* en (English)
+* fr (French)
+* de (German)
+
+If the language parameter is omitted, the Report will be generated in English.
+|No
+
+|max
+|This parameter allows defining the maximum number of Level Requests to be included in the Report.
+
+If more Level Requests are available than the defined maximum, only the most recent Level Requests will be included in the Report.
+|No
+
+|filter
+|This parameter allows selecting a property file containing search criteria.
+Only Level Requests matching all defined criteria will be included in the Report.
+
+After a standard installation, one such property file, called _search.properties_ is available in the Command Line installation directory.
+
+You can edit this standard file so that the settings match your requirements.
+See the description in the following step.
+
+You can also create any number of specific search criteria properties files by copying the standard file, editing the copies and saving them under logical names for later usage.
+|No
+
+|group
+a|This parameter allows defining how the reported Level Requests should be grouped together.
+
+The following values are allowed:
+
+* projectname : group by Project Name
+* levelname : group by Level Name
+
+If this parameter is omitted or left empty, no grouping of Level Requests will occur.
+|No
+
+|order
+a|This parameter allows defining how the reported Level Requests should be ordered.
+
+The following values are allowed:
+
+* asc : order ascending (=default)
+* desc : order descending
+
+|No
+|===
+
+. If required, edit the search criteria properties file in a text editor.
++
+The file has the following structure:
++
+image::CommandLine-SearchCriteriaPropertiesFile.jpg[,636,367] 
++
+
+The following selection criteria are available:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Criteria
+| Description
+
+|Project name
+|Property: `search.project.name`
+
+Enter a Project name, if you want to limit the Report to Level Requests of that Project.
+
+|Package name
+|Property: `search.package.name`
+
+Enter a Package name, if you want to restrict the Report to Level Requests for that Package.
+
+|Search hidden packages
+a|Property: `search.package.hidden`
+
+Enter one of the possible values, if you want to limit the Report to Level Requests for hidden Packages:
+
+* yes = show Level Requests for hidden (archived) Packages or Level Requests having no Packages associated
+* no = show Level Requests for visible (non-archived) Packages or Level Requests having no Packages associated
+* all = no restriction regarding the Package archived status
+
+|Level Request Status code
+a|Property: `search.levelrequest.status`
+
+Enter one of the possible status codes, if you want to limit the Report to Level Requests with that status:
+
+* 0 = unknown
+* 1 = awaiting requested date/time
+* 2 = awaiting Approval
+* 3 = rejected
+* 4 = run
+* 5 = fail
+* 6 = success
+* 7 = warning
+* 8 = cancelled
+* 9 = aborting
+* 10 = aborted
+
+|Level Name
+|Property: `search.level.name`
+
+Enter the name of the Level, if you want to limit the Report to Level Requests for that Level.
+
+|Level Type
+a|Property: `search.level.name`
+
+Enter one of the possible Level Types, if you want to limit the Report to Level Requests pertaining to that Level Type:
+
+* 0 = Build
+* 1 = Test
+* 2 = Production
+
+|Level Request Start Time interval
+|Properties:
+
+`search.levelrequest.startdatetime.from`
+
+`search.levelrequest.startdatetime.to`
+
+Enter the start and end timestamp of the _Level
+Request Start Time_ interval, if you want to limit the Report to Level Requests having started within this interval.
+
+|Level Request End Time interval
+|Properties:
+
+`search.levelrequest.enddatetime.from`
+
+`search.levelrequest.enddatetime.to`
+
+Enter the start and end timestamp of the__ Level
+Request End Time__ interval, if you want to limit the Report to Level Requests having ended within this interval.
+
+|Level Request Request Time interval
+|Properties:
+
+`search.levelrequest.requestdatetime.from`
+
+`search.levelrequest.requestdatetime.to`
+
+Enter the start and end timestamp of the _Level
+Request Request Time_ interval, if you want to limit the Report to Level Requests requested within this interval.
+
+|Requester Name
+|Property: `search.username`
+
+Enter the name of the Requester, if you want to limit the Report to Level Requests requested by a specific User.
+
+|Level Request Action Type
+a|Property: `search.levelrequest.actiontype`
+
+Enter one of the possible Level Request Action Types, if you want to limit the Report to Level Requests with this Action Type:
+
+* 0 = Build initiated by Scheduler
+* 1 = Force Build
+* 2 = Request Build
+* 3 = Deliver Build
+* 4 = Rollback Build
+* 5 = Dependency Build
+* 6 = Redeliver Build
+
+|Level Request Type
+a|Property: `search.levelrequest.type`
+
+Enter one of the possible Level Request Types, if you want to limit the Report to Level Requests with this Type:
+
+* 0 = Build based on latest code
+* 1 = Builds based on tagged code
+* 2 = Builds and Deploys on latest code
+* 3 = Builds and Deploys on tagged code
+* 4 = Deploys of archived Build
+* 5 = No Builds or Deploys
+
+|VCR Tag
+|Property: `search.vcrtag`
+
+Enter a VCR tag, if you want to limit the Report to Level Requests pertaining to that VCR Tag.
+
+|Project Stream Status
+a|Property: `search.projectstream.status`
+
+Enter one of the possible Project Stream Status indications, if you want to limit the Report to Level Requests with this Project Stream Status:
+
+* 0 = under construction
+* 1 = planning
+* 2 = development
+* 3 = testing
+* 4 = stable
+* 5 = general available
+* 6 = frozen
+* 7 = closed
+
+|Project Stream Prefix
+|Property: `search.projectstream.buildprefix`
+
+Enter a Project Stream Prefix, if you want to limit the Report to Level Requests pertaining to that Project Stream Prefix.
+
+|Project Stream Build Suffix
+|Property: `search.projectstream.buildsuffix`
+
+Enter a Project Stream Build Suffix, if you want to limit the Report to Level Requests pertaining to that Project Stream Build Suffix.
+
+|Search Hidden Project Stream
+a|Property: `search.projectstream.hidden`
+
+Enter one of the possible values, if you want to limit the Report to Level Requests for hidden Project Streams:
+
+* yes = show only hidden project streams
+* no = do not show hidden project streams (default value)
+* all = show all project streams
+
+|===
++
+
+[NOTE]
+====
+
+Do not forget to remove the # sign in order to activate a search criterion.
+====
+
+ . Once you have entered the complete command, press __Return__.
++
+The report will be generated.
+
+[[_pcommandline_reports_propertiesfile]]
+=== Generating Reports Using a Properties File
+
+It is possible to save frequently used settings in a Properties file, so that you do not have to enter the complete Report generation parameters.
+After a standard installation, one such properties file, called _report.properties_ is available in the Command Line installation folder.
+
+Open the file in a text editor to display its content:
+
+
+image::CommandLine-ReportPropertiesfile.jpg[,597,470] 
+
+You can edit this standard file so that the settings match your requirements.
+Refer to the section <<CommandLine.adoc#_pcommandline_clr_optionsparameters,Creating Level Requests by Specifying Options and Parameters>>for a description of the options and parameters.
+You can also create any number of specific properties files by copying the standard file, editing the copies and saving them under logical names for later usage
+
+. Prepare the Report generation.
++
+On a Windows platform:
+
+* Open a Command prompt.
+* Browse to the IKAN ALM Command Line working folder. After a standard installation, this is: _C:\alm\commandline_
++
+You may add this location to the PATH Environment variable, so that it becomes accessible through other working directories.
+
++
+On a Unix platform:
+
+* Open a terminal console.
+* Browse to the IKAN ALM Command Line working directory. After a standard installation, this is: _/opt/ikan/alm/commandline_
++
+You may create a symbolic link to the `alm.sh` script so that it becomes accessible through other working directories.
+
+. Make sure that the properties file to be used is available and that the settings match the requirements.
++
+If not, create the properties file and/or edit the settings with a text editor.
+
+. Generate the Report by entering a command in the following format:
++
+__alm report -propertyfile:[$PROPERTYFILENAME]
+[-options] [-parameters]__
++
+The following elements are available:
++
+
+[cols="1,1,1", frame="topbot", options="header"]
+|===
+| Element
+| Description
+| Mandatory
+
+|alm
+|This element calls the __alm.cmd __(Windows) or _alm.sh_ (Linux) file.
+|Yes
+
+|report
+|This element indicates you want to generate a Report.
+|Yes
+
+|propertyfile
+|This element allows selecting the properties file that must be used to generate the Report.
+|Yes
+
+|options or parameters
+|Any option or parameter defined after the properties file _overrides_ the setting in the selected properties file.
+|No
+|===
+
+. Once you have entered the complete command, press __Return__.
++
+The Report will be generated.
+
+
+[[_sintegratingikanalminide]]
+== Integrating IKAN ALM in an External IDE
+
+Refer to the following procedures for detailed information:
+
+* <<CommandLine.adoc#_pintegrateikanalminjdeveloper,Integrating IKAN ALM in JDeveloper>>
+* <<CommandLine.adoc#_pintegrateikanalmineclipse,Integrating IKAN ALM in Eclipse>>
+
+[[_pintegrateikanalminjdeveloper]]
+=== Integrating IKAN ALM in JDeveloper
+
+This procedure describes how to set up IKAN ALM as an external tool in JDeveloper, so that you can create Level Requests (Forced Build, Requested Build or Deliver Build) from within this IDE
+
+. On the JDeveloper main menu, select _Tools | External Tools..._
++
+The following dialog is displayed:
++
+image::CommandLine-JDeveloperExternalToolsDialog.jpg[,418,294] 
++
+. Click _Add..._
++
+The following dialog is displayed:
++
+image::CommandLine-JDeveloperCreateExternalToolsStep1DialogBlank.jpg[,511,340] 
++
+. Provide the correct parameters to create a Level Request on the wanted level:
++
+image::CommandLine-JDeveloperCreateExternalToolsStep1Dialog.jpg[,511,340] 
++
+In the example above, the options are given to create a Level Request on the _CONTBUILD_ Level in the _DEMOCVS_ Project.
+. Click __Next__.
++
+The following dialog is displayed:
++
+image::CommandLine-JDeveloperCreateExternalToolsStep2Dialog.jpg[,511,341] 
++
+. Provide the display properties and click __Next__.
++
+The following dialog is displayed:
++
+image::CommandLine-JDeveloperCreateExternalToolsStep3Dialog.jpg[,508,339] 
++
+. Specify where you want to integrate this new tool and click __Next__.
++
+The following dialog is displayed:
++
+image::CommandLine-JDeveloperCreateExternalToolsStep4Dialog.jpg[,511,341] 
++
+. Specify the availability of the external tool.
++
+In the example above, it was specified that the external tool will be integrated in the shortcut menu, if a java project is selected.
+
+. Select __Finish__.
++
+Result:
++
+You can now create Level Requests when selecting a java project in JDeveloper.
+The output of the IKAN ALM Command Line will be visible in a message box:
++
+image::CommandLine-JDeveloperResult.jpg[,540,347] 
+
+[[_pintegrateikanalmineclipse]]
+=== Integrating IKAN ALM in Eclipse
+
+This procedure describes how to set up IKAN ALM as an external tool in Eclipse, so that you can create Level Requests (Forced Build, Requested Build or Deliver Build) from within this IDE
+
+. On the Eclipse main menu, select _Run | External Tools Configuration..._
++
+The following dialog is displayed:
++
+image::CommandLine-EclipseExternalToolsDialogBlank.jpg[,511,461] 
++
+. Select the _New launch configuration_ icon.
++
+The following dialog is displayed:
++
+image::CommandLine-EclipseExternalToolsDialog.jpg[,511,461] 
++
+. Provide the correct parameters to create a Level Request on the wanted level:
++
+In the example above, the options are given to create a Level Request on the _CONTBUILD_ Level in the _DEMOCVS_ Project.
+
+. Click __Run__.
++
+The external tools will be tested and saved.
++
+The output from the command is visible in an Eclipse console:
++
+image::CommandLine-EclipseResult.jpg[,770,366] 
+
+
+[[_sautomatecreatinglevelrequestswithant]]
+== Automating the Creation of Level Requests Using an ANT script
+
+This section provides a sample ANT script that
+
+* Creates an Level Request using the Command Line interface
+* Reports the status of this action
+
+
+If you want to use this ANT Script yourself, customize it by:
+
+* Adapting the values for the IKAN ALM Command Line options (values for serverhost, user, password, etc.)
+* Saving it as _build.xml_ in the IKAN ALM_COMMANDLINE root directory
+* Launching it via the standard ANT command.
+
+*Sample script:*
+
+image::CommandLine-SampleANTScript.jpg[,540,487] 
+
+*Output on success:*
+
+image::CommandLine-ANTScriptExecSuccess.jpg[,540,284] 
+
+*Output on failure:*
+
+image::CommandLine-ANTScriptExecFailure.jpg[,540,320] 

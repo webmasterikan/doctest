@@ -1,0 +1,169 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+= Predefined Build Parameters 
+(((Predefined Parameters)))  (((Predefined Parameters ,Build)))  (((Build Parameters ,Predefined Build Parameters))) 
+
+The following table provides an overview of the predefined Build Parameters:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Parameter
+| Description
+
+|alm.build.environmentName
+|
+This parameter provides the name of the Build Environment where the Build Script is running.
+
+|alm.build.filename
+|This parameter provides the name of the Build File that will be stored in the Build Archive Location. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
+
+|alm.build.machineName
+|This parameter provides the name of the Machine where the Build Script is running.
+
+|alm.build.number
+|This parameter provides the unique Build Number.
+This is a sequential number that is incremented by IKAN ALM when a Build Level Request is created.
+
+|alm.build.oid
+|This parameter provides the unique identifier of the current Build as used to store the build information in the database.
+
+|alm.build.startDateTime
+a|This parameter provides the start date and time for the Build (i.e., the timestamp indicating the start of the Build Script).
+
+Format is date.time.
+The date is in the format used by the server hosting IKAN ALM:
+
+* _YYYY/MM/DD_ for Europe
+* _MM/DD/YYYY_ for the USA
+
+|alm.levelRequest.actionType
+a|This parameter provides the Level Request type.
+Possible types:
+
+* Scheduled Build
+* Forced Build
+* Requested Build
+* Deliver Build
+* Rollback Build
+* Dependency Build
+
+|alm.levelRequest.buildType
+|This parameter provides the Build Type of this Level Request.
+Possible types:
+
+* Full Build
+* Partial Build
+* Production-based Partial Build
+* Tag-based Build
+
+|alm.levelRequest.levelName
+|This parameter provides the name of the Level where the Build is executed.
+
+|alm.levelRequest.oid
+|This parameter provides the unique identifier of the current Level Request.
+
+|alm.levelRequest.requester
+|Only available if there is a Requester User.
+
+This parameter provides the name of the Requester.
+
+|alm.levelRequest.startDateTime
+|This parameter provides the start date and time of the current Level Request.
+Format is __date.time__.
+The date is in the format used by the server hosting IKAN ALM:
+
+* _YYYY/MM/DD_ for Europe
+* _MM/DD/YYYY_ for the USA
+
+|alm.levelRequest.vcrTag
+|This parameter provides the Tag used during the current build to tag the sources in the VCR.
+
+|alm.package.oid
+|Only available in case of a Package.
+
+This parameter provides the unique number of the Package.
+
+|alm.previous.build.filename
+|This parameter provides the name of the last successfully zipped Build File, i.e., the result of the previous Build:
+
+e.g., _DEMOCVS_B_b_1_test_b2_CONTBUILD.zip_
+
+This is the last build file for project DEMOCVS.
+
+|alm.previous.build.number
+|This parameter provides the Build Number of the previous successful Build on this Level.
+
+|alm.previous.levelRequest.vcrTag
+|This parameter provides the VCR tag of the previous Level Request on this Level.
+
+|alm.project.buildToolTypeName
+a|This parameter provides the Build Tool type.
+Possible values:
+
+* ANT
+* GRADLE
+* NANT
+* MAVEN2
+
+|alm.project.deployToolTypeName
+a|This parameter provides the Deploy Tool type.
+Possible values:
+
+* ANT
+* GRADLE
+* NANT
+* MAVEN2
+
+|alm.project.description
+|This parameter provides the description of the IKAN ALM Project.
+
+|alm.project.name
+|This parameter provides the IKAN ALM Project name.
+This name can be different from the Project name in the VCR.
+
+|alm.package.name
+|This parameter is only available in Package-based Projects.
+It provides the name of the Package associated with the Level Request.
+
+|alm.project.vcrName
+|This parameter provides the name of the VCR (as defined in the Global Administration) to which this Project is linked.
+
+|alm.project.vcrProjectName
+|This parameter provides the name of the Project as defined in the VCR.
+This name can be different from the IKAN ALM Project name
+
+|alm.projectStream.buildPrefix
+|This parameter provides the Build Prefix defined in the Project Stream definition.
+
+|alm.projectStream.buildSuffix
+|This parameter provides the Build Suffix as defined for the Project Stream (no entry for a Head Project Stream).
+
+|alm.projectStream.description
+|This parameter provides the description defined for the Project Stream.
+
+|alm.projectStream.type
+a|This parameter provides Project Stream type of the project:
+
+* H=Head type
+* B=Branch type
+
+|alm.projectStream.vcrBranchId
+|This parameter provides the Branch ID in the VCR, defined in the IKAN ALM Project Stream, in case of a Branch Project Stream.
+
+|source
+|This parameter provides the name of the Source Location as defined for the current Build Environment.
+The name will be expanded with the number of the _alm.build.oid_ and the name of the project as known within the VCR (__alm.project.vcrProjectName__)
+
+|sourceroot
+|This parameter provides the name of the source location as defined for the current Build Environment.
+The name will be expanded with the number of the _alm.build.oid._
+
+This property will only be set if the current project depends on another project.
+The named directory in this property will contain all the sources from the parent project.
+
+|target
+|This parameter provides the name of the target location as defined in the current build environment definition.
+The name will be expanded with the number of the __alm.build.oid__.
+|===
+

@@ -1,0 +1,43 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_introduction]]
+= Administration globale 
+(((Administration globale))) 
+
+La page d'accueil d`'Administration globale affiche l`'aperçu des toutes les activités qui peuvent aussi être sélectionnées à partir du menu principal.
+
+Les Utilisateurs ayant des droits d`'accès d`'Administrateur global peuvent exécuter les tâches suivantes.
+
+
+image::GlobAdmin-LandingPage.png[,940,428] 
+
+Pour les Utilisateurs n`'ayant pas les droits d`'accès d`'Administrateur global, le nombre de tâches disponibles sera limité.
+
+
+image::GlobAdmin-LandingPage-User.png[,942,412] 
+
+
+[NOTE]
+====
+Chacune des sections sur la page d'accueil correspond à un des sous-menus d`'Administration globale.
+Seul le sous-menu _Suivi
+de l`'Historique_ a été incorporé à la section _Autres
+activités_ sur la page d'accueil.
+====
+
+Se référer aux sections suivantes pour plus d`'informations:
+
+* <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+* <<GlobAdm_HistoryLog.adoc#_globadm_historylog,Suivi de l`'Historique>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Utilisateurs>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,Groupes d`'utilisateurs>>
+* <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporteurs>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Référentiels de contrôle de version>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Outils de script>>
+* <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking,Suivi des Incidents>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedules,Plans horaires>>
+* <<GlobAdm_Misc.adoc#_globadm_miscellaneous,Autres activités>>
+* <<GlobAdm_Project.adoc#_globadm_project,Projet>>
+* <<GlobAdm_Phases.adoc#_globadm_phases,Phases>>

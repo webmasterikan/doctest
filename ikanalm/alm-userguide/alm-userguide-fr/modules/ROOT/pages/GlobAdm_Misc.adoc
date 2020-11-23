@@ -1,0 +1,70 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_miscellaneous]]
+= Autres activités 
+(((Administration globale ,Autres Activités)))  (((Autres activités))) 
+
+[NOTE]
+====
+L`'option _Autres activités_ n`'est disponible que si vous disposez de droits d`'accès d`'Administrateur global dans IKAN ALM.
+====
+
+Pour des informations plus détaillées concernant les options du menu __Autres activités__, se référer aux procédures suivantes:
+
+* <<GlobAdm_Misc.adoc#_globadm_notifyusers,Notification des utilisateurs>>
+
+[[_globadm_notifyusers]]
+== Notification des utilisateurs
+(((Notification des utilisateurs)))  (((Autres Activités ,Notification des utilisateurs))) 
+
+Cette option permet d`'envoyer, à partir de l`'application IKAN ALM, des messages électroniques à d`'autres Utilisateurs d`'IKAN ALM.
+
+Ceci permet, par exemple, d`'envoyer un avertissement aux Utilisateurs connectés, ou de notifier des Utilisateurs appartenant à un groupe d`'utilisateurs spécifique que certains Paramètres ont été modifiés.
+C`'est aussi un moyen pour tester les Paramètres courrier spécifiés dans l`'onglet _Courrier_ des Paramètres système.
+
+. Dans le contexte de l'Administration globale, sélectionnez _Autres activités > Notifier les Utilisateurs IKAN ALM_.
++
+L`'écran suivant s`'affiche:
++
+image::GlobAdmin-Miscellaneous-NotifyUsers.png[,845,469] 
++
+Les champs suivants sont disponibles:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|A/au
+|Sélectionnez si vous voulez envoyer votre message à tous les Utilisateurs connectés à IKAN ALM, à un Groupe d`'utilisateurs sélectionné ou à tous les Utilisateurs d`'IKAN ALM.
+
+|Groupe d`'utilisateurs
+|Si vous envoyez votre message à un Groupe d`'utilisateurs sélectionné, sélectionnez le Groupe d`'utilisateurs requis à partir du menu déroulant.
+
+Dans les autres cas, laissez ce champ vide.
+
+|Sujet
+|Saisissez dans ce champ le sujet du message.
+
+|Contenu
+|Saisissez dans ce champ le contenu du message.
+|===
+
+. Faites les sélections nécessaires et saisissez votre message. Ensuite cliquez sur le bouton __Envoyer un message__.
++
+Les Utilisateurs d`'IKAN ALM correspondant à votre sélection recevront le message.
+L`'expéditeur SMTP défini dans les Paramètres Système sera mentionné comme Expéditeur du message.
++
+Vous pouvez également cliquer sur le bouton _Réinitialiser_ pour nettoyer les champs.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_Sujets apparentés:_
+
+* <<GlobAdm_System.adoc#_ssystemsettings_tabmail,Courrier>>
+
+|===

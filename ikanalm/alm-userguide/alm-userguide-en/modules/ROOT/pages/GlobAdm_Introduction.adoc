@@ -1,0 +1,43 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_introduction]]
+= Global Administration 
+(((Global Administration))) 
+
+On the Global Administration landing page, you will find an overview of all tasks which can also be called via the Global Administration menu.
+
+
+. On the Main Menu, click the _Global Administration_ image:icons/icon_GlobalAdmin_13x13.png[,13,13]  icon.
++
+In the remainder of this document, we will refer to this section of the interface as the "`Global Administration context`". 
+. Users with Global Admin Access Rights can perform the following tasks:
++
+image::GlobAdmin-LandingPage.png[,941,424] 
++
+. For Users without Global Admin Access Rights, the number of available tasks on the landing pages will be limited.
++
+image::GlobAdmin-LandingPage-User.png[,943,416] 
++
+
+[NOTE]
+====
+Each of the sections on the landing page corresponds with a Submenu item under Global Administration, except for the _History
+Log_ which has been added to the _Miscellaneous_ section on the landing page.
+====
++
+Refer to the following sections for detailed information:
+
+* <<GlobAdm_System.adoc#_globadm_system,System>>
+* <<GlobAdm_HistoryLog.adoc#_globadm_historylog,History Log>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_users,Users and Groups Users>>
+* <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_groups,User Groups>>
+* <<GlobAdm_Machines.adoc#_globadm_machines,Machines>>
+* <<GlobAdm_Transporters.adoc#_globadm_transporters,Transporters>>
+* <<GlobAdm_VCR.adoc#_globadm_vcr,Version Control Repositories>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
+* <<GlobAdm_IssueTracking.adoc#_globadm_issuetracking,Issue Tracking>>
+* <<GlobAdm_Schedules.adoc#_globadm_schedules,Schedules>>
+* <<GlobAdm_Misc.adoc#_globadm_miscellaneous,Miscellaneous>>
+* <<GlobAdm_Phases.adoc#_globadm_phases,Phases>>
+* <<GlobAdm_Project.adoc#_globadm_project,Projects>>

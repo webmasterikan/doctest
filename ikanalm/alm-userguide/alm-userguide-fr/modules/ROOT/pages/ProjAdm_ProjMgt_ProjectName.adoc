@@ -1,0 +1,12 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_projadmin_projectsoverview_viewing]]
+= [Dénomination du Projet] 
+(((Administration des projets ,Dénomination du Projet)))  (((Options relatives à l’administration des projets ,Dénomination du Projet)))  (((Dénomination du Projet))) 
+
+La première option du sous-menu de l'Administration des projets indique le nom du Projet sélectionné.
+
+Sélectionnez cette option pour retourner à l`'écran __Informations sur le Projet__. 
+
+Pour plus d`'informations, se référer à la section <<ProjAdm_ProjMgt_ProjectName.adoc#_projadmin_projectsoverview_viewing,Afficher les paramètres d’un projet>>.

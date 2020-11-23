@@ -1,0 +1,368 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_desktop_outstandingapprovalsscreen]]
+[[_desktop_outstandingapprovals]]
+= Approbations 
+(((Bureau ,Approbations)))  (((Approbations)))  (((Approbations))) 
+
+Il existe deux types d`'Approbations qui peuvent être définies pour des Niveaux de Test ou de Production (<<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Les approbations>>):
+
+* une _Pré-Approbation_ qui est créée au moment de délivrer la Requête de Niveau sur un Niveau, par exemple, avant l`'exécution de la Requête de Niveau.
+* une _Post-approbation_ qui est créée après l`'exécution de la Requête de Niveau permettant ainsi de vérifier si les actions sur le Niveau et/ou sur les Environnements ont réussi.
+
+
+Une Pré-Approbation consiste en une vérification avant d`'exécuter une Requête de Niveau sur un Niveau de Test ou de Production.
+Elle ajoute une condition supplémentaire à son exécution: non seulement la date et l`'heure requis doivent être atteintes, mais aussi la Pré-Approbation doit être accordée par un Utilisateur IKAN ALM.
+Tant que ces deux conditions ne sont pas remplies, la Requête de Niveau ne sera pas démarrée.
+Si une Pré-Approbation est rejetée, la Requête de Niveau ne sera jamais démarrée. 
+
+Une Post-Approbation consiste en une vérification après l`'exécution de la Requête de Niveau sur un Niveau de Test ou de Production.
+Elle ajoute une condition supplémentaire à la décision sur le statut final d`'une Requête de Niveau: non seulement les Constructions ou les Déploiements doivent avoir réussi, mais la Post-Approbation doit également avoir été accordée par un Utilisateur IKAN ALM.
+Tant que la Post-Approbation n`'est pas traitée, le statut de la Requête de Niveau ne sera pas établi à _Avertissement_ ou __Réussie__.
+Si une Post-Approbation est rejetée, la Requête de Niveau ne pourra jamais être délivrée sur le Niveau suivant dans le Cycle de Vie.
+
+Chaque Approbation est protégée par un Groupe d`'utilisateurs: seul un Utilisateur appartenant à ce Groupe d`'utilisateurs pourra accorder ou rejeter l`'Approbation.
+
+Par exemple, dans le cas d`'un Cycle de Vie contenant un Niveau de Construction, un Niveau de Test et un Niveau de Production, une Post-approbation définie sur le Niveau de Test imposera une vérification après l`'exécution de la Requête de Niveau sur le Niveau de Test.
+Cela permettra aux membres du département Test de juger si la Requête de Niveau est bien qualifiée pour permettre de délivrer sur le Niveau de Production.
+En plus, si une Pré-approbation est définie pour le Niveau de Production, ceci imposera une vérification avant l`'exécution de la Requête de Niveau sur le Niveau de Production permettant aux membres du département Production ou aux Administrateurs de juger si tout est en ordre avant de passer à l`'étape de Production.
+
+Il est également possible de définir une hiérarchie d`'Approbations sur un Niveau.
+Par exemple: une ou plusieurs Pré-Approbations ainsi que une ou plusieurs Post-Approbations peuvent être définies.
+Chaque Approbation résultera en une notification (Mail ou Netsend) des Utilisateurs appartenant au Groupe d`'utilisateurs protecteur leur demandant d`'accorder ou de rejeter l`'Approbation via l`'interface des Approbations en attente.
+
+Se référer aux sections suivantes pour une description plus détaillée:
+
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsscreen,Écran des Approbations en attente>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approuver une Approbation en attente>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejeter une Approbation en attente>>
+
+
+[[_desktop_outstandingapprovalsscreen]]
+== Écran des Approbations en attente 
+(((Approbations ,Approbations en attente))) 
+
+. Dans le Menu Principal, sélectionnez __Approbations > Approbations en attente__.
++
+L`'écran _Approbations en attente_ affiche les Approbations en attente que vous (ou un autre membre de votre Groupe d`'utilisateurs) pouvez accorder ou rejeter en ce moment.
++
+image::Desktop-OutstandingApprovals-Overview.png[,1023,207] 
++
+. Vérifiez l`'information.
++
+Cet écran liste les Requêtes de Niveau pour que vous puissiez les approuver ou les rejeter.
+Pour chaque Approbation en attente l`'information suivante est affichée.
++
+
+[NOTE]
+====
+Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent être rangées par ordre alphabétique (ascendant ou descendant). 
+====
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Statut
+|Ce champ affiche le statut image:icons/waiting_approval.gif[,15,15] __ En
+attente d`'Approbation__.
+
+Ce statut signifie que vous (ou un autre membre de votre Groupe d`'utilisateurs) pouvez accorder ou rejeter cette Approbation.
+
+|Type
+a|Ce champ contient l`'indication du Type d`'Approbation. 
+
+Il y a deux possibilités:
+
+* image:icons/icon_preApproval.png[,15,15]  _Pré-approbation__: Cette Approbation doit être accordée avant que les codes Source ou le résultat de construction ne soient délivrés sur le Niveau __demandé_.
+* image:icons/icon_postApproval.png[,15,15]  _Post-approbation_: Cette Approbation doit être accordée à la fin de la Requête de Niveau, après l`'exécution des Constructions ou Déploiements associés à cette Requête de Niveau.
+
+|Branche
+a|Le Nom dans ce champ est composé comme suit:
+
+* Nom du Projet
+* Type de Branche: H pour une Branche Principale et B pour une Branche Secondaire.
+* Préfixe avec, optionnellement, le suffixe de la Branche
+
+Exemple: Webpad H_1-0
+
+Avec: H = Branche Principale et 1-0 = Préfixe
+
+|Nom de Niveau
+a|Ce champ contient la dénomination et le type du Niveau vers lequel la Construction sera délivrée comme résultat de cette Requête de Niveau.
+
+Il y a deux possibilités:
+
+* __Test__: L`'Approbation est associée à un Niveau de Test.
+* __Production__: L`'Approbation est associée à un Niveau de Production.
+
+Voir <<ProjAdm_Levels.adoc#_projadm_levels,Niveaux>>
+
+|OID Requête
+|Ce champ contient le numéro séquentiel de la Requête de niveau.
+
+Toutes les Requêtes de niveau définies pour un Projet sont numérotées de manière séquentielle.
+
+|Statut de Requête de Niveau
+a|Ce champ contient l`'indication image:icons/waiting_approval.gif[,15,15]  du Statut de la Requête de Niveau.
+
+Il y a deux possibilités:
+
+* En attente de pré-approbation
+* En attente de post-approbation
+
+|Balise RCV Requête de niveau
+|Ce champ contient la Balise RCV de la Requête de Niveau.
+Cette Balise crée le lien entre le code dans le RCV et la Construction qui en résulte.
+
+En principe le format de la Balise RCV correspond au modèle de Balise défini pour la Branche. Voir <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstreams,Branches>>
+
+Cependant, l`'utilisateur peut écraser la Balise RCV par défaut lors de la création de la Requête de Niveau de telle façon que le format de la Balise devienne complètement différent.
+
+|Créée le
+|Ce champ indique la date et l`'heure auxquelles la Requête de Niveau a été créée.
+
+|Exécution prévue le
+|Ce champ indique la date et l`'heure auxquelles l`'exécution de la Requête de Niveau est prévue.
+La requête de Niveau ne sera pas exécutée avant cette date et heure.
+|===
+. Utilisez le lien approprié pour approuver ou rejeter une Approbation.
++
+En plus de ces champs informatifs, les liens suivants sont disponibles pour chaque Approbation en attente:
+
+* image:icons/approve.gif[,15,15]  _Approuver_. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approuver une Approbation en attente>>
+* image:icons/reject.gif[,15,15]  _Rejeter_. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejeter une Approbation en attente>>
+
+
+[[_desktop_outstandingapprovalsapprove]]
+== Approuver une Approbation en attente 
+(((Approbations ,Approuver))) 
+
+. Dans le Menu Principal, sélectionnez __Approbations > Approbations en attente__.
++
+
+[NOTE]
+====
+Les liens _Approuver_ et _Rejeter_ sont également disponibles sur l`'écran __Aperçu des Approbations__.
+====
+. Cliquez sur le lien image:icons/approve.gif[,15,15] _Approuver_ pour accepter la Requête de Niveau.
++
+Le panneau suivant s`'affiche en-dessous.
++
+image::Desktop-OutstandingApprovals-Approve.png[,696,461] 
++
+. Vérifiez l`'information dans le panneau __Liste des approbations__.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Type
+a|Ce champ contient l`'indication du Type d`'Approbation. 
+
+Il y a deux possibilités:
+
+* image:icons/icon_preApproval.png[,15,15] _Pré-approbation_
+* image:icons/icon_postApproval.png[,15,15] _Post-approbation_
+
+|Statut
+a|Ce champ indique le statut d`'Approbation.
+
+Les statuts suivant sont possibles:
+
+* image:icons/icon_approvalWaitingApproval.png[,15,15]  _En attente d`'Approbation_: ce statut signifie que vous (ou un autre membre de votre Groupe d`'utilisateurs) pouvez accorder ou rejeter cette Approbation.
+* image:icons/icon_approvalWaitingPredecessor.png[,15,15]  _En attente d`'une Approbation antérieure_: ce statut signifie que d`'abord une Approbation antérieure (ayant un numéro séquentiel inférieur) doit être accordée avant que vous (ou un autre membre de votre Groupe d`'utilisateurs) ne puissiez accorder ou rejeter cette Approbation.
+* image:icons/icon_approvalApproved.png[,15,15]  _Approuvée_: ce statut signifie que l`'Approbation a été accordée
+* image:icons/icon_approvalRejected.png[,15,15]  _Rejetée_: ce statut signifie que l`'Approbation a été rejetée
+* image:icons/icon_approvalCancelled.png[,15,15]  _Annulée_: ce statut signifie qu`'une Approbation précédente a été rejetée, ou, dans le cas d`'une Post-Approbation, que la Requête de Niveau a été interrompue ou annulée entre-temps.
+* image:icons/icon_approvalWaitingLRFinish.png[,15,15]  _En attente de la Fin de la Requête de Niveau_: ce statut indique que la Requête de Niveau n`'a pas encore été exécutée.
+
+|Groupe d`' utilisateurs
+|Ce champ contient la dénomination du Groupe d`'utilisateurs IKAN ALM dont un des membres doit accorder ou rejeter l`'Approbation.
+
+|Approbateur
+|Ce champ contient l`'Identifiant Utilisateur qui a accordé ou rejeté l`'Approbation.
+Ce champ est toujours vide dans le cas d`'une Approbation en attente.
+
+|Date/Heure approbation le
+|Ce champ contient la date et l`'heure auxquelles l`'Approbation a été accordée ou rejetée.
+Ce champ est toujours vide dans le cas d`'une Approbation en attente.
+
+|Commentaire
+|Ce champ contient la raison de l`'Approbation ou du rejet, spécifiée par l`'utilisateur.
+Ce champ est toujours vide dans le cas d`'une Approbation en attente.
+|===
+
+. Si nécessaire, saisissez la raison pour laquelle vous approuvez la Requête de Niveau dans le champ __Commentaire__.
+. Cliquez sur le bouton _Approuver_ pour confirmer l`'action.
++
+Si vous voulez fermer l`'écran _Approbations en
+attente_ sans approuver la Requête de Niveau, cliquez sur le bouton __Annuler__.
+
+
+[[_desktop_outstandingapprovalsreject]]
+== Rejeter une Approbation en attente 
+(((Approbations ,Rejeter))) 
+
+. Dans le Menu Principal, sélectionnez __Approbations > Approbations en attente__.
++
+
+[NOTE]
+====
+Les liens _Approuver_ et _Rejeter_ sont également disponibles sur l`'écran __Aperçu des Approbations__.
+====
+
+. Cliquez sur le lien image:icons/reject.gif[,15,15] _Rejeter_ pour rejeter la Requête de Niveau.
++
+L`'écran suivant s`'affiche.
++
+image::Desktop-OutstandingApprovals-Reject.png[,685,456] 
++
+. Vérifiez l`'information dans le panneau __Liste des approbations__.
++
+La Liste des approbations affiche l`'information additionnelle sur les Approbations. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approuver une Approbation en attente>>
+
+. Saisissez la raison pour laquelle vous rejetez la Requête de Niveau dans le champ __Commentaire__.
+
+. Cliquez sur le bouton _Rejeter_ pour confirmer l`'action.
++
+Si vous voulez fermer l`'écran _Approbations en
+attente_ sans rejeter la Requête de Niveau, cliquez sur le bouton __Annuler__.
+
+
+[[_desktop_approvals_overview]]
+== Écran de l`'aperçu des approbations 
+(((Approbations, Aperçu))) 
+
+. Dans le Menu Principal, sélectionnez __Approbations > Aperçu des Approbations__.
++
+L`'écran suivant s`'affiche: 
++
+image::Desktop-Approvals-Overview.png[,889,666] 
++
+. Utilisez les critères de recherche dans le panneau de recherche _Approbations de niveau_ pour n'afficher que les Approbations qui vous intéressent.
++
+image::Approvals-SearchPanel.png[,883,290] 
++
+Les options suivantes sont disponibles:
+
+* Rechercher: en principe, il n'est pas nécessaire de cliquer sur l'option __Rechercher__. Les résultats dans l'aperçu seront automatiquement synchronisés en fonction des critères de recherche sélectionnés.
+* Réinitialiser la recherche: utilisez cette option pour supprimer tous les critères de recherche et pour afficher la liste de tous les éléments.
+
+. Vérifiez les champs d`'information de l`'Approbation de Niveau concernée.
++
+
+[NOTE]
+====
+Les Approbations en attente que vous (ou un autre membre de votre Groupe d`'utilisateurs) pouvez accorder ou rejeter en ce moment sont précédées des icônes __Approuver__ et __Rejeter__.
+
+Pour plus d`'informations, se référer aux sections <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approuver une Approbation en attente>> et <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejeter une Approbation en attente>>.
+====
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Statut
+a|Ce champ indique le statut d`'Approbation.
+
+Les statuts suivant sont possibles:
+
+* image:icons/icon_approvalWaitingApproval.png[,15,15]  _En attente d`'Approbation_: ce statut signifie que vous (ou un autre membre de votre Groupe d`'utilisateurs) pouvez accorder ou rejeter cette Approbation.
+* image:icons/icon_approvalWaitingPredecessor.png[,15,15]  _En attente d`'une Approbation antérieure_: ce statut signifie que d`'abord une Approbation antérieure (ayant un numéro séquentiel inférieur) doit être accordée avant que vous (ou un autre membre de votre Groupe d`'utilisateurs) ne puissiez accorder ou rejeter cette Approbation.
+* image:icons/icon_approvalApproved.png[,15,15]  _Approuvée_: ce statut signifie que l`'Approbation a été accordée
+* image:icons/icon_approvalRejected.png[,15,15]  _Rejetée_: ce statut signifie que l'Approbation a été rejetée
+* image:icons/icon_approvalCancelled.png[,15,15]  _Annulée_: ce statut signifie qu`'une Approbation précédente a été rejetée, ou, dans le cas d`'une Post-Approbation, que la Requête de Niveau a été interrompue ou annulée entre-temps.
+* image:icons/icon_approvalWaitingLRFinish.png[,15,15]  _En attente de la Fin de la Requête de Niveau_: ce statut indique que la Requête de Niveau n`'a pas encore été exécutée.
+
+|Type
+a|Ce champ contient l`'indication du Type d`'Approbation. 
+
+Il y a deux possibilités:
+
+* image:icons/icon_preApproval.png[,15,15]  _Pré-approbation__: Cette Approbation doit être accordée avant que les codes Source ou le résultat de construction ne soient délivrés sur le Niveau __demandé_.
+* image:icons/icon_postApproval.png[,15,15]  _Post-approbation_: Cette Approbation doit être accordée à la fin de la Requête de Niveau, après l`'exécution des Constructions ou Déploiements associés à cette Requête de Niveau.
+
+|Branche
+a|Ce champ contient le Nom du Projet et de la Branche concernée pour la Requête de Niveau.
+Ce Nom est décomposé en:
+
+* Nom du Projet
+* Type de Branche: H pour une Branche Principale et B pour une Branche Secondaire.
+* Préfixe avec, optionnellement, le suffixe de la Branche
+
+Exemple: Webpad H_1-0
+
+Avec: H = Branche Principale et 1-0 = Préfixe
+
+|Nom de Niveau
+a|Ce champ contient la dénomination et le type du Niveau vers lequel la Construction sera délivrée comme résultat de cette Requête de Niveau.
+
+Les deux types possibles sont:
+
+* __Test__: L`'Approbation est associée à un Niveau de Test.
+* __Production__: L`'Approbation est associée à un Niveau de Production.
+
+Voir <<ProjAdm_Levels.adoc#_projadm_levels,Niveaux>>
+
+|OID Requête
+|Ce champ contient le numéro séquentiel de la Requête de niveau.
+
+Toutes les Requêtes de niveau définies pour un Projet sont numérotées de manière séquentielle.
+
+Sélectionnez ce lien pour accéder à l`'écran __Informations
+détaillées__.
+
+|Statut Requête de Niveau
+a|Ce champ indique le statut de la Requête de Niveau.
+
+Les icônes de statut suivantes sont disponibles:
+
+* image:icons/succes.gif[,15,15]  (Réussie): la Requête de Niveau a été exécutée correctement.
+* image:icons/warning.gif[,15,15]  (Avertissement): la Requête de Niveau a réussi, mais au moins une Phase de Niveau, de Construction ou de Déploiement non-critique a échoué. 
+* image:icons/fail.gif[,15,15]  (Échouée): l`'exécution de la Requête de Niveau dans son ensemble a échoué. Ce statut est dû à l`'échec d`'au moins une Phase de Niveau, de Construction ou de Déploiement critique.
+* image:icons/run.gif[,15,15]  (Exécution): la Requête de Niveau s`'exécute en ce moment.
+* image:icons/run.gif[,15,15]  (Interruption): la Requête de Niveau est interrompue en ce moment.
+* image:icons/waiting_datetime.gif[,15,15]  (En attente de l`'heure d`'exécution): la date ou l`'heure d`'exécution demandée se situe encore dans l`'avenir.
+* image:icons/waiting_approval.gif[,15,15]  (En attente d`'approbation): la Requête de Niveau attend sa Pré-approbation et/ou sa Post-approbation.
+* image:icons/reject.gif[,15,15]  (Rejetée): une des Approbations associées à la Requête de Niveau a été rejetée. La Requête de Niveau ne sera jamais exécutée.
+* image:icons/cancelled.gif[,15,15]  (Annulée): la Requête de Niveau a été annulée avant son exécution. Elle ne sera jamais exécutée.
+* image:icons/aborted.gif[,15,15]  (Interrompue): la Requête de Niveau a été interrompue lors de l`'exécution. Les résultats (comme par exemple, le résultat de construction) qui étaient déjà disponibles au moment de l`'interruption sont supprimés et ne peuvent plus être utilisés.
+
+|Balise RCV Requête de niveau
+|Ce champ contient la Balise RCV de la Requête de Niveau.
+Cette Balise crée le lien entre le code dans le RCV et la Construction qui en résulte.
+
+En principe le format de la Balise RCV correspond au modèle de Balise défini pour la Branche. Voir <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstreams,Branches>>
+
+Cependant, l`'Utilisateur peut écraser la Balise RCV par défaut lors de la création de la Requête de Niveau (il y est même obligé pour une Requête de Niveau de Construction dans une Branche basée sur une version balisée). Par conséquent, le format de la Balise peut être complètement différent.
+
+|Créée le
+|Ce champ indique la date et l`'heure auxquelles la Requête de Niveau a été créée.
+
+|Exécution prévue le
+|Ce champ indique la date et l`'heure auxquelles l`'exécution de la Requête de Niveau est prévue.
+La requête de Niveau ne sera pas exécutée avant cette date et heure.
+
+Si la date indiquée est dépassée et que vous approuvez la Requête de niveau, celle-ci démarrera immédiatement, sauf si une nouvelle approbation est nécessaire.
+Si vous voulez démarrer la Requête de niveau plus tard, d`'abord, vous devez changer la date en cliquant sur le numéro OID Requête correspondant pour la modifier. Voir <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Informations détaillées>>
+|===
+
+. Vérifiez les détails d`'une Requête de Niveau spécifique.
++
+Cliquez sur le lien OID devant la Requête de Niveau requise.
+Pour plus d`'informations, se référer à la section <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Informations détaillées>>.
+
+. Utilisez le lien approprié pour approuver ou rejeter une Approbation.
++
+En plus de ces champs informatifs, les liens suivants sont disponibles pour chaque Approbation en attente que vous (ou un autre membre de votre Groupe d`'utilisateurs) pouvez accorder ou rejeter en ce moment:
+
+* image:icons/approve.gif[,15,15]  _Approuver_. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approuver une Approbation en attente>>
+* image:icons/reject.gif[,15,15]  _Rejeter_. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejeter une Approbation en attente>>

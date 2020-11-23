@@ -1,0 +1,1384 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_globadm_scriptingtools]]
+= Scripting Tools 
+(((Global Administration ,Scripting Tools)))  (((Scripting Tools))) 
+
+IKAN ALM supports the following Scripting Tools:
+
+* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_ant,ANT>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_gradle,Gradle>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_nant,NANT>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobad_scriptingtool_maven2,Maven2>>
+
+
+The following sections explain how to define a Scripting Tool so that the IKAN ALM Agent may use it for Build and Deploy actions.
+
+[NOTE]
+====
+You must always install the defined Scripting Tool on the IKAN ALM Agent in order to execute Build and Deploy scripts.
+====
+
+[[_sglobadm_scriptingtools_create]]
+== Creating a Scripting Tool 
+(((Scripting Tools ,Creating))) 
+
+[NOTE]
+====
+This option is only available if you have Global Administrator Access Rights in IKAN ALM.
+====
+
+
+. In the Global Administration context, select _Scripting Tools > Create_.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-Create.png[,599,270] 
++
+. Select the _Type_ of Scripting Tool you want to create.
++
+The _Details_ panel for the type of Scripting Tool you selected is displayed underneath.
+. Enter the _Name_ of the Scripting Tool and add an optional __Description__.
+. Fill out the Scripting Tool-specific Details. 
++
+For more information on those details, refer to the appropriate sections:
+
+* <<GlobAdm_ScriptingTools.adoc#_pcreateantscriptingtool,Creating an ANT Scripting Tool>>
+* <<GlobAdm_ScriptingTools.adoc#_pcreategradlescriptingtool,Creating a Gradle Scripting Tool>>
+* <<GlobAdm_ScriptingTools.adoc#_pcreatenantscriptingtool,Creating a NANT Scripting Tool>>
+* <<GlobAdm_ScriptingTools.adoc#_pcreatemaven2scriptingtool,Creating a Maven2 Scripting Tool>>
+
+[[_sglobadm_scriptingtools_overview]]
+== The Scripting Tools Overview Screen 
+(((Scripting Tools ,Overview Screen))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-Overview.png[,980,573] 
++
+. Define the required search criteria on the search panel.
++
+The list of items on the overview will be automatically updated based on the selected criteria.
++
+You can also:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* click the _Search_ link to refresh the list based on the current search criteria,
+* click the _Reset search_ link to clear the search fields.
+. Verify the information on the _Scripting Tools Overview_ panel.
+. Depending on your access rights, the following links may be available on the _Scripting Tools Overview_ panel:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows editing a Scripting Tool definition.
+
+|image:icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows deleting a Scripting Tool definition.
+
+|image:icons/history.gif[,15,15] 
+|History
+
+This option is available to all IKAN ALM Users.
+It allows displaying the History of all create, update and delete operations performed on a Scripting Tool.
+|===
++
+Refer to the following sections for detailed information:
+
+* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_ant,ANT Scripting Tools>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_gradle,Gradle Scripting Tools>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobadm_scriptingtool_nant,NANT Scripting Tools>>
+* <<GlobAdm_ScriptingTools.adoc#_sglobad_scriptingtool_maven2,Maven2 Scripting Tools>>
+
+
+[[_sglobadm_scriptingtool_ant]]
+== ANT Scripting Tools 
+(((Scripting Tools ,ANT))) 
+
+Apache Ant is a Java-based build tool.
+In theory, it resembles to __make__, without __make__'s wrinkles.
+If ANT is installed on a machine connected to your Build/Deploy Environments, IKAN ALM will be able to interact with it.
+Therefore, you must define the ANT Scripting Tool in the IKAN ALM application and, when creating the Build or Deploy Environment, specify it as being the Build or Deploy Tool to be used.
+
+Refer to the following sections for detailed information:
+
+* <<GlobAdm_ScriptingTools.adoc#_pcreateantscriptingtool,Creating an ANT Scripting Tool>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_ant_overview,The ANT Scripting Tools Overview Screen>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_ant_edit,Editing an ANT Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_ant_delete,Deleting an ANT Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_ant_history,Viewing the ANT Scripting Tool History>>
+
+[[_pcreateantscriptingtool]]
+=== Creating an ANT Scripting Tool 
+(((ANT Scripting Tools ,Creating))) 
+
+[NOTE]
+====
+This option is only available if you have Global Administrator Access Rights in IKAN ALM.
+====
+. In the Global Administration context, select _Scripting Tools > Create_.
+
+. Select _ANT_ from the drop-down list in the _Type_ field on the search panel.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-ANT-Create.png[,859,472] 
++
+. Fill out the fields in the _Create ANT Scripting Tool_ panel at the top of the screen.
++
+Fields marked with a red asterisk are mandatory.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Field
+| Meaning
+
+|Type
+|Select the type of Scripting Tool you want to define.
+This field is mandatory.
+
+After you have selected the type, the appropriate _Details_ panel will be displayed underneath.
+
+|Name
+|Enter the name of the new ANT Scripting Tool in this field.
+This field is mandatory.
+
+|Description
+|Enter a description for the new ANT Scripting Tool in this field.
+This field is optional.
+|===
+
+. Fill out the fields in the _ANT Scripting Tool Details_ panel.
++
+Fields marked with a red asterisk are mandatory.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Field
+| Meaning
+
+|Java Home
+|Enter the _JAVA_HOME_ path to launch ANT in this field.
+If you do not enter a value in this field, the system default _JAVA_HOME_ path will be used.
+
+In this case, the _JAVA_HOME _path must be defined as an environment variable on the Machine.
+
+|Java Virtual Machine Options
+|In this field, enter the Java Virtual Machine Options required for starting up ANT.
+This field is optional.
+
+Example:
+
+__-Xmx128M__: specifies the maximum size of the memory allocation pool.
+
+JVM Options of Java 8 for example are explained here:
+
+https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html[https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html]
+
+|Java ANT Classpath
+a|Enter the JAVA ANT Classpath in this field.
+This field is mandatory.
+
+Since IKAN ALM launches ANT via Java, you must ensure that all required jar files are available.
+Some values can be set in this field, but also the Lib Patch can be used (see below).
+
+Depending on the ANT version you use, the CLASSPATH should at least include:
+
+*For ANT 1.5.x:*
+
+* ant.jar
+* jars/classes for your XML parser
+* jars/zip files for the JDK
+
+*For ANT 1.6.x or higher:*
+
+* ant.jar
+* ant-launcher.jar
+* jars/classes for your XML parser
+* jars/zip files for the JDK
+
+If you launch ANT via the Ant Launcher, ensure that the CLASSPATH includes:
+
+* ant-launcher.jar
+* required external dependencies (such as tools.jar)
+
+__Note: __If you use Ant Launcher, do not include _ant.jar_ in the Java Classpath, because the dependencies will not be found and the script will end in error.
+
+Also refer to the section _Running ANT via Java _in the Apache Ant Manual.
+
+|Use Ant Launcher
+|Select __Yes__, if you want to use the Ant Launcher (default).
+
+Select __No__, if you do not use the Ant Launcher, but launch Ant via Java.
+
+|Lib Path
+|When using the Ant Launcher, you may enter the path to one or more directories containing additional required jar files (-lib option).
+
+|Commandline Options
+|Enter commandline options in this fields.
+This field is optional.
+
+The commandline options provided by default by IKAN ALM, like -buildfile, -logfiles, -verbose, -debug ,... will not be accepted.
+
+Sample options are -keep-going, or -noinput.
+
+|Build
+|Indicate whether or not this Scripting Tool can be linked to a Build Environment and thus be used to build code.
+
+|Deploy
+|Indicate whether or not this Scripting Tool can be linked to a Deploy Environment and thus be used to deploy Builds.
+
+|Log Format
+a|Select the format of the log file generated by this ANT Scripting Tool.
+The following options are available:
+
+* TXT: the log file will be a simple text file
+* XML: the log file will be an XML file
+
+TXT logs will be smaller and their content can be displayed while the Tool is executing.
+
+The display of XML logs can be customized by providing custom XSL templates.
+However, XML logs are larger and can only be displayed after the Tool has finished executing.
+
+|Quiet Option 
+|Select whether or not the Quiet Option must be activated for the new ANT Scripting Tool.
+
+ANT will print less information than normal during the Build and Deploy actions, if this option is activated.
+
+|Verbose Option
+|Select whether or not the Verbose Option must be activated for the new ANT Scripting Tool.
+
+ANT will print verbose debug information during the Build and Deploy actions, if this option is activated.
+
+|Debug Option
+|Select whether or not the Debug Option must be activated for the new ANT Scripting Tool.
+
+ANT will print additional debug information during the Build and Deploy actions, if this option is activated.
+
+|Time-Out (Sec.)
+|In this field, enter a Time-Out value if required.
+
+If a value is provided, a running ANT Build or Deploy process will be interrupted after this number of seconds.
+In this way, "hanging" Build or Deploy processes are interrupted.
+
+If no value is provided, a running ANT Build or Deploy process will never be interrupted.
+|===
+
+. Once you filled out the fields as required, click _Create_.
++
+The newly created ANT Scripting Tool is added to the__ ANT
+Scripting Tools Overview__ at the bottom of the screen.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>
+
+|===
+
+[[_globadm_scriptingtool_ant_overview]]
+=== The ANT Scripting Tools Overview Screen 
+(((Ant ,Overview Screen))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
+
+. Specify _ANT_ in the _Type_ field on the search panel.
++
+image::GlobAdm-ScriptingTools-ANT-Overview.png[,1017,487] 
++
+If required, use the other search criteria to refine the items displayed on the overview.
++
+The following options are available:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* the _Search_ link to refresh the list based on the current search criteria,
+* the _Reset search_ link to clear the search fields.
+
+. Verify the information on the _Scripting Tools Overview_ panel.
++
+For a detailed description of the fields, refer to <<GlobAdm_ScriptingTools.adoc#_pcreateantscriptingtool,Creating an ANT Scripting Tool>>.
+
+. Depending on your access rights, the following links may be available on the _ANT Scripting Tools Overview_ panel:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows editing a Scripting Tool definition.
+
+|image:icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows deleting a Scripting Tool definition.
+
+|image:icons/history.gif[,15,15] 
+|History
+
+This option is available to all IKAN ALM Users.
+It allows displaying the History of all create, update and delete operations performed on a Scripting Tool
+|===
+
+[[_globadm_scriptingtool_ant_edit]]
+=== Editing an ANT Scripting Tool Definition 
+(((ANT Scripting Tools ,Editing))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the ANT Scripting Tools your are looking for.
+
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected ANT Scripting Tool.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-ANT-Edit.png[,1061,722] 
++
+. Edit the fields as required.
++
+For a description of the fields, refer to <<GlobAdm_ScriptingTools.adoc#_pcreateantscriptingtool,Creating an ANT Scripting Tool>>.
++
+
+[NOTE]
+====
+The _Connected Environments_ panel displays the Environments the Scripting Tool is linked to. 
+====
+
+. Click _Save_ to save your changes.
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Back_ to return to the previous screen without saving the changes
+
+[[_globadm_scriptingtool_ant_delete]]
+=== Deleting an ANT Scripting Tool Definition 
+(((ANT Scripting Tools ,Deleting))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the ANT Scripting Tools your are looking for.
+
+. Click the image:icons/delete.gif[,15,15]  _Delete_ link to delete the selected ANT Scripting Tool.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-ANT-Delete.png[,1077,389] 
++
+. Click _Delete_ to confirm the deletion.
++
+You can also click __Back __to return to the previous screen without deleting the entry.
++
+__Note:__ If the ANT Scripting Tool is linked to one or more Build or Deploy Environments, the following screen is displayed:
++
+image::GlobAdm-ScriptingTools-ANT-Delete-Error.png[,831,518] 
++
+You need to assign another Scripting Tool to these Environments, before deleting this ANT Scripting Tool.
+
+[[_globadm_scriptingtool_ant_history]]
+=== Viewing the ANT Scripting Tool History 
+(((ANT Scripting Tools ,History))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the ANT Scripting Tools your are looking for.
+
+. Click the image:icons/history.gif[,15,15] _History_ link to display the _ANT Scripting Tool History View_.
++
+For more detailed information concerning this __History
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
+
+. Click __Back __to return to the _Scripting Tools Overview_ screen.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>
+
+|===
+
+[[_sglobadm_scriptingtool_gradle]]
+== Gradle Scripting Tools 
+(((Scripting Tools ,Gradle))) 
+
+Gradle is an open source build automation system that builds upon the concepts of Apache Ant and Apache Maven and introduces a Groovy-based domain-specific language (DSL) instead of the XML form used by Apache Maven for declaring the project configuration.
+If Gradle is installed on a machine connected to your Build/Deploy Environments, IKAN ALM will be able to interact with it.
+Therefore, you must define the Gradle Scripting Tool in the IKAN ALM application and, when creating the Build or Deploy Environment, specify it as being the Build or Deploy Tool to be used.
+
+Refer to the following sections for detailed information:
+
+* <<GlobAdm_ScriptingTools.adoc#_pcreategradlescriptingtool,Creating a Gradle Scripting Tool>>
+* <<GlobAdm_ScriptingTools.adoc#_poverviewgradlescriptingtool,The Gradle Scripting Tools Overview Screen>>
+* <<GlobAdm_ScriptingTools.adoc#_peditgradlescriptingtool,Editing a Gradle Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_pdeletegradlescriptingtool,Deleting a Gradle Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_phistorygradlescriptingtool,Viewing the Gradle Scripting Tool History>>
+
+[[_pcreategradlescriptingtool]]
+=== Creating a Gradle Scripting Tool 
+(((Gradle Scripting Tools ,Creating))) 
+
+[NOTE]
+====
+This option is only available if you have Global Administrator Access Rights in IKAN ALM.
+====
+. In the Global Administration context, select _Scripting Tools > Create_.
+
+. Select _Gradle_ from the drop-down list in the _Type_ field on the search panel.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-Gradle-Create.png[,859,383] 
++
+. Fill out the fields in the _Create Gradle Scripting Tool_ panel at the top of the screen.
++
+Fields marked with a red asterisk are mandatory.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Field
+| Meaning
+
+|Type
+|Select the type of Scripting Tool you want to define.
+This field is mandatory.
+
+After you have selected the type, the appropriate _Details_ panel will be displayed underneath.
+
+|Name
+|Enter the name of the new Gradle Scripting Tool in this field.
+This field is mandatory.
+
+|Description
+|Enter a description for the new Gradle Scripting Tool in this field.
+This field is optional.
+|===
+
+. Fill out the fields in the _Gradle Scripting Tool Details_ panel.
++
+Fields marked with a red asterisk are mandatory.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Field
+| Meaning
+
+|Gradle Path
+|This field is mandatory.
+
+Enter the path to the Gradle bat (gradle.bat-Windows) or shell file (e.g., gradle - linux).
+
+Example:
+
+``d:/javatools/gradle2.10/bin ``or `/opt/javatools/gradle2.10/bin`
+
+|Java Home
+|Enter the _JAVA_HOME_ path to launch Gradle in this field.
+If you do not enter a value in this field, the system default _JAVA_HOME_ path will be used.
+
+In this case, the _JAVA_HOME _path must be defined as an environment variable on the Machine.
+
+|Java Virtual Machine Options
+|In this field, enter the Java Virtual Machine Options required for starting up Gradle.
+This field is optional.
+
+Example:
+
+__-Xmx128M__: specifies the maximum size of the memory allocation pool.
+
+JVM Options of Java 8 for example are explained here:
+
+https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html[https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html]
+
+|Gradle User Home
+|This field is optional.
+
+Enter the path to the location of the Gradle User Home, this is the location where (among other things) the Gradle dependency cache will be stored.
+
+If you do not enter a value in this field, the default __User
+Home __will be used.
+This is particularly useful on Linux, where the user running the Agent may lack a User Home.
+
+Example:
+
+`/opt/gradle_user_home`
+
+_Note:_ This value will be set as a commandline option (--gradle-user-home).
+
+|Commandline Options
+|Enter commandline options in this fields.
+This field is optional.
+
+The commandline options which might be provided by default by IKAN ALM will not be accepted: .-g, --gradle-user-home, -q, --quiet, -i, --info,-d, --debug, -s, --stacktrace, -S, --full-stacktrace, -b, --build-file
+
+Sample (accepted) options are -keep-going, or -noinput.
+
+|Build
+|Indicate whether or not this Scripting Tool can be linked to a Build Environment and thus be used to build code.
+
+|Deploy
+|Indicate whether or not this Scripting Tool can be linked to a Deploy Environment and thus be used to deploy Builds.
+
+|Log Format
+|By default, the generated log file will be a text file.
+This format cannot be modified.
+
+|Log Level 
+a|Refer to the section https://docs.gradle.org/current/userguide/logging.html[https://docs.gradle.org/current/userguide/logging.html] in the Gradle User Guide for more info regarding the Log Level and the Stacktrace
+
+From the drop-down list, select which logging options should be activated.
+The following options are available:
+
+* None
++
+No specific command line options will be set for the Log Level, resulting in the default (normal) LIFECYCLE Log Level: Gradle will print progress information messages.
+* Quiet
++
+Gradle will only print the Important Information messages, so less information than normal (LIFECYCLE level) during the Build and Deploy actions.
++
+-q will be added as a commandline option.
+* Info
++
+Gradle will print information messages during the Build and Deploy actions, so more information than normal (LIFECYCLE level).
++
+-i will be added as a commandline option.
+* Debug
++
+Gradle will print additional debug information during the Build and Deploy actions.
++
+-d will be added as a commandline option.
+
+|Stack Trace Option
+a|From the drop-down list, select the required Stack Trace option.
+The following options are available:
+
+* None
++
+No stack traces are printed to the console in case of a build error (e.g., a compile error). Stack traces will only be printed in case of internal exceptions.
+If the option DEBUG log level is chosen, truncated stack traces are always printed.
+* Truncated
++
+Truncated stack traces are printed.
+We recommend this over full stack traces.
+Groovy full stack traces are extremely verbose (due to the underlying dynamic invocation mechanisms). They, however, usually do not contain relevant information to find out what has gone wrong in your code.
++
+-s will be added as a commandline option.
+* Full
++
+Full stack traces are printed out.
++
+-S will be added as a commandline option.
+
+|Time-Out (Sec.)
+|In this field, enter a Time-Out value if required.
+
+If a value is provided, a running Gradle Build or Deploy process will be interrupted after this number of seconds.
+In this way, "hanging" Build or Deploy processes are interrupted.
+
+If no value is provided, a running Gradle Build or Deploy process will never be interrupted.
+|===
+
+. Once you filled out the fields as required, click _Create_.
++
+The newly created Gradle Scripting Tool is added to the__ Gradle
+Scripting Tools Overview__ at the bottom of the screen.
+
+[[_poverviewgradlescriptingtool]]
+=== The Gradle Scripting Tools Overview Screen 
+(((Gradle ,Overview Screen))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
+
+ . Specify _Gradle_ in the _Type_ field on the search panel.
++
+image::GlobAdm-ScriptingTools-Gradle-Overview.png[,1021,309] 
++
+If required, use the other search criteria to refine the items displayed on the overview.
++
+The following options are available:
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* the _Search_ link to refresh the list based on the current search criteria,
+* the _Reset search_ link to clear the search fields.
+
+. Verify the information on the _Scripting Tools Overview_ panel.
++
+For a detailed description of the fields, refer to <<GlobAdm_ScriptingTools.adoc#_poverviewgradlescriptingtool,The Gradle Scripting Tools Overview Screen>>.
+
+. Depending on your access rights, the following links may be available on the _Gradle Scripting Tools Overview_ panel:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows editing a Scripting Tool definition.
+
+|image:icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows deleting a Scripting Tool definition.
+
+|image:icons/history.gif[,15,15] 
+|History
+
+This option is available to all IKAN ALM Users.
+It allows displaying the History of all create, update and delete operations performed on a Scripting Tool
+|===
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>
+
+|===
+
+[[_peditgradlescriptingtool]]
+=== Editing a Gradle Scripting Tool Definition 
+(((Gradle Scripting Tools ,Editing))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the Gradle Scripting Tools your are looking for.
+
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected Gradle Scripting Tool.
++
+The following screen is displayed: 
++
+image::GlobAdm-ScriptingTools-Gradle-Edit.png[,1061,625] 
++
+. Edit the fields as required.
++
+For a description of the fields, refer to <<GlobAdm_ScriptingTools.adoc#_pcreategradlescriptingtool,Creating a Gradle Scripting Tool>>.
++
+
+[NOTE]
+====
+The _Connected Environments_ panel displays the Environments the Scripting Tool is linked to. 
+====
+
+. Click _Save_ to save your changes.
++
+You can also click:
+* _Refresh_ to retrieve the settings from the database.
+* _Back_ to return to the previous screen without saving the changes
+
+[[_pdeletegradlescriptingtool]]
+=== Deleting a Gradle Scripting Tool Definition 
+(((Gradle Scripting Tools ,Deleting))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the Gradle Scripting Tools your are looking for.
+
+. Click the image:icons/delete.gif[,15,15]  _Delete_ link to delete the selected Gradle Scripting Tool.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-Gradle-Delete.png[,758,307] 
++
+
+. Click _Delete_ to confirm the deletion.
++
+You can also click __Back __to return to the previous screen without deleting the entry.
++
+__Note:__ If the Gradle Scripting Tool is linked to one or more Build or Deploy Environments, the following screen is displayed:
++
+image::GlobAdm-ScriptingTools-Gradle-Delete-Eror.png[,1002,572] 
++
+You need to assign another Scripting Tool to these Environments, before deleting this Gradle Scripting Tool.
+
+[[_phistorygradlescriptingtool]]
+=== Viewing the Gradle Scripting Tool History 
+(((Gradle Scripting Tools ,History))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the Gradle Scripting Tools your are looking for.
+
+. Click the image:icons/history.gif[,15,15] _History_ link to display the _Gradle Scripting Tool History View_.
++
+For more detailed information concerning this __History
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
+
+. Click __Back __to return to the _Scripting Tools Overview_ screen.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>
+
+|===
+
+[[_sglobadm_scriptingtool_nant]]
+== NANT Scripting Tools 
+(((Scripting Tools ,NANT)))  (((NANT Scripting Tools))) 
+
+NANT is a free .NET build tool.
+In theory it resembles to _make_ without __make__'s wrinkles.
+In practice it is a lot like Ant.
+
+If NANT is installed on a machine connected to your Build/Deploy Environments, IKAN ALM will be able to interact with it. 
+
+Therefore, you must define the NANT Scripting Tool in the IKAN ALM application and, when creating the Build or Deploy Environment, specify it as being the Build or Deploy Tool to be used.
+
+Refer to the following sections for detailed information:
+
+* <<GlobAdm_ScriptingTools.adoc#_pcreatenantscriptingtool,Creating a NANT Scripting Tool>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_overview,The NANT Scripting Tools Overview Screen>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_edit,Editing a NANT Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_delete,Deleting a NANT Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_history,Viewing the NANT Scripting Tool History>>
+
+[[_pcreatenantscriptingtool]]
+=== Creating a NANT Scripting Tool 
+(((NANT Scripting Tools ,Creating))) 
+
+[NOTE]
+====
+This option is only available if you have Global Administrator Access Rights in IKAN ALM.
+====
+. In the Global Administration context, select _Scripting Tools > Create_.
+
+. Select _NANT_ from the drop-down list in the _Type_ field on the search panel.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-NANT-Create.png[,856,416] 
++
+
+. Fill out the fields in the _Create NANT Scripting Tool_ panel at the top of the screen.
++
+Fields marked with a red asterisk are mandatory.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Field
+| Meaning
+
+|Type
+|Select the type of Scripting Tool you want to define.
+This field is mandatory.
+
+After you have selected the type, the appropriate _Details_ panel will be displayed underneath.
+
+|Name
+|Enter the name of the new NANT Scripting Tool in this field.
+This field is mandatory.
+
+|Description
+|Enter a description for the new NANT Scripting Tool in this field.
+This field is optional.
+|===
+
+. Fill out the fields in the _NANT Scripting Tool Details_ panel.
++
+Fields marked with a red asterisk are mandatory.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Field
+| Meaning
+
+|Path to NANT Executable
+|Enter the path to the NANT executable (NAnt.exe) in this field.
+This field is mandatory.
+
+|Commandline Options
+|Enter commandline options in this fields.
+This field is optional.
+
+The commandline options provided by default by IKAN ALM, like -buildfile, -logfiles, -verbose, -debug ,... will not be accepted.
+
+Sample options are -keep-going, or -noinput.
+
+|Build
+|Indicate whether or not this Scripting Tool can be linked to a Build Environment and thus be used to build code.
+
+|Deploy
+|Indicate whether or not this Scripting Tool can be linked to a Deploy Environment and thus be used to deploy Builds.
+
+|Log Format
+a|Select the format of the log file generated by this NANT Scripting Tool.
+The following options are available:
+
+* TXT: the log file will be a simple text file
+* XML: the log file will be an XML file
+
+TXT logs will be smaller and their content can be displayed while the Tool is executing.
+
+The display of XML logs can be customized by providing custom XSL templates.
+However, XML logs are larger and can only be displayed after the Tool has finished executing.
+
+|Quiet Option
+|Select whether or not the Quiet Option must be activated for the new NANT Scripting Tool.
+
+NANT will print less information than normal during the Build and Deploy actions, if this option is activated.
+
+|Verbose Option
+|Select whether or not the Verbose Option must be activated for the new NANT Scripting Tool.
+
+NANT will print verbose debug information during the Build and Deploy actions, if this option is activated.
+
+|Debug Option
+|Select whether or not the Debug Option must be activated for the new NANT Scripting Tool.
+
+NANT will print additional debug information during the Build and Deploy actions, if this option is activated.
+
+|Time-Out (Sec.)
+|In this field, enter a Time-Out value if required.
+
+If a value is provided, a running NANT Build or Deploy process will be interrupted after this number of seconds.
+In this way, "hanging" Build or Deploy processes are interrupted.
+
+If no value is provided, a running NANT Build or Deploy process will never be interrupted.
+|===
+
+. Once you filled out the fields as required, click _Create_.
++
+The newly created NANT Scripting Tool is added to the__ NANT
+Scripting Tools Overview__ at the bottom of the screen.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>
+
+|===
+
+[[_globadm_scriptingtool_nant_overview]]
+=== The NANT Scripting Tools Overview Screen 
+(((NANT ,Overview Screen))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
+
+. Specify _NANT_ in the _Type_ field on the search panel.
++
+image::GlobAdm-ScriptingTools-NANT-Overview.png[,996,348] 
++
+If required, use the other search criteria to refine the items displayed on the overview.
++
+The following options are available:
+
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* the _Search_ link to refresh the list based on the current search criteria,
+* the _Reset search_ link to clear the search fields.
+
+. Verify the information on the _Scripting Tools Overview_ panel.
++
+For a detailed description of the fields, refer to <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_nant_overview,The NANT Scripting Tools Overview Screen>>.
+
+. Depending on your access rights, the following links may be available on the _NANT Scripting Tools Overview_ panel:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows editing a Scripting Tool definition.
+
+|image:icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows deleting a Scripting Tool definition.
+
+|image:icons/history.gif[,15,15] 
+|History
+
+This option is available to all IKAN ALM Users.
+It allows displaying the History of all create, update and delete operations performed on a Scripting Tool
+|===
+
+[[_globadm_scriptingtool_nant_edit]]
+=== Editing a NANT Scripting Tool Definition 
+(((NANT Scripting Tools ,Editing))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the NANT Scripting Tools your are looking for.
+
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected NANT Scripting Tool.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-NANT-Edit.png[,1026,537] 
++
+. Edit the fields as required.
++
+For a description of the fields, refer to <<GlobAdm_ScriptingTools.adoc#_pcreatenantscriptingtool,Creating a NANT Scripting Tool>>.
++
+
+[NOTE]
+====
+The _Connected Environments_ panel displays the Environments the Scripting Tool is linked to. 
+====
+
+. Click _Save_ to save your changes.
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Back_ to return to the previous screen without saving the changes
+
+[[_globadm_scriptingtool_nant_delete]]
+=== Deleting a NANT Scripting Tool Definition 
+(((NANT Scripting Tools ,Deleting))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the NANT Scripting Tools your are looking for.
+
+. Click the image:icons/delete.gif[,15,15]  _Delete_ link to delete the selected NANT Scripting Tool.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-NANT-Delete.png[,584,319] 
++
+
+. Click _Delete_ to confirm the deletion.
++
+You can also click __Back __to return to the previous screen without deleting the entry.
++
+__Note: __If the NANT Scripting Tool is linked to one or more Build or Deploy Environments, the following screen is displayed:
++
+image::GlobAdm-ScriptingTools-NANT-Delete-Error.png[,800,528] 
++
+You need to assign another Scripting Tool to these Environments, before deleting this NANT Scripting Tool.
+
+[[_globadm_scriptingtool_nant_history]]
+=== Viewing the NANT Scripting Tool History 
+(((NANT Scripting Tools ,History))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the NANT Scripting Tools your are looking for.
+
+. Click the image:icons/history.gif[,15,15] _History_ link to display the _NANT Scripting Tool History View_.
++
+For more detailed information concerning this __History
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
+
+. Click __Back __to return to the _Scripting Tools Overview_ screen.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>
+
+|===
+
+[[_sglobad_scriptingtool_maven2]]
+== Maven2 Scripting Tools 
+(((Scripting Tools ,Maven2)))  (((Maven2 Scripting Tools))) 
+
+Maven2 is a scripting tool that can be used for building and managing any Java-based project.
+Its primary goal is to allow a developer to comprehend the complete state of a development effort in the shortest period of time.
+If Maven2 is installed on a machine connected to your Build/Deploy Environments, IKAN ALM will be able to interact with Maven2. 
+
+Therefore, you must define the Maven2 Scripting Tool in the IKAN ALM application and, when creating the Build or Deploy Environment, specify it as being the Build or Deploy Tool to be used.
+
+Refer to the following sections for detailed information:
+
+* <<GlobAdm_ScriptingTools.adoc#_pcreatemaven2scriptingtool,Creating a Maven2 Scripting Tool>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_overview,The Maven2 Scripting Tools Overview Screen>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_edit,Editing a Maven2 Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_delete,Deleting a Maven2 Scripting Tool Definition>>
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_history,Viewing the Maven2 Scripting Tool History>>
+
+
+[[_pcreatemaven2scriptingtool]]
+=== Creating a Maven2 Scripting Tool 
+(((Maven2 Scripting Tools ,Creating))) 
+
+[NOTE]
+====
+This option is only available if you have Global Admin Access Rights in IKAN ALM.
+====
+
+. In the Global Administration context, select _Scripting Tools > Create_.
+
+. Select _Maven2_ from the drop-down list in the _Type_ field in the search panel.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-Maven2-Create.png[,851,387] 
++
+. Fill out the fields in the _Create Maven2 Scripting Tool_ panel at the top of the screen.
++
+Fields marked with a red asterisk are mandatory.
++
+
+[cols="1,1", frame="none", options="header"]
+|===
+| Field
+| Meaning
+
+
+|Type
+|Select the type of Scripting Tool you want to define.
+This field is mandatory.
+
+After you have selected the type, the appropriate _Details_ panel will be displayed underneath.
+
+|Name
+|Enter the name of the new Maven2 Scripting Tool in this field.
+This field is mandatory.
+
+|Description
+|Enter a description for the new Maven2 Scripting Tool in this field.
+This field is optional.
+|===
+
+. Fill out the fields in the _Maven2 Scripting Tool Details_ panel.
++
+Fields marked with a red asterisk are mandatory.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Maven Script Location
+|Enter the path to the Maven2 start-up script on the target Machine linked to the Build/Deploy Environment (mvn shell script or mvn2.bat file). This field is mandatory.
+
+|Goals (phases)
+|Enter the Maven2 goals and/or phases to be executed by default.
+This field is mandatory.
+
+The goals and/or phases should be separated by a space and use the following format: ``[<goal(s)]
+[<Phase(s)]``. 
+
+For example, `clean
+dependency:copydependencies test`
+
+The goals and/or phases defined here will be used by default.
+If necessary, they can be overridden for the different build or deploy environments.
+In order to do so, add a build or deploy parameter "`alm.mvn2.goals`" with the desired value. 
+
+Please refer to <<ProjAdm_EnvParams.adoc#_environmentparams_create,Creating Environment Parameters>>.
+
+|Alternative Settings File
+|Enter the alternate path for the Maven2 User Settings File.
+It corresponds with the -s or --settings commandline option.
+This field is optional.
+
+If not provided, the default Settings File under home-directory/.m2/settings.xml will be taken into account.
+
+If necessary, this file can be overridden for the different build or deploy environments.
+In order to do so, add a build or deploy parameter "`alm.mvn2.setting`" with the desired value. 
+
+Please refer to <<ProjAdm_EnvParams.adoc#_environmentparams_create,Creating Environment Parameters>>.
+
+|Active Profiles
+|Enter the Activate Profiles.
+This is a comma-delimited list of profiles to activate.
+It corresponds with the -P or --activate-profiles Maven2 commandline option.
+This field is optional.
+
+The Activate Profiles defined here will be used by default.
+If necessary, they can be overridden for the different build or deploy environments.
+In order to do so, add a build or deploy parameter "`alm.mvn2.activate-profiles`" with the desired value. 
+
+Please refer to <<ProjAdm_EnvParams.adoc#_environmentparams_create,Creating Environment Parameters>>.
+
+|Commandline Options
+|Enter the Commandline Options, separated by a space.
+For example: the option "`-e`" will give you more information about error messages.
+This field is optional.
+
+Please note that you can NOT use the following options as they are already used by IKAN ALM: "`-X`" or "`--debug`" (Debug), "`-s`" or "`--settings`" (Settings File), "`-P`" or "`--activate-profiles`" (Activate Profiles) and "`-B`" or "`--batch-mode`".
+
+The Commandline Options defined here will be used by default.
+If necessary, they can be overridden for the different build or deploy environments.
+In order to do so, add a build or deploy parameter "`alm.mvn2.options`" with the desired value.
+
+Please refer to <<ProjAdm_EnvParams.adoc#_environmentparams_create,Creating Environment Parameters>>.
+
+|Build
+|Indicate whether or not this Scripting Tool can be linked to a Build Environment and thus be used to build code.
+
+|Deploy
+|Indicate whether or not this Scripting Tool can be linked to a Deploy Environment and thus be used to deploy Builds.
+
+|Log Format
+a|Select the format of the log file generated by this Maven2 Scripting Tool.
+The following options are available:
+
+* TXT: the log file will be a simple text file
+* XML: the log file will be an XML file
+
+TXT logs will be smaller and their content can be displayed while the Tool is executing.
+
+The display of XML logs can be customized by providing custom XSL templates.
+However, XML logs are larger and can only be displayed after the Tool has finished executing.
+
+|Debug
+|Select whether or not the Debug Option must be activated for the new Maven2 Scripting Tool.
+This corresponds with the -X or --debug Maven2 commandline option.
+
+If this option is activated, Maven2 will print additional debug information during the Build and Deploy actions.
+
+|Time-Out (Sec.)
+|In this field, enter a Time-Out value if required.
+
+If a value is provided, a running Maven2 Build or Deploy process will be interrupted after the defined number of seconds.
+In this way, "hanging" Build or Deploy processes are interrupted.
+
+If no value is provided, a running Maven2 Build or Deploy process will never be interrupted.
+|===
+
+. Once you filled out the fields as required, click _Create_.
++
+The newly created Maven2 Scripting Tool is added to the__ Maven2
+Scripting Tools Overview__ at the bottom of the screen.
++
+You can also click _Reset_ to empty the fields and restore the initial values.
+
+. Overriding the default parameters set in the Maven2 Scripting Tool
++
+You can override the default parameters set in the Maven2 Scripting Tool.
++
+If an "`alm.mvn2.goals`" parameter for a chosen environment (either build or deploy) is specified, it will be used instead of the default goals that were initially set in the Maven2 Scripting Tool.
++
+The same mechanism applies to the following parameters: Settings File (alm.mvn2.setting), Activate Profiles (alm.mvn2.activate-profiles) and Commandline Options (alm.mvn2.options).
++
+When creating a build or deploy parameter, you can also set the option "`__Editable__`" to __Yes__.
+In that case you will be able to modify the value of the parameters at the moment of creating the level request. <<ProjAdm_EnvParams.adoc#_environmentparams_edit,Editing Environment Parameters>>
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>
+
+|===
+
+[[_globadm_scriptingtool_maven2_overview]]
+=== The Maven2 Scripting Tools Overview Screen 
+(((Gradle ,Overview Screen))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
+
+. Specify _Maven2_ in the _Type_ field on the search panel.
++
+image::GlobAdm-ScriptingTools-Maven2-Overview.png[,870,273] 
++
+If required, use the other search criteria to refine the items displayed on the overview.
++
+The following options are available:
+* click the _Show/hide advanced options_ link to display or hide all available search criteria,
+* the _Search_ link to refresh the list based on the current search criteria,
+* the _Reset search_ link to clear the search fields.
+
+ . Verify the information on the _Scripting Tools Overview_ panel.
++
+For a detailed description of the fields, refer to <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtool_maven2_overview,The Maven2 Scripting Tools Overview Screen>>.
+
+ . Depending on your access rights, the following links may be available on the _Maven2 Scripting Tools Overview_ panel:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/edit.gif[,15,15] 
+|Edit
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows editing a Scripting Tool definition.
+
+|image:icons/delete.gif[,15,15] 
+|Delete
+
+This option is available to IKAN ALM Users with Global Administrator Access Rights.
+It allows deleting a Scripting Tool definition.
+
+|image:icons/history.gif[,15,15] 
+|History
+
+This option is available to all IKAN ALM Users.
+It allows displaying the History of all create, update and delete operations performed on a Scripting Tool
+|===
+
+[[_globadm_scriptingtool_maven2_edit]]
+=== Editing a Maven2 Scripting Tool Definition 
+(((Maven2 Scripting Tools ,Editing))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the Maven2 Scripting Tools your are looking for.
+
+. Click the image:icons/edit.gif[,15,15] _Edit_ link to change the selected Maven2 Scripting Tool.
++
+The following screen is displayed.
++
+image::GlobAdm-ScriptingTools-Maven2-Edit.png[,1029,649] 
++
+
+. Edit the fields as required.
++
+For a description of the fields, refer to <<GlobAdm_ScriptingTools.adoc#_pcreatemaven2scriptingtool,Creating a Maven2 Scripting Tool>>.
++
+
+[NOTE]
+====
+The _Connected Environments_ panel displays the Environments the Scripting Tool is linked to. 
+====
+
+. Click _Save_ to save your changes.
++
+You can also click:
+
+* _Refresh_ to retrieve the settings from the database.
+* _Back_ to return to the previous screen without saving the changes
+
+[[_globadm_scriptingtool_maven2_delete]]
+=== Deleting a Maven2 Scripting Tool Definition 
+(((Maven2 Scripting Tools ,Deleting))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the Maven2 Scripting Tools your are looking for.
+
+. Click the image:icons/delete.gif[,15,15]  _Delete_ link to delete the selected Maven2 Scripting Tool.
++
+The following screen is displayed:
++
+image::GlobAdm-ScriptingTools-Maven2-Delete.png[,605,287] 
++
+. Click _Delete_ to confirm the deletion.
++
+You can also click __Back __to return to the previous screen without deleting the entry.
++
+__Note:__ If the Maven2 Scripting Tool is linked to one or more Build or Deploy Environments, the following screen is displayed:
++
+image::GlobAdm-ScriptingTools-Maven2-Delete-Error.png[,790,510] 
++
+You need to assign another Scripting Tool to these Environments, before deleting this Maven2 Scripting Tool.
+
+[[_globadm_scriptingtool_maven2_history]]
+=== Viewing the Maven2 Scripting Tool History 
+(((Maven2 Scripting Tools ,History))) 
+
+. In the Global Administration context, select _Scripting Tools > Overview_.
++
+The overview of all defined Scripting Tools is displayed.
++
+Use the search criteria on the search panel to display the Maven2 Scripting Tools your are looking for.
+
+. Click the image:icons/history.gif[,15,15] _History_ link to display the _Maven2 Scripting Tool History View_.
++
+For more detailed information concerning this __History
+View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
+
+. Click __Back __to return to the _Scripting Tools Overview_ screen.
+
+
+[cols="1", frame="topbot"]
+|===
+
+a|_RELATED TOPICS_
+
+* <<GlobAdm_ScriptingTools.adoc#_globadm_scriptingtools,Scripting Tools>>
+* <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_editing,Editing Project Settings>>
+* <<ProjAdm_BuildEnv.adoc#_projadm_buildenvironments,Build Environments>>
+* <<ProjAdm_DeployEnv.adoc#_projadm_deployenvironments,Deploy Environments>>
+
+|===

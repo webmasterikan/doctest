@@ -1,0 +1,187 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_userinterfaceoverview]]
+= User Interface Overview 
+(((User Interface))) 
+
+Refer to the following sections for detailed information about:
+
+* <<UserInterface.adoc#_navigationikanalm,Navigating Through IKAN ALM>>
+* <<UserInterface.adoc#_regularikanalmscreens,The IKAN ALM Screen>>
+* <<UserInterface.adoc#_desktop_autorefresh,Auto Refresh>>
+
+
+[[_navigationikanalm]]
+== Navigating Through IKAN ALM  
+(((User Interface ,Navigation))) 
+
+=== Main Menu 
+The IKAN ALM user interface contains 3 main sections: the Desktop, the Project Administration section and the Global Administration section.
+Those sections can be accessed from the __Main
+Menu__, the blue toolbar on top of the screen.
+At the right, it contains the User Settings of the current user as well as the context-sensitive help pages.
+
+
+image::UserInterface_MainMenu_Sections.png[,1041,332] 
+
+=== Submenus
+When you select the Global or Project Administration option from the Main Menu, the dependent Submenu is displayed in the gray banner below the Main Menu.
+
+Submenu options followed by a small triangle contain a drop-down menu with extra selection options.
+
+__Links __appear on or below the Overview panels of the IKAN ALM screens.
+When you select them, another IKAN ALM screen is displayed.
+
+image::UserInterface_MainMenu_Navigating.png[,1054,378] 
+
+
+[[_regularikanalmscreens]]
+== The IKAN ALM Screen 
+(((User Interface ,Screens))) 
+
+An IKAN ALM screen contains the following main items.
+
+
+image::UserInterface-Screens.png[,1015,434] 
+
+=== Selected Menu Indication
+The __Selected Menu Indication __below the Submenu shows how the user switched to the displayed IKAN ALM Screen.
+The following format is used: _Main Menu Option > Submenu
+Option_
+
+
+image::UserInterface-SearchPanel.png[,965,156] 
+
+[[_babcjedaj8]]
+=== Search Panels
+_Search_ panels allow specifying search criteria, which restrict the list of items displayed in the _Overview_ panel.
+While defining those search criteria in comboboxes and text fields, you may use the standard * and ? wild card characters.
+The asterisk can represent 0, 1 or more characters.
+The question mark can represent exactly 1 character.
+
+By default, only the most common search criteria are displayed on the search panel.
+You can display all available search criteria by clicking the _Show advanced options_ link.
+
+Using the _Reset search_ link you can clear all search criteria and display the full list of items on the Overview.
+
+On some of the more complex search panels, you can save the search criteria as a filter, to be able to reuse them afterwards.
+If a filter already exists, you can select it from the drop-down menu.
+For more info on using filters, refer to the section <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Defining Search Filters>>.
+
+
+=== Create Panels
+image::UserInterface-CreatePanel.png[,490,266] 
+_Create_ panels allow defining new IKAN ALM Objects.
+Mandatory fields are marked with a red asterisk.
+
+Clicking the _Create_ button will create the object.
+The _Reset_ button will, depending on the object you are creating, clear the fields and/or restore the initial values.
+
+=== Overview Panels
+_Overview_ panels are displayed below the _Search_ or _Create_ panel.
+If no search criteria have been defined, the overview lists all IKAN ALM Objects of the selected type.
+If search criteria have been defined, only IKAN ALM Objects matching those search criteria are displayed.
+
+[NOTE]
+====
+All applied search criteria will be indicated in the footer of the results list.
+====
+
+The _Overview_ panel may list one or more links to the left of the listed IKAN ALM Objects.
+The options offered depend on the displayed IKAN ALM Objects and on the User's Access Rights.
+
+If you have User Access Rights, the following links are available:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Option
+| Description
+
+|image:icons/view.gif[,15,15]  View
+|When you select the __View__ option, a __View__ panel will be displayed below the __Selected
+Menu Indication__.
+
+You will not be able to edit any values.
+
+|image:icons/history.gif[,15,15]  History
+|This option is available on the Overview screens in Global Administration and Project Administration.
+It is also available in some detailed Global and Project Administration interfaces, e.g on the System Settings screen, or the Edit Project screen.
+
+All operations on objects and components related to those sections are logged in the IKAN ALM database.
+The _History_ link allows you to display their history of events.
+
+|image:icons/status.gif[,15,15]  Status
+|This option is available on the _Machine Overview_ screen.
+
+Use this link to display the activity status of the Machine and the last lines of output of the Agent Daemon process running on this Machine.
+|===
+
+
+If you have Project Administrator or Global Administrator Access Rights, the following additional options may be available:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Option
+| Description
+
+|image:icons/edit.gif[,15,15]  Edit
+|When you select the __Edit __option, an _Edit_ panel will be displayed below the __Selected
+Menu Indication__.
+
+You will be able to edit the required values and save the changes.
+
+|image:icons/delete.gif[,15,15]  Delete
+|When you select the _Delete_ option, a _Delete Confirmation_ panel will be displayed below the __Selected Menu Indication__.
+
+You will be able to confirm or cancel the deletion.
+
+|image:icons/lock.gif[,15,15]  Lock
+
+image:icons/unlock.gif[,15,15]  Unlock
+|This option is specific for the _Project_ panel and the _Project
+Streams Overview_ panel.
+
+|image:icons/hide.gif[,15,15]  Hide
+
+image:icons/show.gif[,15,15]  Show
+|These options are specific for the _Projects Overview_ and the _Project Streams
+Overview_ panels.
+
+They allow you to hide specific Projects or Project Streams on the search results Overview.
+
+|image:icons/optional.gif[,15,15]  Set Optional
+
+image:icons/required.gif[,15,15]  Set Required
+|These options are specific for the _Lifecycles Overview_ screen.
+
+They allow you to make Levels optional. 
+
+|image:icons/icon_editProperties.png[,15,15]  Edit Properties
+|This option is specific for the _Issue Tracking Systems Overview_ screen.
+
+It allows to modify the value of the property to ensure a correct usage of the Issue Tracking System.
+
+|image:icons/icon_disconnectUser.png[,15,15]  Disconnect User
+|This option is specific for the _Users Overview_ screen.
+
+It allows disconnecting Users before their session has timed out.
+|===
+
+[NOTE]
+====
+
+Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+====
+
+[[_desktop_autorefresh]]
+== Auto Refresh
+
+If your IKAN ALM Global Manager has defined an _Automatic Refresh Rate_ on the _Miscellaneous_ panel in the <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>, the _Auto Refresh_ option will be available on the Desktop, and on the Level Requests and Builds and Deploys overviews.
+
+If the __Auto Refresh__ option is activated, the screen will be refreshed following the interval specified by the Auto Refresh Rate specified in the System Settings.
+
+Select the option to toggle its status.
+
+
+image::Desktop-AutoRefresh-SubmenuOption.png[,1015,400] 

@@ -1,0 +1,556 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_desktop_packages]]
+= Paquets 
+(((Bureau ,Paquets)))  (((Paquets))) 
+
+Les Paquets vous permettent de déplacer manuellement un ou plusieurs fichiers individuels d`'une Branche dans le RCV (Branche principale ou Branche secondaire) à travers le Cycle de Vie d`'IKAN ALM.
+Pour chaque Branche dans un Projet de type "Paquets", un ou plusieurs Paquets peuvent être créés.
+Cela constitue la différence avec la procédure de travail originale dans une Branche d`'un Projet de type "Éditions Versions", pour laquelle un processus automatisé et configurable définit quelles Révisions des fichiers doivent être extraites de la Branche principale (head) ou de la Branche secondaire (branch) du RCV et traitées durant le Cycle de Vie.
+
+__D`'un point de vue logique__, les Paquets sont des vues partielles ou ponctuelles d`'une Branche, puisque le contenu (logique) d`'un Paquet peut évoluer entre 2 constructions et peut être réutilisé plusieurs fois, dans le temps, à travers le Cycle de Vie de la Branche à laquelle il appartient. 
+
+Les Paquets sont reliés à une seule Branche et peuvent contenir de Un à Tous les fichiers de la Branche dès qu`'ils ont une révision disponible dans le RCV.
+En outre, plusieurs Paquets d`'une Branche peuvent contenir le même fichier, si possible avec une révision différente.
+Cependant, il n`'y a pas de contrôle automatisé de développements concurrents sur un fichier entre les Paquets d`'une Branche.
+
+Tout le long du Cycle de Vie de la Branche, chaque Paquet dispose d`'un numéro de Construction dédié et progresse de manière indépendante des autres Paquets.
+
+[NOTE]
+====
+Les paquets ne disposent pas de statuts particuliers pour gérer leur évolution.
+(Exemple: verrouillé). Ils peuvent seulement être cachés, si souhaité.
+====
+
+__D`'un point de vue physique__, il s`'agit de constituer un ensemble de fichiers à extraire du RCV pendant l`'exécution d`'une Requête de construction afin de les soumettre aux phases de Construction et de Balisage pour finalement réaliser le Déploiement de cet ensemble.
+Dans un projet de type «Édition de Versions», les règles d`'extraction dans le RCV sont définies dans la Branche via le Type de Construction choisi et IKAN ALM assure automatiquement la sélection des objets.
+Tandis que dans un projet de type «Paquets», la sélection pour l`'extraction dans le RCV, est réalisée manuellement par les utilisateurs du projet sous la forme d`'un Paquet.
+(Voir la section Création d`'un Projet de type Paquets <<Desktop_Packages.adoc#_desktop_createpackage,Créer un paquet>> pour plus d`'informations).
+
+__D`'un point de vue technique__, les Projets sont définis et séparés pour utiliser soit des Paquets, soit des Éditions de Versions pour leurs branches et ne peuvent pas être mixtes.
+
+Pour des informations plus détaillées, se référer aux sections suivantes:
+
+* <<Desktop_Packages.adoc#_desktop_createpackage,Créer un paquet>>
+* <<Desktop_Packages.adoc#_desktop_packageoverview,Aperçu des paquets>>
+* <<Desktop_Packages.adoc#_desktop_viewpackage,Afficher les paramètres d`'un paquet>>
+* <<Desktop_Packages.adoc#_desktop_editpackage,Modifier la définition d`'un paquet>>
+* <<Desktop_Packages.adoc#_desktop_viewpackagehistory,Afficher l`'historique d`'un paquet>>
+* <<Desktop_Packages.adoc#_desktop_hideshowpackage,Montrer/cacher un paquet>>
+
+
+[[_desktop_createpackage]]
+== Créer un paquet 
+(((Paquets ,Créer))) 
+
+. Dans le Menu Principal, sélectionnez __Paquets > Créer un Paquet__.
++
+La fenêtre _Sélectionner une Branche_ s`'affiche.
++
+image::Desktop-Packages-SelectProjectStream.png[,977,611] 
++
+. Définissez les critères de recherche dans le panneau __Rechercher des Branches__.
++
+Si vous ne trouvez pas immédiatement la Branche dans laquelle vous voulez créer un Paquet, vous pouvez utiliser le panneau de recherche à gauche.
++
+Les critères de recherche suivants sont disponibles:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Critère de recherche
+| Description
+
+|Nom de projet
+|Sélectionnez le Projet duquel vous voulez afficher les Branches à partir d`'une liste déroulante.
+
+|Référentiel
+|Sélectionnez le Référentiel de Contrôle de Version à partir d`'une liste déroulante.
+
+|Type de Projet
+|Ce champ indique le Type de Projet __Paquets__.
+
+|Type de Branche
+|Sélectionnez le type de Branche: Branche principale ou Branche secondaire.
+
+|Situation
+a|Spécifiez la situation de la Branche.
+
+* En construction
+* Planifié
+* En développement
+* En test
+* Stable
+* Généralement disponible
+* Figé
+* Fermé
+
+|Verrouillée
+|Indiquez si vous voulez afficher les Branches verrouillées ou non.
+
+Par défaut, les Branches verrouillées ainsi que les Branches non-verrouillées sont affichées.
+
+|Montrer les Branches cachées
+|Indiquez si vous voulez afficher les Branches cachées ou non.
+
+Par défaut, les Branches cachées ne sont pas affichées.
+|===
++
+La liste des éléments montrés dans la structure arborescente à gauche, sera limitée aux Branches correspondant à ces critères de recherche.
++
+Utilisez le bouton _Réinitialiser_ pour nettoyer les champs de recherche.
+. Sélectionnez la Branche requise
++
+Cliquez sur l`'icône image:icons/ExpandProjectStream.gif[,10,10]  pour ouvrir l`'arborescence du Projet correspondant pour développer et afficher les Branches lui appartenant.
++
+Cochez la Branche que vous souhaitez utiliser et cliquez sur le bouton __Sélectionner une Branche__. 
++
+L`'écran _Créer un Paquet_ s`'affiche.
+Le nom de la Branche sélectionnée est automatiquement saisi.
+Si vous voulez sélectionner un autre Branche, cliquez sur le bouton image:icons/icon_SelectProjectStream.png[,25,15]  à droite pour retourner à la fenêtre __Sélectionner une Branche__. 
+. Saisissez le nom et, optionnellement, une description pour le nouveau Paquet. Ensuite cliquez sur le bouton _Créer_ pour confirmer la création du Paquet.
++
+L`'écran _Créer un Paquet_ s`'affiche.
++
+image::Desktop-Packages-CreatePackage-Create.png[,494,300] 
++
+L'onglet _Modification Fichiers_ de l'écran _Détails du Paquet_ s'affiche.
++
+Un Paquet qui vient d`'être créé est vide.
+Pour plus d`'informations concernant l'ajout des Fichiers et des Révisions au Paquet que vous venez de créer, se référer à la section indiquée <<Desktop_Packages.adoc#_desktop_packagedetails,Détails du Paquet>>. 
+
+
+[[_desktop_packageoverview]]
+== Aperçu des paquets 
+(((Paquets ,Aperçu))) 
+
+. Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Paquets__.
++
+L`'écran _Aperçu des Paquets_ s`'affiche.
++
+image::Desktop-Packages-PackagesOverview.png[,884,421] 
++
+. Utilisez les critères de recherche dans le panneau de recherche _Paquets_ pour n'afficher que les Paquets qui vous intéressent.
++
+image::Desktop-Packages-PackagesOverview-SearchPanel.png[,895,128] 
++
+Les options suivantes sont disponibles:
+
+* Montrer/cacher les options avancées: utilisez cette option pour afficher ou masquer tous les critères de recherche disponibles.
+* Rechercher: en principe, il n'est pas nécessaire de cliquer sur l'option __Rechercher__. Les résultats dans l'aperçu seront automatiquement synchronisés en fonction des critères de recherche sélectionnés.
+* Réinitialiser la recherche: utilisez cette option pour supprimer tous les critères de recherche et pour afficher la liste de tous les éléments.
+* Sélectionnez un Filtre existant à partir de la liste déroulante.
+* Sauvegarder le Filtre: utilisez cette option pour sauvegarder les critères de recherche actuels pour une utilisation ultérieure.
++
+Pour plus d'informations concernant l'utilisation des panneaux de recherche et des Filtres, se référer aux sections <<UserInterface.adoc#_babcjedaj8,Les panneaux de recherche>> et <<Desktop_PersonalSettings.adoc#_desktop_searchfilters,Définir des Filtres de recherche>>.
+
+. En fonction de vos droits d'accès, les liens suivants peuvent être disponibles:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|image:icons/view.gif[,15,15] 
+|Afficher
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher les informations du Paquet sélectionné et les Révisions qu`'il contient.
+
+<<Desktop_Packages.adoc#_desktop_viewpackage,Afficher les paramètres d`'un paquet>>
+
+|image:icons/edit.gif[,15,15] 
+|Modifier
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Utilisateur de Projet.
+Elle permet de modifier les informations du Paquet sélectionné et d`'accéder aux Révisions de fichiers relatives au Paquets.
+
+<<Desktop_Packages.adoc#_desktop_editpackage,Modifier la définition d`'un paquet>>
+
+|image:icons/show.gif[,15,15]  / image:images/icons/hide.gif[,15,15] 
+|Montrer / Cacher
+
+Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Utilisateur de Projet.
+Elle permet de cacher le Paquet sélectionné.
+
+<<Desktop_Packages.adoc#_desktop_hideshowpackage,Montrer/cacher un paquet>>
+
+|image:icons/history.gif[,15,15] 
+|Historique
+
+Cette option est disponible pour tous les Utilisateurs IKAN ALM.
+Elle permet d`'afficher l`'historique de toutes les opérations de création, de modification ou de suppression relatives aux Fichiers d`'un Paquet.
+
+<<Desktop_Packages.adoc#_desktop_viewpackagehistory,Afficher l`'historique d`'un paquet>>
+|===
+
+
+[NOTE]
+====
+Les colonnes marquées de l`'icône image:icons/icon_sort.png[,15,15]  peuvent être rangées par ordre alphabétique (ascendant ou descendant). 
+====
+
+[[_desktop_viewpackage]]
+== Afficher les paramètres d`'un paquet 
+(((Paquets ,Afficher les paramètres))) 
+
+. Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Paquets__.
+
+. Cliquez sur l'icône image:icons/view.gif[,15,15] _Afficher_ dans le panneau _Aperçu des Paquets_.
++
+L'onglet _Résumé_ s'affiche sur l'écran __Détails du Paquet__.
++
+image::Desktop-Packages-ViewPackage.png[,905,565] 
++
+. Vérifiez les Paramètres. 
++
+L'écran _Détails du Paquet_ contient 4 onglets:
++
+
+[cols="1,1", frame="topbot"]
+|===
+
+|Résumé
+|Cet onglet affiche l'information de base concernant le Paquet.
+
+|Vue Fichiers
+|Cet onglet affiche le contenu du Paquet.
+
+|Modification Fichiers
+|Cet onglet permet de modifier le contenu du Paquet.
+
+|Actions du Cycle de vie
+|Cet onglet affiche les actions exécutées dans le Cycle de vie.
+
+Ici vous pouvez également lancer les Requêtes de Niveau pour le Paquet sélectionné.
+|===
++
+Pour plus d'informations concernant les différents onglets, se référer à la section <<Desktop_Packages.adoc#_desktop_packagedetails,Détails du Paquet>>.
+
+[[_desktop_editpackage]]
+== Modifier la définition d`'un paquet 
+(((Paquets ,Modifier))) 
+
+. Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Paquets__.
+
+. Pour y accéder, cliquez sur l'icône image:icons/edit.gif[,15,15] _Modifier_ dans le panneau _Aperçu des Paquets_.
++
+L'onglet _Modification Fichiers_ de l'écran _Détails du Paquet_ s'affiche.
++
+image::Desktop-Packages-EditPackage.png[,876,504] 
++
+Cet onglet permet de modifier les Révisions des Fichiers contenues dans le Paquet. 
++
+Pour plus d'informations concernant cette procédure, se référer à la section <<Desktop_Packages.adoc#_desktop_packagedetails_editcontents,Modification Fichiers>>
++
+Autres boutons disponibles:
+
+* __Actualiser__: pour actualiser les informations dans les panneaux d`'information
+* __Précédent__: pour retourner à l`'écran _Aperçu des paquets_
+
++
+
+[NOTE]
+====
+
+Si l`'option__ Actualisation
+automatique __est activée, l'écran sera actualisé en fonction du délai de rafraîchissement défini dans les Paramètres Système. <<UserInterface.adoc#_desktop_autorefresh,Actualisation automatique>>
+====
+
+. Cliquez sur le bouton _Sauvegarder_ pour confirmer vos modifications.
++
+Autres boutons disponibles:
+* __Supprimer__: pour désélectionner toutes les Révisions des fichiers Dans le mode de recherche, tous les fichiers (et les répertoires) correspondants aux critères de recherche seront désélectionnés.
++
+Notez qu'en sélectionnant en même temps le bouton Supprimer et la touche CTRL, tous les fichiers dans l'arborescence seront sélectionnés.
+* __Actualiser__: pour actualiser les informations dans les panneaux d`'information
+
+
+[[_desktop_hideshowpackage]]
+== Montrer/cacher un paquet 
+(((Paquets ,Montrer)))  (((Paquets ,Cacher))) 
+
+En définissant un Paquet comme "`caché`", par défaut, il ne sera plus affiché dans les panneaux d`'aperçu.
+Par exemple, ses Requêtes de Niveau ne seront, par défaut, plus affichées dans les aperçus des Requêtes de Niveau. 
+
+Cela peut s`'avérer très utile pour ne plus afficher d`'anciens Paquets sans perdre les informations historiques (Requêtes de Niveau, ...) associées à ces Paquets.
+
+. Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Paquets__.
+
+. Cliquez sur le lien image:icons/hide.gif[,15,15] _Cacher_ devant le Paquet que vous voulez cacher.
++
+L`'icône changera en image:icons/show.gif[,15,15] . 
++
+
+[NOTE]
+====
+Les Paquets cachés ne seront ni visibles dans les aperçus des Requêtes de Niveau, des Approbations, des Constructions et des Déploiements, ni dans l`'écran _Créer une Requête
+de niveau: Sélectionner un Niveau_ lors de la création d`'une Requête de Niveau pour un Projet de type "`Paquets`".
+====
+
+. Pour "`montrer`" un Paquet caché, cliquez sur le lien image:icons/show.gif[,15,15]  _Montrer_.
++
+L`'icône changera en image:icons/hide.gif[,15,15] . 
++
+
+[NOTE]
+====
+Un critère de sélection _Montrer les Paquets_ cachés est disponible dans le panneau _Rechercher un Paquet_ pour pouvoir spécifier si vous voulez afficher les Paquets cachés.
+====
+
+[[_desktop_viewpackagehistory]]
+== Afficher l`'historique d`'un paquet 
+(((Paquets ,Historique))) 
+
+. Dans le Menu Principal, sélectionnez __Paquets > Aperçu des Paquets__.
+
+. Cliquez sur le lien image:icons/history.gif[,15,15]  _Historique __dans le panneau _Aperçu des Paquets_ pour afficher l`'écran __Aperçu de l`'Historique du Paquet_.
++
+Pour une description détaillée de l`'__Aperçu de
+l`'Historique du Paquet__, se référer à la section <<App_HistoryEventLogging.adoc#_historyeventlogging,Enregistrement de l`'historique et des événements>>.
++
+Cliquez sur le bouton _Retour Aperçu des Paquets_ pour retourner à l`'écran précédent.
+
+
+[[_desktop_packagedetails]]
+== Détails du Paquet
+
+L'écran _Détails du Paquet_ contient les informations détaillées concernant le Paquet sélectionné. 
+
+Cet écran est structuré comme suit:
+
+. Indication du statut
++
+L'en-tête affiche le nom, l'OID et la description du Paquet sélectionné, l'indication si le Paquet est caché ou non, ainsi que les liens vers le Projet et la Branche dans lesquels le Paquet est utilisé.
+
+. Des onglets contenant des informations plus détaillées
++
+En-dessous de l'indication du statut, plusieurs onglets sont disponibles.
+Chacun de ces onglets affiche des informations supplémentaires concernant les Requêtes de niveau.
+Par défaut, l'onglet _Résumé_ s'affiche.
++
+Pour plus d'informations, consultez une des sections suivantes.
+
+* <<Desktop_Packages.adoc#_desktop_packagedetails_summary,L'onglet "Résumé">>
+* <<Desktop_Packages.adoc#_desktop_packagedetails_viewcontents,Vue Fichiers>>
+* <<Desktop_Packages.adoc#_desktop_packagedetails_editcontents,Modification Fichiers>>
+* <<Desktop_Packages.adoc#_desktop_packagedetails_lifecycleactions,Actions du Cycle de vie>>
+
+. Les liens "Précédent" et "Actualiser"
+* Utilisez le lien _Précédent_ pour retourner à l'écran précédent.
+* Utilisez le lien _Actualiser_ pour mettre à jour les informations affichées. Ce lien récupère l'onglet actuellement sélectionné, ainsi que l'information de l'en-tête. 
+
+. L'option Actualisation automatique
++
+L'option _Actualisation automatique_ n'est utile que sur les onglets _Résumé_ et __Actions Cycle de vie__.
++
+Pour plus d`'informations concernant l'option __Actualisation
+automatique__, se référer à la section <<UserInterface.adoc#_desktop_autorefresh,Actualisation automatique>>.
+
+
+[[_desktop_packagedetails_summary]]
+=== L'onglet "Résumé"
+
+Les informations concernant le Paquet et les actions possibles sont réparties sur deux panneaux différents.
+
+image::Desktop-PackageDetails-Tab-Summary.png[,892,483] 
+
+
+[[_desktop_packagedetails_actions]]
+==== Le panneau "Actions"
+
+
+image::Desktop-PackageDetails-Panel-Acttions.png[,330,254] 
+
+Le panneau _Actions_ contient le lien __Modifier un Paquet__.
+Ce lien affichera une fenêtre permettant de modifier le nom et la description du Paquet.
+
+image::Desktop-PackageDetails-Panel-Acttions_EditPackage.png[,478,236] 
+
+
+[[_desktop_packagedetails_info]]
+==== Le panneau "Info"
+
+image::Desktop-PackageDetails-Panel-Info.png[,858,273] 
+
+Ce panneau affiche les informations qui se trouvent dans l'en-tête ainsi que quelques Informations supplémentaires.
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Branche
+a|Ce champ contient l`'identification de la Branche.
+
+Ce nom est composé comme suit:
+
+* Nom du Projet
+* Type de la Branche: H (Head) pour une Branche principale ou B (Branch) pour une Branche secondaire
+* Préfixe de la Branche, optionnellement suivi du Suffixe dans le cas d`'une Branche secondaire
+
+Exemple: `Webpad H_1-0`
+
+|OID Paquet
+|Ce champ contient le numéro séquentiel d`'identification du Paquet.
+
+|Nom
+|Ce champ contient la dénomination du Paquet.
+
+|Description
+|Ce champ contient la description du Paquet.
+
+|Caché
+|Ce champ indique si le Paquet est caché ou non. 
+
+Par défaut, un Paquet qui vient d`'être créé n`'est pas caché.
+Pour plus d`'informations concernant: Cacher des Paquets, se référer à la section <<Desktop_Packages.adoc#_desktop_hideshowpackage,Montrer/cacher un paquet>>.
+
+|Groupe de Paquets de Construction
+|Si applicable, ce champ contient le Groupe de Paquets de Construction associé au Paquet.
+Pour plus d`'informations, se référer à la section <<Desktop_PackageGroups.adoc#_desktop_packagegroups,Groupes de Paquets de Construction>>.
+|===
+
+[[_desktop_packagedetails_latestlevelrequests]]
+==== Le panneau "Dernières Requêtes de niveau"
+
+
+image::Desktop-PackageDetails-Panel-LatestLR.png[,930,154] 
+
+Ce panneau affiche les dix dernières Requêtes de niveau exécutées pour le Paquet sélectionné.
+Dans cette liste, vous pouvez cliquer sur le lien _OID_ d'une des Requêtes de niveau pour en afficher les détails.
+Si vous cliquez sur le Numéro de construction, l'Historique de Construction de cette Requête de niveau sera affichée.
+
+[[_desktop_packagedetails_viewcontents]]
+=== Vue Fichiers
+
+image::Desktop-PackageDetails-Tab-ViewContents.png[,939,431] 
+
+L'onglet _Vue Fichiers_ liste toutes les Révisions des Fichiers actuellement contenues dans le Paquet.
+
+Les champs suivants sont disponibles:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Champ
+| Description
+
+|Chemin
+|Ce champ contient le chemin du répertoire contenant le fichier.
+
+|Nom
+|Ce champ contient le nom de la Révision du fichier dans le Paquet.
+
+|Révision
+|Ce champ contient le numéro de Révision sélectionné dans le RCV pour ce fichier.
+Ce champ peut rester vide, signifiant que la dernière Révision du fichier est extraite au moment de la construction du Paquet.
+|===
+
+[[_desktop_packagedetails_editcontents]]
+=== Modification Fichiers 
+
+image::Desktop-PackageDetails-Tab-EditContents.png[,849,500] 
+
+Dans cet onglet, vous pouvez modifier le contenu du Paquet sélectionné.
+
+[NOTE]
+====
+Les informations dans le panneau _Infos
+des Révisions des fichiers_ affichent l`'arborescence du Projet fournie par le RCV.
+Utilisez le bouton _Réinitialiser_ pour afficher la dernière situation.
+
+Utilisez le bouton _Supprimer_ pour désélectionner tous les éléments dans le Paquet.
+Si vous cliquez sur le bouton _Supprimer_ tout en appuyant la touche __CTRL__, tous les éléments dans le Paquet seront sélectionnés.
+====
+
+. Utilisez le champ _Rechercher_ pour sélectionner des Révisions des fichiers spécifiques.
++
+Vous pouvez utiliser le champ de recherche pour sélectionner des Révisions de fichiers spécifiques.
+Vous pouvez utiliser les caractères génériques '\*' and '`?`' à toute position.
+Exemples de valeurs de recherche: ``foo.*``, ou `?oo.txt` ou combinés `f??.*`
++
+image::Desktop-Packages-EditPackage_Search.png[,873,499] 
++
+Pour sortir du mode de recherche et réafficher tous les fichiers et répertoires dans l'arborescence, cliquez sur l'icône image:icons/delete.gif[,15,15] __ Sortie recherche__. 
+
+. Sélectionnez les Révisions des fichiers que vous voulez ajouter au Paquet et cliquez sur le bouton __Sauvegarder__.
++
+Les informations dans le panneau _Infos
+des Révisions des fichiers_ affichent l`'arborescence du Projet fournie par le RCV.
+Utilisez le bouton _Réinitialiser_ pour afficher la dernière situation. 
++
+Utilisez le bouton _Supprimer_ pour désélectionner tous les éléments dans le Paquet.
+Si vous cliquez sur le bouton _Supprimer_ tout en appuyant la touche __CTRL__, tous les éléments dans le Paquet seront sélectionnés.
++
+
+[NOTE]
+====
+Des fichiers qui ont été supprimés dans le RCV sont affichés barrés dans l`'arborescence.
+
+Au niveau des répertoires, un point d`'exclamation rouge est affiché après le nom.
+====
++
+Les actions suivantes sont possibles:
+
+* Ajouter un fichier ou un répertoire à un Paquet
++
+Pour sélectionner un fichier ou un répertoire, ouvrez l`'arborescence du Projet correspondant en cliquant sur l`'icône image:icons/icon_SelectRevision.png[,13,12]  pour développer et afficher tous les répertoires et les fichiers lui appartenant.
+Cochez le(s) répertoire(s) ou le(s) fichier(s) que vous souhaitez intégrer dans le Paquet.
++
+image::Desktop-Packages-SelectProjectStream-AddFile.png[,467,141] 
++
+* Ajouter une Révision spécifique d`'un fichier sélectionné à un Paquet
++
+Pour sélectionner une Révision spécifique d`'un fichier, cliquez sur la flèche image:icons/icon_SelectRevision.png[,13,12]  à droite du nom de fichier sélectionné.
+La fenêtre _Sélectionner une Révision_ s`'affiche.
+Sélectionnez la Révision requise dans la liste déroulante et cliquez sur le bouton __Sélectionner__.
+Le numéro de la Révision sera affiché à côté du fichier sélectionné.
++
+image::Desktop-Packages-SelectProjectStream-AddRevision.png[,469,201] 
++
+__Note: __Si vous ne sélectionnez pas de Révision spécifique, la dernière Révision sera utilisée au moment de la construction du Paquet.
+* Supprimer un fichier ou un répertoire d`'un Paquet
++
+Pour supprimer un fichier ou un répertoire d`'un Paquet, désélectionnez-le dans l`'arborescence.
+Le nom sera affiché en rouge.
++
+Pour désélectionner tous les fichiers du Paquet en cours de création, utilisez le bouton __Supprimer__.
++
+image::Desktop-Packages-SelectProjectStream-DeleteFile.png[,467,138] 
++
+__Note: __Si un fichier ou un répertoire a été supprimé dans le RCV, un point d`'exclamation rouge est affiché derrière le nom du fichier ou du répertoire.
+Le fichier supprimé est barré.
+Il est conseillé de supprimer le fichier ou le répertoire du Paquet afin de le synchroniser avec la situation dans le RCV.
++
+image::Desktop-Packages-SelectProjectStream-DeletedVCRFile.png[,469,108] 
++
+* Remplacer une Révision spécifique d`'un fichier du Paquet par la dernière Révision de ce fichier
++
+Pour remplacer une Révision spécifique d`'un fichier par la dernière Révision de ce fichier, cliquez sur la flèche image:icons/icon_SelectRevision.png[,13,12]  à droite du numéro de Révision.
+La fenêtre _Sélectionner une Révision_ s`'affiche.
+Désélectionnez la Révision en sélectionnant la valeur vide en haut de la liste déroulante et cliquez sur le bouton __Sélectionner__.
+Le numéro de la Révision disparaîtra et le fichier sera suivi d`'une flèche rouge image:icons/icon_deselectRevision.png[,13,12] .
++
+image::Desktop-Packages-SelectProjectStream-DeleteRevision.png[,467,110] 
++
+* Modifier la Révision d`'un fichier du Paquet
++
+Pour modifier la Révision d`'un fichier par une autre Révision spécifique, cliquez sur la flèche image:icons/icon_SelectRevision.png[,13,12]  à droite du numéro de révision.
+La fenêtre _Sélectionner une Révision_ s`'affiche.
+Sélectionnez la Révision requise dans la liste déroulante et cliquez sur le bouton __Sélectionner__.
+Le nouveau numéro de révision sera affiché à côté du fichier sélectionné.
++
+image::Desktop-Packages-SelectProjectStream-ModifyRevision.png[,471,108] 
+
+
+[[_desktop_packagedetails_lifecycleactions]]
+=== Actions du Cycle de vie
+
+image::Desktop-PackageDetails-Tab-LifecycleActions.png[,946,500] 
+
+Ce panneau affiche les dernières Requêtes de niveau pour chacun des Niveaux définis dans le Cycle de vie.
+
+Utilisez les icônes dans la colonne "Action" pour démarrer une Requête de niveau pour un des Niveaux.
+Si vous cliquez sur une icône d'action, l'écran "Créer des Requêtes de niveau" s'affichera. 
+
+Pour plus d`'informations concernant la création de Requêtes de niveau, se référer à la section <<Desktop_LevelRequests.adoc#_desktop_lr_creatinglevelrequest,Création de requêtes de niveau>>.

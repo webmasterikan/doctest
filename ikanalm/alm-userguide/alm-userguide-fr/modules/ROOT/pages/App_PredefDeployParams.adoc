@@ -1,0 +1,170 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_predefineddeployparameters]]
+= Paramètres de déploiement prédéfinis 
+(((Paramètres prédéfinis ,Déploiement)))  (((Paramètres de déploiement ,Paramètres de déploiement prédéfinis))) 
+
+Le tableau suivant offre un aperçu des Paramètres de déploiement prédéfinis:
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Paramètre
+| Description
+
+|alm.build.environmentName
+|Ce paramètre donne le nom de l'Environnement de construction sur lequel le résultat de construction déployé a été construit.
+
+|alm.build.filename
+|Ce Paramètre donne le nom du fichier de construction qui sera décompressé sur l`'emplacement Source et ensuite déployé. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
+
+|alm.build.machineName
+|Ce Paramètre donne le nom de la Machine sur laquelle le Résultat de Construction a été construit.
+
+|alm.build.number
+|Ce Paramètre donne le numéro de la construction à déployer.
+
+Il s`'agit d`'un numéro séquentiel incrémenté par IKAN ALM lors de la création d`'une Requête de Niveau de construction.
+
+|alm.build.oid
+|Ce Paramètre donne l`'Identifiant Unique de la Construction à déployer.
+
+|alm.build.startDateTime
+a|Ce Paramètre donne la date et l`'heure d`'exécution de la Construction à déployer.
+Il s`'agit du moment où le script de construction a commencé.
+
+Le format utilisé est date.heure.
+Le format de la date est celui utilisé par le serveur hébergeant IKAN ALM:
+
+* _AAAA/MM/JJ_ pour l`'Europe
+* _MM/JJ/AAAA_ pour les Etats-Unis
+
+|alm.deploy.environmentName
+|Ce Paramètre donne la dénomination de l`'Environnement de Déploiement sur lequel le Déploiement sera exécuté.
+
+|alm.deploy.machineName
+|Ce Paramètre donne la dénomination de la Machine sur laquelle le Déploiement sera exécuté.
+
+|alm.deploy.oid
+|Ce Paramètre donne l`'Identifiant Unique du Déploiement.
+
+|alm.deploy.startDateTime
+a|Ce Paramètre donne la date et l`'heure d`'exécution du Déploiement (c`'est-à-dire le moment auquel le script de déploiement a commencé).
+
+Le format utilisé est date.heure.
+Le format de la date est celui utilisé par le serveur hébergeant IKAN ALM:
+
+* _AAAA/MM/JJ_ pour l`'Europe
+* _MM/JJ/AAAA_ pour les Etats-Unis
+
+|alm.levelRequest.actionType
+a|Ce Paramètre donne le Type d`'action de Requête de Niveau.
+Les Types d`'action possibles sont:
+
+* Scheduled Build (Construction planifiée)
+* Forced Build (Construction forcée)
+* Requested Build (Construction demandée)
+* Deliver Build (Construction délivrée)
+* Rollback Build (Construction restaurée)
+* Dependency Build (Dépendance de construction)
+
+|alm.levelRequest.levelName
+|Ce Paramètre donne le nom du Niveau sur lequel la Requête de Niveau est exécutée.
+
+|alm.levelRequest.oid
+|Ce Paramètre donne l`'Identifiant Unique de la Requête de Niveau.
+
+|alm.levelRequest.requester
+|Uniquement disponible s'il y a un Utilisateur Demandeur.
+
+Ce paramètre donne le nom du Demandeur.
+
+|alm.levelRequest.startDateTime
+a|Ce Paramètre donne la date et l`'heure d`'exécution de la Requête de Niveau actuelle.
+
+Le format utilisé est date.heure.
+Le format de la date est celui utilisé par le serveur hébergeant IKAN ALM:
+
+* _AAAA/MM/JJ_ pour l`'Europe
+* _MM/JJ/AAAA_ pour les Etats-Unis
+
+|alm.levelRequest.vcrTag
+|Ce Paramètre donne le tag de la Requête de Niveau.
+Le tag est défini comme __projectstream_prefix_b+buildoid_suffix__, _projectstream_ étant remplacé par _H_ pour la Branche Principale ou par _B_ pour la Branche Secondaire.
+
+|alm.package.oid
+|Uniquement disponible dans le cas d'un Paquet.
+
+Ce Paramètre donne l`'Identifiant Unique du Paquet.
+
+|alm.previous.build.filename
+|Ce Paramètre donne la dénomination du résultat de Construction précédent déployé sur ce Niveau.
+
+Exemple: _DEMOCVS_B_b_1_test_b2_CONTBUILD.zip_
+
+|alm.previous.build.number
+|Ce Paramètre donne le numéro du résultat de Construction précédent déployé sur ce Niveau.
+
+|alm.previous.levelRequest.vcrTag
+|Ce Paramètre donne le tag de la dernière Requête de Niveau exécutée correctement sur ce Niveau.
+
+|alm.project.buildToolTypeName
+a|Ce Paramètre donne le Type d`'Outil de Déploiement utilisé:
+
+* ANT
+* GRADLE
+* NANT
+* MAVEN2
+
+|alm.project.deployToolTypeName
+a|Ce Paramètre donne le Type d`'Outil de Déploiement utilisé:
+
+* ANT
+* GRADLE
+* NANT
+* MAVEN2
+
+|alm.project.description
+|Ce Paramètre donne la description du Projet dans IKAN ALM.
+
+|alm.project.name
+|Ce Paramètre donne la dénomination du Projet dans IKAN ALM.
+Cette dénomination peut être différente de la dénomination du Projet dans le Référentiel de Contrôle de Version (RCV) utilisé (voir alm.project.vcrProjectName)
+
+|alm.package.name
+|Ce Paramètre n`'est disponible que pour les Projets de type "`Paquets`". Il donne le nom du Paquet associé à la Requête de Niveau.
+
+|alm.project.vcrName
+|Ce Paramètre donne la dénomination du RCV (telle que définie dans la section __Administration
+Globale__) auquel le Projet est relié.
+
+|alm.project.vcrProjectName
+|Ce Paramètre donne la dénomination du Projet dans le RCV.
+Cette dénomination peut être différente de la dénomination du Projet dans IKAN ALM (voir alm.project.name).
+
+|alm.projectStream.buildPrefix
+|Ce Paramètre donne le préfixe de Construction défini pour la Branche.
+
+|alm.projectStream.buildSuffix
+|Ce Paramètre donne le suffixe de Construction défini pour la Branche.
+
+|alm.projectStream.description
+|Ce Paramètre donne la description de la Branche.
+
+|alm.projectStream.type
+a|Ce Paramètre donne le Type de Branche:
+
+* H = Branche Principale
+* B = Branche Secondaire
+
+|alm.projectStream.vcrBranchId
+|Ce Paramètre donne l`'Identifiant Unique de la Branche dans le RCV défini dans la Branche dans IKAN ALM (uniquement pour les Branches Secondaires).
+
+|Source
+|Ce Paramètre donne l`'emplacement Source tel que défini pour l`'Environnement de Déploiement actuel.
+Ce nom sera complété avec le numéro du alm.deploy.oid pour créer le répertoire de travail complet.
+
+|target
+|Ce Paramètre donne l`'emplacement de la Cible tel que défini pour l`'Environnement de Déploiement actuel, c`'est-à-dire la Cible de l`'action de déploiement. 
+|===
+

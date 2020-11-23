@@ -1,0 +1,367 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+
+[[_desktop_outstandingapprovals]]
+= Approvals 
+(((Approvals)))  
+(((Desktop ,Approvals))) 
+
+There are 2 types of Approvals which may be set on Test or Production Levels (<<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Approvals>>). 
+
+* A _Pre-Approval_ is created when delivering a Level Request to the Level, i.e., before the Level Request is executed.
+* A _Post-Approval_ is created after the Level Request has been executed, enabling to verify if the actions on the Level and/or the Environments were successful.
+
+
+A Pre-Approval enables a verification moment before executing a Level Request on a Test or Production Level.
+It adds an extra condition to the execution of the Level Request: not only the Requested Date/Time must be expired, but the Pre-Approval must also be granted by an IKAN ALM User.
+As long as both conditions are not fulfilled, the Level Request will not be handled.
+When a Pre-Approval is rejected, the Level Request will never be handled. 
+
+A Post-Approval enables a verification moment after the execution of the Level Request on a Test or Production Level.
+It adds an extra condition to the determination of the end status of a Level Request: not only must all Build(s) or Deploy(s) have been ended successfully, but the Post-Approval must also be granted by an IKAN ALM User.
+As long as the Post-Approval is not handled, the Level Request status will not be set to warning or success.
+When a Post-Approval is rejected, the Level Request can never be delivered to the next Level in the Lifecycle.
+
+Every approval is protected by a User Group: only a User belonging to that User Group may grant or reject the Approval.
+
+For example, assume a Lifecycle with one Build, Test and Production Level: a Post-Approval on the Test Level will generate a verification moment after the Level Request is executed on the Test Level.
+This enables the people from Test to judge whether the Level Request is qualified to deliver to the Production Level.
+Additionally, a Pre-Approval is set on the Production Level.
+This generates a verification moment before the Level Request is executed on the Production Level, enabling people from Production or management to judge whether everything is OK before "`going into Production`".
+
+It is also possible to have a hierarchy of Approvals on a Level, e.g., with one or more Pre- and one or more Post-Approvals.
+Every Approval will result in a notification (mail or net send) to the Users belonging to the protecting User Group, asking them to grant or reject the Approval via the Outstanding Approvals interface.
+
+Refer to the following sections for more information about:
+
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsscreen,The Outstanding Approvals>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>
+* <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting Outstanding Approvals>>
+
+
+[[_desktop_outstandingapprovalsscreen]]
+== The Outstanding Approvals 
+(((Approvals ,Outstanding Approvals)))  
+(((Outstanding Approvals))) 
+[[_pworkwithoutstandingapprovals]]
+. Select _Approvals > Outstanding Approvals_ on the Main Menu.
++
+The __Outstanding Approvals__ screen displays all currently outstanding Approvals which you (or another member of your User Group) can approve or reject.
++
+image::Desktop-OutstandingApprovals-Overview.png[,967,139] 
++
+. Verify the information.
++
+The Overview only lists the Level Requests you are entitled to approve or reject.
+For each displayed Outstanding Approval, the following information is available:
++
+
+[NOTE]
+====
+Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
+====
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Status
+|This field displays the image:icons/waiting_approval.gif[,15,15] _Awaiting Approval_ status.
+
+This status means that you (or another member of your User Group) can approve or reject this Approval.
+
+|Type
+a|This field contains the Approval Type.
+There are two possibilities:
+
+* image:icons/icon_preApproval.png[,15,15] _(Pre-Approval)_
++
+This Approval must be given before the Sources or Build Result are delivered to the requested Level.
+* image:icons/icon_postApproval.png[,15,15] _(Post-Approval)_
++
+This Approval must be given at the end of the Level Request, after the Build(s) or Deploy(s) linked to the Level Request have been executed.
+
+|Project Stream
+a|This name in this field is composed as follows:
+
+* Project name
+* Project Stream type: H for Head and B for Branch.
+* Prefix and, optionally, suffix of the Project Stream
+
+Example: Webpad H_1-0
+
+With: H = Head and 1-0 = Prefix
+
+|Level Name
+a|This field contains the name and type of the Level to which a Build will be delivered as a result of this Level Request.
+
+There are two possible types:
+
+* __Test__: The Approval is associated with a TEST Level.
+* __Production__: The Approval is associated with a PRODUCTION Level.
+
+See <<ProjAdm_Levels.adoc#_projadm_levels,Levels>>
+
+|Level Request OID
+|This field contains the sequential number of the Level Request.
+
+All Level Requests defined for a Project are numbered sequentially.
+
+|Level Request Status
+a|This field contains the image:icons/waiting_approval.gif[,15,15]  Level Request status icon.
+
+There are 2 possibilities: 
+
+* Awaiting Pre-Approval
+* Awaiting Post-Approval
+
+|Level Request VCR Tag
+|This field contains the VCR Tag of the Level Request.
+This Tag matches a Build with its source code in the VCR.
+
+The format of the VCR Tag normally matches the Tag Template defined for the Stream. See <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstreams,Project Streams>>
+
+However, the user can override the default VCR Tag while creating a Level Request, so that the Tag Format can be completely different.
+
+|Creation Date/Time
+|This field contains the Date and Time when the Level Request was created.
+
+|Request Date/Time
+|This field contains the Date and Time when the execution of the Level Request was asked.
+The Level Request will not be handled before this point in time is reached.
+|===
+. Use the appropriate link for approving or rejecting an Approval.
++
+The following links are available in front of each Outstanding Approval:
+
+* image:icons/approve.gif[,15,15] __ Approve__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>
+* image:icons/reject.gif[,15,15] __ Reject__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting Outstanding Approvals>>
+
+
+[[_desktop_outstandingapprovalsapprove]]
+== Approving Outstanding Approvals 
+(((Approvals ,Approving)))  
+(((Outstanding Approvals ,Approving))) 
+
+. Select _Approvals > Outstanding Approvals_ on the Main Menu.
++
+
+[NOTE]
+====
+The _Approve_ and _Reject_ links are also available on the _Approvals Overview_ screen.
+====
+. Click the image:icons/approve.gif[,15,15] _Approve_ link to approve the Level Request.
++
+The _Approve Level Request_ pop-up window is displayed:
++
+image::Desktop-OutstandingApprovals-Approve.png[,604,456] 
++
+. Verify the information on the _Level Approval List_ panel.
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Type
+a|This field contains the Approval Type.
+There are two possibilities:
+
+* image:icons/icon_preApproval.png[,15,15] _Pre-Approval_
+* image:icons/icon_postApproval.png[,15,15] _Post-Approval_
+
+|Status
+a|This field contains the approval status.
+
+The following status icons are available:
+
+* image:icons/icon_approvalWaitingApproval.png[,15,15] __ Awaiting Approval__: you (or another member of your User Group) can grant or reject this Approval.
+* image:icons/icon_approvalWaitingPredecessor.png[,15,15] __ Awaiting Predecessor Approval__: a higher-level Approval (having a lower sequential number) must be granted, before you (or another member of your User Group) can grant or reject this Approval.
+* image:icons/icon_approvalApproved.png[,15,15] __ Approved__: the Approval has been granted
+* image:icons/icon_approvalRejected.png[,15,15] __ Rejected__: the Approval has been rejected
+* image:icons/icon_approvalCancelled.png[,15,15] __ Canceled__: a preceding Approval has been rejected or, in case of a canceled Post-Approval, the Level Request has been aborted or canceled in the meantime.
+* image:icons/icon_approvalWaitingLRFinish.png[,15,15] __ Awaiting Level Request Finish__: this status indicates that the Level Request has not been executed yet.
+
+|User Group
+|This field contains the name of the IKAN ALM User Group of which a member must grant or reject the approval
+
+|User
+|This field contains the ID of the User, who granted or rejected the approval.
+This field is empty for outstanding approvals.
+
+|Approval Date/Time
+|This field contains the date and time, when the approval was granted or rejected.
+This field is empty for outstanding approvals.
+
+|Reason
+|This field contains the Reason of approval or rejection, as defined by the user.
+This field is empty for outstanding approvals.
+|===
++
+. Optionally, enter the reason for approving the Level Request on the _Approve Level Request_ panel.
+. Click _Approve_ to confirm the action.
++
+You can also click _Cancel_ to close the pop-up window without approving the Level Request.
+
+
+[[_desktop_outstandingapprovalsreject]]
+== Rejecting Outstanding Approvals 
+(((Approvals ,Rejecting)))  
+(((Outstanding Approvals ,Rejecting))) 
+
+. Select _Approvals > Outstanding Approvals_ on the Main Menu.
++
+
+[NOTE]
+====
+The _Approve_ and _Reject_ links are also available on the _Approvals Overview_ screen.
+====
+. Click the image:icons/reject.gif[,15,15] _Reject_ link to reject the Level Request.
++
+The _Reject Level Request_ pop-up window is displayed.
++
+image::Desktop-OutstandingApprovals-Reject.png[,600,457] 
++
+. Verify the information on the _Level Approval List_ panel.
++
+The _Level Approval List_ displays additional information concerning the Approvals. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>
+. Enter the reason for rejecting the Level Request on the _Approve Level Request_ panel.
+. Click _Reject_ to confirm the action.
++
+You can also click _Cancel_ to close the pop-up window without rejecting the Level Request.
+
+[[_desktop_approvals_overview]] 
+== The Approvals Overview Screen 
+(((Approvals ,Overview Screen)))  
+(((Outstanding Approvals ,Overview Screen))) 
+
+. Select _Approvals > Overview Approvals_ on the Main Menu.
++
+The following screen is displayed:
++
+image::Desktop-Approvals-Overview.png[,950,498] 
++
+. Use the search criteria on the _Search Level Approvals_ panel to only display the Approvals you are looking for.
++
+image::Approvals-SearchPanel.png[,855,270] 
++
+The following options are available:
+
+* Search: in principle it is not necessary to click the _Search_ option. The results on the overview will be automatically synchronized in function of the selected criteria.
+* Reset search: to clear all search criteria and display the full list of items.
+. Verify the Approval information fields.
++
+
+[NOTE]
+====
+Outstanding Approvals for you (or other members of your User Group) are preceded by the _Approve_ and _Reject_ icons.
+
+For more information, refer to <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>and <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting Outstanding Approvals>>.
+====
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Status
+a|This field contains the approval status.
+
+The following status icons are available:
+
+* image:icons/waiting_approval.gif[,15,15] __Awaiting Approval__: you (or another member of your User Group) can grant or reject this Approval.
+* image:icons/icon_approvalWaitingPredecessor.png[,15,15] __Awaiting Predecessor Approval__: a higher-level Approval (having a lower sequential number) must be granted, before you (or another member of your User Group) can grant or reject this Approval.
+* image:icons/icon_approvalApproved.png[,15,15] __Approved__: the Approval has been granted
+* image:icons/icon_approvalRejected.png[,15,15] __Rejected__: the Approval has been rejected
+* image:icons/icon_approvalCancelled.png[,15,15] __Canceled__: a preceding Approval has been rejected or, in case of a canceled Post-Approval, the Level Request has been aborted or canceled in the meantime.
+* image:icons/icon_approvalWaitingLRFinish.png[,15,15] __Awaiting Level Request Finish__: this status indicates that the Level Request has not been executed yet.
+
+|Type
+a|This field contains the approval type.
+
+There are two possibilities:
+
+* image:icons/icon_preApproval.png[,15,15] __ (Pre-Approval__)
++
+This Approval must be granted before the Source code or the Build result are delivered to the Level.
+* image:icons/icon_postApproval.png[,15,15] __ (Post-Approval__)
++
+This approval must be granted at the end of the Level Request, after the Builds or Deploys associated with the Level Request have been executed.
+
+|Project Stream
+a|This name in this field is composed as follows:
+
+* Project name
+* Project Stream type: H for Head and B for Branch.
+* Prefix and, optionally, suffix of the Project Stream
+
+Example: Webpad H_1-0
+
+With: H = Head and 1-0 = Prefix
+
+|Level Name
+a|This field contains the name and type of the Level, to which a Build will be delivered as a result of this Level Request.
+
+See <<ProjAdm_Levels.adoc#_projadm_levels,Levels>>
+
+There are two possible types:
+
+* __Test__: The Approval is associated with a TEST Level.
+* __Production__: The Approval is associated with a PRODUCTION Level.
+
+See <<ProjAdm_Levels.adoc#_projadm_levels,Levels>>
+
+|Level Request OID
+|This field contains the sequential number of the Level Request.
+
+All Level Requests defined for a Project are numbered sequentially.
+
+Select this link to switch to the _Level Request
+Detail_ screen.
+
+|Level Request Status
+a|This field contains the Level Request Status.
+The following status indication icons are possible:
+
+* image:icons/succes.gif[,15,15]  (Success): the Level Request is executed successfully.
+* image:icons/warning.gif[,15,15]  (Warning): the Level Request has been successfully executed, but at least one non-critical Level, Build or Deploy Phase failed.
+* image:icons/fail.gif[,15,15]  (Fail): the execution of the Level Request as a whole failed. This is due to the failure of one or more critical Level, Build or Deploy Phases.
+* image:icons/run.gif[,15,15]  (Run): the Level Request is being executed at this moment.
+* image:icons/run.gif[,15,15]  (Aborting): the Level Request is being aborted at this moment.
+* image:icons/waiting_datetime.gif[,15,15]  (Awaiting requested Date/Time): the requested execution is in the future.
+* image:icons/waiting_approval.gif[,15,15]  (Awaiting Pre-Approval or Awaiting Post-Approval): the Level Request is awaiting a Pre- or Post-Approval.
+* image:icons/reject.gif[,15,15]  (Rejected): An Approval associated with the Level Request was rejected. The Level Request will never be executed.
+* image:icons/cancelled.gif[,15,15]  (Canceled): the Level Request has been canceled before it was run. It will never be executed.
+* image:icons/aborted.gif[,15,15]  (Aborted): the Level Request has been aborted during execution. The results (such as Build Results) that were already available at the time of the abort have been cleaned up and cannot be used.
+
+|Level Request VCR Tag
+|This field contains the VCR Tag of the Level Request.
+This Tag matches a Build with its source code in the VCR.
+
+The format of the VCR Tag normally matches the Tag Template defined for the Stream. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projectstreams_overviewscreen,Project Streams Overview>>
+
+However, the user can override the default VCR Tag while creating a Level Request (and is obliged to do so for a Build Level Request in a Tag Based Project Stream), so that the Tag Format can be completely different.
+
+|Creation Date/Time
+|This field contains the Date and Time when the Level Request was created.
+
+|Request Date/Time
+|This field contains the Date and Time when the execution of the Level Request was asked.
+The Level Request will not be handled before this point in time is reached.
+|===
++
+. Verify the details of a specific Level Request.
++
+Click the Level Request`'s _OID_ link in front of the required Level Request.
++
+For more information, refer to the section <<Desktop_LevelRequests.adoc#_dekstop_lr_detailedoverview,Level Request Detail>>.
+. Use the appropriate link for approving or rejecting an Approval.
++
+The following links are available in front of each Outstanding Approval:
+
+* image:icons/approve.gif[,15,15] __ Approve__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,Approving Outstanding Approvals>>
+* image:icons/reject.gif[,15,15] __ Reject__. <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,Rejecting Outstanding Approvals>>

@@ -1,0 +1,731 @@
+// The imagesdir attribute is only needed to display images during offline editing. Antora neglects the attribute.
+:imagesdir: ../images
+:description: Using Phase Parameters
+:revnumber: v1.0
+:revdate: 01.10.2016
+
+= Using Phase Parameters
+
+== Purpose
+
+This document is intended for advanced users of IKAN ALM.
+
+It describes how to optimize the use of the IKAN ALM Phase Parameters. 
+
+=== IKAN ALM Phases
+
+IKAN ALM Phases are predefined, parameter-driven, reusable building blocks.
+They represent specific tasks or actions that are executed to automate the Lifecycle Management Process.
+
+For more general information on IKAN ALM Phases, refer to the appendix _Phases - General Information_ in the _IKAN ALM User Guide_ or the document __Using
+and Developing Phases__.
+Both can be found on the http://www.ikanalm.com/infocenter/documentation.html[IKAN ALM website].
+
+=== IKAN ALM Setup - example
+
+Throughout this document, we will use the following IKAN ALM setup to illustrate the different aspects of defining and refining the value of the Phase Parameters.
+
+In our setup, we have two Machines and on each of them one or more Environments have been defined.
+Machine 1 is using three Environments, for Build, Test and Acceptance, and Machine 2 is being used for Production.
+
+
+image::Algemeen_IKANALM-Setup.png[,1020,441] 
+
+Each Environment uses one or more Phases.
+
+When you import the Phase into IKAN ALM, the initial parameter values from the script are set in the Global Definition of the Phase.
+The first thing to do will be to verify and adapt those values to your own configuration. 
+
+Next, you link the Phase to the Build and/or Deploy Environments where you want to use the Phase.
+The initial values will be set as the values of the Environment Phase Parameters.
+
+When that is done, and if required, you can refine the parameter values on Machine and Environment level.
+On top of that, Machine and Environment Parameter can be defined as editable and dynamic so hat their value can be chosen at the moment the Phase is executed.
+
+As the Environment Phase Parameter value is the value that will be used when creating the Level Request, you might need to override that value by the value of the Machine or Environment Parameter value. 
+
+How all that is done, is explained in the remaining of this document:
+
+* <<_prerequisites>>
+* <<_id16al9c0l06b>>
+* <<_chdbabajb8>>
+* <<_id16al9c0l0im>>
+* <<_id16al9c0k0em>>
+
+
+== Step-by Step Overview
+
+The process of defining and refining the parameter values in IKAN ALM can be schematised as follows.
+
+
+image::flowchart_zonderborder.png[,1010,1030] 
+
+[[_prerequisites]]
+== Introduction
+
+=== General Definition of the Phase
+
+All parameters used by the Phase are defined in the phase definition XML file that is included in the phase bundle.
+
+When you import an IKAN ALM phase, all defined parameters will be listed with the following information: name, default value, description, mandatory and/or secure and integration type.
+
+
+image::GlobalDefinition_Phase.png[,758,534] 
+
+
+=== Modifying the Default Initial Values in IKAN ALM
+
+Before adding the imported Phase to a Build or Deploy environment, you can modify the default values at Global Administration level.
+
+Those default values will be used to initialize the Environment Phase Parameters when you add the Phase to a Build or Deploy Environment.
+
+=== Refining the Parameter Values on Different Levels
+
+The value of the Phase Parameter can be specified at different levels.
+
+==== Environment Phase Level
+
+At the moment the Phase is linked to an Environment, the Environment Phase Parameters are set.
+Their value is taken from the initial value specified in the Global Definition of the Phase.
+
+_Important:_ The value of the Environment Phase Parameter is the value that will be used when executing the Phase (see also <<_chdcaiidh4>>.
+
+If required, you can modify this value for a particular Environment Phase.
+For example, suppose the default value of the Environment Phase Parameter is set to MYSQL, but for the Test Environment you are using DB2.
+In that case, you could modify the value of the Environment Phase Parameter.
+
+For more information, refer to the section <<_chdbabajb8>>.
+
+[NOTE]
+====
+The value of an Environment Phase Parameter is always fixed.
+If you want to be able to choose the value at the moment you create the Level Request, you will have to use a dynamic or editable Machine or Environment Parameter.
+====
+
+==== Machine Level
+
+Machine Parameters are parameters defined for a specific Machine.
+They will be automatically available for all Environments using that Machine.
+This avoids having to define (Build or Deploy) Environment Parameters for each Environment linked to a Machine.
+
+Machine Parameters can be defined as editable or dynamic.
+This allows the user to choose their value at the moment they create the Level Request.
+
+For example, suppose you have several machines, all using MYSQL except for one machine which is using HSQLDB.
+In that case it will be interesting to define a Machine Parameter for that particular machine.
+
+For more information, refer to the section <<_id16al9c0l0im>>.
+
+==== Environment Level
+
+Environment Parameters are parameters defined for a specific Build or Deploy Environment.
+
+Environment Parameters can be defined as editable or dynamic.
+This allows the user to choose their value at the moment they create the Level Request.
+
+To elaborate further on our example: suppose that for one particular environment you are using a different database.
+If the value of that database is fixed, you can modify the value of the Environment Phase Parameter for that particular environment (as explained above) OR create an Environment Parameter.
+If you want to be able to choose the value at the moment you create the Level Request, you must use an Environment Parameter as the value of an Environment Phase Parameters is always fixed.
+In case of a dynamic parameter, the first value in the list will be the default value.
+
+For more information, refer to the section <<_id16al9c0k0em>>.
+
+[[_chdcaiidh4]]
+=== Order of Precedence
+
+*Very important:* when processing a Phase in the context of a specific Level Request, the value of the Environment Phase Parameter is ALWAYS USED. 
+
+If the value of a Machine or Environment parameter should be used instead, you will need to replace the value of the Environment Phase Parameter by a reference to the value of the Machine or Environment Parameter that need to be used. <<_chdggicce4>>
+
+
+image::OrderOfPrecedence_zonderboder.png[,1025,603] 
+
+The above example, shows the values for the "`rdbms.type`" parameter used by the UpdateDB Phase.
+
+In the phase definition XML file, the value of the parameter is set to ORACLE.
+
+The initial value has been modified to MYSQL before linking the Phase to the Environment, so the value of the Environment Phase Parameter is set to MYSQL.
+
+On Machine Level, the value of the parameter is set to HSQLDB for Machine 1.
+On the Test environment, a dynamic Environment Parameter has been created.
+
+As the value of the Environment Phase Parameter always takes precedence, when running a Level Request, the value MYSQL will be used.
+
+To enforce the usage of a Machine or Environment Parameter, you have to use the solution explained in the section <<_chdggicce4>>.
+
+[[_chdggicce4]]
+=== Influencing the Order of Precedence
+
+How to proceed to make sure that instead of the value of the original Environment Phase Parameter the value of the Machine or Environment Parameter will be used?
+
+To do so, you will need to replace the value of the Environment Phase Parameter with a reference to the value of the Machine or Environment Parameter value.
+The syntax to be used is: ``$\{ReplacingParameter}``.
+
+For more information, refer to the section <<_chddggjfj3>>.
+
+=== Best Practices
+
+==== Unique Name
+
+When using Ant Phases, the name of the replacing Machine or Environment Parameter must be unique, as Ant will not accept a reference to a parameter with the same name.
+
+==== Naming Convention
+
+We recommend you to use the name of the original Phase parameter preceded by the machine or environment name.
+That way it will be easy to track where the value used by the Level Request has been taken from, e.g. ``ikanalm004v.rdbms.type``.
+
+See also <<_chdcgeajg8>>.
+
+=== Parameter characteristics
+
+Environment Phase Parameters always have a fixed value. 
+
+Machine and Environment Parameters on the other had can have the following additional characteristics:
+
+* _Editable Parameters_ have a default value, but you can change this value each time you create a Level Request.
+* _Dynamic Parameters_ dispose of a list of allowed values. You can select one of these allowed values from the drop-down list, when you create a Level Request.
+
+
+See also <<_chdhecjea3>> or <<_chdhhbedh3>>.
+
+=== Example UpdateDB Phase: Parameter "`rdbms.type`"
+
+Parameter values used when creating the Level Request WITHOUT using a reference to a Machine or Environment Parameter
+
+
+
+[cols="1,1,1,1,1,1", frame="topbot", options="header"]
+|===
+| Refinement Level 5+|Value for the "`rdbms.type`" parameter at the different Levels
+
+|General Phase Definition at import
+|ORACLE
+|ORACLE
+|ORACLE
+|ORACLE
+|ORACLE
+
+|Modified Initial Value (Global Admin)
+|
+|MYSQL
+|MYSQL
+|MYSQL
+|MYSQL
+
+|Machine Parameter
+|
+|
+|HSQLDB
+|HSQLDB
+|HSQLDB
+
+|(Build/Deploy) Environment Parameter
+|
+|
+|
+|DB2
+|DB2
+
+|Modified Environment Phase Parameter
+|
+|
+|
+|
+|MSSQL
+
+|*Value you want to use when creating the Level Request*
+|*ORACLE*
+|*MYSQL*
+|*HSQLDB*
+|*DB2*
+|*MSSQL*
+
+|*Value that will be used when creating the Level Request (due to the Order of Precedence)*
+|*ORACLE*
+|*ORACLE*
+|*ORACLE*
+|*ORACLE*
+|*MSSQL*
+|===
+
+
+Parameter values used when creating the Level Request USING a reference to a Machine or Environment Parameter
+
+[cols="1,1,1,1,1,1", frame="topbot", options="header"]
+|===
+| Refinement Level 5+|Value for the "`rdbms.type`" parameter at the different Levels
+
+|General Phase Definition at import
+|ORACLE
+|ORACLE
+|ORACLE
+|ORACLE
+|ORACLE
+
+
+|Modified Initial Value (Global Admin)
+|
+|MYSQL
+|MYSQL
+|MYSQL
+|MYSQL
+
+|Machine Parameter,  e.g., machine.rdbms.type
+|
+|
+|HSQLDB
+|HSQLDB
+|HSQLDB
+
+|(Build/Deploy) Environment Parameter,  e.g., environment.rdbms.type
+|
+|
+|
+|DB2
+|DB2
+
+|Modified Environment Phase Parameter
+|
+|
+|
+|
+|MSSQL
+
+|Value of the Environment Phase Parameter
+|ORACLE
+|MYSQL
+|${machine.rdbms.type}
+|${environment.rdbms.type}
+|MSSQL
+
+|*Value that will be used when creating the Level Request (using references)*
+|*ORACLE*
+|*MYSQL*
+|*HSQLDB*
+|*DB2*
+|*MSSQL*
+|===
+
+
+For more detailed information, refer to the following sections:
+
+* General Phase Definition at import: <<_chdcbbabf9>>
+* Modified Initial Value (Global Admin): <<_chdjfffec5>>
+* Machine Parameters: <<_id16al9c0l0im>>
+* (Build/Deploy) Environment Parameters: <<_chdbabajb8>>
+* Environment Phase Parameters: <<_babbicadj1>>, <<_chddggjfj3>>
+* Final value used when creating the Level Request: <<_chdcgeajg8>>
+
+[[_id16al9c0l06b]]
+==== Initial Parameter Values
+
+[[_chdcbbabf9]]
+===== Overview
+
+When you import a Phase into IKAN ALM, the initial parameter values from the script are set in the Global Definition of the Phase.
+Next, when you add the Phase to a Build and/or Deploy Environment, those initial values will be set as the values of the Environment Phase Parameters, which will be used when executing the Phase.
+
+Of course, it is unlikely that all initial parameter values are correct for your configuration.
+So, the first thing to do will be to verify and, if required, modify the values.
+
+This must be done BEFORE you link the Phase to a Build and/or Deploy Environment.
+Once the Phase has been linked to an Environment, modifying the default value will not update the value everywhere the Phase is being used.
+
+[[_chdjfffec5]]
+===== Modifying the Initial ParameterValues
+
+[NOTE]
+====
+To modify the initial parameter values you need Global Administrator Access Rights.
+====
+
+
+. Select __Global Administration Phases  Overview__.
+. Click the image:icons/edit.gif[,15,15] _Edit_ icon in front of the Phase whose initial parameter values need to be modified.
++
+The _Edit Phase_ screen will be displayed.
++
+image::Phase_PhaseParameters-Overview.png[,750,543] 
++
+. Click the image:icons/edit.gif[,15,15]  Edit icon in front of the parameter whose value you want to modify.
++
+The _Edit Phase Parameter_ window will be displayed.
++
+image::Phase_PhaseParameter-EditInitialValue.png[,509,373] 
++
+. Modify the _Default value_ and click __Save__.
++
+The modified default value will be displayed in the Phase Parameters overview.
++
+When linking the Phase to an Environment, all default values will be set as Environment Phase Parameter values.
++
+The Environment Phase Parameter value is the parameter value that will be used when executing a Level Request using the Phase.
+
+[[_chdbabajb8]]
+==== Environment Phase Parameters
+
+[[_chdehejbh1]]
+===== The Environment Phases Overview
+
+When a Phase is linked to a Build and/or Deploy Environment, the initial values specified in the Global Definition of the Phase (<<_id16al9c0l06b>>) are set as the values of the Environment Phase Parameters.
+
+You can verify the value of the Environment Phase Parameters on the _Phases Parameters Overview_ in the Build or Deploy Environment section for the Project.
+
+. On the main menu, select __Project Administration__.
+. On the Projects Overview panel, click the image:icons/edit.gif[,15,15] _Edit_ icon in front of the Project.
+. Select _Build (Deploy) Environments  Overview_ from the submenu.
++
+The _Build (Deploy) Environment Phases Overview_ will be displayed.
++
+image::BuildEnv_Overview.png[,951,214] 
++
+. On the _Build (Deploy) Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _ Edit_ Phases icon in front of the required Phase.
++
+The _Phases Overview_ will be displayed.
++
+image::BuildEnv_PhasesOverview.png[,920,474] 
++
+. Click the image:icons/icon_viewparameters.png[,15,15] _View Parameters_ icon in front of the required Phase.
++
+The _Phase Parameter Overview_ will be displayed.
++
+image::BuildEnv_PhaseParametersOverview.png[,894,779] 
+
+
+[[_babbicadj1]]
+===== Modifying the Environment PhaseParameter Value
+
+The recommended way of working is to adapt the initial values imported BEFORE you link the Phase to an Environment. 
+
+After having linked the Phase to one or more Environments, it is still possible to modify the value on Project Level.
+
+. Go to the _Phase Parameter Overview_ screen for the required Phase, as described in the previous section (<<_chdehejbh1>>.)
++
+image::EnvPhaseParameter-Edit.png[,859,755] 
++
+. Click the image:icons/edit.gif[,15,15] _Edit_ icon in front of the parameter.
++
+The _Edit Parameter Value_ window will be displayed.
++
+image::Edit_EnvPhaseParameter.png[,271,149] 
++
+. Modify the value of the parameter and click __Save__.
++
+The value of the Environment Phase Parameter will now be modified for that particular environment only.
+. Alternative method for modifying the parameter value for more than one environment:
++
+On the _Phase Parameters_ panel, click the image:icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit
+Global Phase Parameter_ icon in front of the parameter.
++
+Clicking this icon will display the _Edit Phase
+Parameter_ window showing all Environments the Phase Parameter is used on.
++
+
+[NOTE]
+====
+For this functionality, you need Global Administrator Access Rights.
+====
+. Next, you can use the image:icons/Phase_EditEnvPhaseParameter.png[,15,15] _Edit Environment Phase Parameter_ links on the _Connected Environment Parameters_ panel as a shortcut to easily switch to the same parameter on another Environment. This is particularly easy if you need to modify several parameters.
++
+image::Edit_Global_EnvPhaseParameter.png[,505,527] 
+
+
+[NOTE]
+====
+If you have Global Administrator Access Rights, you can modify the value of Environment Phase Parameters for several environments at once using the _Mass Edit_ functionality in the Global Definition of the Phase.
+For more information, refer to the __IKAN ALM User Guide__.
+====
+[[_id16al9c0l0im]]
+==== Machine Parameters
+
+If a parameter value is valid for an entire machine, it might be interesting to create a Machine Parameter.
+
+[NOTE]
+====
+When used in combination with Ant Phases, the name of the Machine Parameter must be unique as Ant will not accept a reference to a parameter with the same name.
+====
+
+[[_chdhecjea3]]
+===== Creating a Machine Parameter
+
+[NOTE]
+====
+For creating Machine Parameters, you need Global Administrator Access Rights.
+====
+
+. Select __Global Administration  Machines Machine Parameters__.
+. Click the image:icons/icon_createparameter.png[,15,15] _Create Parameter_ link in front of the Machine to display the _Create Machine Parameter_ window.
++
+image::Create_MachineParameter.png[,388,350] 
+. Fill out the fields for the new Machine Parameter.
++
+The following fields are available.
+The _Key_ field is mandatory:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+|Machine
+|This field displays the current Machine.
+
+|Secure
+|This field indicates whether the Parameter is secured or not.
+
+|Key
+|In this field, enter the Key (Name) for the Machine Parameter.
+
+__Important__: this name must be unique.
+
+We recommend you to use the name of the original Phase parameter preceded by the machine name.
+That way it will be easy to track where the value used by the Level Request has been taken from, e.g. `ikanalm004v.rdbms.type`.
+
+|Value
+a|In this field, enter the value(s) for the new Machine Parameter.
+
+The following possibilities apply:
+
+* Enter the fixed value, if you are creating a non-editable Machine Parameter.
+* Enter the default value, if you are creating an editable Machine Parameter.
+* Enter the list of possible values, separated by a semicolon (;), if you are creating a dynamic Machine Parameter (for example: ``DB2;ORACLE;HSQLB``). Subsequently, these values can be selected from a drop-down list when creating a Level Request
+
+
+|Repeat Value
+|Required field for secured Machine Parameters: repeat the secured value.
+
+|Description
+|In this field, enter a description for the Parameter.
+
+*Note:* We recommend you to put in the description which Phase is using this parameter.
+
+|Mandatory
+|If the original Phase Parameter is mandatory, this new Machine Parameter should be set to mandatory as well.
+
+|Editable
+a|
+* Select__ Yes__, if the new Machine Parameter must be defined as editable. When you create a Level Request, you can accept the default value (the one you enter in the Value field during creation) or specify the value of your choice for the Parameter.
+* Select __No__, if the new Machine Parameter should not be defined as editable. When you create a Level Request, only the preset value (the one you entered in the Value field during creation) for this Parameter can be offered to the Build/Deploy Script.
+
+This field is not provided for secured Machine Parameters.
+
+|Dynamic
+a|
+* Select__ Yes__, if the new Machine Parameter must be defined as dynamic. When you create a Level Request, you can select one of the predefined values from the drop-down list. These are the values you enter in the Value field during creation and which you separate by a semicolon (;). The selected value will be offered to the Build/Deploy Script.
++
+The first value in this list will be the default value, i.e., the first value on the drop-down list.
+* Select __No__, if the new Machine Parameter should not be defined as dynamic.
+
+
+This field is not provided for secured Machine Parameters.
+|===
+
+. Click__ Create__ to confirm the creation of the Machine Parameter.
++
+image::Create_MachineParameter_2.png[,388,350] 
+
+
+[[_chddggjfj3]]
+===== Replacing the Value of the EnvironmentPhase Parameter
+
+As explained before, the value of the Environment Phase Parameter is always used when executing the Phase.
+To enforce the usage of the Machine Parameter, you have to create a reference to its value.
+
+. Go to the _Phase Parameter Overview_ as explained in the section <<_babbicadj1>>
+. Click the image:icons/edit.gif[,15,15] _Edit_ icon in front of the parameter.
++
+image::EnvPhaseParameter-Edit.png[,859,755] 
++
+The _Edit Parameter Value_ window will be displayed.
++
+image::Edit_EnvPhaseParameter.png[,271,149] 
++
+. Replace the value of the parameter with a reference to the Machine Parameter and click __Save__.
++
+The syntax of the parameter is: $\{replacingParameter}. 
++
+In our example, the reference would be `${ikanalmdemo004v.rdbms.type}`.
++
+image::CreateReference_MachineParameter.png[,271,149] 
++
+When creating the Level Request, the value of the Machine Parameter will replace the value of the Environment Phase Parameter.
+
+
+[NOTE]
+====
+For more information on alternative ways of editing the value of the Environment Phase Parameter, refer to the section <<_babbicadj1>>.
+====
+[[_id16al9c0k0em]]
+==== Environment Parameters
+
+Parameters can be further refined on Environment level.
+
+Here, the same principle applies as for the Machine Parameters. 
+
+[NOTE]
+====
+When used in combination with Ant Phases, the name of the Environment Parameter must be unique as Ant will not accept a reference to a parameter with the same name.
+====
+
+[[_chdhhbedh3]]
+===== Creating an Environment Parameter
+
+[NOTE]
+====
+For creating Environment Parameters, you need Global Administrator Access Rights.
+====
+
+. Go to the _Projects Overview_ in the _Project Administration_ section and select the required project.
+. From the submenu, select __Build (Deploy) Environments)  Build (Deploy) Parameters__.
+. Click the image:icons/icon_createparameter.png[,15,15] _Create Parameter_ link in front of the Environment for which you want to create a Parameter.
++
+image::Create_EnvParameter.png[,383,385] 
++
+. Fill out the fields for the Environment Parameter.
++
+The following fields are available.
+The _Key_ field is mandatory:
++
+
+[cols="1,1", frame="topbot", options="header"]
+|===
+| Field
+| Meaning
+
+
+|Environment
+|This field displays the name of the current Environment.
+
+|Type
+|This field displays the type of Parameter being created: _Build_ or __Deploy__.
+
+|Secure
+|This field indicates whether the Parameter is secured or not.
+
+|Key
+|In this field, enter the Key (Name) for the Environment Parameter.
+
+*Important*: this name must be unique.
+
+We recommend you to use the name of the original Phase parameter preceded by the environment name.
+That way it will be easier to track where the value used by the Level Request has been taken from, e.g. ``testdeploy.rdbms.type``.
+
+|Value
+a|In this field, enter the value(s) for the new Environment Parameter.
+
+The following possibilities apply:
+
+* Enter the fixed value, if you are creating a non-editable Environment Parameter.
+* Enter the default value, if you are creating an editable Environment Parameter.
+* Enter the list of possible values, separated by a semicolon (;), if you are creating a dynamic Environment Parameter (for example: ``DB2;ORACLE;HSQLB``). Subsequently, these values can be selected from a drop-down list when creating a Level Request
+
+
+|Repeat Value
+|Required field for secured Environment Parameters: repeat the secured value.
+
+|Description
+|In this field, enter a description for the Parameter.
+
+*Note:* We recommend you to put in the description which Phase is using this parameter.
+
+|Mandatory
+|If the original Phase Parameter is mandatory, this new Environment Parameter should be set to mandatory as well.
+
+|Editable
+a|
+* Select__ Yes__, if the new Environment Parameter must be defined as editable. When you create a Level Request for this Environment, you can accept the default value (the one you enter in the Value field during creation) or define a value yourself for this Environment Parameter.
+* Select __No__, if the new Environment Parameter should not be defined as editable. When you create a Level Request for this Environment, only the preset value (the one you enter in the Value field during creation) for this Environment Parameter can be offered to the Script.
+
+
+This field is not provided for secured Environment Parameters.
+
+|Dynamic
+a|
+* Select __Yes__, if the new Environment Parameter must be defined as dynamic. When you create a Level Request for this Environment, you can select one of the predefined values from the drop-down list. These are the values you enter in the Value field during creation and which you separate by a semicolon (;). The selected value will be offered to the Script.
++
+The first value in this list will be the default value, i.e., the first value on the drop-down list.
+* Select __No__, if the new Environment Parameter should not be defined as dynamic.
+
+This field is not provided for secured Environment Parameters.
+|===
+
+. Click __Create __to confirm the creation of the Environment Parameter.
++
+image::Create_EnvParameter_2.png[,394,379] 
+
+
+===== Replacing the Value of the Environment Phase Parameter
+
+Just as for the Machine Parameters, the value of the Environment Parameter will be overridden by the value of the Environment Phase Parameter is when executing the Phase.
+To enforce the usage of the Environment Parameter, you have to create a reference to its value.
+
+. Go to the _Phase Parameter Overview_ as explained in the section <<_babbicadj1>>
+. Click the image:icons/edit.gif[,15,15] _Edit_ icon in front of the parameter.
++
+image::EnvPhaseParameter-Edit.png[,859,755] 
++
+The _Edit Parameter Value_ window will be displayed.
++
+image::Edit_EnvPhaseParameter.png[,271,149] 
++
+. Replace the value of the parameter with a reference to the Environment Parameter and click __Save__.
++
+The syntax of the parameter is: `$\{replacingParameter}`.
++
+In our example, the reference would be ``${testdeploy.rdbms.type}``.
++
+image::CreateReference_EnvParameter_2.png[,271,149] 
++
+When creating the Level Request, the value of the Machine Parameter will replace the value of the Environment Phase Parameter.
+
+
+[NOTE]
+====
+For more information on alternative ways of editing the value of the Environment Phase Parameter, refer to the section <<_babbicadj1>>.
+====
+
+==== Overview Connected Environment Parameters
+
+[NOTE]
+====
+To use this functionality, you need Global Administrator Access Rights.
+====
+
+An overview of all values defined on the environments connected to a Phase, can be found on the _Mass Edit Phase Parameter_ window which can be accessed via the Global Definition of the Phase in the Global Administration section. 
+
+. Go to the __Global Administration Phases  Overview__.
+. Click the image:icons/edit.gif[,15,15] _Edit_ icon in front of the required Phase.
+. Next, click the image:icons/Phase_MassEdit.png[,15,15] _Mass Edit_ icon in front of the required parameter.
++
+The _Mass Edit Phase Parameter_ window is displayed.
+Here you can see for each of the Environments which parameter will be used when creating the Level Request.
++
+image::MassEdit_Overview.png[,683,602] 
++
+To know the actual value that has been used for a specific Level Request, you can consult the Phase Logs (<<_chdcgeajg8>>).
++
+
+[NOTE]
+====
+On this window, you can also mass-edit the parameter values for several environments at once.
+For more information, refer to the __IKAN ALM User Guide__.
+====
+
+[[_chdcgeajg8]]
+==== Phase Logs
+
+To verify the actual value that has been used when creating the Level Request, you can display the Phase Logs on the _Level
+Request Detail_ screen.
+
+. After having created a Level Request, you can click the _OID_ link on the _Level Requests Overview_ to display the _Level Request Detail_ screen.
+. Next, select the _Phase Logs_ tab and select the Build or Deploy Phase from the list.
++
+image::PhaseLogs_SelectPhase.png[,922,708] 
+. Next, click the Phase link and display the Phase Parameters.
++
+image::PhaseLogs_UpdateDBPhase.png[,892,477] 
++
+. To know the exact value of the parameter, you click the _Deploy (or Build) Parameters_ link for the Deploy (or Build) Phase. 
++
+image::PhaseLogs_DeployParameters.png[,892,477] 
