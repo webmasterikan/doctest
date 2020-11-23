@@ -1,6 +1,0 @@
-name: sap-technical
-title: SAP Integration Technical Documentation
-version: '1.0'
-start_page: ROOT:TechnicalDocumentation.adoc
-nav:
-- modules/ROOT/nav.adoc  

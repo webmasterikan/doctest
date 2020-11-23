@@ -1,6 +1,0 @@
-name: how-to-tomcatinstall-en
-title: Tomcat Installation Howto
-version: '5.8'
-start_page: ROOT:HowTo_Tomcat_Install.adoc
-nav:
-- modules/ROOT/nav.adoc  

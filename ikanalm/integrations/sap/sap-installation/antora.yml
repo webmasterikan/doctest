@@ -1,6 +1,0 @@
-name: sap-installation
-title: SAP Intergration Installation Guide
-version: '1.0'
-start_page: ROOT:Installation_Maintenance.adoc
-nav:
-- modules/ROOT/nav.adoc  

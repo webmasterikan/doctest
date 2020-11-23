@@ -1,6 +1,0 @@
-name: how-to-agentinstall-en
-title: Agent Installation Howto
-version: '5.8'
-start_page: ROOT:HowTo_AgentInstall.adoc
-nav:
-- modules/ROOT/nav.adoc  

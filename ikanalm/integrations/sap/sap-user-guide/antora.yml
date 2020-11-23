@@ -1,6 +1,0 @@
-name: sap-user-guide
-title: SAP Intergration User Guide
-version: '1.0'
-start_page: ROOT:UserGuide.adoc
-nav:
-- modules/ROOT/nav.adoc  
