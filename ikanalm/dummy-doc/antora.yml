@@ -1,0 +1,6 @@
+name: dummy-doc
+title: Dummy doc
+version: '2.0'
+start_page: ROOT:dummydoc.adoc
+nav:
+- modules/ROOT/nav.adoc    
