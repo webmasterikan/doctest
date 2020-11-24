@@ -1,4 +1,4 @@
-name: demo-installation-windows-en
+name: demo-installation-guide-windows-en
 title: Demo Installation Guide (Windows)
 version: '5.8'
 start_page: ROOT:WindowsDemo.adoc

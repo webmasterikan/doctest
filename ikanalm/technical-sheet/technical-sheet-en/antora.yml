@@ -1,5 +1,5 @@
-name: alm-technical-sheet-fr
-title: ALM Technical Sheet (FR)
+name: technical-sheet-en
+title: Technical Sheet
 version: '5.8'
 start_page: ROOT:TechSheet.adoc
 nav:

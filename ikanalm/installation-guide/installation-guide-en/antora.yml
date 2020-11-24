@@ -1,5 +1,5 @@
-name: alm-installation-guide-fr
-title: IKAN ALM Installation Guide (FR)
+name: installation-guide-en
+title: IKAN ALM Installation Guide
 version: '5.8'
 start_page: ROOT:InstallationGuide.adoc
 nav:

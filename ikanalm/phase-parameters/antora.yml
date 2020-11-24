@@ -1,5 +1,5 @@
-name: alm-phase-parameters
-title: ALM Phase Parameters
+name: phase-parameters
+title: Phase Parameters
 version: '1.0'
 start_page: ROOT:PhaseParameters.adoc
 nav:

@@ -1,4 +1,4 @@
-name: sap-user-guide
+name: integration-sap-user-guide
 title: SAP Intergration User Guide
 version: '1.0'
 start_page: ROOT:UserGuide.adoc

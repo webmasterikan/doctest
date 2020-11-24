@@ -1,4 +1,4 @@
-name: sap-technical
+name: integration-sap-technical
 title: SAP Integration Technical Documentation
 version: '1.0'
 start_page: ROOT:TechnicalDocumentation.adoc

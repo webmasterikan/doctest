@@ -1,4 +1,4 @@
-name: demo-installation-linux-en
+name: demo-installation-guide-linux-en
 title: Demo Installation Guide (Linux)
 version: '5.8'
 start_page: ROOT:LinuxDemo.adoc
