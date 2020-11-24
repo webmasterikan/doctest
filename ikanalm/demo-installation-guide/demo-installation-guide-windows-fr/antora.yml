@@ -1,5 +1,5 @@
 name: demo-installation-guide-windows-fr
-title: Demo Installation Guide (Windows) (FR)
+title: Demo Installation Guide (Windows)
 version: '5.8'
 start_page: ROOT:WindowsDemo.adoc
 nav:
