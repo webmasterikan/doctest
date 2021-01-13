@@ -365,7 +365,7 @@ For more information on auditing a Project, refer to <<ProjAdm_AuditProjects.ado
 [[_lifecycles_changingorderlevels]]
 ==== Changing the order of the Levels
 
-On the Defined Levels panel, use the image:icons/up.gif[,15,15] __Up __and image:images/icons/down.gif[,15,15] _Down_ links in front of the Level to change the position of the selected Level in the sequence of defined Levels.
+On the Defined Levels panel, use the image:icons/up.gif[,15,15] __Up __and image:icons/down.gif[,15,15] _Down_ links in front of the Level to change the position of the selected Level in the sequence of defined Levels.
 
 [NOTE]
 ====

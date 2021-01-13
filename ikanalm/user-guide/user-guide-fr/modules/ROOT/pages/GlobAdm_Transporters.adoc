@@ -243,16 +243,14 @@ Si l`'Emplacement relatif des Copies de travail est établi à "`workCopy`" dans
 |Préfixe Emplacement Archives de construction
 |Saisissez le préfixe de l`'Emplacement des Archives de construction (l`'Emplacement où les Constructions sont sauvegardées et d`'où elles sont récupérées par un Agent IKAN ALM exécutant un processus de Construction ou de Déploiement). L`'Emplacement sur le Serveur sera formé par l`'enchaînement du préfixe et l`'Emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
 
-Pour un exemple, se référer à la description du champ __Préfixe Emplacement
-des Copies de travail__.
+Pour un exemple, se référer à la description du champ __Préfixe Emplacement des Copies de travail__.
 
 |Préfixe Emplacement des Scripts
 |Saisissez le préfixe de l`'Emplacement des Scripts (l`'Emplacement d`'où l`'Agent IKAN ALM récupérera le script de construction ou de déploiement, si ce script n`'est pas retrouvé dans les codes Source).
 
 L`'Emplacement sur le Serveur sera formé par l`'enchaînement du préfixe et l`'Emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
 
-Pour un exemple, se référer à la description du champ __Préfixe Emplacement
-des Copies de travail__.
+Pour un exemple, se référer à la description du champ __Préfixe Emplacement des Copies de travail__.
 
 |Préfixe Emplacement du Catalogue des Phases
 |Saisissez le préfixe de l'Emplacement du Catalogue des Phases (l'emplacement sur le Serveur IKAN ALM où sont sauvegardées les Phases importées ou créées).
@@ -547,10 +545,9 @@ Dans ce cas, le résultat de construction sera copié à partir de l`'Agent vers
 
 L`'Emplacement sur le Serveur sera formé par l`'enchaînement du préfixe et l`'Emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
 
-Pour un exemple, se référer à la description du champ __Préfixe Emplacement
-des Copies de travail__.
+Pour un exemple, se référer à la description du champ __Préfixe Emplacement des Copies de travail__.
 
-_Exemple:_
+__Exemple:__
 
 Si le Serveur FTP est configuré pour contrôler le répertoire (Windows) `E:/Ikan/alm/system` ou le répertoire (Linux/Unix) ``/ikan/alm/system``, un `/` suffira comme préfixe.
 
@@ -860,15 +857,13 @@ L`'Agent IKAN ALM essaiera de copier de manière sécurisée les codes Source d`
 |Préfixe Emplacement Archives de construction
 |Saisissez le préfixe de l`'Emplacement des Archives de construction (l`'Emplacement où les Constructions sont sauvegardées et d`'où elles sont récupérées). L`'Emplacement sur le Serveur sera formé par l`'enchaînement du préfixe et l`'Emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
 
-Pour un exemple, se référer à la description du champ __Préfixe Emplacement
-des Copies de travail__.
+Pour un exemple, se référer à la description du champ __Préfixe Emplacement des Copies de travail__.
 
 |Préfixe Emplacement des Scripts
 |Saisissez le préfixe de l`'Emplacement des Scripts.
 L`'Emplacement sur le Serveur sera formé par l`'enchaînement du préfixe et l`'Emplacement relatif défini dans les Paramètres système. <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>
 
-Pour un exemple, se référer à la description du champ __Préfixe Emplacement
-des Copies de travail__.
+Pour un exemple, se référer à la description du champ __Préfixe Emplacement des Copies de travail__.
 
 |Préfixe Chemin du Catalogue des Phases
 |Saisissez le préfixe de l'Emplacement du Catalogue des Phases (l'emplacement sur le Serveur IKAN ALM où sont sauvegardées les Phases importées ou créées).

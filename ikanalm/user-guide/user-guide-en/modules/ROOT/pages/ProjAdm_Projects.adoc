@@ -75,7 +75,7 @@ It allows deleting a Project.
 
 <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_deleting,Deleting a Project>>
 
-|image:icons/lock.gif[,15,15] / image:images/icons/unlock.gif[,15,15] 
+|image:icons/lock.gif[,15,15] / image:icons/unlock.gif[,15,15] 
 |Lock / Unlock
 
 This option is available to IKAN ALM Users with Project Admin Access Rights.
@@ -83,7 +83,7 @@ It allows locking or unlocking the selected Project.
 
 <<ProjAdm_Projects.adoc#_porjadm_projectsoverview_locking,Locking/Unlocking a Project>>
 
-|image:icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
+|image:icons/hide.gif[,15,15]  / image:icons/show.gif[,15,15] 
 |Hide / Show
 
 This option is available to IKAN ALM Users with Project Admin Access Rights.
@@ -306,7 +306,7 @@ Unlocking a Project means reallowing these actions on a Project.
 
 . Click the _Project Administration image:icons/icon_ProjectAdmin_13x13.png[,13,13]  icon on the Main Menu.
 
-. Click the image:icons/lock.gif[,15,15] _Lock_ or image:images/icons/unlock.gif[,15,15] _Unlock_ link on the _Projects Overview_ panel.
+. Click the image:icons/lock.gif[,15,15] _Lock_ or image:icons/unlock.gif[,15,15] _Unlock_ link on the _Projects Overview_ panel.
 +
 
 [NOTE]

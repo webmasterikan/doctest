@@ -120,7 +120,7 @@ For more information on the usage of search panels and filters, refer to the sec
 
 This option allows editing the Package Build Group and/or its connected Packages. <<Desktop_PackageGroups.adoc#_desktop_editpackagegroup,Editing a Package Build Group>>
 
-|image:icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
+|image:icons/hide.gif[,15,15]  / image:icons/show.gif[,15,15] 
 |Hide / Show
 
 This option allows hiding the selected Package Build Group.

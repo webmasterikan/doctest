@@ -7,7 +7,7 @@
 
 All create, update and delete operations of Project and Global Administration objects and components are logged in the IKAN ALM Database.
 
-To display the History Log of those operations, you can use the image:icons/history.gif[,15,15]  icon (or image:images/icons/history.gif[,15,15] _History_ link) which is available on all _Overview_ screens as well as on some of the edit screens, like the _System
+To display the History Log of those operations, you can use the image:icons/history.gif[,15,15]  icon (or image:icons/history.gif[,15,15] _History_ link) which is available on all _Overview_ screens as well as on some of the edit screens, like the _System
 Settings_ screen or the _Edit Level_ screen.
 
 [WARNING]

@@ -77,7 +77,7 @@ Elle permet de supprimer le Projet sélectionné.
 
 <<ProjAdm_Projects.adoc#_projadmin_projectsoverview_deleting,Supprimer un projet>>
 
-|image:icons/lock.gif[,15,15]  / image:images/icons/unlock.gif[,15,15] 
+|image:icons/lock.gif[,15,15]  / image:icons/unlock.gif[,15,15] 
 |Verrouiller / Déverrouiller
 
 Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur de projet.
@@ -85,7 +85,7 @@ Elle permet de verrouiller ou déverrouiller le Projet sélectionné.
 
 <<ProjAdm_Projects.adoc#_porjadm_projectsoverview_locking,Verrouiller/Déverrouiller un projet>>
 
-|image:icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
+|image:icons/hide.gif[,15,15]  / image:icons/show.gif[,15,15] 
 |Cacher / Montrer
 
 Cette option est disponible pour tous les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Administrateur de projet.
@@ -318,7 +318,7 @@ Déverrouiller le Projet signifie que vous autorisez à nouveau ces actions pour
 
 . Dans le menu principal, cliquez sur l`'icône image:icons/icon_ProjectAdmin_13x13.png[,13,13]  _Administration des Projets_.
 
-. Cliquez sur le lien image:icons/lock.gif[,15,15] _Verrouiller_ ou image:images/icons/unlock.gif[,15,15] _Déverrouiller_ dans le panneau __Aperçu des Projets__.
+. Cliquez sur le lien image:icons/lock.gif[,15,15] _Verrouiller_ ou image:icons/unlock.gif[,15,15] _Déverrouiller_ dans le panneau __Aperçu des Projets__.
 +
 
 [NOTE]

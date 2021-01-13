@@ -82,8 +82,7 @@ For a description of the fields, see <<ProjAdm_EnvParams.adoc#_environmentparams
 
 [NOTE]
 ====
-The icon image:icons/icon_MachineParameter.png[,15,15]  indicates that the parameter is a Machine Parameter. <<GlobAdm_Machines.adoc#_globadm_machineparameters,Machine Parameters>> In order to show these Parameters, you should set the _Show
-Machine Parameters_ criterion to __Yes__.
+The icon image:icons/icon_MachineParameter.png[,15,15]  indicates that the parameter is a Machine Parameter. <<GlobAdm_Machines.adoc#_globadm_machineparameters,Machine Parameters>> In order to show these Parameters, you should set the __Show Machine Parameters__ criterion to __Yes__.
 
 Columns marked with the image:icons/icon_sort.png[,15,15]  icon can be sorted alphabetically (ascending or descending).
 ====
@@ -143,7 +142,7 @@ It allows copying the selected Environment Parameter definition to one or more E
 . Switch to the _Parameters Overview_ screen for the required Project.
 +
 <<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
-. Click the image:icons/icon_createparameter.png[,15,15] _Create Parameter_ link to display the Parameter Action window.
+. Click the image:icons/icon_createparameter.png[,15,15] __Create Parameter__ link to display the Parameter Action window.
 +
 image::ProjAdmin-EnvParams-Create.png[,382,404] 
 +
@@ -224,15 +223,14 @@ You can also click:
 == Viewing the Environment Parameters History 
 (((Environment Parameters ,History))) 
 
-Switch to the _Parameters Overview_ screen for the required Project.
+Switch to the __Parameters Overview__ screen for the required Project.
 
 <<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
-. Click the image:icons/history.gif[,15,15] _History_ link on the _Parameters Overview_ panel to display the__ Environment History View__.
+. Click the image:icons/history.gif[,15,15] __History__ link on the __Parameters Overview__ panel to display the __Environment History View__.
 
-For more detailed information concerning this __History
-View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
+For more detailed information concerning this __History View__, refer to the section <<App_HistoryEventLogging.adoc#_historyeventlogging,History and Event Logging>>.
 
-Click __Back __to return to the previous screen.
+Click __Back__ to return to the previous screen.
 
 [[_environmentparams_edit]]
 == Editing Environment Parameters 
@@ -241,7 +239,7 @@ Click __Back __to return to the previous screen.
 . Switch to the _Parameters Overview_ screen for the required Project.
 +
 <<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
-. In the _Actions_ column, click the image:icons/edit.gif[,15,15] __Edit__ link in front of the Environment Parameter to be edited.
+. In the __Actions__ column, click the image:icons/edit.gif[,15,15] __Edit__ link in front of the Environment Parameter to be edited.
 +
 The following window is displayed:
 +
@@ -263,7 +261,7 @@ You can also click:
 . Switch to the _Parameters Overview_ screen for the required Project.
 +
 <<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
-. In the _Actions_ column, click the image:icons/delete.gif[,15,15] __Delete__ link in front of the Environment Parameter to be deleted.
+. In the __Actions__ column, click the image:icons/delete.gif[,15,15] __Delete__ link in front of the Environment Parameter to be deleted.
 +
 The following confirmation window is displayed:
 +
@@ -283,7 +281,7 @@ To avoid having to redefine Environment Parameters which are identical for multi
 . Switch to the _Parameters Overview_ screen for the required Project.
 +
 <<ProjAdm_EnvParams.adoc#_environmentparams_overview,The Parameters Overview Screen>>
-. In the _Actions_ column, click the image:icons/copy_parameter.gif[,15,15] __Copy__ link in front of the Environment Parameter to be copied.
+. In the __Actions__ column, click the image:icons/copy_parameter.gif[,15,15] __Copy__ link in front of the Environment Parameter to be copied.
 +
 The following window displays the values of the parameter you are about to copy.
 +

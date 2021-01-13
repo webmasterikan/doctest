@@ -115,7 +115,7 @@ Lors de l`'exécution d`'une Phase, le statut peut être établi à une des vale
 |===
 
 
-L'exécution d'une Phase peut être suivie sur l'onglet <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Journaux de Phase>> de l'écran _Informations détaillées_
+L'exécution d'une Phase peut être suivie sur l'onglet <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Journaux de Phase>> de l'écran __Informations détaillées__
 
 [[_phases_levelphases]]
 == Phases de niveau 
@@ -126,8 +126,8 @@ Les Phases de niveau sont des actions qui doivent être exécutées pour achever
 Une installation IKAN ALM originale (dite "vanilla") ne contient que les Phases de niveau du type "de noyau". Vous pouvez les rechercher via l'__Aperçu des Phases__ en limitant la recherche au Phases de noyau qui peuvent être utilisées sur un Niveau.
 Outre ces Phases de noyau, vous pouvez enrichir la fonctionnalité d'IKAN ALM en créant vos propres Phases personnalisées qui peuvent être utilisées sur un Niveau.
 
-Les Phases de niveau peuvent être insérées dans le flux de travail d'un Niveau (<<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Phases de niveau>>) et sont enregistrées sur l'onglet _Journaux
-de Phase_ de l'écran _Informations détaillées_ (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,Phases de niveau>>).
+Les Phases de niveau peuvent être insérées dans le flux de travail d'un Niveau (<<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Phases de niveau>>) et sont enregistrées sur l'onglet __Journaux
+de Phase__ de l'écran __Informations détaillées__ (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,Phases de niveau>>).
 
 Elles sont initiées par le processus Moniteur du Serveur IKAN ALM, ce qui signifie qu`'elles s`'exécutent sur la Machine Serveur IKAN ALM!
 
@@ -345,8 +345,7 @@ Une installation IKAN ALM originale (dite "vanilla") ne contient que les Phases 
 des Phases__ en limitant la recherche aux Phases de noyau qui peuvent être utilisées sur un Environnement de construction.
 Outre ces Phases de noyau, vous pouvez enrichir la fonctionnalité d'IKAN ALM en créant vos propres Phases personnalisées qui peuvent être utilisées sur un Environnement de construction.
 
-Les Phases de construction peuvent être insérées dans un Environnement de construction (<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phases,Phases d`'environnement de construction>>). Leurs actions pendant l'exécution d'une Construction sont affichées sur l'onglet _Journaux de
-Phase_ de l'écran _Informations détaillées_ (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,Actions de Construction>>). 
+Les Phases de construction peuvent être insérées dans un Environnement de construction (<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phases,Phases d`'environnement de construction>>). Leurs actions pendant l'exécution d'une Construction sont affichées sur l'onglet __Journaux de Phase__ de l'écran __Informations détaillées__ (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,Actions de Construction>>). 
 
 Elles sont initiées par le processus de construction de l`'Agent IKAN ALM, ce qui signifie qu`'elles s`'exécutent sur la Machine de l`'Agent IKAN ALM!
 
@@ -508,7 +507,7 @@ Une installation IKAN ALM originale (dite "vanilla") ne contient que les Phases 
 des Phases__ en limitant la recherche aux Phases de noyau qui peuvent être utilisées sur un Environnement de déploiement.
 Outre ces Phases de noyau, vous pouvez enrichir la fonctionnalité d'IKAN ALM en créant vos propres Phases personnalisées qui peuvent être utilisées sur un Environnement de déploiement.
 
-Les Phases de déploiement peuvent être insérées dans un Environnement de déploiement (<<ProjAdm_DeployEnv.adoc#_projadm_deplanv_phases,Phases d`'environnement de déploiement>>) et leurs actions pendant l'exécution ou le déploiement sont affichées sur l'onglet _Journaux de Phase_ de l'écran _Informations détaillées_ (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,Actions de Déploiement>>). 
+Les Phases de déploiement peuvent être insérées dans un Environnement de déploiement (<<ProjAdm_DeployEnv.adoc#_projadm_deplanv_phases,Phases d`'environnement de déploiement>>) et leurs actions pendant l'exécution ou le déploiement sont affichées sur l'onglet __Journaux de Phase__ de l'écran __Informations détaillées__ (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,Actions de Déploiement>>). 
 
 Elles sont initiées par un processus de déploiement de l`'Agent IKAN ALM, ce qui signifie qu`'elles s`'exécutent sur la Machine Agent IKAN ALM!
 

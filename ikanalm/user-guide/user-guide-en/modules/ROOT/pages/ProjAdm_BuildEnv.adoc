@@ -344,7 +344,7 @@ A link to this screen is also available on the __Edit Build Environment __screen
 +
 The following links are available:
 
-* The image:icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to change the order of the Phases.
+* The image:icons/up.gif[,15,15] _Up_ and image:icons/down.gif[,15,15] _Down_ links to change the order of the Phases.
 * The image:icons/edit.gif[,15,15] _Edit_ link to edit the Phase`'s settings. <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Editing a Build Environment Phase>>
 * The image:icons/icon_viewparameters.png[,15,15] _View Parameters_ link to manage the mandatory and optional Phase Parameters. <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_viewbuildenvphaseparams,Viewing the Build Environment Phase Parameters>>
 * The image:icons/delete.gif[,15,15] _Delete_ link to delete a Phase. <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phasedelete,Deleting a Build Environment Phase>>
@@ -445,7 +445,7 @@ You can also click __Refresh __to retrieve the settings from the database or__ C
 +
 <<ProjAdm_BuildEnv.adoc#_buildenvironmentsoverview,The Build Environments Overview Screen>>
 . On the _Build Environments Overview_ panel, click the image:icons/edit_phases.gif[,15,15] _Edit Phases_ link.
-. Use the image:icons/up.gif[,15,15] __Up __and image:images/icons/down.gif[,15,15] _Down_ links in front of a Build Environment Phase to change its position in the sequence.
+. Use the image:icons/up.gif[,15,15] __Up __and image:icons/down.gif[,15,15] _Down_ links in front of a Build Environment Phase to change its position in the sequence.
 . Click _Back_ to return to the _Build Environments Overview_ screen.
 +
 

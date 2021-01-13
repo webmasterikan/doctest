@@ -123,7 +123,7 @@ Pour plus d'informations concernant l'utilisation des panneaux de recherche et d
 
 Cette option permet de modifier le Groupe de Paquets de Construction et/ou les Paquets y étant associés. <<Desktop_PackageGroups.adoc#_desktop_editpackagegroup,Modifier la définition d`'un Groupe de Paquets de Construction>>
 
-|image:icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
+|image:icons/hide.gif[,15,15]  / image:icons/show.gif[,15,15] 
 |Cacher / Montrer
 
 Cette option permet de cacher/montrer le Groupe de Paquets de Construction sélectionné.

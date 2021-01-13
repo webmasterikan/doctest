@@ -285,13 +285,13 @@ It allows <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editing,
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
 It allows deleting the selected Project Stream. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deleting,Deleting a Project Stream>>
 
-|image:icons/lock.gif[,15,15] / image:images/icons/unlock.gif[,15,15] 
+|image:icons/lock.gif[,15,15] / image:icons/unlock.gif[,15,15] 
 |Lock / Unlock
 
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
 It allows locking or unlocking the selected Project Stream. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_locking,Locking/Unlocking a Project Stream>>
 
-|image:icons/hide.gif[,15,15] / image:images/icons/show.gif[,15,15] 
+|image:icons/hide.gif[,15,15] / image:icons/show.gif[,15,15] 
 |Hide / Show
 
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
@@ -386,7 +386,7 @@ You may want to lock a Project Stream, if configuration parameters have changed,
 Unlocking a Project Stream means reallowing these actions on a Project Stream
 
 . In the __Project Administration context__, select__ Project Stream > Overview__.
-. Click the image:icons/lock.gif[,15,15] _Lock_ or image:images/icons/unlock.gif[,15,15] _Unlock_ link on the _Project Streams Overview_ panel.
+. Click the image:icons/lock.gif[,15,15] _Lock_ or image:icons/unlock.gif[,15,15] _Unlock_ link on the _Project Streams Overview_ panel.
 
 [[_hideshowprojectstream]]
 === Hiding/Showing a Project Stream 
@@ -499,7 +499,7 @@ Retrieval_ field explanation above.
 +
 The following links may be available:
 
-* The image:icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to modify the order of the Project Streams.
+* The image:icons/up.gif[,15,15] _Up_ and image:icons/down.gif[,15,15] _Down_ links to modify the order of the Project Streams.
 * image:icons/edit.gif[,15,15] __ Edit__: This option allows editing the selected dependency. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_editdependency,Editing a Project Stream Dependency>>
 * image:icons/remove.gif[,15,15] __ Remove__: This option allows removing the selected dependency. <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadm_projectstream_deletedependency,Deleting a Project Stream Dependency>>
 

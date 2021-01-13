@@ -103,12 +103,12 @@ Cette étape est optionnelle dans le cas d`'une Reconstruction vu qu`'il n`'y a 
 Si nécessaire, les Groupes de Pré- et de Post-approbations sont définis dans l`'écran __Modifier un niveau__. <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Modifier les paramètres d`'un niveau>>
 
 |4.
-|Dès qu`'une des Approbations est <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejetée>>, le Moniteur établit le statut de la Requête de Niveau à _Rejeté_ et la séquence d`'actions se termine.
+|Dès qu`'une des Approbations est <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejetée>>, le Moniteur établit le statut de la Requête de Niveau à __Rejeté__ et la séquence d`'actions se termine.
 
 Cette étape est optionnelle dans le cas d`'une Reconstruction.
 
 |5.
-|Si toutes les Approbations d`'une Reconstruction pour laquelle des Pré- et des Post-Approbations ont été définies sont <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,accordées ou refusées>>, et si la date et l`'heure d`'exécution sont atteintes, le Moniteur établit le statut de la Requête de Niveau à _Exécution_ et récupère le code Source du RCV et le met dans un sous-répertoire de l`'Emplacement des Copies de travail sur le serveur IKAN ALM.
+|Si toutes les Approbations d`'une Reconstruction pour laquelle des Pré- et des Post-Approbations ont été définies sont <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,accordées ou refusées>>, et si la date et l`'heure d`'exécution sont atteintes, le Moniteur établit le statut de la Requête de Niveau à __exécution__ et récupère le code Source du RCV et le met dans un sous-répertoire de l`'Emplacement des Copies de travail sur le serveur IKAN ALM.
 
 Cet emplacement est défini dans l`'écran des <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres du système>>.
 
@@ -319,12 +319,12 @@ Cette étape est optionnelle dans le cas d`'une Reconstruction vu qu`'il n`'y a 
 Si nécessaire, les Groupes de Pré- et de Post-approbations sont définis dans l`'écran __Modifier un niveau__. <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevel,Modifier les paramètres d`'un niveau>>
 
 |4.
-|Dès qu`'une des Approbations est <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejetée>>, le Moniteur établit le statut de la Requête de Niveau à _Rejeté_ et la séquence d`'actions se termine.
+|Dès qu`'une des Approbations est <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejetée>>, le Moniteur établit le statut de la Requête de Niveau à __Rejeté__ et la séquence d`'actions se termine.
 
 Cette étape est optionnelle dans le cas d`'une Reconstruction.
 
 |5.
-|Si toutes les Approbations d`'une Reconstruction pour laquelle des Pré- et des Post-Approbations ont été définies sont <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,accordées ou refusées>>, et si la date et l`'heure d`'exécution sont atteintes, le Moniteur établit le statut de la Requête de Niveau à _Exécution_ et récupère le code Source du RCV et le met dans un sous-répertoire de l`'Emplacement des Copies de travail sur le serveur IKAN ALM.
+|Si toutes les Approbations d`'une Reconstruction pour laquelle des Pré- et des Post-Approbations ont été définies sont <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,accordées ou refusées>>, et si la date et l`'heure d`'exécution sont atteintes, le Moniteur établit le statut de la Requête de Niveau à __Exécution__ et récupère le code Source du RCV et le met dans un sous-répertoire de l`'Emplacement des Copies de travail sur le serveur IKAN ALM.
 
 Cet emplacement est défini dans les <<GlobAdm_System.adoc#_globadm_system_settings,Paramètres Système>>.
 
@@ -601,10 +601,10 @@ Si nécessaire, les Groupes de Pré- et de Post-approbations sont définis dans 
 de la séquence des Approbations du Niveau__. <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Les approbations>>
 
 |4.
-|Dès qu`'une des Approbations est <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejetée>>, le Moniteur établit le statut de la Requête de Niveau à _Rejeté_ et la séquence d`'actions se termine.
+|Dès qu`'une des Approbations est <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejetée>>, le Moniteur établit le statut de la Requête de Niveau à __Rejeté__ et la séquence d`'actions se termine.
 
 |5.
-|Si la Requête de Niveau est <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,approuvée>>, et si la date et l`'heure d`'exécution sont atteintes, le Moniteur établit le statut de la Requête de Niveau à _Exécution_ et le statut de déploiement de tous les Déploiements liés à la Requête de Niveau à __Prêt__.
+|Si la Requête de Niveau est <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,approuvée>>, et si la date et l`'heure d`'exécution sont atteintes, le Moniteur établit le statut de la Requête de Niveau à __Exécution__ et le statut de déploiement de tous les Déploiements liés à la Requête de Niveau à __Prêt__.
 Vu qu`'une Requête de Niveau de Déploiement peut avoir plus d`'un Déploiement, les étapes 6 jusque 10 seront réalisées pour chaque Déploiement lié à la Requête de Niveau
 
 |6.
@@ -815,7 +815,7 @@ Les icônes suivantes peuvent être disponibles:
 | Type de Requête de Niveau
 | Description
 
-|image:icons/request.gif[,15,15]  / image:images/icons/requestPlus.gif[,15,15] 
+|image:icons/request.gif[,15,15]  / image:icons/requestPlus.gif[,15,15] 
 |Demander/Forcer
 |Cette icône permet de créer une Requête de Niveau qui lancera une Construction.
 
@@ -922,7 +922,7 @@ a|_SUJETS APPARENTÉS_
 === Création d`'une requête de niveau de construction 
 (((Requêtes de niveau ,Construction demandée)))  (((Requêtes de niveau ,Construction forcée))) 
 
-Les Requêtes de Niveau sont créées en cliquant sur les icônes _Demander/Forcer_ (image:icons/request.gif[,15,15]  / image:images/icons/requestPlus.gif[,15,15] ).
+Les Requêtes de Niveau sont créées en cliquant sur les icônes _Demander/Forcer_ (image:icons/request.gif[,15,15]  / image:icons/requestPlus.gif[,15,15] ).
 
 Qu`'il s`'agisse d`'une Construction demandée ou forcée dépend de la manière dont la Construction a été définie.
 
@@ -1133,12 +1133,11 @@ Il est cependant toujours possible de changer l`'heure manuellement.
 La liste affiche toutes les Constructions liées au niveau précédent qui n`'ont pas encore été délivrées dans ce niveau et qui ont le même numéro de construction (re-délivrer) ou un numéro de construction plus élevé que la construction actuellement active.
 
 Si le Niveau précédent dans le Cycle de Vie est spécifié comme étant _optionnel_ (<<ProjAdm_LifeCycles.adoc#_plifecyclemgt_optionallevels,Rendre un Niveau optionnel ou obligatoire>>), la liste affichera les Constructions disponibles du niveau précédent AINSI QUE les Constructions du niveau avant lui.
-La colonne _Disponible
-sur_ affiche le Niveau sur lequel réside la Construction disponible.
+La colonne __Disponible sur__ affiche le Niveau sur lequel réside la Construction disponible.
 
 La Construction actuellement active dans un Niveau peut être re-délivrée.
 Si une telle Construction existe, elle sera marquée en bleu.
-Dans ce cas, le _Type d`'action de Requête_ sera "`Re-délivrer`".
+Dans ce cas, le __Type d`'action de Requête__ sera "`Re-délivrer`".
 |===
 
 . Si disponible, sélectionnez les Déploiements à exécuter dans le panneau __Sélectionnez les Déploiements à exécuter__.
@@ -1874,7 +1873,7 @@ La Construction ou le Déploiement a été interrompu(e) lors de son exécution.
 La Construction ou le Déploiement a été rejeté(e).
 
 |Icône indiquant le type
-|Ce champ indique le type: Construction (image:icons/icon_LRdetail_build.png[,16,16] ) ou Déploiement (image:images/icons/icon_LRdetail_deploy.png[,16,16] ).
+|Ce champ indique le type: Construction (image:icons/icon_LRdetail_build.png[,16,16] ) ou Déploiement (image:icons/icon_LRdetail_deploy.png[,16,16] ).
 
 |OID
 |Ce champ contient l`'OID (Identifiant de l`'Objet) de la Construction ou du Déploiement.
@@ -2136,7 +2135,7 @@ image::Desktop-LevelRequests-Detailed-PhaseLogs-Example_SkippedDeploy.png[,918,5
 
 Pour afficher les Paramètres de niveau utilisés lors de l'exécution de la Requête de niveau, développez le panneau en cliquant sur l'en-tête "Paramètres de niveau". 
 
-image::Desktop-LevelRequests-Detailed-PhaseLogs-LevelParameters.png[,847,536] 
+image::Desktop-LevelRequests-Detailed-PhaseLogs-LevelParameters.png[,325,206] 
 
 Le panneau affiche le code et la valeur pour chacun des paramètres.
 
@@ -2330,7 +2329,7 @@ Le panneau affiche le code et la valeur pour chacun des paramètres.
 
 Pour plus d`'informations, se référer à la section <<App_PredefBuildParams.adoc#_predefinedbuildparameters,Paramètres de construction prédéfinis>>.
 
-image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedBuildParameters.png[,559,251] 
+image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedBuildParameters.png[,325,146] 
 |===
 
 [[_chddiacf]]
@@ -2481,7 +2480,7 @@ Le panneau affiche le code et la valeur pour chacun des paramètres.
 
 Pour plus d`'informations, se référer à la section <<App_PredefDeployParams.adoc#_predefineddeployparameters,Paramètres de déploiement prédéfinis>>.
 
-image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedDeployParameters.png[,567,218] 
+image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedDeployParameters.png[,325,125] 
 |===
 
 [[_chdceehj]]
@@ -2634,7 +2633,7 @@ Pour plus d`'informations, se référer à la section <<ProjAdm_BuildEnv.adoc#_p
 
 Sinon, vous pouvez toujours visualiser l'arborescence en cliquant sur le signe "plus" devant le fichier zip.
 
-image:Desktop-LevelRequests-Detailed-Results-expanded.png[,366,258] 
+image:Desktop-LevelRequests-Detailed-Results-expanded.png[,325,254] 
 |===
 
 [cols="1", frame="topbot"]

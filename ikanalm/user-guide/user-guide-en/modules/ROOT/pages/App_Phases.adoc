@@ -119,7 +119,7 @@ When executing a Phase, it can have the following status:
 |===
 
 
-The execution of a Phase can be viewed on the <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase Logs>> tab page on the _Level Request Detail_ screen.
+The execution of a Phase can be viewed on the <<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs,Phase Logs>> tab page on the __Level Request Detail__ screen.
 
 [[_phases_levelphases]]
 == Level Phases 
@@ -132,8 +132,8 @@ You can search for them in the _Phases
 Overview_ by restricting the search to Core Phases that can be used on a Level.
 Next to those Core Phases, you may enrich the functionality of IKAN ALM by creating your own Custom Phases which can be used on a Level.
 
-Level Phases may be inserted into the workflow of a Level (<<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Level Phases>>) and are logged on the _Phase Logs_ panel of the _Level
-Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,Level Phases>>).
+Level Phases may be inserted into the workflow of a Level (<<ProjAdm_Levels.adoc#_levelenvmgt_levelphases,Level Phases>>) and are logged on the __Phase Logs__ panel of the __Level
+Request Detail__ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_levelphases,Level Phases>>).
 
 They are executed by the Monitor Thread of the IKAN ALM Server, so they run on the IKAN ALM Server Machine!
 
@@ -342,12 +342,10 @@ A Custom Level Phase may also be a Custom Build or Deploy Phase: the definition 
 
 Build Phases are the actions that must be performed to complete a Build.
 A vanilla IKAN ALM installation only contains Build Phases of the "`Core`" type.
-You can search for them in the __Phases
-Overview__, by restricting the search to Core Phases that can be used on a Build Environment.
+You can search for them in the __Phases Overview__, by restricting the search to Core Phases that can be used on a Build Environment.
 Next to those Core Phases, you may enrich the functionality of IKAN ALM by creating your own Custom Phases that can be used on a Build Environment.
 
-Build Phases may be inserted into a Build Environment (<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phases,Build Environment Phases>>). Their actions during the handling of a Build are logged on the _Phase
-Logs_ tab page of the _Level Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,Build Actions>>). 
+Build Phases may be inserted into a Build Environment (<<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phases,Build Environment Phases>>). Their actions during the handling of a Build are logged on the __Phase Logs__ tab page of the __Level Request Detail__ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_buildactions,Build Actions>>). 
 
 They are executed by the Builder Thread of the IKAN ALM Agent, so they run on an IKAN ALM Agent Machine!
 
@@ -505,8 +503,7 @@ You can search for them in the __Phases
 Overview__, by restricting the search to Core Phases that can be used on a Deploy Environment.
 Next to those Core Phases, you may enrich the functionality of IKAN ALM by creating your own Custom Phases that can be used on a Deploy Environment.
 
-Deploy Phases may be inserted into a Deploy Environment (<<ProjAdm_DeployEnv.adoc#_projadm_deplanv_phases,Deploy Environment Phases>>) and their actions during the handling or a Deploy are logged on the _Phase
-Logs_ tab page of the _Level Request Detail_ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,Deploy Actions>>). 
+Deploy Phases may be inserted into a Deploy Environment (<<ProjAdm_DeployEnv.adoc#_projadm_deplanv_phases,Deploy Environment Phases>>) and their actions during the handling or a Deploy are logged on the __Phase Logs__ tab page of the __Level Request Detail__ screen (<<Desktop_LevelRequests.adoc#_desktop_lr_phaselogs_deployactions,Deploy Actions>>). 
 
 They are executed by the Deployer Thread of the IKAN ALM Agent, so they run on an IKAN ALM Agent Machine!
 
@@ -590,7 +587,7 @@ The _Cleanup Build Result_ Phase deletes all files in the Deploy Environment`'s 
 If the Deploy Environment has its Debug flag set to '`Yes`', the Cleanup Build Result Phase does nothing, and exits with status __Error__, reporting that the Debug flag was set in the Deploy Environment.
 
 Next to Core Phases, you may define your own Phases in Global Administration (<<GlobAdm_Phases.adoc#_globadm_phases_creating,Creating a Phase Definition>>) and specify that they may be used on a Deploy Environment.
-Once inserted into the workflow of a Deploy Environment, we call them _Custom Deploy_ Phases.
+Once inserted into the workflow of a Deploy Environment, we call them __Custom Deploy__ Phases.
 
 [[_phases_deployphases_customdeployphase]]
 === Custom Deploy Phase 

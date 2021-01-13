@@ -167,7 +167,7 @@ Elle permet de modifier les informations du Paquet sélectionné et d`'accéder 
 
 <<Desktop_Packages.adoc#_desktop_editpackage,Modifier la définition d`'un paquet>>
 
-|image:icons/show.gif[,15,15]  / image:images/icons/hide.gif[,15,15] 
+|image:icons/show.gif[,15,15]  / image:icons/hide.gif[,15,15] 
 |Montrer / Cacher
 
 Cette option est disponible pour les Utilisateurs IKAN ALM ayant des droits d`'accès d`'Utilisateur de Projet.

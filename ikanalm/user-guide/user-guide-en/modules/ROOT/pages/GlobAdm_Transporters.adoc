@@ -225,7 +225,7 @@ Fields marked with a red asterisk are mandatory.
 |Work Copy Path Prefix
 a|Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
-_Example:_
+__Example:__
 
 **** For a Windows Transporter: `//IKAN110/alm`
 +
@@ -512,7 +512,7 @@ _Note:_ The value entered in this field will override the value specified in the
 |Work Copy Path Prefix
 |Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
-_Example:_
+__Example:__
 
 If the FTP Server is configured to control the `E:/Ikan/alm/system` (Windows) or `/ikan/alm/system` (Linux/Unix) directory, a `/` will suffice as prefix. 
 
@@ -521,7 +521,7 @@ In that case, the sources will be copied to the Agent by a GET command from a su
 |Build Archive Path Prefix
 |Enter the prefix for the Build Archive Location (the location where the Builds are stored or retrieved from). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
-_Example:_
+__Example:__
 
 If the FTP Server is configured to control the `E:/Ikan/alm/system` (Windows) or `/ikan/alm/system` (Linux/Unix) directory, a `/` will suffice as prefix. 
 
@@ -530,7 +530,7 @@ In that case, the build result will be copied from the Agent to the Build Archiv
 |Script Path Prefix
 |Enter the prefix for the Script Location (the location where the IKAN ALM Agent will retrieve the build or deploy script from if it cannot be found in the sources). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
-_Example:_
+__Example:__
 
 If the FTP Server is configured to control the `E:/Ikan/alm/system` (Windows) or `/ikan/alm/system` (Linux/Unix) directory, a `/` will suffice as prefix. 
 
@@ -804,7 +804,7 @@ _Note:_ The value entered in this field will overrule the value specified in the
 |Work Copy Path Prefix
 |Enter the prefix for the Work Copy Location (the location where the VCR interface places the checked out sources on the IKAN ALM Server so that it is accessible from a remote IKAN ALM Agent handling a build process). The Server Location will be formed by concatenating this prefix together with the Relative Location defined in the System Settings. See: <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>
 
-_Example 1:_
+__Example 1:__
 
 An IKAN ALM Server on a Windows machine with an SSH Server supporting the "cygdrive" notation.
 
@@ -812,7 +812,7 @@ System Settings: the Relative Work Copy Location being defined as "workCopy" and
 
 The IKAN ALM Agent will try to Secure Copy the sources from a location under ``/cygdrive/e/ikan/alm/workCopy``.
 
-_Example 2:_
+__Example 2:__
 
 An IKAN ALM Server on a Linux machine. 
 

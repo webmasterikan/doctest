@@ -288,7 +288,7 @@ From the drop-down menu, select the level that must precede the Test or Producti
 
 If you used the Levels > Create Test (or Production) Level option on the Project Administration submenu, the new Test or Production Level will be created after the existing Test or Production Level, if any.
 
-You can always modify the Level Sequence using the image:icons/up.gif[,15,15] _Up_ or image:images/icons/down.gif[,15,15] _Down_ options on the _Defined Levels_ panel on the _Edit
+You can always modify the Level Sequence using the image:icons/up.gif[,15,15] _Up_ or image:icons/down.gif[,15,15] _Down_ options on the _Defined Levels_ panel on the _Edit
 Lifecycle_ screen. <<ProjAdm_LifeCycles.adoc#_lifecycles_changingorderlevels,Changing the order of the Levels>>
 
 |Lifecycle
@@ -451,7 +451,7 @@ image::ProjAdmin-Levels-TestLevel-EditPhases.png[,768,477]
 +
 The following links are available:
 
-* The image:icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ links to change the order of the Phases. <<ProjAdm_Levels.adoc#_plevelenvmgt_modifyorderphases,Changing the Order of the Level Phases>>
+* The image:icons/up.gif[,15,15] _Up_ and image:icons/down.gif[,15,15] _Down_ links to change the order of the Phases. <<ProjAdm_Levels.adoc#_plevelenvmgt_modifyorderphases,Changing the Order of the Level Phases>>
 * The image:icons/edit.gif[,15,15] _Edit_ link to edit the Phase`'s settings. <<ProjAdm_Levels.adoc#_plevelenvmgt_editlevelphases,Editing a Level Phase>>
 * The image:icons/icon_viewparameters.png[,15,15] _View Parameters_ link to manage the mandatory and optional Phase Parameters. <<ProjAdm_Levels.adoc#_plevelenvmgt_viewlevelphaseparams,Viewing the Level Phase Parameters>>
 * The image:icons/delete.gif[,15,15] _Delete_ link to delete a Phase. <<ProjAdm_Levels.adoc#_plevelenvmgt_deletephase,Deleting a Level Phase>>
@@ -476,7 +476,7 @@ Select the _Insert Phase_ link underneath the _Phases Overview_ panel. <<ProjAdm
 +
 <<ProjAdm_Levels.adoc#_plevelenvmgt_accessing,The Levels Overview Screen>>
 . Click the _Edit Phases_ image:icons/edit_phases.gif[,15,15]  link on the _Levels Overview_ panel.
-. Use the image:icons/up.gif[,15,15] __Up__ and image:images/icons/down.gif[,15,15] _Down_ links in front of a Level Phase to change its position in the sequence.
+. Use the image:icons/up.gif[,15,15] __Up__ and image:icons/down.gif[,15,15] _Down_ links in front of a Level Phase to change its position in the sequence.
 . Click _Back_ to return to the _Levels Overview_ screen.
 +
 
@@ -797,7 +797,7 @@ image::ProjAdmin-Levels-Level-Edit.png[,986,483]
 Approvals can only be defined for Test and Production Levels.
 ====
 +
-. Click the image:icons/icon_editApprovals.png[,15,15] __Add Pre-Approval __or image:images/icons/icon_editApprovals.png[,15,15] __Add Post-Approval __link at the bottom of the __Edit Level __screen.
+. Click the image:icons/icon_editApprovals.png[,15,15] __Add Pre-Approval __or image:icons/icon_editApprovals.png[,15,15] __Add Post-Approval __link at the bottom of the __Edit Level __screen.
 +
 The _Add Approval_ window is displayed:
 +
@@ -819,7 +819,7 @@ If you do not select an existing Approval User Group from the __Insert after __d
 . Click the __Insert__ button, to confirm your changes.
 +
 The Approval is added to the Sequence on the _Edit Level_ screen.
-. If necessary, you can use the image:icons/up.gif[,15,15] _Up_ and image:images/icons/down.gif[,15,15] _Down_ buttons to modify the order of the different User Groups, or use the image:images/icons/delete.gif[,15,15] _Remove_ button to remove a User Group from the Sequence list.
+. If necessary, you can use the image:icons/up.gif[,15,15] _Up_ and image:icons/down.gif[,15,15] _Down_ buttons to modify the order of the different User Groups, or use the image:icons/delete.gif[,15,15] _Remove_ button to remove a User Group from the Sequence list.
 . Repeat this procedure to define all required Pre- and Post-Approvals.
 
 [[_plevelenvmgt_deletelevel]]

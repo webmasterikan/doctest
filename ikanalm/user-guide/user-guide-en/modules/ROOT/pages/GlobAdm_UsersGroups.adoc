@@ -491,7 +491,7 @@ You can also click:
 [[_globadm_usersgroups_editusergroupmembers]]
 === Editing the User Group Members
 
-. On the __User Group Members__ panel underneath the _Edit User Group_ panel (See <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Editing a User Group>>), click the image:icons/edit.gif[,15,15] _Edit User Group Members_ link to change the selected User Group definition. 
+. On the __User Group Members__ panel underneath the _Edit User Group_ panel (See <<GlobAdm_UsersGroups.adoc#_globadm_usersgroups_editusergroup,Editing a User Group>>), click the image:icons/edit.gif[,15,15] __Edit User Group Members__ link to change the selected User Group definition. 
 +
 The following screen is displayed:
 +

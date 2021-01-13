@@ -193,8 +193,8 @@ image::CommandLine-LRCreatedSuccessfully.jpg[,539,274]
 
 [WARNING]
 --
-Ces messages indiquent uniquement que la Requête de Niveau a été _créée_ correctement.
-Référez-vous à l`'<<Desktop_LevelRequests.adoc#_desktop_lr_overview,Aperçu des requêtes de niveau>> dans l`'application Web pour vérifier si le Niveau a été également _exécuté_ correctement.
+Ces messages indiquent uniquement que la Requête de Niveau a été __créée__ correctement.
+Référez-vous à l`'<<Desktop_LevelRequests.adoc#_desktop_lr_overview,Aperçu des requêtes de niveau>> dans l`'application Web pour vérifier si le Niveau a été également __exécuté__ correctement.
 --
 
 * Si la Requête de Niveau ne peut pas être créée faute de connexion avec le Serveur IKAN ALM, l`'écran suivant s`'affiche:
@@ -289,8 +289,8 @@ image::CommandLine-LRCreatedSuccessfully.jpg[,541,274]
 
 [WARNING]
 --
-Ces messages indiquent uniquement que la Requête de Niveau a été _créée_ correctement.
-Référez-vous à l`'<<Desktop_LevelRequests.adoc#_desktop_lr_overview,Aperçu des requêtes de niveau>> dans l`'application Web pour vérifier si le Niveau a été également _exécutée_ correctement.
+Ces messages indiquent uniquement que la Requête de Niveau a été __créée__ correctement.
+Référez-vous à l`'<<Desktop_LevelRequests.adoc#_desktop_lr_overview,Aperçu des requêtes de niveau>> dans l`'application Web pour vérifier si le Niveau a été également __exécutée__ correctement.
 --
 
 * Si la Requête de Niveau ne peut pas être créée faute de connexion avec le Serveur IKAN ALM, l`'écran suivant s`'affiche:

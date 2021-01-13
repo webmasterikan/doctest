@@ -352,7 +352,7 @@ Le lien vers cet écran est également disponible dans l'écran __Modifier un En
 +
 Les liens suivants sont disponibles:
 
-* Les liens image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _Descendre_ pour modifier l`'ordre des Phases.
+* Les liens image:icons/up.gif[,15,15] _Monter_ et image:icons/down.gif[,15,15] _Descendre_ pour modifier l`'ordre des Phases.
 * Le lien image:icons/edit.gif[,15,15] _Modifier_ pour modifier les Paramètres de la Phase sélectionnée. <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_editphase,Modifier une Phase d`'environnement de construction>>
 * Le lien image:icons/icon_viewparameters.png[,15,15] _Voir les Paramètres_ pour gérer les Paramètres de phase obligatoires et optionnels. <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_viewbuildenvphaseparams,Afficher les Paramètres de phase d'Environnement de construction>>
 * Le lien image:icons/delete.gif[,15,15] _Supprimer_ pour supprimer une Phase. <<ProjAdm_BuildEnv.adoc#_projadm_buildenv_phasedelete,Supprimer une Phase d`'environnement de construction>>
@@ -460,7 +460,7 @@ Vous pouvez également cliquer sur le bouton _Actualiser_ pour revenir aux valeu
 
  . Dans le panneau __Aperçu des Environnements de construction__, cliquez sur le lien image:icons/edit_phases.gif[,15,15]  _Modifier les Phases_.
 
- . Utilisez les liens image:icons/up.gif[,15,15] _Monter_ et image:images/icons/down.gif[,15,15] _Descendre_ devant la Phase d'Environnement de construction pour modifier la position de la Phase sélectionnée dans la séquence.
+ . Utilisez les liens image:icons/up.gif[,15,15] _Monter_ et image:icons/down.gif[,15,15] _Descendre_ devant la Phase d'Environnement de construction pour modifier la position de la Phase sélectionnée dans la séquence.
 
  . Cliquez sur le bouton _Précédent_ pour retourner à l`'écran __Aperçu des Environnements de Construction__.
 +

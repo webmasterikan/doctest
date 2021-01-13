@@ -194,8 +194,8 @@ image::CommandLine-LRCreatedSuccessfully.jpg[,539,274]
 
 [WARNING]
 --
-These messages only indicate that the Level Request was _created_ successfully.
-Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>>in the web application to verify if the Level Request was _executed_ successfully as well.
+These messages only indicate that the Level Request was __created__ successfully.
+Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>>in the web application to verify if the Level Request was __executed__ successfully as well.
 --
 
 * If the Level Request cannot be created, because there is no connection with the IKAN ALM Server, the following screen is displayed:
@@ -293,8 +293,8 @@ image::CommandLine-LRCreatedSuccessfully.jpg[,541,274]
 
 [WARNING]
 --
-These messages only indicate that the Level Request was _created_ successfully.
-Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>>in the web application to verify if the Level Request was _executed_ successfully as well.
+These messages only indicate that the Level Request was __created__ successfully.
+Refer to the <<Desktop_LevelRequests.adoc#_desktop_lr_overview,Level Requests Overview>>in the web application to verify if the Level Request was __executed__ successfully as well.
 --
 
 

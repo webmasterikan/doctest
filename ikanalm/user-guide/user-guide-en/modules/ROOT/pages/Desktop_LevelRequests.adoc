@@ -103,12 +103,12 @@ This is an optional step in case of a Rebuild, since there are no Pre- or Post N
 If required, the Pre- and Post-Approval groups are defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Settings screen>>.
 
 |4.
-|As soon as one of the Approvals is <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejected>>, the Monitor sets the Level Request status to _Reject_ and the action flow is terminated.
+|As soon as one of the Approvals is <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejected>>, the Monitor sets the Level Request status to __Reject__ and the action flow is terminated.
 
 This step is optional in case of a Rebuild.
 
 |5.
-|If all Approvals of a Rebuild with Pre- or Post-Approval(s) are <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,granted>>, and if the requested Date/Time is reached, the Monitor sets the Level Request status to _Run_ and retrieves the Source Code from the VCR to a subdirectory of the Work Copy location on the IKAN ALM Server.
+|If all Approvals of a Rebuild with Pre- or Post-Approval(s) are <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,granted>>, and if the requested Date/Time is reached, the Monitor sets the Level Request status to __Run__ and retrieves the Source Code from the VCR to a subdirectory of the Work Copy location on the IKAN ALM Server.
 
 This location is defined in the <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>.
 
@@ -309,12 +309,12 @@ This is an optional step in case of a Rebuild, since there are no Pre- or Post N
 If required, the Pre- and Post-Approval groups are defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Settings screen>>).
 
 |4.
-|As soon as one of the Approvals is <<Des<<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejected>>, the Monitor sets the Level Request status to _Reject_ and the action flow is terminated.
+|As soon as one of the Approvals is <<Des<<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejected>>, the Monitor sets the Level Request status to __Reject__ and the action flow is terminated.
 
 This step is optional in case of a Rebuild
 
 |5.
-|If all Approvals of a Rebuild with Pre- or Post-Approval(s) are <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,granted>>> and if the requested Date/Time is reached, the Monitor sets the Level Request status to _Run_ and retrieves the Source Code from the VCR to a subdirectory of the Work Copy location on the IKAN ALM Server.
+|If all Approvals of a Rebuild with Pre- or Post-Approval(s) are <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,granted>>> and if the requested Date/Time is reached, the Monitor sets the Level Request status to __Run__ and retrieves the Source Code from the VCR to a subdirectory of the Work Copy location on the IKAN ALM Server.
 
 This location is defined in the <<GlobAdm_System.adoc#_globadm_system_settings,System Settings>>.
 
@@ -583,7 +583,7 @@ The Pre- and Post-Notification groups are optionally defined on the <<ProjAdm_Le
 The Pre- and Post-Approval groups are optionally defined on the <<ProjAdm_Levels.adoc#_levelenvmgt_approvalsequence,Level Settings screen>>.
 
 |4.
-|As soon as one of the Approvals is <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejected>>, the Monitor sets the Level Request status to _Reject_ and the action flow is terminated.
+|As soon as one of the Approvals is <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsreject,rejected>>, the Monitor sets the Level Request status to __Reject__ and the action flow is terminated.
 
 |5.
 |When the Level Request is <<Desktop_Approvals.adoc#_desktop_outstandingapprovalsapprove,approved>>, and the requested Date/Time is reached, the Monitor sets the Level Request status to __Run__.
@@ -798,7 +798,7 @@ The following icons may be available:
 | Description
 
 
-|image:icons/request.gif[,15,15]  / image:images/icons/requestPlus.gif[,15,15] 
+|image:icons/request.gif[,15,15]  / image:icons/requestPlus.gif[,15,15] 
 |Request/Force
 |Click this icon to create a Build Level Request. 
 
@@ -904,7 +904,7 @@ a|_RELATED TOPICS_
 (((Level Requests ,Request Build)))  
 (((Level Requests ,Force Build))) 
 
-Level Requests are created using the Request/Force Build (image:icons/request.gif[,15,15]  / image:images/icons/requestPlus.gif[,15,15] ) icons.
+Level Requests are created using the Request/Force Build (image:icons/request.gif[,15,15]  / image:icons/requestPlus.gif[,15,15] ) icons.
 
 Whether it concerns a Requested or a Forced Build depends on the way the Build Level has been defined.
 
@@ -1113,12 +1113,12 @@ However you can still change the execution time manually.
 |Select the Build to be delivered to the Test or Production Level.
 The list contains all Builds available on the previous Level that have not yet been delivered to this Level and that have the same (Redeliver) or a higher Build Number than the current active Build.
 
-If the previous Level in the Lifecycle is marked as _Optional_ (<<ProjAdm_LifeCycles.adoc#_lifecycles_makingoptional,Making a Level optional or required>>) the list contains the available Builds from the previous Level AND from the Level before that one.
-The column _Available on_ indicates on which Level the available Build resides.
+If the previous Level in the Lifecycle is marked as __Optional__ (<<ProjAdm_LifeCycles.adoc#_lifecycles_makingoptional,Making a Level optional or required>>) the list contains the available Builds from the previous Level AND from the Level before that one.
+The column __Available on__ indicates on which Level the available Build resides.
 
 The current active build on a Level can be redelivered.
 If such a Build exists, it will be marked in blue.
-In that case, the _Level Request Action Type_ will be "`Redeliver Build`".
+In that case, the __Level Request Action Type__ will be "`Redeliver Build`".
 |===
 
 . If available, select the deploys to be executed in the S__elect Deploys to Execute__ panel.
@@ -1302,7 +1302,7 @@ This is a unique sequential number assigned to each Level Request when it is cre
 The Level Request OIDs are displayed as a link.
 Click this link to display the details for this Level Request.
 
-For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the _Level Request Detail_ screen. 
+For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the __Level Request Detail__ screen. 
 
 |Project Stream
 a|This field contains the identification of the Project Stream.
@@ -1368,8 +1368,8 @@ The format of the VCR Tag normally matches the Tag Template defined for the Stre
 
 However, the user can override the default VCR Tag while creating a Level Request (and is obliged to do so for a Build Level Request in a Tag Based Project Stream), so that the Tag Format can be completely different.
 
-The Level Request VCR Tag is displayed as a link leading to the _Sources_ tab page on the _Level
-Request Detail_ screen.
+The Level Request VCR Tag is displayed as a link leading to the __Sources__ tab page on the __Level
+Request Detail__ screen.
 For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>.
 
 |Start
@@ -1789,8 +1789,8 @@ The following types exist:
 |Partial Build Tag
 |In case of a Partial Build type Project Stream (see <<ProjAdm_ProjMgt_ProjectStream.adoc#_projadmin_projectstream_createbranch,Creating a Branch Project Stream>>), this field contains the Partial Build Tag.
 
-Only the sources that differ from this Tag have been retrieved and made available for the Build during the _Retrieve
-Code_ Phase.[[_desktop_lr_summary_buildsdeploys]]
+Only the sources that differ from this Tag have been retrieved and made available for the Build during the __Retrieve
+Code__ Phase.[[_desktop_lr_summary_buildsdeploys]]
 |===
 
 ==== Builds and Deploys Panel
@@ -1841,7 +1841,7 @@ The Build/Deploy was aborted while it was being executed.
 The Build/Deploy was rejected.
 
 |Type icon
-|This field indicates the type: Build (image:icons/icon_LRdetail_build.png[,16,16] ) or Deploy (image:images/icons/icon_LRdetail_deploy.png[,16,16] ).
+|This field indicates the type: Build (image:icons/icon_LRdetail_build.png[,16,16] ) or Deploy (image:icons/icon_LRdetail_deploy.png[,16,16] ).
 
 |OID
 |This field contains the OID (Object Identifier) of the Build/Deploy.
@@ -2303,7 +2303,7 @@ For each of the parameters, the table displays its key and value.
 
 For more information, refer to the section <<App_PredefLevelParams.adoc#_cpredefinedbuildparameters,Predefined Level Parameters>>.
 
-image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedBuildParameters.png[,651,120] 
+image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedBuildParameters.png[,325,74] 
 |===
 
 [[_chddiacf]]
@@ -2459,7 +2459,7 @@ For each of the parameters, the table displays its key and value.
 
 For more information, refer to the section <<App_PredefDeployParams.adoc#_cpredefineddeployparameters,Predefined Deploy Parameters>>.
 
-image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedDeployParameters.png[,664,152] 
+image:Desktop-LevelRequests-Detailed-PhaseLogs-Example_UsedDeployParameters.png[,325,74] 
 |===
 
 [[_chdceehj]]
@@ -2615,7 +2615,7 @@ For more information, refer to the section <<ProjAdm_BuildEnv.adoc#_projadm_buil
 
 If not, you can always visualize the tree by clicking the plus sign in front of the zip file.
 
-image:Desktop-LevelRequests-Detailed-Results-expanded.png[,367,280] 
+image:Desktop-LevelRequests-Detailed-Results-expanded.png[,325,248] 
 |===
 
 [cols="1", frame="topbot"]
@@ -3439,7 +3439,7 @@ The following information fields are available:
 
 Click this link to display the details for this Level Request which created the Build or Deploy.
 
-For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the _Level Request Detail_ screen. 
+For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the __Level Request Detail__ screen. 
 
 |Type
 |This field contains the object type: Build or Deploy.
@@ -3514,8 +3514,8 @@ History Detail_ screen.
 |This field contains the VCR Tag of the Level Request.
 This Tag matches a Build with its source code in the VCR.
 
-The Level Request VCR Tag is displayed as a link leading to the _Sources_ tab page on the _Level
-Request Detail_ screen.
+The Level Request VCR Tag is displayed as a link leading to the __Sources__ tab page on the __Level
+Request Detail__ screen.
 For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop_lr_sources,Sources>>.
 
 |Start
@@ -3529,4 +3529,4 @@ For more information, refer to the section <<Desktop_LevelRequests.adoc#_desktop
 +
 Click the Level Request`'s _OID_ link which created the Build or Deploy.
 +
-For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the _Level Request Detail_ screen. 
+For more information, refer to the section explaining the <<Desktop_LevelRequests.adoc#_desktop_lr_summary,Summary>> tab page of the __Level Request Detail__ screen. 

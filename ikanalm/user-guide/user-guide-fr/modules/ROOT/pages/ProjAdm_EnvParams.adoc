@@ -82,8 +82,7 @@ Pour une description des champs, se référer à la section <<ProjAdm_EnvParams.
 
 [NOTE]
 ====
-L'icône image:icons/icon_MachineParameter.png[,15,15]  indique que le paramètre est un paramètre de Machine. <<GlobAdm_Machines.adoc#_globadm_machineparameters,Gérer les Paramètres d`'une Machine>>Pour afficher ces Paramètres, vous devez positionner le critère _Montrer
-les Paramètres de Machine_ à __Oui__.
+L'icône image:icons/icon_MachineParameter.png[,15,15]  indique que le paramètre est un paramètre de Machine. <<GlobAdm_Machines.adoc#_globadm_machineparameters,Gérer les Paramètres d`'une Machine>>Pour afficher ces Paramètres, vous devez positionner le critère __Montrer les Paramètres de Machine__ à __Oui__.
 
 Les colonnes marquées de l'icône image:icons/icon_sort.png[,15,15]  peuvent être rangées par ordre alphabétique (ascendant ou descendant).
 ====

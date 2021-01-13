@@ -315,7 +315,7 @@ Les champs suivants sont disponibles dans le sous-panneau __Autres activités__:
 
 Les aperçus seront ainsi actualisés chaque fois que l'intervalle aura expiré (si l'Utilisateur a activé la fonction <<UserInterface.adoc#_desktop_autorefresh,Actualisation automatique>> dans le sous-menu du Bureau).
 
-Si vous ne voulez pas permettre l`'utilisation de l`'option __Actualisation automatique__, entrez _0_ (zéro) dans ce champ.
+Si vous ne voulez pas permettre l`'utilisation de l`'option __Actualisation automatique__, entrez __0__ (zéro) dans ce champ.
 
 |Flux RSS activés
 |Par ce champ vous pouvez activer la fonctionnalité RSS.

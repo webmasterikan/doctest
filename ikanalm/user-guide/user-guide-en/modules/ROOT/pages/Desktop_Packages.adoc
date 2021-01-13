@@ -163,7 +163,7 @@ It allows viewing the selected Package definition and its connected file revisio
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
 It allows editing the Package definition and/or its connected file revisions. <<Desktop_Packages.adoc#_desktop_editpackage,Editing a Package>>
 
-|image:icons/hide.gif[,15,15]  / image:images/icons/show.gif[,15,15] 
+|image:icons/hide.gif[,15,15]  / image:icons/show.gif[,15,15] 
 |Hide / Show
 
 This option is available to IKAN ALM Users with Project Administrator Access Rights.
