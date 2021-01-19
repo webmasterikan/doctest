@@ -17,9 +17,7 @@ We also assume that you already had a look at the IKAN ALM demo installation (no
 
 During the Build process, the sample _Docgen_ Project will convert a standardized XML document into a PDF and an HTML file and, next, deploy them to a web server. 
 
-We will use the http://ant.apache.org/[
- Apache ANT] scripting tool and the http://tomcat.apache.org/[
- Apache Tomcat] web server, but no prior knowledge of either tool is necessary since the samples are kept very basic.
+We will use the http://ant.apache.org/[Apache ANT, window=_blank] scripting tool and the http://tomcat.apache.org/[Apache Tomcat] web server, but no prior knowledge of either tool is necessary since the samples are kept very basic.
 
 The source XML file is very simple and follows the http://docbook.org/[
  docbook] format.
