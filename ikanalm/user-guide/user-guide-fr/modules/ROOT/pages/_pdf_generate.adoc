@@ -2,6 +2,7 @@
 :TOC:
 :sectnums:
 :title: IKAN ALM Guide de l’Utilisateur
+:title-page-background-image: image:../images/_pdf_title_page_background.png[]
 
 :author: IKAN Development N.V., Kardinaal Mercierplein 2, 2800 Malines, BELGIQUE + \
 (C) 2006 - 2020 IKAN Development N.V. + \

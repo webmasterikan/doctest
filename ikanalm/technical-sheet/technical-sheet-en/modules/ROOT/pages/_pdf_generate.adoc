@@ -1,0 +1,16 @@
+:doctype: book
+:TOC:
+:sectnums:
+:title: IKAN ALM Technical Sheet
+:title-page-background-image: image:../images/_pdf_title_page_background.png[]
+
+:author: IKAN Development N.V., Kardinaal Mercierplein 2, 2800 Mechelen, BELGIUM + \
+(C) 2006 - 2021 IKAN Development N.V. + \
+No part of this document may be reproduced or transmitted in any form or by any \
+means, electronically or mechanically, for any purpose, without the express written \
+permission of IKAN Development N.V. \
+The IKAN Development and IKAN ALM logos and names and all other IKAN product \
+or service names are trademarks of IKAN Development N.V. \
+All other trademarks are property of their respective owners.
+
+include::TechSheet.adoc[]

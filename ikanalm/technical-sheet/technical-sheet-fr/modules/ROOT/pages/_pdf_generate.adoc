@@ -1,0 +1,16 @@
+:doctype: book
+:TOC:
+:sectnums:
+:title: IKAN ALM Fiche Technique
+:title-page-background-image: image:../images/_pdf_title_page_background.png[]
+
+:author: IKAN Development N.V., Kardinaal Mercierplein 2, 2800 Malines, BELGIQUE + \
+(C) 2006 - 2021 IKAN Development N.V. + \
+Aucune partie de ce document ne peut être reproduite ou transmise à quelque fin ou \
+par quelque moyen que ce soit, électronique ou mécanique, sans l’autorisation explicite \
+et écrite de IKAN Development N.V. \
+Les noms et logos IKAN Development et IKAN ALM et tout autre nom de produits ou \
+de services IKAN sont des marques déposées de IKAN Development N.V. \
+Toutes les autres marques déposées sont la propriété de leurs propriétaires respectifs \
+
+include::TechSheet.adoc[]

@@ -19,7 +19,7 @@ footer:
       content: 'Guide de l’Utilisateur - {revnumber}'      
 title-page:
   logo:
-    image: image:../images/_pdf_logo.png[pdfwidth=75%]
+    image: image:../images/_pdf_logo.png[]
     align: center  
   title:
     font-color: #2d2d2c
